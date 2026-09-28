@@ -20,6 +20,10 @@ const modules = [
   },
 ] as const;
 
+const featuredAecRoutes = [
+  ["/structural-demo/", "Structural Solver", "Validated browser solver retained from the AEC thesis system"],
+] as const;
+
 export default function ResearchHubPage() {
   return (
     <>
@@ -70,6 +74,14 @@ export default function ResearchHubPage() {
       </section>
 
       <section className="section">
+        <SectionHeading kicker="Featured AEC tool" title="Existing validated structural solver" />
+        <div className="route-grid">
+          {featuredAecRoutes.map(([href, title, description]) => (
+            <a className="route-card" href={sitePath(href)} key={href}>
+              <span>AEC</span><h3>{title}</h3><p>{description}</p><b aria-hidden="true">↗</b>
+            </a>
+          ))}
+        </div>
         <Callout title="Research isolation rule" tone="blue">
           <p>
             AEC and Hydropower share the publishing shell only. Their scientific claims, data,
