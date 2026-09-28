@@ -25,11 +25,11 @@ assert.ok(index.includes('src="./assets/app.js"'), "structural demo runtime scri
 assert.ok(index.includes('href="./assets/styles.css"'), "structural demo stylesheet must stay relative");
 assert.equal(/(?:href|src)="\/(?!\/)/.test(index), false, "structural demo must not use project-root absolute asset links");
 
-const parentPage = await readFile(path.join(root, "app", "page.tsx"), "utf8");
+const aecModulePage = await readFile(path.join(root, "app", "aec", "page.tsx"), "utf8");
 const nav = await readFile(path.join(root, "components", "mobile-navigation.tsx"), "utf8");
-assert.ok(parentPage.includes('["/structural-demo/", "Structural Solver"'), "overview route card must link structural solver");
-assert.ok(nav.includes('["/structural-demo/", "Structural Solver"]'), "primary navigation must link structural solver");
-assert.ok(nav.includes('["/methodology-demo/", "Methodology Demo"]'), "methodology demo navigation must be preserved");
+assert.ok(aecModulePage.includes('["/structural-demo/", "Structural Solver"'), "AEC module must link structural solver");
+assert.ok(nav.includes('["/structural-demo/", "Structural Solver"]'), "AEC module navigation must link structural solver");
+assert.ok(nav.includes('["/methodology-demo/", "Methodology Demo"]'), "AEC methodology demo navigation must be preserved");
 
 const forbidden = [
   /drive\.google\.com/i,
@@ -73,6 +73,7 @@ for (const rel of ["data/validation-summary.json", "data/step12-validation-summa
 console.log(JSON.stringify({
   status: "PASS",
   route: "/structural-demo/",
+  parentModule: "/aec/",
   requiredFiles: required.length,
   jsSyntaxFiles: jsFiles.length,
   regression: "PASS",

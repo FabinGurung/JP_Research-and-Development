@@ -1,27 +1,25 @@
 import { sitePath } from "@/components/site-path";
-import { Callout, SectionHeading, StatusBadge } from "@/components/ui";
+import { SectionHeading, StatusBadge } from "@/components/ui";
 
 const modules = [
   {
     href: "/aec/",
-    code: "AEC",
-    title: "AEC / Structural Research System",
+    code: "AEC / STRUCTURAL",
+    title: "MSc Structural Engineering Research",
     description:
-      "MSc Structural Engineering thesis system covering normalized relational data, BIM-GIS workflow automation, structural-analysis validation and shared-data reuse.",
-    meta: "MSc Structural Engineering · Pokhara University",
+      "Normalized relational data, BIM-GIS workflow automation, structural-analysis validation and shared-data reuse.",
+    meta: "Pokhara University · MSc Structural Engineering",
+    status: "Live research system",
   },
   {
     href: "/hydropower/",
-    code: "HYDRO",
-    title: "Hydropower Research System",
+    code: "HYDROPOWER",
+    title: "Hydropower Research",
     description:
-      "PhD research system for integrated BIM-GIS, relational/spatial data and web-based hydropower planning and infrastructure decision support in Nepal.",
-    meta: "PhD research proposal · Hydropower planning + infrastructure",
+      "Integrated BIM-GIS, relational/spatial data and web-based hydropower planning and infrastructure decision support in Nepal.",
+    meta: "Pokhara University · PhD research",
+    status: "Research module initiated",
   },
-] as const;
-
-const featuredAecRoutes = [
-  ["/structural-demo/", "Structural Solver", "Validated browser solver retained from the AEC thesis system"],
 ] as const;
 
 export default function ResearchHubPage() {
@@ -30,26 +28,21 @@ export default function ResearchHubPage() {
       <section className="hero">
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Fabin Gurung · Engineering research hub</p>
-            <h1>One research website. Multiple engineering systems.</h1>
-            <p className="hero-summary">
-              A shared public research portal that keeps each research domain separate while reusing
-              one governed static publishing architecture. The AEC thesis remains intact as the first
-              module; Hydropower is now the second module.
-            </p>
+            <p className="eyebrow">Fabin Gurung</p>
+            <h1>Engineering Research System</h1>
+            <p className="hero-summary">One research platform. Multiple research systems.</p>
             <div className="badge-row">
-              <StatusBadge status="implemented">AEC module live</StatusBadge>
-              <StatusBadge status="framework">Hydropower module initiated</StatusBadge>
+              <StatusBadge status="implemented">AEC / Structural</StatusBadge>
+              <StatusBadge status="framework">Hydropower</StatusBadge>
             </div>
           </div>
           <aside className="truth-panel">
-            <p className="kicker">Publishing model</p>
-            <h2>Shared shell, isolated research truth</h2>
-            <div className="truth-flow">
-              <div><span>01</span><strong>Choose a research system</strong><small>AEC or Hydropower</small></div>
-              <div><span>02</span><strong>Enter its governed module</strong><small>Domain-specific evidence and routes</small></div>
-              <div><span>03</span><strong>Publish public-safe outputs</strong><small>Static GitHub Pages export</small></div>
-            </div>
+            <p className="kicker">Research hub</p>
+            <h2>Choose a research system</h2>
+            <p>
+              Each module opens its own research scope, navigation, evidence and development path.
+              Domain-specific pages stay inside their research system rather than appearing at hub level.
+            </p>
           </aside>
         </div>
       </section>
@@ -57,8 +50,8 @@ export default function ResearchHubPage() {
       <section className="section section-navy">
         <SectionHeading
           kicker="Research systems"
-          title="Select a module"
-          text="Each module has its own research scope, evidence chain and development roadmap while sharing the same website infrastructure."
+          title="Two independent research modules"
+          text="The website shell is shared; scientific content and source chains remain separated by research domain."
         />
         <div className="route-grid">
           {modules.map((module, index) => (
@@ -66,28 +59,11 @@ export default function ResearchHubPage() {
               <span>{String(index + 1).padStart(2, "0")} · {module.code}</span>
               <h3>{module.title}</h3>
               <p>{module.description}</p>
-              <small>{module.meta}</small>
+              <small>{module.meta} · {module.status}</small>
               <b aria-hidden="true">↗</b>
             </a>
           ))}
         </div>
-      </section>
-
-      <section className="section">
-        <SectionHeading kicker="Featured AEC tool" title="Existing validated structural solver" />
-        <div className="route-grid">
-          {featuredAecRoutes.map(([href, title, description]) => (
-            <a className="route-card" href={sitePath(href)} key={href}>
-              <span>AEC</span><h3>{title}</h3><p>{description}</p><b aria-hidden="true">↗</b>
-            </a>
-          ))}
-        </div>
-        <Callout title="Research isolation rule" tone="blue">
-          <p>
-            AEC and Hydropower share the publishing shell only. Their scientific claims, data,
-            calculations and source chains remain independently governed and are not mixed across modules.
-          </p>
-        </Callout>
       </section>
     </>
   );

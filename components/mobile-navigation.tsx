@@ -1,23 +1,53 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { usePathname } from "next/navigation";
 import { sitePath } from "@/components/site-path";
 
-const navItems = [
+const hubNavItems = [
+  { href: "/", label: "Hub" },
+  { href: "/aec/", label: "AEC / Structural" },
+  { href: "/hydropower/", label: "Hydropower" },
+] as const;
+
+const aecNavItems = [
   ["/", "Hub"],
-  ["/aec/", "AEC"],
-  ["/hydropower/", "Hydropower"],
-  ["/research", "AEC Research"],
+  ["/aec/", "AEC Overview"],
+  ["/research", "Research"],
   ["/system", "Database System"],
+  ["/prototype", "Structural Prototype"],
+  ["/workflow", "Shared-Data Reuse"],
   ["/methodology-demo/", "Methodology Demo"],
   ["/structural-demo/", "Structural Solver"],
   ["/graph", "System Graph"],
   ["/evidence", "Evidence"],
-  ["/roadmap", "Roadmap"],
-  ["/thesis", "AEC Thesis"],
+  ["/thesis", "Thesis"],
+] as const;
+
+const aecRoutePrefixes = [
+  "/aec",
+  "/research",
+  "/system",
+  "/prototype",
+  "/workflow",
+  "/methodology-demo",
+  "/structural-demo",
+  "/graph",
+  "/evidence",
+  "/roadmap",
+  "/thesis",
 ] as const;
 
 export function MobileNavigation() {
+  const pathname = usePathname();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const localPath = basePath && pathname.startsWith(basePath)
+    ? pathname.slice(basePath.length) || "/"
+    : pathname;
+  const isAecRoute = aecRoutePrefixes.some(
+    (prefix) => localPath === prefix || localPath.startsWith(`${prefix}/`),
+  );
+
   const trackRef = useRef<HTMLDivElement>(null);
   const [hasMore, setHasMore] = useState(true);
 
@@ -31,6 +61,7 @@ export function MobileNavigation() {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
+    track.scrollLeft = 0;
     const frame = requestAnimationFrame(updateOverflowCue);
     const resizeObserver = new ResizeObserver(updateOverflowCue);
     resizeObserver.observe(track);
@@ -38,7 +69,7 @@ export function MobileNavigation() {
       cancelAnimationFrame(frame);
       resizeObserver.disconnect();
     };
-  }, [updateOverflowCue]);
+  }, [localPath, updateOverflowCue]);
 
   const handleKeyboardScroll = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.target !== event.currentTarget || (event.key !== "ArrowLeft" && event.key !== "ArrowRight")) return;
@@ -53,7 +84,7 @@ export function MobileNavigation() {
   };
 
   return (
-    <nav className={`primary-nav ${hasMore ? "has-overflow-right" : ""}`} aria-label="Primary navigation">
+    <nav className={`primary-nav ${hasMore ? "has-overflow-right" : ""}`} aria-label={isAecRoute ? "AEC module navigation" : "Research hub navigation"}>
       <span className="sr-only" id="primary-nav-scroll-help">
         This navigation scrolls horizontally on small screens. Use touch, a trackpad, or the left and right arrow keys while the navigation row is focused.
       </span>
@@ -65,9 +96,13 @@ export function MobileNavigation() {
         onScroll={updateOverflowCue}
         onKeyDown={handleKeyboardScroll}
       >
-        {navItems.map(([href, label]) => (
-          <a href={sitePath(href)} key={href}>{label}</a>
-        ))}
+        {isAecRoute
+          ? aecNavItems.map(([href, label]) => (
+              <a href={sitePath(href)} key={href}>{label}</a>
+            ))
+          : hubNavItems.map((item) => (
+              <a href={sitePath(item.href)} key={item.href}>{item.label}</a>
+            ))}
       </div>
       <span className="nav-overflow-cue" aria-hidden="true"><span>›</span></span>
     </nav>
