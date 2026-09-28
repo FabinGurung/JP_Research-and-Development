@@ -1,146 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hydropower PhD — Conceptual Table Explorer</title>
-  <meta name="description" content="Supabase/Access-style table explorer for the source-grounded conceptual Hydropower PhD database schema." />
-  <style>
-    :root{--navy:#082a46;--blue:#12628e;--ink:#122437;--muted:#647487;--line:#d5dee7;--paper:#f4f7fa;--white:#fff;--soft:#eaf3f8;--green:#17633f;--amber:#8a5b00;--sidebar:292px}
-    *{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.45}a{color:inherit}
-    .app{min-height:100vh;display:grid;grid-template-columns:var(--sidebar) minmax(0,1fr)}
-    .sidebar{position:sticky;top:0;height:100vh;overflow:auto;background:#091f33;color:#d8e4ed;border-right:1px solid #183d59;padding:18px 14px}
-    .brand{display:flex;gap:10px;align-items:center;margin:0 4px 16px}.brand-mark{width:38px;height:38px;border-radius:10px;background:#0e5c88;display:grid;place-items:center;font-weight:900;color:#fff}.brand strong{display:block;color:#fff}.brand small{color:#91a9ba}
-    .sidebar-links{display:flex;gap:8px;margin:0 4px 14px;flex-wrap:wrap}.sidebar-links a{font-size:.76rem;text-decoration:none;border:1px solid #33566f;border-radius:8px;padding:6px 8px;color:#cfe1ed}.sidebar-links a:hover{background:#13344d}
-    .search{width:100%;border:1px solid #31526a;background:#102d43;color:#fff;border-radius:9px;padding:10px 11px;outline:none;margin-bottom:14px}.search::placeholder{color:#8ca5b7}.search:focus{border-color:#67b4dc}
-    .group{margin:13px 0}.group-title{padding:4px 8px;color:#7fa4bb;text-transform:uppercase;letter-spacing:.11em;font-size:.68rem;font-weight:900}.table-link{width:100%;border:0;background:transparent;color:#cfe0eb;text-align:left;padding:8px 9px;border-radius:8px;cursor:pointer;font:inherit;font-size:.83rem;display:flex;align-items:center;gap:8px}.table-link::before{content:"▦";color:#6fa9c8}.table-link:hover{background:#11344f;color:#fff}.table-link.active{background:#135a80;color:#fff}.empty{display:none;color:#89a2b2;font-size:.8rem;padding:8px}
-    .main{min-width:0}.topbar{position:sticky;top:0;z-index:5;background:rgba(244,247,250,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:14px clamp(18px,4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:12px}.crumb{font-size:.86rem;color:var(--muted)}.view-tabs{display:flex;gap:7px;flex-wrap:wrap}.view-tab{font-size:.78rem;text-decoration:none;border:1px solid #c4d2de;background:#fff;border-radius:9px;padding:7px 9px;font-weight:750}.view-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}.view-tab.planned{color:#8b6a21;background:#fff8e8;cursor:default}
-    .content{padding:clamp(24px,4vw,52px);max-width:1180px;margin:auto}.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;font-weight:900;color:var(--blue)}h1{font-size:clamp(2rem,4.5vw,4.2rem);line-height:1.02;margin:.35rem 0 .75rem;letter-spacing:-.035em}.intro p{color:var(--muted);max-width:760px;margin:0}.count-card{min-width:145px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}.count-card b{font-size:2rem;display:block;color:var(--navy)}.count-card span{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:800}
-    .boundary{background:#fff8e8;border:1px solid #ead49b;border-left:5px solid #d09a15;border-radius:12px;padding:13px 15px;margin:0 0 26px;color:#5f4a19;font-size:.9rem}.boundary strong{color:#493509}
-    .table-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-top:28px}.table-name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(1.45rem,3vw,2.35rem);margin:0}.table-description{color:var(--muted);max-width:800px;margin:.45rem 0 0}.badge{display:inline-flex;padding:6px 9px;border-radius:999px;background:#e6f2f8;border:1px solid #bad4e1;color:#174d6a;font-size:.73rem;font-weight:850;white-space:nowrap}
-    .panel{background:#fff;border:1px solid var(--line);border-radius:15px;margin-top:18px;overflow:hidden;box-shadow:0 5px 16px rgba(18,36,55,.035)}.panel-title{padding:12px 14px;background:#edf3f7;border-bottom:1px solid var(--line);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:#345268}.field-table{width:100%;border-collapse:collapse}.field-table th,.field-table td{text-align:left;padding:12px 14px;border-bottom:1px solid #e8edf1;font-size:.88rem}.field-table th{color:#67788a;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}.field-table tr:last-child td{border-bottom:0}.field-name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800}.key{font-size:.68rem;font-weight:900;border-radius:6px;padding:3px 6px;display:inline-block}.key.pk{background:#e9f6ef;color:#17633f}.key.fk{background:#fff1d8;color:#7a5100}.ref-button{border:0;background:transparent;color:#12628e;text-decoration:underline;cursor:pointer;padding:0;font:inherit;font-size:.84rem}
-    .relations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:14px}.relation-box{border:1px solid #e0e7ed;border-radius:12px;padding:12px}.relation-box h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:#607486;margin:0 0 8px}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{border:1px solid #bcd1df;background:#f5fbfe;color:#155b7e;border-radius:999px;padding:6px 8px;cursor:pointer;font-size:.78rem}.none{color:#8a98a5;font-size:.85rem}
-    .source{margin:28px 0 10px;color:var(--muted);font-size:.84rem}.source strong{color:var(--ink)}
-    .mobile-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 9px;font-weight:800}
-    @media(max-width:860px){.app{display:block}.sidebar{position:fixed;left:0;top:0;bottom:0;width:min(86vw,320px);z-index:30;transform:translateX(-105%);transition:transform .2s ease;box-shadow:14px 0 40px rgba(0,0,0,.2)}body.sidebar-open .sidebar{transform:translateX(0)}body.sidebar-open::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:20}.mobile-toggle{display:inline-block}.topbar{padding:11px 14px}.content{padding:24px 16px}.intro{align-items:flex-start;flex-direction:column}.count-card{display:none}.relations{grid-template-columns:1fr}.field-table{min-width:620px}.panel.fields{overflow:auto}.view-tabs{overflow:auto;flex-wrap:nowrap}.view-tab{white-space:nowrap}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hydropower PhD — Table Relationship Designer</title>
+<meta name="description" content="Human-friendly Access/Supabase-style relationship view for the Hydropower PhD conceptual research model." />
+<style>
+:root{--navy:#10283a;--navy2:#18384f;--ink:#172635;--muted:#667788;--line:#cdd7df;--paper:#eef2f5;--white:#fff;--accent:#1d6f99;--soft:#edf6fb;--key:#fff0b8;--link:#dff1fb;--shadow:rgba(20,40,55,.13)}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);overflow:hidden}button,input{font:inherit}
+.app{height:100vh;display:grid;grid-template-columns:270px minmax(0,1fr) 310px}.sidebar{background:#10283a;color:#d9e7f0;border-right:1px solid #29475c;display:flex;flex-direction:column;min-width:0}.brand{padding:18px 16px 12px;border-bottom:1px solid #29475c}.brand strong{display:block;color:#fff;font-size:1.02rem}.brand small{color:#9eb4c4}.quick{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.quick a{font-size:.72rem;text-decoration:none;color:#d7e7f1;border:1px solid #3c596d;padding:6px 8px;border-radius:7px}.search-wrap{padding:12px}.search{width:100%;border:1px solid #385469;border-radius:8px;background:#17354b;color:white;padding:9px 10px;outline:none}.search::placeholder{color:#8fa8b9}.tree{overflow:auto;padding:0 8px 18px}.group{margin:7px 0 12px}.group-title{display:flex;justify-content:space-between;align-items:center;color:#84a6bc;font-size:.69rem;text-transform:uppercase;letter-spacing:.09em;font-weight:850;padding:5px 8px}.table-item{width:100%;border:0;background:transparent;color:#d2e1eb;text-align:left;padding:7px 8px;border-radius:7px;cursor:pointer;font-size:.8rem;display:flex;gap:8px;align-items:center}.table-item:before{content:'▤';color:#75b8dc}.table-item:hover,.table-item.active{background:#1d4d6a;color:#fff}
+.main{min-width:0;display:flex;flex-direction:column}.topbar{height:56px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:9px 12px;flex-wrap:wrap}.crumb{font-size:.8rem;color:var(--muted);margin-right:auto}.view-tabs{display:flex;gap:6px}.view-tabs a,.view-tabs span{font-size:.74rem;text-decoration:none;border:1px solid #c9d5dd;border-radius:8px;padding:6px 8px;background:#fff}.view-tabs .active{background:var(--navy);color:#fff;border-color:var(--navy)}.toolbar{height:52px;background:#f8fafb;border-bottom:1px solid var(--line);padding:8px 12px;display:flex;gap:7px;align-items:center}.toolbar button{border:1px solid #c2ced7;background:white;border-radius:8px;padding:7px 9px;color:#274255;font-weight:720;cursor:pointer;font-size:.78rem}.toolbar button:hover{background:#edf5f9}.toolbar .note{margin-left:auto;color:var(--muted);font-size:.74rem}.designer{position:relative;flex:1;overflow:auto;background-color:#e8edf1;background-image:linear-gradient(#dce4e9 1px,transparent 1px),linear-gradient(90deg,#dce4e9 1px,transparent 1px);background-size:20px 20px}.spacer{position:relative}.stage{position:absolute;left:0;top:0;transform-origin:0 0}.wires{position:absolute;left:0;top:0;overflow:visible;pointer-events:none}.wire{stroke:#6e8799;stroke-width:1.35;stroke-opacity:.52;fill:none}.wire.active{stroke:#1677a5;stroke-width:2.35;stroke-opacity:.95}.table-card{position:absolute;width:232px;background:#fff;border:1px solid #9db0bf;border-radius:4px;box-shadow:0 4px 14px var(--shadow);overflow:hidden;user-select:none}.table-card.selected{outline:3px solid rgba(29,111,153,.28);border-color:#2d789e}.card-head{background:#1e5f83;color:#fff;padding:8px 10px;cursor:move}.card-head strong{display:block;font-size:.83rem}.card-head small{display:block;color:#cfe7f4;font-size:.65rem;margin-top:1px}.field{display:grid;grid-template-columns:20px minmax(0,1fr) auto;gap:6px;align-items:center;padding:5px 8px;border-top:1px solid #edf0f2;font-size:.72rem;min-height:27px}.field:first-child{border-top:0}.field .icon{text-align:center;font-size:.68rem}.field .type{color:#81909b;font-size:.63rem}.field.link{background:#f4fbff}.field.key{background:#fffaf0}.more{padding:6px 8px;border-top:1px solid #e8edf0;color:#6c7e8c;font-size:.68rem;background:#fafcfd}.floating-help{position:sticky;left:12px;bottom:12px;display:inline-block;margin:12px;background:rgba(255,255,255,.94);border:1px solid #c9d5dd;border-radius:8px;padding:7px 9px;font-size:.72rem;color:#61717d;box-shadow:0 3px 12px rgba(0,0,0,.08)}
+.inspector{background:#fff;border-left:1px solid var(--line);overflow:auto}.inspector-head{padding:17px 16px 13px;border-bottom:1px solid var(--line)}.inspector-head small{color:#6d8090;text-transform:uppercase;letter-spacing:.08em;font-size:.65rem;font-weight:800}.inspector-head h2{font-size:1.2rem;margin:5px 0 5px}.inspector-head p{color:var(--muted);font-size:.8rem;line-height:1.45;margin:0}.inspect-section{padding:13px 14px;border-bottom:1px solid #e6ebef}.inspect-section h3{font-size:.69rem;color:#607483;text-transform:uppercase;letter-spacing:.08em;margin:0 0 9px}.inspect-field{padding:7px 0;border-bottom:1px solid #edf1f3;font-size:.77rem}.inspect-field:last-child{border-bottom:0}.inspect-field b{display:block}.inspect-field span{color:#71828f}.pill{display:inline-block;border-radius:999px;padding:3px 6px;font-size:.62rem;font-weight:800;margin-left:4px}.pill.key{background:var(--key);color:#765600}.pill.link{background:var(--link);color:#195f82}.relation{border:1px solid #d8e1e7;border-radius:8px;padding:8px;margin:6px 0;cursor:pointer;font-size:.75rem}.relation:hover{border-color:#72a7c2;background:#f7fbfd}.relation strong{display:block}.relation span{color:#758795}.boundary{margin:13px;border-left:4px solid #c8922a;background:#fff8e7;color:#63501f;border-radius:8px;padding:9px 10px;font-size:.72rem;line-height:1.45}
+@media(max-width:1050px){.app{grid-template-columns:230px minmax(0,1fr)}.inspector{position:fixed;right:0;top:108px;bottom:0;width:min(88vw,320px);z-index:30;transform:translateX(102%);box-shadow:-12px 0 30px rgba(0,0,0,.18);transition:.18s}.inspector.open{transform:none}}@media(max-width:720px){.app{display:block}.sidebar{position:fixed;z-index:40;width:min(84vw,300px);height:100vh;transform:translateX(-102%);transition:.18s}.sidebar.open{transform:none}.crumb{display:none}.topbar{height:auto;min-height:50px}.toolbar .note{display:none}.designer{height:calc(100vh - 102px)}}
+</style>
 </head>
 <body>
 <div class="app">
-  <aside class="sidebar" id="sidebar">
-    <div class="brand"><div class="brand-mark">FG</div><div><strong>Hydropower PhD</strong><small>Conceptual data explorer</small></div></div>
-    <div class="sidebar-links"><a href="../hydropower/">← Module</a><a href="../hydropower-data-schema/">Mermaid schema</a></div>
-    <input id="search" class="search" type="search" placeholder="Search tables…" autocomplete="off" />
-    <nav id="tableNav" aria-label="Conceptual tables"></nav>
-    <div id="noMatches" class="empty">No matching table.</div>
-  </aside>
-
-  <main class="main">
-    <header class="topbar">
-      <div style="display:flex;align-items:center;gap:10px"><button class="mobile-toggle" id="menuButton" type="button">☰ Tables</button><span class="crumb">Hydropower / Database representations / Table explorer</span></div>
-      <div class="view-tabs">
-        <a class="view-tab" href="../hydropower-data-schema/">01 Mermaid ER</a>
-        <span class="view-tab active">02 Table Explorer</span>
-        <span class="view-tab planned" title="Listed only; not built yet">03 Node-edge graph · planned</span>
-      </div>
-    </header>
-
-    <div class="content">
-      <section class="intro">
-        <div><div class="eyebrow">Database view 02 · Supabase / Access style</div><h1>Conceptual table explorer</h1><p>The same source-grounded schema as the preserved Mermaid ER view, reorganized into a familiar database sidebar. Choose a conceptual table to inspect its columns, keys and explicit foreign-key relationships.</p></div>
-        <div class="count-card"><b id="tableCount">25</b><span>conceptual tables</span></div>
-      </section>
-
-      <aside class="boundary"><strong>Same no-hallucination boundary.</strong> This interface does not add scientific variables, thresholds, values or relationships beyond the preserved conceptual Mermaid schema. Sidebar headings are only UI groupings; they are not database tables. No sample rows are fabricated.</aside>
-
-      <section id="tableDetail" aria-live="polite"></section>
-      <p class="source"><strong>Source boundary:</strong> submitted Pokhara University Form E proposal dated 22 September 2026 plus the proposal’s current citation-learning map. This is a conceptual research schema, not a claim that a production database has already been implemented.</p>
-    </div>
-  </main>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><strong>Hydropower research model</strong><small>Relationship designer</small><div class="quick"><a href="../hydropower/">Research module</a><a href="../hydropower-data-schema/">Relationship diagram</a><a href="../hydropower-data-graph/">Connections map</a></div></div>
+  <div class="search-wrap"><input class="search" id="search" type="search" placeholder="Find a table…" /></div>
+  <nav class="tree" id="tree"></nav>
+</aside>
+<main class="main">
+  <header class="topbar"><button id="menu" style="display:none">☰</button><span class="crumb">Hydropower / Research model / Table relationships</span><div class="view-tabs"><a href="../hydropower-data-schema/">01 Relationship diagram</a><span class="active">02 Table relationships</span><a href="../hydropower-data-graph/">03 Connections map</a></div></header>
+  <div class="toolbar"><button id="autoArrange">Auto arrange</button><button id="focus">Selected only</button><button id="showAll">Show all</button><button id="zoomOut">−</button><button id="zoomIn">＋</button><button id="fit">Fit</button><span class="note">Drag tables by their blue title bars · click a table to inspect it</span></div>
+  <section class="designer" id="designer"><div class="spacer" id="spacer"><div class="stage" id="stage"><svg class="wires" id="wires"></svg><div id="cards"></div></div></div><div class="floating-help">Access-style relationship workspace: tables remain visible together; lines show the same 43 approved connections.</div></section>
+</main>
+<aside class="inspector" id="inspector"><div id="inspectContent"></div><div class="boundary"><strong>Research boundary:</strong> this is a conceptual design view. No example records, weights, thresholds, design values or results are invented.</div></aside>
 </div>
-
 <script>
-const groups = [
-  {name:'Core identity', tables:['STUDY_CASE','SITE','ASSET']},
-  {name:'Definitions & provenance', tables:['UNIT','PARAMETER_DEFINITION','REFERENCE_SOURCE','PARAMETER_SOURCE','DATA_SOURCE']},
-  {name:'Hydrology & spatial', tables:['OBSERVATION','SPATIAL_FEATURE']},
-  {name:'Screening & analysis', tables:['SCREENING_CRITERION','ANALYSIS_RUN','RUN_INPUT','RUN_CRITERION','SCREENING_RESULT']},
-  {name:'Structural & condition', tables:['ASSET_GEOMETRY','ASSET_MATERIAL','LOAD_ACTION','ANALYSIS_RESULT','INSPECTION_RECORD']},
-  {name:'BIM–GIS mappings', tables:['BIM_OBJECT','ASSET_BIM_MAP','ASSET_GIS_MAP']},
-  {name:'Validation & web', tables:['VALIDATION_RECORD','WEB_PRESENTATION']}
-];
-
-const T = {
-STUDY_CASE:{d:'Case-study identity and access context for the selected Nepalese hydropower/PHES research scope.',f:[['case_id','int','PK'],['case_name','string',''],['case_type','string',''],['location_note','string',''],['access_class','string','']]},
-SITE:{d:'A site within a study case, used to connect assets, observations and screening results.',f:[['site_id','int','PK'],['case_id','int','FK','STUDY_CASE'],['site_name','string',''],['site_role','string',''],['geometry_ref','string',''],['access_class','string','']]},
-ASSET:{d:'Stable asset identity for selected hydropower civil/structural infrastructure.',f:[['asset_id','int','PK'],['site_id','int','FK','SITE'],['asset_name','string',''],['asset_class','string',''],['lifecycle_status','string',''],['access_class','string','']]},
-UNIT:{d:'Unit register used to standardize parameter definitions.',f:[['unit_id','int','PK'],['unit_code','string',''],['dimension','string','']]},
-PARAMETER_DEFINITION:{d:'Reusable definition layer for proposal-defined study parameters across hydrology, screening and structural records.',f:[['parameter_id','int','PK'],['parameter_code','string',''],['parameter_name','string',''],['domain','string',''],['unit_id','int','FK','UNIT']]},
-REFERENCE_SOURCE:{d:'Published literature, standards or other source authorities used to record support roles without embedding unsupported values.',f:[['reference_id','int','PK'],['citation_key','string',''],['publication_year','int',''],['source_role','string',''],['doi_or_authority','string','']]},
-PARAMETER_SOURCE:{d:'Join table recording which reference source supports which parameter definition and in what role.',f:[['parameter_id','int','FK','PARAMETER_DEFINITION'],['reference_id','int','FK','REFERENCE_SOURCE'],['support_role','string','']]},
-DATA_SOURCE:{d:'Stable provenance record for source documents, datasets, models or permission-cleared evidence admitted to a case study.',f:[['data_source_id','int','PK'],['case_id','int','FK','STUDY_CASE'],['source_kind','string',''],['stable_reference','string',''],['access_class','string',''],['registered_at','datetime','']]},
-OBSERVATION:{d:'Time-stamped hydrological or operational observation such as precipitation, discharge or energy generation, typed by the parameter register.',f:[['observation_id','int','PK'],['site_id','int','FK','SITE'],['parameter_id','int','FK','PARAMETER_DEFINITION'],['data_source_id','int','FK','DATA_SOURCE'],['observed_at','datetime',''],['value','decimal','']]},
-SPATIAL_FEATURE:{d:'Registered GIS/spatial feature linked to source provenance for terrain, catchment, hydrography, land use or other admitted planning layers.',f:[['feature_id','int','PK'],['case_id','int','FK','STUDY_CASE'],['data_source_id','int','FK','DATA_SOURCE'],['feature_type','string',''],['geometry_ref','string',''],['valid_at','datetime','']]},
-SCREENING_CRITERION:{d:'Definition of a transparent hydropower/PHES screening criterion tied to the parameter and reference registers.',f:[['criterion_id','int','PK'],['parameter_id','int','FK','PARAMETER_DEFINITION'],['criterion_name','string',''],['criterion_domain','string',''],['reference_id','int','FK','REFERENCE_SOURCE']]},
-ANALYSIS_RUN:{d:'Reproducible analytical execution record for screening, hydrology, structural or validation workflows admitted by the research.',f:[['run_id','int','PK'],['case_id','int','FK','STUDY_CASE'],['run_kind','string',''],['method_name','string',''],['executed_at','datetime',''],['status','string','']]},
-RUN_INPUT:{d:'Join record identifying the registered source inputs consumed by a specific analysis run.',f:[['run_id','int','FK','ANALYSIS_RUN'],['data_source_id','int','FK','DATA_SOURCE'],['input_role','string','']]},
-RUN_CRITERION:{d:'Run-specific configuration for an admitted screening criterion. Weight and threshold fields exist because the proposal requires them to be registered; no values are invented here.',f:[['run_id','int','FK','ANALYSIS_RUN'],['criterion_id','int','FK','SCREENING_CRITERION'],['weight','decimal',''],['threshold','decimal','']]},
-SCREENING_RESULT:{d:'Criterion-level site screening output linked back to the analysis run and evidence source.',f:[['run_id','int','FK','ANALYSIS_RUN'],['site_id','int','FK','SITE'],['criterion_id','int','FK','SCREENING_CRITERION'],['criterion_value','decimal',''],['score','decimal',''],['evidence_source_id','int','FK','DATA_SOURCE']]},
-ASSET_GEOMETRY:{d:'Source-backed geometry record for a selected hydropower asset.',f:[['asset_geometry_id','int','PK'],['asset_id','int','FK','ASSET'],['data_source_id','int','FK','DATA_SOURCE'],['geometry_ref','string',''],['geometry_type','string','']]},
-ASSET_MATERIAL:{d:'Source-backed material record associated with a selected hydropower asset.',f:[['material_record_id','int','PK'],['asset_id','int','FK','ASSET'],['data_source_id','int','FK','DATA_SOURCE'],['material_name','string','']]},
-LOAD_ACTION:{d:'Source-backed load/action record for a selected asset, typed through the shared parameter register.',f:[['load_action_id','int','PK'],['asset_id','int','FK','ASSET'],['parameter_id','int','FK','PARAMETER_DEFINITION'],['data_source_id','int','FK','DATA_SOURCE'],['value','decimal','']]},
-ANALYSIS_RESULT:{d:'Verified analytical result associated with a run, asset and parameter, retaining evidence provenance.',f:[['analysis_result_id','int','PK'],['run_id','int','FK','ANALYSIS_RUN'],['asset_id','int','FK','ASSET'],['parameter_id','int','FK','PARAMETER_DEFINITION'],['value','decimal',''],['evidence_source_id','int','FK','DATA_SOURCE']]},
-INSPECTION_RECORD:{d:'Inspection/condition record for a selected asset with source provenance and inspection time.',f:[['inspection_id','int','PK'],['asset_id','int','FK','ASSET'],['data_source_id','int','FK','DATA_SOURCE'],['inspected_at','datetime',''],['condition_record','string','']]},
-BIM_OBJECT:{d:'Source-backed BIM/IFC-compatible object reference admitted for mapping to the common asset identity.',f:[['bim_object_id','int','PK'],['data_source_id','int','FK','DATA_SOURCE'],['object_ref','string',''],['object_type','string','']]},
-ASSET_BIM_MAP:{d:'Explicit mapping between a relational asset identity and a BIM/IFC object, including mapping status and limitations.',f:[['asset_id','int','FK','ASSET'],['bim_object_id','int','FK','BIM_OBJECT'],['mapping_status','string',''],['limitation_note','string','']]},
-ASSET_GIS_MAP:{d:'Explicit mapping between a relational asset identity and a registered GIS feature, including mapping status and limitations.',f:[['asset_id','int','FK','ASSET'],['feature_id','int','FK','SPATIAL_FEATURE'],['mapping_status','string',''],['limitation_note','string','']]},
-VALIDATION_RECORD:{d:'Research validation record for consistency, traceability, reproducibility, calculation agreement, GIS sensitivity, query accuracy, usability or practitioner review.',f:[['validation_id','int','PK'],['case_id','int','FK','STUDY_CASE'],['run_id','int','FK','ANALYSIS_RUN'],['validation_type','string',''],['result_status','string',''],['evidence_source_id','int','FK','DATA_SOURCE']]},
-WEB_PRESENTATION:{d:'Metadata for public-safe or permission-controlled web presentation of case-study information.',f:[['web_item_id','int','PK'],['case_id','int','FK','STUDY_CASE'],['presentation_type','string',''],['access_class','string',''],['metadata_ref','string','']]}
-};
-
-const incoming = {};
-Object.keys(T).forEach(n=>incoming[n]=[]);
-for(const [table,def] of Object.entries(T)) for(const field of def.f){ if(field[2]==='FK' && field[3]) incoming[field[3]].push({from:table,field:field[0]}); }
-
-const nav=document.getElementById('tableNav'), detail=document.getElementById('tableDetail'), search=document.getElementById('search'), noMatches=document.getElementById('noMatches');
-let current='STUDY_CASE';
-
-function buildNav(filter=''){
-  nav.innerHTML=''; let hits=0; const q=filter.trim().toLowerCase();
-  groups.forEach(g=>{
-    const names=g.tables.filter(n=>!q || n.toLowerCase().includes(q) || T[n].d.toLowerCase().includes(q));
-    if(!names.length) return; hits+=names.length;
-    const wrap=document.createElement('div'); wrap.className='group';
-    const title=document.createElement('div'); title.className='group-title'; title.textContent=g.name; wrap.appendChild(title);
-    names.forEach(n=>{const b=document.createElement('button');b.type='button';b.className='table-link'+(n===current?' active':'');b.textContent=n;b.onclick=()=>selectTable(n);wrap.appendChild(b)});
-    nav.appendChild(wrap);
-  });
-  noMatches.style.display=hits?'none':'block';
-}
-
-function keyCell(key){ if(!key) return '—'; return `<span class="key ${key.toLowerCase()}">${key}</span>`; }
-function buttonFor(name,label){return `<button class="ref-button" type="button" data-table="${name}">${label||name}</button>`}
-
-function selectTable(name){
-  current=name; const def=T[name];
-  const outgoing=def.f.filter(f=>f[2]==='FK'&&f[3]).map(f=>({to:f[3],field:f[0]}));
-  const inc=incoming[name];
-  detail.innerHTML=`
-    <div class="table-head"><div><span class="badge">Conceptual table</span><h2 class="table-name">${name}</h2><p class="table-description">${def.d}</p></div></div>
-    <div class="panel fields"><div class="panel-title">Columns</div><table class="field-table"><thead><tr><th>Column</th><th>Type</th><th>Key</th><th>Reference</th></tr></thead><tbody>${def.f.map(f=>`<tr><td class="field-name">${f[0]}</td><td>${f[1]}</td><td>${keyCell(f[2])}</td><td>${f[3]?buttonFor(f[3],f[3]):'—'}</td></tr>`).join('')}</tbody></table></div>
-    <div class="panel"><div class="panel-title">Explicit relationships</div><div class="relations">
-      <div class="relation-box"><h3>Foreign keys from this table</h3><div class="chips">${outgoing.length?outgoing.map(r=>`<button class="chip" data-table="${r.to}">${r.field} → ${r.to}</button>`).join(''):'<span class="none">No outgoing FK in the preserved schema.</span>'}</div></div>
-      <div class="relation-box"><h3>Referenced by</h3><div class="chips">${inc.length?inc.map(r=>`<button class="chip" data-table="${r.from}">${r.from}.${r.field}</button>`).join(''):'<span class="none">No incoming FK in the preserved schema.</span>'}</div></div>
-    </div></div>`;
-  detail.querySelectorAll('[data-table]').forEach(el=>el.addEventListener('click',()=>selectTable(el.dataset.table)));
-  buildNav(search.value); window.scrollTo({top:0,behavior:'smooth'}); document.body.classList.remove('sidebar-open');
-}
-
-search.addEventListener('input',()=>buildNav(search.value));
-document.getElementById('menuButton').addEventListener('click',()=>document.body.classList.toggle('sidebar-open'));
-document.addEventListener('click',e=>{if(document.body.classList.contains('sidebar-open')&&window.innerWidth<=860&&!document.getElementById('sidebar').contains(e.target)&&e.target.id!=='menuButton')document.body.classList.remove('sidebar-open')});
-document.getElementById('tableCount').textContent=Object.keys(T).length;
-buildNav(); selectTable(current);
+const BASE_W=2460, BASE_H=1780;let model,scale=0.82,selected='STUDY_CASE',focusMode=false;const pos={};
+const designer=document.getElementById('designer'),stage=document.getElementById('stage'),spacer=document.getElementById('spacer'),cards=document.getElementById('cards'),wires=document.getElementById('wires'),inspector=document.getElementById('inspector');
+function byCode(c){return model.tables.find(t=>t.code===c)}function groupLabel(id){return model.groups.find(g=>g.id===id)?.label||id}function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function layout(){const groupCols={places:0,sources:1,water:2,planning:3,structures:4,links:5,review:6};const yCount={};model.tables.forEach(t=>{const c=groupCols[t.group]??0;yCount[c]=(yCount[c]||0);pos[t.code]={x:50+c*335,y:50+yCount[c]*265};yCount[c]++})}
+function setScale(v){scale=Math.max(.42,Math.min(1.35,v));stage.style.transform=`scale(${scale})`;stage.style.width=BASE_W+'px';stage.style.height=BASE_H+'px';spacer.style.width=(BASE_W*scale)+'px';spacer.style.height=(BASE_H*scale)+'px'}
+function buildTree(filter=''){const q=filter.trim().toLowerCase();document.getElementById('tree').innerHTML=model.groups.map(g=>{const ts=model.tables.filter(t=>t.group===g.id&&(!q||t.label.toLowerCase().includes(q)));if(!ts.length)return'';return `<div class="group"><div class="group-title"><span>${esc(g.label)}</span><span>${ts.length}</span></div>${ts.map(t=>`<button class="table-item ${t.code===selected?'active':''}" data-code="${t.code}">${esc(t.label)}</button>`).join('')}</div>`}).join('');document.querySelectorAll('.table-item').forEach(b=>b.onclick=()=>selectTable(b.dataset.code,true))}
+function visibleSet(){if(!focusMode)return new Set(model.tables.map(t=>t.code));const s=new Set([selected]);model.relationships.forEach(r=>{if(r[0]===selected)s.add(r[1]);if(r[1]===selected)s.add(r[0])});return s}
+function renderCards(){const visible=visibleSet();cards.innerHTML=model.tables.map(t=>{if(!visible.has(t.code))return'';const p=pos[t.code];const shown=t.fields.slice(0,7);return `<article class="table-card ${t.code===selected?'selected':''}" data-code="${t.code}" style="left:${p.x}px;top:${p.y}px"><div class="card-head"><strong>${esc(t.label)}</strong><small>${esc(groupLabel(t.group))}</small></div><div>${shown.map(f=>`<div class="field ${f[3]==='key'?'key':''} ${f[3]==='link'?'link':''}"><span class="icon">${f[3]==='key'?'◆':f[3]==='link'?'↗':'·'}</span><span>${esc(f[1])}</span><span class="type">${esc(f[2])}</span></div>`).join('')}</div>${t.fields.length>7?`<div class="more">+ ${t.fields.length-7} more field${t.fields.length-7===1?'':'s'}</div>`:''}</article>`}).join('');document.querySelectorAll('.table-card').forEach(card=>{card.onclick=e=>{if(!e.target.closest('.card-head'))selectTable(card.dataset.code,false)};const head=card.querySelector('.card-head');head.addEventListener('pointerdown',e=>startDrag(e,card))});requestAnimationFrame(drawWires)}
+function startDrag(e,card){e.preventDefault();const code=card.dataset.code;selectTable(code,false);const start={x:e.clientX,y:e.clientY,px:pos[code].x,py:pos[code].y};headCapture=e.currentTarget;headCapture.setPointerCapture(e.pointerId);const move=ev=>{pos[code].x=start.px+(ev.clientX-start.x)/scale;pos[code].y=start.py+(ev.clientY-start.y)/scale;card.style.left=pos[code].x+'px';card.style.top=pos[code].y+'px';drawWires()};const up=ev=>{headCapture.removeEventListener('pointermove',move);headCapture.removeEventListener('pointerup',up)};headCapture.addEventListener('pointermove',move);headCapture.addEventListener('pointerup',up)}
+function centerOf(code){const el=document.querySelector(`.table-card[data-code="${code}"]`);if(!el)return null;return{x:el.offsetLeft+el.offsetWidth/2,y:el.offsetTop+el.offsetHeight/2}}
+function drawWires(){const visible=visibleSet();wires.setAttribute('width',BASE_W);wires.setAttribute('height',BASE_H);wires.innerHTML=model.relationships.map((r,i)=>{if(!visible.has(r[0])||!visible.has(r[1]))return'';const a=centerOf(r[0]),b=centerOf(r[1]);if(!a||!b)return'';const active=r[0]===selected||r[1]===selected;const mx=(a.x+b.x)/2;return `<path class="wire ${active?'active':''}" d="M ${a.x} ${a.y} C ${mx} ${a.y}, ${mx} ${b.y}, ${b.x} ${b.y}"/>`}).join('')}
+function selectTable(code,scroll){selected=code;buildTree(document.getElementById('search').value);renderCards();renderInspector();inspector.classList.add('open');if(scroll){const p=pos[code];designer.scrollTo({left:Math.max(0,p.x*scale-designer.clientWidth/2+120),top:Math.max(0,p.y*scale-designer.clientHeight/2+80),behavior:'smooth'})}}
+function renderInspector(){const t=byCode(selected);const rels=model.relationships.filter(r=>r[0]===selected||r[1]===selected);document.getElementById('inspectContent').innerHTML=`<div class="inspector-head"><small>${esc(groupLabel(t.group))}</small><h2>${esc(t.label)}</h2><p>${esc(t.description)}</p></div><div class="inspect-section"><h3>Fields</h3>${t.fields.map(f=>`<div class="inspect-field"><b>${esc(f[1])}${f[3]==='key'?'<span class="pill key">Primary key</span>':''}${f[3]==='link'?'<span class="pill link">Linked field</span>':''}</b><span>${esc(f[2])}${f[4]?` · connects to ${esc(byCode(f[4]).label)}`:''}</span></div>`).join('')}</div><div class="inspect-section"><h3>Connections</h3>${rels.map(r=>{const other=r[0]===selected?r[1]:r[0];const sentence=r[0]===selected?`${t.label} ${r[2]} ${byCode(other).label}`:`${byCode(other).label} ${r[2]} ${t.label}`;return `<div class="relation" data-code="${other}"><strong>${esc(byCode(other).label)}</strong><span>${esc(sentence)}</span></div>`}).join('')||'<span>No linked table in this conceptual model.</span>'}</div>`;document.querySelectorAll('.relation').forEach(x=>x.onclick=()=>selectTable(x.dataset.code,true))}
+function fit(){const target=Math.min((designer.clientWidth-30)/BASE_W,(designer.clientHeight-30)/BASE_H);setScale(Math.max(.42,target));designer.scrollTo(0,0)}
+async function init(){model=await fetch('../hydropower-data-model/model.json',{cache:'no-store'}).then(r=>r.json());layout();setScale(scale);buildTree();renderCards();renderInspector();document.getElementById('search').oninput=e=>buildTree(e.target.value);document.getElementById('autoArrange').onclick=()=>{layout();renderCards();fit()};document.getElementById('focus').onclick=()=>{focusMode=true;renderCards()};document.getElementById('showAll').onclick=()=>{focusMode=false;renderCards()};document.getElementById('zoomIn').onclick=()=>setScale(scale*1.15);document.getElementById('zoomOut').onclick=()=>setScale(scale/1.15);document.getElementById('fit').onclick=fit;document.getElementById('menu').onclick=()=>document.getElementById('sidebar').classList.toggle('open');window.addEventListener('resize',drawWires);if(innerWidth<720)document.getElementById('menu').style.display='inline-block';setTimeout(fit,80)}
+init().catch(e=>{document.getElementById('cards').innerHTML='<p style="padding:30px">Could not load the research model.</p>';console.error(e)});
 </script>
 </body>
 </html>

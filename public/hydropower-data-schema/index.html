@@ -1,183 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hydropower PhD — Integrated Database Schema</title>
-  <meta name="description" content="Interactive Mermaid ER schema for the proposed Hydropower PhD BIM-GIS, relational/spatial data and decision-support framework." />
-  <style>
-    :root{--navy:#082a46;--blue:#0f5f8f;--sky:#eaf5fc;--ink:#102235;--muted:#5d6c7c;--line:#ccd8e3;--paper:#f7fafc;--white:#fff;--amber:#8a5b00;--green:#17633f}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
-    a{color:inherit}.shell{max-width:1500px;margin:0 auto;padding:24px}.topbar{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px}.back{font-weight:700;text-decoration:none;color:var(--blue)}
-    .hero{background:linear-gradient(135deg,#082a46,#0f466d);color:#fff;border-radius:22px;padding:28px;box-shadow:0 12px 34px rgba(8,42,70,.18)}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:800;color:#9edcff}.hero h1{font-size:clamp(2rem,5vw,4rem);line-height:1.02;margin:.5rem 0 1rem;max-width:1100px}.hero p{max-width:1050px;color:#d7e6f2;font-size:1.02rem}.badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.badge{display:inline-flex;padding:7px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.28);font-size:.78rem;font-weight:800;letter-spacing:.04em}.badge.amber{background:#fff5d6;color:#6a4600;border-color:#e7ca71}.badge.green{background:#e8f6ef;color:#145238;border-color:#9fd4b9}
-    .notice{margin:20px 0;background:#fff;border:1px solid var(--line);border-left:5px solid #d4a017;border-radius:14px;padding:16px 18px}.notice strong{display:block;margin-bottom:4px}.toolbar{position:sticky;top:8px;z-index:5;display:flex;gap:8px;flex-wrap:wrap;align-items:center;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);padding:10px;border:1px solid var(--line);border-radius:14px;margin:18px 0 10px;box-shadow:0 8px 20px rgba(16,34,53,.08)}button,.button-link{border:1px solid #b8c9d7;background:#fff;color:var(--navy);border-radius:10px;padding:9px 12px;font-weight:750;cursor:pointer;text-decoration:none;font-size:.9rem}button:hover,.button-link:hover{background:#edf6fb}.zoom-value{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:700;margin-left:auto}
-    #viewport{height:min(76vh,920px);min-height:560px;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;position:relative;touch-action:none;cursor:grab;box-shadow:0 8px 24px rgba(16,34,53,.07)}#viewport.dragging{cursor:grabbing}#canvas{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform;padding:34px}.diagram svg{max-width:none!important;height:auto!important;overflow:visible}.loading{padding:28px;color:var(--muted)}
-    .section{margin:30px 0}.section h2{font-size:clamp(1.5rem,3vw,2.4rem);margin:0 0 8px}.section>p{color:var(--muted);max-width:1000px}.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px}table{width:100%;border-collapse:collapse;min-width:980px}th,td{padding:12px 14px;border-bottom:1px solid #e3eaf0;vertical-align:top;text-align:left}th{background:#edf5fa;color:var(--navy);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}td{font-size:.92rem}.status{font-weight:800;white-space:nowrap}.status.direct{color:var(--green)}.status.proposal{color:var(--amber)}
-    code{background:#edf2f6;padding:2px 5px;border-radius:5px}.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:12px}.ref{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.ref strong{display:block;margin-bottom:4px}.ref small{color:var(--muted)}.foot{color:var(--muted);font-size:.88rem;margin:26px 0 10px}.legend{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.legend span{padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.82rem}.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;border:1px solid #c8d3dc;border-bottom-width:2px;padding:1px 5px;border-radius:5px;background:#fff}
-    @media(max-width:760px){.shell{padding:14px}.hero{padding:22px 18px}.toolbar{top:4px}.zoom-value{width:100%;margin-left:0}#viewport{min-height:500px;height:68vh}.table-wrap{margin-left:-4px;margin-right:-4px}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hydropower PhD — Relationship Diagram</title>
+<meta name="description" content="Human-friendly interactive relationship diagram for the proposed Hydropower PhD research model." />
+<style>
+:root{--navy:#082a46;--blue:#0f5f8f;--ink:#102235;--muted:#5d6c7c;--line:#ccd8e3;--paper:#f7fafc;--amber:#8a5b00;--green:#17633f}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}a{color:inherit}.shell{max-width:1500px;margin:0 auto;padding:22px}.topbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:15px}.back{font-weight:760;text-decoration:none;color:var(--blue)}.tabs{display:flex;gap:7px;flex-wrap:wrap}.tabs a,.tabs span{font-size:.76rem;text-decoration:none;border:1px solid #c5d2dc;border-radius:9px;padding:7px 9px;background:#fff}.tabs .active{background:var(--navy);color:#fff;border-color:var(--navy)}.hero{background:linear-gradient(135deg,#082a46,#0f466d);color:#fff;border-radius:20px;padding:26px;box-shadow:0 12px 32px rgba(8,42,70,.16)}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:850;color:#a7ddfb}.hero h1{font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.03;margin:.45rem 0 .8rem;max-width:1100px}.hero p{max-width:1030px;color:#d8e8f3}.badge-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.badge{padding:6px 10px;border-radius:999px;font-size:.74rem;font-weight:800}.badge.amber{background:#fff5d6;color:#6a4600}.badge.green{background:#e8f6ef;color:#145238}.notice{margin:18px 0;background:#fff;border:1px solid var(--line);border-left:5px solid #d4a017;border-radius:13px;padding:14px 16px}.toolbar{position:sticky;top:6px;z-index:5;display:flex;gap:7px;flex-wrap:wrap;align-items:center;background:rgba(255,255,255,.95);backdrop-filter:blur(9px);padding:9px;border:1px solid var(--line);border-radius:12px;margin:16px 0 9px;box-shadow:0 7px 18px rgba(16,34,53,.07)}button,.button-link{border:1px solid #b9c9d5;background:#fff;color:var(--navy);border-radius:9px;padding:8px 10px;font-weight:740;cursor:pointer;text-decoration:none;font-size:.84rem}button:hover,.button-link:hover{background:#edf6fb}.zoom-value{margin-left:auto;color:var(--muted);font-weight:760}.mode{background:#e9f4fa;border-color:#92bed4}#viewport{height:min(75vh,900px);min-height:560px;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;position:relative;touch-action:none;cursor:grab;box-shadow:0 8px 22px rgba(16,34,53,.06)}#viewport.dragging{cursor:grabbing}#canvas{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform;padding:30px}.diagram svg{max-width:none!important;height:auto!important;overflow:visible}.loading{padding:26px;color:var(--muted)}.legend{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.legend span{padding:5px 8px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:.78rem}.section{margin:28px 0}.section h2{font-size:clamp(1.45rem,3vw,2.25rem);margin:0 0 7px}.section>p{color:var(--muted);max-width:1050px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:13px}.card strong{display:block}.card small{color:var(--muted)}.foot{color:var(--muted);font-size:.84rem;margin:24px 0}.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:900px}th,td{padding:11px 13px;border-bottom:1px solid #e4ebf0;text-align:left;vertical-align:top}th{background:#edf5fa;color:var(--navy);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}td{font-size:.88rem}.status{font-weight:800}.status.direct{color:var(--green)}.status.proposal{color:var(--amber)}@media(max-width:760px){.shell{padding:13px}.hero{padding:20px 17px}.zoom-value{width:100%;margin-left:0}#viewport{height:68vh;min-height:500px}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 </head>
 <body>
-  <main class="shell">
-    <div class="topbar">
-      <a class="back" href="../hydropower/">← Hydropower research module</a>
-      <a class="back" href="../">Research hub</a>
-    </div>
-
-    <section class="hero">
-      <div class="eyebrow">Hydropower PhD · conceptual data architecture</div>
-      <h1>Integrated BIM-GIS + relational/spatial database schema</h1>
-      <p>This interactive Mermaid ER diagram translates only the parameter groups and integration requirements explicitly named in the submitted Pokhara University Form E proposal, with literature support limited to the sources already cited in that proposal and its current citation-learning map.</p>
-      <div class="badge-row">
-        <span class="badge amber">Conceptual research schema — not yet a production database</span>
-        <span class="badge green">Source-grounded parameter register</span>
-      </div>
-    </section>
-
-    <aside class="notice">
-      <strong>No-hallucination boundary</strong>
-      No numeric criterion weights, screening thresholds, design values, warning thresholds, material properties or structural results are invented here. The proposal says such values will be registered, traced and sensitivity-tested; it does not prescribe them yet. PK/FK fields are the proposed normalization mechanism, not claimed scientific findings.
-    </aside>
-
-    <div class="toolbar" aria-label="Diagram controls">
-      <button id="zoomIn" type="button">＋ Zoom in</button>
-      <button id="zoomOut" type="button">− Zoom out</button>
-      <button id="fit" type="button">Fit</button>
-      <button id="reset" type="button">Reset</button>
-      <a class="button-link" href="./schema.mmd" target="_blank" rel="noopener">Mermaid source</a>
-      <span class="zoom-value" id="zoomValue">100%</span>
-    </div>
-
-    <div id="viewport" aria-label="Interactive database relationship diagram">
-      <div id="canvas"><div class="diagram" id="diagram"><div class="loading">Rendering source-grounded Mermaid schema…</div></div></div>
-    </div>
-    <div class="legend"><span>Mouse wheel / trackpad: zoom</span><span>Drag: pan</span><span>Buttons: zoom / fit / reset</span><span>Double-click: fit</span></div>
-
-    <section class="section">
-      <h2>Parameter register and evidence boundary</h2>
-      <p><strong>Direct literature support</strong> means the current citation-learning map explicitly associates the cited source with that criterion or integration concept. <strong>Proposal-specified</strong> means the variable is explicitly named in the submitted Form E, but the current citation map does not claim that a particular paper defines its quantitative meaning.</p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Domain</th><th>Parameters / records represented</th><th>Grounding status</th><th>Current cited support</th></tr></thead>
-          <tbody>
-            <tr><td>Hydrology + operations</td><td>Precipitation; discharge; energy generation; storage/reservoir information; timestamps; units; source provenance.</td><td><span class="status proposal">Proposal-specified</span></td><td>Explicitly listed in Form E §6.1 and §6.6. The present citation map uses IHA 2024 and IRENA 2024 for sector context, not as quantitative definitions of these variables.</td></tr>
-            <tr><td>PHES / hydropower screening</td><td>Topographic head; slope; water accessibility; natural-storage/reservoir geometry; head-to-distance relationship; river/water-source proximity; road/grid proximity; land cover; settlements; protected/sensitive areas; hazard/ESIA-screening indicators; criterion definitions; weights; thresholds; scores; sensitivity runs.</td><td><span class="status direct">Direct + proposal</span></td><td>Ali et al. (2023) directly supports head, slope, water accessibility and transparent GIS-AHP criteria; Rojanamon et al. (2009) supports multidisciplinary hydropower site-selection criteria; Dhakal et al. (2026) supports Nepal-specific geospatial PHES screening plus detailed validation. Other named factors are explicitly listed by Form E.</td></tr>
-            <tr><td>GIS / spatial evidence</td><td>Terrain; catchment; land use; hydrography; natural basin/reservoir candidates; access/grid; settlements; protected/sensitive areas; hazard/environmental-social layers; spatial geometry references.</td><td><span class="status direct">Direct + proposal</span></td><td>Form E §6.1, §6.4 and §6.6; Ali et al. (2023), Rojanamon et al. (2009), Dhakal et al. (2026). Stocks et al. (2021) and Ouchani et al. (2022) are reserve/comparative PHES-screening sources in the current citation map, not claims of Nepal-specific values.</td></tr>
-            <tr><td>Civil / structural assets</td><td>Asset geometry; materials; loads/actions; analysis references; results; inspections; condition records.</td><td><span class="status proposal">Proposal-specified</span></td><td>Explicitly listed in Form E §3.2, §6.1 and expected outcomes. Wangchuk et al. (2024) supports BIM/lifecycle information relevance in hydropower. NBC 105:2020 is retained in the proposal references as a specialist/codal boundary example, not as a source for invented asset values.</td></tr>
-            <tr><td>BIM-GIS-relational integration</td><td>Stable asset identifiers; BIM/IFC object mappings; GIS geometry links; mapping status; mapping limitations; queryable relational/spatial records.</td><td><span class="status direct">Direct literature support</span></td><td>Solihin et al. (2017) supports transforming BIM information into a query-efficient relational/spatial database; Liu et al. (2017) supports the geometry/semantics/data-structure/LOD mismatch problem; Zhang et al. (2020) supports web BIM-GIS integration in hydraulic/hydropower engineering; Wangchuk et al. (2024) supports hydropower BIM lifecycle relevance; Paneru et al. (2023) supports Nepal BIM-adoption constraints.</td></tr>
-            <tr><td>Provenance + analysis governance</td><td>Source documents/datasets; stable references; units; timestamps; provenance; analysis runs; registered inputs; criterion configuration; evidence links; access class; web-presentation metadata.</td><td><span class="status direct">Direct + proposal</span></td><td>Form E §6.1 and §6.6 explicitly names these records. PostgreSQL documentation (2025) supports the chosen relational implementation substrate. Lee et al. (2023) is cited for structured, traceable digital-rule workflows; it does not define hydropower engineering values.</td></tr>
-            <tr><td>Validation</td><td>Consistency; traceability; reproducibility; calculation agreement; GIS sensitivity analysis; query accuracy; usability; practitioner review.</td><td><span class="status proposal">Proposal-specified</span></td><td>Explicit validation dimensions in Form E §3.2 and §6.5. Dhakal et al. (2026) additionally supports validating GIS-selected PHES candidates beyond desktop ranking.</td></tr>
-            <tr><td>Optional flood early-warning research module</td><td>Hydro-meteorological inputs; threshold/probabilistic forecast runs; visual communication; access/authority boundary.</td><td><span class="status direct">Direct + conditional</span></td><td>Form E §6.6 makes this conditional on suitable data and permissions. Smith, Brown &amp; Dugar (2017) supports the Nepal flood-warning concept that forecasting must be integrated with operational/community communication. The proposal explicitly says this is not an operational life-safety authority unless separately validated and adopted.</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Cited sources used to constrain the schema</h2>
-      <p>These are the references already present in the proposal/citation-learning map that materially constrain the data model or parameter interpretation. Macro-context sources are intentionally not used to invent technical fields.</p>
-      <div class="refs">
-        <div class="ref"><strong>Ali et al. (2023) · Applied Energy</strong><small>GIS-AHP off-river PHES site selection; supports head, slope, water accessibility, explicit criteria and sensitivity logic. DOI: 10.1016/j.apenergy.2023.120914.</small></div>
-        <div class="ref"><strong>Rojanamon et al. (2009) · Renewable and Sustainable Energy Reviews</strong><small>GIS-based run-of-river hydropower site selection using engineering, economic, environmental and social criteria. DOI: 10.1016/j.rser.2009.07.003.</small></div>
-        <div class="ref"><strong>Dhakal et al. (2026) · Energy</strong><small>Nepal PHES geospatial/economic analysis and validation beyond desktop screening. DOI: 10.1016/j.energy.2026.140535.</small></div>
-        <div class="ref"><strong>Solihin et al. (2017) · Automation in Construction</strong><small>Simplified relational/spatial database representation of BIM for efficient queries. DOI: 10.1016/j.autcon.2017.10.002.</small></div>
-        <div class="ref"><strong>Liu et al. (2017) · ISPRS IJGI</strong><small>BIM-GIS integration challenges in geometry, semantics, data structure and level of detail. DOI: 10.3390/ijgi6020053.</small></div>
-        <div class="ref"><strong>Zhang et al. (2020) · Automation in Construction</strong><small>Web-based BIM-GIS integration for hydraulic and hydropower engineering. DOI: 10.1016/j.autcon.2020.103114.</small></div>
-        <div class="ref"><strong>Wangchuk et al. (2024) · Infrastructures</strong><small>Review of BIM applications across hydropower design, engineering and management. DOI: 10.3390/infrastructures9070098.</small></div>
-        <div class="ref"><strong>Paneru et al. (2023) · Buildings</strong><small>Nepal BIM implementation constraints and adoption context. DOI: 10.3390/buildings13020552.</small></div>
-        <div class="ref"><strong>Smith, Brown &amp; Dugar (2017) · NHESS</strong><small>Nepal community-based flood early-warning systems; forecasting plus operational/community communication. DOI: 10.5194/nhess-17-423-2017.</small></div>
-        <div class="ref"><strong>Lee et al. (2023) · Developments in the Built Environment</strong><small>Structured, implementable digital-rule checking and traceable requirement authority. DOI: 10.1016/j.dibe.2023.100174.</small></div>
-        <div class="ref"><strong>PostgreSQL Global Development Group (2025)</strong><small>Implementation substrate for normalized relational records and PostGIS spatial capability; not itself the research novelty or a scientific criterion source.</small></div>
-      </div>
-    </section>
-
-    <p class="foot">Research authority used for this page: submitted Pokhara University PhD Research Proposal (Form E), dated 22 September 2026, plus the current proposal citation-learning map. The diagram is deliberately conceptual until schema constraints, field definitions, actual datasets and validation rules are formally designed and tested during the PhD.</p>
-  </main>
-
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-
-    const viewport = document.getElementById('viewport');
-    const canvas = document.getElementById('canvas');
-    const diagram = document.getElementById('diagram');
-    const zoomValue = document.getElementById('zoomValue');
-    let scale = 1, x = 0, y = 0, dragging = false, startX = 0, startY = 0;
-    const minScale = 0.18, maxScale = 3.5;
-
-    function apply(){
-      canvas.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
-      zoomValue.textContent = `${Math.round(scale * 100)}%`;
-    }
-
-    function clampScale(next){ return Math.min(maxScale, Math.max(minScale, next)); }
-
-    function zoomAt(factor, cx = viewport.clientWidth / 2, cy = viewport.clientHeight / 2){
-      const old = scale;
-      const next = clampScale(scale * factor);
-      if (next === old) return;
-      const worldX = (cx - x) / old;
-      const worldY = (cy - y) / old;
-      scale = next;
-      x = cx - worldX * scale;
-      y = cy - worldY * scale;
-      apply();
-    }
-
-    function fit(){
-      const svg = diagram.querySelector('svg');
-      if (!svg) return;
-      const box = svg.getBoundingClientRect();
-      const rawW = box.width / scale;
-      const rawH = box.height / scale;
-      if (!rawW || !rawH) return;
-      const pad = 40;
-      scale = clampScale(Math.min((viewport.clientWidth - pad) / rawW, (viewport.clientHeight - pad) / rawH));
-      x = (viewport.clientWidth - rawW * scale) / 2;
-      y = (viewport.clientHeight - rawH * scale) / 2;
-      apply();
-    }
-
-    document.getElementById('zoomIn').addEventListener('click', () => zoomAt(1.2));
-    document.getElementById('zoomOut').addEventListener('click', () => zoomAt(1/1.2));
-    document.getElementById('fit').addEventListener('click', fit);
-    document.getElementById('reset').addEventListener('click', () => { scale = 1; x = 0; y = 0; apply(); });
-    viewport.addEventListener('dblclick', fit);
-    viewport.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      const r = viewport.getBoundingClientRect();
-      zoomAt(e.deltaY < 0 ? 1.12 : 1/1.12, e.clientX - r.left, e.clientY - r.top);
-    }, {passive:false});
-
-    viewport.addEventListener('pointerdown', (e) => {
-      dragging = true; viewport.classList.add('dragging');
-      viewport.setPointerCapture(e.pointerId); startX = e.clientX - x; startY = e.clientY - y;
-    });
-    viewport.addEventListener('pointermove', (e) => { if (!dragging) return; x = e.clientX - startX; y = e.clientY - startY; apply(); });
-    viewport.addEventListener('pointerup', () => { dragging = false; viewport.classList.remove('dragging'); });
-    viewport.addEventListener('pointercancel', () => { dragging = false; viewport.classList.remove('dragging'); });
-
-    mermaid.initialize({
-      startOnLoad:false,
-      securityLevel:'strict',
-      theme:'base',
-      themeVariables:{
-        primaryColor:'#eef7fc', primaryTextColor:'#102235', primaryBorderColor:'#0f5f8f',
-        lineColor:'#6c8192', secondaryColor:'#f8fbfd', tertiaryColor:'#ffffff',
-        fontFamily:'Inter, system-ui, sans-serif'
-      },
-      er:{useMaxWidth:false, diagramPadding:24}
-    });
-
-    try {
-      const source = await fetch('./schema.mmd', {cache:'no-store'}).then(r => { if(!r.ok) throw new Error(`schema source ${r.status}`); return r.text(); });
-      const {svg} = await mermaid.render('hydropower-er-schema', source);
-      diagram.innerHTML = svg;
-      const rendered = diagram.querySelector('svg');
-      if (rendered){ rendered.removeAttribute('height'); rendered.style.maxWidth='none'; rendered.style.height='auto'; }
-      requestAnimationFrame(() => requestAnimationFrame(fit));
-    } catch (error) {
-      diagram.innerHTML = `<div class="loading"><strong>Diagram render failed.</strong><br>${String(error)}<br><a href="./schema.mmd">Open the Mermaid source directly.</a></div>`;
-    }
-  </script>
+<main class="shell">
+<div class="topbar"><a class="back" href="../hydropower/">← Hydropower research module</a><div class="tabs"><span class="active">01 Relationship diagram</span><a href="../hydropower-data-tables/">02 Table relationships</a><a href="../hydropower-data-graph/">03 Connections map</a></div></div>
+<section class="hero"><div class="eyebrow">Hydropower PhD · research relationship view</div><h1>How the research information connects</h1><p>This diagram shows the same source-grounded conceptual research model as the other two views, but the default wording has been changed to plain, human-readable labels. The underlying technical Mermaid source remains available for implementation traceability.</p><div class="badge-row"><span class="badge amber">Conceptual research design — not a finished production database</span><span class="badge green">Same 25 research tables · same 43 approved connections</span></div></section>
+<aside class="notice"><strong>No invented research values.</strong> The diagram shows places, evidence, observations, screening criteria, assets, model links, analyses and validation records named by the proposal. It does not invent weights, thresholds, material properties, warning limits or engineering results.</aside>
+<div class="toolbar"><button id="zoomIn">＋ Zoom in</button><button id="zoomOut">− Zoom out</button><button id="fit">Fit</button><button id="reset">Reset</button><button id="nameMode" class="mode">Show technical names</button><a class="button-link" href="./schema.mmd" target="_blank" rel="noopener">Open technical Mermaid source</a><span class="zoom-value" id="zoomValue">100%</span></div>
+<div id="viewport"><div id="canvas"><div id="diagram" class="diagram"><div class="loading">Drawing the relationship diagram…</div></div></div></div>
+<div class="legend"><span>Wheel / pinch: zoom</span><span>Drag: pan</span><span>Friendly labels are shown by default</span><span>Technical names are available only when requested</span></div>
+<section class="section"><h2>What this view is showing</h2><p>The research model is organized around a few understandable questions: What case and site are we studying? What evidence and measurements support it? What map information and screening criteria are used? What physical assets and engineering records exist? How are BIM and GIS representations linked? How are analyses checked and presented?</p><div class="cards" id="groupCards"></div></section>
+<section class="section"><h2>Parameter and evidence boundary</h2><div class="table-wrap"><table><thead><tr><th>Research area</th><th>What is represented</th><th>Grounding</th></tr></thead><tbody><tr><td>Water and operations</td><td>Precipitation, discharge, energy generation and storage/reservoir information, with time, units and evidence source.</td><td><span class="status proposal">Specified in the proposal</span></td></tr><tr><td>Site screening</td><td>Head, slope, water accessibility, reservoir/natural-storage geometry, head-to-distance relationship, river/water-source proximity, roads, grid, land cover, settlements, protected/sensitive areas and relevant hazard/environmental-social screening indicators.</td><td><span class="status direct">Proposal + cited screening literature</span></td></tr><tr><td>Structures and condition</td><td>Asset geometry, materials, loads/actions, analysis references, results, inspections and condition records.</td><td><span class="status proposal">Specified in the proposal</span></td></tr><tr><td>BIM, GIS and traceability</td><td>Stable asset identities, BIM/IFC links, map links, source documents, units, time stamps, provenance, analysis sessions, criteria, access level and web presentation information.</td><td><span class="status direct">Proposal + cited integration literature</span></td></tr></tbody></table></div></section>
+<p class="foot">Source boundary: submitted Pokhara University Form E proposal dated 22 September 2026 and the proposal's current citation-learning map. The technical table names remain available only as an implementation layer; the public view defaults to human wording.</p>
+</main>
+<script>
+const viewport=document.getElementById('viewport'),canvas=document.getElementById('canvas'),diagram=document.getElementById('diagram'),zoomValue=document.getElementById('zoomValue');let scale=1,x=0,y=0,drag=false,sx=0,sy=0,technical=false,model=null;const clamp=v=>Math.max(.2,Math.min(3.2,v));function apply(){canvas.style.transform=`translate(${x}px,${y}px) scale(${scale})`;zoomValue.textContent=Math.round(scale*100)+'%'}function zoomAt(f,cx=viewport.clientWidth/2,cy=viewport.clientHeight/2){const old=scale;scale=clamp(scale*f);x=cx-(cx-x)*(scale/old);y=cy-(cy-y)*(scale/old);apply()}function fit(){const b=canvas.getBoundingClientRect();const rw=b.width/scale,rh=b.height/scale;if(!rw||!rh)return;scale=clamp(Math.min((viewport.clientWidth-38)/rw,(viewport.clientHeight-38)/rh));x=(viewport.clientWidth-rw*scale)/2;y=(viewport.clientHeight-rh*scale)/2;apply()}
+document.getElementById('zoomIn').onclick=()=>zoomAt(1.2);document.getElementById('zoomOut').onclick=()=>zoomAt(1/1.2);document.getElementById('fit').onclick=fit;document.getElementById('reset').onclick=()=>{scale=1;x=0;y=0;apply()};viewport.ondblclick=fit;viewport.addEventListener('wheel',e=>{e.preventDefault();const r=viewport.getBoundingClientRect();zoomAt(e.deltaY<0?1.12:1/1.12,e.clientX-r.left,e.clientY-r.top)},{passive:false});viewport.addEventListener('pointerdown',e=>{drag=true;viewport.classList.add('dragging');viewport.setPointerCapture(e.pointerId);sx=e.clientX-x;sy=e.clientY-y});viewport.addEventListener('pointermove',e=>{if(!drag)return;x=e.clientX-sx;y=e.clientY-sy;apply()});viewport.addEventListener('pointerup',()=>{drag=false;viewport.classList.remove('dragging')});
+const relationWords={contains:'includes',registers:'uses evidence from',contextualizes:'has map information',executes:'has analysis sessions',validates:'has validation checks',publishes:'can be presented as',standardizes:'gives units to',supported_by:'is supported by',supports:'supports',types:'defines the meaning of',defines:'helps define',records:'has observations',provenance:'comes from',consumes:'uses',supplies:'supplies',configures:'uses criteria',parameterizes:'is applied through',produces:'produces',evaluated_as:'has screening results',scores:'contributes to',evidence:'is backed by',has:'has',inspected_by:'has inspections',receives:'has results',maps:'connects to',mapped_to:'represents',checked_by:'is checked by'};
+function friendlyMap(){const m={};model.tables.forEach(t=>{m[t.code]=t.label;t.fields.forEach(f=>m[f[0]]=f[1])});Object.assign(m,relationWords,{int:'Number',string:'Text',datetime:'Date & time',decimal:'Number',PK:'Main ID',FK:'Linked ID'});return m}
+function humanize(){const svg=diagram.querySelector('svg');if(!svg)return;const map=friendlyMap();svg.querySelectorAll('text,tspan').forEach(el=>{if(!el.dataset.original)el.dataset.original=el.textContent;const original=el.dataset.original;if(technical){el.textContent=original;return}let txt=original;Object.entries(map).sort((a,b)=>b[0].length-a[0].length).forEach(([k,v])=>{txt=txt.replace(new RegExp(`\\b${k.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')}\\b`,'g'),v)});el.textContent=txt})}
+document.getElementById('nameMode').onclick=()=>{technical=!technical;document.getElementById('nameMode').textContent=technical?'Show friendly names':'Show technical names';humanize()};
+async function init(){model=await fetch('../hydropower-data-model/model.json',{cache:'no-store'}).then(r=>r.json());document.getElementById('groupCards').innerHTML=model.groups.map(g=>`<div class="card"><strong>${g.label}</strong><small>${model.tables.filter(t=>t.group===g.id).map(t=>t.label).join(' · ')}</small></div>`).join('');mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'base',themeVariables:{primaryColor:'#eef7fc',primaryTextColor:'#102235',primaryBorderColor:'#0f5f8f',lineColor:'#6c8192',secondaryColor:'#f8fbfd',tertiaryColor:'#fff',fontFamily:'Inter, system-ui, sans-serif'},er:{useMaxWidth:false,diagramPadding:24}});const source=await fetch('./schema.mmd',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('Could not load diagram source');return r.text()});const {svg}=await mermaid.render('hydropower-er-schema',source);diagram.innerHTML=svg;const rendered=diagram.querySelector('svg');if(rendered){rendered.removeAttribute('height');rendered.style.maxWidth='none';rendered.style.height='auto'}humanize();requestAnimationFrame(()=>requestAnimationFrame(fit))}
+init().catch(e=>{diagram.innerHTML=`<div class="loading"><strong>Diagram could not be drawn.</strong><br>${String(e)}<br><a href="./schema.mmd">Open the technical source.</a></div>`});
+</script>
 </body>
 </html>

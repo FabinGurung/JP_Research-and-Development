@@ -65,20 +65,34 @@ export default function HydropowerModulePage() {
 
       <section className="section section-navy">
         <SectionHeading
-          kicker="Database representations"
-          title="Three ways to inspect the same conceptual research schema"
-          text="All three views use the same source-grounded conceptual tables and relationships. The Mermaid view emphasizes formal relationships, the table explorer emphasizes database structure, and the node-edge graph emphasizes exploratory connectivity."
+          kicker="Research information views"
+          title="Three ways to explore the same source-grounded research model"
+          text="All three views now default to human-readable wording. The underlying implementation names remain available only where they are useful for technical traceability."
         />
         <div className="route-grid">
           <a className="route-card" href={sitePath("/hydropower-data-schema/")}>
-            <span>VIEW 01</span><h3>Mermaid ER schema</h3><p>Preserved interactive zoom-and-pan relationship diagram for the proposal-defined conceptual database.</p><b aria-hidden="true">↗</b>
+            <span>VIEW 01</span><h3>Relationship diagram</h3><p>A zoomable overview of how research cases, evidence, observations, screening, assets, BIM/GIS links, analyses and validation records connect.</p><b aria-hidden="true">↗</b>
           </a>
           <a className="route-card" href={sitePath("/hydropower-data-tables/")}>
-            <span>VIEW 02</span><h3>Table explorer</h3><p>Supabase/Access-style left sidebar with grouped conceptual tables, columns, PK/FK markers and clickable explicit relationships.</p><b aria-hidden="true">↗</b>
+            <span>VIEW 02</span><h3>Table relationship designer</h3><p>An Access/Supabase-style workspace where multiple tables appear together as movable boxes with fields and visible relationship lines.</p><b aria-hidden="true">↗</b>
           </a>
           <a className="route-card" href={sitePath("/hydropower-data-graph/")}>
-            <span>VIEW 03</span><h3>Interactive node-edge graph</h3><p>Obsidian-style force-directed exploration of the same 25 conceptual table nodes and 43 governed relationships, with zoom, pan, search, drag and neighborhood focus.</p><b aria-hidden="true">↗</b>
+            <span>VIEW 03</span><h3>Interactive connections map</h3><p>An Obsidian-style graph with human-friendly labels, draggable research items, search, nearby-connection focus and plain-language relationship explanations.</p><b aria-hidden="true">↗</b>
           </a>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          kicker="Next planned interactive view"
+          title="Nepal research map"
+          text="The next view is planned as an interactive Nepal map. It will be added only from admitted public or permission-cleared geospatial evidence rather than from guessed locations or synthetic research results."
+        />
+        <div className="route-grid">
+          <article className="route-card">
+            <span>MAP 01</span><h3>Interactive Nepal map</h3><p>Planned layers include approved case-study locations, rivers/catchments, terrain and land-cover context, admitted candidate-screening outputs, access/grid context, sensitive/protected areas, relevant hazard layers and links back to the supporting evidence where those datasets are available.</p>
+          </article>
+          <article className="route-card"><span>MAP RULE</span><h3>Evidence first</h3><p>No candidate site, score, boundary, warning area or engineering value will be placed on the map unless it comes from a governed source or a reproducible research analysis run.</p></article>
         </div>
       </section>
 
