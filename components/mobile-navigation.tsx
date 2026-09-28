@@ -4,8 +4,10 @@ import { useCallback, useEffect, useRef, useState, type KeyboardEvent } from "re
 import { sitePath } from "@/components/site-path";
 
 const navItems = [
-  ["/", "Overview"],
-  ["/research", "Research"],
+  ["/", "Hub"],
+  ["/aec/", "AEC"],
+  ["/hydropower/", "Hydropower"],
+  ["/research", "AEC Research"],
   ["/system", "Database System"],
   ["/prototype", "Structural Prototype"],
   ["/workflow", "Shared-Data Reuse"],
@@ -14,7 +16,7 @@ const navItems = [
   ["/graph", "System Graph"],
   ["/evidence", "Evidence"],
   ["/roadmap", "Roadmap"],
-  ["/thesis", "Thesis"],
+  ["/thesis", "AEC Thesis"],
 ] as const;
 
 export function MobileNavigation() {
@@ -66,9 +68,7 @@ export function MobileNavigation() {
         onKeyDown={handleKeyboardScroll}
       >
         {navItems.map(([href, label]) => (
-          <a href={sitePath(href)} key={href}>
-            {label}
-          </a>
+          <a href={sitePath(href)} key={href}>{label}</a>
         ))}
       </div>
       <span className="nav-overflow-cue" aria-hidden="true"><span>›</span></span>

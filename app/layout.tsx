@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Fabin Gurung — Database-Centered AEC Thesis",
-    template: "%s · Fabin Gurung Thesis",
+    default: "Fabin Gurung — Engineering Research Hub",
+    template: "%s · Fabin Gurung Research Hub",
   },
   description:
-    "A static academic website presenting a deterministic, database-driven AEC workflow prototype developed for an MSc thesis at Pokhara University.",
+    "A static engineering research portal containing independently governed AEC/Structural and Hydropower research modules.",
   robots: {
     index: false,
     follow: false,
