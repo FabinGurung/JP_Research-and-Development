@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hydropower PhD — Interactive Node-Edge Graph</title>
+  <meta name="description" content="Obsidian-style interactive graph for the source-grounded conceptual Hydropower PhD database relationships." />
+  <style>
+    :root{--bg:#07111d;--panel:#0b1a29;--panel2:#102338;--text:#e8f0f7;--muted:#90a5b8;--line:#274056;--accent:#6fc3f0;--select:#ffd36c;--danger:#f1a46d;--shadow:rgba(0,0,0,.34)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}
+    body{overflow-x:hidden}.shell{min-height:100vh;display:grid;grid-template-columns:minmax(0,1fr) 330px}.workspace{min-width:0;display:flex;flex-direction:column}.topbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:13px 16px;background:rgba(7,17,29,.94);border-bottom:1px solid #20374a;backdrop-filter:blur(10px);position:sticky;top:0;z-index:20}.crumb{font-size:.82rem;color:var(--muted)}.tabs{display:flex;gap:7px;flex-wrap:wrap}.tab{font-size:.76rem;text-decoration:none;border:1px solid #365269;border-radius:9px;padding:7px 9px;background:#0c1c2b;color:#cfe0ec;font-weight:760}.tab.active{background:#1f5b7c;border-color:#4a9bc7;color:white}
+    .toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid #20374a;background:#091522}.toolbar button,.toolbar input{border:1px solid #335067;background:#0d2031;color:var(--text);border-radius:9px;padding:8px 10px;font:inherit}.toolbar button{cursor:pointer;font-size:.8rem;font-weight:780}.toolbar button:hover{background:#15314a}.toolbar input{min-width:220px;outline:none}.toolbar input:focus{border-color:#67bde7}.toolbar .meta{margin-left:auto;font-size:.75rem;color:var(--muted);white-space:nowrap}
+    .graph-wrap{position:relative;min-height:720px;height:calc(100vh - 104px);overflow:hidden;background:radial-gradient(circle at 50% 45%,#0b2235 0,#07111d 62%)}#graph{width:100%;height:100%;display:block;touch-action:none;cursor:grab}#graph.grabbing{cursor:grabbing}.edge{stroke:#466177;stroke-width:1.25;stroke-opacity:.52}.edge.active{stroke:#9bdcff;stroke-width:2;stroke-opacity:.95}.edge.dim{stroke-opacity:.08}.edge-label{fill:#b9d3e5;font-size:9px;pointer-events:none;paint-order:stroke;stroke:#07111d;stroke-width:4px;stroke-linejoin:round}.node circle{stroke:#bdd6e7;stroke-width:1.2;cursor:pointer;filter:drop-shadow(0 4px 8px rgba(0,0,0,.25))}.node text{fill:#dbe8f2;font-size:10px;font-weight:760;pointer-events:none;paint-order:stroke;stroke:#07111d;stroke-width:3px}.node.dim{opacity:.12}.node.neighbor circle{stroke:#a9ddf7;stroke-width:2.4}.node.selected circle{stroke:#ffe8a7;stroke-width:3.2}.node.selected text{fill:#fff0bd}.hint{position:absolute;left:14px;bottom:14px;background:rgba(9,21,34,.9);border:1px solid #314b60;border-radius:10px;padding:8px 10px;color:#9cb0c1;font-size:.74rem;pointer-events:none}.search-results{position:absolute;top:55px;left:14px;z-index:12;width:min(360px,calc(100% - 28px));max-height:300px;overflow:auto;background:#0c1c2b;border:1px solid #365269;border-radius:12px;box-shadow:0 14px 36px var(--shadow);display:none}.search-results.show{display:block}.search-item{display:block;width:100%;border:0;border-bottom:1px solid #1f374a;background:transparent;color:#d9e8f2;padding:10px 12px;text-align:left;cursor:pointer}.search-item:hover{background:#153149}.search-item small{display:block;color:#7895aa;margin-top:2px}
+    .inspector{height:100vh;position:sticky;top:0;overflow:auto;background:#0b1826;border-left:1px solid #21384c;padding:18px 16px}.brand{display:flex;align-items:center;gap:11px;margin-bottom:18px}.mark{width:42px;height:42px;border-radius:12px;background:#135d85;display:grid;place-items:center;font-weight:900}.brand strong{display:block}.brand small{color:var(--muted)}.panel{border:1px solid #274257;background:#0e2030;border-radius:14px;padding:14px;margin:12px 0}.panel h2{font-size:1.22rem;margin:0 0 7px;overflow-wrap:anywhere}.panel h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:#85a4ba;margin:0 0 9px}.subtle{color:var(--muted);font-size:.84rem;line-height:1.55}.group-pill{display:inline-flex;border:1px solid #36566d;background:#122b3e;color:#b9d8e9;border-radius:999px;padding:5px 8px;font-size:.7rem;font-weight:800;margin:4px 0}.rel-list{display:grid;gap:7px}.rel{border:1px solid #243f53;border-radius:9px;padding:8px;background:#0b1c2a;font-size:.78rem;cursor:pointer}.rel:hover{border-color:#5599bd}.rel b{color:#dcebF5}.rel span{display:block;color:#8198aa;margin-top:2px}.legend{display:grid;gap:7px}.legend-row{display:flex;gap:8px;align-items:center;font-size:.76rem;color:#9fb3c3}.dot{width:10px;height:10px;border-radius:50%;flex:0 0 auto}.boundary{border-left:4px solid #c7972d;background:#251f12;border-radius:10px;padding:10px 11px;color:#ddc98d;font-size:.76rem;line-height:1.5}.backlinks{display:flex;gap:7px;flex-wrap:wrap}.backlinks a{font-size:.72rem;text-decoration:none;border:1px solid #355268;border-radius:8px;padding:6px 8px;color:#bad7e8}.backlinks a:hover{background:#142d42}
+    @media(max-width:980px){.shell{display:block}.inspector{position:relative;height:auto;border-left:0;border-top:1px solid #21384c}.graph-wrap{height:72vh;min-height:520px}.toolbar .meta{width:100%;margin-left:0}.toolbar input{min-width:0;flex:1 1 180px}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <main class="workspace">
+    <header class="topbar">
+      <div class="crumb">Hydropower / Database representations / Node-edge graph</div>
+      <nav class="tabs" aria-label="Database views">
+        <a class="tab" href="../hydropower-data-schema/">01 Mermaid ER</a>
+        <a class="tab" href="../hydropower-data-tables/">02 Table Explorer</a>
+        <span class="tab active">03 Node-edge Graph</span>
+      </nav>
+    </header>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Find a table node…" autocomplete="off" />
+      <button id="fit" type="button">Fit</button>
+      <button id="reset" type="button">Reset layout</button>
+      <button id="neighbors" type="button">Neighborhood</button>
+      <button id="all" type="button">Show all</button>
+      <span class="meta" id="meta">25 nodes · 43 governed relationships</span>
+    </div>
+    <div class="graph-wrap" id="graphWrap">
+      <div class="search-results" id="searchResults"></div>
+      <svg id="graph" aria-label="Interactive node-edge graph of the conceptual Hydropower PhD database schema">
+        <g id="camera"><g id="edges"></g><g id="edgeLabels"></g><g id="nodes"></g></g>
+      </svg>
+      <div class="hint">Wheel/pinch: zoom · drag background: pan · drag node: reposition · click node: inspect</div>
+    </div>
+  </main>
+
+  <aside class="inspector">
+    <div class="brand"><div class="mark">FG</div><div><strong>Hydropower PhD</strong><small>Graph view 03</small></div></div>
+    <div class="backlinks"><a href="../hydropower/">← Module</a><a href="../hydropower-data-tables/">Table explorer</a><a href="../hydropower-data-schema/">Mermaid schema</a></div>
+    <div class="panel" id="nodePanel">
+      <h3>Selected node</h3>
+      <h2 id="nodeTitle">STUDY_CASE</h2>
+      <div class="group-pill" id="nodeGroup">Core identity</div>
+      <p class="subtle" id="nodeSummary">Case-study identity and access context for the selected Nepalese hydropower/PHES research scope.</p>
+      <p class="subtle" id="nodeDegree"></p>
+    </div>
+    <div class="panel">
+      <h3>Explicit relationships</h3>
+      <div class="rel-list" id="relations"></div>
+    </div>
+    <div class="panel">
+      <h3>Domain legend</h3>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="boundary"><strong>Source boundary.</strong> This view uses exactly the conceptual tables and relationships already preserved in View 01. It does not create new scientific variables, thresholds, values or database relationships.</div>
+  </aside>
+</div>
+
+<script>
+const groups = [
+  ['Core identity','#5cb8e6',['STUDY_CASE','SITE','ASSET']],
+  ['Definitions & provenance','#73d6b3',['UNIT','PARAMETER_DEFINITION','REFERENCE_SOURCE','PARAMETER_SOURCE','DATA_SOURCE']],
+  ['Hydrology & spatial','#7fa5ff',['OBSERVATION','SPATIAL_FEATURE']],
+  ['Screening & analysis','#f0bf6a',['SCREENING_CRITERION','ANALYSIS_RUN','RUN_INPUT','RUN_CRITERION','SCREENING_RESULT']],
+  ['Structural & condition','#e4889a',['ASSET_GEOMETRY','ASSET_MATERIAL','LOAD_ACTION','ANALYSIS_RESULT','INSPECTION_RECORD']],
+  ['BIM–GIS mappings','#bc8be8',['BIM_OBJECT','ASSET_BIM_MAP','ASSET_GIS_MAP']],
+  ['Validation & web','#8dd36d',['VALIDATION_RECORD','WEB_PRESENTATION']]
+];
+const descriptions = {
+  STUDY_CASE:'Case-study identity and access context for the selected Nepalese hydropower/PHES research scope.',
+  SITE:'Site identity connecting assets, observations and screening results within a study case.',
+  ASSET:'Stable identity for selected hydropower civil/structural infrastructure.',
+  UNIT:'Unit register used to standardize parameter definitions.',
+  PARAMETER_DEFINITION:'Reusable definition layer for proposal-defined study parameters.',
+  REFERENCE_SOURCE:'Published literature, standards or other registered source authorities.',
+  PARAMETER_SOURCE:'Join table recording which source supports which parameter definition and in what role.',
+  DATA_SOURCE:'Stable provenance record for admitted documents, datasets, models or other evidence.',
+  OBSERVATION:'Time-stamped hydrological or operational observation typed by the parameter register.',
+  SPATIAL_FEATURE:'Registered GIS/spatial feature linked to source provenance.',
+  SCREENING_CRITERION:'Transparent hydropower/PHES screening criterion tied to parameter and reference registers.',
+  ANALYSIS_RUN:'Reproducible analytical execution record for research workflows.',
+  RUN_INPUT:'Registered source input consumed by a specific analysis run.',
+  RUN_CRITERION:'Run-specific criterion configuration; no weight or threshold value is invented in this view.',
+  SCREENING_RESULT:'Criterion-level site screening output with traceable evidence.',
+  ASSET_GEOMETRY:'Source-backed geometry record for an identified asset.',
+  ASSET_MATERIAL:'Source-backed material record for an identified asset.',
+  LOAD_ACTION:'Source-backed load/action record linked to asset and parameter definition.',
+  ANALYSIS_RESULT:'Verified or admitted analysis output linked to run, asset, parameter and evidence.',
+  INSPECTION_RECORD:'Inspection and condition record for an identified asset.',
+  BIM_OBJECT:'Source-backed BIM/IFC object reference admitted to the framework.',
+  ASSET_BIM_MAP:'Explicit mapping between common asset identity and BIM/IFC object.',
+  ASSET_GIS_MAP:'Explicit mapping between common asset identity and GIS feature.',
+  VALIDATION_RECORD:'Validation evidence for consistency, traceability, reproducibility or other proposal-defined checks.',
+  WEB_PRESENTATION:'Public-safe or permission-controlled web-presentation metadata linked to a case.'
+};
+const edgeData = [
+['STUDY_CASE','SITE','contains'],['SITE','ASSET','contains'],['STUDY_CASE','DATA_SOURCE','registers'],['STUDY_CASE','SPATIAL_FEATURE','contextualizes'],['STUDY_CASE','ANALYSIS_RUN','executes'],['STUDY_CASE','VALIDATION_RECORD','validates'],['STUDY_CASE','WEB_PRESENTATION','publishes'],
+['UNIT','PARAMETER_DEFINITION','standardizes'],['PARAMETER_DEFINITION','PARAMETER_SOURCE','supported_by'],['REFERENCE_SOURCE','PARAMETER_SOURCE','supports'],['PARAMETER_DEFINITION','OBSERVATION','types'],['PARAMETER_DEFINITION','SCREENING_CRITERION','defines'],['PARAMETER_DEFINITION','LOAD_ACTION','types'],['PARAMETER_DEFINITION','ANALYSIS_RESULT','types'],
+['SITE','OBSERVATION','records'],['DATA_SOURCE','OBSERVATION','provenance'],['DATA_SOURCE','SPATIAL_FEATURE','provenance'],['DATA_SOURCE','ASSET_GEOMETRY','provenance'],['DATA_SOURCE','ASSET_MATERIAL','provenance'],['DATA_SOURCE','LOAD_ACTION','provenance'],['DATA_SOURCE','INSPECTION_RECORD','provenance'],['DATA_SOURCE','BIM_OBJECT','provenance'],
+['ANALYSIS_RUN','RUN_INPUT','consumes'],['DATA_SOURCE','RUN_INPUT','supplies'],['ANALYSIS_RUN','RUN_CRITERION','configures'],['SCREENING_CRITERION','RUN_CRITERION','parameterizes'],['ANALYSIS_RUN','SCREENING_RESULT','produces'],['SITE','SCREENING_RESULT','evaluated_as'],['SCREENING_CRITERION','SCREENING_RESULT','scores'],['DATA_SOURCE','SCREENING_RESULT','evidence'],
+['ASSET','ASSET_GEOMETRY','has'],['ASSET','ASSET_MATERIAL','has'],['ASSET','LOAD_ACTION','has'],['ASSET','INSPECTION_RECORD','inspected_by'],['ASSET','ANALYSIS_RESULT','receives'],['ANALYSIS_RUN','ANALYSIS_RESULT','produces'],['DATA_SOURCE','ANALYSIS_RESULT','evidence'],
+['ASSET','ASSET_BIM_MAP','maps'],['BIM_OBJECT','ASSET_BIM_MAP','mapped_to'],['ASSET','ASSET_GIS_MAP','maps'],['SPATIAL_FEATURE','ASSET_GIS_MAP','mapped_to'],['ANALYSIS_RUN','VALIDATION_RECORD','checked_by'],['DATA_SOURCE','VALIDATION_RECORD','evidence']
+];
+const groupByNode={}, colorByNode={}, nodeNames=[];
+groups.forEach(([g,c,items])=>items.forEach(n=>{groupByNode[n]=g;colorByNode[n]=c;nodeNames.push(n)}));
+const nodes=nodeNames.map((id,i)=>({id,group:groupByNode[id],color:colorByNode[id],x:Math.cos(i*2.399)*220+(i%3)*18,y:Math.sin(i*2.399)*220+(i%4)*12,vx:0,vy:0,fixed:false}));
+const nodeMap=Object.fromEntries(nodes.map(n=>[n.id,n]));
+const edges=edgeData.map((e,i)=>({id:i,a:nodeMap[e[0]],b:nodeMap[e[1]],label:e[2]}));
+
+const svg=document.getElementById('graph'), camera=document.getElementById('camera'), edgeLayer=document.getElementById('edges'), labelLayer=document.getElementById('edgeLabels'), nodeLayer=document.getElementById('nodes');
+let selected='STUDY_CASE', neighborhood=false, scale=1, tx=0, ty=0, panning=false, panStart=null, dragging=null;
+const NS='http://www.w3.org/2000/svg';
+const el=(name,attrs={})=>{const x=document.createElementNS(NS,name);Object.entries(attrs).forEach(([k,v])=>x.setAttribute(k,v));return x};
+const degree=id=>edges.filter(e=>e.a.id===id||e.b.id===id).length;
+const connected=(a,b)=>edges.some(e=>(e.a.id===a&&e.b.id===b)||(e.a.id===b&&e.b.id===a));
+
+function simulate(iter=420){
+  for(let t=0;t<iter;t++){
+    const heat=1-t/iter;
+    for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+      const a=nodes[i],b=nodes[j];let dx=a.x-b.x,dy=a.y-b.y,d2=dx*dx+dy*dy+30;if(d2>230000)continue;const f=7800/d2;const d=Math.sqrt(d2);dx/=d;dy/=d;a.vx+=dx*f*heat;b.vx-=dx*f*heat;a.vy+=dy*f*heat;b.vy-=dy*f*heat;
+    }
+    edges.forEach(e=>{let dx=e.b.x-e.a.x,dy=e.b.y-e.a.y,d=Math.max(1,Math.hypot(dx,dy));const target=115,force=(d-target)*.008*heat;dx/=d;dy/=d;e.a.vx+=dx*force;e.a.vy+=dy*force;e.b.vx-=dx*force;e.b.vy-=dy*force});
+    nodes.forEach(n=>{n.vx+=(-n.x)*.0009*heat;n.vy+=(-n.y)*.0009*heat;n.vx*=.82;n.vy*=.82;n.x+=n.vx;n.y+=n.vy});
+  }
+}
+
+function build(){
+  edgeLayer.innerHTML='';labelLayer.innerHTML='';nodeLayer.innerHTML='';
+  edges.forEach(e=>{const l=el('line',{class:'edge','data-edge':e.id});edgeLayer.appendChild(l);const text=el('text',{class:'edge-label','data-label':e.id,'text-anchor':'middle'});text.textContent=e.label;text.style.display='none';labelLayer.appendChild(text);e.line=l;e.text=text});
+  nodes.forEach(n=>{const g=el('g',{class:'node','data-node':n.id});const r=10+Math.min(8,degree(n.id)*.9);const c=el('circle',{r,fill:n.color,'fill-opacity':.92});const text=el('text',{x:r+5,y:3});text.textContent=n.id;g.append(c,text);nodeLayer.appendChild(g);n.g=g;n.r=r;
+    g.addEventListener('pointerdown',ev=>{ev.stopPropagation();dragging=n;n.fixed=true;g.setPointerCapture(ev.pointerId)});
+    g.addEventListener('click',ev=>{ev.stopPropagation();selectNode(n.id)});
+    g.addEventListener('dblclick',ev=>{ev.stopPropagation();selected=n.id;neighborhood=true;updateSelection();fitSelection()});
+  });
+  render();updateSelection();buildLegend();
+}
+function render(){
+  edges.forEach(e=>{e.line.setAttribute('x1',e.a.x);e.line.setAttribute('y1',e.a.y);e.line.setAttribute('x2',e.b.x);e.line.setAttribute('y2',e.b.y);e.text.setAttribute('x',(e.a.x+e.b.x)/2);e.text.setAttribute('y',(e.a.y+e.b.y)/2-4)});
+  nodes.forEach(n=>n.g.setAttribute('transform',`translate(${n.x} ${n.y})`));camera.setAttribute('transform',`translate(${tx} ${ty}) scale(${scale})`);
+}
+function setCamera(){camera.setAttribute('transform',`translate(${tx} ${ty}) scale(${scale})`)}
+function selectNode(id){selected=id;updateSelection()}
+function updateSelection(){
+  nodes.forEach(n=>{const isSel=n.id===selected,isNeighbor=connected(n.id,selected);n.g.classList.toggle('selected',isSel);n.g.classList.toggle('neighbor',isNeighbor&&!isSel);n.g.classList.toggle('dim',neighborhood&&!isSel&&!isNeighbor)});
+  edges.forEach(e=>{const active=e.a.id===selected||e.b.id===selected;e.line.classList.toggle('active',active);e.line.classList.toggle('dim',neighborhood&&!active);e.text.style.display=active?'block':'none'});
+  const n=nodeMap[selected];document.getElementById('nodeTitle').textContent=selected;document.getElementById('nodeGroup').textContent=n.group;document.getElementById('nodeSummary').textContent=descriptions[selected]||'';const incoming=edges.filter(e=>e.b.id===selected),outgoing=edges.filter(e=>e.a.id===selected);document.getElementById('nodeDegree').textContent=`${incoming.length} incoming · ${outgoing.length} outgoing · ${incoming.length+outgoing.length} total explicit relationships`;
+  const rels=document.getElementById('relations');rels.innerHTML='';[...incoming.map(e=>({other:e.a.id,label:`${e.a.id} → ${selected}`,role:e.label})),...outgoing.map(e=>({other:e.b.id,label:`${selected} → ${e.b.id}`,role:e.label}))].forEach(r=>{const b=document.createElement('button');b.className='rel';b.innerHTML=`<b>${r.label}</b><span>${r.role}</span>`;b.onclick=()=>selectNode(r.other);rels.appendChild(b)});if(!rels.children.length)rels.innerHTML='<p class="subtle">No explicit relationship recorded.</p>';
+}
+function buildLegend(){const box=document.getElementById('legend');box.innerHTML='';groups.forEach(([g,c])=>{const row=document.createElement('div');row.className='legend-row';row.innerHTML=`<span class="dot" style="background:${c}"></span>${g}`;box.appendChild(row)})}
+function graphBounds(onlyVisible=false){const list=onlyVisible&&neighborhood?nodes.filter(n=>n.id===selected||connected(n.id,selected)):nodes;let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;list.forEach(n=>{minX=Math.min(minX,n.x-n.r-60);maxX=Math.max(maxX,n.x+n.r+110);minY=Math.min(minY,n.y-n.r-30);maxY=Math.max(maxY,n.y+n.r+30)});return{minX,minY,maxX,maxY,w:maxX-minX,h:maxY-minY}}
+function fitSelection(){const rect=svg.getBoundingClientRect(),b=graphBounds(true);scale=Math.min(1.8,Math.max(.22,Math.min(rect.width/(b.w+80),rect.height/(b.h+80))));tx=rect.width/2-(b.minX+b.w/2)*scale;ty=rect.height/2-(b.minY+b.h/2)*scale;setCamera()}
+function fitAll(){neighborhood=false;updateSelection();const rect=svg.getBoundingClientRect(),b=graphBounds(false);scale=Math.min(1.35,Math.max(.18,Math.min(rect.width/(b.w+100),rect.height/(b.h+100))));tx=rect.width/2-(b.minX+b.w/2)*scale;ty=rect.height/2-(b.minY+b.h/2)*scale;setCamera()}
+function svgPoint(ev){const r=svg.getBoundingClientRect();return{x:(ev.clientX-r.left-tx)/scale,y:(ev.clientY-r.top-ty)/scale}}
+svg.addEventListener('pointerdown',ev=>{if(ev.target===svg||ev.target===camera||ev.target===edgeLayer){panning=true;panStart={x:ev.clientX-tx,y:ev.clientY-ty};svg.classList.add('grabbing');svg.setPointerCapture(ev.pointerId)}});
+svg.addEventListener('pointermove',ev=>{if(dragging){const p=svgPoint(ev);dragging.x=p.x;dragging.y=p.y;render()}else if(panning){tx=ev.clientX-panStart.x;ty=ev.clientY-panStart.y;setCamera()}});
+svg.addEventListener('pointerup',()=>{panning=false;dragging=null;svg.classList.remove('grabbing')});
+svg.addEventListener('pointercancel',()=>{panning=false;dragging=null;svg.classList.remove('grabbing')});
+svg.addEventListener('wheel',ev=>{ev.preventDefault();const rect=svg.getBoundingClientRect(),mx=ev.clientX-rect.left,my=ev.clientY-rect.top,old=scale,factor=ev.deltaY<0?1.12:.89;scale=Math.min(3.2,Math.max(.16,scale*factor));tx=mx-(mx-tx)*(scale/old);ty=my-(my-ty)*(scale/old);setCamera()},{passive:false});
+
+const search=document.getElementById('search'),results=document.getElementById('searchResults');
+search.addEventListener('input',()=>{const q=search.value.trim().toUpperCase();if(!q){results.classList.remove('show');return}const m=nodeNames.filter(n=>n.includes(q)).slice(0,12);results.innerHTML='';m.forEach(id=>{const b=document.createElement('button');b.className='search-item';b.innerHTML=`${id}<small>${groupByNode[id]}</small>`;b.onclick=()=>{selectNode(id);neighborhood=false;updateSelection();search.value=id;results.classList.remove('show');const n=nodeMap[id],rect=svg.getBoundingClientRect();tx=rect.width/2-n.x*scale;ty=rect.height/2-n.y*scale;setCamera()};results.appendChild(b)});results.classList.toggle('show',m.length>0)});
+document.addEventListener('click',ev=>{if(ev.target!==search&&!results.contains(ev.target))results.classList.remove('show')});
+document.getElementById('fit').onclick=()=>fitAll();document.getElementById('reset').onclick=()=>{nodes.forEach((n,i)=>{n.x=Math.cos(i*2.399)*220+(i%3)*18;n.y=Math.sin(i*2.399)*220+(i%4)*12;n.vx=n.vy=0;n.fixed=false});simulate(420);render();fitAll()};document.getElementById('neighbors').onclick=()=>{neighborhood=true;updateSelection();fitSelection()};document.getElementById('all').onclick=()=>{neighborhood=false;updateSelection();fitAll()};
+window.addEventListener('resize',()=>fitAll());
+
+simulate();build();requestAnimationFrame(fitAll);
+</script>
+</body>
+</html>

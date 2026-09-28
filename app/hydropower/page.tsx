@@ -67,7 +67,7 @@ export default function HydropowerModulePage() {
         <SectionHeading
           kicker="Database representations"
           title="Three ways to inspect the same conceptual research schema"
-          text="The first Mermaid relationship view is preserved unchanged. The second view presents the same source-grounded tables in a familiar database explorer. The third view is listed only as the next visualization concept and has not been built in this pass."
+          text="All three views use the same source-grounded conceptual tables and relationships. The Mermaid view emphasizes formal relationships, the table explorer emphasizes database structure, and the node-edge graph emphasizes exploratory connectivity."
         />
         <div className="route-grid">
           <a className="route-card" href={sitePath("/hydropower-data-schema/")}>
@@ -76,9 +76,9 @@ export default function HydropowerModulePage() {
           <a className="route-card" href={sitePath("/hydropower-data-tables/")}>
             <span>VIEW 02</span><h3>Table explorer</h3><p>Supabase/Access-style left sidebar with grouped conceptual tables, columns, PK/FK markers and clickable explicit relationships.</p><b aria-hidden="true">↗</b>
           </a>
-          <article className="route-card">
-            <span>VIEW 03</span><h3>Interactive node-edge graph</h3><p>Planned only: an Obsidian-style graph of nodes and edges for exploring the same governed research relationships. Not built yet.</p>
-          </article>
+          <a className="route-card" href={sitePath("/hydropower-data-graph/")}>
+            <span>VIEW 03</span><h3>Interactive node-edge graph</h3><p>Obsidian-style force-directed exploration of the same 25 conceptual table nodes and 43 governed relationships, with zoom, pan, search, drag and neighborhood focus.</p><b aria-hidden="true">↗</b>
+          </a>
         </div>
       </section>
 
