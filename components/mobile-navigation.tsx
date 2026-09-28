@@ -9,8 +9,6 @@ const navItems = [
   ["/hydropower/", "Hydropower"],
   ["/research", "AEC Research"],
   ["/system", "Database System"],
-  ["/prototype", "Structural Prototype"],
-  ["/workflow", "Shared-Data Reuse"],
   ["/methodology-demo/", "Methodology Demo"],
   ["/structural-demo/", "Structural Solver"],
   ["/graph", "System Graph"],
