@@ -67,11 +67,13 @@ export default function HydropowerModulePage() {
         <SectionHeading
           kicker="Planned system"
           title="Hydropower module roadmap"
-          text="This first release establishes the research identity and architecture. Data schemas, maps, case-study evidence, analysis services and validation pages can be added as governed research outputs become ready for public release."
+          text="This release adds a source-grounded conceptual database architecture. The diagram remains a proposed research schema until the PhD formally defines, implements and validates the physical database and its constraints."
         />
         <div className="route-grid">
           <article className="route-card"><span>01</span><h3>Research Proposal</h3><p>Current public-safe research title, aim, objectives, methodology and limitations.</p></article>
-          <article className="route-card"><span>02</span><h3>Hydropower Data Model</h3><p>Future normalized PostgreSQL/PostGIS schema for sites, assets, observations, evidence and provenance.</p></article>
+          <a className="route-card" href={sitePath("/hydropower-data-schema/")}>
+            <span>02</span><h3>Hydropower Data Model</h3><p>Interactive zoomable Mermaid ER schema linking proposal-defined parameters, provenance, GIS, BIM/IFC, assets, analysis runs, screening criteria, validation and web presentation.</p><b aria-hidden="true">↗</b>
+          </a>
           <article className="route-card"><span>03</span><h3>GIS / PHES Screening</h3><p>Future reproducible terrain and multi-criteria candidate screening with sensitivity records.</p></article>
           <article className="route-card"><span>04</span><h3>Case Studies</h3><p>Future permission-cleared operational, spatial and infrastructure validation evidence.</p></article>
         </div>
