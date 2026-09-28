@@ -65,17 +65,32 @@ export default function HydropowerModulePage() {
 
       <section className="section section-navy">
         <SectionHeading
-          kicker="Planned system"
-          title="Hydropower module roadmap"
-          text="This release adds a source-grounded conceptual database architecture. The diagram remains a proposed research schema until the PhD formally defines, implements and validates the physical database and its constraints."
+          kicker="Database representations"
+          title="Three ways to inspect the same conceptual research schema"
+          text="The first Mermaid relationship view is preserved unchanged. The second view presents the same source-grounded tables in a familiar database explorer. The third view is listed only as the next visualization concept and has not been built in this pass."
         />
         <div className="route-grid">
-          <article className="route-card"><span>01</span><h3>Research Proposal</h3><p>Current public-safe research title, aim, objectives, methodology and limitations.</p></article>
           <a className="route-card" href={sitePath("/hydropower-data-schema/")}>
-            <span>02</span><h3>Hydropower Data Model</h3><p>Interactive zoomable Mermaid ER schema linking proposal-defined parameters, provenance, GIS, BIM/IFC, assets, analysis runs, screening criteria, validation and web presentation.</p><b aria-hidden="true">↗</b>
+            <span>VIEW 01</span><h3>Mermaid ER schema</h3><p>Preserved interactive zoom-and-pan relationship diagram for the proposal-defined conceptual database.</p><b aria-hidden="true">↗</b>
           </a>
-          <article className="route-card"><span>03</span><h3>GIS / PHES Screening</h3><p>Future reproducible terrain and multi-criteria candidate screening with sensitivity records.</p></article>
-          <article className="route-card"><span>04</span><h3>Case Studies</h3><p>Future permission-cleared operational, spatial and infrastructure validation evidence.</p></article>
+          <a className="route-card" href={sitePath("/hydropower-data-tables/")}>
+            <span>VIEW 02</span><h3>Table explorer</h3><p>Supabase/Access-style left sidebar with grouped conceptual tables, columns, PK/FK markers and clickable explicit relationships.</p><b aria-hidden="true">↗</b>
+          </a>
+          <article className="route-card">
+            <span>VIEW 03</span><h3>Interactive node-edge graph</h3><p>Planned only: an Obsidian-style graph of nodes and edges for exploring the same governed research relationships. Not built yet.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
+          kicker="Next research modules"
+          title="Planned analytical and validation pages"
+          text="These remain future work and should be populated only from governed research outputs as they become ready for public release."
+        />
+        <div className="route-grid">
+          <article className="route-card"><span>01</span><h3>GIS / PHES Screening</h3><p>Future reproducible terrain and multi-criteria candidate screening with sensitivity records.</p></article>
+          <article className="route-card"><span>02</span><h3>Case Studies</h3><p>Future permission-cleared operational, spatial and infrastructure validation evidence.</p></article>
         </div>
       </section>
 
