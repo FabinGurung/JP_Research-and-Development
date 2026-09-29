@@ -1,0 +1,13 @@
+/*
+  Research hub typography override.
+  Arial/Helvetica is used for a clean engineering-document / billing-table feel,
+  with stable numerals and no external font dependency. Code remains monospace.
+*/
+body,
+h1,
+h2,
+h3,
+.status-badge,
+.source-note span {
+  font-family: Arial, Helvetica, sans-serif;
+}
