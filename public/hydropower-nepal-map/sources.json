@@ -1,9 +1,9 @@
 {
   "view": "Interactive Nepal research map",
-  "updated_for": "Current DoED operating-register authority, pinned DoED-NAXA operating point crossmatch, top-ten project overlay, and Kali Gandaki A naming correction",
-  "research_boundary": "Only source-backed geography and source-backed project reference points are shown. Project points are not treated as full project footprints. Screening candidates, hazard areas, infrastructure-proximity layers and environmental constraints remain absent until governed evidence or reproducible analysis outputs are admitted.",
+  "updated_for": "Current DoED operating-register authority, pinned DoED-NAXA operating point crossmatch, top-ten project overlay, official river/catchment authority registry, spatial CRS policy, and Kali Gandaki A naming correction",
+  "research_boundary": "Only source-backed geography and source-backed project reference points are shown. Project points are not treated as full project footprints. River and basin authorities are now registered, but raw licensed hydrographic geometry and unverified catchment polygons are not republished as if they were open official vectors.",
   "current_authority_context": "The current DoED operating register used by this research system is dated 18 September 2026 and contains 217 operating hydropower projects. The point crossmatch is a separately pinned July 2026 reconciliation layer and must not be mistaken for a complete September operating register.",
-  "coordinate_rule": "A map marker must describe what its coordinate actually represents. NAXA/local raw coordinates are project reference points unless a separate source explicitly identifies a powerhouse, dam, intake or other facility point.",
+  "coordinate_rule": "A map feature must describe what its coordinate or geometry actually represents. Project points, river centerlines and catchment polygons are separate geometry classes with separate provenance. Public/interchange geometry is normalized to EPSG:4326; metric queries use PostGIS geography or a verified projected CRS appropriate to the feature location.",
   "kali_gandaki_correction": "Kali Gandaki is the river/geographic name. Kali Gandaki A is a hydropower project/station. The highlighted 27.931, 83.6152 point is the powerhouse/generating-station point near Beltari/Yamgha, Syangja; the dam/headworks are upstream near Mirmi.",
   "stored_registers": [
     {
@@ -17,6 +17,22 @@
     {
       "file": "plants.json",
       "description": "Ten-project emphasized overlay with project-specific coordinate provenance."
+    },
+    {
+      "file": "hydrography-authority.json",
+      "description": "Official-source registry for Survey Department river hydrography, WECS river-basin framework and DHM hydrological attribution."
+    },
+    {
+      "file": "river-basin-registry.json",
+      "description": "Relational identifiers for the ten WECS river basins plus Southern Blocks; polygon geometry remains pending governed vector admission."
+    },
+    {
+      "file": "spatial-crs-policy.json",
+      "description": "CRS and spatial-query rules: EPSG:4326 canonical web geometry, Nepal 1981 reference context, three-zone Nepal TM/MUTM model, and metric-query policy."
+    },
+    {
+      "file": "spatial-query-schema.sql",
+      "description": "PostGIS reference schema for river MultiLineString, catchment MultiPolygon, project-to-river/catchment links, source provenance and GiST indexes."
     }
   ],
   "sources": [
@@ -34,6 +50,30 @@
       "layer": "Current province display names",
       "provider": "Nepal Tourism Board / Government sources",
       "reference_url": "https://ntb.gov.np/en/provinces"
+    },
+    {
+      "layer": "Official river / stream hydrography authority",
+      "provider": "Department of Survey, Government of Nepal",
+      "dataset_family": "Digital Topographic Data — Hydrographic layer",
+      "reference_url": "https://www.nationalgeoportal.gov.np/",
+      "distribution_rule_url": "https://dos.gov.np/content/5/distritor--use-and-regulation-directory-2069/",
+      "geometry_class": "LineString / MultiLineString",
+      "publication_status": "authority registered; raw licensed vector not republished in this public repository without redistribution clearance"
+    },
+    {
+      "layer": "Official national river-basin framework",
+      "provider": "Water and Energy Commission Secretariat, Government of Nepal",
+      "reference_url": "https://wecs.gov.np/content/218/river-basin-atlas-of-nepal/",
+      "geometry_class": "Polygon / MultiPolygon",
+      "registered_units": "Koshi, Gandaki, Karnali, Mahakali, Babai, West Rapti, Bagmati, Kamala, Kankai, Mechi, plus Southern Blocks",
+      "publication_status": "official basin framework registered; vector polygon geometry pending governed redistributable source"
+    },
+    {
+      "layer": "Hydrological station / river / basin attribution",
+      "provider": "Department of Hydrology and Meteorology, Government of Nepal",
+      "reference_url": "https://dhm.gov.np/hydrology/river-watch",
+      "geometry_class": "Point",
+      "usage_note": "Supports river and basin attribution at observation stations; not substituted for river centerline or basin polygon geometry."
     },
     {
       "layer": "Current operating hydropower authority — above 1 MW",
@@ -88,8 +128,11 @@
       "usage_note": "Context basemap only; not treated as a scientific screening result."
     }
   ],
+  "authority_registered_geometry_pending": [
+    "Survey Department river / stream centerlines",
+    "WECS river-basin and catchment polygons"
+  ],
   "planned_not_loaded": [
-    "Rivers and catchments",
     "Terrain and elevation",
     "Road and grid context",
     "Protected and sensitive areas",
