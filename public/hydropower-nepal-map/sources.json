@@ -1,0 +1,51 @@
+{
+  "view": "Interactive Nepal research map",
+  "research_boundary": "Only source-backed geography and verified case-study references are shown. Screening candidates, hazard areas, infrastructure proximity layers and environmental constraints remain absent until governed evidence or reproducible analysis outputs are admitted.",
+  "sources": [
+    {
+      "layer": "Nepal province boundaries",
+      "provider": "geoBoundaries gbOpen",
+      "boundary_id": "NPL-ADM1-38925275",
+      "boundary_level": "ADM1 / Provinces",
+      "boundary_year_represented": "2020",
+      "underlying_source": "Survey Department of Nepal, OCHA FISS",
+      "license": "CC BY 3.0 IGO as reported by geoBoundaries",
+      "metadata_url": "https://www.geoboundaries.org/api/current/gbOpen/NPL/ADM1/",
+      "usage_note": "Geometry source for the seven province polygons. Human-facing province names are normalized to the current names without changing the source geometry."
+    },
+    {
+      "layer": "Current province display names",
+      "provider": "Nepal Tourism Board / Government sources",
+      "names": ["Koshi Province", "Madhesh Province", "Bagmati Province", "Gandaki Province", "Lumbini Province", "Karnali Province", "Sudurpaschim Province"],
+      "reference_url": "https://ntb.gov.np/en/provinces",
+      "usage_note": "Used only for human-readable labels where the 2020 boundary file may contain older province naming."
+    },
+    {
+      "layer": "Kaligandaki A case-study reference point",
+      "provider": "Global Energy Monitor",
+      "coordinates_wgs84": [27.931, 83.6152],
+      "reference_url": "https://www.gem.wiki/Kaligandaki_A_hydroelectric_plant",
+      "usage_note": "Coordinate used for the initial case-study marker."
+    },
+    {
+      "layer": "Kaligandaki A official location cross-check",
+      "provider": "Nepal Electricity Authority",
+      "reference_url": "https://www.nea.org.np/admin/assets/uploads/annual_publications/Generation_2021-22.pdf",
+      "usage_note": "NEA identifies the station at Beltari, Syangja; Gandaki Province; with intake site in Kaligandaki Rural Municipality, Syangja."
+    },
+    {
+      "layer": "Street basemap",
+      "provider": "OpenStreetMap contributors",
+      "reference_url": "https://www.openstreetmap.org/copyright",
+      "usage_note": "Context basemap only; not treated as a scientific screening result."
+    }
+  ],
+  "planned_not_loaded": [
+    "Rivers and catchments",
+    "Terrain and elevation",
+    "Road and grid context",
+    "Protected and sensitive areas",
+    "Hazard context",
+    "PHES and hydropower screening results"
+  ]
+}

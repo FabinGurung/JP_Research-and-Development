@@ -67,7 +67,7 @@ export default function HydropowerModulePage() {
         <SectionHeading
           kicker="Research information views"
           title="Three ways to explore the same source-grounded research model"
-          text="All three views now default to human-readable wording. The underlying implementation names remain available only where they are useful for technical traceability."
+          text="All three views default to human-readable wording. The underlying implementation names remain available only where they are useful for technical traceability."
         />
         <div className="route-grid">
           <a className="route-card" href={sitePath("/hydropower-data-schema/")}>
@@ -84,15 +84,15 @@ export default function HydropowerModulePage() {
 
       <section className="section">
         <SectionHeading
-          kicker="Next planned interactive view"
-          title="Nepal research map"
-          text="The next view is planned as an interactive Nepal map. It will be added only from admitted public or permission-cleared geospatial evidence rather than from guessed locations or synthetic research results."
+          kicker="Geographic research view"
+          title="Interactive Nepal research map"
+          text="The first live map release starts with published Nepal province boundaries and the verified Kaligandaki ‘A’ case-study reference. Additional hydrology, terrain, access, grid, environmental, hazard and screening-result layers remain visibly withheld until their governed sources or reproducible research outputs are admitted."
         />
         <div className="route-grid">
-          <article className="route-card">
-            <span>MAP 01</span><h3>Interactive Nepal map</h3><p>Planned layers include approved case-study locations, rivers/catchments, terrain and land-cover context, admitted candidate-screening outputs, access/grid context, sensitive/protected areas, relevant hazard layers and links back to the supporting evidence where those datasets are available.</p>
-          </article>
-          <article className="route-card"><span>MAP RULE</span><h3>Evidence first</h3><p>No candidate site, score, boundary, warning area or engineering value will be placed on the map unless it comes from a governed source or a reproducible research analysis run.</p></article>
+          <a className="route-card" href={sitePath("/hydropower-nepal-map/")}>
+            <span>MAP 01 · LIVE</span><h3>Explore Nepal research geography</h3><p>Pan and zoom across Nepal, inspect province boundaries, focus on the initial Kaligandaki ‘A’ case-study point, and see which future research layers are not yet admitted rather than guessed.</p><b aria-hidden="true">↗</b>
+          </a>
+          <article className="route-card"><span>MAP RULE</span><h3>Evidence first</h3><p>No candidate site, score, warning area, engineering value or research result is placed on the map unless it comes from a governed source or reproducible research analysis run.</p></article>
         </div>
       </section>
 
