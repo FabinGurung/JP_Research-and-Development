@@ -47,8 +47,8 @@ export default function HydropowerModulePage() {
           <div>
             <SectionHeading
               kicker="Initial case-study context"
-              title="Kaligandaki ‘A’ and broader Nepalese screening"
-              text="Kaligandaki ‘A’ near Mirmi in Syangja is identified in the proposal as an initial operations and water-resource case, supported by the applicant’s prior cleaned 2019–2023 research dataset. Additional Nepalese areas may support hydropower and PHES spatial screening where public or permission-cleared data are available."
+              title="Kali Gandaki ‘A’ project and broader Nepalese screening"
+              text="Kali Gandaki ‘A’ is the hydropower project/station used as an initial operations and water-resource case in the proposal; Kali Gandaki itself is the river/geographic name, not a single project location. The project has multiple physical components, including upstream headworks near Mirmi and a downstream powerhouse near Beltari/Yamgha in Syangja. Additional Nepalese areas may support hydropower and PHES spatial screening where public or permission-cleared data are available."
             />
           </div>
           <div>
@@ -86,11 +86,11 @@ export default function HydropowerModulePage() {
         <SectionHeading
           kicker="Geographic research view"
           title="Interactive Nepal research map"
-          text="The first live map release starts with published Nepal province boundaries and the verified Kaligandaki ‘A’ case-study reference. Additional hydrology, terrain, access, grid, environmental, hazard and screening-result layers remain visibly withheld until their governed sources or reproducible research outputs are admitted."
+          text="The live map combines published Nepal province boundaries with ten major operating hydropower project references ranked by installed/nameplate capacity. Kali Gandaki ‘A’ is treated correctly as a project/station: its highlighted map point identifies the powerhouse/generating station rather than pretending the project name is a place. Rivers, terrain, grid/access, environmental, hazard and future screening-result layers remain withheld until their governed sources or reproducible research outputs are admitted."
         />
         <div className="route-grid">
           <a className="route-card" href={sitePath("/hydropower-nepal-map/")}>
-            <span>MAP 01 · LIVE</span><h3>Explore Nepal research geography</h3><p>Pan and zoom across Nepal, inspect province boundaries, focus on the initial Kaligandaki ‘A’ case-study point, and see which future research layers are not yet admitted rather than guessed.</p><b aria-hidden="true">↗</b>
+            <span>MAP 01 · LIVE</span><h3>Explore major hydropower references across Nepal</h3><p>Pan and zoom across Nepal, inspect ten major operating projects with source-backed coordinates and installed capacity, focus the Kali Gandaki ‘A’ proposal case-study project, and see which research layers are still intentionally withheld.</p><b aria-hidden="true">↗</b>
           </a>
           <article className="route-card"><span>MAP RULE</span><h3>Evidence first</h3><p>No candidate site, score, warning area, engineering value or research result is placed on the map unless it comes from a governed source or reproducible research analysis run.</p></article>
         </div>

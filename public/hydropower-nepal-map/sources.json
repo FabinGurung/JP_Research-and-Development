@@ -1,6 +1,11 @@
 {
   "view": "Interactive Nepal research map",
-  "research_boundary": "Only source-backed geography and verified case-study references are shown. Screening candidates, hazard areas, infrastructure proximity layers and environmental constraints remain absent until governed evidence or reproducible analysis outputs are admitted.",
+  "updated_for": "Top-ten operating hydropower reference layer and Kali Gandaki A naming correction",
+  "research_boundary": "Only source-backed geography and source-backed project reference points are shown. Project points are not treated as full project footprints. Screening candidates, hazard areas, infrastructure-proximity layers and environmental constraints remain absent until governed evidence or reproducible analysis outputs are admitted.",
+  "ranking_method": "Ten major operating hydropower projects verified for this map and ordered by installed/nameplate capacity. This is not a ranking of annual energy, present output, economics, reliability, environmental performance or research importance.",
+  "ranking_date_context": "The Department of Electricity Development operating-project register consulted for this release was current in September 2026; recent commercial-operation status was cross-checked from project/operator and Global Energy Monitor records where needed.",
+  "coordinate_rule": "Every hydropower marker is a published project/plant reference coordinate. The marker meaning and precision are recorded per project. A marker must not be interpreted as the project's complete headworks, waterways, reservoir, powerhouse, transmission or environmental footprint.",
+  "kali_gandaki_correction": "Kali Gandaki is the river/geographic name. Kali Gandaki A is a hydropower project/station. The highlighted map coordinate 27.931, 83.6152 is the powerhouse/generating-station point near Beltari/Yamgha, Syangja; the dam/headworks are upstream near Mirmi.",
   "sources": [
     {
       "layer": "Nepal province boundaries",
@@ -10,28 +15,56 @@
       "boundary_year_represented": "2020",
       "underlying_source": "Survey Department of Nepal, OCHA FISS",
       "license": "CC BY 3.0 IGO as reported by geoBoundaries",
-      "metadata_url": "https://www.geoboundaries.org/api/current/gbOpen/NPL/ADM1/",
-      "usage_note": "Geometry source for the seven province polygons. Human-facing province names are normalized to the current names without changing the source geometry."
+      "metadata_url": "https://www.geoboundaries.org/api/current/gbOpen/NPL/ADM1/"
     },
     {
       "layer": "Current province display names",
       "provider": "Nepal Tourism Board / Government sources",
-      "names": ["Koshi Province", "Madhesh Province", "Bagmati Province", "Gandaki Province", "Lumbini Province", "Karnali Province", "Sudurpaschim Province"],
-      "reference_url": "https://ntb.gov.np/en/provinces",
-      "usage_note": "Used only for human-readable labels where the 2020 boundary file may contain older province naming."
+      "reference_url": "https://ntb.gov.np/en/provinces"
     },
     {
-      "layer": "Kaligandaki A case-study reference point",
-      "provider": "Global Energy Monitor",
-      "coordinates_wgs84": [27.931, 83.6152],
-      "reference_url": "https://www.gem.wiki/Kaligandaki_A_hydroelectric_plant",
-      "usage_note": "Coordinate used for the initial case-study marker."
+      "layer": "Operating hydropower capacity/status baseline",
+      "provider": "Department of Electricity Development, Nepal",
+      "reference_url": "https://doed.gov.np/pages/powerplantsmorethan1/",
+      "usage_note": "Primary current operating-project register and installed-capacity baseline where listed."
     },
     {
-      "layer": "Kaligandaki A official location cross-check",
-      "provider": "Nepal Electricity Authority",
-      "reference_url": "https://www.nea.org.np/admin/assets/uploads/annual_publications/Generation_2021-22.pdf",
-      "usage_note": "NEA identifies the station at Beltari, Syangja; Gandaki Province; with intake site in Kaligandaki Rural Municipality, Syangja."
+      "layer": "Hydropower project point coordinates",
+      "provider": "Global Energy Monitor — Global Hydropower Tracker",
+      "reference_urls": [
+        "https://www.gem.wiki/Upper_Tamakoshi_hydroelectric_plant",
+        "https://www.gem.wiki/Kaligandaki_A_hydroelectric_plant",
+        "https://www.gem.wiki/Rasuwagadhi_hydroelectric_plant",
+        "https://www.gem.wiki/Madhya_Bhotekoshi_hydroelectric_plant",
+        "https://www.gem.wiki/Lower_Solu_hydroelectric_plant",
+        "https://www.gem.wiki/Middle_Tamor_hydroelectric_plant",
+        "https://www.gem.wiki/Nilgiri_Khola_2_hydroelectric_plant",
+        "https://www.gem.wiki/Madhya_Marsyangdi_hydroelectric_plant"
+      ],
+      "usage_note": "Used where the tracker publishes exact or explicitly approximate WGS84 plant/project points."
+    },
+    {
+      "layer": "DoED-derived project reference coordinates",
+      "provider": "Niti Foundation / NAXA Hydropower Projects in Nepal dataset",
+      "reference_url": "https://hydro.naxa.com.np/core/datasets/",
+      "usage_note": "Used for Solu Khola (Dudh Koshi) and Likhu-1 published project reference points."
+    },
+    {
+      "layer": "Recent operating-status cross-checks",
+      "providers": [
+        "Rasuwagadhi Hydropower Company Limited",
+        "Madhya Bhotekoshi Jalavidyut Company Limited",
+        "Sahas Urja Limited",
+        "ANDRITZ Hydro",
+        "Sanima Middle Tamor Hydropower Limited"
+      ],
+      "reference_urls": [
+        "https://rghpcl.com.np/about-the-project/",
+        "https://mbjcl.com.np/",
+        "https://sahasurja.com/project/solu-khola-dudhkoshi-hydro-electric-project-86mw/",
+        "https://www.andritz.com/hydro-en/about-andritz-hydro/locations/kathmandu-nepal/local-news-nepal",
+        "https://middletamor.com/main/pages/location-and-accessibility/"
+      ]
     },
     {
       "layer": "Street basemap",
