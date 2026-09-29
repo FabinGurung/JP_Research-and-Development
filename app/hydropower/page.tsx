@@ -25,6 +25,19 @@ export default function HydropowerModulePage() {
 
       <section className="section">
         <SectionHeading
+          kicker="Proposal defense"
+          title="Read the live PhD proposal defense PDF"
+          text="This sub-page displays the supplied Google Drive PDF directly, so the website points to the Drive document instead of duplicating its pages into GitHub."
+        />
+        <div className="route-grid">
+          <a className="route-card" href={sitePath("/hydropower/proposal-defense/")}>
+            <span>LIVE DRIVE DOCUMENT</span><h3>PhD Proposal Defense</h3><p>Open the 23-page proposal-defense PDF inside the Hydropower module with a direct Google Drive viewer and an option to open the source file itself.</p><b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </section>
+
+      <section className="section">
+        <SectionHeading
           kicker="Research aim"
           title="Connect multidisciplinary hydropower evidence without replacing specialist tools"
           text="The proposed contribution is an information and decision-support framework: verified inputs, outputs, criteria and documents remain traceable to their authoritative sources and specialist analyses."
