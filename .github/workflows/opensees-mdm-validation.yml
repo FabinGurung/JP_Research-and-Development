@@ -1,0 +1,59 @@
+name: Validate thesis MDM beam with OpenSeesPy
+
+on:
+  push:
+    branches:
+      - opensees-mdm-validation-v0.1
+    paths:
+      - "analysis/opensees/**"
+      - "data/website_demo_data.json"
+      - ".github/workflows/opensees-mdm-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: analysis/opensees/requirements.txt
+
+      - name: Install pinned OpenSeesPy
+        run: python -m pip install -r analysis/opensees/requirements.txt
+
+      - name: Run independent OpenSees validation
+        run: python analysis/opensees/mdm_two_span_validation.py
+
+      - name: Print concise comparison
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("analysis/opensees/results/mdm_two_span_validation.json")
+          data = json.loads(path.read_text())
+          comparison = data["comparison"]
+          print("status:", comparison["status"])
+          print("moment_checks_pass:", comparison["moment_checks_pass"])
+          print("reaction_checks_pass:", comparison["reaction_checks_pass"])
+          print("OpenSees reactions:", data["opensees_result"]["support_reactions_y"])
+          for row in comparison["reaction_checks"]:
+              print(row)
+          PY
+
+      - name: Upload validation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: opensees-mdm-validation-report
+          path: analysis/opensees/results/mdm_two_span_validation.json
+          if-no-files-found: error
