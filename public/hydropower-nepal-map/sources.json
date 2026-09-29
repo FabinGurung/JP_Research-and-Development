@@ -1,11 +1,21 @@
 {
   "view": "Interactive Nepal research map",
-  "updated_for": "Top-ten operating hydropower reference layer and Kali Gandaki A naming correction",
+  "updated_for": "Top-ten operating hydropower reference layer, Kali Gandaki A naming correction, and current DoED operating-register storage manifest",
   "research_boundary": "Only source-backed geography and source-backed project reference points are shown. Project points are not treated as full project footprints. Screening candidates, hazard areas, infrastructure-proximity layers and environmental constraints remain absent until governed evidence or reproducible analysis outputs are admitted.",
   "ranking_method": "Ten major operating hydropower projects verified for this map and ordered by installed/nameplate capacity. This is not a ranking of annual energy, present output, economics, reliability, environmental performance or research importance.",
-  "ranking_date_context": "The Department of Electricity Development operating-project register consulted for this release was current in September 2026; recent commercial-operation status was cross-checked from project/operator and Global Energy Monitor records where needed.",
+  "ranking_date_context": "The Department of Electricity Development operating-project register consulted for this release was updated 18 September 2026; recent commercial-operation status was cross-checked from project/operator and Global Energy Monitor records where needed.",
   "coordinate_rule": "Every hydropower marker is a published project/plant reference coordinate. The marker meaning and precision are recorded per project. A marker must not be interpreted as the project's complete headworks, waterways, reservoir, powerhouse, transmission or environmental footprint.",
   "kali_gandaki_correction": "Kali Gandaki is the river/geographic name. Kali Gandaki A is a hydropower project/station. The highlighted map coordinate 27.931, 83.6152 is the powerhouse/generating-station point near Beltari/Yamgha, Syangja; the dam/headworks are upstream near Mirmi.",
+  "stored_registers": [
+    {
+      "file": "operating-registry.json",
+      "description": "Governed snapshot manifest for the current DoED operating hydropower register: 217 operating entries in total, 211 coordinate-qualified from non-zero official coordinate fields, with six zero-coordinate exclusions explicitly retained."
+    },
+    {
+      "file": "plants.json",
+      "description": "Current ten-project exact/published point-coordinate subset used by the interactive map."
+    }
+  ],
   "sources": [
     {
       "layer": "Nepal province boundaries",
@@ -23,10 +33,31 @@
       "reference_url": "https://ntb.gov.np/en/provinces"
     },
     {
-      "layer": "Operating hydropower capacity/status baseline",
+      "layer": "Operating hydropower register — above 1 MW",
       "provider": "Department of Electricity Development, Nepal",
       "reference_url": "https://doed.gov.np/pages/powerplantsmorethan1/",
-      "usage_note": "Primary current operating-project register and installed-capacity baseline where listed."
+      "updated": "2026-09-18",
+      "project_count": 197,
+      "total_capacity_mw": 3915.744,
+      "usage_note": "Current official operating-project register and installed-capacity baseline. Published coordinates are project latitude/longitude extents, not guaranteed powerhouse points."
+    },
+    {
+      "layer": "Operating hydropower register — small-plant page",
+      "provider": "Department of Electricity Development, Nepal",
+      "reference_url": "https://doed.gov.np/pages/powerplantslessthan1/",
+      "updated": "2026-09-18",
+      "project_count": 20,
+      "total_capacity_mw": 15.797,
+      "coordinate_qualified": 14,
+      "coordinate_unqualified": 6,
+      "usage_note": "Six operating entries publish 0°00′00″ coordinate fields and are excluded from the coordinate-qualified count."
+    },
+    {
+      "layer": "Supplemental hydropower point-coordinate dataset",
+      "provider": "Niti Foundation / NAXA Hydropower Portal",
+      "reference_url": "https://hydro.naxa.com.np/core/datasets/",
+      "published_project_records": 572,
+      "usage_note": "Useful for point-coordinate/project-reference reconciliation. Its status field is not treated as the current legal authority; operating status must be reconciled against current DoED registers."
     },
     {
       "layer": "Hydropower project point coordinates",
@@ -42,12 +73,6 @@
         "https://www.gem.wiki/Madhya_Marsyangdi_hydroelectric_plant"
       ],
       "usage_note": "Used where the tracker publishes exact or explicitly approximate WGS84 plant/project points."
-    },
-    {
-      "layer": "DoED-derived project reference coordinates",
-      "provider": "Niti Foundation / NAXA Hydropower Projects in Nepal dataset",
-      "reference_url": "https://hydro.naxa.com.np/core/datasets/",
-      "usage_note": "Used for Solu Khola (Dudh Koshi) and Likhu-1 published project reference points."
     },
     {
       "layer": "Recent operating-status cross-checks",
