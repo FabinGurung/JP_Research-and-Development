@@ -1,0 +1,30 @@
+name: OpenSees structural-report lane checks
+
+on:
+  push:
+    branches:
+      - opensees-structural-report-v0.1
+    paths:
+      - "analysis/opensees_structural_report/**"
+      - ".github/workflows/opensees-structural-report.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: analysis/opensees_structural_report/requirements.txt
+      - name: Install pinned OpenSeesPy
+        run: python -m pip install -r analysis/opensees_structural_report/requirements.txt
+      - name: Prove OpenSeesPy import
+        run: python -c "import openseespy.opensees as ops; print('OpenSeesPy imported')"
+      - name: Run deterministic parser tests
+        run: python -m unittest analysis.opensees_structural_report.tests.test_e2k_inventory -v
