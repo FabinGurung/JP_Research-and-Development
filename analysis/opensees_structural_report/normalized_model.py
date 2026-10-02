@@ -66,6 +66,52 @@ def normalize(path:Path):
         vals=[float(x) for x in re.findall(r'[-+]?\d+(?:\.\d+)?(?:[Ee][-+]?\d+)?',rest)]
         if q and len(vals)>=2: points[q[0]]=(vals[0],vals[1])
 
+
+    materials={}
+    for line in nb("MATERIAL PROPERTIES"):
+        q=qs(line)
+        if not q or not line.startswith("MATERIAL "): continue
+        m=materials.setdefault(q[0],{"name":q[0]})
+        for k,out in [("TYPE","type"),("GRADE","grade")]:
+            v=qafter(k,line)
+            if v is not None: m[out]=v
+        for k,out in [("WEIGHTPERVOLUME","weight_per_volume"),("E","E"),("U","poisson"),
+                      ("A","thermal_alpha"),("FC","fc"),("FY","fy"),("FU","fu")]:
+            v=nafter(k,line)
+            if v is not None: m[out]=v
+
+    frame_sections={}
+    for line in nb("FRAME SECTIONS"):
+        q=qs(line)
+        if not q or not line.startswith("FRAMESECTION "): continue
+        s=frame_sections.setdefault(q[0],{"name":q[0]})
+        for k,out in [("MATERIAL","material"),("SHAPE","shape")]:
+            v=qafter(k,line)
+            if v is not None: s[out]=v
+        for k,out in [("D","depth"),("B","width"),("I2MOD","i2_modifier"),("I3MOD","i3_modifier"),
+                      ("AMOD","area_modifier"),("JMOD","torsion_modifier")]:
+            v=nafter(k,line)
+            if v is not None: s[out]=v
+
+    slab_properties={}
+    for line in nb("SLAB PROPERTIES"):
+        q=qs(line)
+        if not q or not line.startswith("SHELLPROP "): continue
+        s=slab_properties.setdefault(q[0],{"name":q[0]})
+        for k,out in [("MATERIAL","material"),("MODELINGTYPE","modeling_type"),("SLABTYPE","slab_type"),
+                      ("PROPTYPE","property_type")]:
+            v=qafter(k,line)
+            if v is not None: s[out]=v
+        v=nafter("SLABTHICKNESS",line)
+        if v is not None: s["thickness"]=v
+
+    load_patterns=[]
+    for line in nb("LOAD PATTERNS"):
+        if line.startswith("LOADPATTERN "):
+            q=qs(line)
+            load_patterns.append({"name":q[0] if q else None,"type":qafter("TYPE",line),
+                                  "self_weight":nafter("SELFWEIGHT",line)})
+
     point_assign={}
     for line in nb("POINT ASSIGNS"):
         q=qs(line)
@@ -193,6 +239,8 @@ def normalize(path:Path):
         "source":{"filename":path.name,"size_bytes":len(raw),"sha256":sha256(path)},
         "units":{"force":"N","length":"mm","temperature":"C"},
         "stories":[{"name":n,"elevation":elevations[n]} for n in bottom_names],
+        "materials":list(materials.values()),"frame_sections":list(frame_sections.values()),
+        "slab_properties":list(slab_properties.values()),"load_patterns":load_patterns,
         "nodes":list(nodes.values()),"frames":frames,"areas":areas,
         "frame_loads":frame_loads,"area_loads":area_loads,"mass_source":mass,
         "load_cases":load_cases,"load_combinations":combos,
