@@ -1,4 +1,4 @@
-name: Build and deploy thesis website to GitHub Pages
+name: Build and deploy JP Research & Development hub
 
 on:
   push:
@@ -11,15 +11,23 @@ permissions:
   id-token: write
 
 concurrency:
-  group: github-pages
+  group: jp-rd-production-pages
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Check out canonical production source
         uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Enforce canonical Pages source
+        shell: bash
+        run: |
+          test "$GITHUB_REF_NAME" = "main"
+          echo "Canonical production Pages source: main"
 
       - name: Set up exact Node.js toolchain
         uses: actions/setup-node@v6
@@ -46,40 +54,41 @@ jobs:
           echo "NEXT_PUBLIC_BASE_PATH=$BASE_PATH" >> "$GITHUB_ENV"
           echo "GitHub Pages base path: ${BASE_PATH:-/}"
 
-      - name: Install exact locked dependencies
+      - name: Install locked dependencies
         run: npm ci
 
-      - name: Verify source content, graph and security boundaries
+      - name: Verify source content, graph, structural demo and security boundaries
         run: npm run test:pages
 
       - name: Build static export
         env:
           GITHUB_PAGES: "true"
         run: npm run build
-      - name: Inspect generated static files
-        shell: bash
-        run: |
-          echo "============================================"
-          echo "Generated dist/client file structure"
-          echo "============================================"
-          find dist/client -maxdepth 5 -type f -print | sort
-
-          echo ""
-          echo "============================================"
-          echo "Generated HTML files"
-          echo "============================================"
-          find dist/client -type f -name "*.html" -print | sort
 
       - name: Verify generated GitHub Pages output
         run: npm run verify:pages-output
 
+      - name: Verify R&D hub publication routes
+        shell: bash
+        run: |
+          test -f out/index.html
+          test -f out/aec/index.html
+          test -f out/hydropower/index.html
+          test -f out/hydropower/proposal-defense/index.html
+          test -f out/hydropower-data-schema/index.html
+          test -f out/hydropower-data-tables/index.html
+          test -f out/hydropower-data-graph/index.html
+          test -f out/hydropower-nepal-map/index.html
+          test -f out/structural-demo/index.html
+          echo "R&D hub route QA: PASS"
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload static Pages artifact
+      - name: Upload canonical Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist/client
+          path: out
 
   deploy:
     environment:
@@ -88,6 +97,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy canonical R&D hub
         id: deployment
         uses: actions/deploy-pages@v4
