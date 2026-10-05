@@ -3,5 +3,7 @@
   "canonical_source_branch": "main",
   "canonical_source_commit": "de05dcdfa510f7a0ad8c734ca98bbaac38f1380c",
   "publication_transport_branch": "structural-analysis-solver-v0.1",
-  "note": "Do not develop source code on this branch. It is generated only from verified main."
+  "note": "Generated only from verified main. This branch is publication transport, not an editable structural-analysis source.",
+  "trigger_authority": "A9_CONNECTOR_TRIGGER",
+  "trigger_date_npt": "2026-10-05"
 }
