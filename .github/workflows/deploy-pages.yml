@@ -1,4 +1,4 @@
-name: Build and deploy JP Research & Development hub
+name: Build canonical JP Research & Development Pages artifact
 
 on:
   push:
@@ -6,35 +6,32 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: jp-rd-production-pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-stage-publication:
     runs-on: ubuntu-latest
     steps:
       - name: Check out canonical production source
         uses: actions/checkout@v6
         with:
           ref: main
+          fetch-depth: 0
 
-      - name: Enforce canonical Pages source
+      - name: Enforce canonical source branch
         shell: bash
         run: |
           test "$GITHUB_REF_NAME" = "main"
-          echo "Canonical production Pages source: main"
+          echo "Canonical editable production source: main"
 
       - name: Set up exact Node.js toolchain
         uses: actions/setup-node@v6
         with:
           node-version: 24.14.0
-          cache: npm
-          cache-dependency-path: package-lock.json
 
       - name: Confirm exact Node.js and npm versions
         shell: bash
@@ -54,11 +51,11 @@ jobs:
           echo "NEXT_PUBLIC_BASE_PATH=$BASE_PATH" >> "$GITHUB_ENV"
           echo "GitHub Pages base path: ${BASE_PATH:-/}"
 
-      - name: Install dependencies from current package manifest
+      - name: Install dependencies from recovered package manifest
         shell: bash
         run: |
-          # Recovered R&D lineage has a stale lock file. Preserve it for audit,
-          # but install from the current package manifest for this publication lane.
+          # The recovered R&D lineage has a stale package-lock.json.
+          # Do not rewrite source history during this Pages repair.
           rm -f package-lock.json
           npm install
 
@@ -85,23 +82,46 @@ jobs:
           test -f out/hydropower-data-graph/index.html
           test -f out/hydropower-nepal-map/index.html
           test -f out/structural-demo/index.html
-          echo "R&D hub route QA: PASS"
+          grep -q "Engineering Research System" out/index.html
+          grep -q "Hydropower Research" out/index.html
+          grep -q "JP Structural Analysis" out/aec/index.html
+          echo "R&D hub route/content QA: PASS"
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+      - name: Stage generated publication branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_SHA="$GITHUB_SHA"
+          PUBLICATION_BRANCH="structural-analysis-solver-v0.1"
+          tar -C out -cf "$RUNNER_TEMP/jp-rd-pages.tar" .
 
-      - name: Upload canonical Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: out
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan pages-publication-generated
+          git rm -rf . >/dev/null 2>&1 || true
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          tar -xf "$RUNNER_TEMP/jp-rd-pages.tar" -C .
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy canonical R&D hub
-        id: deployment
-        uses: actions/deploy-pages@v4
+          cat > PAGES_PUBLICATION.json <<EOF
+          {
+            "authority": "GENERATED_PUBLICATION_ARTIFACT",
+            "canonical_source_branch": "main",
+            "canonical_source_commit": "$SOURCE_SHA",
+            "publication_transport_branch": "$PUBLICATION_BRANCH",
+            "note": "Do not develop source code on this branch. It is generated only from verified main."
+          }
+          EOF
+
+          touch .nojekyll
+          git add -A
+          git commit -m "Publish verified R&D hub from main $SOURCE_SHA"
+          git push --force origin "HEAD:$PUBLICATION_BRANCH"
+          echo "Generated publication staged on $PUBLICATION_BRANCH"
+          echo "A connector-authored follow-up commit is required to trigger legacy branch-mode Pages."
+
+      - name: Read back staged publication branch
+        shell: bash
+        run: |
+          git fetch origin structural-analysis-solver-v0.1
+          test -n "$(git rev-parse origin/structural-analysis-solver-v0.1)"
+          echo "PUBLICATION_BRANCH_STAGED=PASS"
