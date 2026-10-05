@@ -27,7 +27,9 @@ assert.equal(/(?:href|src)="\/(?!\/)/.test(index), false, "structural demo must 
 
 const aecModulePage = await readFile(path.join(root, "app", "aec", "page.tsx"), "utf8");
 const nav = await readFile(path.join(root, "components", "mobile-navigation.tsx"), "utf8");
-assert.ok(aecModulePage.includes('["/structural-demo/", "Structural Solver"'), "AEC module must link structural solver");
+assert.ok(aecModulePage.includes('https://github.com/FabinGurung/JP_Structural_Analysis'), "AEC module must link the dedicated JP_Structural_Analysis repository");
+assert.ok(aecModulePage.includes('sitePath("/structural-demo/")'), "AEC module must preserve the legacy structural research demo link");
+assert.ok(aecModulePage.includes("LEGACY RESEARCH DEMO"), "AEC module must label the in-repo solver as a legacy research demo");
 assert.ok(nav.includes('["/structural-demo/", "Structural Solver"]'), "AEC module navigation must link structural solver");
 assert.ok(nav.includes('["/methodology-demo/", "Methodology Demo"]'), "AEC methodology demo navigation must be preserved");
 
@@ -79,4 +81,6 @@ console.log(JSON.stringify({
   regression: "PASS",
   publicSafety: "PASS",
   methodologyDemoPreserved: true,
+  dedicatedStructuralEngineLinked: true,
+  legacyResearchDemoPreserved: true,
 }, null, 2));
