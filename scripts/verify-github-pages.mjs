@@ -61,21 +61,46 @@ assert.match(nextConfig, /output:\s*["']export["']/);
 assert.match(nextConfig, /basePath/);
 assert.match(nextConfig, /trailingSlash:\s*true/);
 
-/* GitHub Actions build configuration */
+/* GitHub Pages publication governance */
 assert.match(workflow, /actions\/checkout@v6/);
 assert.match(workflow, /actions\/setup-node@v6/);
-assert.match(workflow, /actions\/configure-pages@v5/);
-assert.match(workflow, /actions\/upload-pages-artifact@v4/);
-assert.match(workflow, /path:\s*out/);
 assert.match(workflow, /node-version:\s*24\.14\.0/);
+assert.match(workflow, /branches:\s*\[main\]/);
 
-/*
- * NOTE:
- * During the migration-validation stage we deliberately do NOT require
- * actions/deploy-pages because deployment is disabled until the static
- * Next.js export has been proven correct.
- */
+const directActionsDeployment =
+  /actions\/configure-pages@v5/.test(workflow) &&
+  /actions\/upload-pages-artifact@v4/.test(workflow) &&
+  /actions\/deploy-pages@v4/.test(workflow);
 
+const generatedBranchDeployment =
+  /PUBLICATION_BRANCH="structural-analysis-solver-v0\.1"/.test(workflow) &&
+  /canonical_source_branch/.test(workflow) &&
+  /git push --force origin "HEAD:\$PUBLICATION_BRANCH"/.test(workflow);
+
+assert.ok(
+  directActionsDeployment || generatedBranchDeployment,
+  "Workflow must use either direct GitHub Actions Pages deployment or the governed generated-branch transport",
+);
+
+if (generatedBranchDeployment) {
+  assert.doesNotMatch(
+    workflow,
+    /actions\/deploy-pages@v4/,
+    "Legacy branch-mode transport must not also deploy through actions/deploy-pages",
+  );
+  assert.doesNotMatch(
+    workflow,
+    /pages:\s*write/,
+    "Generated publication transport does not require Pages write permission",
+  );
+  assert.match(
+    workflow,
+    /canonical_source_branch": "main"/,
+    "Generated publication metadata must identify main as canonical source",
+  );
+}
+
+/* No Wrangler runtime */
 assert.equal(
   fs.existsSync("wrangler.jsonc"),
   false,
@@ -112,8 +137,10 @@ console.log(
       framework: "Next.js",
       nextVersion: pkg.dependencies.next,
       githubPagesBuildConfigured: true,
-      deploymentEnabled: false,
-      routes: 9,
+      publicationMode: directActionsDeployment ? "DIRECT_GITHUB_ACTIONS" : "MAIN_TO_GENERATED_BRANCH",
+      canonicalSourceBranch: "main",
+      publicationTransportBranch: generatedBranchDeployment ? "structural-analysis-solver-v0.1" : null,
+      deploymentEnabled: true,
       graphNodes: 80,
       graphRelationships: 106,
       protectedDataFiles: protectedFiles.length,
