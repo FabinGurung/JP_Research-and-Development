@@ -3,17 +3,18 @@ import { sitePath } from "@/components/site-path";
 import { Callout, SectionHeading, StatusBadge } from "@/components/ui";
 
 const routes = [
-  ["/research", "Research", "Problem, questions, objectives and prototype methodology"],
+  ["/research", "Thesis / Database Research", "Problem, questions, objectives, normalized relational data and prototype methodology"],
   ["/system", "Database System", "Normalized schema, shared hub and implementation boundary"],
   ["/prototype", "Structural Prototype", "A-B-C beam, MDM trace, results, BMD and SFD"],
-  ["/workflow", "Shared-Data Reuse", "Architecture lines, quantities and construction documents"],
+  ["/workflow", "Methodology / Shared-Data Reuse", "Architecture lines, quantities, construction documents and reusable data workflow"],
   ["/methodology-demo/", "Methodology Demo", "Interactive shared-data AEC methodology demonstrator"],
-  ["/structural-demo/", "Structural Solver", "Validated browser structural-analysis solver"],
   ["/graph", "System Graph", "Interactive system and database relationship graph"],
   ["/evidence", "Implementation Evidence", "Public-safe evidence images and QA disclosures"],
   ["/roadmap", "Limitations & Future", "Framework boundaries and future work"],
   ["/thesis", "Thesis Details", "Academic metadata, abstract and cited references"],
 ] as const;
+
+const structuralEngineUrl = "https://github.com/FabinGurung/JP_Structural_Analysis";
 
 export default function AecModulePage() {
   return (
@@ -24,12 +25,12 @@ export default function AecModulePage() {
             <p className="eyebrow">Research module 01 · AEC / Structural</p>
             <h1>{demo.thesis.title}</h1>
             <p className="hero-summary">
-              The original MSc Structural Engineering research website is preserved as this AEC module.
-              It presents the normalized relational database prototype, structural validation, shared-data
-              reuse and BIM-GIS workflow framework.
+              The MSc Structural Engineering research system is preserved here as the AEC / Structural
+              research module. It presents the normalized relational database prototype, methodology,
+              evidence, structural-validation research and BIM-GIS workflow framework.
             </p>
             <div className="badge-row">
-              <StatusBadge status="implemented">Existing AEC system preserved</StatusBadge>
+              <StatusBadge status="implemented">AEC research preserved</StatusBadge>
               <StatusBadge status="validated">Structural validation available</StatusBadge>
             </div>
           </div>
@@ -37,8 +38,11 @@ export default function AecModulePage() {
             <p className="kicker">Module identity</p>
             <h2>MSc Structural Engineering</h2>
             <p>Fabin Gurung · Pokhara University · Registration No. 2022-1-90-0005</p>
-            <Callout title="Module boundary" tone="blue">
-              <p>AEC scientific content remains isolated from the Hydropower research module.</p>
+            <Callout title="Product boundary" tone="blue">
+              <p>
+                Research evidence stays in this R&amp;D module. The executable Structural Analysis / SAR
+                product now has its own repository: JP_Structural_Analysis.
+              </p>
             </Callout>
           </aside>
         </div>
@@ -46,9 +50,9 @@ export default function AecModulePage() {
 
       <section className="section section-navy">
         <SectionHeading
-          kicker="AEC routes"
-          title="Explore the existing thesis system"
-          text="The established AEC pages remain available at their original routes and are now grouped under this module entry point."
+          kicker="AEC / Structural research"
+          title="Research, methodology, evidence and structural-analysis handoff"
+          text="The established thesis pages remain under the R&D hub. The dedicated structural-analysis engine is separated into JP_Structural_Analysis so solver development cannot replace this research homepage."
         />
         <div className="route-grid">
           {routes.map(([href, title, description], index) => (
@@ -59,6 +63,18 @@ export default function AecModulePage() {
               <b aria-hidden="true">↗</b>
             </a>
           ))}
+          <a className="route-card" href={structuralEngineUrl}>
+            <span>ENGINE</span>
+            <h3>JP Structural Analysis</h3>
+            <p>Dedicated OpenSees/SAR structural-analysis engine repository, separated from the R&amp;D publication hub.</p>
+            <b aria-hidden="true">↗</b>
+          </a>
+          <a className="route-card" href={sitePath("/structural-demo/")}>
+            <span>LEGACY RESEARCH DEMO</span>
+            <h3>Structural Solver Research Snapshot</h3>
+            <p>Preserved public research/validation demonstrator from the earlier R&amp;D lineage; it is not the canonical product engine.</p>
+            <b aria-hidden="true">↗</b>
+          </a>
         </div>
       </section>
 
