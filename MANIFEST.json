@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "archive_name": "jp-research-foundation-v3.0.0.zip",
-  "generated_at_utc": "2026-10-06T10:49:06.705Z",
+  "generated_at_utc": "2026-10-06T11:01:16.267Z",
   "source_snapshot": {
     "release": "v3.0.0 — Cross-project research foundation",
     "routes": 19,
@@ -12,8 +12,8 @@
     "server_runtime_required": false
   },
   "hash_algorithm": "SHA-256",
-  "payload_file_count": 199,
-  "total_payload_bytes": 1772232,
+  "payload_file_count": 200,
+  "total_payload_bytes": 1775154,
   "exclusions": [
     "MANIFEST.json from ordinary payload list; covered by normalized self-integrity",
     ".git/",
@@ -29,7 +29,7 @@
   "manifest_integrity": {
     "mode": "sha256-canonical-json-null-self-field",
     "procedure_file": "MANIFEST_PROCEDURE.md",
-    "sha256": "2b5a52fedb281d4c02a1c90dd2a6d3fe5c943da69d0ed744401f17e6189d3c23"
+    "sha256": "41c2db078cb830533c4d42ad3197a4cd8d0897f6686abd02232f8d320bf3f165"
   },
   "files": [
     {
@@ -59,13 +59,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 4738,
-      "sha256": "83128e7307f6cb401131054adb4d11ec2d75f9337bef3b8ef3df097f419dce6b"
+      "bytes": 4801,
+      "sha256": "7c30b58ba7aa6e430bad8229207f26fb076f138f9844785bbcf3b2453f62639a"
     },
     {
       "path": "CURRENT.json",
-      "bytes": 1261,
-      "sha256": "ec09b8df680eb604e2f7ec35297cd97f48fb88b1f856444d44b528a2703c2739"
+      "bytes": 1588,
+      "sha256": "0b3248d8f90ba9fda8de4aa749d8b1b2e1f38947af7c1c7dd9d6e5db1cb2e54f"
     },
     {
       "path": "DATA_SOURCE_MAP.md",
@@ -89,8 +89,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2130,
-      "sha256": "8c8ee8d2147ac71f655144f28ba489b02e38a5ec5fe7b90eb4d2b050371e4d62"
+      "bytes": 2207,
+      "sha256": "a8b30ad81a35b310029071638c0edd3289b9a4ba5a5f5fe1f092cb851f7c3dd8"
     },
     {
       "path": "SITES_RECONNECTION.md",
@@ -99,8 +99,8 @@
     },
     {
       "path": "SITE_ARCHITECTURE.md",
-      "bytes": 3164,
-      "sha256": "d12cf07b7625082da8e30564fbd72f639c061533e93d68e81971b8e17f96ec5e"
+      "bytes": 3254,
+      "sha256": "21240dc2c3c58ed9d1b085bea1f3e2e527c3a9e72b731e4b5c284b03e561894d"
     },
     {
       "path": "app/aec/page.tsx",
@@ -119,8 +119,8 @@
     },
     {
       "path": "app/governance/page.tsx",
-      "bytes": 2179,
-      "sha256": "ac937be0ccbd9fa7c511265a16ca6ced73e46eb76c175ee8831849643a608a55"
+      "bytes": 2227,
+      "sha256": "feef6beaf43db41767f2576b04b8c6e10912272563efa2f47a919b2a7933139e"
     },
     {
       "path": "app/graph/page.tsx",
@@ -249,8 +249,8 @@
     },
     {
       "path": "data/research-projects.json",
-      "bytes": 2611,
-      "sha256": "43ae8be048098e89ed2f1c0962bbe914a981ae2d23c1d8a0f4874974f8d723cc"
+      "bytes": 2592,
+      "sha256": "f14efab8af39005b85f465883480ede6e35be90b1fe850d4b83b3fe53ac00b5e"
     },
     {
       "path": "data/system_graph.json",
@@ -269,13 +269,13 @@
     },
     {
       "path": "governance/ADR-001-research-authority-boundaries.md",
-      "bytes": 4272,
-      "sha256": "ced713ca0fdc579ddf9246a2162c7bc14cf3cb98136298a12e8e75ab4fc1ce2f"
+      "bytes": 4865,
+      "sha256": "4a86c9a6dbdadcee3a09582eac05306ffc8e92d5861667696cb1aa6626360f82"
     },
     {
       "path": "governance/README.md",
-      "bytes": 599,
-      "sha256": "3c2c9c51c40c77881bb90a454a057621dc9c210ae6066761848fef17a88c19dd"
+      "bytes": 698,
+      "sha256": "48d4b6aa3851d126983eebcad2c83ef4c83bb5c04de4ee020ee79d05a0c1dd7a"
     },
     {
       "path": "governance/bootstrap/JP_A9_Research_Governance/.github/workflows/validate.yml",
@@ -963,6 +963,11 @@
       "sha256": "8d5185f923e8d45f54961fe43ed0b944d3085d526a71ac0dc16befbea4c89f92"
     },
     {
+      "path": "qa/provider-readback-20261006.json",
+      "bytes": 1556,
+      "sha256": "3faf08941c958841efad11cff730aad01aa6c8e11a03f57157f3d5b88d6427c5"
+    },
+    {
       "path": "qa/research-foundation-20261006.json",
       "bytes": 1152,
       "sha256": "d9dc39b02e9c8df22f7b64b01090ee43cb84d4097be4b76cea38e83cf0f6a84c"
@@ -1009,8 +1014,8 @@
     },
     {
       "path": "scripts/verify-research-directory.mjs",
-      "bytes": 1322,
-      "sha256": "de3b80309c6da0bc1fe59dde42db4b06a25df76d3c7ae6aa51d62ce2912353a5"
+      "bytes": 1410,
+      "sha256": "cef6467889ef5be2b4591e1bc05c5070f06d9521db7e5cb3e5c9b65482b41947"
     },
     {
       "path": "scripts/verify-security.mjs",

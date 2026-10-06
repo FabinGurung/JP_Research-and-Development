@@ -19,5 +19,6 @@ const publicationText = JSON.stringify(catalog);
 assert.doesNotMatch(publicationText, /docs\.google\.com|drive\.google\.com|CP113|DISC-SEQ|LATEX-SEQ/);
 const current = JSON.parse(fs.readFileSync('CURRENT.json', 'utf8'));
 assert.equal(current.a9_repository.provider_id, null);
-assert.equal(current.a9_repository.status, 'NOT_PROVISIONED');
+assert.equal(current.a9_repository.status, 'OPTIONAL_NOT_PROVISIONED');
+assert.equal(current.adopted_governance_location.repository_id, '1312113873');
 console.log(`Research directory identities, slugs and public boundary: PASS (${ids.size} projects)`);

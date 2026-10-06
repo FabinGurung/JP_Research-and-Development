@@ -56,8 +56,8 @@
       "label": "Bijayapur Hydrokinetic Energy Study",
       "category": "Energy",
       "summary": "A research directory entry for river-current energy investigation.",
-      "route": "/hydropower/",
-      "status": "PUBLIC_MODULE_AVAILABLE",
+      "route": null,
+      "status": "DIRECTORY_ONLY",
       "source": "User-supplied architecture plan; directory metadata only.",
       "scientific_state": "NOT_ASSERTED",
       "publication": "PUBLIC_METADATA_ONLY"

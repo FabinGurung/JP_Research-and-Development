@@ -1,0 +1,47 @@
+{
+  "sequence": "RD-A9-FOUNDATION-20261006",
+  "status": "MAIN_CI_AND_DEPLOYMENT_PASS",
+  "content_commit": "088e33753501f403b2bfe546571457e0e8a239ac",
+  "merge_commit": "f469ec68afb5ce9898c0518433d0ba7f599f517d",
+  "provider_readback": {
+    "tree": "fbe4e1f2ed27047f325dd111b446318d8771c009",
+    "verified_files": 59,
+    "status": "PASS",
+    "content_commit": "088e33753501f403b2bfe546571457e0e8a239ac"
+  },
+  "ci_runs": [
+    {
+      "run_id": 37453038965,
+      "name": "Validate research foundation",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "f469ec68afb5ce9898c0518433d0ba7f599f517d"
+    },
+    {
+      "run_id": 37453039007,
+      "name": "Build and deploy JP Research & Development hub",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "f469ec68afb5ce9898c0518433d0ba7f599f517d"
+    }
+  ],
+  "pre_snapshot": "snapshot-pre-rd-a9-foundation-20261006",
+  "a7_merge_commit": "ca4c32d16eefa70fb41c24e192375b7bd036746b",
+  "scientific_history_migrated": false,
+  "open_debt": [
+    "Rendered mobile QA remains open."
+  ],
+  "adopted_location": "Existing R&D repository; separate A9 deployment optional.",
+  "do_not_replay": [
+    "Saugat Discussion/LaTeX execution excluded."
+  ],
+  "desktop_browser": {
+    "status": "PASS",
+    "observed_site": "https://fabingurung.github.io/JP_Research-and-Development/projects/",
+    "viewport_width": 1363,
+    "document_width": 1348,
+    "project_cards": 5,
+    "navigation": "Hub to directory PASS",
+    "framework_error_overlay": false
+  }
+}
