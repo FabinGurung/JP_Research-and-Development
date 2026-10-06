@@ -18,6 +18,12 @@ const routes = [
   "roadmap",
   "thesis",
   "graph",
+  "aec",
+  "hydropower",
+  "hydropower/proposal-defense",
+  "projects",
+  "governance",
+  ...JSON.parse(fs.readFileSync('data/research-projects.json', 'utf8')).projects.map(project => `projects/${project.slug}`),
 ];
 
 assert.ok(

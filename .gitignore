@@ -12,3 +12,8 @@ dist
 *.tar.gz
 coverage
 .DS_Store
+# Static export and governance caches
+out/
+__pycache__/
+*.pyc
+.a9.lock

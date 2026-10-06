@@ -6,7 +6,7 @@ import path from "node:path";
 const root = process.cwd();
 const manifest = JSON.parse(fs.readFileSync(path.join(root, "MANIFEST.json"), "utf8"));
 const sha256 = (buffer) => crypto.createHash("sha256").update(buffer).digest("hex");
-const excludedDirectories = new Set([".git", ".openai", "node_modules", "dist", ".next", ".vinext", ".wrangler", "coverage"]);
+const excludedDirectories = new Set([".git", ".openai", "node_modules", "dist", ".next", ".vinext", ".wrangler", "coverage", "out", "__pycache__", ".venv"]);
 const excludedFilePatterns = [/^MANIFEST\.json$/, /\.zip$/i, /\.tar\.gz$/i, /\.log$/i, /\.tsbuildinfo$/i, /^\.DS_Store$/];
 
 function collect(directory, prefix = "") {

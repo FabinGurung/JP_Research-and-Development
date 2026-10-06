@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "edge_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "relation": {
+      "const": "GOVERNS_DRIVE_ARTIFACT"
+    },
+    "reverse_reference_receipt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "edge_id",
+    "event_id",
+    "artifact_id",
+    "relation",
+    "reverse_reference_receipt"
+  ],
+  "additionalProperties": false
+}

@@ -1,49 +1,35 @@
 # JP Research and Development
 
-Public research hub for Fabin Gurung's engineering R&D work.
+Cross-project research publication hub for theses, AEC studies, energy investigations and future R&D.
 
-## Canonical public architecture
+- [Research directory](https://fabingurung.github.io/JP_Research-and-Development/projects/): five stable project addresses.
+- Existing AEC / Structural and Hydropower modules, technical graphs and demonstrations remain available.
+- `data/research-projects.json` owns public directory metadata. Permanent PROJ IDs survive title changes.
+- `CURRENT.json` owns this repository's bounded publication state and explicit dependencies.
 
-```text
-JP_Research-and-Development
-├── R&D Home
-├── AEC / Structural Research
-│   ├── Thesis / database research
-│   ├── methodology and shared-data reuse
-│   ├── implementation evidence
-│   ├── system/database graph
-│   ├── preserved structural research demo
-│   └── Structural Analysis → JP_Structural_Analysis
-└── Hydropower Research
-    ├── PhD research
-    ├── hydrology / operations context
-    ├── GIS / PHES research
-    ├── database / schema views
-    ├── Nepal hydropower map / source registries
-    ├── case-study / proposal-defense material
-    └── civil / structural research
+## Responsibilities
+
+| Layer | Role |
+|---|---|
+| A7 | Identities, authority routing and public relationships |
+| A9 | Detailed sequence governance after dedicated repository provisioning |
+| R&D | Understandable public research presentation |
+| Drive | Original scientific artifacts and working documents |
+| Specialist repositories | Executable product engines |
+
+Read `governance/ADR-001-research-authority-boundaries.md`. The standalone A9 foundation is prepared at `governance/bootstrap/JP_A9_Research_Governance`; it is not an active second ledger. The dedicated repository is not provisioned. No scientific history, manuscript state or private Drive references were imported. Saugat Discussion and LaTeX execution belongs in a separate chat.
+
+## Development and validation
+
+```sh
+npm ci
+npm run test:pages
+python -m pip install -r governance/bootstrap/JP_A9_Research_Governance/requirements.txt
+npm run verify:governance
+NEXT_PUBLIC_BASE_PATH=/JP_Research-and-Development GITHUB_PAGES=true npm run build
+NEXT_PUBLIC_BASE_PATH=/JP_Research-and-Development npm run verify:pages-output
 ```
 
-The R&D repository is the **research publication hub**. Executable product engines live in their own repositories. In particular, the canonical structural-analysis/SAR product is **[JP_Structural_Analysis](https://github.com/FabinGurung/JP_Structural_Analysis)**.
+The static Next.js export produces `out/`. Main is the sole production source; `.github/workflows/deploy-pages.yml` publishes through the github-pages environment. Feature/PR CI validates the site and governance bootstrap without deploying it. The pinned lockfile is retained and installed with npm ci.
 
-## GitHub Pages production policy
-
-There is exactly one canonical production source for this repository:
-
-- branch: `main`
-- workflow: `.github/workflows/deploy-pages.yml`
-- environment: `github-pages`
-
-Experimental, research, snapshot and solver branches may build and test, but must not be treated as production Pages owners. The production site must always open on the R&D Home and expose both AEC / Structural Research and Hydropower Research.
-
-Expected site:
-
-`https://fabingurung.github.io/JP_Research-and-Development/`
-
-## Public/private boundary
-
-GitHub Pages is public. Do not publish credentials, private Drive administration data, confidential project files, unsanitized client material, or unpublished engineering records.
-
-## Development
-
-The current site is a static-exported Next.js/React/TypeScript application. The production workflow installs the locked dependency set, runs repository verification, builds the static export, verifies the R&D routes, and deploys the generated `out/` artifact.
+Public Pages excludes private evidence and restricted research content. Directory entries identify projects; publication pending does not imply scientific completion.

@@ -1,5 +1,6 @@
 import { sitePath } from "@/components/site-path";
 import { SectionHeading, StatusBadge } from "@/components/ui";
+import { projectPath, researchProjects } from "@/components/research-directory";
 
 const modules = [
   {
@@ -30,7 +31,7 @@ export default function ResearchHubPage() {
           <div className="hero-copy">
             <p className="eyebrow">Fabin Gurung</p>
             <h1>Engineering Research System</h1>
-            <p className="hero-summary">One research platform. Multiple research systems.</p>
+            <p className="hero-summary">A shared home for theses, engineering studies and energy research.</p>
             <div className="badge-row">
               <StatusBadge status="implemented">AEC / Structural</StatusBadge>
               <StatusBadge status="framework">Hydropower</StatusBadge>
@@ -40,9 +41,10 @@ export default function ResearchHubPage() {
             <p className="kicker">Research hub</p>
             <h2>Choose a research system</h2>
             <p>
-              Each module opens its own research scope, navigation, evidence and development path.
-              Domain-specific pages stay inside their research system rather than appearing at hub level.
+              Browse the project directory or open an established research module.
+              Each project keeps its own scientific evidence and development path.
             </p>
+            <a className="directory-link" href={sitePath('/projects/')}>Explore the research directory →</a>
           </aside>
         </div>
       </section>
@@ -50,7 +52,7 @@ export default function ResearchHubPage() {
       <section className="section section-navy">
         <SectionHeading
           kicker="Research systems"
-          title="Two independent research modules"
+          title="Established research modules"
           text="The website shell is shared; scientific content and source chains remain separated by research domain."
         />
         <div className="route-grid">
@@ -63,6 +65,15 @@ export default function ResearchHubPage() {
               <b aria-hidden="true">↗</b>
             </a>
           ))}
+        </div>
+      </section>
+      <section className="section">
+        <SectionHeading kicker="Project directory" title="Research across projects" text="Stable project addresses connect theses, structural studies and energy investigations." />
+        <div className="research-directory-grid">
+          {researchProjects.map(project => <a className="research-project-card" key={project.project_id} href={sitePath(projectPath(project.slug))}>
+            <span className="kicker">{project.category}</span><h3>{project.label}</h3><p>{project.summary}</p>
+            <small>{project.status === 'PUBLIC_MODULE_AVAILABLE' ? 'Public module available' : 'Directory entry · publication pending'}</small>
+          </a>)}
         </div>
       </section>
     </>

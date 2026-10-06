@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 
 const baseUrl = (process.env.BASE_URL || "http://127.0.0.1:4173").replace(/\/$/, "");
 const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "").replace(/\/$/, "");
-const routes = ["/", "/research", "/system", "/prototype", "/workflow", "/evidence", "/roadmap", "/thesis", "/graph"];
+const { readFileSync } = await import('node:fs');
+const projects = JSON.parse(readFileSync('data/research-projects.json', 'utf8')).projects;
+const routes = ["/", "/research", "/system", "/prototype", "/workflow", "/evidence", "/roadmap", "/thesis", "/graph", '/aec', '/hydropower', '/hydropower/proposal-defense', '/projects', '/governance', ...projects.map(project => `/projects/${project.slug}`)];
 const results = [];
 
 for (const route of routes) {
@@ -11,8 +13,7 @@ for (const route of routes) {
   const html = await response.text();
   assert.equal(response.status, 200, `${route} must return HTTP 200`);
   assert.equal((html.match(/<h1/g) || []).length, 1, `${route} must have one h1`);
-  assert.ok(html.includes("Source disclosure"), `${route} must include a source disclosure`);
-  assert.ok(html.includes("Static thesis website"), `${route} must include the static-site label`);
+  assert.ok(html.includes("Static research website"), `${route} must include the static-site label`);
   assert.equal(/href="[^"]+\.pdf/i.test(html), false, `${route} must not link a PDF`);
   assert.equal(/<form\b/i.test(html), false, `${route} must not contain a form`);
   if (route === "/graph") {

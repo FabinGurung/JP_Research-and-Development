@@ -4,7 +4,7 @@ import path from "node:path";
 
 const root = process.cwd();
 const manifestPath = path.join(root, "MANIFEST.json");
-const excludedDirectories = new Set([".git", ".openai", "node_modules", "dist", ".next", ".vinext", ".wrangler", "coverage"]);
+const excludedDirectories = new Set([".git", ".openai", "node_modules", "dist", ".next", ".vinext", ".wrangler", "coverage", "out", "__pycache__", ".venv"]);
 const excludedFilePatterns = [/^MANIFEST\.json$/, /\.zip$/i, /\.tar\.gz$/i, /\.log$/i, /\.tsbuildinfo$/i, /^\.DS_Store$/];
 const sha256 = (buffer) => crypto.createHash("sha256").update(buffer).digest("hex");
 
@@ -28,11 +28,11 @@ const files = paths.map((relativePath) => {
 
 const manifest = {
   schema_version: "2.0",
-  archive_name: "fabin-aec-thesis-website-github-pages-v2.1.zip",
+  archive_name: "jp-research-foundation-v3.0.0.zip",
   generated_at_utc: new Date().toISOString(),
   source_snapshot: {
-    release: "v2.1 — GitHub Pages Static Export",
-    routes: 9,
+    release: "v3.0.0 — Cross-project research foundation",
+    routes: 19,
     system_graph_nodes: 15,
     database_graph_nodes: 65,
     labelled_relationships: 106,

@@ -1,0 +1,22 @@
+{
+  "sequence": "RD-A9-FOUNDATION-20261006",
+  "status": "LOCAL_VALIDATION_PASS_WITH_VISUAL_QA_DEFERRED",
+  "checks": {
+    "protected_scientific_content": "PASS",
+    "public_security": "PASS",
+    "structural_solver_regression": "PASS",
+    "typescript": "PASS",
+    "project_identity_and_slug_validation": "PASS",
+    "static_production_build": "PASS",
+    "exported_application_routes": 19,
+    "http_application_routes": "19/19 PASS",
+    "a9_invariant_tests": "19/19 PASS",
+    "a7_registry_authority_inventory_and_routing": "PASS",
+    "rendered_desktop_mobile_qa": "BLOCKED_ENVIRONMENT"
+  },
+  "browser_limitation": "agent-browser daemon could not start; its browser download failed certificate verification. The Playwright download also failed archive integrity. No rendered visual QA is claimed.",
+  "local_runtime": {"node": "24.19.0", "npm": "11.9.0"},
+  "ci_runtime": {"node": "24.14.0", "npm": "11.9.0"},
+  "scope_exclusions": ["Saugat Discussion and LaTeX execution", "Drive mutation", "scientific history migration"],
+  "next_boundary": "Provider-read back branches and run CI; visual QA remains an explicit publication review item."
+}

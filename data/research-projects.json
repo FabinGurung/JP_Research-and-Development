@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "Public research-directory metadata only; scientific evidence remains in Google Drive.",
+  "projects": [
+    {
+      "project_id": "PROJ-000001",
+      "slug": "saugat-nbc205-seismic-assessment",
+      "label": "Saugat NBC205 Seismic Assessment",
+      "category": "Thesis",
+      "summary": "Seismic assessment and the applicability of NBC 205 ready-to-use guidelines.",
+      "route": null,
+      "status": "DIRECTORY_ONLY",
+      "source": "User-supplied architecture plan; directory metadata only.",
+      "scientific_state": "NOT_ASSERTED",
+      "publication": "PUBLIC_METADATA_ONLY"
+    },
+    {
+      "project_id": "PROJ-000002",
+      "slug": "nabin-hospital-fragility-assessment",
+      "label": "Nabin Hospital Fragility Assessment",
+      "category": "Thesis",
+      "summary": "Hospital fragility and soil\u2013structure interaction research.",
+      "route": null,
+      "status": "DIRECTORY_ONLY",
+      "source": "User-supplied architecture plan; directory metadata only.",
+      "scientific_state": "NOT_ASSERTED",
+      "publication": "PUBLIC_METADATA_ONLY"
+    },
+    {
+      "project_id": "PROJ-000003",
+      "slug": "fabin-bim-gis-database",
+      "label": "Fabin BIM GIS Database",
+      "category": "Thesis",
+      "summary": "Normalized relational data connecting BIM, GIS and selected building workflows.",
+      "route": "/aec/",
+      "status": "PUBLIC_MODULE_AVAILABLE",
+      "source": "User-supplied architecture plan; directory metadata only.",
+      "scientific_state": "NOT_ASSERTED",
+      "publication": "PUBLIC_METADATA_ONLY"
+    },
+    {
+      "project_id": "PROJ-000004",
+      "slug": "aec-open-architecture-engine",
+      "label": "AEC Open Architecture Engine",
+      "category": "AEC",
+      "summary": "Research into an open architecture engine and reproducible building workflows.",
+      "route": null,
+      "status": "DIRECTORY_ONLY",
+      "source": "User-supplied architecture plan; directory metadata only.",
+      "scientific_state": "NOT_ASSERTED",
+      "publication": "PUBLIC_METADATA_ONLY"
+    },
+    {
+      "project_id": "PROJ-000005",
+      "slug": "bijayapur-hydrokinetic-energy-study",
+      "label": "Bijayapur Hydrokinetic Energy Study",
+      "category": "Energy",
+      "summary": "A research directory entry for river-current energy investigation.",
+      "route": "/hydropower/",
+      "status": "PUBLIC_MODULE_AVAILABLE",
+      "source": "User-supplied architecture plan; directory metadata only.",
+      "scientific_state": "NOT_ASSERTED",
+      "publication": "PUBLIC_METADATA_ONLY"
+    }
+  ]
+}
