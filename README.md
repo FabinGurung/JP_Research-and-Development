@@ -17,7 +17,7 @@ Cross-project research publication hub for theses, AEC studies, energy investiga
 | Drive | Original scientific artifacts and working documents |
 | Specialist repositories | Executable product engines |
 
-Read `governance/ADR-001-research-authority-boundaries.md`. The standalone A9 foundation is prepared at `governance/bootstrap/JP_A9_Research_Governance`; it is not an active second ledger. The dedicated repository is not provisioned. No scientific history, manuscript state or private Drive references were imported. Saugat Discussion and LaTeX execution belongs in a separate chat.
+Read `governance/ADR-001-research-authority-boundaries.md`. The standalone A9 foundation is prepared at `governance/bootstrap/JP_A9_Research_Governance`; it is not an active second ledger. This existing repository is the adopted location for the public foundation; a separate private A9 repository is optional. No scientific history, manuscript state or private Drive references were imported. Saugat Discussion and LaTeX execution belongs in a separate chat.
 
 ## Development and validation
 

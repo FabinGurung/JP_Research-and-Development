@@ -29,7 +29,7 @@ The curated AEC data, 80 graph nodes, 106 relationships and 10 sanitized evidenc
 
 ## Governance foundation
 
-`governance/ADR-001-research-authority-boundaries.md` defines A7/A9/R&D/Drive responsibilities, migration, rollback, privacy, release strategy and resume rules. The nested A9 repository package is an empty deployment foundation. It remains NOT_PROVISIONED in CURRENT until its actual provider identity is verified. No detailed live A9 ledger belongs in R&D.
+`governance/ADR-001-research-authority-boundaries.md` defines A7/A9/R&D/Drive responsibilities, migration, rollback, privacy, release strategy and resume rules. The nested A9 repository package is an empty deployment foundation. The nested template remains BOOTSTRAP_NOT_PROVISIONED; the public foundation is already adopted within this existing R&D repository. A separate private deployment is optional. No detailed live A9 ledger belongs in R&D.
 
 ## Checks and release lineage
 

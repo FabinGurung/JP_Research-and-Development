@@ -5,7 +5,7 @@
 - Added A7 public project relationships while preserving the existing A9 namespace and Drive authorities.
 - Reconciled the dependency lock and replaced deployment-time lock deletion with npm ci.
 - Preserved the existing AEC/Hydropower research modules, graphs, static demonstrations and specialist links.
-- Dedicated A9 provisioning and live pilot migration remain explicit dependencies; Saugat thesis execution is excluded.
+- The public foundation remains in this existing R&D repository; private A9 provisioning and live pilot migration are optional future boundaries; Saugat thesis execution is excluded.
 
 # Changelog
 

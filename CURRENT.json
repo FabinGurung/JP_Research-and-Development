@@ -3,24 +3,30 @@
   "scope": "R&D publication hub only",
   "repository_id": "1312113873",
   "sequence": "RD-A9-FOUNDATION-20261006",
-  "status": "PREPARED_AWAITING_PROVIDER_READBACK",
+  "status": "FOUNDATION_MERGED_AND_DEPLOYED_OPEN_VISUAL_QA",
   "pre_commit": "ad11758cdf0c153a428eda72bd597d78af01f0d2",
   "project_directory": "data/research-projects.json",
   "a7_repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
   "a9_repository": {
     "intended_name": "FabinGurung/JP_A9_Research_Governance",
     "provider_id": null,
-    "status": "NOT_PROVISIONED",
+    "status": "OPTIONAL_NOT_PROVISIONED",
     "prepared_package": "governance/bootstrap/JP_A9_Research_Governance"
   },
   "open_debt": [
-    "Create and verify the dedicated A9 repository; the connector has no repository-creation operation.",
-    "Import only a separately approved, provider-verified pilot lane; no scientific history was migrated.",
-    "Rendered desktop/mobile QA remains open: browser startup/download failed in the execution environment."
+    "Rendered mobile QA remains open; desktop hub/directory inspection passed at 1363 px in the cloud browser."
   ],
-  "next_boundary": "Provision the dedicated A9 repository and verify its identity before admitting any live research lane.",
+  "next_boundary": "Cultivate reviewed public research in this existing R&D repository; finish rendered mobile QA. Private governance deployment and live scientific migration remain optional future decisions.",
   "do_not_replay": [
     "Saugat thesis Discussion/LaTeX work is excluded from this run.",
     "Do not import historical sequences from the attached plan as verified live state."
-  ]
+  ],
+  "adopted_governance_location": {
+    "repository_id": "1312113873",
+    "path": "governance/",
+    "role": "Public code, schemas, SOPs and this bounded research-hub state; no imported live scientific histories."
+  },
+  "validated_content_commit": "088e33753501f403b2bfe546571457e0e8a239ac",
+  "merged_content_commit": "f469ec68afb5ce9898c0518433d0ba7f599f517d",
+  "provider_readback_receipt": "qa/provider-readback-20261006.json"
 }

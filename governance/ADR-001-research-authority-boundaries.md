@@ -1,6 +1,6 @@
 # ADR 001 — Separate research, identity, governance and evidence
 
-Status: implementation foundation; dedicated A9 deployment pending.
+Status: adopted public foundation in the existing R&D repository; separate private deployment optional.
 
 | Layer | Responsibility | Canonical contents | Excluded |
 |---|---|---|---|
@@ -10,7 +10,7 @@ Status: implementation foundation; dedicated A9 deployment pending.
 | Google Drive | Scientific evidence and working artifacts | Sources, exports, figures, spreadsheets, LaTeX ZIPs and PDFs | Replacement by a GitHub projection |
 | Specialist repositories | Executable products and experiments | Engine code and product-specific tests | Becoming the thesis evidence authority by accident |
 
-The public R&D repository carries a deployable A9 **bootstrap package**, not an active second A9 ledger. Its CURRENT explicitly says NOT_PROVISIONED. Copy this package into the proposed dedicated repository only after its provider identity and privacy policy are verified. Live/private records must never be introduced into this public staging area.
+The public R&D repository carries a deployable A9 **bootstrap package**, not an active second A9 ledger. The nested package CURRENT explicitly says BOOTSTRAP_NOT_PROVISIONED because it is a reusable template, not a live migrated ledger. The foundation can remain in this repository. If a private deployment is later selected, verify its provider identity and privacy policy first. Live/private records must never be introduced into this public staging area.
 
 Public directory entries are user-requested metadata. They make no claim about scientific completion, dataset quality or live thesis state. Saugat Discussion intake, LaTeX admission, supervisor commands and Drive reconciliation are deferred to a separate chat.
 
@@ -24,7 +24,7 @@ Preserve the original provider head with a PRE snapshot branch. Use one feature 
 
 ## Migration
 
-1. Provision A9 with a verified provider ID; select private visibility before storing restricted pointers.
+1. Keep the public foundation in R&D. For a separately authorized private deployment, provision A9 with a verified provider ID and private visibility before storing restricted pointers.
 2. Run its schema, invariant and privacy validation on the empty foundation.
 3. Select one bounded lane, read its actual live CURRENT and latest closed event, and inventory its real debt.
 4. Import pointers and receipt evidence only; mark unknown hashes/readbacks as unknown.
@@ -44,3 +44,7 @@ Do not commit credentials, unpublished datasets, client records, proprietary fon
 ## Resume protocol
 
 One chat owns one lane and one bounded purpose. Read CURRENT, latest closed event, applicable policy and only the relevant delta. Carry authorities, active debt, exact next boundary and do-not-replay entries in a handover under 3,000 tokens. Close before context pressure becomes material; no interface token meter or percentage is assumed. Provider readback is mandatory before claiming completion.
+
+## User clarification — existing repository adoption
+
+The user identified JP_Research-and-Development as the cultivation repository. It is the adopted home for the public research hub and A9 foundation. Separate repository provisioning is not blocking debt. Detailed live scientific histories remain unmigrated; public/private authority boundaries continue to apply.
