@@ -26,6 +26,25 @@
   --radius-lg: 28px;
 }
 
+.research-directory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.25rem; }
+.research-project-card { display: flex; flex-direction: column; align-items: flex-start; border: 1px solid var(--slate-200); border-radius: var(--radius); padding: 1.6rem; text-decoration: none; background: var(--white); box-shadow: var(--shadow-sm); }
+.research-project-card h3 { font-size: 1.3rem; margin: .5rem 0; }
+.research-project-card p { color: var(--slate-700); margin-bottom: 1rem; }
+.research-project-card small { color: var(--navy-700); margin-top: auto; }
+.research-project-card:hover { border-color: var(--navy-700); }
+.research-project-card:focus-visible, .directory-link:focus-visible { outline: 3px solid var(--navy-700); outline-offset: 4px; }
+.project-identity { margin-top: .75rem; font-size: .8rem; color: var(--slate-700); }
+.directory-link { display: inline-block; font-weight: 600; text-underline-offset: .2em; }
+.project-details { display: grid; grid-template-columns: minmax(110px, 1fr) 2fr; gap: .75rem 1.25rem; }
+.project-details dt { font-weight: 600; }
+.project-details dd { margin: 0; overflow-wrap: anywhere; }
+.directory-actions { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; margin-top: 2rem; }
+.governance-table { width: 100%; border-collapse: collapse; }
+.governance-table caption { text-align: left; font-weight: 600; margin-bottom: .75rem; }
+.governance-table th, .governance-table td { text-align: left; padding: 1rem; border-bottom: 1px solid var(--slate-200); }
+.table-scroll { overflow-x: auto; margin-bottom: 2rem; }
+@media (max-width: 480px) { .project-details { grid-template-columns: 1fr; gap: .25rem; } .project-details dd { margin-bottom: 1rem; } }
+
 * {
   box-sizing: border-box;
 }

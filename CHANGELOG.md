@@ -1,3 +1,12 @@
+## v3.0.0 — Research governance foundation
+
+- Added a cross-project directory and five static project pages with permanent IDs and public metadata boundaries.
+- Added the record-responsibility page and an empty standalone A9 bootstrap with schemas, CLI, SOPs and invariant tests.
+- Added A7 public project relationships while preserving the existing A9 namespace and Drive authorities.
+- Reconciled the dependency lock and replaced deployment-time lock deletion with npm ci.
+- Preserved the existing AEC/Hydropower research modules, graphs, static demonstrations and specialist links.
+- Dedicated A9 provisioning and live pilot migration remain explicit dependencies; Saugat thesis execution is excluded.
+
 # Changelog
 
 ## 2.0.0 — 2026-07-19

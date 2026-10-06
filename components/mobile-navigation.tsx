@@ -6,8 +6,10 @@ import { sitePath } from "@/components/site-path";
 
 const hubNavItems = [
   { href: "/", label: "Hub" },
+  { href: "/projects/", label: "Research directory" },
   { href: "/aec/", label: "AEC / Structural" },
   { href: "/hydropower/", label: "Hydropower" },
+  { href: "/governance/", label: "Research records" },
 ] as const;
 
 const aecNavItems = [
@@ -98,10 +100,10 @@ export function MobileNavigation() {
       >
         {isAecRoute
           ? aecNavItems.map(([href, label]) => (
-              <a href={sitePath(href)} key={href}>{label}</a>
+              <a href={sitePath(href)} key={href} aria-current={localPath.replace(/\/$/, '') === href.replace(/\/$/, '') ? 'page' : undefined}>{label}</a>
             ))
           : hubNavItems.map((item) => (
-              <a href={sitePath(item.href)} key={item.href}>{item.label}</a>
+              <a href={sitePath(item.href)} key={item.href} aria-current={localPath.replace(/\/$/, '') === item.href.replace(/\/$/, '') ? 'page' : undefined}>{item.label}</a>
             ))}
       </div>
       <span className="nav-overflow-cue" aria-hidden="true"><span>›</span></span>

@@ -52,13 +52,8 @@ jobs:
           echo "NEXT_PUBLIC_BASE_PATH=$BASE_PATH" >> "$GITHUB_ENV"
           echo "GitHub Pages base path: ${BASE_PATH:-/}"
 
-      - name: Install dependencies from current package manifest
-        shell: bash
-        run: |
-          # Recovered R&D lineage still has a stale lock file.
-          # Preserve the committed lock for audit until it is reconciled separately.
-          rm -f package-lock.json
-          npm install
+      - name: Install reproducible locked dependencies
+        run: npm ci
 
       - name: Verify source, graph, structural demo and security boundaries
         run: npm run test:pages

@@ -26,7 +26,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="footer-grid">
           <div>
             <strong>Fabin Gurung · Engineering Research Hub</strong>
-            <p>AEC / Structural · Hydropower</p>
+            <p>Theses · AEC / Structural · Energy research</p>
           </div>
           <div>
             <p>Public-safe static research modules. Scientific evidence and source chains remain isolated by research domain.</p>

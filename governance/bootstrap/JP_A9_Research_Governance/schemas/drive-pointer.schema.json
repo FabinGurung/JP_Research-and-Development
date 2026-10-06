@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "artifact_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact_type": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_authority": {
+            "const": "GOOGLE_DRIVE"
+          },
+          "drive_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "visibility": {
+            "enum": [
+              "PUBLIC",
+              "RESTRICTED"
+            ]
+          },
+          "release": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reverse_reference_receipt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "artifact_id",
+          "artifact_type",
+          "source_authority",
+          "drive_id",
+          "sha256",
+          "bytes",
+          "visibility",
+          "release",
+          "reverse_reference_receipt"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "project_id",
+    "artifacts"
+  ],
+  "additionalProperties": false
+}

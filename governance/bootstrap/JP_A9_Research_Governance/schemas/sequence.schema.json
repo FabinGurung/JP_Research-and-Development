@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "pre_event": {
+      "type": "string",
+      "minLength": 1
+    },
+    "close_event": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OPEN",
+        "CLOSED"
+      ]
+    }
+  },
+  "required": [
+    "project_id",
+    "lane",
+    "sequence",
+    "pre_event",
+    "close_event",
+    "status"
+  ],
+  "additionalProperties": false
+}

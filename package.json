@@ -1,6 +1,6 @@
 {
   "name": "fabin-aec-thesis-website-github-pages",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "packageManager": "npm@11.9.0",
@@ -22,7 +22,9 @@
     "verify:pages": "node scripts/verify-github-pages.mjs",
     "verify:pages-output": "node scripts/verify-pages-output.mjs",
     "verify:structural-demo": "node scripts/verify-structural-demo.mjs",
-    "test:pages": "npm run verify && npm run verify:security && npm run verify:pages && npm run verify:structural-demo && npm run typecheck"
+    "test:pages": "npm run verify && npm run verify:security && npm run verify:pages && npm run verify:structural-demo && npm run typecheck && npm run verify:directory",
+    "verify:directory": "node scripts/verify-research-directory.mjs",
+    "verify:governance": "python governance/bootstrap/JP_A9_Research_Governance/scripts/validate.py && python -m unittest discover -s governance/bootstrap/JP_A9_Research_Governance/tests -v"
   },
   "dependencies": {
     "next": "16.2.11",
