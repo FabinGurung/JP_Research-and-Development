@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "archive_name": "jp-research-foundation-v3.0.0.zip",
-  "generated_at_utc": "2026-10-06T11:01:16.267Z",
+  "generated_at_utc": "2026-10-06T11:46:00.000Z",
   "source_snapshot": {
     "release": "v3.0.0 — Cross-project research foundation",
     "routes": 19,
@@ -12,8 +12,8 @@
     "server_runtime_required": false
   },
   "hash_algorithm": "SHA-256",
-  "payload_file_count": 200,
-  "total_payload_bytes": 1775154,
+  "payload_file_count": 201,
+  "total_payload_bytes": 1777742,
   "exclusions": [
     "MANIFEST.json from ordinary payload list; covered by normalized self-integrity",
     ".git/",
@@ -29,7 +29,7 @@
   "manifest_integrity": {
     "mode": "sha256-canonical-json-null-self-field",
     "procedure_file": "MANIFEST_PROCEDURE.md",
-    "sha256": "41c2db078cb830533c4d42ad3197a4cd8d0897f6686abd02232f8d320bf3f165"
+    "sha256": "e9c66db271fa7dcb9566ab58249a157386279cadf4319ddeaa4f083d4ef5e7eb"
   },
   "files": [
     {
@@ -58,49 +58,9 @@
       "sha256": "75daa0bc10dae1f22b2d13386b55b232adf16930d4325902f37b5033b3a7ca93"
     },
     {
-      "path": "CHANGELOG.md",
-      "bytes": 4801,
-      "sha256": "7c30b58ba7aa6e430bad8229207f26fb076f138f9844785bbcf3b2453f62639a"
-    },
-    {
-      "path": "CURRENT.json",
-      "bytes": 1588,
-      "sha256": "0b3248d8f90ba9fda8de4aa749d8b1b2e1f38947af7c1c7dd9d6e5db1cb2e54f"
-    },
-    {
-      "path": "DATA_SOURCE_MAP.md",
-      "bytes": 7686,
-      "sha256": "7bf79d0bc431d15a4d3021803f13aca8564722ae7ee3499102f69fb0b2adf7e7"
-    },
-    {
-      "path": "GITHUB_PAGES_CONVERSION_REPORT.md",
-      "bytes": 3353,
-      "sha256": "b7ac72ced1f9b7d26fbecdb008f5cc0a33107854db6a8747be9883f4e800e6e1"
-    },
-    {
-      "path": "GITHUB_PAGES_SETUP.md",
-      "bytes": 4239,
-      "sha256": "16db1ae269ff718f508764ed7a47a28407010b6180060daa1ce60bff8c29846d"
-    },
-    {
-      "path": "MANIFEST_PROCEDURE.md",
-      "bytes": 1886,
-      "sha256": "4094ad4c4397bd8936d4cb06ad8b29ceee0dae070b8fb05212129e3dcfa40188"
-    },
-    {
-      "path": "README.md",
-      "bytes": 2207,
-      "sha256": "a8b30ad81a35b310029071638c0edd3289b9a4ba5a5f5fe1f092cb851f7c3dd8"
-    },
-    {
-      "path": "SITES_RECONNECTION.md",
-      "bytes": 2182,
-      "sha256": "a6dec3246b67703f08490cc94d2750f2bbd7f2dbdc8bf3c538e8e6aa2c5e51b2"
-    },
-    {
-      "path": "SITE_ARCHITECTURE.md",
-      "bytes": 3254,
-      "sha256": "21240dc2c3c58ed9d1b085bea1f3e2e527c3a9e72b731e4b5c284b03e561894d"
+      "path": "A7_MODULE.json",
+      "bytes": 2588,
+      "sha256": "af60d698376be31265a1ee1146912603209d9133d935b3df55f7a153437cb700"
     },
     {
       "path": "app/aec/page.tsx",
@@ -188,6 +148,11 @@
       "sha256": "1f0328df75f5337070204bec83c19f356b22304d5c4d4d45b0ecb7771c63c2c1"
     },
     {
+      "path": "CHANGELOG.md",
+      "bytes": 4801,
+      "sha256": "7c30b58ba7aa6e430bad8229207f26fb076f138f9844785bbcf3b2453f62639a"
+    },
+    {
       "path": "components/data.ts",
       "bytes": 944,
       "sha256": "82f3bf099349eb7e69d354277885ab8163db7709ad8284a529d7351dbd48e9ce"
@@ -243,6 +208,16 @@
       "sha256": "e16f5ec6ab4fb986a01b18857332a6592f482c886bc6c43336d56c9f604ba8e8"
     },
     {
+      "path": "CURRENT.json",
+      "bytes": 1588,
+      "sha256": "0b3248d8f90ba9fda8de4aa749d8b1b2e1f38947af7c1c7dd9d6e5db1cb2e54f"
+    },
+    {
+      "path": "DATA_SOURCE_MAP.md",
+      "bytes": 7686,
+      "sha256": "7bf79d0bc431d15a4d3021803f13aca8564722ae7ee3499102f69fb0b2adf7e7"
+    },
+    {
       "path": "data/references.json",
       "bytes": 8933,
       "sha256": "f9c54c80f0356cebe41ac7dad2a2387d4ccec8c6b29dc929a1c98a4911ce2898"
@@ -268,14 +243,19 @@
       "sha256": "df684baa7ed1adae889d9a647c5b164703f7bc35f89744f347c0ff1ab554209c"
     },
     {
+      "path": "GITHUB_PAGES_CONVERSION_REPORT.md",
+      "bytes": 3353,
+      "sha256": "b7ac72ced1f9b7d26fbecdb008f5cc0a33107854db6a8747be9883f4e800e6e1"
+    },
+    {
+      "path": "GITHUB_PAGES_SETUP.md",
+      "bytes": 4239,
+      "sha256": "16db1ae269ff718f508764ed7a47a28407010b6180060daa1ce60bff8c29846d"
+    },
+    {
       "path": "governance/ADR-001-research-authority-boundaries.md",
       "bytes": 4865,
       "sha256": "4a86c9a6dbdadcee3a09582eac05306ffc8e92d5861667696cb1aa6626360f82"
-    },
-    {
-      "path": "governance/README.md",
-      "bytes": 698,
-      "sha256": "48d4b6aa3851d126983eebcad2c83ef4c83bb5c04de4ee020ee79d05a0c1dd7a"
     },
     {
       "path": "governance/bootstrap/JP_A9_Research_Governance/.github/workflows/validate.yml",
@@ -288,19 +268,14 @@
       "sha256": "158b856d2b4dd9a6122c5758f4e55f5ae9505e4312475b3d9169ebd69e14cec3"
     },
     {
-      "path": "governance/bootstrap/JP_A9_Research_Governance/CURRENT.json",
-      "bytes": 519,
-      "sha256": "e1bdf514b12396e8b7e9b98030720a3dde4eb93b9bf2cc881c7bb0d132c6fdf9"
-    },
-    {
-      "path": "governance/bootstrap/JP_A9_Research_Governance/README.md",
-      "bytes": 1684,
-      "sha256": "58eb76cd8381e8afaf8ed811319ccd5626fb390c7f5ea99aa1c4566a88485f7e"
-    },
-    {
       "path": "governance/bootstrap/JP_A9_Research_Governance/acknowledgements/README.md",
       "bytes": 144,
       "sha256": "dc44ff83a52256d2e4270bd41f2ae4aa45c35bc3a0765f4ae3ca5e1d0cb18c2e"
+    },
+    {
+      "path": "governance/bootstrap/JP_A9_Research_Governance/CURRENT.json",
+      "bytes": 519,
+      "sha256": "e1bdf514b12396e8b7e9b98030720a3dde4eb93b9bf2cc881c7bb0d132c6fdf9"
     },
     {
       "path": "governance/bootstrap/JP_A9_Research_Governance/events/README.md",
@@ -326,6 +301,11 @@
       "path": "governance/bootstrap/JP_A9_Research_Governance/readbacks/README.md",
       "bytes": 137,
       "sha256": "7b19bc734a2a6b52e6d7c563bff1032f3d009a951627984a7222779d680f4b38"
+    },
+    {
+      "path": "governance/bootstrap/JP_A9_Research_Governance/README.md",
+      "bytes": 1684,
+      "sha256": "58eb76cd8381e8afaf8ed811319ccd5626fb390c7f5ea99aa1c4566a88485f7e"
     },
     {
       "path": "governance/bootstrap/JP_A9_Research_Governance/receipts/README.md",
@@ -421,6 +401,16 @@
       "path": "governance/bootstrap/JP_A9_Research_Governance/workflows/README.md",
       "bytes": 137,
       "sha256": "23b4ef0aae23be7ce61bd346773597fceb0816528f9dacc148a720127e4bd400"
+    },
+    {
+      "path": "governance/README.md",
+      "bytes": 698,
+      "sha256": "48d4b6aa3851d126983eebcad2c83ef4c83bb5c04de4ee020ee79d05a0c1dd7a"
+    },
+    {
+      "path": "MANIFEST_PROCEDURE.md",
+      "bytes": 1886,
+      "sha256": "4094ad4c4397bd8936d4cb06ad8b29ceee0dae070b8fb05212129e3dcfa40188"
     },
     {
       "path": "next-env.d.ts",
@@ -528,11 +518,6 @@
       "sha256": "dda2793544a9be14dc765ece871a263c8ac9053f9c6425152231360b46d50a2b"
     },
     {
-      "path": "public/hydropower-nepal-map/README-spatial.md",
-      "bytes": 1727,
-      "sha256": "4a94970380d5a83702e048066785a0d9f6be0ec1cf8c8c8eb5b61167777d907f"
-    },
-    {
       "path": "public/hydropower-nepal-map/hydrography-authority.json",
       "bytes": 3381,
       "sha256": "23576917db745fc5092d9e2a1fe9a4ac151cfe7cd1f3a5e93336a9ec342a1453"
@@ -561,6 +546,11 @@
       "path": "public/hydropower-nepal-map/plants.json",
       "bytes": 8749,
       "sha256": "0fb1f516e6e05cc12b08550da8bb2bdebc9f0383b036e428d385a4f995eaafd0"
+    },
+    {
+      "path": "public/hydropower-nepal-map/README-spatial.md",
+      "bytes": 1727,
+      "sha256": "4a94970380d5a83702e048066785a0d9f6be0ec1cf8c8c8eb5b61167777d907f"
     },
     {
       "path": "public/hydropower-nepal-map/river-basin-registry.json",
@@ -596,16 +586,6 @@
       "path": "public/methodology-demo/CHANGELOG.md",
       "bytes": 2824,
       "sha256": "0f156794fbf1c00c2cee053236da180eacc8b36111a78fa19b7633759ead43d3"
-    },
-    {
-      "path": "public/methodology-demo/LICENSE-NOTE.md",
-      "bytes": 618,
-      "sha256": "897e65c50faee1c1ddd915a161299dab4ead28dd1e08d8b1006504d7ede95852"
-    },
-    {
-      "path": "public/methodology-demo/README.md",
-      "bytes": 5448,
-      "sha256": "3d042dabeb9281581cbde3eff3358965b59b1f6baa02dd83a1eaccc569dc6b4a"
     },
     {
       "path": "public/methodology-demo/css/base.css",
@@ -743,6 +723,16 @@
       "sha256": "6a31d2e507a50e027d39e3e05e4b5e9215fded70c23ded3fc81a58f8ba37afce"
     },
     {
+      "path": "public/methodology-demo/LICENSE-NOTE.md",
+      "bytes": 618,
+      "sha256": "897e65c50faee1c1ddd915a161299dab4ead28dd1e08d8b1006504d7ede95852"
+    },
+    {
+      "path": "public/methodology-demo/README.md",
+      "bytes": 5448,
+      "sha256": "3d042dabeb9281581cbde3eff3358965b59b1f6baa02dd83a1eaccc569dc6b4a"
+    },
+    {
       "path": "public/methodology-demo/tests/model-integrity.test.cjs",
       "bytes": 3003,
       "sha256": "356114bf4eabc0e53dc58fd439de193684b0205b8f29d6084fb90667267c8565"
@@ -761,11 +751,6 @@
       "path": "public/structural-demo/404.html",
       "bytes": 214,
       "sha256": "76b80d370a101afc871c0a9c746394b9cdf156872e91f42dc02b9b244c1f1a1d"
-    },
-    {
-      "path": "public/structural-demo/README.md",
-      "bytes": 1473,
-      "sha256": "0eda205645e2a18bb639a1c01d9938cb06294ae6eb6f72df4eeda529dce1e84b"
     },
     {
       "path": "public/structural-demo/assets/app.js",
@@ -823,6 +808,11 @@
       "sha256": "e68c49f9208bfac7dbac3d5825806fc9e267db11cd5306310d361fb72e38630a"
     },
     {
+      "path": "public/structural-demo/README.md",
+      "bytes": 1473,
+      "sha256": "0eda205645e2a18bb639a1c01d9938cb06294ae6eb6f72df4eeda529dce1e84b"
+    },
+    {
       "path": "public/structural-demo/solver/direct-stiffness.js",
       "bytes": 3889,
       "sha256": "e4d0f073eadb86fd45e2a4f9cba0d53bc9e09dadfd5189ca341529820fdd02f0"
@@ -863,11 +853,6 @@
       "sha256": "976e972bb345803ca6a5be74da83bd99156a3e206fbbff28f1e36c5fbdb3ecf0"
     },
     {
-      "path": "public/structural-demo/structural-analysis/README.md",
-      "bytes": 2955,
-      "sha256": "d4b10e79caf05abdce1b113c2eb9567e0028c60191a2bb2d6cac6604372cfdc3"
-    },
-    {
       "path": "public/structural-demo/structural-analysis/docs/PROVENANCE.md",
       "bytes": 972,
       "sha256": "620489d815f8965b9eace810c0ccfef7dbc25544f70303b87915c61d913f1467"
@@ -891,6 +876,11 @@
       "path": "public/structural-demo/structural-analysis/pyproject.toml",
       "bytes": 528,
       "sha256": "eb82ad08a15257096636f4b959ef4bf80075152226cbcd59daf0ccc0eea0660f"
+    },
+    {
+      "path": "public/structural-demo/structural-analysis/README.md",
+      "bytes": 2955,
+      "sha256": "d4b10e79caf05abdce1b113c2eb9567e0028c60191a2bb2d6cac6604372cfdc3"
     },
     {
       "path": "public/structural-demo/structural-analysis/src/aec_structural_validation/__init__.py",
@@ -973,6 +963,11 @@
       "sha256": "d9dc39b02e9c8df22f7b64b01090ee43cb84d4097be4b76cea38e83cf0f6a84c"
     },
     {
+      "path": "README.md",
+      "bytes": 2207,
+      "sha256": "a8b30ad81a35b310029071638c0edd3289b9a4ba5a5f5fe1f092cb851f7c3dd8"
+    },
+    {
       "path": "schemas/research-projects.schema.json",
       "bytes": 1802,
       "sha256": "85622c95fc364236c9c0c4fb87adb0dfd9610bba2381da115aeecb638bdaaa90"
@@ -1026,6 +1021,16 @@
       "path": "scripts/verify-structural-demo.mjs",
       "bytes": 4134,
       "sha256": "22bd08700024195255b2ace872df98e0e6054e4fb648c1ae26ea37e70609255f"
+    },
+    {
+      "path": "SITE_ARCHITECTURE.md",
+      "bytes": 3254,
+      "sha256": "21240dc2c3c58ed9d1b085bea1f3e2e527c3a9e72b731e4b5c284b03e561894d"
+    },
+    {
+      "path": "SITES_RECONNECTION.md",
+      "bytes": 2182,
+      "sha256": "a6dec3246b67703f08490cc94d2750f2bbd7f2dbdc8bf3c538e8e6aa2c5e51b2"
     },
     {
       "path": "tsconfig.json",
