@@ -9,9 +9,10 @@ def load(p):
     except Exception as e: errors.append(f"{p}: {e}"); return {}
 researchers=load("registry/researchers.json")
 websites=load("registry/websites.json")
+debts=load("registry/debts.json")
 branches=load("registry/branch-registry.json")
 policy=load("controls/repository.control.json")
-required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
+required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
@@ -56,6 +57,17 @@ for w in website_rows:
     if not str(w.get("route","")).startswith("/"): errors.append(f"website {w.get('website_id')}: invalid route")
 registered_web={x.get("branch") for x in branches.get("active_website_modules",[])}
 if registered_web!=website_branches: errors.append("branch registry website modules != website registry")
+debt_rows=debts.get("debts",[])
+debt_ids=set()
+for d in debt_rows:
+    did=d.get("debt_id")
+    if not did or did in debt_ids: errors.append(f"invalid/duplicate debt_id {did}")
+    debt_ids.add(did)
+    if d.get("status") not in ("OPEN","HOLD","CLOSED"): errors.append(f"{did}: unsupported debt status")
+    if d.get("scope") not in ("RESEARCHER","REPOSITORY"): errors.append(f"{did}: unsupported debt scope")
+    if d.get("scope")=="RESEARCHER":
+        rid=d.get("researcher_id")
+        if rid not in ids: errors.append(f"{did}: unknown researcher_id {rid}")
 if policy.get("repository_role")!="R_AND_D_CODE_POINTER_AND_CONTROL_PORTAL": errors.append("repository policy role mismatch")
 # Main/lane binary guard. Git history may contain binaries; current tree may not.
 try:
@@ -70,13 +82,15 @@ for f in files:
 ap=argparse.ArgumentParser(); ap.add_argument("--site"); args=ap.parse_args()
 if args.site:
     site=ROOT/args.site
-    expected=["index.html","researchers/index.html","workspace/index.html","how-to/index.html","controls/index.html"]
+    expected=["index.html","researchers/index.html","workspace/index.html","how-to/index.html","controls/index.html","debts/index.html"]
     expected += [f"researchers/{r['slug']}/index.html" for r in rows]
     expected += [f"controls/{x}/index.html" for x in ("discussion","latex","presentation","website")]
+    debt_researcher_ids={d.get("researcher_id") for d in debt_rows if d.get("status") in ("OPEN","HOLD") and d.get("researcher_id")}
+    expected += [f"researchers/{r['slug']}/debts/index.html" for r in rows if r.get("researcher_id") in debt_researcher_ids]
     for rel in expected:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
 if errors:
     print("JP R&D VALIDATION: FAIL")
     for e in errors: print("- "+e)
     raise SystemExit(1)
-print(f"JP R&D VALIDATION: PASS researchers={len(rows)} lanes={len(lane_names)} websites={len(website_rows)} legacy={len(branches.get('archived_legacy',[]))}")
+print(f"JP R&D VALIDATION: PASS researchers={len(rows)} lanes={len(lane_names)} websites={len(website_rows)} debts={len(debt_rows)} legacy={len(branches.get('archived_legacy',[]))}")
