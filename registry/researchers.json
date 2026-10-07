@@ -203,8 +203,8 @@
       "researcher_id": "RSH-008",
       "slug": "rupesh-man-pradhan",
       "display_name": "Rupesh Man Pradhan",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Seismic Vulnerability Assessment and Retrofitting of Non-Engineered Reinforced Concrete Buildings in Pokhara Metropolitan City",
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": null,
