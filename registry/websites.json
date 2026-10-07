@@ -24,13 +24,38 @@
       "label": "Hydropower / PhD",
       "branch": "researcher/fabin-gurung/website/hydropower-phd",
       "route": "/hydropower/",
-      "state": "LEGACY_SOURCE_VERIFIED_SELECTIVE_REPUBLISH_PENDING",
+      "state": "LEGACY_WEB_SOURCE_VERIFIED__CURRENT_PHD_RESEARCH_POINTERS_VERIFIED__SELECTIVE_REPUBLISH_PENDING",
       "legacy_source_branch": "archive/pre-researcher-control-portal-v1-20261007",
       "legacy_source_path": "app/hydropower/page.tsx",
       "legacy_source_blob_sha": "04abf274847e07c185406d605ec4a137b0337012",
       "related_legacy_route": "/hydropower/proposal-defense/",
       "related_legacy_source_path": "app/hydropower/proposal-defense/page.tsx",
-      "related_legacy_source_blob_sha": "2408965cabccd4233aa8d0add07ddb49b8d5978a"
+      "related_legacy_source_blob_sha": "2408965cabccd4233aa8d0add07ddb49b8d5978a",
+      "research_title": "Integrated BIM-GIS and Relational Data Framework for Web-Based Hydropower Planning and Infrastructure Decision Support in Nepal",
+      "application_status": "SUBMITTED__APPLICANT_EXECUTED__SCREENSHOT_CONFIRMED",
+      "research_status": "POST_DEFENSE_REVISION_ACTIVE__MANUSCRIPT_V0_2_QA_PASS_NOT_FINAL_NOT_SUBMISSION",
+      "drive": {
+        "phd_application_root_id": "11hIESlT8hCFYqGMUph8KqmHsYk-ycNzp",
+        "application_read_first_id": "1h1SFY2uGkjml59_FXMCYCizEQ3KS-Xfh6oSvKB2RkOY",
+        "submitted_form_e_pdf_id": "19P0MHTzPff2D8MhuEFF6YRq6xmqt4e4I",
+        "post_defense_revision_root_id": "1DCTIas6AJXlVEVp49PxKQGj2OuldGri5",
+        "post_defense_read_first_id": "1tIW3ivEUFiUgPOYIB0ykYd3pqlQxupIfM1_1wos_7Z0",
+        "current_manuscript_pointer_id": "1DX_Tk1j3Pyx7UfLQoxsHe14oG9OIsy28",
+        "current_manuscript_pdf_id": "1ya0r1_FT1DBNN-nnprre-nX6hj99B3ls",
+        "current_manuscript_tex_id": "1m_Fh9oT2NPfou7vKIUio1X8BKIR_P8Bd",
+        "current_manuscript_bib_id": "1tHFmPMCzTlETusAjSH5aaKLp_oGzYfL9",
+        "current_manuscript_source_zip_id": "10pBwgUlWwwbXX3XRJRcnCl7DdOR6lbRO",
+        "current_manuscript_build_qa_id": "1AJeRyFtroBcRpvgjqyspT4JaQyIgIHAY"
+      },
+      "scientific_boundary": {
+        "M1": "IMPLEMENTATION_EQUATION_FROZEN",
+        "M2": "OPERATIONAL_PROTOCOL_FROZEN__WEIGHTS_NULL",
+        "M3": "EQUATION_FORMS_FROZEN__PARAMETERS_DATA_DERIVED",
+        "M1_M3_FINAL_FREEZE": "NOT_ISSUED",
+        "M4": "NOT_SELECTED_OR_FROZEN",
+        "M5": "VALIDATION_DIMENSIONS_DEFINED__NUMERICAL_ACCEPTANCE_CUTOFFS_OPEN",
+        "empirical_results": "NOT_FINAL"
+      }
     }
   ]
 }
