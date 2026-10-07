@@ -52,10 +52,21 @@ def main():
         modules=[w for w in websites if w.get("researcher_id")==r["researcher_id"]]
         website_section=""
         if modules:
-            module_cards="".join(
-                '<article class="lane"><h3>'+esc(w["label"])+'</h3><div class="code">'+esc(w["branch"])+'</div><p class="muted">Route: '+esc(w["route"])+' · '+esc(w["state"])+'</p><a href="'+branch_url(w["branch"])+'">Open website branch →</a></article>'
-                for w in modules
-            )
+            module_cards=""
+            for w in modules:
+                wd=w.get("drive",{})
+                extra=""
+                if w.get("research_title"):
+                    extra+=f'<p><strong>Research:</strong> {esc(w["research_title"])}</p>'
+                if w.get("application_status"):
+                    extra+=f'<p class="muted">Application: {esc(w["application_status"])}</p>'
+                if w.get("research_status"):
+                    extra+=f'<p class="muted">Research state: {esc(w["research_status"])}</p>'
+                if wd.get("current_manuscript_pdf_id"):
+                    extra+=f'<p><a href="{drive_url(wd["current_manuscript_pdf_id"])}">Open current manuscript PDF →</a></p>'
+                if wd.get("submitted_form_e_pdf_id"):
+                    extra+=f'<p><a href="{drive_url(wd["submitted_form_e_pdf_id"])}">Open submitted Form E →</a></p>'
+                module_cards+='<article class="lane"><h3>'+esc(w["label"])+'</h3><div class="code">'+esc(w["branch"])+'</div><p class="muted">Route: '+esc(w["route"])+' · '+esc(w["state"])+'</p>'+extra+'<a href="'+branch_url(w["branch"])+'">Open website branch →</a></article>'
             website_section='<section class="section"><h2>Existing website modules</h2><div class="lanes">'+module_cards+'</div></section>'
         researcher_debts=[d for d in debts if d.get("researcher_id")==r["researcher_id"] and d.get("status") in ("OPEN","HOLD")]
         debt_section=""
