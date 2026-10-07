@@ -58,13 +58,16 @@ def main():
             website_section='<section class="section"><h2>Existing website modules</h2><div class="lanes">'+module_cards+'</div></section>'
         status_label="TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "HOLD · HUMAN QA REQUIRED"
         title_value=r.get("topic_title") or "ON HOLD"
-        notice_text="Title verified by user; remaining Drive pointers stay on hold pending lane-specific QA." if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "Research topic, title, short page name and all Drive file IDs are intentionally unpublished until human QA."
+        notice_text=r.get("public_note") or ("Title verified by user; remaining Drive pointers stay on hold pending lane-specific QA." if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "Research topic, title, short page name and all Drive file IDs are intentionally unpublished until human QA.")
         drive=r["drive"]
         rows=[
           ("Discussion Google Doc",drive.get("discussion_google_doc_id")),
           ("Working thesis PDF",drive.get("working_pdf_drive_id")),
+          ("LaTeX source",drive.get("latex_source_drive_id")),
+          ("LaTeX source package",drive.get("latex_source_package_drive_id")),
           ("Presentation PDF",drive.get("presentation_pdf_drive_id")),
           ("Presentation PPTX",drive.get("presentation_pptx_drive_id")),
+          ("Word review derivative",drive.get("word_review_derivative_drive_id")),
         ]
         links="".join(f'<div>{esc(label)}</div><div>{f"""<a href="{drive_url(fid)}">Open Drive file</a>""" if fid else """<span class="badge">ON HOLD</span>"""}</div>' for label,fid in rows)
         body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">{esc(status_label)}</span></p><div class="notice">{esc(notice_text)}</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>{esc(title_value)}</div><div>Short name</div><div>{esc(r.get("topic_short_name") or "ON HOLD")}</div></div></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
