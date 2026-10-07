@@ -2,12 +2,16 @@
   "schema_version": "1.0.0",
   "repository": "FabinGurung/JP_Research-and-Development",
   "architecture": "RESEARCHER_CONTROL_PORTAL_V1",
-  "status": "PORTAL_BUILD_STAGED",
+  "status": "LIVE_RESEARCHER_CONTROL_PORTAL_V1",
   "default_branch": "main",
   "site_url": "https://fabingurung.github.io/JP_Research-and-Development/",
   "source_archive_branch": "archive/pre-researcher-control-portal-v1-20261007",
   "researcher_count": 9,
   "lane_count": 27,
   "researcher_content_status": "ALL_ON_HOLD_PENDING_HUMAN_QA",
-  "main_content_rule": "CODE_MACHINE_READABLE_CONTROLS_AND_LINKS_ONLY"
+  "main_content_rule": "CODE_MACHINE_READABLE_CONTROLS_AND_LINKS_ONLY",
+  "portal_deployment": "GITHUB_PAGES_MAIN_ONLY",
+  "validation": "GITHUB_ACTIONS_PASS",
+  "branch_count": 75,
+  "researcher_lane_status": "27_ACTIVE_EMPTY_LANES"
 }
