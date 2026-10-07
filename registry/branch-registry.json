@@ -381,5 +381,6 @@
     "archived_migration_refs": 2,
     "observed_at": "2026-10-07",
     "provider_readback": "PASS"
-  }
+  },
+  "optional_website_branch_policy": "researcher/<slug>/website/<module-slug>"
 }
