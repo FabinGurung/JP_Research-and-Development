@@ -38,6 +38,7 @@
   "lane_storage": {
     "discussion": "Google Doc content stays in Drive; Git branch stores only IDs/links/pointer JSON.",
     "latex": "LaTeX/BibTeX/build code stays in Git; compiled PDF goes to Drive and branch stores the returned Drive ID/link.",
-    "presentation": "Presentation source code/config stays in Git; generated PPTX/PDF goes to Drive and branch stores returned Drive IDs/links."
+    "presentation": "Presentation source code/config stays in Git; generated PPTX/PDF goes to Drive and branch stores returned Drive IDs/links.",
+    "website": "Optional verified website source/config and route pointers live in Git. Do not create a website lane for a researcher without a real verified module or an explicit new website request."
   }
 }
