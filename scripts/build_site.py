@@ -16,7 +16,7 @@ def drive_url(file_id):
 
 def shell(title, body, depth=0):
     prefix="../"*depth
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}how-to/index.html">How to</a></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}how-to/index.html">How to</a></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
 
 def write(out, rel, content):
     p=out/rel; p.parent.mkdir(parents=True,exist_ok=True); p.write_text(content,encoding="utf-8")
@@ -36,6 +36,7 @@ def main():
       "Presentation":load(Path("controls/presentation.control.json")),
       "Website":load(Path("controls/website.control.json"))
     }
+    debts=load(Path("registry/debts.json"))["debts"]
     (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css")
     (out/".nojekyll").write_text("",encoding="utf-8")
     home_cards="".join(f'<article class="card"><span class="badge">{esc("TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "ON HOLD · HUMAN QA")}</span><h3>{esc(r["display_name"])}</h3><p>{esc(r.get("topic_title") or "Topic/title and Drive pointers are intentionally unset.")}</p><a href="researchers/{esc(r["slug"])}/index.html">Open researcher workspace →</a></article>' for r in researchers)
@@ -56,6 +57,10 @@ def main():
                 for w in modules
             )
             website_section='<section class="section"><h2>Existing website modules</h2><div class="lanes">'+module_cards+'</div></section>'
+        researcher_debts=[d for d in debts if d.get("researcher_id")==r["researcher_id"] and d.get("status") in ("OPEN","HOLD")]
+        debt_section=""
+        if researcher_debts:
+            debt_section=f'<section class="section"><h2>Research debt</h2><div class="notice">{len(researcher_debts)} governed open/held item(s). <a href="debts/index.html">Open debt subpage →</a></div></section>'
         status_label="TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "HOLD · HUMAN QA REQUIRED"
         title_value=r.get("topic_title") or "ON HOLD"
         notice_text=r.get("public_note") or ("Title verified by user; remaining Drive pointers stay on hold pending lane-specific QA." if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "Research topic, title, short page name and all Drive file IDs are intentionally unpublished until human QA.")
@@ -70,8 +75,28 @@ def main():
           ("Word review derivative",drive.get("word_review_derivative_drive_id")),
         ]
         links="".join(f'<div>{esc(label)}</div><div>{f"""<a href="{drive_url(fid)}">Open Drive file</a>""" if fid else """<span class="badge">ON HOLD</span>"""}</div>' for label,fid in rows)
-        body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">{esc(status_label)}</span></p><div class="notice">{esc(notice_text)}</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>{esc(title_value)}</div><div>Short name</div><div>{esc(r.get("topic_short_name") or "ON HOLD")}</div></div></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
+        body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">{esc(status_label)}</span></p><div class="notice">{esc(notice_text)}</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>{esc(title_value)}</div><div>Short name</div><div>{esc(r.get("topic_short_name") or "ON HOLD")}</div></div></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}{debt_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
         write(out,f'researchers/{r["slug"]}/index.html',shell(r["display_name"],body,2))
+        if researcher_debts:
+            debt_cards=""
+            for d in researcher_debts:
+                evidence="".join(
+                    f'<li>{esc(e.get("role"))}: <a href="{drive_url(e.get("drive_id"))}">Open evidence</a></li>'
+                    for e in d.get("evidence",[]) if e.get("drive_id")
+                ) or "<li>No external evidence pointer required.</li>"
+                debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><p><strong>Category:</strong> {esc(d["category"])} · <strong>Severity:</strong> {esc(d["severity"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
+            debt_body=f'<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])} · governed debt</div><h1>{esc(r["display_name"])} — Research Debts</h1><p class="lead">Only verified open/held debt is listed here. Closing an item requires provider-read evidence and an updated registry state.</p><div class="grid">{debt_cards}</div><p><a href="../index.html">← Back to researcher workspace</a></p></main>'
+            write(out,f'researchers/{r["slug"]}/debts/index.html',shell(f'{r["display_name"]} Debts',debt_body,3))
+    global_debt_cards=""
+    for d in debts:
+        evidence="".join(
+            f'<li>{esc(e.get("role"))}: <a href="{drive_url(e.get("drive_id"))}">Open evidence</a></li>'
+            for e in d.get("evidence",[]) if e.get("drive_id")
+        ) or "<li>No external evidence pointer required.</li>"
+        owner=f' · {esc(d.get("researcher_slug"))}' if d.get("researcher_slug") else ""
+        global_debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["debt_id"])}{owner}</h3><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
+    debt_page=f'<main class="wrap hero"><div class="eyebrow">Research debt / holds</div><h1>Open debts and governed holds</h1><p class="lead">This page is the visible queue for known incomplete work. HOLD items are not permission to resume them.</p><div class="grid">{global_debt_cards}</div></main>'
+    write(out,"debts/index.html",shell("Research Debts",debt_page,1))
     workspace=f'''<main class="wrap hero"><div class="eyebrow">Repository field</div><h1>Workspace</h1><p class="lead">This repository is a code-and-pointer control plane for R&D. It is not the document warehouse.</p><section class="section"><div class="kvs"><div>Main</div><div>Portal code, shared controls, researcher registry, schemas, Drive/GitHub pointers.</div><div>Discussion lane</div><div>Google Doc ID/link and automation metadata only; discussion prose remains in Drive.</div><div>LaTeX lane</div><div>.tex/.bib/build code; compiled PDF is uploaded to Drive.</div><div>Presentation lane</div><div>TypeScript/PptxGenJS/YAML/JSON/HTML/CSS/SVG; generated PPTX/PDF is uploaded to Drive.</div><div>Archive</div><div>Git history plus legacy branches classified read-only.</div></div></section><section class="section"><h2>Branch state</h2><p>{len(branches["archived_legacy"])} legacy refs are archived under <strong>archive/</strong>. The model defines {len(branches["active_researcher_lanes"])} universal researcher lanes plus {len(branches.get("active_website_modules",[]))} verified optional website lanes.</p></section></main>'''
     write(out,"workspace/index.html",shell("Workspace",workspace,1))
     cards=""
@@ -86,7 +111,7 @@ def main():
     how=f'''<main class="wrap hero"><div class="eyebrow">ChatGPT operating path</div><h1>How to use this repository</h1><section class="section"><div class="flow"><div class="node">Choose researcher</div><div class="arrow">→</div><div class="node">Choose lane</div><div class="arrow">→</div><div class="node">Read shared control</div><div class="arrow">→</div><div class="node">Work in branch</div></div></section><section class="section"><h2>External output flow</h2><p class="lead">Build/render → upload output to Google Drive → read back the Drive ID/link → update the lane pointer JSON → commit. Git commit history replaces routine duplicate PRE/POST archive copies.</p></section><section class="section"><h2>Presentation recommendation</h2><p>Default to <strong>TypeScript + PptxGenJS + YAML/JSON</strong> for editable presentations. HTML/CSS/SVG may be used for PDF-first rendering. Generated PPTX/PDF files belong in Drive, not Git.</p></section></main>'''
     write(out,"how-to/index.html",shell("How to",how,1))
     data_dir=out/"data"; data_dir.mkdir()
-    for src,name in [(ROOT/"registry/researchers.json","researchers.json"),(ROOT/"registry/branch-registry.json","branch-registry.json"),(ROOT/"registry/websites.json","websites.json"),(ROOT/"controls/repository.control.json","repository-policy.json")]:
+    for src,name in [(ROOT/"registry/researchers.json","researchers.json"),(ROOT/"registry/branch-registry.json","branch-registry.json"),(ROOT/"registry/websites.json","websites.json"),(ROOT/"registry/debts.json","debts.json"),(ROOT/"controls/repository.control.json","repository-policy.json")]:
         shutil.copy2(src,data_dir/name)
     print(f"built {out} researchers={len(researchers)}")
 
