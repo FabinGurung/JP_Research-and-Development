@@ -21,8 +21,12 @@ for r in rows:
     if r.get("researcher_id") in ids: errors.append("duplicate researcher_id")
     if r.get("slug") in slugs: errors.append("duplicate slug")
     ids.add(r.get("researcher_id")); slugs.add(r.get("slug"))
-    if r.get("qa_status")!="HOLD_HUMAN_QA": errors.append(f"{r.get('slug')}: not on QA hold")
-    if r.get("topic_title") is not None or r.get("topic_short_name") is not None: errors.append(f"{r.get('slug')}: topic published before QA")
+    status=r.get("qa_status")
+    if status not in ("HOLD_HUMAN_QA","TITLE_VERIFIED_OTHER_POINTERS_HOLD"): errors.append(f"{r.get('slug')}: unsupported QA status {status}")
+    if status=="HOLD_HUMAN_QA":
+        if r.get("topic_title") is not None or r.get("topic_short_name") is not None: errors.append(f"{r.get('slug')}: topic published before QA")
+    if status=="TITLE_VERIFIED_OTHER_POINTERS_HOLD":
+        if not r.get("topic_title"): errors.append(f"{r.get('slug')}: verified title status without title")
     for kind in ("discussion","latex","presentation"):
         b=r.get("lanes",{}).get(kind,{}).get("branch")
         exp=f"researcher/{r.get('slug')}/{kind}"
