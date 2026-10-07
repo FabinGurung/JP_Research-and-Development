@@ -8,9 +8,10 @@ def load(p):
     try:return json.loads((ROOT/p).read_text(encoding="utf-8"))
     except Exception as e: errors.append(f"{p}: {e}"); return {}
 researchers=load("registry/researchers.json")
+websites=load("registry/websites.json")
 branches=load("registry/branch-registry.json")
 policy=load("controls/repository.control.json")
-required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
+required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
@@ -32,6 +33,25 @@ if len(lane_names)!=27: errors.append("expected 27 researcher lanes")
 reg={x.get("branch") for x in branches.get("active_researcher_lanes",[])}
 if reg!=lane_names: errors.append("branch registry active lanes != researcher registry")
 if len(branches.get("archived_legacy",[]))!=45: errors.append("expected 45 original non-main legacy refs")
+for row in branches.get("archived_legacy",[]):
+    if not str(row.get("branch","")).startswith("archive/"): errors.append(f"archived ref missing archive/ prefix: {row.get('branch')}")
+for row in branches.get("migration_refs",[]):
+    if str(row.get("status","")).startswith("ARCHIVED") and not str(row.get("branch","")).startswith("archive/"): errors.append(f"archived migration ref missing archive/ prefix: {row.get('branch')}")
+website_rows=websites.get("websites",[])
+website_branches=set()
+for w in website_rows:
+    rid=w.get("researcher_id")
+    match=next((r for r in rows if r.get("researcher_id")==rid),None)
+    if not match:
+        errors.append(f"website {w.get('website_id')}: unknown researcher")
+        continue
+    exp=f"researcher/{match.get('slug')}/website/{w.get('module_slug')}"
+    if w.get("branch")!=exp: errors.append(f"website {w.get('website_id')}: branch mismatch")
+    if w.get("branch") in website_branches: errors.append(f"duplicate website branch {w.get('branch')}")
+    website_branches.add(w.get("branch"))
+    if not str(w.get("route","")).startswith("/"): errors.append(f"website {w.get('website_id')}: invalid route")
+registered_web={x.get("branch") for x in branches.get("active_website_modules",[])}
+if registered_web!=website_branches: errors.append("branch registry website modules != website registry")
 if policy.get("repository_role")!="R_AND_D_CODE_POINTER_AND_CONTROL_PORTAL": errors.append("repository policy role mismatch")
 # Main/lane binary guard. Git history may contain binaries; current tree may not.
 try:
@@ -48,11 +68,11 @@ if args.site:
     site=ROOT/args.site
     expected=["index.html","researchers/index.html","workspace/index.html","how-to/index.html","controls/index.html"]
     expected += [f"researchers/{r['slug']}/index.html" for r in rows]
-    expected += [f"controls/{x}/index.html" for x in ("discussion","latex","presentation")]
+    expected += [f"controls/{x}/index.html" for x in ("discussion","latex","presentation","website")]
     for rel in expected:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
 if errors:
     print("JP R&D VALIDATION: FAIL")
     for e in errors: print("- "+e)
     raise SystemExit(1)
-print(f"JP R&D VALIDATION: PASS researchers={len(rows)} lanes={len(lane_names)} legacy={len(branches.get('archived_legacy',[]))}")
+print(f"JP R&D VALIDATION: PASS researchers={len(rows)} lanes={len(lane_names)} websites={len(website_rows)} legacy={len(branches.get('archived_legacy',[]))}")
