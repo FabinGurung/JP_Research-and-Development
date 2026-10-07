@@ -175,14 +175,16 @@
       "researcher_id": "RSH-007",
       "slug": "anil-neupane",
       "display_name": "Anil Neupane",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Comparative Evaluation of Machine Learning Models for Predicting Rainfall-Induced Spring Water Quality in Pokhara, Nepal",
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
-        "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "working_pdf_drive_id": "16QG2oyv6uM5EC8qoB_NIuXwEEx-B_RKa",
+        "presentation_pdf_drive_id": "1v69W_fpUdj1KcLMkZ-oodFM6A32ub7rz",
+        "presentation_pptx_drive_id": "10JVLxc4uurPX5L0TLmH2AW9rGRgXNGxU",
+        "latex_source_package_drive_id": "1woHpc0P8MuleKZP0F03ri5szo2WztVhB",
+        "word_review_derivative_drive_id": "1PwwbW731STTdy5E8yM5KZOonHZEGdQvH"
       },
       "lanes": {
         "discussion": {
@@ -197,7 +199,8 @@
           "branch": "researcher/anil-neupane/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "R2.3 is the current researcher-review candidate and remains NON-PRODUCTION. The linked presentation is a governed midterm-review preview. Discussion has no dedicated current artifact. Open production gates remain."
     },
     {
       "researcher_id": "RSH-008",
@@ -208,9 +211,11 @@
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
+        "working_pdf_drive_id": "1hXABmOiVGnWxz2oUUb18WGwKsx5j0YXf",
         "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "presentation_pptx_drive_id": null,
+        "latex_source_drive_id": "19Y20hHTYbpEP811LHr3B4ngrXp9Vp_lE",
+        "latex_source_package_drive_id": "1E5TnrNhQABHvURIRuQqHPWft3BTy2AUT"
       },
       "lanes": {
         "discussion": {
@@ -225,7 +230,8 @@
           "branch": "researcher/rupesh-man-pradhan/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "Confirmed title is newer than the current v0.2.3 thesis binary. The linked v0.2.3 working PDF still carries the earlier title wording and needs a future title-sync rebuild. Discussion and Presentation outputs are not present."
     },
     {
       "researcher_id": "RSH-009",
