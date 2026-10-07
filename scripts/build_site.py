@@ -27,12 +27,14 @@ def main():
     if out.exists(): shutil.rmtree(out)
     out.mkdir(parents=True)
     researchers=load(Path("registry/researchers.json"))["researchers"]
+    websites=load(Path("registry/websites.json"))["websites"]
     branches=load(Path("registry/branch-registry.json"))
     policy=load(Path("controls/repository.control.json"))
     controls={
       "Discussion":load(Path("controls/discussion.control.json")),
       "LaTeX":load(Path("controls/latex.control.json")),
-      "Presentation":load(Path("controls/presentation.control.json"))
+      "Presentation":load(Path("controls/presentation.control.json")),
+      "Website":load(Path("controls/website.control.json"))
     }
     (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css")
     (out/".nojekyll").write_text("",encoding="utf-8")
@@ -46,6 +48,14 @@ def main():
         for key,label in [("discussion","Discussion"),("latex","LaTeX"),("presentation","Presentation")]:
             lane=r["lanes"][key]
             lane_html+=f'<article class="lane"><h3>{label}</h3><div class="code">{esc(lane["branch"])}</div><p class="muted">{esc(lane["content_policy"])}</p><a href="{branch_url(lane["branch"])}">Open Git branch →</a></article>'
+        modules=[w for w in websites if w.get("researcher_id")==r["researcher_id"]]
+        website_section=""
+        if modules:
+            module_cards="".join(
+                '<article class="lane"><h3>'+esc(w["label"])+'</h3><div class="code">'+esc(w["branch"])+'</div><p class="muted">Route: '+esc(w["route"])+' · '+esc(w["state"])+'</p><a href="'+branch_url(w["branch"])+'">Open website branch →</a></article>'
+                for w in modules
+            )
+            website_section='<section class="section"><h2>Existing website modules</h2><div class="lanes">'+module_cards+'</div></section>'
         drive=r["drive"]
         rows=[
           ("Discussion Google Doc",drive.get("discussion_google_doc_id")),
@@ -54,9 +64,9 @@ def main():
           ("Presentation PPTX",drive.get("presentation_pptx_drive_id")),
         ]
         links="".join(f'<div>{esc(label)}</div><div>{f"""<a href="{drive_url(fid)}">Open Drive file</a>""" if fid else """<span class="badge">ON HOLD</span>"""}</div>' for label,fid in rows)
-        body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">HOLD · HUMAN QA REQUIRED</span></p><div class="notice">Research topic, title, short page name and all Drive file IDs are intentionally unpublished until human QA.</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>ON HOLD</div><div>Short name</div><div>ON HOLD</div></div></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section><section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
+        body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">HOLD · HUMAN QA REQUIRED</span></p><div class="notice">Research topic, title, short page name and all Drive file IDs are intentionally unpublished until human QA.</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>ON HOLD</div><div>Short name</div><div>ON HOLD</div></div></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
         write(out,f'researchers/{r["slug"]}/index.html',shell(r["display_name"],body,2))
-    workspace=f'''<main class="wrap hero"><div class="eyebrow">Repository field</div><h1>Workspace</h1><p class="lead">This repository is a code-and-pointer control plane for R&D. It is not the document warehouse.</p><section class="section"><div class="kvs"><div>Main</div><div>Portal code, shared controls, researcher registry, schemas, Drive/GitHub pointers.</div><div>Discussion lane</div><div>Google Doc ID/link and automation metadata only; discussion prose remains in Drive.</div><div>LaTeX lane</div><div>.tex/.bib/build code; compiled PDF is uploaded to Drive.</div><div>Presentation lane</div><div>TypeScript/PptxGenJS/YAML/JSON/HTML/CSS/SVG; generated PPTX/PDF is uploaded to Drive.</div><div>Archive</div><div>Git history plus legacy branches classified read-only.</div></div></section><section class="section"><h2>Branch state</h2><p>{len(branches["archived_legacy"])} legacy refs are classified <strong>ARCHIVED_LEGACY</strong>. The new model defines {len(branches["active_researcher_lanes"])} researcher lane branches.</p></section></main>'''
+    workspace=f'''<main class="wrap hero"><div class="eyebrow">Repository field</div><h1>Workspace</h1><p class="lead">This repository is a code-and-pointer control plane for R&D. It is not the document warehouse.</p><section class="section"><div class="kvs"><div>Main</div><div>Portal code, shared controls, researcher registry, schemas, Drive/GitHub pointers.</div><div>Discussion lane</div><div>Google Doc ID/link and automation metadata only; discussion prose remains in Drive.</div><div>LaTeX lane</div><div>.tex/.bib/build code; compiled PDF is uploaded to Drive.</div><div>Presentation lane</div><div>TypeScript/PptxGenJS/YAML/JSON/HTML/CSS/SVG; generated PPTX/PDF is uploaded to Drive.</div><div>Archive</div><div>Git history plus legacy branches classified read-only.</div></div></section><section class="section"><h2>Branch state</h2><p>{len(branches["archived_legacy"])} legacy refs are archived under <strong>archive/</strong>. The model defines {len(branches["active_researcher_lanes"])} universal researcher lanes plus {len(branches.get("active_website_modules",[]))} verified optional website lanes.</p></section></main>'''
     write(out,"workspace/index.html",shell("Workspace",workspace,1))
     cards=""
     for name,c in controls.items():
@@ -70,7 +80,7 @@ def main():
     how=f'''<main class="wrap hero"><div class="eyebrow">ChatGPT operating path</div><h1>How to use this repository</h1><section class="section"><div class="flow"><div class="node">Choose researcher</div><div class="arrow">→</div><div class="node">Choose lane</div><div class="arrow">→</div><div class="node">Read shared control</div><div class="arrow">→</div><div class="node">Work in branch</div></div></section><section class="section"><h2>External output flow</h2><p class="lead">Build/render → upload output to Google Drive → read back the Drive ID/link → update the lane pointer JSON → commit. Git commit history replaces routine duplicate PRE/POST archive copies.</p></section><section class="section"><h2>Presentation recommendation</h2><p>Default to <strong>TypeScript + PptxGenJS + YAML/JSON</strong> for editable presentations. HTML/CSS/SVG may be used for PDF-first rendering. Generated PPTX/PDF files belong in Drive, not Git.</p></section></main>'''
     write(out,"how-to/index.html",shell("How to",how,1))
     data_dir=out/"data"; data_dir.mkdir()
-    for src,name in [(ROOT/"registry/researchers.json","researchers.json"),(ROOT/"registry/branch-registry.json","branch-registry.json"),(ROOT/"controls/repository.control.json","repository-policy.json")]:
+    for src,name in [(ROOT/"registry/researchers.json","researchers.json"),(ROOT/"registry/branch-registry.json","branch-registry.json"),(ROOT/"registry/websites.json","websites.json"),(ROOT/"controls/repository.control.json","repository-policy.json")]:
         shutil.copy2(src,data_dir/name)
     print(f"built {out} researchers={len(researchers)}")
 
