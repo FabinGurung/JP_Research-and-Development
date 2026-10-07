@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JP R&D Researcher Registry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "researchers"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "const": "HUMAN_QA_HOLD"
+    },
+    "researchers": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": [
+          "researcher_id",
+          "slug",
+          "display_name",
+          "qa_status",
+          "topic_title",
+          "topic_short_name",
+          "drive",
+          "lanes"
+        ]
+      }
+    }
+  }
+}

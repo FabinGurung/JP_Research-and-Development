@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-CONTROL-DISCUSSION-001",
+  "status": "ACTIVE",
+  "branch_pattern": "researcher/<slug>/discussion",
+  "authority": "GOOGLE_DOC_IN_GOOGLE_DRIVE",
+  "git_content": [
+    "lane/discussion.json",
+    "machine-readable Drive IDs/links",
+    "optional automation scripts"
+  ],
+  "forbidden": [
+    "copied discussion prose",
+    "DOCX/PDF binaries",
+    "screenshots"
+  ],
+  "required_pointer_fields": [
+    "researcher_id",
+    "google_doc_id",
+    "google_doc_url",
+    "status",
+    "source_commit",
+    "verified_at"
+  ],
+  "workflow": [
+    "read shared control",
+    "read branch pointer",
+    "read Google Doc live",
+    "edit Google Doc",
+    "provider readback",
+    "update pointer JSON",
+    "commit"
+  ]
+}

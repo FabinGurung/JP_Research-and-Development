@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "repository_role": "R_AND_D_CODE_POINTER_AND_CONTROL_PORTAL",
+  "main_branch": {
+    "allowed": [
+      "website source code",
+      "machine-readable registries",
+      "shared control contracts",
+      "schemas",
+      "validation/build scripts",
+      "GitHub/Google Drive identifiers and links"
+    ],
+    "forbidden": [
+      "research manuscript bodies",
+      "working PDFs",
+      "PPTX/DOCX/XLSX binaries",
+      "images/screenshots used as research evidence",
+      "raw datasets or confidential evidence"
+    ]
+  },
+  "google_drive_role": "ACTUAL_WORKING_DOCUMENTS_OUTPUTS_AND_EVIDENCE",
+  "github_role": "CODE_VERSION_CONTROL_POINTERS_CONTROLS_AND_PUBLIC_PORTAL",
+  "minimal_governance": {
+    "pre_state": "previous Git commit SHA",
+    "post_state": "new Git commit SHA",
+    "archive": "Git history plus explicit archive branch only for major architecture migrations",
+    "provider_readback": [
+      "Google Drive target ID/link after upload",
+      "GitHub Actions/Pages deployment result"
+    ],
+    "do_not_duplicate": [
+      "routine PRE/POST Drive snapshots",
+      "routine archive copies",
+      "acknowledgement-only commits"
+    ]
+  },
+  "presentation_default": "TypeScript + PptxGenJS + YAML/JSON content; HTML/CSS/SVG permitted for PDF-first rendering. Generated PPTX/PDF lives in Google Drive.",
+  "lane_storage": {
+    "discussion": "Google Doc content stays in Drive; Git branch stores only IDs/links/pointer JSON.",
+    "latex": "LaTeX/BibTeX/build code stays in Git; compiled PDF goes to Drive and branch stores the returned Drive ID/link.",
+    "presentation": "Presentation source code/config stays in Git; generated PPTX/PDF goes to Drive and branch stores returned Drive IDs/links."
+  }
+}

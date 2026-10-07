@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0.0",
+  "status": "HUMAN_QA_HOLD",
+  "source_policy": "MAIN_STORES_POINTERS_AND_CODE_ONLY",
+  "researchers": [
+    {
+      "researcher_id": "RSH-001",
+      "slug": "fabin-gurung",
+      "display_name": "Fabin Gurung",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/fabin-gurung/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/fabin-gurung/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/fabin-gurung/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-002",
+      "slug": "saugat-paneru",
+      "display_name": "Saugat Paneru",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/saugat-paneru/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/saugat-paneru/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/saugat-paneru/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-003",
+      "slug": "nabin-bista",
+      "display_name": "Nabin Bista",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/nabin-bista/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/nabin-bista/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/nabin-bista/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-004",
+      "slug": "safal-thapa",
+      "display_name": "Safal Thapa",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/safal-thapa/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/safal-thapa/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/safal-thapa/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-005",
+      "slug": "shisheer-kc",
+      "display_name": "Shisheer KC",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/shisheer-kc/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/shisheer-kc/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/shisheer-kc/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-006",
+      "slug": "binay-karki",
+      "display_name": "Binay Karki",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/binay-karki/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/binay-karki/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/binay-karki/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-007",
+      "slug": "anil-neupane",
+      "display_name": "Anil Neupane",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/anil-neupane/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/anil-neupane/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/anil-neupane/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-008",
+      "slug": "rupesh-man-pradhan",
+      "display_name": "Rupesh Man Pradhan",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/rupesh-man-pradhan/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/rupesh-man-pradhan/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/rupesh-man-pradhan/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    },
+    {
+      "researcher_id": "RSH-009",
+      "slug": "krishna-kumar-gupta",
+      "display_name": "Krishna Kumar Gupta",
+      "qa_status": "HOLD_HUMAN_QA",
+      "topic_title": null,
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/krishna-kumar-gupta/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/krishna-kumar-gupta/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/krishna-kumar-gupta/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      }
+    }
+  ]
+}

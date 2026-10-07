@@ -1,0 +1,312 @@
+{
+  "schema_version": "1.0.0",
+  "branch_policy": "researcher/<slug>/<discussion|latex|presentation>",
+  "observed_before_migration": {
+    "count": 46,
+    "default_branch": "main",
+    "observed_at": "2026-10-07"
+  },
+  "migration_refs": [
+    {
+      "branch": "archive/pre-researcher-control-portal-v1-20261007",
+      "status": "ARCHIVE_SNAPSHOT"
+    },
+    {
+      "branch": "feature/researcher-control-portal-v1",
+      "status": "MIGRATION_WORKING_BRANCH"
+    }
+  ],
+  "active_researcher_lanes": [
+    {
+      "branch": "researcher/fabin-gurung/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/fabin-gurung/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/fabin-gurung/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/saugat-paneru/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/saugat-paneru/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/saugat-paneru/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/nabin-bista/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/nabin-bista/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/nabin-bista/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/safal-thapa/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/safal-thapa/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/safal-thapa/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/shisheer-kc/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/shisheer-kc/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/shisheer-kc/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/binay-karki/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/binay-karki/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/binay-karki/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/anil-neupane/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/anil-neupane/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/anil-neupane/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/rupesh-man-pradhan/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/rupesh-man-pradhan/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/rupesh-man-pradhan/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/krishna-kumar-gupta/discussion",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/krishna-kumar-gupta/latex",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    },
+    {
+      "branch": "researcher/krishna-kumar-gupta/presentation",
+      "status": "EMPTY_LANE_PLANNED_FROM_PORTAL_V1"
+    }
+  ],
+  "archived_legacy": [
+    {
+      "branch": "archive/structural-analysis-solver-v0.1-pre-pages-repair-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "closeout/rd-a9-foundation-20261006",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "feature/a7-seq-000007-module-manifest",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "feature/rd-a9-research-foundation",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "github-pages-nextjs",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "opensees-mdm-validation-v0.1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "opensees-structural-report-v0.1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "repair/rd-hub-pages-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "research/aec-open-architecture-engine",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "research/bijayapur-hydrokinetic-energy-study",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "research/fabin-bim-gis-database",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "research/nabin-hospital-fragility-assessment",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "research/saugat-nbc205-seismic-assessment",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "shared-data-methodology-demo-v1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/post-a7-seq-000007-module-manifest",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/post-actions-pages-direct-20261006-main",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/post-actions-pages-direct-20261006-structural-branch",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/post-research-branch-architecture-20261007",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-a7-seq-000007-module-manifest",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-actions-pages-direct-20261006-main",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-actions-pages-direct-20261006-publication",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-pages-policy-opensees-mdm-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-pages-policy-opensees-report-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-pages-policy-shared-data-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-pages-policy-structural-demo-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-rd-hub-pages-repair-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot/pre-research-branch-architecture-20261007",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-drive-proposal-defense-page-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-font-and-lane-closeout-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-human-language-db-views-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-hydropower-node-graph-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-hydropower-schema-20260928",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-hydropower-table-explorer-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-live-hydrography-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-module-nav-cleanup-20260928",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-nepal-map-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-operating-point-crossmatch-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-operating-registry-storage-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-proposal-defense-links-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-rd-a9-foundation-20261006",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-research-hub-20260928",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-river-catchment-authority-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "snapshot-pre-top10-hydropower-map-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "structural-analysis-demo-v1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    },
+    {
+      "branch": "structural-analysis-solver-v0.1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY"
+    }
+  ],
+  "note": "Legacy refs are preserved to avoid breaking historical links. The portal classifies them as archived; new work uses researcher/* lane branches."
+}

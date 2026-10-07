@@ -1,35 +1,38 @@
-# JP Research and Development
+# JP Research & Development
 
-Cross-project research publication hub for theses, AEC studies, energy investigations and future R&D.
+Code-first research control portal.
 
-- [Research directory](https://fabingurung.github.io/JP_Research-and-Development/projects/): five stable project addresses.
-- Existing AEC / Structural and Hydropower modules, technical graphs and demonstrations remain available.
-- `data/research-projects.json` owns public directory metadata. Permanent PROJ IDs survive title changes.
-- `CURRENT.json` owns this repository's bounded publication state and explicit dependencies.
+## Current field
 
-## Responsibilities
+This repository stores **code, machine-readable controls, version history, and Google Drive/GitHub pointers**. It does not store working research documents or generated binaries on `main`.
 
-| Layer | Role |
-|---|---|
-| A7 | Identities, authority routing and public relationships |
-| A9 | Detailed sequence governance after dedicated repository provisioning |
-| R&D | Understandable public research presentation |
-| Drive | Original scientific artifacts and working documents |
-| Specialist repositories | Executable product engines |
+- **Google Drive:** actual working documents, discussion Google Docs, compiled thesis PDFs, generated presentation PPTX/PDF, datasets/evidence when appropriate.
+- **GitHub main:** public portal source, researcher index, shared Discussion/LaTeX/Presentation controls, schemas, scripts, and links.
+- **Researcher lanes:** `researcher/<slug>/discussion`, `researcher/<slug>/latex`, `researcher/<slug>/presentation`.
+- **GitHub Pages:** human-facing researcher/control workspace.
+- **GitHub Actions:** validates the repository policy and deploys `main` only.
 
-Read `governance/ADR-001-research-authority-boundaries.md`. The standalone A9 foundation is prepared at `governance/bootstrap/JP_A9_Research_Governance`; it is not an active second ledger. This existing repository is the adopted location for the public foundation; a separate private A9 repository is optional. No scientific history, manuscript state or private Drive references were imported. Saugat Discussion and LaTeX execution belongs in a separate chat.
+All nine researcher pages are currently **ON HOLD — HUMAN QA REQUIRED**. Topic titles and Drive IDs remain null until explicitly verified.
 
-## Development and validation
+## Live site
 
-```sh
-npm ci
-npm run test:pages
-python -m pip install -r governance/bootstrap/JP_A9_Research_Governance/requirements.txt
-npm run verify:governance
-NEXT_PUBLIC_BASE_PATH=/JP_Research-and-Development GITHUB_PAGES=true npm run build
-NEXT_PUBLIC_BASE_PATH=/JP_Research-and-Development npm run verify:pages-output
+https://fabingurung.github.io/JP_Research-and-Development/
+
+## Shared controls
+
+- `controls/discussion.control.json`
+- `controls/latex.control.json`
+- `controls/presentation.control.json`
+- `controls/repository.control.json`
+
+## Minimal versioning rule
+
+For Git-managed state, the previous commit SHA is PRE and the new commit SHA is POST. Git history is the archive. Do not manufacture duplicate Drive PRE/POST copies or acknowledgement-only commits. Provider readback remains required for external Drive links and production deployment.
+
+## Build
+
+```bash
+python scripts/validate_repo.py
+python scripts/build_site.py --out dist
+python scripts/validate_repo.py --site dist
 ```
-
-The static Next.js export produces `out/`. Main is the sole production source; `.github/workflows/deploy-pages.yml` publishes through the github-pages environment. Feature/PR CI validates the site and governance bootstrap without deploying it. The pinned lockfile is retained and installed with npm ci.
-
-Public Pages excludes private evidence and restricted research content. Directory entries identify projects; publication pending does not imply scientific completion.

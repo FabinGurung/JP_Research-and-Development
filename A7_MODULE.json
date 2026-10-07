@@ -34,47 +34,54 @@
     },
     {
       "entrypoint_id": "CURRENT",
-      "kind": "CURRENT_STATE_POINTER",
+      "kind": "MACHINE_CONTRACT",
       "ref": "main",
       "path": "CURRENT.json"
     },
     {
-      "entrypoint_id": "PUBLICATION_MANIFEST",
+      "entrypoint_id": "RESEARCHERS",
       "kind": "MACHINE_CONTRACT",
       "ref": "main",
-      "path": "MANIFEST.json"
+      "path": "registry/researchers.json"
     },
     {
-      "entrypoint_id": "RESEARCH_DIRECTORY",
-      "kind": "CANONICAL_PUBLICATION_DATA",
+      "entrypoint_id": "BRANCHES",
+      "kind": "MACHINE_CONTRACT",
       "ref": "main",
-      "path": "data/research-projects.json"
+      "path": "registry/branch-registry.json"
     },
     {
-      "entrypoint_id": "GOVERNANCE_BOUNDARY",
+      "entrypoint_id": "REPOSITORY_POLICY",
       "kind": "AUTHORITY_DOCUMENT",
       "ref": "main",
-      "path": "governance/ADR-001-research-authority-boundaries.md"
+      "path": "controls/repository.control.json"
     },
     {
-      "entrypoint_id": "APP",
-      "kind": "HUMAN_INTERFACE_SOURCE",
+      "entrypoint_id": "DISCUSSION_CONTROL",
+      "kind": "AUTHORITY_DOCUMENT",
       "ref": "main",
-      "path": "app/"
+      "path": "controls/discussion.control.json"
     },
     {
-      "entrypoint_id": "SCHEMAS",
-      "kind": "FORMAL_CONTRACT",
+      "entrypoint_id": "LATEX_CONTROL",
+      "kind": "AUTHORITY_DOCUMENT",
       "ref": "main",
-      "path": "schemas/"
+      "path": "controls/latex.control.json"
+    },
+    {
+      "entrypoint_id": "PRESENTATION_CONTROL",
+      "kind": "AUTHORITY_DOCUMENT",
+      "ref": "main",
+      "path": "controls/presentation.control.json"
     }
   ],
   "resolver_rules": [
     "READ_THIS_MANIFEST_FIRST",
-    "LOAD_A7_OWNERSHIP_PROFILE_BEFORE_DOMAIN_MUTATION",
-    "PUBLICATION_DOES_NOT_ABSORB_SPECIALIST_ENGINE_AUTHORITY",
-    "DO_NOT_IMPORT_PRIVATE_SCIENTIFIC_HISTORY_WITHOUT_SEPARATE_GOVERNED_SCOPE"
+    "LOAD_SHARED_CONTROL_BEFORE_RESEARCHER_LANE",
+    "DO_NOT_STORE_RESEARCH_DOCUMENT_BODIES_ON_MAIN",
+    "GOOGLE_DRIVE_OWNS_WORKING_DOCUMENTS_AND_OUTPUTS",
+    "GIT_OWNS_CODE_POINTERS_AND_VERSION_HISTORY"
   ],
   "manifest_role": "ROUTING_ONLY_NON_AUTHORITATIVE_FOR_DOMAIN_FACTS",
-  "observed_at": "2026-10-06T11:36:00Z"
+  "observed_at": "2026-10-07T13:36:00+05:45"
 }

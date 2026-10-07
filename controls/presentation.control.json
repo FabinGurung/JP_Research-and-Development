@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-CONTROL-PRESENTATION-001",
+  "status": "ACTIVE",
+  "branch_pattern": "researcher/<slug>/presentation",
+  "authority": "GIT_FOR_PRESENTATION_SOURCE_GOOGLE_DRIVE_FOR_GENERATED_OUTPUTS",
+  "recommended_stack": [
+    "TypeScript",
+    "PptxGenJS",
+    "YAML",
+    "JSON",
+    "HTML",
+    "CSS",
+    "SVG"
+  ],
+  "optional_stack": [
+    "Playwright/Chromium for PDF-first rendering",
+    "Python only when an explicitly governed renderer requires it"
+  ],
+  "forbidden": [
+    "committed PPTX binaries",
+    "committed PDF binaries",
+    "embedded private evidence"
+  ],
+  "output_pointer": "lane/output.json",
+  "workflow": [
+    "read shared control",
+    "fetch branch",
+    "edit presentation source/config",
+    "render and QA",
+    "upload PPTX/PDF to Drive",
+    "read back Drive IDs/links",
+    "update lane/output.json",
+    "commit"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-CONTROL-LATEX-001",
+  "status": "ACTIVE",
+  "branch_pattern": "researcher/<slug>/latex",
+  "authority": "GIT_FOR_LATEX_SOURCE_GOOGLE_DRIVE_FOR_COMPILED_PDF",
+  "git_content": [
+    ".tex",
+    ".bib",
+    ".cls",
+    ".sty",
+    ".json",
+    ".yaml",
+    ".yml",
+    ".py",
+    ".sh"
+  ],
+  "forbidden": [
+    "compiled PDF binaries",
+    "DOCX",
+    "screenshots",
+    "duplicated Drive artifacts"
+  ],
+  "output_pointer": "lane/output.json",
+  "workflow": [
+    "read shared control",
+    "fetch branch",
+    "edit LaTeX source",
+    "compile and QA",
+    "upload working PDF to Drive",
+    "read back Drive ID/link",
+    "update lane/output.json",
+    "commit"
+  ]
+}

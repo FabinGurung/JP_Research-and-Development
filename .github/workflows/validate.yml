@@ -1,0 +1,25 @@
+name: Validate JP R&D repository
+on:
+  push:
+    branches:
+      - main
+      - 'researcher/**'
+      - 'feature/**'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python scripts/validate_repo.py
+      - run: python scripts/build_site.py --out dist
+      - run: python scripts/validate_repo.py --site dist
