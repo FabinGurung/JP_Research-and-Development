@@ -13,7 +13,7 @@ This repository stores **code, machine-readable controls, version history, and G
 - **GitHub Pages:** human-facing researcher/control workspace.
 - **GitHub Actions:** validates the repository policy and deploys `main` only.
 
-All nine researcher pages are currently **ON HOLD — HUMAN QA REQUIRED** for thesis/research metadata. Existing verified web-module history is tracked separately and does not create website branches for researchers who do not have websites.
+Researcher metadata is admitted incrementally through human QA. Rupesh Man Pradhan now has a user-verified thesis title; his remaining Drive/output pointers stay on hold. Other unresolved researcher metadata remains on QA hold. Existing verified web-module history is tracked separately and does not create website branches for researchers who do not have websites.
 
 ## Live site
 
