@@ -28,7 +28,9 @@ https://fabingurung.github.io/JP_Research-and-Development/
 
 ## Minimal versioning rule
 
-For Git-managed state, the previous commit SHA is PRE and the new commit SHA is POST. Git history is the archive. Archived branch refs are also physically namespaced under `archive/`. Do not manufacture duplicate Drive PRE/POST copies or acknowledgement-only commits. Provider readback remains required for external Drive links and production deployment.
+For Git-managed state, the previous commit SHA is PRE and the new commit SHA is POST. Git history is the archive. Archived branch refs are also physically namespaced under `archive/`.
+
+Governed research debt is tracked in `registry/debts.json` and projected to the live `/debts/` page. Researcher-scoped debt may also appear under that researcher’s workspace. Do not manufacture duplicate Drive PRE/POST copies or acknowledgement-only commits. Provider readback remains required for external Drive links and production deployment.
 
 ## Build
 
