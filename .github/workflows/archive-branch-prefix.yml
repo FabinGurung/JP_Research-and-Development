@@ -1,0 +1,86 @@
+name: Prefix archived branch refs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/archive-branch-prefix.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Rename every archived ref under archive/
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t archived_refs < <(
+            python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("registry/branch-registry.json").read_text())
+          refs = []
+
+          for row in data.get("migration_refs", []):
+              if str(row.get("status", "")).startswith("ARCHIVED"):
+                  refs.append(row["branch"])
+
+          for row in data.get("archived_legacy", []):
+              refs.append(row["branch"])
+
+          for ref in refs:
+              if not ref.startswith("archive/"):
+                  print(ref)
+          PY
+          )
+
+          echo "Archived refs requiring archive/ prefix: ${#archived_refs[@]}"
+
+          for old in "${archived_refs[@]}"; do
+            new="archive/${old}"
+            echo "::group::${old} -> ${new}"
+
+            old_sha="$(git ls-remote --heads origin "refs/heads/${old}" | awk '{print $1}')"
+            if [[ -z "${old_sha}" ]]; then
+              echo "ERROR: old ref missing: ${old}" >&2
+              exit 1
+            fi
+
+            new_sha="$(git ls-remote --heads origin "refs/heads/${new}" | awk '{print $1}')"
+            if [[ -n "${new_sha}" && "${new_sha}" != "${old_sha}" ]]; then
+              echo "ERROR: target ref exists at different SHA: ${new}" >&2
+              exit 1
+            fi
+
+            if [[ -z "${new_sha}" ]]; then
+              git fetch --no-tags origin "refs/heads/${old}"
+              git push origin "FETCH_HEAD:refs/heads/${new}"
+            fi
+
+            verify_new="$(git ls-remote --heads origin "refs/heads/${new}" | awk '{print $1}')"
+            if [[ "${verify_new}" != "${old_sha}" ]]; then
+              echo "ERROR: provider readback mismatch for ${new}" >&2
+              exit 1
+            fi
+
+            git push origin --delete "${old}"
+
+            if git ls-remote --exit-code --heads origin "refs/heads/${old}" >/dev/null 2>&1; then
+              echo "ERROR: old ref still exists after delete: ${old}" >&2
+              exit 1
+            fi
+
+            echo "PASS: ${new} -> ${old_sha}"
+            echo "::endgroup::"
+          done
