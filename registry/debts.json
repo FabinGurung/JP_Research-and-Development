@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE_RESEARCH_DEBT_REGISTER",
+  "updated_at": "2026-10-08",
+  "debts": [
+    {
+      "debt_id": "DEBT-RUPESH-001",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-008",
+      "researcher_slug": "rupesh-man-pradhan",
+      "category": "TITLE_SYNC",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Rebuild Rupesh v0.2.3 thesis with the confirmed title",
+      "description": "The public registry title is confirmed as 'Seismic Vulnerability Assessment and Retrofitting of Non-Engineered Reinforced Concrete Buildings in Pokhara Metropolitan City', but the current v0.2.3 thesis PDF and LaTeX still carry the older 'Evaluation of Retrofitting Strategies' wording.",
+      "evidence": [
+        {
+          "role": "current_working_pdf",
+          "drive_id": "1hXABmOiVGnWxz2oUUb18WGwKsx5j0YXf"
+        },
+        {
+          "role": "current_latex_source",
+          "drive_id": "19Y20hHTYbpEP811LHr3B4ngrXp9Vp_lE"
+        },
+        {
+          "role": "current_latex_package",
+          "drive_id": "1E5TnrNhQABHvURIRuQqHPWft3BTy2AUT"
+        }
+      ],
+      "close_when": "A governed newer thesis build uses the confirmed title, passes QA, is provider-read back, and replaces the working PDF/source pointers."
+    },
+    {
+      "debt_id": "DEBT-RUPESH-002",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-008",
+      "researcher_slug": "rupesh-man-pradhan",
+      "category": "DISCUSSION_LANE",
+      "status": "OPEN",
+      "severity": "LOW",
+      "title": "Discussion lane has no authoritative current artifact",
+      "description": "The designated Discussion Drive location is empty; no Google Doc or discussion pointer is published.",
+      "evidence": [],
+      "close_when": "A real authoritative Discussion Google Doc exists and its provider-read Drive ID is registered."
+    },
+    {
+      "debt_id": "DEBT-RUPESH-003",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-008",
+      "researcher_slug": "rupesh-man-pradhan",
+      "category": "PRESENTATION_LANE",
+      "status": "OPEN",
+      "severity": "LOW",
+      "title": "Presentation lane has no authoritative current artifact",
+      "description": "The designated Presentation Drive location is empty; no PPTX/PDF pointer is published.",
+      "evidence": [],
+      "close_when": "A governed presentation source/output exists and its provider-read Drive pointers are registered."
+    },
+    {
+      "debt_id": "DEBT-MSCH-001",
+      "scope": "REPOSITORY",
+      "category": "HELD_CORPUS_BATCH",
+      "status": "HOLD",
+      "severity": "INFO",
+      "title": "MScH corpus B013 remains deliberately held",
+      "description": "CP12/B012 is the last closed provider-readback boundary. B013 has PRE state but no governed POST/checkpoint and must not be resumed under the current user directive.",
+      "evidence": [
+        {
+          "role": "last_closed_checkpoint",
+          "drive_id": "1MUY0rS6mqUiSvYydVMrgT2ieDaa1UhLu"
+        },
+        {
+          "role": "held_next_candidate",
+          "drive_id": "1ETJ5EQGEGSmeJb3N6kcmZP5i0jGFmKIO"
+        }
+      ],
+      "close_when": "Only after an explicit user directive releases the hold and B013 is executed, POST/read back, and checkpointed.",
+      "hold_reason": "USER_DIRECTIVE_2026-10-08__DO_NOT_RESUME"
+    }
+  ]
+}
