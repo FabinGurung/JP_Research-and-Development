@@ -22,7 +22,8 @@ jobs:
       - name: Rename every archived ref under archive/
         shell: bash
         run: |
-          set -euo pipefail
+          set -u
+          failures=0
 
           mapfile -t archived_refs < <(
             python - <<'PY'
@@ -31,14 +32,11 @@ jobs:
 
           data = json.loads(Path("registry/branch-registry.json").read_text())
           refs = []
-
           for row in data.get("migration_refs", []):
               if str(row.get("status", "")).startswith("ARCHIVED"):
                   refs.append(row["branch"])
-
           for row in data.get("archived_legacy", []):
               refs.append(row["branch"])
-
           for ref in refs:
               if not ref.startswith("archive/"):
                   print(ref)
@@ -52,35 +50,70 @@ jobs:
             echo "::group::${old} -> ${new}"
 
             old_sha="$(git ls-remote --heads origin "refs/heads/${old}" | awk '{print $1}')"
-            if [[ -z "${old_sha}" ]]; then
-              echo "ERROR: old ref missing: ${old}" >&2
-              exit 1
+            new_sha="$(git ls-remote --heads origin "refs/heads/${new}" | awk '{print $1}')"
+
+            if [[ -z "${old_sha}" && -n "${new_sha}" ]]; then
+              echo "PASS: already migrated -> ${new} @ ${new_sha}"
+              echo "::endgroup::"
+              continue
             fi
 
-            new_sha="$(git ls-remote --heads origin "refs/heads/${new}" | awk '{print $1}')"
+            if [[ -z "${old_sha}" && -z "${new_sha}" ]]; then
+              echo "ERROR: neither old nor archive ref exists for ${old}" >&2
+              failures=$((failures+1))
+              echo "::endgroup::"
+              continue
+            fi
+
             if [[ -n "${new_sha}" && "${new_sha}" != "${old_sha}" ]]; then
-              echo "ERROR: target ref exists at different SHA: ${new}" >&2
-              exit 1
+              echo "ERROR: target exists at different SHA: ${new}" >&2
+              failures=$((failures+1))
+              echo "::endgroup::"
+              continue
             fi
 
             if [[ -z "${new_sha}" ]]; then
-              git fetch --no-tags origin "refs/heads/${old}"
-              git push origin "FETCH_HEAD:refs/heads/${new}"
+              if ! git fetch --no-tags origin "refs/heads/${old}"; then
+                echo "ERROR: fetch failed for ${old}" >&2
+                failures=$((failures+1))
+                echo "::endgroup::"
+                continue
+              fi
+              if ! git push origin "FETCH_HEAD:refs/heads/${new}"; then
+                echo "ERROR: archive ref creation failed for ${new}" >&2
+                failures=$((failures+1))
+                echo "::endgroup::"
+                continue
+              fi
             fi
 
             verify_new="$(git ls-remote --heads origin "refs/heads/${new}" | awk '{print $1}')"
             if [[ "${verify_new}" != "${old_sha}" ]]; then
               echo "ERROR: provider readback mismatch for ${new}" >&2
-              exit 1
+              failures=$((failures+1))
+              echo "::endgroup::"
+              continue
             fi
 
-            git push origin --delete "${old}"
+            if ! git push origin --delete "${old}"; then
+              echo "ERROR: old ref delete failed for ${old}; archive copy is preserved" >&2
+              failures=$((failures+1))
+              echo "::endgroup::"
+              continue
+            fi
 
             if git ls-remote --exit-code --heads origin "refs/heads/${old}" >/dev/null 2>&1; then
               echo "ERROR: old ref still exists after delete: ${old}" >&2
-              exit 1
+              failures=$((failures+1))
+            else
+              echo "PASS: ${new} -> ${old_sha}"
             fi
-
-            echo "PASS: ${new} -> ${old_sha}"
             echo "::endgroup::"
           done
+
+          if (( failures > 0 )); then
+            echo "Archive prefix operation completed with ${failures} unresolved ref(s)." >&2
+            exit 1
+          fi
+
+          echo "Archive prefix operation: PASS"
