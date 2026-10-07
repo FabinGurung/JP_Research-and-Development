@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-001",
+  "website_id": "WEB-FABIN-AEC",
+  "label": "Fabin AEC",
+  "branch": "researcher/fabin-gurung/website/aec",
+  "route": "/aec/",
+  "publication_state": "LEGACY_WEB_MODULE_SOURCE_VERIFIED_REPUBLICATION_PENDING",
+  "legacy_source_branch": "archive/pre-researcher-control-portal-v1-20261007",
+  "legacy_source_path": "app/aec/page.tsx",
+  "legacy_source_blob_sha": "55fececf18498ae119a00cd6c39a9a52c41064f5",
+  "target_url": "https://fabingurung.github.io/JP_Research-and-Development/aec/",
+  "note": "Optional website module. The universal researcher lanes remain Discussion, LaTeX and Presentation."
+}
