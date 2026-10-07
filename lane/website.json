@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-001",
+  "website_id": "WEB-FABIN-HYDROPOWER-PHD",
+  "label": "Fabin Hydropower / PhD",
+  "branch": "researcher/fabin-gurung/website/hydropower-phd",
+  "route": "/hydropower/",
+  "publication_state": "LEGACY_WEB_MODULE_SOURCE_VERIFIED_REPUBLICATION_PENDING",
+  "legacy_source_branch": "archive/pre-researcher-control-portal-v1-20261007",
+  "legacy_source_path": "app/hydropower/page.tsx",
+  "legacy_source_blob_sha": "04abf274847e07c185406d605ec4a137b0337012",
+  "related_legacy_route": "/hydropower/proposal-defense/",
+  "related_legacy_source_path": "app/hydropower/proposal-defense/page.tsx",
+  "related_legacy_source_blob_sha": "2408965cabccd4233aa8d0add07ddb49b8d5978a",
+  "target_url": "https://fabingurung.github.io/JP_Research-and-Development/hydropower/",
+  "note": "Optional website module. This does not convert the broader MScH corpus into the R&D authority."
+}
