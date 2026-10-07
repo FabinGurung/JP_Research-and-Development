@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-CONTROL-WEBSITE-001",
+  "status": "ACTIVE_OPTIONAL",
+  "branch_pattern": "researcher/<slug>/website/<module-slug>",
+  "authority": "GIT_FOR_WEBSITE_SOURCE_AND_MACHINE_POINTERS",
+  "applicability": "ONLY_WHEN_A_REAL_WEBSITE_MODULE_IS_VERIFIED_OR_EXPLICITLY_STARTED",
+  "default_researcher_lanes": [
+    "discussion",
+    "latex",
+    "presentation"
+  ],
+  "git_content": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "JSON",
+    "YAML",
+    "Python build scripts",
+    "small machine-readable pointers"
+  ],
+  "forbidden": [
+    "invented website branches for researchers without websites",
+    "research manuscript binaries",
+    "private evidence",
+    "generated PDF/PPTX/DOCX"
+  ],
+  "workflow": [
+    "verify existing module or explicit new website request",
+    "create optional website branch",
+    "keep module source/code in Git",
+    "deploy only through reviewed main integration",
+    "provider-read back Pages before marking live"
+  ]
+}
