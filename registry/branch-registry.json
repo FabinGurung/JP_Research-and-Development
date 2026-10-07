@@ -12,8 +12,9 @@
       "status": "ARCHIVE_SNAPSHOT"
     },
     {
-      "branch": "feature/researcher-control-portal-v1",
-      "status": "ARCHIVED_MIGRATION_BRANCH"
+      "branch": "archive/feature/researcher-control-portal-v1",
+      "status": "ARCHIVED_MIGRATION_BRANCH",
+      "original_branch": "feature/researcher-control-portal-v1"
     }
   ],
   "active_researcher_lanes": [
@@ -129,190 +130,256 @@
   "archived_legacy": [
     {
       "branch": "archive/structural-analysis-solver-v0.1-pre-pages-repair-20261005",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "archive/structural-analysis-solver-v0.1-pre-pages-repair-20261005"
     },
     {
-      "branch": "closeout/rd-a9-foundation-20261006",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/closeout/rd-a9-foundation-20261006",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "closeout/rd-a9-foundation-20261006"
     },
     {
-      "branch": "feature/a7-seq-000007-module-manifest",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/feature/a7-seq-000007-module-manifest",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "feature/a7-seq-000007-module-manifest"
     },
     {
-      "branch": "feature/rd-a9-research-foundation",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/feature/rd-a9-research-foundation",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "feature/rd-a9-research-foundation"
     },
     {
-      "branch": "github-pages-nextjs",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/github-pages-nextjs",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "github-pages-nextjs"
     },
     {
-      "branch": "opensees-mdm-validation-v0.1",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/opensees-mdm-validation-v0.1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "opensees-mdm-validation-v0.1"
     },
     {
-      "branch": "opensees-structural-report-v0.1",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/opensees-structural-report-v0.1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "opensees-structural-report-v0.1"
     },
     {
-      "branch": "repair/rd-hub-pages-20261005",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/repair/rd-hub-pages-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "repair/rd-hub-pages-20261005"
     },
     {
-      "branch": "research/aec-open-architecture-engine",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/research/aec-open-architecture-engine",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "research/aec-open-architecture-engine"
     },
     {
-      "branch": "research/bijayapur-hydrokinetic-energy-study",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/research/bijayapur-hydrokinetic-energy-study",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "research/bijayapur-hydrokinetic-energy-study"
     },
     {
-      "branch": "research/fabin-bim-gis-database",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/research/fabin-bim-gis-database",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "research/fabin-bim-gis-database"
     },
     {
-      "branch": "research/nabin-hospital-fragility-assessment",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/research/nabin-hospital-fragility-assessment",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "research/nabin-hospital-fragility-assessment"
     },
     {
-      "branch": "research/saugat-nbc205-seismic-assessment",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/research/saugat-nbc205-seismic-assessment",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "research/saugat-nbc205-seismic-assessment"
     },
     {
-      "branch": "shared-data-methodology-demo-v1",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/shared-data-methodology-demo-v1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "shared-data-methodology-demo-v1"
     },
     {
-      "branch": "snapshot/post-a7-seq-000007-module-manifest",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/post-a7-seq-000007-module-manifest",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/post-a7-seq-000007-module-manifest"
     },
     {
-      "branch": "snapshot/post-actions-pages-direct-20261006-main",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/post-actions-pages-direct-20261006-main",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/post-actions-pages-direct-20261006-main"
     },
     {
-      "branch": "snapshot/post-actions-pages-direct-20261006-structural-branch",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/post-actions-pages-direct-20261006-structural-branch",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/post-actions-pages-direct-20261006-structural-branch"
     },
     {
-      "branch": "snapshot/post-research-branch-architecture-20261007",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/post-research-branch-architecture-20261007",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/post-research-branch-architecture-20261007"
     },
     {
-      "branch": "snapshot/pre-a7-seq-000007-module-manifest",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-a7-seq-000007-module-manifest",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-a7-seq-000007-module-manifest"
     },
     {
-      "branch": "snapshot/pre-actions-pages-direct-20261006-main",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-actions-pages-direct-20261006-main",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-actions-pages-direct-20261006-main"
     },
     {
-      "branch": "snapshot/pre-actions-pages-direct-20261006-publication",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-actions-pages-direct-20261006-publication",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-actions-pages-direct-20261006-publication"
     },
     {
-      "branch": "snapshot/pre-pages-policy-opensees-mdm-20261005",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-pages-policy-opensees-mdm-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-pages-policy-opensees-mdm-20261005"
     },
     {
-      "branch": "snapshot/pre-pages-policy-opensees-report-20261005",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-pages-policy-opensees-report-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-pages-policy-opensees-report-20261005"
     },
     {
-      "branch": "snapshot/pre-pages-policy-shared-data-20261005",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-pages-policy-shared-data-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-pages-policy-shared-data-20261005"
     },
     {
-      "branch": "snapshot/pre-pages-policy-structural-demo-20261005",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-pages-policy-structural-demo-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-pages-policy-structural-demo-20261005"
     },
     {
-      "branch": "snapshot/pre-rd-hub-pages-repair-20261005",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-rd-hub-pages-repair-20261005",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-rd-hub-pages-repair-20261005"
     },
     {
-      "branch": "snapshot/pre-research-branch-architecture-20261007",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot/pre-research-branch-architecture-20261007",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot/pre-research-branch-architecture-20261007"
     },
     {
-      "branch": "snapshot-pre-drive-proposal-defense-page-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-drive-proposal-defense-page-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-drive-proposal-defense-page-20260929"
     },
     {
-      "branch": "snapshot-pre-font-and-lane-closeout-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-font-and-lane-closeout-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-font-and-lane-closeout-20260929"
     },
     {
-      "branch": "snapshot-pre-human-language-db-views-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-human-language-db-views-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-human-language-db-views-20260929"
     },
     {
-      "branch": "snapshot-pre-hydropower-node-graph-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-hydropower-node-graph-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-hydropower-node-graph-20260929"
     },
     {
-      "branch": "snapshot-pre-hydropower-schema-20260928",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-hydropower-schema-20260928",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-hydropower-schema-20260928"
     },
     {
-      "branch": "snapshot-pre-hydropower-table-explorer-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-hydropower-table-explorer-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-hydropower-table-explorer-20260929"
     },
     {
-      "branch": "snapshot-pre-live-hydrography-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-live-hydrography-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-live-hydrography-20260929"
     },
     {
-      "branch": "snapshot-pre-module-nav-cleanup-20260928",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-module-nav-cleanup-20260928",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-module-nav-cleanup-20260928"
     },
     {
-      "branch": "snapshot-pre-nepal-map-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-nepal-map-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-nepal-map-20260929"
     },
     {
-      "branch": "snapshot-pre-operating-point-crossmatch-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-operating-point-crossmatch-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-operating-point-crossmatch-20260929"
     },
     {
-      "branch": "snapshot-pre-operating-registry-storage-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-operating-registry-storage-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-operating-registry-storage-20260929"
     },
     {
-      "branch": "snapshot-pre-proposal-defense-links-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-proposal-defense-links-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-proposal-defense-links-20260929"
     },
     {
-      "branch": "snapshot-pre-rd-a9-foundation-20261006",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-rd-a9-foundation-20261006",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-rd-a9-foundation-20261006"
     },
     {
-      "branch": "snapshot-pre-research-hub-20260928",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-research-hub-20260928",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-research-hub-20260928"
     },
     {
-      "branch": "snapshot-pre-river-catchment-authority-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-river-catchment-authority-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-river-catchment-authority-20260929"
     },
     {
-      "branch": "snapshot-pre-top10-hydropower-map-20260929",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/snapshot-pre-top10-hydropower-map-20260929",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "snapshot-pre-top10-hydropower-map-20260929"
     },
     {
-      "branch": "structural-analysis-demo-v1",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/structural-analysis-demo-v1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "structural-analysis-demo-v1"
     },
     {
-      "branch": "structural-analysis-solver-v0.1",
-      "status": "ARCHIVED_LEGACY_READ_ONLY"
+      "branch": "archive/structural-analysis-solver-v0.1",
+      "status": "ARCHIVED_LEGACY_READ_ONLY",
+      "original_branch": "structural-analysis-solver-v0.1"
     }
   ],
-  "note": "Legacy refs are preserved to avoid breaking historical links. The portal classifies them as archived; new work uses researcher/* lane branches.",
+  "note": "Archived refs are physically prefixed archive/ in GitHub. Universal researcher work uses 27 discussion/latex/presentation lanes; website lanes are optional and exist only for verified modules.",
   "observed_after_lane_creation": {
     "count": 75,
     "researcher_lane_count": 27,
     "legacy_archived_count": 45,
     "observed_at": "2026-10-07"
+  },
+  "active_website_modules": [
+    {
+      "branch": "researcher/fabin-gurung/website/aec",
+      "website_id": "WEB-FABIN-AEC",
+      "status": "ACTIVE_OPTIONAL_WEBSITE_LANE"
+    },
+    {
+      "branch": "researcher/fabin-gurung/website/hydropower-phd",
+      "website_id": "WEB-FABIN-HYDROPOWER-PHD",
+      "status": "ACTIVE_OPTIONAL_WEBSITE_LANE"
+    }
+  ],
+  "observed_after_archive_prefix": {
+    "count": 77,
+    "researcher_lane_count": 27,
+    "optional_website_lane_count": 2,
+    "archived_legacy_count": 45,
+    "archived_migration_refs": 2,
+    "observed_at": "2026-10-07",
+    "provider_readback": "PASS"
   }
 }
