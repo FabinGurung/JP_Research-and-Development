@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_id": "02THESIS-DIRECT-CHILD-RESCAN-20261008",
+  "parent_drive_id": "1r8FgLsKn8-C-EMkwI3_itupvQbttyoY5",
+  "scope": "DIRECT_CHILDREN_ONLY__NOT_RECURSIVE_SCAN",
+  "previous_inventory_count": 17,
+  "current_inventory_count": 18,
+  "newly_observed_vs_previous_inventory": [
+    {
+      "position": 11,
+      "name": "Thesis_Safal_Dawadi_Rework_CM",
+      "drive_id": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP",
+      "kind": "folder",
+      "modified_time": "2026-08-15T03:35:04.871Z"
+    }
+  ],
+  "absent_vs_previous_inventory": [],
+  "changed_order_other_than_insertions": "NONE_OBSERVED",
+  "identity_policy": "Newly observed vs prior inventory does not prove folder creation timestamp or who moved/created it.",
+  "children": [
+    {
+      "position": 1,
+      "name": "Rijan_Marahatha",
+      "drive_id": "1aLKUif0ZvjUcieq1oWrPPmbgoEgJvsVP",
+      "kind": "folder",
+      "modified_time": "2026-09-29T02:06:07.248Z"
+    },
+    {
+      "position": 2,
+      "name": "00_SHARED_CERTIFICATE_LATEX_TEMPLATE",
+      "drive_id": "1nvGqhVH2sz7TzZ7o56Qu99JfeWASVF4g",
+      "kind": "folder",
+      "modified_time": "2026-09-29T01:22:31.589Z"
+    },
+    {
+      "position": 3,
+      "name": "Rupesh_Man_Pradhan",
+      "drive_id": "1DVDvW4kxENqMF-30XP17kG86xD-xkcZ7",
+      "kind": "folder",
+      "modified_time": "2026-09-26T07:30:11.370Z"
+    },
+    {
+      "position": 4,
+      "name": "Fabin_Gurung_MScH_Thesis Title",
+      "drive_id": "1kyKGgFi5KRHHw-PLHsyntG2_36ameSYJ",
+      "kind": "folder",
+      "modified_time": "2026-08-31T11:12:32.159Z"
+    },
+    {
+      "position": 5,
+      "name": "Anil_Neupane",
+      "drive_id": "1HJBXi0axr4Y4A-GKv23qhtYeDW6KIwUq",
+      "kind": "folder",
+      "modified_time": "2026-08-27T11:27:41.063Z"
+    },
+    {
+      "position": 6,
+      "name": "PhD_Application_Pokhara_University_Fall_2083",
+      "drive_id": "11hIESlT8hCFYqGMUph8KqmHsYk-ycNzp",
+      "kind": "folder",
+      "modified_time": "2026-08-23T09:37:54.721Z"
+    },
+    {
+      "position": 7,
+      "name": "Manoj_Bhandari",
+      "drive_id": "1wNFSAWgp1fvV-zWUHRan0-Kr_frJcNow",
+      "kind": "folder",
+      "modified_time": "2026-08-21T07:29:24.085Z"
+    },
+    {
+      "position": 8,
+      "name": "Binay_Karki",
+      "drive_id": "1Merz8haEG1kdB5rB1oAwjtmCkoU5BBg8",
+      "kind": "folder",
+      "modified_time": "2026-08-20T09:05:23.453Z"
+    },
+    {
+      "position": 9,
+      "name": "Avishek_Kumar_Mandal",
+      "drive_id": "18GaW2hKI9sQZJY3MOf9AxN4TJTSP_lHi",
+      "kind": "folder",
+      "modified_time": "2026-08-18T12:25:49.902Z"
+    },
+    {
+      "position": 10,
+      "name": "Rural_Road_Maintenance_CM__UNRESOLVED_RESEARCHER__ARCHIVE_INTAKE_20260815",
+      "drive_id": "1Fzg5sXwmLXBeTU3nolyn3usYtj6xLLxS",
+      "kind": "folder",
+      "modified_time": "2026-08-15T15:58:10.457Z"
+    },
+    {
+      "position": 11,
+      "name": "Thesis_Safal_Dawadi_Rework_CM",
+      "drive_id": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP",
+      "kind": "folder",
+      "modified_time": "2026-08-15T03:35:04.871Z"
+    },
+    {
+      "position": 12,
+      "name": "Saugat_Paneru",
+      "drive_id": "1woFRyE_oUwoKxKI815I1nRtWe1382LUT",
+      "kind": "folder",
+      "modified_time": "2026-08-14T08:19:05.802Z"
+    },
+    {
+      "position": 13,
+      "name": "Nabin_Bista",
+      "drive_id": "1qOn2pyJ4GFgQLf_wdJ7fEqB6MWBOAPp3",
+      "kind": "folder",
+      "modified_time": "2026-08-13T04:41:17.143Z"
+    },
+    {
+      "position": 14,
+      "name": "Krishna_Kumar_Gupta",
+      "drive_id": "1eUlnpvXTK6UiJlsj3bgKBPYTRdkkNkAn",
+      "kind": "folder",
+      "modified_time": "2026-08-13T03:02:23.967Z"
+    },
+    {
+      "position": 15,
+      "name": "Shisheer_KC",
+      "drive_id": "1e3rMmZCAg4q1nWyJw3zkH-1OUo49dJ8O",
+      "kind": "folder",
+      "modified_time": "2026-08-13T03:02:18.720Z"
+    },
+    {
+      "position": 16,
+      "name": "Sunil_Rana",
+      "drive_id": "1-YEMV0u9pe78YS9KprCNFQAina3Ef4o4",
+      "kind": "folder",
+      "modified_time": "2026-08-13T03:02:13.380Z"
+    },
+    {
+      "position": 17,
+      "name": "Fabin_Gurung",
+      "drive_id": "1m_J-w1rSgQcmyHL-cbkPwKKejyJ0TbJP",
+      "kind": "folder",
+      "modified_time": "2026-08-13T03:02:08.794Z"
+    },
+    {
+      "position": 18,
+      "name": "00_Master_Index",
+      "drive_id": "1xZ8fRI9ov8jMAMjf8Whxqb3JcJtX6iGc",
+      "kind": "folder",
+      "modified_time": "2026-08-13T03:02:01.776Z"
+    }
+  ],
+  "audit_cursor": "Avishek_Kumar_Mandal__COMPLETED",
+  "next_direct_child": "Rural_Road_Maintenance_CM__UNRESOLVED_RESEARCHER__ARCHIVE_INTAKE_20260815",
+  "msch_b013_hold": "UNCHANGED"
+}
