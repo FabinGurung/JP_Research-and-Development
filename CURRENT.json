@@ -6,18 +6,18 @@
   "default_branch": "main",
   "site_url": "https://fabingurung.github.io/JP_Research-and-Development/",
   "source_archive_branch": "archive/pre-researcher-control-portal-v1-20261007",
-  "researcher_count": 9,
-  "lane_count": 27,
-  "researcher_content_status": "RUPESH_ANIL_BINAY_SAUGAT_NABIN_KRISHNA_PARTIAL_VERIFIED__OTHER_LANES_STILL_GATED",
+  "researcher_count": 11,
+  "lane_count": 33,
+  "researcher_content_status": "VERIFIED_RESEARCHER_RECORDS_11__UNADMITTED_ARTIFACTS_RETAINED_AS_DEBTS",
   "main_content_rule": "CODE_MACHINE_READABLE_CONTROLS_AND_LINKS_ONLY",
   "portal_deployment": "GITHUB_PAGES_MAIN_ONLY",
-  "validation": "PENDING_PROVIDER_VALIDATION_AND_PAGES_DEPLOYMENT_AFTER_FIVE_CHILD_BATCH",
-  "branch_count": 77,
-  "researcher_lane_status": "27_ACTIVE_EMPTY_CORE_LANES",
+  "validation": "PENDING_CURRENT_HEAD_GITHUB_ACTIONS_AND_PAGES_READBACK",
+  "branch_count": 83,
+  "researcher_lane_status": "33_ACTIVE_EMPTY_CORE_LANES__SIX_NEW_SAFAL_DAWADI_AND_SUNIL_RANA",
   "website_module_count": 2,
   "website_module_status": "FABIN_AEC_AND_HYDROPOWER_PHD_OPTIONAL_LANES_REGISTERED__HYDROPOWER_PHD_CURRENT_DRIVE_RESEARCH_POINTERS_VERIFIED",
   "archive_ref_status": "ALL_ARCHIVED_REFS_PREFIXED_ARCHIVE_PROVIDER_READBACK_PASS",
-  "drive_audit_status": "FOLDER_BY_FOLDER_ACTIVE__THROUGH_KRISHNA_KUMAR_GUPTA_COMPLETE__FIVE_CHILD_BATCH_20261008",
+  "drive_audit_status": "ALL_18_DIRECT_CHILDREN_AUDITED__ROOT_20261009_PROVIDER_READBACK",
   "drive_audit_completed": [
     "Rijan_Marahatha",
     "00_SHARED_CERTIFICATE_LATEX_TEMPLATE",
@@ -32,9 +32,13 @@
     "Thesis_Safal_Dawadi_Rework_CM",
     "Saugat_Paneru",
     "Nabin_Bista",
-    "Krishna_Kumar_Gupta"
+    "Krishna_Kumar_Gupta",
+    "Shisheer_KC",
+    "Sunil_Rana",
+    "Fabin_Gurung",
+    "00_Master_Index"
   ],
-  "drive_audit_next_direct_child": "Shisheer_KC",
+  "drive_audit_next_direct_child": null,
   "drive_audit_notes": {
     "00_SHARED_CERTIFICATE_LATEX_TEMPLATE": "SHARED_INFRASTRUCTURE_NOT_RESEARCHER__CURRENT_ACTIVE",
     "Rupesh_Man_Pradhan": "USER_VERIFIED_TITLE__WORKING_PDF_AND_LATEX_POINTERS_PUBLISHED__V0_2_3_BINARY_TITLE_SYNC_DEBT_OPEN__DISCUSSION_EMPTY__PRESENTATION_EMPTY",
@@ -44,11 +48,15 @@
     "Manoj_Bhandari": "CERTIFICATE_ONLY_CLOSED_PASS__THESIS_WORKSPACE_AUTHORITY_HOLD__AUDIT_AND_DEBT_SUBPAGE_ADDED__NO_NEW_RESEARCHER",
     "Binay_Karki": "UHI_TITLE_AND_DISCUSSION_VERIFIED__R10_1_FROZEN_SCIENTIFIC_WORKING_AUTHORITY__R10_2_PU_V1_12_FORMATTING_PREVIEW_ONLY__PPT_CP10_FROZEN__PRESENTED_PDF_REVIEW__GEE_V10_22_22_PENDING_RESEARCHER_REVIEW__FULL_PERIOD_VALIDATION_OPEN__NOT_PRODUCTION",
     "Avishek_Kumar_Mandal": "FIRST_DRAFT_DOCX_VERIFIED__PRISM_CONVERSION_ARCHIVE_ONLY_AND_OUTPUT_BYTES_UNAVAILABLE__NO_ACTIVE_LATEX_PDF_PPTX_MANIFEST__METHODOLOGY_CONFLICT_HOLD__NO_NEW_RESEARCHER_BRANCH__NOT_FINAL",
-    "Thesis_Safal_Dawadi_Rework_CM": "ACTIVE_SAFAL_DAWADI_CM__SAME_ID_MOVE__V1_9_QUALITATIVE_REVIEW_NOT_FINAL__SOURCE_EVIDENCE_AND_SYNC_GATES__NOT_SAFAL_THAPA",
+    "Thesis_Safal_Dawadi_Rework_CM": "REGISTERED_RESEARCHER_RSH_010__DISTINCT_FROM_SAFAL_THAPA__V1_9_REVIEW_ONLY__SCIENTIFIC_AND_ADMIN_GATES_OPEN",
     "Rural_Road_Maintenance_CM__UNRESOLVED_RESEARCHER__ARCHIVE_INTAKE_20260815": "RURAL_ROAD_UNRESOLVED_RESEARCHER__ARCHIVED_SIMPLE_15SLIDE_PPTX_ONLY__ORIGINAL_PROPOSAL_DOCX_UNAVAILABLE__NO_BRANCH",
     "Saugat_Paneru": "REGISTERED_SAUGAT__CP114_EXACT_TNR_115P_LATEX_RELEASE__DISCUSSION_V022__GOOGLE_SLIDES_VERIFIED__SCIENTIFIC_SOURCE_AND_MAIN_SYNC_DEBTS",
     "Nabin_Bista": "REGISTERED_NABIN__LIVE_GOOGLE_DOC_V1_0__V13_SCIENTIFIC_ANCESTOR__DISCUSSION_AND_GOOGLE_SLIDES_CURRENT__MIGRATION_AND_SCIENTIFIC_DEBTS",
-    "Krishna_Kumar_Gupta": "REGISTERED_KRISHNA__V0_3_5_LATEX_PDF_PPTX_VERIFIED_WORKING__PROJECT_STATE_STALE__NO_FINAL_APPROVAL"
+    "Krishna_Kumar_Gupta": "REGISTERED_KRISHNA__V0_3_5_LATEX_PDF_PPTX_VERIFIED_WORKING__PROJECT_STATE_STALE__NO_FINAL_APPROVAL",
+    "Shisheer_KC": "REGISTERED_RSH_005__CKPT14_AUTHORITY__CKPT15_CUMULATIVE_HUMAN_QA_CANDIDATE_NOT_PROMOTED__PPT_CP06_PREVIEW__PRODUCTION_GATES_OPEN",
+    "Sunil_Rana": "REGISTERED_RSH_011__WORKING_V0_1_DOCX__NEW_DOCX_CANDIDATE_UNPROMOTED__SCIENTIFIC_AUDIT_NLTHA_AND_MODEL_EVIDENCE_GATES_OPEN",
+    "Fabin_Gurung": "REGISTERED_RSH_001__MSC_STRUCTURAL_AEC_V0_9_WORKING_QA_PASS_NOT_SUBMISSION__DISTINCT_FROM_MSCH_AND_PHD_LANES",
+    "00_Master_Index": "SHARED_INFRASTRUCTURE_NOT_RESEARCHER__DIRECTORY_PLUS_THESIS_TOWER_V1_23__RUPESH_OLD_TITLE_SYNC_DEBT"
   },
   "holds": {
     "MSCH_HYDROPOWER_CORPUS_B013": {
@@ -107,5 +115,30 @@
     ],
     "next_direct_child": "Shisheer_KC",
     "drive_mutations": "NONE"
+  },
+  "drive_audit_completed_count": 18,
+  "drive_audit_final_batch_20261009": {
+    "direct_children": [
+      "Shisheer_KC",
+      "Sunil_Rana",
+      "Fabin_Gurung",
+      "00_Master_Index"
+    ],
+    "record_paths": [
+      "registry/drive-audits/02-thesis/shisheer-kc.json",
+      "registry/drive-audits/02-thesis/sunil-rana.json",
+      "registry/drive-audits/02-thesis/fabin-gurung.json",
+      "registry/drive-audits/02-thesis/master-index.json"
+    ],
+    "drive_mutations": "NONE"
+  },
+  "researcher_expansion_20261009": {
+    "safal_dawadi_id": "RSH-010",
+    "safal_thapa_preserved_id": "RSH-004",
+    "sunil_rana_id": "RSH-011",
+    "researcher_count": 11,
+    "core_lane_count": 33,
+    "github_branch_count": 83,
+    "branch_readback": "6_NEW_LANES_PRESENT__THAPA_3_LANES_REMAIN"
   }
 }
