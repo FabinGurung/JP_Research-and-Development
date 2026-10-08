@@ -125,6 +125,30 @@
     {
       "branch": "researcher/krishna-kumar-gupta/presentation",
       "status": "ACTIVE_EMPTY_LANE"
+    },
+    {
+      "branch": "researcher/safal-dawadi/discussion",
+      "status": "ACTIVE_EMPTY_LANE__IDENTITY_REGISTERED"
+    },
+    {
+      "branch": "researcher/safal-dawadi/latex",
+      "status": "ACTIVE_EMPTY_LANE__IDENTITY_REGISTERED"
+    },
+    {
+      "branch": "researcher/safal-dawadi/presentation",
+      "status": "ACTIVE_EMPTY_LANE__IDENTITY_REGISTERED"
+    },
+    {
+      "branch": "researcher/sunil-rana/discussion",
+      "status": "ACTIVE_EMPTY_LANE__IDENTITY_REGISTERED"
+    },
+    {
+      "branch": "researcher/sunil-rana/latex",
+      "status": "ACTIVE_EMPTY_LANE__IDENTITY_REGISTERED"
+    },
+    {
+      "branch": "researcher/sunil-rana/presentation",
+      "status": "ACTIVE_EMPTY_LANE__IDENTITY_REGISTERED"
     }
   ],
   "archived_legacy": [
@@ -354,7 +378,7 @@
       "original_branch": "structural-analysis-solver-v0.1"
     }
   ],
-  "note": "Archived refs are physically prefixed archive/ in GitHub. Universal researcher work uses 27 discussion/latex/presentation lanes; website lanes are optional and exist only for verified modules.",
+  "note": "Archived refs are physically prefixed archive/ in GitHub. Universal researcher work uses 27 discussion/latex/presentation lanes; website lanes are optional and exist only for verified modules. 2026-10-09: Safal Dawadi and Sunil Rana registered as distinct researcher identities; six additional core lane branches.",
   "observed_after_lane_creation": {
     "count": 75,
     "researcher_lane_count": 27,
@@ -382,5 +406,19 @@
     "observed_at": "2026-10-07",
     "provider_readback": "PASS"
   },
-  "optional_website_branch_policy": "researcher/<slug>/website/<module-slug>"
+  "optional_website_branch_policy": "researcher/<slug>/website/<module-slug>",
+  "observed_after_current_researcher_expansion": {
+    "researcher_count": 11,
+    "lane_count": 33,
+    "additional_branches": 6,
+    "expected_total_branches": 83,
+    "verified_lanes": [
+      "researcher/safal-dawadi/discussion",
+      "researcher/safal-dawadi/latex",
+      "researcher/safal-dawadi/presentation",
+      "researcher/sunil-rana/discussion",
+      "researcher/sunil-rana/latex",
+      "researcher/sunil-rana/presentation"
+    ]
+  }
 }
