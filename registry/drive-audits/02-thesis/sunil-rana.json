@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-SUNIL-RANA-20261009",
+  "direct_child": "Sunil_Rana",
+  "root_folder_id": "1-YEMV0u9pe78YS9KprCNFQAina3Ef4o4",
+  "classification": "ACTIVE_REGISTERED_RESEARCHER__SCIENTIFIC_AUDIT__NO_ADMITTED_NEW_DOCX",
+  "researcher_id": "RSH-011",
+  "title": "Seismic Performance of Regular, Setback, Step-Back and Step-Back Setback RCC Building on Plain and Sloping Ground under NBC 105:2025",
+  "verified": {
+    "project_state": "1bQNHPK18xjq-UVDwGxdnlfgbYgttEMf1",
+    "scientific_audit_update": "1yE2FNlDbDTCMfjG5fH13LBcUoVSAhW523JqT2a4uQpg",
+    "active_docx": "1beFNMsWUkMXS-OTnvt1x0Uiud1N4okGg",
+    "new_source_candidate_unpromoted": "1020_6bkibGtibc6Ec3mycm0PCGW4SvKx",
+    "canonical_audit_pdf": "11YSPAbQHkywACRM19BBXOqgvFOhBC-bm",
+    "action_report_pdf": "1RYQHfBvaAuf9pmzrj5GaCW3fMH9hMcCK",
+    "compiled_outputs_folder": "EMPTY"
+  },
+  "unresolved": [
+    "Scientific novelty not demonstrated merely by NBC 105:2025",
+    "NLTHA/plastic hinge/performance level results chain not complete",
+    "Eight-model mass/seismic-weight normalization and conflicting model definitions need original ETABS validation",
+    "Source pack missing ETABS models, motions, official code clauses, literature and supervisor markup",
+    "Similarity-reduction-only rewrite must not alter engineering meaning; revised candidate is not yet promoted"
+  ],
+  "drive_mutations": "NONE"
+}
