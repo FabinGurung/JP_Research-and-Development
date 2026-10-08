@@ -7,14 +7,17 @@
       "researcher_id": "RSH-001",
       "slug": "fabin-gurung",
       "display_name": "Fabin Gurung",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Design and Implementation of a Normalized Relational Database System Integrating BIM and GIS for Automated Building Design and Construction Workflow Automation in Nepal",
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
-        "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "working_pdf_drive_id": "1LBt3R4u35BxhKjOGoX8YflP7zFJutxBk",
+        "presentation_pdf_drive_id": "15yodei46iwtW44v7-cw6UDVkDnu3evwi",
+        "presentation_pptx_drive_id": "1uZ9YW77E0na0_-zwNyD2FXQKx-qU9Q9E",
+        "latex_source_package_drive_id": "1PlgWYREUuB3ph49rmHHudINz3kTrcxhZ",
+        "discussion_read_first_drive_id": "1mvxvBNmGqWo6CEyfh9HLf6byTuo1z7dVPgPaFpXFFOY",
+        "project_root_drive_id": "1m_J-w1rSgQcmyHL-cbkPwKKejyJ0TbJP"
       },
       "lanes": {
         "discussion": {
@@ -29,7 +32,8 @@
           "branch": "researcher/fabin-gurung/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "MSc Structural AEC thesis v0.9 / RUN D P2 controlled working QA PASS, NOT FINAL or SUBMISSION. Separate from completed MScH Hydropower thesis and PhD application modules. Certificate signatory and final defense/submission date remain open; structural/prototype research is not automatically thesis-admitted."
     },
     {
       "researcher_id": "RSH-002",
@@ -127,14 +131,18 @@
       "researcher_id": "RSH-005",
       "slug": "shisheer-kc",
       "display_name": "Shisheer KC",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Assessment of Environmental Flow Adequacy in the Downstream Reach of the Seti Hydropower Station, Pokhara",
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
-        "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "working_pdf_drive_id": "1ZjOECL8NKfRKBfcyeyiERN1HEZTK_5_r",
+        "presentation_pdf_drive_id": "1IIG_8lKGPSdkXoOsD8YzUtJxe-nOKMRQ",
+        "presentation_pptx_drive_id": "1Lhc7LBucp9I5m7QoyPYlFfMuI9q9Gkv5",
+        "latex_source_package_drive_id": "1QcmOIFRovqJT_D9EryKAfVC9Rru0h4mw",
+        "preview_pdf_drive_id": "1AXauW85Gf_nD5Bd5AzdcZRcEHSAM9SB_",
+        "preview_latex_source_package_drive_id": "14tNQIjwsTkQsaikqon8FunnDpNOwIi6x",
+        "discussion_read_first_drive_id": "1cVhIunKP_hxba_UUw8g4KchqbLw02OjlrJcZlA9-ObQ"
       },
       "lanes": {
         "discussion": {
@@ -149,7 +157,8 @@
           "branch": "researcher/shisheer-kc/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "CKPT14 is the frozen scientific/document baseline (non-production preview). CKPT15 cumulative corrections 1–12 are a human-QA-pending candidate and are NOT promoted. PPT-CP06 is a separate controlled preview; supervisor designation, co-supervisor and exact TNR production remain gated. HEC-RAS is literature only."
     },
     {
       "researcher_id": "RSH-006",
