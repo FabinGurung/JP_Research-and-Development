@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-RURAL-ROAD-20261008",
+  "direct_child": "Rural_Road_Maintenance_CM__UNRESOLVED_RESEARCHER__ARCHIVE_INTAKE_20260815",
+  "root_folder_id": "1Fzg5sXwmLXBeTU3nolyn3usYtj6xLLxS",
+  "classification": "UNRESOLVED_RESEARCHER__ARCHIVE_PPTX_INTAKE__NOT_ACTIVE_THESIS",
+  "title_from_historical_proposal": "Empirical Assessment on Maintenance Management Inefficiencies in Rural Municipal Road Networks of Nepal",
+  "verified": {
+    "preferred_simple_pptx": "1F-BfaUV5DcHTIO240npPVYuRUNgnaYDc",
+    "superseded_complex_pptx": "1c9d8cQKSFIuqbQ3PuFMJo0jUT0TPe07k",
+    "archive_reference": "1gEED0q1D1N4ZLzGAff5sBwulkplcXSM3_UJ_a_SvBno"
+  },
+  "unresolved": [
+    "Researcher identity and ownership of separate rural road proposal",
+    "Original ECM625_Thesis_Proposal_Full.docx not preserved in this Drive child",
+    "No CURRENT project control/source manifest/release authority"
+  ],
+  "lane_status": {
+    "discussion": "NOT_VERIFIED",
+    "latex": "NOT_VERIFIED",
+    "presentation": "ARCHIVE_REFERENCE_ONLY",
+    "website": "NOT_VERIFIED"
+  },
+  "registered_researcher": false,
+  "drive_mutations": "NONE"
+}
