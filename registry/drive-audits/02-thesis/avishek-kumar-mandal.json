@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-AVISHEK-KUMAR-MANDAL-20261008",
+  "direct_child": "Avishek_Kumar_Mandal",
+  "root_folder_id": "18GaW2hKI9sQZJY3MOf9AxN4TJTSP_lHi",
+  "parent_id": "1r8FgLsKn8-C-EMkwI3_itupvQbttyoY5",
+  "classification": "FIRST_DRAFT_SOURCE_INTAKE__ARCHIVED_CONVERSION_REFERENCE__NO_PROMOTED_ACTIVE_THESIS_AUTHORITY",
+  "verified_source": {
+    "title_from_user_uploaded_draft": "Investigation of Corrosion-Induced Bond–Slip Behavior in Reinforced Concrete Beam-Column Joint",
+    "program": "MSc Structural Engineering",
+    "filename": "Avishek_Kumar_Mandal__Thesis_1st_Draft__USER_UPLOADED_20260818.docx",
+    "draft_docx_drive_id": "1VfdnpQTOexzdIQgLWXpmH9eooFZuu44v",
+    "authority_level": "USER_UPLOADED_FIRST_DRAFT_ONLY__NOT_FINAL_TITLE_APPROVAL",
+    "uploaded_or_preserved": "2026-08-18",
+    "scientific_scope_note": "Draft abstract describes laboratory corrosion/pull-out/cyclic tests but specific objectives/limitations describe Abaqus numerical-only work; researcher confirmation required."
+  },
+  "archived_reference": {
+    "chat_recovery_id": "1rD86gq_ndL9bxQSBRpJtPDhI85Aa_MoOj0KnBp6RKlU",
+    "harvard_handoff_id": "1DCkLL7O6Nvy9Yrkg2FqcHJcq4vhYJXTmuDKwJBUwZhM",
+    "reported_prism_log_id": "1GzVTHqhuJUlDOK3OvPCYVfZZbyWMl2cv",
+    "archived_conversion_prompt_id": "1wTlWBbgh5rd7Vhwz7RztKg35JXmwmePwqqMJjOgRhuo",
+    "state": "SAFE_TO_ARCHIVE_WITH_DOCUMENTED_UNAVAILABLE_SOURCE",
+    "unavailable_reported_artifacts": [
+      "converted Prism LaTeX source tree/ZIP",
+      "reported compiled 49-page PDF",
+      "reported alternate 65-page Harvard build PDF/source",
+      "six Prism-generated audit/conversion reports"
+    ],
+    "recovery_waiver": "USER_CONFIRMED_UNAVAILABLE__NOT_REQUIRED_FOR_ARCHIVE_RECOVERY__DO_NOT_FABRICATE"
+  },
+  "folder_readback": {
+    "project_control": "EMPTY",
+    "source_originals": "ONE_USER_UPLOADED_DOCX",
+    "latex_working": "EMPTY",
+    "pdf_builds": "EMPTY",
+    "presentation": "EMPTY",
+    "data_figures": "EMPTY",
+    "review_qa": "SEVEN_ARCHIVE_OR_REVIEW_FILES",
+    "final_deliverables": "EMPTY"
+  },
+  "lane_readiness": {
+    "discussion": "NO_CURRENT_GOVERNED_DISCUSSION_DOC",
+    "latex": "NO_PROVIDER_VERIFIED_ACTIVE_LATEX_SOURCE",
+    "presentation": "NO_CURRENT_PPTX_OR_PDF",
+    "website": "NO_VERIFIED_WEBSITE",
+    "researcher_registration": "NOT_IN_EXISTING_NINE__INTAKE_AUTHORITY_GATED"
+  },
+  "actions": "AUDIT_ONLY__NO_DRIVE_MUTATION__NO_BRANCH_CREATION",
+  "next_direct_child": "Rural_Road_Maintenance_CM__UNRESOLVED_RESEARCHER__ARCHIVE_INTAKE_20260815"
+}
