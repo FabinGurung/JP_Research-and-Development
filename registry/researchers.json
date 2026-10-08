@@ -35,14 +35,17 @@
       "researcher_id": "RSH-002",
       "slug": "saugat-paneru",
       "display_name": "Saugat Paneru",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Seismic Assessment of Low-Rise Reinforced Concrete Buildings in Nepal: Applicability of NBC 205 Ready-to-Use Guidelines",
       "topic_short_name": null,
       "drive": {
-        "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
+        "discussion_google_doc_id": "1lF5WKoido1Tzgk6D9ZFLbkVjV3TCwZinrNnLfVF7bA0",
+        "working_pdf_drive_id": "1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh",
         "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "presentation_pptx_drive_id": null,
+        "latex_source_package_drive_id": "1yL3G-EUGA32FDBhkdImXk9NManfW_vyA",
+        "presentation_google_slides_drive_id": "1_baSODXqlT9JUZ4pRVB8kByDsjVw1NFvKsgCA2C8Q2Y",
+        "thesis_google_doc_id": "1P_4MFr3WDjkhg_vJQ0YRbqYGMSoUtqSAex-yEaxGgTs"
       },
       "lanes": {
         "discussion": {
@@ -57,20 +60,24 @@
           "branch": "researcher/saugat-paneru/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "CP114 / LATEX-SEQ-028 is a 115-page exact-Times-New-Roman controlled production PDF; scientific provenance and project-local registrar/Main sync debts remain open. Google Slides and Google Docs are independent lanes, not automatically updated by CP114."
     },
     {
       "researcher_id": "RSH-003",
       "slug": "nabin-bista",
       "display_name": "Nabin Bista",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Seismic Fragility and Soil–Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal",
       "topic_short_name": null,
       "drive": {
-        "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
-        "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "discussion_google_doc_id": "1eLsGVmUxMyHx0QKeQv25SiR325c8jy3grfdXmkkz9xk",
+        "working_pdf_drive_id": "1bbroY5pPfAPMyzCuHbYDNjbSkiwN28PH",
+        "presentation_pdf_drive_id": "1u0Hy5nEAzTawMSv-kPP7sM_7R33d59Fb",
+        "presentation_pptx_drive_id": null,
+        "latex_source_package_drive_id": "1c-cD9zNr_pOIE4U5bxlUryX5jj7PKuEw",
+        "thesis_google_doc_id": "1v5QKdtwFVmvl5QVhq1jaWSdKfXj1YidGxNzzpKVu-hU",
+        "presentation_google_slides_drive_id": "1mS98aVngfuFJMaW9z9EmhQT-3QspRKW7NhgRwF9T8F4"
       },
       "lanes": {
         "discussion": {
@@ -85,7 +92,8 @@
           "branch": "researcher/nabin-bista/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "Live fixed-ID Google Docs thesis v1.0 migrated from v13 scientific authority. Defense Google Slides CP01 and Discussion are separate. Examiner details, units and conversions, native list/page fields, and scientific provenance remain open; not final submission."
     },
     {
       "researcher_id": "RSH-004",
@@ -242,14 +250,16 @@
       "researcher_id": "RSH-009",
       "slug": "krishna-kumar-gupta",
       "display_name": "Krishna Kumar Gupta",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Comparative Structural Performance of Circular and Square Steel Tube Columns with Various Strengthening Techniques in a Three-Storey Building",
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
+        "working_pdf_drive_id": "1zHKtBKkCIDG_fGQvFCLzmLHP7uzJ25x0",
         "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "presentation_pptx_drive_id": "1NrA8NNtic1JILnDp2jYkZbIcfbJB03B9",
+        "latex_source_package_drive_id": "1CSWSIVbp9wWLTBX7LRO1-d029KF1lQYg",
+        "word_review_derivative_drive_id": "10MywLOwq_2_X0khFvYyiYfePT9HdtE9_"
       },
       "lanes": {
         "discussion": {
@@ -264,7 +274,8 @@
           "branch": "researcher/krishna-kumar-gupta/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "v0.3.5 working thesis package and presentation physically verified. The August 9 project state predates later versions, and final submission QA/approval is not established. Dedicated current Discussion Google Doc not verified."
     }
   ]
 }
