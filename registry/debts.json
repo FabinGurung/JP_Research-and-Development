@@ -75,6 +75,107 @@
       ],
       "close_when": "Only after an explicit user directive releases the hold and B013 is executed, POST/read back, and checkpointed.",
       "hold_reason": "USER_DIRECTIVE_2026-10-08__DO_NOT_RESUME"
+    },
+    {
+      "debt_id": "DEBT-MANOJ-001",
+      "scope": "REPOSITORY",
+      "audit_slug": "manoj-bhandari",
+      "category": "THESIS_WORKSPACE_AUTHORITY",
+      "status": "HOLD",
+      "severity": "LOW",
+      "title": "Manoj Bhandari — active thesis workspace authority unverified",
+      "description": "Only a governed Certificate Template V3 lane and an unrelated image were found in Manoj's direct Drive child. The certificate confirms its own topic wording but does not establish a current thesis manuscript, thesis LaTeX, research Discussion, Presentation or website. Do not create a new researcher branch or infer an active thesis status.",
+      "evidence": [
+        {
+          "role": "certificate_current",
+          "drive_id": "18HrDacHazxEkV-3QWwfYFiG5hypEJfFC"
+        },
+        {
+          "role": "certificate_closeout",
+          "drive_id": "14Fetm7sZ1ix5OhZ-ulOehdbnReossvUi"
+        }
+      ],
+      "close_when": "Find and QA an independent authoritative Manoj research/project control and current thesis outputs; determine separate admission policy before researcher registry/branch creation.",
+      "hold_reason": "NO_INDEPENDENT_THESIS_AUTHORITY_IN_AUDITED_CHILD"
+    },
+    {
+      "debt_id": "DEBT-BINAY-001",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-006",
+      "researcher_slug": "binay-karki",
+      "category": "RESEARCHER_EVIDENCE_ADMISSION",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Complete GEE-V10 researcher evidence-admission decisions",
+      "description": "GEE-V10 is prepared but not closed: 15 claim rows plus 7 figure rows (22 total) remain PENDING_RESEARCHER_REVIEW. Do not change the frozen R10.1 thesis or PPT-CP10 without governed explicit admission and a new version.",
+      "evidence": [
+        {
+          "role": "V10_researcher_review_matrix",
+          "drive_id": "1S59v06JAAaZLYKCNLsrosmsqBzsGWTFoAHY7HG35EMg"
+        },
+        {
+          "role": "discussion_review_doc",
+          "drive_id": "1wMU2eYikHZ8Bt4Qrvtqv8ITTtgiGUav4c-oMsVEMwX4"
+        }
+      ],
+      "close_when": "All 22 rows receive researcher-approved terminal decisions, scientific QA passes and a governed V10 closeout is provider-read before any new thesis/PPT version."
+    },
+    {
+      "debt_id": "DEBT-BINAY-002",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-006",
+      "researcher_slug": "binay-karki",
+      "category": "VALIDATION_SCOPE",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Full-period independent temporal validation remains open",
+      "description": "The GEE V07 exact-date Landsat/field evidence covers only six Tier-A rows across two dates and three sites, not the 44-field-date/186-event May 31–July 31 validation period. The R10.1 manuscript also contains a broader 47-date/202-event field record through August 12; those scopes must not be conflated.",
+      "evidence": [
+        {
+          "role": "current_discussion_read_first",
+          "drive_id": "1CdlV7R9c3RrJbLNaUXNq6yzqDZ1YblX8UDE3b0pKfyk"
+        }
+      ],
+      "close_when": "Obtain/QA genuinely independent full-period temporal validation or explicitly bound the scientific claims to validated partial coverage and govern the disposition."
+    },
+    {
+      "debt_id": "DEBT-BINAY-003",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-006",
+      "researcher_slug": "binay-karki",
+      "category": "PRODUCTION_GATES",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "R10.2 preview cannot be called final/submission",
+      "description": "R10.2 is a 59-page format-only PU v1.12 controlled preview (Tinos fallback). Exact Times New Roman embedding and outstanding research/administrative production gates remain open. The R10.1 scientific working release is preserved.",
+      "evidence": [
+        {
+          "role": "R10_2_preview",
+          "drive_id": "1zTFajgkbGMmiuNBRcLF540SlbAb5_bC_"
+        },
+        {
+          "role": "R10_2_build_QA",
+          "drive_id": "1CCU5aQ0y0E4NxNJNkOBNwyLM3E2F-rhi"
+        }
+      ],
+      "close_when": "Complete required scientific and administrative gates; rebuild with exact production font; provider-read and certify a genuinely new final release."
+    },
+    {
+      "debt_id": "DEBT-OPS-PAGES-001",
+      "scope": "REPOSITORY",
+      "category": "GITHUB_PAGES_DEPLOYMENT_READBACK",
+      "status": "CLOSED",
+      "severity": "INFO",
+      "title": "Manoj audit checkpoint Pages deployment readback",
+      "description": "Earlier provider check found Pages still in progress for the Manoj audit commit f1b26fead0504250b57b98b1067759545017a839. Latest provider readback confirms completed SUCCESS; this is a historical resolved validation item, not an active hold.",
+      "evidence": [
+        {
+          "role": "verified_successful_pages_workflow",
+          "url": "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/37713408304"
+        }
+      ],
+      "closed_at": "2026-10-08",
+      "close_when": "Already closed: GitHub Actions Pages run 37713408304 completed success for Manoj audit commit."
     }
   ]
 }
