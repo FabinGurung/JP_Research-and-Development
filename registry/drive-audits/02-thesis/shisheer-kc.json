@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-SHISHEER-KC-20261009",
+  "direct_child": "Shisheer_KC",
+  "root_folder_id": "1e3rMmZCAg4q1nWyJw3zkH-1OUo49dJ8O",
+  "classification": "ACTIVE_REGISTERED_RESEARCHER__CKPT14_GOVERNED_BASELINE__CKPT15_CANDIDATE_NOT_ADMITTED",
+  "researcher_id": "RSH-005",
+  "title": "Assessment of Environmental Flow Adequacy in the Downstream Reach of the Seti Hydropower Station, Pokhara",
+  "verified": {
+    "ckpt14_state": "1kq5b4HWehRwVqN2qHfV_wFLX1fNfQuBB",
+    "ckpt14_source_zip": "1QcmOIFRovqJT_D9EryKAfVC9Rru0h4mw",
+    "ckpt14_client_pdf": "1ZjOECL8NKfRKBfcyeyiERN1HEZTK_5_r",
+    "ckpt14_internal_pdf": "1Q-LD9xquvE1OUyCOFBo8Q7ON-hjN4Ejc",
+    "ckpt15_phase4_candidate": "1AXauW85Gf_nD5Bd5AzdcZRcEHSAM9SB_",
+    "ckpt15_source_candidate": "14tNQIjwsTkQsaikqon8FunnDpNOwIi6x",
+    "presentation_pdf": "1IIG_8lKGPSdkXoOsD8YzUtJxe-nOKMRQ",
+    "presentation_pptx": "1Lhc7LBucp9I5m7QoyPYlFfMuI9q9Gkv5",
+    "presentation_source": "1DY_L86WZCm7R8RF9I0WCprT8GQ25zL-p",
+    "discussion_readfirst": "1cVhIunKP_hxba_UUw8g4KchqbLw02OjlrJcZlA9-ObQ"
+  },
+  "unresolved": [
+    "CKPT15 cumulative corrections 1–12 pending project-owner acceptance and full manuscript visual QA",
+    "M05 exact supervisor designation/organization and M11 co-supervisor identity/count unverified",
+    "CKPT14 and PPT-CP06 are controlled non-production font-fallback previews; exact production Times New Roman not certified",
+    "HEC-RAS/hydraulic habitat must remain literature/background only; do not mark it as executed method or research debt"
+  ],
+  "drive_mutations": "NONE"
+}
