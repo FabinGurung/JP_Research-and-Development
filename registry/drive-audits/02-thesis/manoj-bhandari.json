@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-MANOJ-BHANDARI-20261008",
+  "audited_direct_child": "Manoj_Bhandari",
+  "root_drive_folder_id": "1wNFSAWgp1fvV-zWUHRan0-Kr_frJcNow",
+  "parent_drive_folder_id": "1r8FgLsKn8-C-EMkwI3_itupvQbttyoY5",
+  "classification": "CERTIFICATE_ONLY_WITH_UNRELATED_PHOTO_FOLDER",
+  "authority_scope": "DIRECT_CHILD_LIVE_DRIVE_CONTENT_ONLY",
+  "verified_certificate": {
+    "state": "CURRENT__CLOSED_PASS__TEMPLATE_V3_INSTITUTIONAL_LAYOUT",
+    "title_from_certificate_not_separately_verified_thesis_current": "Seismic Fragility Assessment of Stone Masonry Building with Mud Mortar",
+    "stable_current_pdf_drive_id": "18HrDacHazxEkV-3QWwfYFiG5hypEJfFC",
+    "closeout_drive_id": "14Fetm7sZ1ix5OhZ-ulOehdbnReossvUi",
+    "last_terminal_post_pdf_drive_id": "1_HBj3FiyyiQw9SdYAS77s35oXPmYNj_A",
+    "certificate_fields_tex_drive_id": "1kWfLeY6TxcLh453d522srgBOJ7uOUH7T",
+    "certificate_page_tex_drive_id": "1KLMjslUoNXrnxOM1J-pigxbkT8_zuD2P",
+    "main_certificate_tex_drive_id": "1eytTDrFVmWDVEyApPRMmGt3WB4s1n6lF",
+    "last_closeout_sha256": "91cf306a8127ebdd98f6e95d830d6cea23f063debb92faf44bed80307c1afbfe",
+    "last_closeout_page_count": 1,
+    "qa_reported": "PASS__COMPILE_RENDER_VISUAL_PROVIDER_RAW_READBACK_CHECKSUM"
+  },
+  "researcher_workflow": {
+    "registered_in_repository": false,
+    "discussion": "NO_DEDICATED_CURRENT_ARTIFACT_IN_THIS_FOLDER",
+    "latex": "CERTIFICATE_LATEX_ONLY__NO_VERIFIED_THESIS_SOURCE",
+    "presentation": "NO_CURRENT_ARTIFACT_IN_THIS_FOLDER",
+    "working_thesis_pdf": "NOT_FOUND_IN_THIS_FOLDER",
+    "independent_website": "NOT_VERIFIED",
+    "action": "DO_NOT_CREATE_RESEARCHER_BRANCHES_OR_PUBLISH_TITLE_AS_ACTIVE_THESIS_UNTIL_INDEPENDENT_PROJECT_AUTHORITY_VERIFIED"
+  },
+  "unrelated_sibling_folder": {
+    "name": "Photo_Random",
+    "role": "ONE_IMAGE_NOT_RESEARCH_AUTHORITY",
+    "public_pointer": "NOT_PUBLISHED"
+  },
+  "mutations_to_drive": "NONE",
+  "next_direct_child": "Binay_Karki"
+}
