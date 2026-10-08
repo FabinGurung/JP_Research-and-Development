@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-SAFAL-DAWADI-20261008",
+  "direct_child": "Thesis_Safal_Dawadi_Rework_CM",
+  "root_folder_id": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP",
+  "classification": "ACTIVE_CM_THESIS__DISTINCT_FROM_SAFAL_THAPA__NOT_CURRENTLY_REGISTERED_IN_NINE_RESEARCHERS",
+  "title_from_current_pdf": "Assessment of Rework, Its Causes and Impacts in RCC Building Construction Projects of Pokhara Metropolitan City",
+  "latest_observed": {
+    "latest_compiled_review": "v1.9_QUALITATIVE_COMPILED_QA_REVIEW__NOT_SUBMISSION",
+    "review_pdf": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
+    "source_zip": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+    "compilation_qa": "1Q8_F4EmXliTET_XEuHp3qENwBogOb6MD",
+    "final_folder": "EMPTY",
+    "presentation_selected_pdf": "12p7nBS0wj-ceEXCdux9PbKO0RsYEEsC_",
+    "presentation_selected_pptx": "1O85erUmaDz7JMhmVNPAOG7QXvIky_Hb4"
+  },
+  "governance": {
+    "project_state": "1TMemFwbpMD_fKHNLNSVj8q5TceJkojFf7c_wIFovKls",
+    "source_manifest": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
+    "local_read_first": "1f0wvHqjWH659FyYgNnvvjvWj-nvFRgdxW0XrhkhPCyk",
+    "project_root_moved_same_id_to_02_thesis": "2026-10-08",
+    "main_sync": "MAIN_CURSOR_5_HELD__LATER_LOCAL_SEQ_NOT_CLAIMED_MAIN_ACK"
+  },
+  "unresolved": [
+    "Supervisor approval/signatures and final submission review",
+    "Observer identity/original Nepali notes and independent project/case linkage",
+    "No verified questionnaire, measured case counts, numerical rework loss or delay data",
+    "Code applicability of PCC/masonry/waterproofing must be case-grounded",
+    "v1.9 is review-only and not final despite exact TNR being present",
+    "Previous parent move changed inherited permissions; privacy/access review separate"
+  ],
+  "registered_researcher": false,
+  "registration_note": "Do not conflate Safal Dawadi with existing registered Safal Thapa; separate enrollment requires explicit governed change",
+  "drive_mutations": "NONE"
+}
