@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-KRISHNA-KUMAR-GUPTA-20261008",
+  "direct_child": "Krishna_Kumar_Gupta",
+  "root_folder_id": "1eUlnpvXTK6UiJlsj3bgKBPYTRdkkNkAn",
+  "classification": "ACTIVE_REGISTERED_RESEARCHER__V0_3_5_WORKING_LATEX_PDF_PPTX__FINAL_PRODUCTION_NOT_VERIFIED",
+  "researcher_id": "RSH-009",
+  "title": "Comparative Structural Performance of Circular and Square Steel Tube Columns with Various Strengthening Techniques in a Three-Storey Building",
+  "verified": {
+    "control": "1wg3rcubDw6JL2TCLmJdhQQdAwqr0WYKy",
+    "readme": "1ddk8Ag5MXGXkMYWPXYM0QV48WJ4uMXNU",
+    "latex_source_zip": "1CSWSIVbp9wWLTBX7LRO1-d029KF1lQYg",
+    "working_pdf": "1zHKtBKkCIDG_fGQvFCLzmLHP7uzJ25x0",
+    "presentation_pptx": "1NrA8NNtic1JILnDp2jYkZbIcfbJB03B9",
+    "word_review_docx": "10MywLOwq_2_X0khFvYyiYfePT9HdtE9_",
+    "version": "v0.3.5"
+  },
+  "unresolved": [
+    "Project control still dated 2026-08-09 and does not certify v0.3.5 as final",
+    "No verified independent dedicated Discussion Google Doc in audited folder",
+    "Citation and supervisor correction closure require current approval",
+    "Do not claim eigenvalue buckling/response spectrum/D-C ratios/comparative economy without exact source results"
+  ],
+  "drive_mutations": "NONE"
+}
