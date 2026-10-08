@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-FABIN-GURUNG-20261009",
+  "direct_child": "Fabin_Gurung",
+  "root_folder_id": "1m_J-w1rSgQcmyHL-cbkPwKKejyJ0TbJP",
+  "classification": "ACTIVE_REGISTERED_RESEARCHER__MSC_STRUCTURAL_AEC_V0_9_WORKING__NOT_SAME_AS_MSCH_HYDROPOWER",
+  "researcher_id": "RSH-001",
+  "title": "Design and Implementation of a Normalized Relational Database System Integrating BIM and GIS for Automated Building Design and Construction Workflow Automation in Nepal",
+  "verified": {
+    "current_project_state": "1QG4zSYt-MHIsw1rEV3zpDvl6Zp7X99N_uj5h7d1YdnE",
+    "current_read_first": "1ZnSSqwoOE7wCIWNrUBlCw8w43cqMVL3YRS9Dp1ot-jI",
+    "v09_working_package": "1tbxnD620qxoAa_KGIGGkM39bezvwbaUi",
+    "v09_pdf": "1LBt3R4u35BxhKjOGoX8YflP7zFJutxBk",
+    "v09_source_zip": "1PlgWYREUuB3ph49rmHHudINz3kTrcxhZ",
+    "v09_qa": "1ayh9OZ7bx3z_KB93gADZRWSk6iF-ZWnu",
+    "presentation_current_pptx": "1uZ9YW77E0na0_-zwNyD2FXQKx-qU9Q9E",
+    "presentation_qa_pdf": "15yodei46iwtW44v7-cw6UDVkDnu3evwi",
+    "discussion_readfirst": "1mvxvBNmGqWo6CEyfh9HLf6byTuo1z7dVPgPaFpXFFOY",
+    "main_ack": "LOCAL_MAIN_14_14_ACKNOWLEDGED_READBACK_PASS"
+  },
+  "unresolved": [
+    "Final certificate signatory identity/role requires authoritative confirmation",
+    "Final submission and defense date not yet authoritatively confirmed",
+    "v0.9 is 94 A4 pages QA-PASS working, NOT FINAL/SUBMISSION",
+    "Structural extension/unreviewed source-ingestion and public-demo material not automatically manuscript admitted"
+  ],
+  "drive_mutations": "NONE"
+}
