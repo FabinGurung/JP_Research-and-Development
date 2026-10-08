@@ -147,14 +147,18 @@
       "researcher_id": "RSH-006",
       "slug": "binay-karki",
       "display_name": "Binay Karki",
-      "qa_status": "HOLD_HUMAN_QA",
-      "topic_title": null,
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Assessment of Urban Heat Island Effect using Surface and Air Temperature Measurements across Different Land Cover Types in Pokhara Metropolitan City",
       "topic_short_name": null,
       "drive": {
-        "discussion_google_doc_id": null,
-        "working_pdf_drive_id": null,
-        "presentation_pdf_drive_id": null,
-        "presentation_pptx_drive_id": null
+        "discussion_google_doc_id": "1wMU2eYikHZ8Bt4Qrvtqv8ITTtgiGUav4c-oMsVEMwX4",
+        "working_pdf_drive_id": "15xjWCjTAv9L4f-huU9Kkck0kJjsCW-hG",
+        "presentation_pdf_drive_id": "1MIZYsTifoO3j56rPDEzejEwzdOZyt30Z",
+        "presentation_pptx_drive_id": "1ModyYKCc9eXGh0crIZqCArfTkndCtTj2",
+        "latex_source_package_drive_id": "1n2dhxKAHZoUvgck1aikPFs9_EG6ScArI",
+        "preview_pdf_drive_id": "1zTFajgkbGMmiuNBRcLF540SlbAb5_bC_",
+        "preview_latex_source_package_drive_id": "17CineGjLuD81q9W-2BIv6s4iJho8DN-E",
+        "discussion_review_matrix_drive_id": "1S59v06JAAaZLYKCNLsrosmsqBzsGWTFoAHY7HG35EMg"
       },
       "lanes": {
         "discussion": {
@@ -169,7 +173,8 @@
           "branch": "researcher/binay-karki/presentation",
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
-      }
+      },
+      "public_note": "Authoritative scientific thesis milestone: R10.1 controlled working/review; R10.2 is a separate PU v1.12 formatting-only non-production preview, not a final release. Presentation PPT-CP10 is frozen; the separately filed presented PDF is review-only. GEE-V10 has 22/22 rows awaiting researcher decisions; full-period independent temporal validation is open and the V07 field-Landsat match is only a six-row subset."
     },
     {
       "researcher_id": "RSH-007",
