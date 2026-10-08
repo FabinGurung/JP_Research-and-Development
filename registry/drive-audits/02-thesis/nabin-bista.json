@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-NABIN-BISTA-20261008",
+  "direct_child": "Nabin_Bista",
+  "root_folder_id": "1qOn2pyJ4GFgQLf_wdJ7fEqB6MWBOAPp3",
+  "classification": "ACTIVE_REGISTERED_RESEARCHER__LIVE_GOOGLE_DOCS_V13_MIGRATION__DISCUSSION_SEPARATE",
+  "researcher_id": "RSH-003",
+  "title": "Seismic Fragility and Soil–Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal",
+  "verified": {
+    "live_manuscript": "1v5QKdtwFVmvl5QVhq1jaWSdKfXj1YidGxNzzpKVu-hU",
+    "google_docs_migration_qa_pdf": "128C_TEuty-SrzUiiRzmkqK1n_onkPyzX",
+    "v13_released_latex_source": "1c-cD9zNr_pOIE4U5bxlUryX5jj7PKuEw",
+    "v13_released_pdf": "1bbroY5pPfAPMyzCuHbYDNjbSkiwN28PH",
+    "discussion": "1eLsGVmUxMyHx0QKeQv25SiR325c8jy3grfdXmkkz9xk",
+    "current_defense_slides": "1mS98aVngfuFJMaW9z9EmhQT-3QspRKW7NhgRwF9T8F4",
+    "defense_render_pdf": "1u0Hy5nEAzTawMSv-kPP7sM_7R33d59Fb",
+    "migration_checkpoint": "1LUFGFAyHJKzKnRhjtxulox2sbyfMM8Wsg9rWo81xf9U",
+    "migration_pages": 57
+  },
+  "unresolved": [
+    "External examiner identity/signatures/dates unverified",
+    "Authoritative units and conversions not supplied",
+    "Native Google Docs automatic TOC/figure/table page-reference refresh not verified",
+    "Main Library projection/ACK deferred per migration checkpoint",
+    "Discussion research gaps: SSI spring-model source evidence, earthquake PGA/selection, pushover model linkage, X-direction fragility provenance and source load inconsistencies",
+    "Some preliminary figures called wrong by researcher and must not be admitted silently"
+  ],
+  "scientific_policy": "v13 remains evidence-bound; beta Discussion plots and historical external sources are not automatically manuscript data",
+  "drive_mutations": "NONE"
+}
