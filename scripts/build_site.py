@@ -47,6 +47,8 @@ def main():
     }
     debts=load(Path("registry/debts.json"))["debts"]
     manoj_audit=load(Path("registry/drive-audits/02-thesis/manoj-bhandari.json"))
+    avishek_audit=load(Path("registry/drive-audits/02-thesis/avishek-kumar-mandal.json"))
+    root_rescan=load(Path("registry/drive-audits/02-thesis/root-rescan-20261008.json"))
     (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css")
     (out/".nojekyll").write_text("",encoding="utf-8")
     home_cards="".join(f'<article class="card"><span class="badge">{esc("TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "ON HOLD · HUMAN QA")}</span><h3>{esc(r["display_name"])}</h3><p>{esc(r.get("topic_title") or "Topic/title and Drive pointers are intentionally unset.")}</p><a href="researchers/{esc(r["slug"])}/index.html">Open researcher workspace →</a></article>' for r in researchers)
@@ -117,13 +119,26 @@ def main():
     manoj_cards="".join(f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence_html(d)}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>' for d in manoj_debts)
     manoj_body=f'<main class="wrap hero"><div class="eyebrow">Direct-child audit · governed hold</div><h1>Manoj Bhandari — Authority Debts</h1><p class="lead">This is not an active researcher workspace. No thesis source, Discussion, Presentation or website may be invented.</p><div class="grid">{manoj_cards}</div><p><a href="../index.html">← Back to Manoj audit</a></p></main>'
     write(out,audit_root+"debts/index.html",shell("Manoj Bhandari Debts",manoj_body,4))
+    avishek_debts=[d for d in debts if d.get("audit_slug")=="avishek-kumar-mandal" and d.get("status") in ("OPEN","HOLD")]
+    avishek_root="audits/02-thesis/avishek-kumar-mandal/"
+    draft=avishek_audit["verified_source"]
+    avishek_body=f'<main class="wrap hero"><div class="eyebrow">Direct-child Drive audit · first-draft intake</div><h1>Avishek Kumar Mandal</h1><p class="lead">{esc(draft["title_from_user_uploaded_draft"])}</p><div class="notice">One preserved first draft, not an approved current thesis. Reported Prism LaTeX/PDF are unavailable and were not promoted. No active researcher branch created.</div><p><a href="{drive_url(draft["draft_docx_drive_id"])}">Open original first-draft DOCX →</a></p><p><a href="debts/index.html">Open authority and methodology holds →</a></p></main>'
+    write(out,avishek_root+"index.html",shell("Avishek Kumar Mandal Audit",avishek_body,3))
+    avishek_cards="".join(f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence_html(d)}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>' for d in avishek_debts)
+    avishek_debt_body=f'<main class="wrap hero"><div class="eyebrow">Direct-child audit · governed holds</div><h1>Avishek Kumar Mandal — Authority Debts</h1><div class="grid">{avishek_cards}</div><p><a href="../index.html">← Back to Avishek audit</a></p></main>'
+    write(out,avishek_root+"debts/index.html",shell("Avishek Authority Debts",avishek_debt_body,4))
+    inventory_rows="".join(f'<tr><td>{row["position"]}</td><td>{esc(row["name"])}</td><td class="code">{esc(row["drive_id"])}</td></tr>' for row in root_rescan["children"])
+    extra=root_rescan["newly_observed_vs_previous_inventory"]
+    extra_text=", ".join(x["name"] for x in extra) or "None"
+    root_body=f'<main class="wrap hero"><div class="eyebrow">02_Thesis · direct-child rescan</div><h1>Drive folder inventory</h1><p class="lead">{root_rescan["current_inventory_count"]} direct children. Newly observed vs previous inventory: {esc(extra_text)}. An inventory addition does not prove a new creation date.</p><section class="section"><h2>Provider order</h2><table><thead><tr><th>#</th><th>Folder</th><th>Drive ID</th></tr></thead><tbody>{inventory_rows}</tbody></table></section><p><a href="manoj-bhandari/index.html">Manoj audit</a> · <a href="avishek-kumar-mandal/index.html">Avishek audit</a></p></main>'
+    write(out,"audits/02-thesis/index.html",shell("02 Thesis Inventory",root_body,2))
     active_debt_cards=""
     resolved_debt_cards=""
     for d in debts:
         owner=f' · {esc(d.get("researcher_slug") or d.get("audit_slug"))}' if d.get("researcher_slug") or d.get("audit_slug") else ""
         detail=""
-        if d.get("audit_slug")=="manoj-bhandari":
-            detail='<p><a href="../audits/02-thesis/manoj-bhandari/debts/index.html">Open Manoj audit debt subpage →</a></p>'
+        if d.get("audit_slug") in ("manoj-bhandari","avishek-kumar-mandal"):
+            detail=f'<p><a href="../audits/02-thesis/{esc(d["audit_slug"])}/debts/index.html">Open direct-child audit debt subpage →</a></p>'
         elif d.get("researcher_slug"):
             detail=f'<p><a href="../researchers/{esc(d["researcher_slug"])}/debts/index.html">Open researcher debt subpage →</a></p>'
         card=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["debt_id"])}{owner}</h3><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence_html(d)}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p>{detail if d["status"]!="CLOSED" else ""}</article>'
