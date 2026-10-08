@@ -219,6 +219,189 @@
         }
       ],
       "close_when": "Obtain researcher/supervisor-approved methodological scope, source-backed validation plan and updated governed thesis version; do not silently rewrite the user draft."
+    },
+    {
+      "debt_id": "DEBT-RURAL-001",
+      "scope": "REPOSITORY",
+      "category": "PROJECT_IDENTITY_AND_SOURCE",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Rural-road proposal requires researcher identity and source",
+      "description": "The preferred 15-slide PPTX is an archived reference only. The original ECM625 proposal DOCX was not preserved in this Drive child, and researcher identity/current research authority is unverified.",
+      "evidence": [
+        {
+          "role": "preferred_simple_deck",
+          "drive_id": "1F-BfaUV5DcHTIO240npPVYuRUNgnaYDc"
+        },
+        {
+          "role": "archive_reference",
+          "drive_id": "1gEED0q1D1N4ZLzGAff5sBwulkplcXSM3_UJ_a_SvBno"
+        }
+      ],
+      "close_when": "Identify researcher and authoritative original proposal, verify exact bytes, and create a governed project/source checkpoint before promotion.",
+      "audit_slug": "rural-road-maintenance"
+    },
+    {
+      "debt_id": "DEBT-SAFAL-001",
+      "scope": "REPOSITORY",
+      "category": "FIELD_EVIDENCE_ADMISSION",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Safal reported rework cases lack corroborated source evidence",
+      "description": "Latest v1.9 is a qualitative review candidate; original Nepali notes, observer identity and independent project/case verification are missing. It must not claim measured case counts, causes, cost losses or delays as established results.",
+      "evidence": [
+        {
+          "role": "v1_9_review",
+          "drive_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb"
+        },
+        {
+          "role": "v1_9_qa",
+          "drive_id": "1Q8_F4EmXliTET_XEuHp3qENwBogOb6MD"
+        }
+      ],
+      "close_when": "Researcher/supervisor verify case/source identities and scientific scope, and govern an evidence-admitted source update.",
+      "audit_slug": "safal-dawadi"
+    },
+    {
+      "debt_id": "DEBT-SAFAL-002",
+      "scope": "REPOSITORY",
+      "category": "PRODUCTION_AND_SYNC",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Safal v1.9 is review-only; final production and Main sync unverified",
+      "description": "Even with exact TNR in v1.9, supervisor approval/signature, technical-code applicability, independent case validation and final certification remain open. Current scientific/Main cursor status must resolve from the newer local library; no silent Main ACK.",
+      "evidence": [
+        {
+          "role": "local_read_first",
+          "drive_id": "1f0wvHqjWH659FyYgNnvvjvWj-nvFRgdxW0XrhkhPCyk"
+        },
+        {
+          "role": "v1_9_source",
+          "drive_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c"
+        }
+      ],
+      "close_when": "Controlled final release with approvals and readback, plus governed Local/Main reconciliation before asserting synced.",
+      "audit_slug": "safal-dawadi"
+    },
+    {
+      "debt_id": "DEBT-SAUGAT-001",
+      "scope": "RESEARCHER",
+      "category": "SCIENTIFIC_PROVENANCE",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Saugat CP114 retains unresolved seismic-model provenance",
+      "description": "Type-C Z0.30 EQx source scale, EQy storey forces, exact pushover control/target/steps/gravity and member-level hinge provenance remain fail-closed. Seven three-storey plans cannot support quantified height effects.",
+      "evidence": [
+        {
+          "role": "cp114_read_first",
+          "drive_id": "1eSQ8uNp-ysRGU8PI06HiDjxZsswQmxYEtUb__k5hhLk"
+        },
+        {
+          "role": "cp114_pdf",
+          "drive_id": "1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh"
+        }
+      ],
+      "close_when": "Obtain source-backed evidence, validate quantitative claims and admit through a governed new release.",
+      "researcher_id": "RSH-002",
+      "researcher_slug": "saugat-paneru"
+    },
+    {
+      "debt_id": "DEBT-SAUGAT-002",
+      "scope": "RESEARCHER",
+      "category": "REGISTRAR_AND_MAIN_SYNC",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Saugat CP114 project registrar and Main sync not run",
+      "description": "LaTeX LATEX-SEQ-028 closed with provider readback, but project-local Registrar and Main Library synchronization were expressly NOT RUN.",
+      "evidence": [
+        {
+          "role": "cp114_checkpoint",
+          "drive_id": "1-Q93vMWLc7NzmfeJ5djiUEAlmf3600kq"
+        }
+      ],
+      "close_when": "Complete separate A9 registrar/Main sync with exact provider readback and ACK without replaying closed discussion or LaTeX sequences.",
+      "researcher_id": "RSH-002",
+      "researcher_slug": "saugat-paneru"
+    },
+    {
+      "debt_id": "DEBT-NABIN-001",
+      "scope": "RESEARCHER",
+      "category": "SCIENCE_SOURCE_RECONCILIATION",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Nabin discussion-derived SSI/pushover/fragility evidence remains provisional",
+      "description": "SSI spring implementation, earthquake record provenance/PGA, X-only fragility direction, pushover producing model version and load workbook inconsistencies are not all reconciled; beta figures are not automatically manuscript-admitted.",
+      "evidence": [
+        {
+          "role": "discussion_current",
+          "drive_id": "1eLsGVmUxMyHx0QKeQv25SiR325c8jy3grfdXmkkz9xk"
+        }
+      ],
+      "close_when": "Reconcile sources, validate models and provenance, obtain researcher decisions and issue bounded manuscript handoffs.",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista"
+    },
+    {
+      "debt_id": "DEBT-NABIN-002",
+      "scope": "RESEARCHER",
+      "category": "SUBMISSION_AND_MIGRATION",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Nabin live Google Docs administrative fields/list refresh and Main ACK pending",
+      "description": "External examiner identity and signatures, authoritative units/conversions and native Google Docs TOC/list page references remain incomplete/unverified. Local migration seq2 closed, Main ACK was deferred.",
+      "evidence": [
+        {
+          "role": "migration_checkpoint",
+          "drive_id": "1LUFGFAyHJKzKnRhjtxulox2sbyfMM8Wsg9rWo81xf9U"
+        },
+        {
+          "role": "live_manuscript",
+          "drive_id": "1v5QKdtwFVmvl5QVhq1jaWSdKfXj1YidGxNzzpKVu-hU"
+        }
+      ],
+      "close_when": "Verify authoritative administrative evidence, repair page fields, re-QA output and obtain controlled Main readback/ACK.",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista"
+    },
+    {
+      "debt_id": "DEBT-KRISHNA-001",
+      "scope": "RESEARCHER",
+      "category": "SOURCE_AND_PRODUCTION_QA",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Krishna v0.3.5 final approval and cited analysis gates unverified",
+      "description": "v0.3.5 LaTeX/PDF/PPTX physically exist; older August 9 control does not certify current final status. Citation/supervisor corrections and calculations such as buckling, spectra, D/C and comparative economy cannot be asserted without actual verified results.",
+      "evidence": [
+        {
+          "role": "v0_3_5_pdf",
+          "drive_id": "1zHKtBKkCIDG_fGQvFCLzmLHP7uzJ25x0"
+        },
+        {
+          "role": "project_state",
+          "drive_id": "1wg3rcubDw6JL2TCLmJdhQQdAwqr0WYKy"
+        }
+      ],
+      "close_when": "Currentize governed project control and obtain approved scientific/result QA and final submission signoff.",
+      "researcher_id": "RSH-009",
+      "researcher_slug": "krishna-kumar-gupta"
+    },
+    {
+      "debt_id": "DEBT-KRISHNA-002",
+      "scope": "RESEARCHER",
+      "category": "DISCUSSION_LANE",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Krishna has no independently verified current Discussion Google Doc",
+      "description": "The inspected research cabinet contains guidance/review files and questionnaire folders, but no dedicated governed live Discussion Google Doc was verified.",
+      "evidence": [
+        {
+          "role": "project_readme",
+          "drive_id": "1ddk8Ag5MXGXkMYWPXYM0QV48WJ4uMXNU"
+        }
+      ],
+      "close_when": "Locate or establish a governed Discussion document and register its provider-read exact ID.",
+      "researcher_id": "RSH-009",
+      "researcher_slug": "krishna-kumar-gupta"
     }
   ]
 }
