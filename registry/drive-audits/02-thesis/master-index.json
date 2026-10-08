@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-MASTER-INDEX-20261009",
+  "direct_child": "00_Master_Index",
+  "root_folder_id": "1xZ8fRI9ov8jMAMjf8Whxqb3JcJtX6iGc",
+  "classification": "SHARED_THESIS_INFRASTRUCTURE__NOT_RESEARCHER",
+  "verified": {
+    "directory_current": "1bJW5jmI6N7VzRY77KIsn3B--ngaAsVXI3HdM1c8XXHE",
+    "thesis_control_current": "1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A",
+    "parent_move_post": "1xwsHGFqxpM1VPq5VU8C2qubrqqzuImITfOQj_z-AH2Y",
+    "latex_build_system_folder": "1aKifIFQ-HqMfg7EUTc6XJrAhNKA38yoz",
+    "presentation_build_system_folder": "1AAQBw2zDy4wlEPj5Mqqfy0EVvnm-j3Vf",
+    "private_resources_folder": "1P9EZ_8GG7S7_R-8c2_tH8lFIWgCeo04s"
+  },
+  "observations": [
+    "The shared Thesis Control Tower is active v1.23 and applies to all project children.",
+    "The directory verifies Safal Dawadi canonical separate project and stable-ID move, not Safal Thapa.",
+    "Master directory Rupesh record retains earlier superseded title despite user-confirmed newer title in researcher registry.",
+    "Master directory contains historical pointers including external projects; do not automatically equate its list with 18 direct children.",
+    "No private font binaries or document contents should be copied into public GitHub."
+  ],
+  "drive_mutations": "NONE"
+}
