@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-BINAY-KARKI-20261008",
+  "audited_direct_child": "Binay_Karki",
+  "root_drive_folder_id": "1Merz8haEG1kdB5rB1oAwjtmCkoU5BBg8",
+  "classification": "ACTIVE_RESEARCHER_WORKSPACE__UHI__R10_1_BASELINE_WITH_R10_2_FORMATTING_PREVIEW",
+  "researcher_id": "RSH-006",
+  "program": "MSc Sanitary Engineering",
+  "title": "Assessment of Urban Heat Island Effect using Surface and Air Temperature Measurements across Different Land Cover Types in Pokhara Metropolitan City",
+  "verified_current": {
+    "authoritative_science": "R10.1_CLIENT_CLEAN_HARVARD__CONTROLLED_WORKING_REVIEW__FROZEN",
+    "thesis_pdf_drive_id": "15xjWCjTAv9L4f-huU9Kkck0kJjsCW-hG",
+    "thesis_source_zip_drive_id": "1n2dhxKAHZoUvgck1aikPFs9_EG6ScArI",
+    "formatting_preview_version": "R10.2_PU_V1.12_CONTROL_ALIGNED_PREVIEW__NON_PRODUCTION",
+    "formatting_preview_pdf_drive_id": "1zTFajgkbGMmiuNBRcLF540SlbAb5_bC_",
+    "formatting_preview_zip_drive_id": "17CineGjLuD81q9W-2BIv6s4iJho8DN-E",
+    "formatting_preview_build_qc_id": "1CCU5aQ0y0E4NxNJNkOBNwyLM3E2F-rhi",
+    "discussion_doc_current_id": "1wMU2eYikHZ8Bt4Qrvtqv8ITTtgiGUav4c-oMsVEMwX4",
+    "discussion_read_first_id": "1CdlV7R9c3RrJbLNaUXNq6yzqDZ1YblX8UDE3b0pKfyk",
+    "research_a9_read_first_id": "1bHjYF5x0ldro-ysmAFWmSeh1yLeYa5AzEuhiliz9mMw",
+    "presentation_pptx_id": "1ModyYKCc9eXGh0crIZqCArfTkndCtTj2",
+    "presented_pdf_review_id": "1MIZYsTifoO3j56rPDEzejEwzdOZyt30Z",
+    "review_matrix_id": "1S59v06JAAaZLYKCNLsrosmsqBzsGWTFoAHY7HG35EMg"
+  },
+  "scientific_governance": {
+    "latest_governed_sync": "LOCAL_MAIN_17_17_VERIFIED_SYNCED_ACK",
+    "v10": "NOT_CLOSED__22_22_PENDING_RESEARCHER_REVIEW",
+    "v11": "BLOCKED_UNTIL_V10_CLOSED",
+    "v07_validation": "SIX_TIER_A_EXACT_DATE_SITE_MATCHES_ONLY__NOT_FULL_PERIOD",
+    "full_period_validation": "OPEN",
+    "validation_dataset": "44_DISTINCT_FIELD_DATES_186_DATE_TIME_EVENTS__MAY31_TO_JUL31_2026",
+    "legacy_thesis_dataset": "47_DATES_202_EVENTS__MAY31_TO_AUG12_2026",
+    "do_not_conflate_datasets": true,
+    "r10_2_scientific_content": "FORMATTING_ONLY__NO_ADMITTED_GEE_EVIDENCE",
+    "production_status": "NOT_FINAL_NOT_SUBMISSION__EXACT_TNR_AND_OTHER_GATES_OPEN"
+  },
+  "branch_policy": "NO_NEW_RESEARCHER_BRANCH_NEEDED__USE_EXISTING_RSH_006_LANES_ONLY",
+  "website": "NO_INDEPENDENT_WEBSITE_VERIFIED",
+  "drive_mutations": "NONE",
+  "next_direct_child": "Avishek_Kumar_Mandal"
+}
