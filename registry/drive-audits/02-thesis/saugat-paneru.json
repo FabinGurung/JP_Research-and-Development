@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "DRIVE-AUDIT-02THESIS-SAUGAT-PANERU-20261008",
+  "direct_child": "Saugat_Paneru",
+  "root_folder_id": "1woFRyE_oUwoKxKI815I1nRtWe1382LUT",
+  "classification": "ACTIVE_REGISTERED_RESEARCHER__EXACT_TNR_CP114_PRODUCTION_LATEX_RELEASE__NOT_FINAL_SCIENTIFIC_CLOSEOUT",
+  "researcher_id": "RSH-002",
+  "title": "Seismic Assessment of Low-Rise Reinforced Concrete Buildings in Nepal: Applicability of NBC 205 Ready-to-Use Guidelines",
+  "verified": {
+    "current_latex_release": "CP114_V022__LATEX_SEQ028",
+    "pdf": "1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh",
+    "source_zip": "1yL3G-EUGA32FDBhkdImXk9NManfW_vyA",
+    "qa": "1SYuCBvnRn4-3-kxUMnCnWQXhwAWMbgM0",
+    "checkpoint": "1-Q93vMWLc7NzmfeJ5djiUEAlmf3600kq",
+    "read_first": "1eSQ8uNp-ysRGU8PI06HiDjxZsswQmxYEtUb__k5hhLk",
+    "discussion": "1lF5WKoido1Tzgk6D9ZFLbkVjV3TCwZinrNnLfVF7bA0",
+    "google_docs_live": "1P_4MFr3WDjkhg_vJQ0YRbqYGMSoUtqSAex-yEaxGgTs",
+    "presentation_google_slides": "1_baSODXqlT9JUZ4pRVB8kByDsjVw1NFvKsgCA2C8Q2Y",
+    "pages": 115,
+    "exact_times_new_roman": "PASS"
+  },
+  "unresolved": [
+    "Project-local registrar NOT RUN and Main Library synchronization NOT RUN for CP114",
+    "Type-C Z0.30 EQx force-scale source provenance",
+    "Unsupported EQy storey-shear/base-shear data",
+    "Exact pushover control node/target/steps/gravity sequence and member hinge metadata",
+    "Quantitative four-storey height effect not supported by matched response set"
+  ],
+  "distinction": "Seven three-storey matched models support plan irregularity comparisons, not quantitative height effects",
+  "drive_mutations": "NONE"
+}
