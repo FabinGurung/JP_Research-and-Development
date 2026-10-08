@@ -176,6 +176,49 @@
       ],
       "closed_at": "2026-10-08",
       "close_when": "Already closed: GitHub Actions Pages run 37713408304 completed success for Manoj audit commit."
+    },
+    {
+      "debt_id": "DEBT-AVISHEK-001",
+      "scope": "REPOSITORY",
+      "audit_slug": "avishek-kumar-mandal",
+      "category": "THESIS_AUTHORITY_INTAKE",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Avishek — first-draft intake has no promoted active thesis authority",
+      "description": "One user-uploaded first-draft DOCX is preserved. Project control, thesis LaTeX source, compiled PDF, Presentation, figures and final-deliverable folders are empty. The archived Prism log reports a conversion/build but actual output bytes were confirmed unavailable and recovery waived; this does not establish current scientific or output authority.",
+      "evidence": [
+        {
+          "role": "source_first_draft",
+          "drive_id": "1VfdnpQTOexzdIQgLWXpmH9eooFZuu44v"
+        },
+        {
+          "role": "archive_recovery",
+          "drive_id": "1rD86gq_ndL9bxQSBRpJtPDhI85Aa_MoOj0KnBp6RKlU"
+        }
+      ],
+      "close_when": "Researcher-approved active project control/source and valid provenance/Drive readback establish the current scientific and document state. Do not reconstruct historical Prism bytes or claim reported builds as verified.",
+      "hold_reason": "ONLY_USER_DRAFT_AND_ARCHIVED_PRISM_CLAIMS__NO_CURRENT_SOURCE_MANIFEST"
+    },
+    {
+      "debt_id": "DEBT-AVISHEK-002",
+      "scope": "REPOSITORY",
+      "audit_slug": "avishek-kumar-mandal",
+      "category": "METHODOLOGY_CONFLICT",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Avishek — resolve numerical-only versus laboratory-experiment methodology",
+      "description": "The first-draft abstract describes accelerated corrosion, pull-out and cyclic laboratory testing, while its objectives and limitations describe a numerical Abaqus study without laboratory experiments. The archived review explicitly marks this contradiction unresolved; neither method is yet confirmed as final scope.",
+      "evidence": [
+        {
+          "role": "user_uploaded_first_draft",
+          "drive_id": "1VfdnpQTOexzdIQgLWXpmH9eooFZuu44v"
+        },
+        {
+          "role": "historical_conflict_note",
+          "drive_id": "1rD86gq_ndL9bxQSBRpJtPDhI85Aa_MoOj0KnBp6RKlU"
+        }
+      ],
+      "close_when": "Obtain researcher/supervisor-approved methodological scope, source-backed validation plan and updated governed thesis version; do not silently rewrite the user draft."
     }
   ]
 }
