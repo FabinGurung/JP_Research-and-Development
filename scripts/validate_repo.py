@@ -10,9 +10,11 @@ def load(p):
 researchers=load("registry/researchers.json")
 websites=load("registry/websites.json")
 debts=load("registry/debts.json")
+manoj_audit=load("registry/drive-audits/02-thesis/manoj-bhandari.json")
+binay_audit=load("registry/drive-audits/02-thesis/binay-karki.json")
 branches=load("registry/branch-registry.json")
 policy=load("controls/repository.control.json")
-required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
+required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/drive-audits/02-thesis/manoj-bhandari.json","registry/drive-audits/02-thesis/binay-karki.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
@@ -68,6 +70,16 @@ for d in debt_rows:
     if d.get("scope")=="RESEARCHER":
         rid=d.get("researcher_id")
         if rid not in ids: errors.append(f"{did}: unknown researcher_id {rid}")
+    if d.get("audit_slug") and d.get("audit_slug") not in ("manoj-bhandari",):
+        errors.append(f"{did}: unregistered audit_slug")
+if manoj_audit.get("researcher_workflow",{}).get("registered_in_repository") is not False:
+    errors.append("Manoj audit cannot be promoted as a registered researcher without independent authority")
+if binay_audit.get("researcher_id")!="RSH-006":
+    errors.append("Binay audit researcher identity mismatch")
+if not any(d.get("debt_id")=="DEBT-MANOJ-001" and d.get("status")=="HOLD" for d in debt_rows):
+    errors.append("Manoj thesis-authority HOLD missing")
+if not any(d.get("debt_id")=="DEBT-OPS-PAGES-001" and d.get("status")=="CLOSED" for d in debt_rows):
+    errors.append("resolved Pages deployment readback missing"
 if policy.get("repository_role")!="R_AND_D_CODE_POINTER_AND_CONTROL_PORTAL": errors.append("repository policy role mismatch")
 # Main/lane binary guard. Git history may contain binaries; current tree may not.
 try:
@@ -87,6 +99,7 @@ if args.site:
     expected += [f"controls/{x}/index.html" for x in ("discussion","latex","presentation","website")]
     debt_researcher_ids={d.get("researcher_id") for d in debt_rows if d.get("status") in ("OPEN","HOLD") and d.get("researcher_id")}
     expected += [f"researchers/{r['slug']}/debts/index.html" for r in rows if r.get("researcher_id") in debt_researcher_ids]
+    expected += ["audits/02-thesis/manoj-bhandari/index.html","audits/02-thesis/manoj-bhandari/debts/index.html"]
     for rel in expected:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
 if errors:
