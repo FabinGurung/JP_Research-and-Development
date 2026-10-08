@@ -276,6 +276,69 @@
         }
       },
       "public_note": "v0.3.5 working thesis package and presentation physically verified. The August 9 project state predates later versions, and final submission QA/approval is not established. Dedicated current Discussion Google Doc not verified."
+    },
+    {
+      "researcher_id": "RSH-010",
+      "slug": "safal-dawadi",
+      "display_name": "Safal Dawadi",
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Assessment of Rework, Its Causes and Impacts in RCC Building Construction Projects of Pokhara Metropolitan City",
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
+        "latex_source_package_drive_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+        "presentation_pdf_drive_id": "12p7nBS0wj-ceEXCdux9PbKO0RsYEEsC_",
+        "presentation_pptx_drive_id": "1O85erUmaDz7JMhmVNPAOG7QXvIky_Hb4",
+        "project_root_drive_id": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP"
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/safal-dawadi/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/safal-dawadi/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/safal-dawadi/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      },
+      "public_note": "Verified Safal Dawadi (NOT Safal Thapa). MSc Construction Management v1.9 qualitative review is not final or supervisor-approved; field case/source admission and Local/Main synchronization remain gated. The selected presentation is separately governed."
+    },
+    {
+      "researcher_id": "RSH-011",
+      "slug": "sunil-rana",
+      "display_name": "Sunil Rana",
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Seismic Performance of Regular, Setback, Step-Back and Step-Back Setback RCC Building on Plain and Sloping Ground under NBC 105:2025",
+      "topic_short_name": null,
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": null,
+        "working_thesis_docx_drive_id": "1beFNMsWUkMXS-OTnvt1x0Uiud1N4okGg",
+        "candidate_source_docx_drive_id": "1020_6bkibGtibc6Ec3mycm0PCGW4SvKx",
+        "science_audit_pdf_drive_id": "11YSPAbQHkywACRM19BBXOqgvFOhBC-bm",
+        "researcher_action_pdf_drive_id": "1RYQHfBvaAuf9pmzrj5GaCW3fMH9hMcCK",
+        "project_root_drive_id": "1-YEMV0u9pe78YS9KprCNFQAina3Ef4o4"
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/sunil-rana/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/sunil-rana/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/sunil-rana/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      },
+      "public_note": "Scientific audit/researcher action phase. New user-supplied DOCX is a candidate and not promoted above the v0.1 active working DOCX. Novelty, NLTHA model/results, eight-model normalization, original ETABS evidence and final defense gates remain unresolved."
     }
   ]
 }
