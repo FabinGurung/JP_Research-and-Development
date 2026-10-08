@@ -79,7 +79,7 @@ if binay_audit.get("researcher_id")!="RSH-006":
 if not any(d.get("debt_id")=="DEBT-MANOJ-001" and d.get("status")=="HOLD" for d in debt_rows):
     errors.append("Manoj thesis-authority HOLD missing")
 if not any(d.get("debt_id")=="DEBT-OPS-PAGES-001" and d.get("status")=="CLOSED" for d in debt_rows):
-    errors.append("resolved Pages deployment readback missing"
+    errors.append("resolved Pages deployment readback missing")
 if policy.get("repository_role")!="R_AND_D_CODE_POINTER_AND_CONTROL_PORTAL": errors.append("repository policy role mismatch")
 # Main/lane binary guard. Git history may contain binaries; current tree may not.
 try:
