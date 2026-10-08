@@ -29,7 +29,10 @@
     "v1.9 is review-only and not final despite exact TNR being present",
     "Previous parent move changed inherited permissions; privacy/access review separate"
   ],
-  "registered_researcher": false,
-  "registration_note": "Do not conflate Safal Dawadi with existing registered Safal Thapa; separate enrollment requires explicit governed change",
-  "drive_mutations": "NONE"
+  "registered_researcher": true,
+  "registration_note": "Safal Dawadi is a separate verified MSc Construction Management researcher, not Safal Thapa. Existing research case/evidence and submission gates remain open.",
+  "drive_mutations": "NONE",
+  "researcher_id": "RSH-010",
+  "registry_slug": "safal-dawadi",
+  "registration_status": "REGISTERED_DISTINCT_FROM_SAFAL_THAPA__THREE_CORE_LANES_CREATED"
 }
