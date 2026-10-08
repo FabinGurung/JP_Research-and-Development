@@ -11,7 +11,7 @@
   "researcher_content_status": "RUPESH_ANIL_BINAY_PARTIAL_VERIFIED__OTHERS_PENDING_HUMAN_QA",
   "main_content_rule": "CODE_MACHINE_READABLE_CONTROLS_AND_LINKS_ONLY",
   "portal_deployment": "GITHUB_PAGES_MAIN_ONLY",
-  "validation": "PENDING_PROVIDER_READBACK_AFTER_BINAY_AND_MANOJ_DEBT_SUBPAGES",
+  "validation": "PASS__RUN_37741076864__VERIFIED_HEAD_566AC1D5CD3AD481F8B2FA01FEDAB0B61B0C4237",
   "branch_count": 77,
   "researcher_lane_status": "27_ACTIVE_EMPTY_CORE_LANES",
   "website_module_count": 2,
@@ -48,11 +48,14 @@
     }
   },
   "debt_register_status": "ACTIVE__RUPESH_RESEARCHER_DEBT_SUBPAGE__GLOBAL_DEBT_HOLD_PAGE",
-  "pages_validation": "PASS__RUN_37700838012__CONTENT_HEAD_A339D0A68BF05D5144722E1266356FB39999522C",
+  "pages_validation": "PASS__RUN_37741076886__VERIFIED_HEAD_566AC1D5CD3AD481F8B2FA01FEDAB0B61B0C4237",
   "debt_pages_status": "DEPLOYED__GLOBAL_AND_RUPESH_SUBPAGE__PAGES_RUN_37700838012",
   "drive_audit_machine_record_for_manoj": "registry/drive-audits/02-thesis/manoj-bhandari.json",
   "pages_validation_prior_manoj_audit": "PASS__RUN_37713408304__CONTENT_HEAD_F1B26FEAD0504250B57B98B1067759545017A839",
-  "pages_readback_hold": "RESOLVED__CLOSED__DEBT_OPS_PAGES_001",
+  "pages_readback_hold": "CLOSED__DEPLOYMENT_SUCCESS__DEBT_OPS_PAGES_001",
   "manoj_debt_subpage": "audits/02-thesis/manoj-bhandari/debts/index.html",
-  "binay_audit_record": "registry/drive-audits/02-thesis/binay-karki.json"
+  "binay_audit_record": "registry/drive-audits/02-thesis/binay-karki.json",
+  "portal_manoj_audit_route": "audits/02-thesis/manoj-bhandari/index.html",
+  "portal_manoj_hold_route": "audits/02-thesis/manoj-bhandari/debts/index.html",
+  "portal_binay_debt_route": "researchers/binay-karki/debts/index.html"
 }
