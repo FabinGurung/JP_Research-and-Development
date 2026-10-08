@@ -19,5 +19,6 @@
     "Master directory contains historical pointers including external projects; do not automatically equate its list with 18 direct children.",
     "No private font binaries or document contents should be copied into public GitHub."
   ],
-  "drive_mutations": "NONE"
+  "drive_mutations": "NONE",
+  "title": "Shared Thesis Directory and Thesis Control Tower"
 }
