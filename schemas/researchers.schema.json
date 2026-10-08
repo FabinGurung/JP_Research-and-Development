@@ -16,8 +16,8 @@
     },
     "researchers": {
       "type": "array",
-      "minItems": 9,
-      "maxItems": 9,
+      "minItems": 11,
+      "maxItems": 11,
       "items": {
         "type": "object",
         "required": [
@@ -32,5 +32,6 @@
         ]
       }
     }
-  }
+  },
+  "description": "All 11 provider-verified researcher identities are registered separately. Safal Dawadi (RSH-010) and Safal Thapa (RSH-004) remain distinct; per-lane QA may remain held."
 }
