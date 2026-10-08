@@ -14,9 +14,11 @@ manoj_audit=load("registry/drive-audits/02-thesis/manoj-bhandari.json")
 binay_audit=load("registry/drive-audits/02-thesis/binay-karki.json")
 avishek_audit=load("registry/drive-audits/02-thesis/avishek-kumar-mandal.json")
 root_rescan=load("registry/drive-audits/02-thesis/root-rescan-20261008.json")
+audit_batch_slugs=("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta")
+audit_batch={slug:load(f"registry/drive-audits/02-thesis/{slug}.json") for slug in audit_batch_slugs}
 branches=load("registry/branch-registry.json")
 policy=load("controls/repository.control.json")
-required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/drive-audits/02-thesis/manoj-bhandari.json","registry/drive-audits/02-thesis/binay-karki.json","registry/drive-audits/02-thesis/avishek-kumar-mandal.json","registry/drive-audits/02-thesis/root-rescan-20261008.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
+required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/drive-audits/02-thesis/manoj-bhandari.json","registry/drive-audits/02-thesis/binay-karki.json","registry/drive-audits/02-thesis/avishek-kumar-mandal.json","registry/drive-audits/02-thesis/root-rescan-20261008.json","registry/drive-audits/02-thesis/rural-road-maintenance.json","registry/drive-audits/02-thesis/safal-dawadi.json","registry/drive-audits/02-thesis/saugat-paneru.json","registry/drive-audits/02-thesis/nabin-bista.json","registry/drive-audits/02-thesis/krishna-kumar-gupta.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
@@ -72,7 +74,7 @@ for d in debt_rows:
     if d.get("scope")=="RESEARCHER":
         rid=d.get("researcher_id")
         if rid not in ids: errors.append(f"{did}: unknown researcher_id {rid}")
-    if d.get("audit_slug") and d.get("audit_slug") not in ("manoj-bhandari","avishek-kumar-mandal"):
+    if d.get("audit_slug") and d.get("audit_slug") not in ("manoj-bhandari","avishek-kumar-mandal",*audit_batch_slugs):
         errors.append(f"{did}: unregistered audit_slug")
 if manoj_audit.get("researcher_workflow",{}).get("registered_in_repository") is not False:
     errors.append("Manoj audit cannot be promoted as a registered researcher without independent authority")
@@ -86,6 +88,12 @@ if not any(x.get("name")=="Thesis_Safal_Dawadi_Rework_CM" and x.get("position")=
     errors.append("newly observed Safal Dawadi child missing from rescan")
 if not any(d.get("debt_id")=="DEBT-AVISHEK-001" and d.get("status")=="HOLD" for d in debt_rows):
     errors.append("Avishek source-intake hold missing")
+for slug,audit in audit_batch.items():
+    if not audit.get("audit_id") or not audit.get("root_folder_id"): errors.append(f"{slug}: audit identity incomplete")
+    if not any(d.get("audit_slug")==slug or audit.get("researcher_id") and d.get("researcher_id")==audit.get("researcher_id") for d in debt_rows):
+        errors.append(f"{slug}: no traceable debt/hold")
+if audit_batch["safal-dawadi"].get("registered_researcher") is not False:
+    errors.append("Safal Dawadi cannot silently become Safal Thapa")
 if not any(d.get("debt_id")=="DEBT-MANOJ-001" and d.get("status")=="HOLD" for d in debt_rows):
     errors.append("Manoj thesis-authority HOLD missing")
 if not any(d.get("debt_id")=="DEBT-OPS-PAGES-001" and d.get("status")=="CLOSED" for d in debt_rows):
@@ -110,6 +118,7 @@ if args.site:
     debt_researcher_ids={d.get("researcher_id") for d in debt_rows if d.get("status") in ("OPEN","HOLD") and d.get("researcher_id")}
     expected += [f"researchers/{r['slug']}/debts/index.html" for r in rows if r.get("researcher_id") in debt_researcher_ids]
     expected += ["audits/02-thesis/index.html","audits/02-thesis/manoj-bhandari/index.html","audits/02-thesis/manoj-bhandari/debts/index.html","audits/02-thesis/avishek-kumar-mandal/index.html","audits/02-thesis/avishek-kumar-mandal/debts/index.html"]
+    expected += [f"audits/02-thesis/{slug}/{suffix}" for slug in audit_batch_slugs for suffix in ("index.html","debts/index.html")]
     for rel in expected:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
 if errors:
