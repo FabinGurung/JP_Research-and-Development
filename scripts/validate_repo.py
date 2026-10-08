@@ -92,8 +92,8 @@ for slug,audit in audit_batch.items():
     if not audit.get("audit_id") or not audit.get("root_folder_id"): errors.append(f"{slug}: audit identity incomplete")
     if not any(d.get("audit_slug")==slug or audit.get("researcher_id") and d.get("researcher_id")==audit.get("researcher_id") for d in debt_rows):
         errors.append(f"{slug}: no traceable debt/hold")
-if audit_batch["safal-dawadi"].get("registered_researcher") is not False:
-    errors.append("Safal Dawadi cannot silently become Safal Thapa")
+if audit_batch["safal-dawadi"].get("registered_researcher") is not True:
+    errors.append("Safal Dawadi independent admission missing")
 if not any(d.get("debt_id")=="DEBT-MANOJ-001" and d.get("status")=="HOLD" for d in debt_rows):
     errors.append("Manoj thesis-authority HOLD missing")
 if not any(d.get("debt_id")=="DEBT-OPS-PAGES-001" and d.get("status")=="CLOSED" for d in debt_rows):
