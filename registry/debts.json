@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "status": "ACTIVE_RESEARCH_DEBT_REGISTER",
-  "updated_at": "2026-10-08",
+  "updated_at": "2026-10-09",
   "debts": [
     {
       "debt_id": "DEBT-RUPESH-001",
@@ -243,7 +243,7 @@
     },
     {
       "debt_id": "DEBT-SAFAL-001",
-      "scope": "REPOSITORY",
+      "scope": "RESEARCHER",
       "category": "FIELD_EVIDENCE_ADMISSION",
       "status": "HOLD",
       "severity": "MEDIUM",
@@ -260,11 +260,13 @@
         }
       ],
       "close_when": "Researcher/supervisor verify case/source identities and scientific scope, and govern an evidence-admitted source update.",
-      "audit_slug": "safal-dawadi"
+      "audit_slug": "safal-dawadi",
+      "researcher_id": "RSH-010",
+      "researcher_slug": "safal-dawadi"
     },
     {
       "debt_id": "DEBT-SAFAL-002",
-      "scope": "REPOSITORY",
+      "scope": "RESEARCHER",
       "category": "PRODUCTION_AND_SYNC",
       "status": "HOLD",
       "severity": "MEDIUM",
@@ -281,7 +283,9 @@
         }
       ],
       "close_when": "Controlled final release with approvals and readback, plus governed Local/Main reconciliation before asserting synced.",
-      "audit_slug": "safal-dawadi"
+      "audit_slug": "safal-dawadi",
+      "researcher_id": "RSH-010",
+      "researcher_slug": "safal-dawadi"
     },
     {
       "debt_id": "DEBT-SAUGAT-001",
@@ -402,6 +406,142 @@
       "close_when": "Locate or establish a governed Discussion document and register its provider-read exact ID.",
       "researcher_id": "RSH-009",
       "researcher_slug": "krishna-kumar-gupta"
+    },
+    {
+      "debt_id": "DEBT-SHISHEER-001",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-005",
+      "researcher_slug": "shisheer-kc",
+      "audit_slug": "shisheer-kc",
+      "category": "CANDIDATE_HUMAN_QA",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Shisheer CKPT15 corrections 1–12 not yet approved",
+      "description": "CKPT15 phase-four cumulative source/PDF includes corrections 1–12, but the project owner has not accepted/promoted it. CKPT14 remains the canonical scientific and document authority. HEC-RAS remains background literature only.",
+      "evidence": [
+        {
+          "role": "CKPT15_candidate_state",
+          "drive_id": "1fh8pf87fRrrobUfMVadkEPEZGxR_f7lS"
+        },
+        {
+          "role": "CKPT14_authority",
+          "drive_id": "1kq5b4HWehRwVqN2qHfV_wFLX1fNfQuBB"
+        }
+      ],
+      "close_when": "Owner accepts staged changes, independent visual/source QA completed, controlled new release and provider readback."
+    },
+    {
+      "debt_id": "DEBT-SHISHEER-002",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-005",
+      "researcher_slug": "shisheer-kc",
+      "audit_slug": "shisheer-kc",
+      "category": "PRODUCTION_METADATA",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Shisheer supervisor metadata and exact-font production pending",
+      "description": "M05 supervisor role/organization and M11 co-supervisor count/identity unresolved; CKPT14 and PPT-CP06 use controlled preview/non-production fallback while exact TNR production is unverified.",
+      "evidence": [
+        {
+          "role": "project_state",
+          "drive_id": "1kq5b4HWehRwVqN2qHfV_wFLX1fNfQuBB"
+        },
+        {
+          "role": "presentation_milestone",
+          "drive_id": "1HFVXXeARM-oRwJep2nDORMr6SVdodA-q"
+        }
+      ],
+      "close_when": "Verify metadata and font in a governed production build, rerun full render QA and obtain formal signoff."
+    },
+    {
+      "debt_id": "DEBT-SUNIL-001",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-011",
+      "researcher_slug": "sunil-rana",
+      "audit_slug": "sunil-rana",
+      "category": "MODEL_AND_SCIENTIFIC_EVIDENCE",
+      "status": "HOLD",
+      "severity": "HIGH",
+      "title": "Sunil scientific scope and model result validation unresolved",
+      "description": "NBC 105:2025 use does not by itself establish novelty. NLTHA/hysteretic hinges and performance levels lack completed evidence chain, eight-model weights are inconsistent, and ETABS models, ground motion/provenance and supervisory markup are missing.",
+      "evidence": [
+        {
+          "role": "scientific_audit_state",
+          "drive_id": "1yE2FNlDbDTCMfjG5fH13LBcUoVSAhW523JqT2a4uQpg"
+        },
+        {
+          "role": "canonical_scientific_audit",
+          "drive_id": "11YSPAbQHkywACRM19BBXOqgvFOhBC-bm"
+        }
+      ],
+      "close_when": "Researcher supplies original source pack, selects defensible scope (complete/reproduce NLTHA or narrow claims), model/result reconciliation and approved scientific update."
+    },
+    {
+      "debt_id": "DEBT-SUNIL-002",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-011",
+      "researcher_slug": "sunil-rana",
+      "audit_slug": "sunil-rana",
+      "category": "SOURCE_ADMISSION_AND_SUBMISSION",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Sunil new DOCX unpromoted; no final thesis or presentation validated",
+      "description": "Active working v0.1 DOCX exists, with a separately supplied newer DOCX classified as candidate. Compiled thesis output folder is empty and no governed current presentation was verified. Similarity rewrites cannot replace scientific audit.",
+      "evidence": [
+        {
+          "role": "active_v0_1_docx",
+          "drive_id": "1beFNMsWUkMXS-OTnvt1x0Uiud1N4okGg"
+        },
+        {
+          "role": "candidate_docx_not_promoted",
+          "drive_id": "1020_6bkibGtibc6Ec3mycm0PCGW4SvKx"
+        }
+      ],
+      "close_when": "Validate and admit new source, complete scientific QA, build production outputs and record approval and presentation checkpoints."
+    },
+    {
+      "debt_id": "DEBT-FABIN-001",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-001",
+      "researcher_slug": "fabin-gurung",
+      "audit_slug": "fabin-gurung",
+      "category": "ADMIN_SUBMISSION",
+      "status": "OPEN",
+      "severity": "MEDIUM",
+      "title": "Fabin v0.9 working manuscript awaits final administrative authority",
+      "description": "Fabin AEC MSc Structural Engineering v0.9 is controlled QA-PASS but not final submission. Certificate signatory identity/role and final defense/submission date remain unresolved. Structural extension and unreviewed source-ingestion stay outside admitted thesis core.",
+      "evidence": [
+        {
+          "role": "current_v0_9_pdf",
+          "drive_id": "1LBt3R4u35BxhKjOGoX8YflP7zFJutxBk"
+        },
+        {
+          "role": "project_navigation",
+          "drive_id": "1ZnSSqwoOE7wCIWNrUBlCw8w43cqMVL3YRS9Dp1ot-jI"
+        }
+      ],
+      "close_when": "Obtain project/PU authoritative signatory and date, run final version/format/release QA, and provider-read the approved submission artifact."
+    },
+    {
+      "debt_id": "DEBT-MASTER-INDEX-001",
+      "scope": "REPOSITORY",
+      "audit_slug": "master-index",
+      "category": "STALE_DIRECTORY_TITLE",
+      "status": "OPEN",
+      "severity": "LOW",
+      "title": "Master Thesis Directory Rupesh title pointer needs governed synchronization",
+      "description": "Master shared directory still displays Rupesh's older 'Evaluation of Retrofitting Strategies' title. The verified researcher registry and certificate use the user's confirmed 'Seismic Vulnerability Assessment and Retrofitting ... Pokhara Metropolitan City' title. Shared Drive directory was not mutated during read-only audits.",
+      "evidence": [
+        {
+          "role": "shared_master_directory",
+          "drive_id": "1bJW5jmI6N7VzRY77KIsn3B--ngaAsVXI3HdM1c8XXHE"
+        },
+        {
+          "role": "Rupesh_local_certificate",
+          "drive_id": "19r94NO7ugEDTQvNf3FbGEjWcQQuGGq0i"
+        }
+      ],
+      "close_when": "A separate A9-governed PRE/edit-in-place/provider-readback/POST updates exact title in Master Directory without overwriting lineage."
     }
   ]
 }
