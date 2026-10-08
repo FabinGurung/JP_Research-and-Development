@@ -103,6 +103,11 @@ def main():
           ("Presentation PDF",drive.get("presentation_pdf_drive_id")),
           ("Presentation PPTX",drive.get("presentation_pptx_drive_id")),
           ("Word review derivative",drive.get("word_review_derivative_drive_id")),
+          ("Working thesis DOCX",drive.get("working_thesis_docx_drive_id")),
+          ("Unpromoted candidate DOCX",drive.get("candidate_source_docx_drive_id")),
+          ("Scientific audit PDF",drive.get("science_audit_pdf_drive_id")),
+          ("Researcher action PDF",drive.get("researcher_action_pdf_drive_id")),
+          ("Discussion READ FIRST",drive.get("discussion_read_first_drive_id")),
           ("Live thesis Google Doc",drive.get("thesis_google_doc_id")),
           ("Live presentation Google Slides",drive.get("presentation_google_slides_drive_id")),
         ]
