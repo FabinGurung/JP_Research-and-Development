@@ -22,7 +22,7 @@ required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
-if len(rows)!=9: errors.append(f"expected 9 researchers, got {len(rows)}")
+if len(rows)!=11: errors.append(f"expected 11 researchers, got {len(rows)}")
 ids=set(); slugs=set(); lane_names=set()
 for r in rows:
     if r.get("researcher_id") in ids: errors.append("duplicate researcher_id")
@@ -40,7 +40,7 @@ for r in rows:
         if b!=exp: errors.append(f"{r.get('slug')}: {kind} branch mismatch")
         if b in lane_names: errors.append(f"duplicate lane {b}")
         lane_names.add(b)
-if len(lane_names)!=27: errors.append("expected 27 researcher lanes")
+if len(lane_names)!=33: errors.append("expected 33 researcher lanes")
 reg={x.get("branch") for x in branches.get("active_researcher_lanes",[])}
 if reg!=lane_names: errors.append("branch registry active lanes != researcher registry")
 if len(branches.get("archived_legacy",[]))!=45: errors.append("expected 45 original non-main legacy refs")
