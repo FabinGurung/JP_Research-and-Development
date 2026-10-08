@@ -144,14 +144,22 @@ def main():
         "safal-dawadi":"Safal Dawadi",
         "saugat-paneru":"Saugat Paneru",
         "nabin-bista":"Nabin Bista",
-        "krishna-kumar-gupta":"Krishna Kumar Gupta"
+        "krishna-kumar-gupta":"Krishna Kumar Gupta",
+        "shisheer-kc":"Shisheer KC",
+        "sunil-rana":"Sunil Rana",
+        "fabin-gurung":"Fabin Gurung",
+        "master-index":"00 Master Index"
     }
     source_showcase={
         "rural-road-maintenance":("Preferred archived proposal deck","1F-BfaUV5DcHTIO240npPVYuRUNgnaYDc"),
         "safal-dawadi":("v1.9 controlled qualitative review PDF","1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb"),
         "saugat-paneru":("CP114 exact-TNR production manuscript","1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh"),
         "nabin-bista":("Current Google Docs manuscript","1v5QKdtwFVmvl5QVhq1jaWSdKfXj1YidGxNzzpKVu-hU"),
-        "krishna-kumar-gupta":("v0.3.5 working thesis PDF","1zHKtBKkCIDG_fGQvFCLzmLHP7uzJ25x0")
+        "krishna-kumar-gupta":("v0.3.5 working thesis PDF","1zHKtBKkCIDG_fGQvFCLzmLHP7uzJ25x0"),
+        "shisheer-kc":("CKPT14 controlled baseline","1ZjOECL8NKfRKBfcyeyiERN1HEZTK_5_r"),
+        "sunil-rana":("Working v0.1 DOCX","1beFNMsWUkMXS-OTnvt1x0Uiud1N4okGg"),
+        "fabin-gurung":("v0.9 working MSc Structural thesis","1LBt3R4u35BxhKjOGoX8YflP7zFJutxBk"),
+        "master-index":("Thesis-wide control tower","1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A")
     }
     for slug,audit in batch_audits.items():
         display=audited_names[slug]
