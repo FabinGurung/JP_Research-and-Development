@@ -13,7 +13,7 @@ This repository stores **code, machine-readable controls, version history, and G
 - **GitHub Pages:** human-facing researcher/control workspace.
 - **GitHub Actions:** validates the repository policy and deploys `main` only.
 
-Researcher metadata is admitted incrementally through human QA. Rupesh Man Pradhan now has a user-verified thesis title; his remaining Drive/output pointers stay on hold. Other unresolved researcher metadata remains on QA hold. Existing verified web-module history is tracked separately and does not create website branches for researchers who do not have websites.
+Researcher metadata is admitted incrementally through live Drive evidence and human QA. The current registry contains **11 distinct researcher identities** and **33 core researcher lanes**. Safal Dawadi (RSH-010; MSc Construction Management) and Safal Thapa (RSH-004) are separate people and must never be conflated. Sunil Rana is RSH-011. Some manuscripts, Discussion/Presentation outputs, scientific source admissions, and final approvals remain on explicitly registered holds. The direct-child `02_Thesis` Drive audit covers all 18 currently observed folders; the folder audit is not itself scientific submission approval. Existing optional website modules remain separate.
 
 ## Live site
 
