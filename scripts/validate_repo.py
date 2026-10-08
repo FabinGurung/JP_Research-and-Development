@@ -12,9 +12,11 @@ websites=load("registry/websites.json")
 debts=load("registry/debts.json")
 manoj_audit=load("registry/drive-audits/02-thesis/manoj-bhandari.json")
 binay_audit=load("registry/drive-audits/02-thesis/binay-karki.json")
+avishek_audit=load("registry/drive-audits/02-thesis/avishek-kumar-mandal.json")
+root_rescan=load("registry/drive-audits/02-thesis/root-rescan-20261008.json")
 branches=load("registry/branch-registry.json")
 policy=load("controls/repository.control.json")
-required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/drive-audits/02-thesis/manoj-bhandari.json","registry/drive-audits/02-thesis/binay-karki.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
+required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/drive-audits/02-thesis/manoj-bhandari.json","registry/drive-audits/02-thesis/binay-karki.json","registry/drive-audits/02-thesis/avishek-kumar-mandal.json","registry/drive-audits/02-thesis/root-rescan-20261008.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
@@ -70,12 +72,20 @@ for d in debt_rows:
     if d.get("scope")=="RESEARCHER":
         rid=d.get("researcher_id")
         if rid not in ids: errors.append(f"{did}: unknown researcher_id {rid}")
-    if d.get("audit_slug") and d.get("audit_slug") not in ("manoj-bhandari",):
+    if d.get("audit_slug") and d.get("audit_slug") not in ("manoj-bhandari","avishek-kumar-mandal"):
         errors.append(f"{did}: unregistered audit_slug")
 if manoj_audit.get("researcher_workflow",{}).get("registered_in_repository") is not False:
     errors.append("Manoj audit cannot be promoted as a registered researcher without independent authority")
 if binay_audit.get("researcher_id")!="RSH-006":
     errors.append("Binay audit researcher identity mismatch")
+if avishek_audit.get("classification")!="FIRST_DRAFT_SOURCE_INTAKE__ARCHIVED_CONVERSION_REFERENCE__NO_PROMOTED_ACTIVE_THESIS_AUTHORITY":
+    errors.append("Avishek active-authority scope drift")
+if root_rescan.get("current_inventory_count")!=len(root_rescan.get("children",[])):
+    errors.append("02_Thesis rescan child-count mismatch")
+if not any(x.get("name")=="Thesis_Safal_Dawadi_Rework_CM" and x.get("position")==11 for x in root_rescan.get("children",[])):
+    errors.append("newly observed Safal Dawadi child missing from rescan")
+if not any(d.get("debt_id")=="DEBT-AVISHEK-001" and d.get("status")=="HOLD" for d in debt_rows):
+    errors.append("Avishek source-intake hold missing")
 if not any(d.get("debt_id")=="DEBT-MANOJ-001" and d.get("status")=="HOLD" for d in debt_rows):
     errors.append("Manoj thesis-authority HOLD missing")
 if not any(d.get("debt_id")=="DEBT-OPS-PAGES-001" and d.get("status")=="CLOSED" for d in debt_rows):
@@ -99,7 +109,7 @@ if args.site:
     expected += [f"controls/{x}/index.html" for x in ("discussion","latex","presentation","website")]
     debt_researcher_ids={d.get("researcher_id") for d in debt_rows if d.get("status") in ("OPEN","HOLD") and d.get("researcher_id")}
     expected += [f"researchers/{r['slug']}/debts/index.html" for r in rows if r.get("researcher_id") in debt_researcher_ids]
-    expected += ["audits/02-thesis/manoj-bhandari/index.html","audits/02-thesis/manoj-bhandari/debts/index.html"]
+    expected += ["audits/02-thesis/index.html","audits/02-thesis/manoj-bhandari/index.html","audits/02-thesis/manoj-bhandari/debts/index.html","audits/02-thesis/avishek-kumar-mandal/index.html","audits/02-thesis/avishek-kumar-mandal/debts/index.html"]
     for rel in expected:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
 if errors:
