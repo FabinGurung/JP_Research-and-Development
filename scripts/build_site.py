@@ -14,6 +14,15 @@ def branch_url(branch): return f"{REPO_URL}/tree/{quote(branch, safe='/')}"
 def drive_url(file_id):
     return f"https://drive.google.com/open?id={file_id}" if file_id else None
 
+def evidence_html(debt):
+    parts=[]
+    for e in debt.get("evidence",[]):
+        u=drive_url(e.get("drive_id")) if e.get("drive_id") else e.get("url")
+        if not u or not str(u).startswith("https://"):
+            continue
+        parts.append(f'<li>{esc(e.get("role"))}: <a href="{esc(u)}">Open evidence</a></li>')
+    return "".join(parts) or "<li>No external evidence pointer required.</li>"
+
 def shell(title, body, depth=0):
     prefix="../"*depth
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}how-to/index.html">How to</a></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
@@ -37,6 +46,7 @@ def main():
       "Website":load(Path("controls/website.control.json"))
     }
     debts=load(Path("registry/debts.json"))["debts"]
+    manoj_audit=load(Path("registry/drive-audits/02-thesis/manoj-bhandari.json"))
     (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css")
     (out/".nojekyll").write_text("",encoding="utf-8")
     home_cards="".join(f'<article class="card"><span class="badge">{esc("TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "ON HOLD · HUMAN QA")}</span><h3>{esc(r["display_name"])}</h3><p>{esc(r.get("topic_title") or "Topic/title and Drive pointers are intentionally unset.")}</p><a href="researchers/{esc(r["slug"])}/index.html">Open researcher workspace →</a></article>' for r in researchers)
@@ -81,6 +91,9 @@ def main():
           ("Working thesis PDF",drive.get("working_pdf_drive_id")),
           ("LaTeX source",drive.get("latex_source_drive_id")),
           ("LaTeX source package",drive.get("latex_source_package_drive_id")),
+          ("Formatting-only preview PDF (NON-PRODUCTION)",drive.get("preview_pdf_drive_id")),
+          ("Formatting preview source ZIP",drive.get("preview_latex_source_package_drive_id")),
+          ("Researcher review matrix",drive.get("discussion_review_matrix_drive_id")),
           ("Presentation PDF",drive.get("presentation_pdf_drive_id")),
           ("Presentation PPTX",drive.get("presentation_pptx_drive_id")),
           ("Word review derivative",drive.get("word_review_derivative_drive_id")),
@@ -91,24 +104,35 @@ def main():
         if researcher_debts:
             debt_cards=""
             for d in researcher_debts:
-                evidence="".join(
-                    f'<li>{esc(e.get("role"))}: <a href="{drive_url(e.get("drive_id"))}">Open evidence</a></li>'
-                    for e in d.get("evidence",[]) if e.get("drive_id")
-                ) or "<li>No external evidence pointer required.</li>"
+                evidence=evidence_html(d)
                 debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><p><strong>Category:</strong> {esc(d["category"])} · <strong>Severity:</strong> {esc(d["severity"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
             debt_body=f'<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])} · governed debt</div><h1>{esc(r["display_name"])} — Research Debts</h1><p class="lead">Only verified open/held debt is listed here. Closing an item requires provider-read evidence and an updated registry state.</p><div class="grid">{debt_cards}</div><p><a href="../index.html">← Back to researcher workspace</a></p></main>'
             write(out,f'researchers/{r["slug"]}/debts/index.html',shell(f'{r["display_name"]} Debts',debt_body,3))
-    global_debt_cards=""
+    manoj_debts=[d for d in debts if d.get("audit_slug")=="manoj-bhandari" and d.get("status") in ("OPEN","HOLD")]
+    audit_root="audits/02-thesis/manoj-bhandari/"
+    manoj_certificate=manoj_audit["verified_certificate"]
+    audit_links=f'<a href="{drive_url(manoj_certificate["stable_current_pdf_drive_id"])}">Open current certificate PDF →</a>'
+    audit_summary=f'<main class="wrap hero"><div class="eyebrow">Direct-child Drive audit · certificate only</div><h1>Manoj Bhandari</h1><p class="lead">Verified certificate authority: {esc(manoj_certificate["title_from_certificate_not_separately_verified_thesis_current"])}</p><p>{esc(manoj_certificate["state"])}</p><div class="notice">No independently verified active thesis workspace was found in the audited child. A certificate alone does not authorize a researcher lane or site.</div><p>{audit_links}</p><p><a href="debts/index.html">Review Manoj authority hold →</a></p></main>'
+    write(out,audit_root+"index.html",shell("Manoj Bhandari Audit",audit_summary,3))
+    manoj_cards="".join(f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence_html(d)}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>' for d in manoj_debts)
+    manoj_body=f'<main class="wrap hero"><div class="eyebrow">Direct-child audit · governed hold</div><h1>Manoj Bhandari — Authority Debts</h1><p class="lead">This is not an active researcher workspace. No thesis source, Discussion, Presentation or website may be invented.</p><div class="grid">{manoj_cards}</div><p><a href="../index.html">← Back to Manoj audit</a></p></main>'
+    write(out,audit_root+"debts/index.html",shell("Manoj Bhandari Debts",manoj_body,4))
+    active_debt_cards=""
+    resolved_debt_cards=""
     for d in debts:
-        evidence="".join(
-            f'<li>{esc(e.get("role"))}: <a href="{drive_url(e.get("drive_id"))}">Open evidence</a></li>'
-            for e in d.get("evidence",[]) if e.get("drive_id")
-        ) or "<li>No external evidence pointer required.</li>"
-        owner=f' · {esc(d.get("researcher_slug"))}' if d.get("researcher_slug") else ""
-        global_debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["debt_id"])}{owner}</h3><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
-    debt_page=f'<main class="wrap hero"><div class="eyebrow">Research debt / holds</div><h1>Open debts and governed holds</h1><p class="lead">This page is the visible queue for known incomplete work. HOLD items are not permission to resume them.</p><div class="grid">{global_debt_cards}</div></main>'
+        owner=f' · {esc(d.get("researcher_slug") or d.get("audit_slug"))}' if d.get("researcher_slug") or d.get("audit_slug") else ""
+        detail=""
+        if d.get("audit_slug")=="manoj-bhandari":
+            detail='<p><a href="../audits/02-thesis/manoj-bhandari/debts/index.html">Open Manoj audit debt subpage →</a></p>'
+        elif d.get("researcher_slug"):
+            detail=f'<p><a href="../researchers/{esc(d["researcher_slug"])}/debts/index.html">Open researcher debt subpage →</a></p>'
+        card=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["debt_id"])}{owner}</h3><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence_html(d)}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p>{detail if d["status"]!="CLOSED" else ""}</article>'
+        if d["status"]=="CLOSED": resolved_debt_cards+=card
+        else: active_debt_cards+=card
+    debt_page=f'<main class="wrap hero"><div class="eyebrow">Research debt / holds</div><h1>Open debts and governed holds</h1><p class="lead">Only OPEN/HOLD items require action. HOLD items are not permission to resume them.</p><div class="grid">{active_debt_cards}</div><section class="section"><h2>Resolved readbacks and closed items</h2><div class="grid">{resolved_debt_cards}</div></section></main>'
     write(out,"debts/index.html",shell("Research Debts",debt_page,1))
     workspace=f'''<main class="wrap hero"><div class="eyebrow">Repository field</div><h1>Workspace</h1><p class="lead">This repository is a code-and-pointer control plane for R&D. It is not the document warehouse.</p><section class="section"><div class="kvs"><div>Main</div><div>Portal code, shared controls, researcher registry, schemas, Drive/GitHub pointers.</div><div>Discussion lane</div><div>Google Doc ID/link and automation metadata only; discussion prose remains in Drive.</div><div>LaTeX lane</div><div>.tex/.bib/build code; compiled PDF is uploaded to Drive.</div><div>Presentation lane</div><div>TypeScript/PptxGenJS/YAML/JSON/HTML/CSS/SVG; generated PPTX/PDF is uploaded to Drive.</div><div>Archive</div><div>Git history plus legacy branches classified read-only.</div></div></section><section class="section"><h2>Branch state</h2><p>{len(branches["archived_legacy"])} legacy refs are archived under <strong>archive/</strong>. The model defines {len(branches["active_researcher_lanes"])} universal researcher lanes plus {len(branches.get("active_website_modules",[]))} verified optional website lanes.</p></section></main>'''
+    workspace=workspace.replace("</main>",'<section class="section"><h2>Additional audited Drive children</h2><p><a href="../audits/02-thesis/manoj-bhandari/index.html">Manoj Bhandari — certificate-only audit and authority hold →</a></p></section></main>')
     write(out,"workspace/index.html",shell("Workspace",workspace,1))
     cards=""
     for name,c in controls.items():
