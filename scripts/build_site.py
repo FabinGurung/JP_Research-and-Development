@@ -49,6 +49,10 @@ def main():
     manoj_audit=load(Path("registry/drive-audits/02-thesis/manoj-bhandari.json"))
     avishek_audit=load(Path("registry/drive-audits/02-thesis/avishek-kumar-mandal.json"))
     root_rescan=load(Path("registry/drive-audits/02-thesis/root-rescan-20261008.json"))
+    batch_audits={
+        slug:load(Path(f"registry/drive-audits/02-thesis/{slug}.json"))
+        for slug in ("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta")
+    }
     (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css")
     (out/".nojekyll").write_text("",encoding="utf-8")
     home_cards="".join(f'<article class="card"><span class="badge">{esc("TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "ON HOLD · HUMAN QA")}</span><h3>{esc(r["display_name"])}</h3><p>{esc(r.get("topic_title") or "Topic/title and Drive pointers are intentionally unset.")}</p><a href="researchers/{esc(r["slug"])}/index.html">Open researcher workspace →</a></article>' for r in researchers)
@@ -99,6 +103,8 @@ def main():
           ("Presentation PDF",drive.get("presentation_pdf_drive_id")),
           ("Presentation PPTX",drive.get("presentation_pptx_drive_id")),
           ("Word review derivative",drive.get("word_review_derivative_drive_id")),
+          ("Live thesis Google Doc",drive.get("thesis_google_doc_id")),
+          ("Live presentation Google Slides",drive.get("presentation_google_slides_drive_id")),
         ]
         links="".join(f'<div>{esc(label)}</div><div>{f"""<a href="{drive_url(fid)}">Open Drive file</a>""" if fid else """<span class="badge">ON HOLD</span>"""}</div>' for label,fid in rows)
         body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">{esc(status_label)}</span></p><div class="notice">{esc(notice_text)}</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>{esc(title_value)}</div><div>Short name</div><div>{esc(r.get("topic_short_name") or "ON HOLD")}</div></div></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}{debt_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
@@ -132,12 +138,43 @@ def main():
     extra_text=", ".join(x["name"] for x in extra) or "None"
     root_body=f'<main class="wrap hero"><div class="eyebrow">02_Thesis · direct-child rescan</div><h1>Drive folder inventory</h1><p class="lead">{root_rescan["current_inventory_count"]} direct children. Newly observed vs previous inventory: {esc(extra_text)}. An inventory addition does not prove a new creation date.</p><section class="section"><h2>Provider order</h2><table><thead><tr><th>#</th><th>Folder</th><th>Drive ID</th></tr></thead><tbody>{inventory_rows}</tbody></table></section><p><a href="manoj-bhandari/index.html">Manoj audit</a> · <a href="avishek-kumar-mandal/index.html">Avishek audit</a></p></main>'
     write(out,"audits/02-thesis/index.html",shell("02 Thesis Inventory",root_body,2))
+    # Independent direct-child audit surfaces; these do not create researcher branches.
+    audited_names={
+        "rural-road-maintenance":"Rural Road Maintenance",
+        "safal-dawadi":"Safal Dawadi",
+        "saugat-paneru":"Saugat Paneru",
+        "nabin-bista":"Nabin Bista",
+        "krishna-kumar-gupta":"Krishna Kumar Gupta"
+    }
+    source_showcase={
+        "rural-road-maintenance":("Preferred archived proposal deck","1F-BfaUV5DcHTIO240npPVYuRUNgnaYDc"),
+        "safal-dawadi":("v1.9 controlled qualitative review PDF","1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb"),
+        "saugat-paneru":("CP114 exact-TNR production manuscript","1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh"),
+        "nabin-bista":("Current Google Docs manuscript","1v5QKdtwFVmvl5QVhq1jaWSdKfXj1YidGxNzzpKVu-hU"),
+        "krishna-kumar-gupta":("v0.3.5 working thesis PDF","1zHKtBKkCIDG_fGQvFCLzmLHP7uzJ25x0")
+    }
+    for slug,audit in batch_audits.items():
+        display=audited_names[slug]
+        title=audit.get("title") or audit.get("title_from_current_pdf") or audit.get("title_from_historical_proposal") or "Unverified title"
+        status=audit.get("classification","AUDITED")
+        items=audit.get("unresolved",[])
+        debt_rows=[d for d in debts if d.get("audit_slug")==slug or d.get("researcher_id")==audit.get("researcher_id") and audit.get("researcher_id")]
+        count=len(debt_rows)
+        label,source_id=source_showcase[slug]
+        warning='<div class="notice">This is a provider-grounded classification, not approval to alter a scientific manuscript, enroll a researcher, or release a submission.</div>'
+        open_items="".join(f'<li>{esc(x)}</li>' for x in items)
+        root=f"audits/02-thesis/{slug}/"
+        body=f'<main class="wrap hero"><div class="eyebrow">Drive audit · {esc(audit["direct_child"])}</div><h1>{esc(display)}</h1><p class="lead">{esc(title)}</p><p><span class="badge">{esc(status)}</span></p>{warning}<section class="section"><h2>Verified source</h2><p><a href="{drive_url(source_id)}">{esc(label)} →</a></p><p><a href="https://drive.google.com/drive/folders/{esc(audit["root_folder_id"])}">Open original Drive folder →</a></p></section><section class="section"><h2>Open boundaries</h2><ul>{open_items}</ul></section><p><a href="debts/index.html">{count} associated debt item(s) — open debt subpage →</a></p></main>'
+        write(out,root+"index.html",shell(f"{display} Audit",body,3))
+        cards="".join(f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["debt_id"])} — {esc(d["title"])}</h3><p>{esc(d["description"])}</p><ul>{evidence_html(d)}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>' for d in debt_rows)
+        db=f'<main class="wrap hero"><div class="eyebrow">Direct-child audit · governed debt register</div><h1>{esc(display)} — Research Debts</h1><p class="lead">Scientific and administrative holds are explicit. This page does not authorize resuming protected work.</p><div class="grid">{cards}</div><p><a href="../index.html">← Back to {esc(display)} audit</a></p></main>'
+        write(out,root+"debts/index.html",shell(f"{display} Debts",db,4))
     active_debt_cards=""
     resolved_debt_cards=""
     for d in debts:
         owner=f' · {esc(d.get("researcher_slug") or d.get("audit_slug"))}' if d.get("researcher_slug") or d.get("audit_slug") else ""
         detail=""
-        if d.get("audit_slug") in ("manoj-bhandari","avishek-kumar-mandal"):
+        if d.get("audit_slug") in ("manoj-bhandari","avishek-kumar-mandal","rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta"):
             detail=f'<p><a href="../audits/02-thesis/{esc(d["audit_slug"])}/debts/index.html">Open direct-child audit debt subpage →</a></p>'
         elif d.get("researcher_slug"):
             detail=f'<p><a href="../researchers/{esc(d["researcher_slug"])}/debts/index.html">Open researcher debt subpage →</a></p>'
@@ -147,7 +184,7 @@ def main():
     debt_page=f'<main class="wrap hero"><div class="eyebrow">Research debt / holds</div><h1>Open debts and governed holds</h1><p class="lead">Only OPEN/HOLD items require action. HOLD items are not permission to resume them.</p><div class="grid">{active_debt_cards}</div><section class="section"><h2>Resolved readbacks and closed items</h2><div class="grid">{resolved_debt_cards}</div></section></main>'
     write(out,"debts/index.html",shell("Research Debts",debt_page,1))
     workspace=f'''<main class="wrap hero"><div class="eyebrow">Repository field</div><h1>Workspace</h1><p class="lead">This repository is a code-and-pointer control plane for R&D. It is not the document warehouse.</p><section class="section"><div class="kvs"><div>Main</div><div>Portal code, shared controls, researcher registry, schemas, Drive/GitHub pointers.</div><div>Discussion lane</div><div>Google Doc ID/link and automation metadata only; discussion prose remains in Drive.</div><div>LaTeX lane</div><div>.tex/.bib/build code; compiled PDF is uploaded to Drive.</div><div>Presentation lane</div><div>TypeScript/PptxGenJS/YAML/JSON/HTML/CSS/SVG; generated PPTX/PDF is uploaded to Drive.</div><div>Archive</div><div>Git history plus legacy branches classified read-only.</div></div></section><section class="section"><h2>Branch state</h2><p>{len(branches["archived_legacy"])} legacy refs are archived under <strong>archive/</strong>. The model defines {len(branches["active_researcher_lanes"])} universal researcher lanes plus {len(branches.get("active_website_modules",[]))} verified optional website lanes.</p></section></main>'''
-    workspace=workspace.replace("</main>",'<section class="section"><h2>Additional audited Drive children</h2><p><a href="../audits/02-thesis/index.html">02_Thesis — rescan inventory (18 direct children) →</a></p><p><a href="../audits/02-thesis/manoj-bhandari/index.html">Manoj Bhandari — certificate-only audit →</a></p><p><a href="../audits/02-thesis/avishek-kumar-mandal/index.html">Avishek Kumar Mandal — first-draft intake audit →</a></p></section></main>')
+    workspace=workspace.replace("</main>",'<section class="section"><h2>Additional audited Drive children</h2><p><a href="../audits/02-thesis/index.html">02_Thesis — rescan inventory (18 direct children) →</a></p><p><a href="../audits/02-thesis/manoj-bhandari/index.html">Manoj Bhandari — certificate-only audit →</a></p><p><a href="../audits/02-thesis/avishek-kumar-mandal/index.html">Avishek Kumar Mandal — first-draft intake audit →</a></p><p><a href="../audits/02-thesis/rural-road-maintenance/index.html">Rural Road Maintenance — archive-intake audit →</a></p><p><a href="../audits/02-thesis/safal-dawadi/index.html">Safal Dawadi — CM thesis audit →</a></p><p><a href="../audits/02-thesis/saugat-paneru/index.html">Saugat Paneru — CP114 audit →</a></p><p><a href="../audits/02-thesis/nabin-bista/index.html">Nabin Bista — live Docs audit →</a></p><p><a href="../audits/02-thesis/krishna-kumar-gupta/index.html">Krishna Kumar Gupta — v0.3.5 audit →</a></p></section></main>')
     write(out,"workspace/index.html",shell("Workspace",workspace,1))
     cards=""
     for name,c in controls.items():
