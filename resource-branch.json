@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "branch_name": "resource/control/latex/v002-20261009",
+  "release": "v002-20261009",
+  "scope": "R&D shared executable LaTeX control",
+  "source_path": "controls/latex.control.json",
+  "safal_project_override": "controls/projects/safal-dawadi.latex.json",
+  "source_commit_base": "1e373fff136ec311a58e209fa7780c0334a25e24",
+  "status": "CONTROL_SOURCE_VERSION_ONLY__NO_MANUSCRIPT_SOURCE_AND_NO_PDF",
+  "policy": "IMMUTABLE_VERSION_REF_DO_NOT_FORCE_UPDATE__COMPILATION_BY_ADMITTED_SOURCE_ONLY",
+  "safal_researcher_lanes_unchanged": 3
+}
