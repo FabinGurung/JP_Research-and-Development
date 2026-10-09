@@ -3,13 +3,13 @@
   "inventory_id": "RD-BRANCH-INVENTORY-20261009-v002",
   "observed_date": "2026-10-09",
   "repository_full_name": "FabinGurung/JP_Research-and-Development",
-  "observed_branch_count": 103,
+  "observed_branch_count": 104,
   "counts": {
     "archive": 49,
     "production": 1,
     "researcher-template": 33,
     "website-marker": 2,
-    "resource": 15,
+    "resource": 16,
     "snapshot": 3
   },
   "branches": [
@@ -1156,6 +1156,19 @@
       "alias_of": null,
       "protected": false,
       "observation": "LIVE_GITHUB_BRANCH_READBACK_2026-10-09"
+    },
+    {
+      "name": "resource/control/latex/v003-20261009",
+      "commit_sha": "7e7e93f958273b4588a7a8535da41afa3cada7bc",
+      "category": "resource",
+      "purpose": "Versioned shared LaTeX v1.2.0 governance, source not admitted",
+      "primary_source_path": "controls/latex/README.md",
+      "source_status": "CONTROL_RELEASE_NOT_SCIENTIFIC_RELEASE",
+      "version": "v003",
+      "owner": "latex",
+      "alias_of": null,
+      "protected": false,
+      "observation": "PROVIDER_READBACK_2026-10-09"
     },
     {
       "name": "resource/control/presentation/v001-20261009",

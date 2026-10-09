@@ -56,13 +56,13 @@ if not {"main","snapshot/20261009/rnd-main/v001-pre-rose-dawn"} <= {x.get("name"
     errors.append("production/initial rollback refs missing from branch inventory")
 if len([x for x in observed_branch_rows if x.get("category")=="researcher-template"])!=33:
     errors.append("legacy 33 researcher lanes must not be falsely promoted to source")
-if len([x for x in observed_branch_rows if x.get("category")=="resource"])!=15:
-    errors.append("15 versioned resource branches missing from inventory")
+if len([x for x in observed_branch_rows if x.get("category")=="resource"])!=16:
+    errors.append("16 versioned resource branches missing from inventory")
 if latex_policy.get("project_overrides",{}).get("safal-dawadi")!="controls/projects/safal-dawadi.latex.json":
     errors.append("Safal scoped LaTeX control not routed")
 if safal_policy.get("researcher_id")!="RSH-010":
     errors.append("Safal scoped LaTeX researcher mismatch")
-if safal_policy.get("branches",{}).get("shared_latex_control_release")!="resource/control/latex/v002-20261009":
+if safal_policy.get("branches",{}).get("shared_latex_control_release")!="resource/control/latex/v003-20261009":
     errors.append("shared LaTeX v002 version not linked from Safal")
 if safal_policy.get("gates",{}).get("source_admission")!="HOLD":
     errors.append("Safal v1.9 Git admission may not be claimed")

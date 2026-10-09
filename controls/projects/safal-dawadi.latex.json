@@ -48,7 +48,7 @@
     "observed_state": "THREE_LEGACY_TEMPLATE_REFS_NOT_IMPORTED_SOURCE",
     "planned_versioned_source": "resource/latex/safal-dawadi/v001-20261009",
     "versioned_source_created": false,
-    "shared_latex_control_release": "resource/control/latex/v002-20261009"
+    "shared_latex_control_release": "resource/control/latex/v003-20261009"
   },
   "build": {
     "source_root": "researchers/safal-dawadi/latex",

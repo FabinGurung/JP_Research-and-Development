@@ -38,5 +38,8 @@
     "local_last_main_cursor_reported": 5,
     "main_registry_row_verified": "seq2_consumed2",
     "classification": "CROSS_LANE_RECONCILIATION_HOLD"
-  }
+  },
+  "control_release_ref": "resource/control/latex/v003-20261009",
+  "control_release_sha": "7e7e93f958273b4588a7a8535da41afa3cada7bc",
+  "control_release_status": "VERIFIED_GIT_SOURCE_REF__NOT_FULL_PU_RULE_PARITY"
 }
