@@ -281,6 +281,22 @@ for record in status_registry.get("records",[]):
 owner_check=subprocess.run([sys.executable,str(ROOT/"scripts/researchers/generate_prompts.py"),"--check"],cwd=ROOT,text=True,capture_output=True)
 if owner_check.returncode:
     errors.append("11 generated researcher prompts are out of sync: "+(owner_check.stdout+owner_check.stderr)[-1800:])
+# Public prompt browser must remain a copy-only frontend, never an execution backend.
+if args.site:
+    entry=ROOT/args.site/"owner-prompts/index.html"
+    if not entry.is_file():
+        errors.append("Owner prompt reading desk index missing")
+    for row in status_registry.get("records",[]):
+        path=ROOT/args.site/"owner-prompts"/row["slug"]/"index.html"
+        if not path.is_file():
+            errors.append("Owner prompt page absent "+row["researcher_id"])
+            continue
+        txt=path.read_text(encoding="utf-8")
+        for marker in ("data-copy-owner-prompt","readonly","NO DELETE"):
+            if marker not in txt:
+                errors.append("Owner prompt page lacks safeguard "+row["researcher_id"]+" "+marker)
+    if not (ROOT/args.site/"assets/prompt-copy.js").is_file():
+        errors.append("Owner prompt copy script was not deployed")
 if args.site:
     index=ROOT/args.site/"index.html"
     thesis=ROOT/args.site/"thesis-infrastructure/index.html"
@@ -294,7 +310,7 @@ if args.site:
         for item in status_registry["records"]:
             if item["prompt_path"].split("/")[-1] not in page:
                 errors.append("Researcher owner prompt absent from thesis portal: "+item["researcher_id"])
-for path in ("web/living-hero.html","web/motion.js","web/styles.css","prompts/researcher_owner_execution_master.md","scripts/researchers/generate_prompts.py"):
+for path in ("web/living-hero.html","web/motion.js","web/prompt-copy.js","web/styles.css","prompts/researcher_owner_execution_master.md","scripts/researchers/generate_prompts.py","schemas/researcher-migration-status.schema.json","controls/website-living-library.json"):
     if not (ROOT/path).is_file(): errors.append("theme or owner prompt file missing: "+path)
 # Syntax and executable HOLD/PRESENT source-gate regression: green CI must NOT be construed as PDF certified.
 for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/researchers/generate_prompts.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):

@@ -228,5 +228,10 @@
   "theme": "LIVING_RESEARCH_LIBRARY_V2_SELF_CONTAINED_WINGED_BOOK",
   "theme_motion": "CSS_ANIMATION__REDUCED_MOTION__USER_PAUSE__VISIBILITY_IDLE",
   "theme_entry": "web/living-hero.html",
-  "theme_palette": "PARCHMENT_FOREST_DAY__READING_ROOM_DUSK"
+  "theme_palette": "PARCHMENT_FOREST_DAY__READING_ROOM_DUSK",
+  "owner_prompt_site": "owner-prompts/index.html",
+  "owner_prompt_site_pages": 11,
+  "owner_prompt_copy": "CLIENT_SIDE_ONLY_NO_AUTOMATED_EXECUTION",
+  "theme_policy": "controls/website-living-library.json",
+  "owner_migration_status_schema": "schemas/researcher-migration-status.schema.json"
 }
