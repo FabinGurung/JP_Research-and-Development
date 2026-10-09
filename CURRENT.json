@@ -219,5 +219,14 @@
   "document_automation": "READ_ONLY_PLANNER__UNIVERSAL_PREFLIGHT__AUTHORIZED_LINUX_COMPILER__PDF_TECHNICAL_QA",
   "document_automation_certification": "CODE_QA_ONLY__FULL_PU_144_RULE_PDF_QA_HOLD",
   "thesis_physical_migrations": "NONE",
-  "thesis_a9_local_main": "NOT_REGISTERED_OR_ACKED_IN_THIS_GITHUB_RUN"
+  "thesis_a9_local_main": "NOT_REGISTERED_OR_ACKED_IN_THIS_GITHUB_RUN",
+  "researcher_owner_migration_control": "controls/researcher-migration-rules.json",
+  "researcher_owner_migration_registry": "registry/researcher-migration-status.json",
+  "researcher_owner_prompts": "prompts/researchers/",
+  "researcher_owner_prompts_count": 11,
+  "researcher_owner_migration_state": "AWAITING_INDIVIDUAL_USER_PASTE__NO_CENTRAL_DRIVE_CHANGES",
+  "theme": "LIVING_RESEARCH_LIBRARY_V2_SELF_CONTAINED_WINGED_BOOK",
+  "theme_motion": "CSS_ANIMATION__REDUCED_MOTION__USER_PAUSE__VISIBILITY_IDLE",
+  "theme_entry": "web/living-hero.html",
+  "theme_palette": "PARCHMENT_FOREST_DAY__READING_ROOM_DUSK"
 }

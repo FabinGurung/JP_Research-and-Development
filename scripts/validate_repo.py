@@ -265,8 +265,39 @@ if args.site:
     for required_route in ("thesis-infrastructure/index.html","data/researcher-folder-roles.json","data/latex-build-profiles.json"):
         if not (ROOT/args.site/required_route).is_file():
             errors.append("thesis infrastructure website route/data missing: "+required_route)
+# Owner-only migration controls: prompt existence is NOT a Drive mutation.
+owner=load("controls/researcher-migration-rules.json")
+status_registry=load("registry/researcher-migration-status.json")
+if owner.get("trigger")!="USER_PASTES_EXACT_RESEARCHER_PROMPT_IN_OWNING_RESEARCHER_CHAT":
+    errors.append("Owner-only execution trigger was weakened")
+if len(status_registry.get("records",[]))!=11:
+    errors.append("Missing one or more owner migration records")
+for record in status_registry.get("records",[]):
+    if record.get("user_trigger_observed") or record.get("drive_deletes")!=0 or record.get("main_ack")!="NOT_ATTEMPTED":
+        errors.append("Unsafe or falsely executed migration status "+str(record.get("researcher_id")))
+    prompt=record.get("prompt_path","")
+    if not prompt.startswith("prompts/researchers/") or not (ROOT/prompt).is_file():
+        errors.append("Missing opt-in researcher prompt "+prompt)
+owner_check=subprocess.run([sys.executable,str(ROOT/"scripts/researchers/generate_prompts.py"),"--check"],cwd=ROOT,text=True,capture_output=True)
+if owner_check.returncode:
+    errors.append("11 generated researcher prompts are out of sync: "+(owner_check.stdout+owner_check.stderr)[-1800:])
+if args.site:
+    index=ROOT/args.site/"index.html"
+    thesis=ROOT/args.site/"thesis-infrastructure/index.html"
+    if index.is_file():
+        homepage=index.read_text(encoding="utf-8")
+        for text_needed in ("data-winged-book","data-motion-toggle","Where curiosity","assets/motion.js"):
+            if text_needed not in homepage:
+                errors.append("Living library hero missing "+text_needed)
+    if thesis.is_file():
+        page=thesis.read_text(encoding="utf-8")
+        for item in status_registry["records"]:
+            if item["prompt_path"].split("/")[-1] not in page:
+                errors.append("Researcher owner prompt absent from thesis portal: "+item["researcher_id"])
+for path in ("web/living-hero.html","web/motion.js","web/styles.css","prompts/researcher_owner_execution_master.md","scripts/researchers/generate_prompts.py"):
+    if not (ROOT/path).is_file(): errors.append("theme or owner prompt file missing: "+path)
 # Syntax and executable HOLD/PRESENT source-gate regression: green CI must NOT be construed as PDF certified.
-for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
+for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/researchers/generate_prompts.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
     try:
         ast.parse((ROOT/script).read_text(encoding="utf-8"),filename=script)
     except (SyntaxError,OSError) as e:

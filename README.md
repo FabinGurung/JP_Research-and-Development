@@ -96,3 +96,9 @@ The [public control page](https://fabingurung.github.io/JP_Research-and-Developm
 
 - [Authorized XeLaTeX/Biber generic compiler](scripts/latex/universal_compile.py) and [build procedure](docs/UNIVERSAL_THESIS_BUILD_READ_FIRST_20261009.md): dry run by default; real PDF only on explicit owning project authorization.
 - [Governed infrastructure checkpoint](docs/THESIS_INFRASTRUCTURE_RELEASE_20261009.md) and [Git lineage](registry/thesis-infrastructure-run-log.json). This is NOT an A9 Main ACK or a 144-rule PDF certificate.
+
+## Living Research Library v2 and owner-only migration handovers
+
+The [illustrated homepage](https://fabingurung.github.io/JP_Research-and-Development/) now has a self-contained, CSS-animated winged book, parchment/forest day theme, optional dark reading room, pause/reduced-motion support. It requires **no Three.js dependency**, remote images, or licensed fonts. Older standalone demos remain unchanged.
+
+The [11 fully resolved researcher prompts](prompts/researchers/) are inert in GitHub: **only pasting the correct one into its owner's original researcher chat activates that owner's bounded, non-destructive migration**. All prompts inherit [central zero-delete migration rules](controls/researcher-migration-rules.json) and reproduce from [one master](prompts/researcher_owner_execution_master.md) using [the generation checker](scripts/researchers/generate_prompts.py). The [initial migration-status registry](registry/researcher-migration-status.json) has no started owner runs. RSH-004 has no verified Drive root and remains READ-ONLY HOLD. No automatic A9 Main ACK.

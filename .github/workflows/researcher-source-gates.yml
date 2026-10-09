@@ -11,6 +11,9 @@ on:
       - 'schemas/researcher-folder-contract.schema.json'
       - 'scripts/latex/**'
       - 'scripts/researchers/**'
+      - 'prompts/**'
+      - 'registry/researcher-migration-status.json'
+      - 'controls/researcher-migration-rules.json'
       - '.github/workflows/researcher-source-gates.yml'
   pull_request:
     branches: [main]
@@ -21,6 +24,9 @@ on:
       - 'registry/latex-build-profiles.json'
       - 'scripts/latex/**'
       - 'scripts/researchers/**'
+      - 'prompts/**'
+      - 'registry/researcher-migration-status.json'
+      - 'controls/researcher-migration-rules.json'
   workflow_dispatch:
 permissions:
   contents: read
@@ -38,6 +44,7 @@ jobs:
         run: |
           python scripts/researchers/normalize.py --validate
           python scripts/researchers/test_normalization.py
+          python scripts/researchers/generate_prompts.py --check
       - name: Validate single LaTeX control and 144-rule routing
         run: |
           python scripts/latex/validate_shared.py
