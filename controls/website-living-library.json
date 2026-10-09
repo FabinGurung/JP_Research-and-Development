@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RND-WEB-LIVING-LIBRARY-V2",
+  "status": "DEPLOYED_AWAITING_BROWSER_VISUAL_QA",
+  "layout": "RESPONSIVE_TWO_COLUMN_EDITORIAL_RESEARCH_HERO",
+  "symbol": "WINGED_OPEN_BOOK",
+  "renderer": "HTML_CSS_NO_THREE_JS_NO_REMOTE_DEPENDENCIES",
+  "art_source": "web/living-hero.html",
+  "css": "web/styles.css",
+  "js": [
+    "web/theme.js",
+    "web/motion.js",
+    "web/prompt-copy.js"
+  ],
+  "palette": "PARCHMENT_FOREST_DAY__DUSK",
+  "offline_fallback": "STATIC_CSS_BOOK",
+  "motion_policy": "PAUSE_BUTTON__REDUCED_MOTION_DISABLE__OUT_OF_VIEW_SUSPEND",
+  "owner_copy_portal": "owner-prompts/index.html",
+  "individual_prompt_routes": "owner-prompts/<slug>/index.html",
+  "privacy": "Never embed private full scientific source, credentials or restricted Drive content into static public portal",
+  "production_QA": "GITHUB_ACTIONS_VALIDATED__NO_SCREENSHOT_QA_ASSERTION"
+}

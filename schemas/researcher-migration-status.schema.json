@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "R&D researcher migration opt-in state",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "authority",
+    "records",
+    "states"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "authority": {
+      "const": "controls/researcher-migration-rules.json"
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "records": {
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 11,
+      "items": {
+        "type": "object",
+        "required": [
+          "researcher_id",
+          "slug",
+          "root_drive_id",
+          "prompt_path",
+          "state",
+          "user_trigger_observed",
+          "drive_deletes",
+          "main_ack"
+        ],
+        "properties": {
+          "researcher_id": {
+            "type": "string",
+            "pattern": "^RSH-[0-9]{3}$"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "root_drive_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prompt_path": {
+            "type": "string",
+            "pattern": "^prompts/researchers/RSH-[0-9]{3}__"
+          },
+          "state": {
+            "type": "string"
+          },
+          "user_trigger_observed": {
+            "type": "boolean"
+          },
+          "drive_deletes": {
+            "const": 0
+          },
+          "main_ack": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
