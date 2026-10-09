@@ -1,0 +1,29 @@
+name: R&D source branch validation (no scientific publishing)
+on:
+  push:
+    branches:
+      - 'resource/**'
+      - 'feature/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-source-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate public-safe source and manifest
+        run: python scripts/validate_repo.py
+      - name: Build source preview
+        run: python scripts/build_site.py --out dist
+      - name: Validate generated website
+        run: python scripts/validate_repo.py --site dist
+      - name: Preserve preview briefly, not as a Drive research output
+        uses: actions/upload-artifact@v4
+        with:
+          name: rd-website-source-preview
+          path: dist/
+          retention-days: 7

@@ -119,6 +119,7 @@ def main():
     )
     write(out,"branches/index.html",shell("Every Git Branch",branch_body+'<script defer src="../assets/branches.js"></script>',1))
     home=home.replace("</main>",'<section class="wrap section"><h2>Code, branches and version history</h2><p class="lead">Search '+str(len(branch_rows))+' audited branches, their intended use, code paths and immutable commit snapshots. The single website is built from <code>main</code>.</p><p><a href="branches/index.html">Browse all Git branches →</a></p></section></main>')
+    write(out,"index.html",shell("Home",home,0))
     directory="".join(f'<article class="card"><h3>{esc(r["display_name"])}</h3><p><span class="badge">{esc(r["qa_status"])}</span></p><p>{esc(r.get("topic_title") or "Topic title: ON HOLD")}</p><a href="{esc(r["slug"])}/index.html">Open →</a></article>' for r in researchers)
     write(out,"researchers/index.html",shell("Researchers",f'<main class="wrap hero"><div class="eyebrow">Researcher index</div><h1>Researcher workspaces</h1><p class="lead">No topic/title is published until human QA verifies it.</p><div class="grid">{directory}</div></main>',1))
     for r in researchers:

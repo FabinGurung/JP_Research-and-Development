@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0.0",
-  "inventory_id": "RD-BRANCH-INVENTORY-20261009-v001",
+  "inventory_id": "RD-BRANCH-INVENTORY-20261009-v002",
   "observed_date": "2026-10-09",
   "repository_full_name": "FabinGurung/JP_Research-and-Development",
-  "observed_branch_count": 100,
+  "observed_branch_count": 101,
   "counts": {
     "archive": 49,
     "production": 1,
     "researcher-template": 33,
     "website-marker": 2,
     "resource": 14,
-    "snapshot": 1
+    "snapshot": 2
   },
   "branches": [
     {
@@ -652,7 +652,7 @@
     },
     {
       "name": "main",
-      "commit_sha": "d8474230d0d77abaca2affeb14e6ea63f5715cf0",
+      "commit_sha": "3a224e956ec9609f4e107b1883723b3a12f7b476",
       "category": "production",
       "purpose": "Single canonical R&D website source: researcher portal, public code, controls and Git–Drive pointers",
       "primary_source_path": "scripts/build_site.py",
@@ -661,7 +661,7 @@
       "owner": "R&D",
       "alias_of": null,
       "protected": false,
-      "observation": "GITHUB_BRANCH_API_AND_REGISTERED_ROLE__2026-10-09"
+      "observation": "LATEST_MAIN_HEAD_AT_2026-10-09_INVENTORY_CAPUTRE__WILL_ADVANCE_ON_CATALOG_COMMIT"
     },
     {
       "name": "researcher/anil-neupane/discussion",
@@ -1312,9 +1312,22 @@
       "alias_of": null,
       "protected": false,
       "observation": "GITHUB_BRANCH_API_AND_REGISTERED_ROLE__2026-10-09"
+    },
+    {
+      "name": "snapshot/20261009/rnd-main/v002-post-rose-dawn-and-branches",
+      "commit_sha": "3a224e956ec9609f4e107b1883723b3a12f7b476",
+      "category": "snapshot",
+      "purpose": "Immutable whole-repository POST checkpoint for Rose Dawn and 100-branch searchable portal code; catalog bookkeeping follows via Git commits",
+      "primary_source_path": null,
+      "source_status": "IMMUTABLE_ROLLBACK_REF",
+      "version": "v002",
+      "owner": "R&D",
+      "alias_of": null,
+      "protected": false,
+      "observation": "PROVIDER_READBACK_2026-10-09"
     }
   ],
-  "status": "PROVIDER_OBSERVED_POINT_IN_TIME__NOT_AUTO_SYNCED",
+  "status": "POINT_IN_TIME__100_STABLE_REFS_PLUS_MOVING_MAIN__NOT_AN_AUTOMATIC_LIVE_QUERY",
   "source_truth": "GITHUB_REFS_AT_READBACK; PURPOSES_ARE_NAME_AND_REPO_REGISTRY_BASED",
   "special_notes": [
     "Researcher lane branches mostly share the old template SHA. Their names are placeholders for code workflow; no claim that source was migrated.",
@@ -1322,8 +1335,9 @@
     "Two legacy archive aliases are namespaced and versioned; original refs remain available.",
     "14 resource branches have unique scoped manifest commits based on the new Dawn theme code and include the whole repository tree.",
     "Git snapshots are immutable by policy; routine changes belong on feature/task branches then main, with dated release snapshots when needed.",
-    "Compiled PDFs/PPTX and scientific original files remain Google Drive authority."
+    "Compiled PDFs/PPTX and scientific original files remain Google Drive authority.",
+    "main moves with commits; observed main SHA is the parent of the catalog-only update. Future live GitHub HEAD must be fetched before any write."
   ],
   "rollback_pre_snapshot": "snapshot/20261009/rnd-main/v001-pre-rose-dawn",
-  "rollback_post_snapshot": "PENDING_AFTER_CURRENT_BRANCH_CATALOG_RELEASE"
+  "rollback_post_snapshot": "snapshot/20261009/rnd-main/v002-post-rose-dawn-and-branches"
 }

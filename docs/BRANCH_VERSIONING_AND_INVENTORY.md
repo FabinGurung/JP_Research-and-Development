@@ -2,7 +2,7 @@
 
 The machine inventory [registry/branch-inventory.json](../registry/branch-inventory.json) was made from a fresh live GitHub branch API readback. Every observed branch has full SHA, name, status and grounded purpose, rather than an unverified claim that its contents are independently developed.
 
-**Initial observed count: 100.** Classification: archive=49, production=1, researcher-template=33, website-marker=2, resource=14, snapshot=1.
+**Current observed count: 101.** Classification: archive=49, production=1, researcher-template=33, website-marker=2, resource=14, snapshot=1.
 
 ## Branch naming and immutable snapshots
 
@@ -35,3 +35,8 @@ Desired admitted-release chain:
 The R&D Pages website is built automatically from main by an existing passing GitHub Action. For thesis binaries, provider upload credentials, approved source recipes, font/toolchain licensing and researcher science QA must first be configured. Until then **NOT BUILT** is the accurate status, not completion.
 
 We are not migrating old A9 private research corpora, altering Drive folder contents, deleting branches or updating other repositories in this workstream.
+
+## Verified post checkpoint
+
+- `snapshot/20261009/rnd-main/v002-post-rose-dawn-and-branches` → `3a224e956ec9609f4e107b1883723b3a12f7b476`.
+- `main` advances when the catalog is committed. Its inventory entry records a **point-in-time parent SHA**, not a claim that the current HEAD is frozen. To revert later, choose the actual immutable commit or the v001/v002 snapshot ref and follow a non-destructive rollback procedure.

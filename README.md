@@ -66,3 +66,10 @@ The roadmap distinguishes delivered work, scientific holds, Git source admission
 - Theme: [docs/PORTAL_THEME.md](docs/PORTAL_THEME.md) — default rose dawn, optional mauve dusk; legacy demos unmodified.
 
 Do not infer the 33 named researcher branches contain their final thesis sources: they currently share a previous template code baseline. New `resource/**/v001-20261009` refs include the updated full repository code and scoped manifests. Git history gives rollback by exact SHA; enumerated dated snapshots preserve major boundaries without repeated Drive copies.
+
+## Dated immutable rollback snapshots
+
+- PRE: [v001 before Rose Dawn](https://github.com/FabinGurung/JP_Research-and-Development/tree/snapshot/20261009/rnd-main/v001-pre-rose-dawn)
+- POST: [v002 after UI and branch page](https://github.com/FabinGurung/JP_Research-and-Development/tree/snapshot/20261009/rnd-main/v002-post-rose-dawn-and-branches)
+
+101 observed refs include 14 new source-resource branches and two descriptive legacy aliases; previous branches remain untouched. Git commit SHA is the exact rollback coordinate. The v002 snapshot is immutable; this metadata update advances `main` beyond it.
