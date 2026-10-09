@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Safal source-admission gate and controlled local XeLaTeX/Biber compilation.
 Never uploads to Drive, commits fonts, or claims scientific approval.
+Modes: check (non-compiling), preview (explicit Tinos only, source must be admitted), compile (licensed exact TNR, strict gates).
 """
 import argparse, hashlib, json, os, re, shutil, subprocess, tempfile
 from pathlib import Path
@@ -32,7 +33,7 @@ def invoke(cmd,cwd,env):
 
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument("--mode",choices=("check","compile"),default="check")
+    p.add_argument("--mode",choices=("check","preview","compile"),default="check")
     p.add_argument("--output-dir",help="Private temporary candidate output directory for manual publication review")
     args=p.parse_args()
     tower=json.loads(CANONICAL.read_text(encoding="utf-8"))
@@ -57,16 +58,21 @@ def main():
     for stray in source.rglob("pumlsc-shared.sty"):
         fail("duplicated shared template in researcher source: "+str(stray.relative_to(ROOT)))
     if not entry.is_file(): fail("admitted Git main.tex not found")
-    if r"\\usepackage{pumlsc-shared}" not in entry.read_text(encoding="utf-8"):
+    if r"\usepackage{pumlsc-shared}" not in entry.read_text(encoding="utf-8"):
         fail("admitted source must import canonical pumlsc-shared package")
     if args.mode=="check":
         print("SOURCE_GATE=SOURCE_PRESENT__NO_THESIS_PDF_COMPILED")
         return
-    if g.get("exact_font_ci")!="VERIFIED":
-        fail("exact licensed font environment not yet validated")
-    fdir=os.environ.get("SAFAL_FONT_DIR","")
-    if not fdir or any(not (Path(fdir)/n).is_file() for n in FONT_FILES):
-        fail("private licensed Times New Roman assets are missing")
+    if args.mode=="compile":
+        if g.get("exact_font_ci")!="VERIFIED":
+            fail("exact licensed font environment not yet validated")
+        fdir=os.environ.get("SAFAL_FONT_DIR","")
+        if not fdir or any(not (Path(fdir)/n).is_file() for n in FONT_FILES):
+            fail("private licensed Times New Roman assets are missing")
+    else:
+        fdir=None
+        if g.get("source_admission")!="VERIFIED":
+            fail("preview cannot bypass admitted verified scientific source")
     for tool in ("xelatex","biber","pdfinfo","pdffonts","pdftoppm"):
         if shutil.which(tool) is None: fail("missing compiler or PDF QA tool: "+tool)
     if not args.output_dir: fail("explicit --output-dir is required, not a repository directory")
@@ -79,8 +85,9 @@ def main():
         shutil.copytree(source,tree)
         texdir=tree/"manuscript"
         # Private licensed assets exist only in ephemeral work directory, never Git history or public artifacts.
-        for n in FONT_FILES:
-            shutil.copy2(Path(fdir)/n,texdir/n)
+        if args.mode=="compile":
+            for n in FONT_FILES:
+                shutil.copy2(Path(fdir)/n,texdir/n)
         env=os.environ.copy()
         env["TEXINPUTS"]=str(SHARED.parent)+os.pathsep+str(tree)+os.pathsep+str(tree/"bibliography")+os.pathsep+env.get("TEXINPUTS","")
         env["BIBINPUTS"]=str(tree/"bibliography")+os.pathsep+env.get("BIBINPUTS","")
@@ -89,15 +96,24 @@ def main():
             ["biber","main"],
             ["xelatex","-interaction=nonstopmode","-halt-on-error","main.tex"],
             ["xelatex","-interaction=nonstopmode","-halt-on-error","main.tex"]]
+        if args.mode=="preview":
+            # Explicit TeX macro lives only in the transient command; main.tex is unchanged.
+            sequence[0]=["xelatex","-interaction=nonstopmode","-halt-on-error",r"\def\PUPreviewTinosFont{1}\input{main.tex}"]
+            sequence[2]=sequence[0].copy()
+            sequence[3]=sequence[0].copy()
         for cmd in sequence: invoke(cmd,texdir,env)
         pdf=texdir/"main.pdf"
         if not pdf.is_file(): fail("missing compiled main.pdf")
         pdfinfo=invoke(["pdfinfo",str(pdf)],texdir,env)
-        if not re.search(r"Page size:\s+595(?:\.\d+)?\s+x\s+842",pdfinfo):
+        dims=re.search(r"Page size:\s*([0-9.]+)\s*x\s*([0-9.]+)\s*pts",pdfinfo)
+        if not dims or abs(float(dims.group(1))-595.276)>1.0 or abs(float(dims.group(2))-841.890)>1.0:
             fail("PDF not verified as A4; do not assume exact university format")
         fontinfo=invoke(["pdffonts",str(pdf)],texdir,env)
-        if not re.search(r"Times",fontinfo,re.I):
-            fail("Times New Roman embedding was not established")
+        if args.mode=="compile":
+            if not any(re.search(r"Times[ -]?New[ -]?Roman",ln,re.I) and re.search(r"\s+yes\s+(?:yes|no)\s+(?:yes|no)\s+\d+\s+\d+\s*$",ln,re.I) for ln in fontinfo.splitlines()[2:]):
+                fail("embedded exact Times New Roman face not established by pdffonts")
+        elif not re.search(r"Tinos",fontinfo,re.I):
+            fail("preview Tinos fallback font not established in PDF")
         log=(texdir/"main.log").read_text(errors="replace")
         if "undefined references" in log.lower() or re.search(r"citation .* undefined",log,re.I):
             fail("unresolved citations/references")
@@ -110,15 +126,16 @@ def main():
         if len(list(render.glob("page-*.jpg")))!=int(pages.group(1)):
             fail("full-page PDF render count mismatch")
         out.mkdir(parents=True,exist_ok=True)
-        dest=out/"safal-technical-review-candidate.pdf"
+        dest=out/("safal-tinos-preview.pdf" if args.mode=="preview" else "safal-technical-review-candidate.pdf")
         shutil.copy2(pdf,dest)
         sha=subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip()
-        report={"status":"TECHNICAL_QA_CANDIDATE__HUMAN_VISUAL_AND_PU_FULL_COMPLIANCE_PENDING",
+        report={"status":"TINOS_PREVIEW__NON_PRODUCTION" if args.mode=="preview" else "TECHNICAL_QA_CANDIDATE__HUMAN_VISUAL_AND_PU_FULL_COMPLIANCE_PENDING",
+                "build_mode":args.mode,
                 "git_commit":sha,"researcher_id":"RSH-010","manuscript_version":c["manuscript"]["version"],
                 "pdf_sha256":checksum(dest),"source_main_tex_sha256":checksum(entry),
                 "pdf_page_count":int(pages.group(1)),"pdf_drive_id":None,"a9_local_seq":None,
                 "scientific_approval":"HOLD","publication_status":"NOT_UPLOADED_TO_GOOGLE_DRIVE"}
         (out/"build-manifest.json").write_text(json.dumps(report,indent=2)+"\n")
-        print("TECHNICAL_BUILD_CANDIDATE: no Drive publication, no human science approval")
+        print("PDF_CANDIDATE_RENDERED: mode="+args.mode+"; no Drive publication, no human science approval")
 if __name__=="__main__":
     main()

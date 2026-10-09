@@ -10,7 +10,16 @@
 \RequirePackage{geometry}
 \geometry{a4paper,twoside=false,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \RequirePackage{fontspec}
-\setmainfont{Times New Roman}
+% PU-FMT-004/005/129/130: exact font in production; explicit Tinos preview only.
+% The preview flag is defined in the build command, never silently enabled.
+\ifdefined\PUPreviewTinosFont
+  \IfFontExistsTF{Tinos}{\setmainfont{Tinos}}{
+    \PackageError{pumlsc-shared}{Tinos preview font not available}{Install fonts-croscore.}}
+  \PackageWarningNoLine{pumlsc-shared}{Tinos fallback mode: PREVIEW ONLY; production certification forbidden}
+\else
+  \IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{
+    \PackageError{pumlsc-shared}{Exact Times New Roman unavailable}{Use licensed Times New Roman for production, or explicit controlled Tinos preview mode.}}
+\fi
 \RequirePackage{setspace}
 \onehalfspacing
 \setlength{\parindent}{0pt}
