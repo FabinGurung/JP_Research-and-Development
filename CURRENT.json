@@ -240,5 +240,22 @@
   "repo_guide": "start-here/index.html",
   "repo_migrations_deferred": "USER_DEFERRED__NO_DATABASE_OR_DRIVE_MIGRATION_IN_THIS_RUN",
   "portal_link_check": "scripts/validate_site_links.py",
-  "portal_site_link_tests": "scripts/test_site_links.py"
+  "portal_site_link_tests": "scripts/test_site_links.py",
+  "repository_only_upgrade": "VISUAL_BROWSER_QA__SITE_MODULE_EXTRACTION__PUBLIC_SEARCH_CATALOGUE",
+  "browser_qa_workflow": ".github/workflows/browser-qa.yml",
+  "browser_qa_script": "scripts/browser_qa.cjs",
+  "browser_qa_screenshots": "GITHUB_ACTIONS_ARTIFACT_PER_RUN__MANUAL_SCREENSHOT_REVIEW_NOT_ASSERTED",
+  "site_source_modules": [
+    "scripts/site_core.py",
+    "scripts/site_pages.py",
+    "scripts/site_search.py"
+  ],
+  "research_search": "search/index.html",
+  "research_search_index": "data/research-index.json",
+  "research_search_policy": "PUBLIC_METADATA_ONLY__GIT_OBSERVED_SNAPSHOT__NO_LIVE_DRIVE_OR_SCIENTIFIC_AUTHORITY",
+  "mobile_navigation": "ACCESSIBLE_PROGRESSIVE_TOGGLE__NOJS_FALLBACK__ESCAPE_SUPPORT",
+  "owner_migration_state": "NOT_TRIGGERED_IN_CENTRAL_UPGRADE",
+  "database_migrations": "DEFERRED_BY_USER",
+  "drive_migrations": "DEFERRED_BY_USER",
+  "latest_verified_test_boundary": "ACTIONS_TO_BE_READ_BACK_AT_HEAD__CODE_QA_NOT_THESIS_CERTIFICATION"
 }

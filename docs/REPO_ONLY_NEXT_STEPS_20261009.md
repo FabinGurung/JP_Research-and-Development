@@ -22,3 +22,12 @@
 ## Proof and non-claims
 
 PRE = the Git commit before each bounded change; POST = non-forced commit. Green Actions validates code/links and deploys a static site, not scientific approval. A9 registrations, Main ACK, PU full 144-rule certification, individual owner migrations and authorized PDF production remain their own governed workstreams. Never delete historical refs or scientific evidence.
+
+## Delivered repository-only improvements, additional phase
+
+- Real Chromium QA job with screenshot artifacts and automated desktop/mobile, copy, keyboard, reduced-motion and serious/critical WCAG checks.
+- Shared page, layout and public search generator modules; `build_site.py` remains the orchestrator and has been shortened without changing canonical page routes.
+- Public-only research discovery with in-browser search/filter. Source data derives exclusively from the already-public Git registry; Git branch data is a dated observation, not a live ref check.
+- Progressive mobile menu with Escape and no-JavaScript fallback. No database or Drive operations authorized.
+
+**Further distinct backlog:** real human review of screenshot artifacts and touch screen behavior; extract remaining specialized page renderers from the orchestrator into tested modules; a structured versioned route manifest for all current and archived legacy routes. University formatting certification and researcher workspace changes remain outside scope.

@@ -121,3 +121,30 @@ python3 scripts/validate_repo.py --site dist
 ```
 
 The link checker audits internally generated portal routes and assets while keeping six historical standalone demos immutable. It makes no network requests. [Repository-only roadmap](docs/REPO_ONLY_NEXT_STEPS_20261009.md).
+
+## Visual/mobile QA, modular site builder and research catalogue (2026-10-09)
+
+### Public entry points
+
+- [Research catalogue](https://fabingurung.github.io/JP_Research-and-Development/search/) — text search and collection filters across registered researchers, researcher chat handovers, shared controls, observed historical Git branches, public research websites and durable repository guides.
+- [Start here](https://fabingurung.github.io/JP_Research-and-Development/start-here/) — authority and operating guidance.
+- [Owner-only researcher prompts](https://fabingurung.github.io/JP_Research-and-Development/owner-prompts/) — copy controls only, not Drive migrations.
+
+### Source modules and checks
+
+`scripts/site_core.py` owns shared safe escaping, link helpers, layout shell and static writing; `scripts/site_pages.py` owns home, onboarding and owner-prompt presentation; `scripts/site_search.py` builds the public-only search catalogue. `scripts/build_site.py` remains the deterministic orchestrator for researcher-specific and legacy routes. Existing path names and historical demos are preserved.
+
+Browser QA is a **real headless Chromium job** in [`.github/workflows/browser-qa.yml`](.github/workflows/browser-qa.yml): desktop/mobile/320px layout, animation control and reduced motion, color theme, keyboard menu/focus, clipboard-copy, WCAG2A/AA automated tests, search filtering and saved screenshots. The workflow uploads a per-run artifact; visual human sign-off remains independent of automation.
+
+Offline local tests (no Drive or network needed):
+
+```bash
+python3 scripts/test_site_links.py
+python3 scripts/test_site_search.py
+python3 scripts/build_site.py --out dist
+python3 scripts/validate_repo.py --site dist
+```
+
+Browser QA requires a Node/Chromium environment and uses the pinned versions from its workflow. No backend, analytics, private Drive data or production thesis PDF compile was added.
+
+[Detailed phase checkpoint](docs/RND_BROWSER_ARCHITECTURE_SEARCH_RELEASE_20261009.md).
