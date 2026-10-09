@@ -73,3 +73,7 @@ Do not infer the 33 named researcher branches contain their final thesis sources
 - POST: [v002 after UI and branch page](https://github.com/FabinGurung/JP_Research-and-Development/tree/snapshot/20261009/rnd-main/v002-post-rose-dawn-and-branches)
 
 101 observed refs include 14 new source-resource branches and two descriptive legacy aliases; previous branches remain untouched. Git commit SHA is the exact rollback coordinate. The v002 snapshot is immutable; this metadata update advances `main` beyond it.
+
+## Safal Dawadi scoped LaTeX control
+
+The [public control page](https://fabingurung.github.io/JP_Research-and-Development/controls/latex/safal-dawadi/) and [machine project config](controls/projects/safal-dawadi.latex.json) are governed by [shared LaTeX control](controls/latex.control.json). A7 owns global routing; original private Drive PU/A9 records own format/science. Three existing lanes are legacy template refs; source and PDF compilation remain held pending byte reconciliation and public privacy clearance. See [ownership runbook](docs/LATEX_CONTROL_OWNERSHIP.md).

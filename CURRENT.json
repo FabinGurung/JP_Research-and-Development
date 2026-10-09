@@ -189,5 +189,18 @@
     "scope": "JP_RND_GENERATED_SITE_ONLY",
     "legacy_demos": "UNMODIFIED"
   },
-  "compilation_status": "MAIN_WEBSITE_AUTO_BUILDS_ON_EACH_MAIN_PUSH__RESOURCE_SOURCE_QA_FOR_FUTURE_BRANCHES__RESEARCH_PDF_PPTX_NOT_AUTO_COMPILED_NO_ADMITTED_RECIPE_OR_DRIVE_CREDENTIALS"
+  "compilation_status": "MAIN_WEBSITE_AUTO_BUILDS_ON_EACH_MAIN_PUSH__RESOURCE_SOURCE_QA_FOR_FUTURE_BRANCHES__RESEARCH_PDF_PPTX_NOT_AUTO_COMPILED_NO_ADMITTED_RECIPE_OR_DRIVE_CREDENTIALS",
+  "safal_latex_control": {
+    "id": "RD-LATEX-SAFAL-001",
+    "machine": "controls/projects/safal-dawadi.latex.json",
+    "ui": "controls/latex/safal-dawadi/index.html",
+    "shared": "controls/latex.control.json",
+    "functional_branches": 3,
+    "source_branch_created": false,
+    "source_state": "HOLD__GIT_NOT_ADMITTED",
+    "compile_state": "NOT_RUN__NO_FONT_RUNNER",
+    "drive_writes": "NONE",
+    "a9_local_seq_reported": 15,
+    "a9_main_cursor_reported": 5
+  }
 }

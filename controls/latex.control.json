@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "control_id": "RD-CONTROL-LATEX-001",
   "status": "ACTIVE",
   "branch_pattern": "researcher/<slug>/latex",
@@ -31,5 +31,47 @@
     "read back Drive ID/link",
     "update lane/output.json",
     "commit"
-  ]
+  ],
+  "project_overrides": {
+    "safal-dawadi": "controls/projects/safal-dawadi.latex.json"
+  },
+  "control_plane_split": {
+    "A7": "Global semantic IDs, provider-routing, privacy and cross-repository edges",
+    "RND": "Shared executable LaTeX rules, QA and source build recipes; specific project control",
+    "DRIVE": "Original scientific decisions, official PU formatting authority, restricted resources, generated PDFs, A9 Local/Main",
+    "GIT_LANES": "Three functional refs per researcher; whole repository commit identity"
+  },
+  "A9_Drive_originals": {
+    "thesis_tower": "1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A",
+    "pu_format_v1_13": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
+    "migration_status": "SELECTIVE_BRIDGE_NOT_FULL_PRIVATE_A9_CONTROL_PARITY"
+  },
+  "production_rules": {
+    "pdf_compiler_order": [
+      "xelatex",
+      "biber",
+      "xelatex",
+      "xelatex"
+    ],
+    "pu_specific": [
+      "A4 single sided",
+      "Left 3cm; other margins 2.5cm",
+      "12pt exact Times New Roman 1.5 spacing",
+      "Left aligned chapters, no global indent, no split-word hyphenation",
+      "Approved preliminary Roman numbering; abstract 300–350 words",
+      "Explicit bibliography style per researcher, references, table/caption requirements"
+    ],
+    "stages": [
+      "Source admission",
+      "Licensing/dependencies",
+      "Compile",
+      "Technical PDF QA",
+      "Rendered visual QA",
+      "Human scientific review",
+      "Drive upload/readback",
+      "A9 Local registration",
+      "Optional Main ACK"
+    ],
+    "condition": "A green source gate is not a successful production compilation; no PDF release without all required provider QA"
+  }
 }

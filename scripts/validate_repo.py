@@ -20,7 +20,10 @@ branches=load("registry/branch-registry.json")
 branch_inventory=load("registry/branch-inventory.json")
 roadmap=load("registry/roadmap.json")
 policy=load("controls/repository.control.json")
+latex_policy=load("controls/latex.control.json")
+safal_policy=load("controls/projects/safal-dawadi.latex.json")
 required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/drive-audits/02-thesis/manoj-bhandari.json","registry/drive-audits/02-thesis/binay-karki.json","registry/drive-audits/02-thesis/avishek-kumar-mandal.json","registry/drive-audits/02-thesis/root-rescan-20261008.json","registry/drive-audits/02-thesis/rural-road-maintenance.json","registry/drive-audits/02-thesis/safal-dawadi.json","registry/drive-audits/02-thesis/saugat-paneru.json","registry/drive-audits/02-thesis/nabin-bista.json","registry/drive-audits/02-thesis/krishna-kumar-gupta.json","registry/drive-audits/02-thesis/shisheer-kc.json","registry/drive-audits/02-thesis/sunil-rana.json","registry/drive-audits/02-thesis/fabin-gurung.json","registry/drive-audits/02-thesis/master-index.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
+required += ["controls/projects/safal-dawadi.latex.json","docs/LATEX_CONTROL_OWNERSHIP.md","scripts/latex/safal_build.py",".github/workflows/safal-latex.yml"]
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
@@ -55,6 +58,14 @@ if len([x for x in observed_branch_rows if x.get("category")=="researcher-templa
     errors.append("legacy 33 researcher lanes must not be falsely promoted to source")
 if len([x for x in observed_branch_rows if x.get("category")=="resource"])!=14:
     errors.append("new 14 resource source branches missing from inventory")
+if latex_policy.get("project_overrides",{}).get("safal-dawadi")!="controls/projects/safal-dawadi.latex.json":
+    errors.append("Safal scoped LaTeX control not routed")
+if safal_policy.get("researcher_id")!="RSH-010":
+    errors.append("Safal scoped LaTeX researcher mismatch")
+if safal_policy.get("gates",{}).get("source_admission")!="HOLD":
+    errors.append("Safal v1.9 Git admission may not be claimed")
+if safal_policy.get("original_drive",{}).get("main_ack_reported")!=5:
+    errors.append("Safal Main Library cursor not preserved")
 if len(lane_names)!=33: errors.append("expected 33 researcher lanes")
 reg={x.get("branch") for x in branches.get("active_researcher_lanes",[])}
 if reg!=lane_names: errors.append("branch registry active lanes != researcher registry")
@@ -130,6 +141,7 @@ if args.site:
     expected=["index.html","roadmap/index.html","branches/index.html","assets/theme.js","assets/branches.js","researchers/index.html","workspace/index.html","how-to/index.html","controls/index.html","debts/index.html"]
     expected += [f"researchers/{r['slug']}/index.html" for r in rows]
     expected += [f"controls/{x}/index.html" for x in ("discussion","latex","presentation","website")]
+    expected += ["controls/latex/safal-dawadi/index.html"]
     debt_researcher_ids={d.get("researcher_id") for d in debt_rows if d.get("status") in ("OPEN","HOLD") and d.get("researcher_id")}
     expected += [f"researchers/{r['slug']}/debts/index.html" for r in rows if r.get("researcher_id") in debt_researcher_ids]
     expected += ["audits/02-thesis/index.html","audits/02-thesis/manoj-bhandari/index.html","audits/02-thesis/manoj-bhandari/debts/index.html","audits/02-thesis/avishek-kumar-mandal/index.html","audits/02-thesis/avishek-kumar-mandal/debts/index.html"]

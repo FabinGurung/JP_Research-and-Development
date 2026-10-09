@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-LATEX-SAFAL-001",
+  "researcher_id": "RSH-010",
+  "researcher_slug": "safal-dawadi",
+  "status": "CONTROL_PREPARED__SOURCE_NOT_ADMITTED__COMPILE_NOT_ENABLED",
+  "title": "Assessment of Rework, Its Causes and Impacts in RCC Building Construction Projects of Pokhara Metropolitan City",
+  "original_drive": {
+    "project_root": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP",
+    "local_library": "10g8-tr417XltYDbk2yItEZjrJ_2xdT7pbPlJgUI8MYo",
+    "main_library": "18NE0GIbw0lDDlrIcflGS3_VccDZ2LZn1FoPbebSc71o",
+    "local_seq_reported": 15,
+    "main_ack_reported": 5,
+    "source_manifest": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
+    "project_state": "1TMemFwbpMD_fKHNLNSVj8q5TceJkojFf7c_wIFovKls",
+    "pu_format": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
+    "thesis_control": "1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A"
+  },
+  "manuscript": {
+    "version": "v1.9",
+    "classification": "42_PAGE_QUALITATIVE_REVIEW_CANDIDATE_NOT_SUBMISSION_APPROVED",
+    "scope": [
+      "W01 waterproofing",
+      "W02 building-associated PCC",
+      "W03 plaster/masonry"
+    ]
+  },
+  "source_states": {
+    "first_drive": {
+      "source_zip": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+      "source_sha256_reported": "80c560f5d89f91cae26dc9113deb91b932e7edf6a9c1fc5de260a5c237c0456c",
+      "pdf": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
+      "pdf_sha256_reported": "3a82658cdf8d8817b7042e71b02949460dfc5beac68b58466f9db93285e9f480",
+      "verified_this_run": "IDENTIFIERS_ONLY_NO_BYTE_REHASH"
+    },
+    "later_reconciled_local": {
+      "source_sha256_reported": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
+      "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
+      "drive_mirror": "UNVERIFIED",
+      "source_files": "NOT_LOCATED_THIS_RUN"
+    },
+    "conflict": "HOLD_NO_GIT_SOURCE_BASELINE_CHOSEN"
+  },
+  "branches": {
+    "discussion": "researcher/safal-dawadi/discussion",
+    "latex": "researcher/safal-dawadi/latex",
+    "presentation": "researcher/safal-dawadi/presentation",
+    "observed_state": "THREE_LEGACY_TEMPLATE_REFS_NOT_IMPORTED_SOURCE",
+    "planned_versioned_source": "resource/latex/safal-dawadi/v001-20261009",
+    "versioned_source_created": false
+  },
+  "build": {
+    "source_root": "researchers/safal-dawadi/latex",
+    "entrypoint": "manuscript/main.tex",
+    "bibliography": "08_reference.bib",
+    "citation_style": "APA_SPECIFIC_TO_SAFAL",
+    "compiler_sequence": [
+      "xelatex",
+      "biber",
+      "xelatex",
+      "xelatex"
+    ],
+    "external_font": "Times New Roman regular/bold/italic/bold-italic LICENSED_PRIVATE_ONLY",
+    "external_font_resource_drive_id": "1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv",
+    "workflow": ".github/workflows/safal-latex.yml",
+    "source_gate": "scripts/latex/safal_build.py",
+    "trigger": "Only Safal project source or manually authorized run, not unrelated website changes"
+  },
+  "gates": {
+    "source_reconciliation": "HOLD",
+    "public_git_clearance": "HOLD",
+    "source_admission": "HOLD",
+    "exact_font_ci": "NOT_CONFIGURED",
+    "git_compilation": "NOT_RUN",
+    "pdf_qa": "NOT_RUN",
+    "drive_upload": "NOT_AUTHORIZED",
+    "scientific_approval": "HOLD",
+    "local_seq": "15_REPORTED_ONLY",
+    "main_ack": "CURSOR_5_HOLD"
+  },
+  "security": {
+    "repository_public": true,
+    "prohibited": [
+      "private site photos",
+      "raw person/client identifying data",
+      "Times New Roman font files",
+      "unsigned researcher evidence",
+      "source secrets",
+      "compiled PDFs"
+    ],
+    "public_safety_review": "REQUIRED_BEFORE_SOURCE_IMPORT"
+  },
+  "original_authority": "Drive private university controls and Safal approved scientific evidence take precedence for format/science; this Git config is an execution recipe and bridge only"
+}

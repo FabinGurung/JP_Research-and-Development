@@ -1,0 +1,23 @@
+name: Safal Dawadi LaTeX source gate (NO PDF publishing)
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'feature/safal-latex-*'
+    paths:
+      - 'researchers/safal-dawadi/latex/**'
+permissions:
+  contents: read
+jobs:
+  source-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read source admission gates
+        run: python scripts/latex/safal_build.py
+      - name: Clarify boundary
+        run: echo 'Source gate only; a green job does NOT represent a PDF, a Google Drive upload, or a scientific approval.'
