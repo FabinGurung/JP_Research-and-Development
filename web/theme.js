@@ -1,25 +1,26 @@
-/* Rose dawn is the default; dusk is user-selectable. Historical standalone demos are untouched. */
+/* Living Research Library: preserve legacy dusk selection; day is a scholarly parchment. */
 (function(){
-  const KEY="jp-rd-palette-v1";
+  "use strict";
   const root=document.documentElement;
+  const KEY="jp-rd-palette-v1";
   let chosen="dawn";
   try { if(localStorage.getItem(KEY)==="dusk") chosen="dusk"; } catch(_) {}
   root.setAttribute("data-theme",chosen);
-  function label(btn) {
-    const isDusk=root.getAttribute("data-theme")==="dusk";
-    btn.textContent=isDusk ? "☀ Dawn palette" : "☾ Dusk palette";
-    btn.setAttribute("aria-label",isDusk?"Switch to rose dawn":"Switch to mauve dusk");
-    btn.setAttribute("aria-pressed",isDusk?"true":"false");
+  function paint(btn) {
+    const night=root.getAttribute("data-theme")==="dusk";
+    btn.textContent=night ? "☼ Day library" : "☾ Night library";
+    btn.setAttribute("aria-label",night ? "Use the light reading-room theme" : "Use the dark reading-room theme");
+    btn.setAttribute("aria-pressed",night?"true":"false");
   }
   document.addEventListener("DOMContentLoaded",function(){
     const btn=document.querySelector("[data-theme-toggle]");
-    if(!btn) return;
-    label(btn);
+    if(!btn)return;
+    paint(btn);
     btn.addEventListener("click",function(){
       const next=root.getAttribute("data-theme")==="dusk"?"dawn":"dusk";
       root.setAttribute("data-theme",next);
-      try { localStorage.setItem(KEY,next); } catch(_) {}
-      label(btn);
+      try{localStorage.setItem(KEY,next)}catch(_){}
+      paint(btn);
     });
   });
 })();
