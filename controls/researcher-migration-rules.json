@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "control_id": "RD-RESEARCHER-OWNER-EXECUTION-001",
+  "version": "1.0.0",
+  "status": "OPT_IN_OWNER_CHAT_ONLY",
+  "trigger": "USER_PASTES_EXACT_RESEARCHER_PROMPT_IN_OWNING_RESEARCHER_CHAT",
+  "read_first": [
+    "Drive save router",
+    "A9 Main routing",
+    "Owning Local Library and project controls",
+    "Thesis Control Tower",
+    "R&D role mapping"
+  ],
+  "scope": "Only one exact RSH identity and verified project root",
+  "default_action": "REUSE_OR_HOLD",
+  "allowed_low_risk": [
+    "REUSE existing Drive IDs",
+    "necessary reversible rename with PRE/POST",
+    "truly necessary folder creation after ruling out equivalent",
+    "safe internal move with traced dependencies",
+    "archive confirmed superseded non-active files preserving IDs and relations"
+  ],
+  "never": [
+    "DELETE",
+    "TRASH",
+    "PURGE",
+    "BLIND_OVERWRITE",
+    "CROSS_RESEARCHER_CHANGE",
+    "SCIENTIFIC_TEXT_EDIT",
+    "FROZEN_CHECKPOINT_EDIT",
+    "EXTERNAL_SHARED_ORIGINAL_MOVE",
+    "AUTO_MAIN_ACK",
+    "AUTOMATIC_PDF_COMPILATION"
+  ],
+  "risk": {
+    "LOW": "PRE, minimum mutation, readback POST, owning Local registration",
+    "MEDIUM": "Require dependency review and clear reversible evidence; otherwise HOLD",
+    "HIGH": "Hold for separate authorization",
+    "UNKNOWN": "HOLD"
+  },
+  "governed_sequence": [
+    "Fresh IDs, own root, project controls, access",
+    "Compare historical prompt to current state, check prior migration",
+    "Action matrix and dependency ledger",
+    "Provider PRE snapshot with exact IDs, names, parents and edges",
+    "Only authorized low-risk operations",
+    "Provider POST readback with full reverse links and no deletions",
+    "Owning Local A9 ArtifactRegistry/Edges/VersionLog/RunLog checkpoint",
+    "No Main cursor promotion without separately approved sync"
+  ],
+  "status_rule": "Prompt existing in Git never triggers Drive work. Only a user paste to that owner's chat is scoped authorization."
+}
