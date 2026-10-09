@@ -57,3 +57,12 @@ The static demos are reused from archived code blobs, not a claim that all archi
 - **Global A7 roadmap:** https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html
 
 The roadmap distinguishes delivered work, scientific holds, Git source admission still pending, and private A9 library migration **not yet performed**. Do not treat the public site as scientific or private Main Library authority.
+
+## Source branch directory · Rose Dawn UI (v001)
+
+- All GitHub branches, categorized by actual purpose and observed SHA: [published branch directory](https://fabingurung.github.io/JP_Research-and-Development/branches/)
+- Machine inventory: [registry/branch-inventory.json](registry/branch-inventory.json)
+- Naming, snapshot and rollback rule: [docs/BRANCH_VERSIONING_AND_INVENTORY.md](docs/BRANCH_VERSIONING_AND_INVENTORY.md)
+- Theme: [docs/PORTAL_THEME.md](docs/PORTAL_THEME.md) — default rose dawn, optional mauve dusk; legacy demos unmodified.
+
+Do not infer the 33 named researcher branches contain their final thesis sources: they currently share a previous template code baseline. New `resource/**/v001-20261009` refs include the updated full repository code and scoped manifests. Git history gives rollback by exact SHA; enumerated dated snapshots preserve major boundaries without repeated Drive copies.

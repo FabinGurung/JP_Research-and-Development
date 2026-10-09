@@ -25,7 +25,7 @@ def evidence_html(debt):
 
 def shell(title, body, depth=0):
     prefix="../"*depth
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script defer src="{prefix}assets/theme.js"></script></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}roadmap/index.html">Roadmap</a><a href="{prefix}how-to/index.html">How to</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch to mauve dusk">☾ Dusk palette</button></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script defer src="{prefix}assets/theme.js"></script></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}roadmap/index.html">Roadmap</a><a href="{prefix}branches/index.html">Branches</a><a href="{prefix}how-to/index.html">How to</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch to mauve dusk">☾ Dusk palette</button></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
 
 def write(out, rel, content):
     p=out/rel; p.parent.mkdir(parents=True,exist_ok=True); p.write_text(content,encoding="utf-8")
@@ -53,7 +53,7 @@ def main():
         slug:load(Path(f"registry/drive-audits/02-thesis/{slug}.json"))
         for slug in ("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta","shisheer-kc","sunil-rana","fabin-gurung","master-index")
     }
-    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js")
+    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js")
     (out/".nojekyll").write_text("",encoding="utf-8")
     # Restore the original public-safe standalone demos into the ONE main Pages deployment.
     # Source blobs retain the archived Git IDs and are immutable until separately revised.
@@ -89,6 +89,36 @@ def main():
       '<p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/registry/roadmap.json">Machine-readable roadmap source →</a></p></section></main>'
     )
     write(out,"roadmap/index.html",shell("R&D Roadmap",roadmap_body,1))
+    # Every observed Git branch (including legacy, template, source and rollback refs).
+    branch_inventory=load(Path("registry/branch-inventory.json"))
+    branch_rows=branch_inventory["branches"]
+    branch_groups=branch_inventory["counts"]
+    category_options="".join(f'<option value="{esc(k)}">{esc(k.replace("-"," ").title())} ({v})</option>' for k,v in sorted(branch_groups.items()))
+    branch_table_rows="".join(
+        '<tr data-branch-row data-category="'+esc(b["category"])+'" data-search="'+esc(" ".join((b["name"],b["category"],b["purpose"],b.get("primary_source_path") or "",b["source_status"])).lower())+'">'
+        +'<td><a href="'+esc(branch_url(b["name"]))+'"><strong>'+esc(b["name"])+'</strong></a></td>'
+        +'<td><span class="branch-pill">'+esc(b["category"])+'</span></td>'
+        +'<td class="branch-description">'+esc(b["purpose"])+'</td>'
+        +'<td class="code">'+esc(b.get("primary_source_path") or "—")+'</td>'
+        +'<td><a class="code" title="'+esc(b["commit_sha"])+'" href="'+esc(REPO_URL+"/commit/"+b["commit_sha"])+'">'+esc(b["commit_sha"][:10])+'</a></td></tr>'
+        for b in branch_rows
+    )
+    branch_body=(
+        '<main class="wrap hero"><div class="eyebrow">Whole-repository Git source · audited branch refs</div>'
+        '<h1>Every branch. Every purpose.</h1>'
+        '<p class="lead">All '+str(len(branch_rows))+' branches observed on '+esc(branch_inventory["observed_date"])+'. Search each full name, role, purpose, source path and exact commit. This is a provider snapshot; GitHub live refs must be reread before a change.</p>'
+        '<div class="notice">The 33 researcher branches still point to shared template code, not individual admitted thesis sources. The new <code>resource/**/v001</code> branches contain the updated whole-repository codebase and scoped source manifests. Original archived references have not been rewritten.</div>'
+        '<section class="section"><div class="branch-toolbar">'
+        '<label>Find branch<input id="branch-search" type="search" placeholder="Search researcher, source, snapshot, commit…" autocomplete="off"></label>'
+        '<label>Branch type<select id="branch-category"><option value="">All categories</option>'+category_options+'</select></label>'
+        '<span class="branch-count" id="branch-visible" aria-live="polite">'+str(len(branch_rows))+' / '+str(len(branch_rows))+' branches</span>'
+        '</div><div class="branch-table-wrap"><table class="branch-table"><thead><tr><th>Git branch</th><th>Type</th><th>Intended use and actual status</th><th>Source path</th><th>Observed SHA</th></tr></thead><tbody>'+branch_table_rows+'</tbody></table></div>'
+        '<p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/registry/branch-inventory.json">Open machine-readable complete branch inventory →</a> · '
+        '<a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/BRANCH_VERSIONING_AND_INVENTORY.md">Open versioning and rollback rule →</a></p>'
+        '</section></main>'
+    )
+    write(out,"branches/index.html",shell("Every Git Branch",branch_body+'<script defer src="../assets/branches.js"></script>',1))
+    home=home.replace("</main>",'<section class="wrap section"><h2>Code, branches and version history</h2><p class="lead">Search '+str(len(branch_rows))+' audited branches, their intended use, code paths and immutable commit snapshots. The single website is built from <code>main</code>.</p><p><a href="branches/index.html">Browse all Git branches →</a></p></section></main>')
     directory="".join(f'<article class="card"><h3>{esc(r["display_name"])}</h3><p><span class="badge">{esc(r["qa_status"])}</span></p><p>{esc(r.get("topic_title") or "Topic title: ON HOLD")}</p><a href="{esc(r["slug"])}/index.html">Open →</a></article>' for r in researchers)
     write(out,"researchers/index.html",shell("Researchers",f'<main class="wrap hero"><div class="eyebrow">Researcher index</div><h1>Researcher workspaces</h1><p class="lead">No topic/title is published until human QA verifies it.</p><div class="grid">{directory}</div></main>',1))
     for r in researchers:

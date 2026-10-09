@@ -166,5 +166,23 @@
     "cross_thread_handover": "docs/HANDOVER_TO_A7_20261009.md",
     "counterpart": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/docs/ROADMAP.md",
     "status": "PUBLISHED_SOURCE_PENDING_NEW_HEAD_ACTIONS_READBACK"
-  }
+  },
+  "branch_inventory": {
+    "machine": "registry/branch-inventory.json",
+    "site": "branches/index.html",
+    "status": "PRE_RELEASE_PROVIDER_SNAPSHOT_100_REFS",
+    "snapshot_pre": "snapshot/20261009/rnd-main/v001-pre-rose-dawn",
+    "snapshots_and_branch_names_not_deletable_without_new_GOVERNED_BOUNDARY": true,
+    "resource_bases": 14,
+    "legacy_template_lanes": 33,
+    "version_format": "resource/<family>/<module>/vNNN-YYYYMMDD"
+  },
+  "ui_palette": {
+    "theme": "ROSE_DAWN",
+    "optional": "MAUVE_DUSK",
+    "version": "v001-20261009",
+    "scope": "JP_RND_GENERATED_SITE_ONLY",
+    "legacy_demos": "UNMODIFIED"
+  },
+  "compilation_status": "GITHUB_MAIN_WEB_BUILD_AUTOMATED__RESEARCH_PDF_PPTX_REQUIRES_SOURCE_RECIPE_AND_DRIVE_WRITE_AUTHORITY"
 }
