@@ -3,13 +3,13 @@
   "inventory_id": "RD-BRANCH-INVENTORY-20261009-v002",
   "observed_date": "2026-10-09",
   "repository_full_name": "FabinGurung/JP_Research-and-Development",
-  "observed_branch_count": 101,
+  "observed_branch_count": 102,
   "counts": {
     "archive": 49,
     "production": 1,
     "researcher-template": 33,
     "website-marker": 2,
-    "resource": 14,
+    "resource": 15,
     "snapshot": 2
   },
   "branches": [
@@ -1145,6 +1145,19 @@
       "observation": "GITHUB_BRANCH_API_AND_REGISTERED_ROLE__2026-10-09"
     },
     {
+      "name": "resource/control/latex/v002-20261009",
+      "commit_sha": "c02af0a18bc066eea79fd892e444eeaebe7ac1e2",
+      "category": "resource",
+      "purpose": "Immutable version 2 of the shared R&D LaTeX control tower with Safal RSH-010 source admission/PU/A9 gates; not a thesis source or PDF",
+      "primary_source_path": "controls/latex.control.json",
+      "source_status": "CONTROL_VERSION_ONLY__THESIS_SOURCE_NOT_ADMITTED",
+      "version": "v002",
+      "owner": "control/latex",
+      "alias_of": null,
+      "protected": false,
+      "observation": "LIVE_GITHUB_BRANCH_READBACK_2026-10-09"
+    },
+    {
       "name": "resource/control/presentation/v001-20261009",
       "commit_sha": "e34e62e836f87ea4a9907cf4aa214beda9419c18",
       "category": "resource",
@@ -1327,7 +1340,7 @@
       "observation": "PROVIDER_READBACK_2026-10-09"
     }
   ],
-  "status": "POINT_IN_TIME__100_STABLE_REFS_PLUS_MOVING_MAIN__NOT_AN_AUTOMATIC_LIVE_QUERY",
+  "status": "102_PROVIDER_OBSERVED_POINT_IN_TIME__MOVING_MAIN_RECORDS_HISTORICAL_HEAD",
   "source_truth": "GITHUB_REFS_AT_READBACK; PURPOSES_ARE_NAME_AND_REPO_REGISTRY_BASED",
   "special_notes": [
     "Researcher lane branches mostly share the old template SHA. Their names are placeholders for code workflow; no claim that source was migrated.",

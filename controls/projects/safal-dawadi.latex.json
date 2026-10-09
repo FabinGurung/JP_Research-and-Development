@@ -47,7 +47,8 @@
     "presentation": "researcher/safal-dawadi/presentation",
     "observed_state": "THREE_LEGACY_TEMPLATE_REFS_NOT_IMPORTED_SOURCE",
     "planned_versioned_source": "resource/latex/safal-dawadi/v001-20261009",
-    "versioned_source_created": false
+    "versioned_source_created": false,
+    "shared_latex_control_release": "resource/control/latex/v002-20261009"
   },
   "build": {
     "source_root": "researchers/safal-dawadi/latex",
@@ -64,7 +65,9 @@
     "external_font_resource_drive_id": "1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv",
     "workflow": ".github/workflows/safal-latex.yml",
     "source_gate": "scripts/latex/safal_build.py",
-    "trigger": "Only Safal project source or manually authorized run, not unrelated website changes"
+    "trigger": "Only Safal project source or manually authorized run, not unrelated website changes",
+    "compiler_script": "scripts/latex/safal_build.py",
+    "compile_mode": "AUTHORIZED_MANUAL_ONLY_AFTER_GATES"
   },
   "gates": {
     "source_reconciliation": "HOLD",
@@ -76,7 +79,8 @@
     "drive_upload": "NOT_AUTHORIZED",
     "scientific_approval": "HOLD",
     "local_seq": "15_REPORTED_ONLY",
-    "main_ack": "CURSOR_5_HOLD"
+    "main_ack": "CURSOR_5_HOLD",
+    "automated_pdf_compile": "DISABLED_UNTIL_AUTHORIZED_PRIVATE_FONT_RUNNER_AND_RELEASE_GATES"
   },
   "security": {
     "repository_public": true,

@@ -170,7 +170,7 @@
   "branch_inventory": {
     "machine": "registry/branch-inventory.json",
     "site": "branches/index.html",
-    "status": "101_PROVIDER_OBSERVED_REFS__PRE_AND_POST_SNAPSHOTS_PRESERVED",
+    "status": "102_OBSERVED_POINT_IN_TIME__VERSIONED_SHARED_LATEX_CONTROL_V002",
     "snapshot_pre": "snapshot/20261009/rnd-main/v001-pre-rose-dawn",
     "snapshots_and_branch_names_not_deletable_without_new_GOVERNED_BOUNDARY": true,
     "resource_bases": 14,
@@ -180,7 +180,7 @@
     "old_branches_rewritten": 0,
     "legacy_aliases_added": 2,
     "resource_branches_created": 14,
-    "observed_count": 101
+    "observed_count": 102
   },
   "ui_palette": {
     "theme": "ROSE_DAWN",
@@ -201,6 +201,10 @@
     "compile_state": "NOT_RUN__NO_FONT_RUNNER",
     "drive_writes": "NONE",
     "a9_local_seq_reported": 15,
-    "a9_main_cursor_reported": 5
+    "a9_main_cursor_reported": 5,
+    "shared_control_release": "resource/control/latex/v002-20261009",
+    "source_version_created": false,
+    "compile_script": "scripts/latex/safal_build.py",
+    "control_branch_readback": "c02af0a18bc066eea79fd892e444eeaebe7ac1e2"
   }
 }

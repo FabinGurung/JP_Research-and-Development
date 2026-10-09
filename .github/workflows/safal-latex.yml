@@ -1,6 +1,15 @@
 name: Safal Dawadi LaTeX source gate (NO PDF publishing)
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'check source gate, or attempt authorized exact-font compilation'
+        type: choice
+        required: true
+        default: check
+        options:
+          - check
+          - compile
   push:
     branches:
       - main
@@ -17,7 +26,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Read source admission gates
-        run: python scripts/latex/safal_build.py
+      - name: Read source admission gates or perform authorized private build
+        env:
+          RUN_MODE: ${{ github.event.inputs.mode || 'check' }}
+        run: python scripts/latex/safal_build.py --mode "$RUN_MODE" --output-dir "$RUNNER_TEMP/safal-candidate"
       - name: Clarify boundary
-        run: echo 'Source gate only; a green job does NOT represent a PDF, a Google Drive upload, or a scientific approval.'
+        run: echo 'Source check is not a PDF. Manual compile cannot run until exact admitted source, private fonts and authorized runner exist. No Drive upload or human scientific approval in this workflow.'
