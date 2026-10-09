@@ -73,6 +73,27 @@
     },
     "status": {
       "type": "string"
+    },
+    "config_revision": {
+      "type": "string"
+    },
+    "shared_package": {
+      "type": "string"
+    },
+    "citation_evidence": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "source_baseline": {
+      "type": "string"
+    },
+    "concurrent_local_review": {
+      "type": "object"
+    },
+    "current_manifest_candidate": {
+      "type": "object"
     }
   }
 }

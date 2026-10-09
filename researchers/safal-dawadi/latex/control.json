@@ -9,10 +9,24 @@
   "scientific_approval": "HOLD",
   "citation_style": "APA7",
   "citation_evidence": "Existing project-specific R&D config; recheck at source admission",
-  "document_stage": "UNKNOWN",
+  "document_stage": "MIDTERM",
   "current_source_manifest": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
   "release_ready": false,
   "status": "CONFIGURATION_CREATED__SOURCE_NOT_ADMITTED",
   "scope": "metadata only: no manuscript code imported",
-  "source_baseline": "researchers/safal-dawadi/latex/source-baseline.json"
+  "source_baseline": "researchers/safal-dawadi/latex/source-baseline.json",
+  "config_revision": "2026-10-09-v002-live-manifest-reconciliation",
+  "current_manifest_candidate": {
+    "version": "v1.2",
+    "stage": "MIDTERM",
+    "release_class": "CURRENT_CONTROLLED_PREVIEW_NON_PRODUCTION_TNR_FALLBACK",
+    "source_zip_id": "1F4g4gAoe_GAmwAoPQ8sRto3HnExDNc2I",
+    "pdf_id": "1ttnXVx1EE7lKtTuW2MjDZWDeWLsvU5FN",
+    "verified": "DRIVE_MANIFEST_AND_METADATA_POINTERS__BYTES_NOT_REHASHED"
+  },
+  "concurrent_local_review": {
+    "version": "v1.9",
+    "state": "LOCAL_SEQ15_REVIEW_HOLD__NOT_MANIFEST_REPLACEMENT",
+    "related_data": "source-baseline.json"
+  }
 }

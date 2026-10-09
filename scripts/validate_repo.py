@@ -195,6 +195,12 @@ if scoped.get("document_stage") not in ("PROPOSAL","MIDTERM","FINAL_THESIS","DEF
     errors.append("invalid or inherited document stage")
 if baseline.get("selected_baseline") is not None or baseline.get("source_git_admission")!="HOLD":
     errors.append("Safal source conflict accidentally promoted")
+if scoped.get("document_stage")!="MIDTERM" or scoped.get("current_manifest_candidate",{}).get("version")!="v1.2":
+    errors.append("Safal current October 2026 Midterm candidate not represented")
+if baseline.get("latest_manifest_designated_candidate",{}).get("classification")!="CURRENT_CONTROLLED_PREVIEW_NON_PRODUCTION":
+    errors.append("Safal October 2026 nonproduction preview state lost")
+if baseline.get("a9_main_registry_observed",{}).get("safal_row_consumed_cursor")!=2:
+    errors.append("Do not claim main library seq15 ACK; main registry historic row is seq2")
 if not any(x.get("researcher_id")=="RSH-004" and x.get("slug")=="safal-thapa" for x in rows):
     errors.append("Safal Thapa identity must remain distinct RSH-004")
 if args.site:

@@ -24,5 +24,32 @@
   ],
   "a9_local_seq_reported": 15,
   "a9_main_ack_cursor_reported": 5,
-  "a9_registration": "NOT_ADVANCED"
+  "a9_registration": "NOT_ADVANCED",
+  "latest_manifest_designated_candidate": {
+    "version": "v1.2",
+    "stage": "MIDTERM",
+    "classification": "CURRENT_CONTROLLED_PREVIEW_NON_PRODUCTION",
+    "source_zip_id": "1F4g4gAoe_GAmwAoPQ8sRto3HnExDNc2I",
+    "source_sha256_reported": "67703abbce94b9d006f364148d84b12edd87dcd887cb5d00b7375513c8e713fd",
+    "pdf_id": "1ttnXVx1EE7lKtTuW2MjDZWDeWLsvU5FN",
+    "pdf_sha256_reported": "e3b099d4b21e4141daf9f63c5064c540654999407e41d4391a5455f1c21d5187",
+    "qa_checkpoint_id": "1eFcbBi_vCWeO-Ox_qLSQYDXnyUDg59C5",
+    "page_count_reported": 28,
+    "exact_tnr": "NOT_MET_TINOS_FALLBACK",
+    "manifest_id": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
+    "verified": "DRIVE_MANIFEST_AND_POINTER_METADATA__NOT_BYTE_REHASHED"
+  },
+  "concurrent_review_lane_note": "v1.9 QA review modified 2026-10-08 and Local seq15 represent a separate pending review branch; not automatically the source-manifest-designated current v1.2 Midterm release. Resolve cross-lane authority before selecting active Git source.",
+  "a9_local_syncstate_observed": {
+    "local_last_change_seq": 15,
+    "last_main_pull_cursor": 5,
+    "sync_status": "PROVENANCE_REFRESH_PENDING_MAIN5_HOLD",
+    "source": "LOCAL_SYNCSTATE_LIVE_2026-10-09"
+  },
+  "a9_main_registry_observed": {
+    "safal_row_local_high_water": 2,
+    "safal_row_consumed_cursor": 2,
+    "status": "MAIN_LIBRARY_CLOSEOUT_ACKED_FOR_2026-10-04_SEQ2",
+    "note": "Main POST__LocalLibraryRegistry__39 row43 predates reported later Local seq15. Current Main ACK for seq15 not verified."
+  }
 }

@@ -78,8 +78,8 @@
     "pdf_qa": "NOT_RUN",
     "drive_upload": "NOT_AUTHORIZED",
     "scientific_approval": "HOLD",
-    "local_seq": "15_REPORTED_ONLY",
-    "main_ack": "CURSOR_5_HOLD",
+    "local_seq": "15_LIVE_LOCAL_VERIFIED",
+    "main_ack": "LOCAL_REPORTS_CURSOR5__MAIN_REGISTRY_ROW_LAST_VERIFIED_2__NOT_SYNCED_SEQ15",
     "automated_pdf_compile": "DISABLED_UNTIL_AUTHORIZED_PRIVATE_FONT_RUNNER_AND_RELEASE_GATES"
   },
   "security": {
@@ -98,5 +98,16 @@
   "shared_package": "controls/latex/",
   "researcher_config": "researchers/safal-dawadi/latex/control.json",
   "source_baseline": "researchers/safal-dawadi/latex/source-baseline.json",
-  "pu_format_parity": "SOURCE_V1_13_STILL_AUTHORITY__MACHINE_BRIDGE_PARTIAL"
+  "pu_format_parity": "SOURCE_V1_13_STILL_AUTHORITY__MACHINE_BRIDGE_PARTIAL",
+  "current_source_manifest_candidate": {
+    "version": "v1.2",
+    "stage": "MIDTERM",
+    "classification": "CURRENT_CONTROLLED_PREVIEW_NON_PRODUCTION",
+    "source_zip_id": "1F4g4gAoe_GAmwAoPQ8sRto3HnExDNc2I",
+    "pdf_id": "1ttnXVx1EE7lKtTuW2MjDZWDeWLsvU5FN",
+    "source_manifest_id": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
+    "source_sha256_reported": "67703abbce94b9d006f364148d84b12edd87dcd887cb5d00b7375513c8e713fd",
+    "pdf_sha256_reported": "e3b099d4b21e4141daf9f63c5064c540654999407e41d4391a5455f1c21d5187"
+  },
+  "manuscript_historical_lane": "Existing manuscript v1.9 fields represent later 42-page QA review, NOT the current controlled Midterm v1.2 source-manifest candidate."
 }

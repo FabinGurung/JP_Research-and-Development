@@ -20,7 +20,9 @@
     "actual full thesis compile QA and Drive readback",
     "A9 Local/Main private registration only in separate approved transaction",
     "verify public Pages Actions after commit",
-    "browser-level rendered design QA not automated"
+    "browser-level rendered design QA not automated",
+    "Reconcile 2026-10-08 Local seq15 v1.9 QA review against October 2026 source manifest's v1.2 controlled Midterm preview; the two release streams cannot be silently merged.",
+    "Main POST LocalLibraryRegistry Safal row43 still reports seq2/2 while Local SyncState reports seq15/cursor5; do not assert Main seq15 ACK."
   ],
   "source_revisions": {
     "pu": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
@@ -28,5 +30,13 @@
   },
   "no_drive_mutations": true,
   "post_commit": "RESOLVE_FROM_LIVE_MAIN_HEAD_AFTER_PROMOTION",
-  "cutover": "NOT_APPROVED"
+  "cutover": "NOT_APPROVED",
+  "safal_fresh_readback": {
+    "source_manifest_id": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
+    "latest_manifest_candidate": "MIDTERM_v1.2_OCT2026_PREVIEW",
+    "local_last_change_seq": 15,
+    "local_last_main_cursor_reported": 5,
+    "main_registry_row_verified": "seq2_consumed2",
+    "classification": "CROSS_LANE_RECONCILIATION_HOLD"
+  }
 }
