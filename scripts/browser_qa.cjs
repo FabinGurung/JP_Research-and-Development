@@ -124,6 +124,20 @@ async function main() {
    await assertNoOverflow(mp,"mobile homepage");
    await mp.screenshot({path:path.join(out,"mobile-home.png"),fullPage:true,animations:"disabled"});
   });
+  await check("mobile_menu_keyboard_accessibility",async()=>{
+   await mp.goto(base,{waitUntil:"networkidle"});
+   const toggle=mp.locator("[data-mobile-menu]");
+   const nav=mp.locator("#site-nav-links");
+   assert.ok(await toggle.isVisible());
+   assert.equal(await nav.isHidden(),true);
+   await toggle.click();
+   assert.equal(await toggle.getAttribute("aria-expanded"),"true");
+   assert.ok(await nav.isVisible());
+   await mp.keyboard.press("Escape");
+   assert.equal(await toggle.getAttribute("aria-expanded"),"false");
+   assert.equal(await nav.isHidden(),true);
+   assert.equal(await toggle.evaluate(el=>document.activeElement===el),true);
+  });
   await check("mobile_owner_prompt_and_copy_control",async()=>{
    await mp.goto(base+"owner-prompts/safal-dawadi/",{waitUntil:"networkidle"});
    await assertNoOverflow(mp,"mobile prompt");
@@ -146,12 +160,34 @@ async function main() {
   await mobile.close();
   const reduced=await browser.newContext({viewport:{width:390,height:844},reducedMotion:"reduce"});
   const rp=await reduced.newPage();
+  await check("mobile_320px_navigation",async()=>{
+   await rp.goto(base,{waitUntil:"networkidle"});
+   await rp.setViewportSize({width:320,height:700});
+   await assertNoOverflow(rp,"320px narrow mobile");
+   assert.ok(await rp.locator("[data-mobile-menu]").isVisible());
+   await rp.screenshot({path:path.join(out,"mobile-320.png"),fullPage:true,animations:"disabled"});
+  });
   await check("reduced_motion_disables_animation",async()=>{
    await rp.goto(base,{waitUntil:"networkidle"});
    assert.equal(await rp.locator(".flying-book").evaluate(e=>getComputedStyle(e).animationName),"none");
    assert.equal(await rp.locator("[data-motion-toggle]").isDisabled(),true);
   });
   await reduced.close();
+  await check("progressive_navigation_without_javascript",async()=>{
+   const nojs=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:false});
+   const nojsPage=await nojs.newPage();
+   await nojsPage.goto(base,{waitUntil:"domcontentloaded"});
+   assert.ok(await nojsPage.locator("#site-nav-links").isVisible());
+   await assertNoOverflow(nojsPage,"no-JavaScript mobile");
+   await nojs.close();
+  });
+  await check("search_page_wcag_axe",async()=>{
+   await page.goto(base+"search/",{waitUntil:"networkidle"});
+   const results=await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21aa"]).analyze();
+   const serious=results.violations.filter(v=>v.impact==="critical"||v.impact==="serious");
+   fs.writeFileSync(path.join(out,"axe-search.json"),JSON.stringify(results.violations,null,2));
+   if(serious.length)throw Error("Serious search accessibility findings: "+serious.map(x=>x.id).join(","));
+  });
   await check("no_uncaught_javascript_errors",async()=>{assert.deepEqual(javascriptErrors,[])});
  }finally{
   if(browser)await browser.close();

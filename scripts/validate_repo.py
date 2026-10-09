@@ -313,6 +313,12 @@ if args.site:
         if "research-search" not in search_page.read_text(encoding="utf-8"):
             errors.append("R&D search control absent")
 if args.site:
+    homepage=(ROOT/args.site/"index.html")
+    if homepage.is_file() and "data-mobile-menu" not in homepage.read_text(encoding="utf-8"):
+        errors.append("Progressive accessible mobile navigation absent")
+    if not (ROOT/args.site/"assets/menu.js").is_file():
+        errors.append("Mobile menu JavaScript missing from generated site")
+if args.site:
     index=ROOT/args.site/"index.html"
     thesis=ROOT/args.site/"thesis-infrastructure/index.html"
     if index.is_file():
@@ -325,7 +331,7 @@ if args.site:
         for item in status_registry["records"]:
             if item["prompt_path"].split("/")[-1] not in page:
                 errors.append("Researcher owner prompt absent from thesis portal: "+item["researcher_id"])
-for path in ("web/living-hero.html","web/motion.js","web/prompt-copy.js","web/styles.css","prompts/researcher_owner_execution_master.md","scripts/researchers/generate_prompts.py","schemas/researcher-migration-status.schema.json","controls/website-living-library.json"):
+for path in ("web/living-hero.html","web/motion.js","web/menu.js","web/prompt-copy.js","web/styles.css","prompts/researcher_owner_execution_master.md","scripts/researchers/generate_prompts.py","schemas/researcher-migration-status.schema.json","controls/website-living-library.json"):
     if not (ROOT/path).is_file(): errors.append("theme or owner prompt file missing: "+path)
 # Syntax and executable HOLD/PRESENT source-gate regression: green CI must NOT be construed as PDF certified.
 for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/validate_site_links.py","scripts/test_site_links.py","scripts/site_core.py","scripts/site_pages.py","scripts/site_search.py","scripts/test_site_search.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/researchers/generate_prompts.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
