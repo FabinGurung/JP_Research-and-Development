@@ -313,7 +313,7 @@ if args.site:
 for path in ("web/living-hero.html","web/motion.js","web/prompt-copy.js","web/styles.css","prompts/researcher_owner_execution_master.md","scripts/researchers/generate_prompts.py","schemas/researcher-migration-status.schema.json","controls/website-living-library.json"):
     if not (ROOT/path).is_file(): errors.append("theme or owner prompt file missing: "+path)
 # Syntax and executable HOLD/PRESENT source-gate regression: green CI must NOT be construed as PDF certified.
-for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/researchers/generate_prompts.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
+for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/validate_site_links.py","scripts/test_site_links.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/researchers/generate_prompts.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
     try:
         ast.parse((ROOT/script).read_text(encoding="utf-8"),filename=script)
     except (SyntaxError,OSError) as e:
@@ -324,6 +324,17 @@ if source_check.returncode!=0 or not any(token in source_check.stdout for token 
 shared_test=subprocess.run([sys.executable,str(ROOT/"scripts/latex/validate_shared.py")],cwd=ROOT,text=True,capture_output=True)
 if shared_test.returncode!=0:
     errors.append("shared template inheritance check failed: "+(shared_test.stdout+shared_test.stderr).strip()[:3000])
+# Portal reliability: run unit tests even without a generated site.
+unit=subprocess.run([sys.executable,str(ROOT/"scripts/test_site_links.py")],cwd=ROOT,text=True,capture_output=True)
+if unit.returncode!=0:
+    errors.append("portal link checker unit tests FAILED: "+(unit.stdout+unit.stderr)[-2000:])
+if args.site:
+    link_test=subprocess.run(
+        [sys.executable,str(ROOT/"scripts/validate_site_links.py"),"--site",args.site],
+        cwd=ROOT,text=True,capture_output=True
+    )
+    if link_test.returncode!=0:
+        errors.append("broken generated-site navigation/assets: "+(link_test.stdout+link_test.stderr)[-6200:])
 if args.site:
     single_page=ROOT/args.site/"controls/latex/index.html"
     if single_page.exists() and "One template for every researcher" not in single_page.read_text(encoding="utf-8"):

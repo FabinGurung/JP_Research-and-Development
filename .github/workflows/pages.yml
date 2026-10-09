@@ -21,6 +21,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_repo.py
+      - run: python scripts/test_site_links.py
       - run: python scripts/build_site.py --out dist
       - run: python scripts/validate_repo.py --site dist
       - uses: actions/configure-pages@v5
