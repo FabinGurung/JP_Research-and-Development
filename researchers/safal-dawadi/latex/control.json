@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-010",
+  "researcher_slug": "safal-dawadi",
+  "shared_control": "controls/latex.control.json",
+  "shared_package": "controls/latex/",
+  "project_legacy_control": "controls/projects/safal-dawadi.latex.json",
+  "source_admission": "HOLD",
+  "scientific_approval": "HOLD",
+  "citation_style": "APA7",
+  "citation_evidence": "Existing project-specific R&D config; recheck at source admission",
+  "document_stage": "UNKNOWN",
+  "current_source_manifest": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
+  "release_ready": false,
+  "status": "CONFIGURATION_CREATED__SOURCE_NOT_ADMITTED",
+  "scope": "metadata only: no manuscript code imported",
+  "source_baseline": "researchers/safal-dawadi/latex/source-baseline.json"
+}

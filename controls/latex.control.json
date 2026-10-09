@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "control_id": "RD-CONTROL-LATEX-001",
   "status": "ACTIVE",
   "branch_pattern": "researcher/<slug>/latex",
@@ -73,5 +73,15 @@
       "Optional Main ACK"
     ],
     "condition": "A green source gate is not a successful production compilation; no PDF release without all required provider QA"
-  }
+  },
+  "control_version": "1.2.0",
+  "shared_package": "controls/latex/",
+  "rule_registry": "controls/latex/pu-msc-format.rules.json",
+  "format_authorities": "controls/latex/format-authorities.json",
+  "build_contract": "controls/latex/build-contract.json",
+  "qa_contract": "controls/latex/qa-contract.json",
+  "release_contract": "controls/latex/release-contract.json",
+  "migration_status": "controls/latex/migration-status.json",
+  "inheritance": "A7_MODULE.json -> shared LaTeX tower -> researcher project config -> admitted source -> build QA -> Drive readback -> A9 separately",
+  "pu_format_parity": "PARTIAL_BRIDGE_FULL_PRIVATE_AND_FORMAT_PARITY_HOLD"
 }

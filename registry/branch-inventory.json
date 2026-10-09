@@ -3,14 +3,14 @@
   "inventory_id": "RD-BRANCH-INVENTORY-20261009-v002",
   "observed_date": "2026-10-09",
   "repository_full_name": "FabinGurung/JP_Research-and-Development",
-  "observed_branch_count": 102,
+  "observed_branch_count": 103,
   "counts": {
     "archive": 49,
     "production": 1,
     "researcher-template": 33,
     "website-marker": 2,
     "resource": 15,
-    "snapshot": 2
+    "snapshot": 3
   },
   "branches": [
     {
@@ -1338,9 +1338,22 @@
       "alias_of": null,
       "protected": false,
       "observation": "PROVIDER_READBACK_2026-10-09"
+    },
+    {
+      "name": "snapshot/20261009/rnd-main/v003-pre-latex-governance-bridge",
+      "commit_sha": "7301928ed48344f18adcc54078ccbdbbc4a80ea2",
+      "category": "snapshot",
+      "purpose": "Immutable PRE checkpoint for additive shared R&D LaTeX control tower migration",
+      "primary_source_path": "controls/latex.control.json",
+      "source_status": "IMMUTABLE_ROLLBACK_REF",
+      "version": "v003",
+      "owner": "R&D",
+      "alias_of": null,
+      "protected": false,
+      "observation": "PROVIDER_READBACK_2026-10-09"
     }
   ],
-  "status": "102_PROVIDER_OBSERVED_POINT_IN_TIME__MOVING_MAIN_RECORDS_HISTORICAL_HEAD",
+  "status": "PROVIDER_OBSERVED_STATIC_BRANCH_SNAPSHOT__REFRESH_BEFORE_WRITES",
   "source_truth": "GITHUB_REFS_AT_READBACK; PURPOSES_ARE_NAME_AND_REPO_REGISTRY_BASED",
   "special_notes": [
     "Researcher lane branches mostly share the old template SHA. Their names are placeholders for code workflow; no claim that source was migrated.",
@@ -1349,7 +1362,8 @@
     "14 resource branches have unique scoped manifest commits based on the new Dawn theme code and include the whole repository tree.",
     "Git snapshots are immutable by policy; routine changes belong on feature/task branches then main, with dated release snapshots when needed.",
     "Compiled PDFs/PPTX and scientific original files remain Google Drive authority.",
-    "main moves with commits; observed main SHA is the parent of the catalog-only update. Future live GitHub HEAD must be fetched before any write."
+    "main moves with commits; observed main SHA is the parent of the catalog-only update. Future live GitHub HEAD must be fetched before any write.",
+    "2026-10-09 v003 immutable PRE control bridge snapshot was provider-verified before the control change. A future release ref requires separate provider readback."
   ],
   "rollback_pre_snapshot": "snapshot/20261009/rnd-main/v001-pre-rose-dawn",
   "rollback_post_snapshot": "snapshot/20261009/rnd-main/v002-post-rose-dawn-and-branches"

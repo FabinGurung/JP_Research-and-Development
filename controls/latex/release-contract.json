@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-RELEASE-001",
+  "control_version": "1.2.0",
+  "states": [
+    "HOLD",
+    "SOURCE_ADMITTED",
+    "TECHNICAL_CANDIDATE",
+    "VISUAL_QA_PASS",
+    "SCIENTIFIC_APPROVED",
+    "DRIVE_PUBLISHED_READBACK",
+    "A9_LOCAL_REGISTERED",
+    "A9_MAIN_ACKED"
+  ],
+  "gates": "Strictly independent; cannot infer later state from earlier CI success.",
+  "required_manifest": [
+    "control_version",
+    "researcher_id",
+    "manuscript_version",
+    "source_commit_sha",
+    "source_manifest_id",
+    "source_tree_digest",
+    "compiler_versions",
+    "citation_style",
+    "format_authority_drive_id",
+    "asset_checksums",
+    "technical_qa",
+    "visual_qa",
+    "scientific_approval",
+    "pdf_sha256",
+    "pdf_drive_id",
+    "drive_parent_id",
+    "provider_readback",
+    "a9_local_registration",
+    "a9_main_ack"
+  ],
+  "ownership": {
+    "git": "editable admitted LaTeX/build code and commit history",
+    "drive": "original evidence, approved controls, binaries and release PDFs",
+    "researcher": "scientific acceptance",
+    "a9": "private Local/Main registration only after governed transaction"
+  },
+  "prohibited": [
+    "edit compiled PDF instead of source",
+    "treat technical compile as scientific acceptance",
+    "publish internal audit PDF as thesis",
+    "assert Main ACK when cursor held",
+    "replace published files without authorized versioning"
+  ]
+}

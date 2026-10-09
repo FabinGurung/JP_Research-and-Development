@@ -94,5 +94,9 @@
     ],
     "public_safety_review": "REQUIRED_BEFORE_SOURCE_IMPORT"
   },
-  "original_authority": "Drive private university controls and Safal approved scientific evidence take precedence for format/science; this Git config is an execution recipe and bridge only"
+  "original_authority": "Drive private university controls and Safal approved scientific evidence take precedence for format/science; this Git config is an execution recipe and bridge only",
+  "shared_package": "controls/latex/",
+  "researcher_config": "researchers/safal-dawadi/latex/control.json",
+  "source_baseline": "researchers/safal-dawadi/latex/source-baseline.json",
+  "pu_format_parity": "SOURCE_V1_13_STILL_AUTHORITY__MACHINE_BRIDGE_PARTIAL"
 }

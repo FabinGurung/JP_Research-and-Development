@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-AUTHORITIES-001",
+  "recorded_on": "2026-10-09",
+  "control_version": "1.2.0",
+  "precedence": [
+    "approved project and official university source for scientific facts",
+    "Drive thesis-wide controller for private records and reproducibility",
+    "Drive PU LaTeX v1.13 for exact formatting",
+    "R&D shared executable operational controls for admitted public-safe sources",
+    "project-specific config for non-conflicting explicitly verified overrides"
+  ],
+  "sources": [
+    {
+      "role": "APPROVED_PU_FORMAT",
+      "id": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
+      "title": "PU_LATEX_FORMAT_CONTROL_TOWER_v1.13",
+      "observed_version": "v1.13",
+      "revision": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
+      "url": "https://docs.google.com/document/d/1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys/edit",
+      "status": "VERIFIED_LIVE_SOURCE__FULL_RULE_PARITY_HOLD"
+    },
+    {
+      "role": "THESIS_WIDE_POLICY",
+      "id": "1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A",
+      "title": "00_THESIS_CONTROL_TOWER_READ_FIRST",
+      "observed_version": "v1.23",
+      "revision": "ANLCKQnCGT_cLnyAEqcMJ9y0a7psgssW5Ljnk25nhqA6zj1R00OcjVakHBtjwjU53Yuj3A3yVafObEqLAEtsW_bXGIl-a5t9akWvhoiJHOG5",
+      "url": "https://docs.google.com/document/d/1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A/edit",
+      "status": "VERIFIED_LIVE_SOURCE__PRIVATE_A9_PARITY_HOLD"
+    },
+    {
+      "role": "A7_GLOBAL_ROUTING",
+      "repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+      "path": "A9_GIT_DRIVE_BOOTSTRAP.json",
+      "observed_version": "2026-10-09-v1",
+      "status": "VERIFIED_READ_ONLY_REFERENCE"
+    },
+    {
+      "role": "RND_SHARED_CONTROL",
+      "repository": "FabinGurung/JP_Research-and-Development",
+      "path": "controls/latex.control.json",
+      "status": "OPERATIONAL_CODE_OWNER"
+    }
+  ],
+  "privacy": "Source documents stay on Drive. Only concise machine-rule interpretations and stable IDs are public. A Drive link is not public distribution approval.",
+  "effective_date": "2026-10-09",
+  "full_format_parity": "HOLD_EXACT_ALL_RULE_COMPARISON_PENDING",
+  "approval_boundary": "Original university and approved Drive controls prevail on unresolved differences"
+}

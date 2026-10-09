@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-BUILD-001",
+  "control_version": "1.2.0",
+  "default_engine": "XeLaTeX",
+  "bibliography_engine": "Biber",
+  "default_sequence": [
+    "xelatex",
+    "biber",
+    "xelatex",
+    "xelatex"
+  ],
+  "additional_settling_passes": "only if required by deterministic references/lists",
+  "build_stages": [
+    "authority_lock",
+    "admitted_source_freeze",
+    "compile_and_source_level_repairs",
+    "complete_technical_render_qa",
+    "authorized_release_and_provider_readback"
+  ],
+  "compile_conditions": [
+    "complete explicitly admitted scientific source and manifest",
+    "explicit project citation selection",
+    "approved stage and preliminary architecture",
+    "licensed exact Times New Roman installed privately for production",
+    "all necessary private/runtime assets with verified checksums",
+    "pinned compiler/tool/package environment where practical",
+    "no private raw corpus or binaries in public Git"
+  ],
+  "precompile_validation": [
+    "configured researcher ID and inheritance",
+    "all referenced scientific inputs active/current",
+    "no archived data fallback",
+    "no forbidden source paths/assets",
+    "project-specific bibliography style; no hidden defaults",
+    "source checksums and project build root"
+  ],
+  "classification": {
+    "check": "SOURCE_GATE_ONLY_NOT_A_COMPILE",
+    "preview": "COMPATIBILITY_OR_INCOMPLETE_METADATA_NON_PRODUCTION",
+    "production": "REQUIRES_ALL_QA_SCIENTIFIC_AUTHORIZATION_AND_PROVIDER_PUBLICATION_GATES"
+  },
+  "privacy": "Never commit proprietary fonts, research evidence, generated PDFs or private identifiers to public Git",
+  "file_output_policy": "Drive for compiled PDFs; Git for source and manifests only",
+  "admission_status": "PER_RESEARCHER_HARD_GATE"
+}

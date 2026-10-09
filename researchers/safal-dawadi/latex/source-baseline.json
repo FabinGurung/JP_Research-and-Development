@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-010",
+  "manuscript_version_reported": "v1.9",
+  "first_drive_published": {
+    "source_zip_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+    "source_sha256_reported": "80c560f5d89f91cae26dc9113deb91b932e7edf6a9c1fc5de260a5c237c0456c",
+    "pdf_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
+    "pdf_sha256_reported": "3a82658cdf8d8817b7042e71b02949460dfc5beac68b58466f9db93285e9f480"
+  },
+  "later_local_reported": {
+    "source_sha256_reported": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
+    "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
+    "drive_publication": "UNKNOWN"
+  },
+  "verification": "IDS_KNOWN__HASHES_NOT_INDEPENDENTLY_RECOMPUTED",
+  "source_git_admission": "HOLD",
+  "selected_baseline": null,
+  "reason": "Conflicting v1.9 states; no private corpus or researcher source uploaded without authenticated manifest and clearance",
+  "branches": [
+    "researcher/safal-dawadi/discussion",
+    "researcher/safal-dawadi/latex",
+    "researcher/safal-dawadi/presentation"
+  ],
+  "a9_local_seq_reported": 15,
+  "a9_main_ack_cursor_reported": 5,
+  "a9_registration": "NOT_ADVANCED"
+}

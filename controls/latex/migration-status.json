@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-MIGRATION-20261009-001",
+  "date_npt": "2026-10-09",
+  "status": "IMPLEMENTED_MACHINE_BRIDGE__FULL_PRIVATE_A9_RULE_PARITY_HOLD",
+  "previous_main_commit": "7301928ed48344f18adcc54078ccbdbbc4a80ea2",
+  "pre_snapshot_branch": "snapshot/20261009/rnd-main/v003-pre-latex-governance-bridge",
+  "pre_snapshot_sha": "7301928ed48344f18adcc54078ccbdbbc4a80ea2",
+  "authorization": "USER_EXPLICIT_EXECUTION_HANDOVER_2026-10-09; EXISTING DRIVE FORMAT SOURCE NOT MODIFIED",
+  "controls_version": "1.2.0",
+  "format_rule_ids_observed": 144,
+  "format_rule_ids_interpreted": 16,
+  "format_rule_ids_full_automated_enforcement": 0,
+  "verification_claim": "Rule-ID indexing and selected interpreted rules only; no full equivalence, no university format certification",
+  "outstanding": [
+    "every approved PU rule must be mapped and tested in format validator before cutover",
+    "font/logo private runtime and full-page render verification",
+    "Safal two v1.9 binary states and latest scientific project state reconciliation",
+    "Safal private/public Git source clearance and admission",
+    "actual full thesis compile QA and Drive readback",
+    "A9 Local/Main private registration only in separate approved transaction",
+    "verify public Pages Actions after commit",
+    "browser-level rendered design QA not automated"
+  ],
+  "source_revisions": {
+    "pu": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
+    "thesis": "ANLCKQnCGT_cLnyAEqcMJ9y0a7psgssW5Ljnk25nhqA6zj1R00OcjVakHBtjwjU53Yuj3A3yVafObEqLAEtsW_bXGIl-a5t9akWvhoiJHOG5"
+  },
+  "no_drive_mutations": true,
+  "post_commit": "RESOLVE_FROM_LIVE_MAIN_HEAD_AFTER_PROMOTION",
+  "cutover": "NOT_APPROVED"
+}

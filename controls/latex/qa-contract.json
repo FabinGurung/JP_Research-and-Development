@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-QA-001",
+  "control_version": "1.2.0",
+  "source_gate": [
+    "real source exists",
+    "manifest reproducible",
+    "dependencies and citations declared",
+    "correct researcher/stage",
+    "public-source eligibility"
+  ],
+  "technical_build": [
+    "XeLaTeX and Biber successful",
+    "no undefined references/citations",
+    "font exactness and embedding",
+    "A4/geometry and 12pt/1.5 source/render evidence",
+    "toolchain and source hashes",
+    "no new overfull boxes vs named baseline",
+    "no unreviewed visible overflows"
+  ],
+  "whole_document_render": [
+    "every PDF page rendered and inspected",
+    "preliminary sequence and Roman/Arabic pagination",
+    "semantically correct TOC/LOT/LOF",
+    "captions, tables, math and figures readable",
+    "dedication and front matter whitespace",
+    "logo SHA and page appearance where required",
+    "no clipping, spill, orphaned pages or unintended blank pages",
+    "researcher-action/internal audit language absent from student-facing PDF",
+    "audit PDF has unmistakable internal banner/watermark and cannot be confused with thesis"
+  ],
+  "release_decisions": {
+    "technical_QA": "independent of human visual QA",
+    "scientific_approval": "only explicit researcher/supervisor authority",
+    "format_approval": "only after all applicable PU source obligations are verified",
+    "provider_upload": "requires permission, correct folder, stable ID and readback",
+    "a9_register": "separate governed Local/Main transaction"
+  },
+  "current_automation": "PARTIAL__NO_PUBLIC_OR_PRIVATE_FINAL_PDF_QA_ASSERTED"
+}

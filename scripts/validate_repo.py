@@ -152,6 +152,60 @@ if args.site:
     expected += ["aec/index.html","hydropower/index.html","hydropower/proposal-defense/index.html"]
     for rel in expected:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
+# Shared LaTeX v1.2.0 public-safe governance package
+required_latex=[
+    "controls/latex/README.md","controls/latex/format-authorities.json",
+    "controls/latex/pu-msc-format.rules.json","controls/latex/build-contract.json",
+    "controls/latex/qa-contract.json","controls/latex/release-contract.json",
+    "controls/latex/migration-status.json","schemas/latex-project.schema.json",
+    "researchers/safal-dawadi/latex/README.md",
+    "researchers/safal-dawadi/latex/control.json",
+    "researchers/safal-dawadi/latex/source-baseline.json",
+    "docs/LATEX_GOVERNANCE_PRE_AND_SCOPE_20261009.md"
+]
+for p in required_latex:
+    if not (ROOT/p).is_file(): errors.append(f"required LaTeX bridge missing: {p}")
+    elif p.endswith(".json"): load(p)
+if latex_policy.get("control_id")!="RD-CONTROL-LATEX-001" or latex_policy.get("control_version")!="1.2.0":
+    errors.append("LaTeX control identity/version failed")
+if latex_policy.get("shared_package")!="controls/latex/":
+    errors.append("shared LaTeX inheritance path failed")
+fmt=load("controls/latex/format-authorities.json")
+rul=load("controls/latex/pu-msc-format.rules.json")
+mig=load("controls/latex/migration-status.json")
+scoped=load("researchers/safal-dawadi/latex/control.json")
+baseline=load("researchers/safal-dawadi/latex/source-baseline.json")
+if not any(x.get("id")=="1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys" for x in fmt.get("sources",[])):
+    errors.append("PU v1.13 authority not referenced")
+if not any(x.get("id")=="1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A" for x in fmt.get("sources",[])):
+    errors.append("thesis-wide authority not referenced")
+if rul.get("discovered_unique_rule_ids")!=len({x.get("id") for x in rul.get("rule_index",[])}):
+    errors.append("PU rule index count/uniqueness wrong")
+if not {"PU-FMT-087","PU-FMT-097","PU-FMT-143"} <= {x.get("id") for x in rul.get("rule_index",[])}:
+    errors.append("key PU migration/overfull/immutable rule IDs missing")
+if mig.get("cutover")!="NOT_APPROVED" or mig.get("format_rule_ids_full_automated_enforcement")!=0:
+    errors.append("unearned PU parity promotion")
+if scoped.get("researcher_id")!="RSH-010" or scoped.get("shared_control")!="controls/latex.control.json":
+    errors.append("Safal inheritance identity/control mismatch")
+if scoped.get("source_admission")!="HOLD" or scoped.get("scientific_approval")!="HOLD" or scoped.get("release_ready") is not False:
+    errors.append("Safal scientific/source admission must remain HOLD")
+if scoped.get("citation_style") not in ("APA7","IEEE","HARVARD","UNKNOWN"):
+    errors.append("invalid project-specific bibliography style")
+if scoped.get("document_stage") not in ("PROPOSAL","MIDTERM","FINAL_THESIS","DEFENSE","UNKNOWN"):
+    errors.append("invalid or inherited document stage")
+if baseline.get("selected_baseline") is not None or baseline.get("source_git_admission")!="HOLD":
+    errors.append("Safal source conflict accidentally promoted")
+if not any(x.get("researcher_id")=="RSH-004" and x.get("slug")=="safal-thapa" for x in rows):
+    errors.append("Safal Thapa identity must remain distinct RSH-004")
+if args.site:
+    for route in ("controls/latex/index.html","researchers/safal-dawadi/latex/index.html"):
+        if not (ROOT/args.site/route).is_file(): errors.append(f"site missing LaTeX route {route}")
+    for term in ("Source files","Original authorities","Format selection"):
+        try:
+            if term not in (ROOT/args.site/"controls/latex/index.html").read_text(encoding="utf-8"):
+                errors.append(f"latex portal missing section {term}")
+        except FileNotFoundError: pass
+
 if errors:
     print("JP R&D VALIDATION: FAIL")
     for e in errors: print("- "+e)

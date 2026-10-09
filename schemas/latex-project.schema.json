@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/FabinGurung/JP_Research-and-Development/blob/main/schemas/latex-project.schema.json",
+  "title": "Researcher-scoped LaTeX governance configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "researcher_id",
+    "researcher_slug",
+    "shared_control",
+    "source_admission",
+    "scientific_approval",
+    "citation_style",
+    "document_stage",
+    "current_source_manifest"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "researcher_id": {
+      "type": "string",
+      "pattern": "^RSH-[0-9]{3}$"
+    },
+    "researcher_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "shared_control": {
+      "const": "controls/latex.control.json"
+    },
+    "source_admission": {
+      "enum": [
+        "HOLD",
+        "VERIFIED"
+      ]
+    },
+    "scientific_approval": {
+      "enum": [
+        "HOLD",
+        "VERIFIED"
+      ]
+    },
+    "citation_style": {
+      "enum": [
+        "IEEE",
+        "HARVARD",
+        "APA7",
+        "UNKNOWN"
+      ]
+    },
+    "document_stage": {
+      "enum": [
+        "PROPOSAL",
+        "MIDTERM",
+        "FINAL_THESIS",
+        "DEFENSE",
+        "UNKNOWN"
+      ]
+    },
+    "current_source_manifest": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "project_legacy_control": {
+      "type": "string"
+    },
+    "release_ready": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

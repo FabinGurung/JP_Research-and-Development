@@ -1,0 +1,845 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-PU-MSC-FORMAT-BRIDGE-001",
+  "control_version": "1.2.0",
+  "source_drive_id": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
+  "source_version": "v1.13",
+  "source_revision": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
+  "discovered_unique_rule_ids": 144,
+  "rule_index": [
+    {
+      "id": "PU-FMT-001",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-002",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-003",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-004",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-005",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-006",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-007",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-008",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-009",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-010",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-011",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-012",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-013",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-014",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-015",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-016",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-017",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-018",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-019",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-020",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-021",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-022",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-023",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-024",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-025",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-026",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-027",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-028",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-029",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-030",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-031",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-032",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-033",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-034",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-035",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-036",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-037",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-038",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-039",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-040",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-041",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-042",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-043",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-044",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-045",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-046",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-047",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-048",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-049",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-050",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-051",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-052",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-053",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-054",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-055",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-056",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-057",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-058",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-059",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-060",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-061",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-062",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-063",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-064",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-065",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-066",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-067",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-068",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-069",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-070",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "internal audit PDF must be unmistakably different from student thesis"
+    },
+    {
+      "id": "PU-FMT-071",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-072",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-073",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "exact font must be licensed private build dependency"
+    },
+    {
+      "id": "PU-FMT-074",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-075",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "fallback fonts are preview-only"
+    },
+    {
+      "id": "PU-FMT-077",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "do not copy project-specific personnel and program metadata"
+    },
+    {
+      "id": "PU-FMT-078",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-079",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-080",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-081",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "APA7 is a selectable style, not a universal default"
+    },
+    {
+      "id": "PU-FMT-082",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-083",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-084",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "clean authoritative source and build evidence are distinct"
+    },
+    {
+      "id": "PU-FMT-085",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-086",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-087",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "document PRE migration checkpoint and user authorization before control edits"
+    },
+    {
+      "id": "PU-FMT-088",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-089",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "internal researcher instructions must not enter normal thesis prose"
+    },
+    {
+      "id": "PU-FMT-090",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-091",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-092",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-093",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-094",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-095",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-096",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "internal audit/researcher-action artifacts belong to separate QA lane"
+    },
+    {
+      "id": "PU-FMT-097",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "zero newly introduced overfull box warnings"
+    },
+    {
+      "id": "PU-FMT-098",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "production blocks visible uncorrected overflow"
+    },
+    {
+      "id": "PU-FMT-099",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-100",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "inherited warning count is not permanent final waiver"
+    },
+    {
+      "id": "PU-FMT-101",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-102",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-103",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-104",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-105",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-106",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-107",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-108",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-109",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-110",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-111",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-112",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-113",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-114",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-115",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-116",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-117",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-118",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-119",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-120",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-121",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-122",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-123",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-124",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-125",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-126",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-127",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-128",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-129",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-130",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-131",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-132",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-133",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-134",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-135",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "canonical verified logo must be consumed when applicable"
+    },
+    {
+      "id": "PU-FMT-136",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "verify logo render plus Drive readback before final claims"
+    },
+    {
+      "id": "PU-FMT-137",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-138",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-139",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-140",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "source-first staged authority-to-compile pipeline"
+    },
+    {
+      "id": "PU-FMT-141",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-142",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-143",
+      "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
+      "summary": "locked authority assets remain unmodified"
+    },
+    {
+      "id": "PU-FMT-144",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    },
+    {
+      "id": "PU-FMT-145",
+      "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
+      "summary": null
+    }
+  ],
+  "obligations": [
+    {
+      "key": "paper",
+      "value": "A4",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "sides",
+      "value": "single_sided",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "left_margin_cm",
+      "value": 3,
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "right_margin_cm",
+      "value": 2.5,
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "top_margin_cm",
+      "value": 2.5,
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "bottom_margin_cm",
+      "value": 2.5,
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "body_font",
+      "value": "Times New Roman exact licensed",
+      "verification": "PRODUCTION_HARD_GATE"
+    },
+    {
+      "key": "body_font_pt",
+      "value": 12,
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "body_line_spacing",
+      "value": 1.5,
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "prelim_pagination",
+      "value": "roman",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "main_pagination",
+      "value": "arabic",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "prelim_order",
+      "value": "resolve exact current PU order from source before any production claim",
+      "verification": "SOURCE_DEPENDENT"
+    },
+    {
+      "key": "toc_lot_lof",
+      "value": "automatic and semantically matched to current stage",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "references_heading",
+      "value": "REFERENCES",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "citations",
+      "value": [
+        "IEEE",
+        "Harvard",
+        "APA7"
+      ],
+      "verification": "PROJECT_SELECTED_NO_GLOBAL_DEFAULT"
+    },
+    {
+      "key": "document_stage",
+      "value": [
+        "proposal",
+        "midterm",
+        "final_thesis",
+        "defense"
+      ],
+      "verification": "PROJECT_APPROVED_NOT_INHERITED"
+    },
+    {
+      "key": "metadata",
+      "value": "never borrow identities/degree/supervisor/roles from other researchers",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "canonical_logo",
+      "value": "original locked Drive asset ID and SHA verified at runtime, required when PU branding applies",
+      "verification": "SOURCE_DEPENDENT"
+    },
+    {
+      "key": "compiled_pdf",
+      "value": "immutable output; repair LaTeX source then regenerate",
+      "verification": "REQUIRED"
+    },
+    {
+      "key": "manual_render_qa",
+      "value": "all pages, no false pass",
+      "verification": "REQUIRED_FOR_PRODUCTION"
+    }
+  ],
+  "parity_status": "PARTIAL_BRIDGE_NOT_CERTIFIED_FULL_145_RULE_COVERAGE",
+  "rule_catalog_meaning": "An indexed rule ID is not equivalent to machine enforcement or validation of the full original rule.",
+  "source_of_truth_url": "https://docs.google.com/document/d/1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys/edit"
+}
