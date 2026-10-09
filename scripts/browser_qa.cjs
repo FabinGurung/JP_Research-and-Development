@@ -113,6 +113,13 @@ async function main() {
    fs.writeFileSync(path.join(out,"axe-desktop.json"),JSON.stringify(results.violations,null,2));
    if(serious.length)throw Error("WCAG serious/critical: "+serious.map(x=>x.id+"("+x.nodes.length+")").join(", "));
   });
+  await check("search_page_wcag_axe",async()=>{
+   await page.goto(base+"search/",{waitUntil:"networkidle"});
+   const results=await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21aa"]).analyze();
+   const serious=results.violations.filter(v=>v.impact==="critical"||v.impact==="serious");
+   fs.writeFileSync(path.join(out,"axe-search.json"),JSON.stringify(results.violations,null,2));
+   if(serious.length)throw Error("Serious search accessibility findings: "+serious.map(x=>x.id).join(","));
+  });
   await desktop.close();
 
   const mobile=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:1});
@@ -180,13 +187,6 @@ async function main() {
    assert.ok(await nojsPage.locator("#site-nav-links").isVisible());
    await assertNoOverflow(nojsPage,"no-JavaScript mobile");
    await nojs.close();
-  });
-  await check("search_page_wcag_axe",async()=>{
-   await page.goto(base+"search/",{waitUntil:"networkidle"});
-   const results=await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21aa"]).analyze();
-   const serious=results.violations.filter(v=>v.impact==="critical"||v.impact==="serious");
-   fs.writeFileSync(path.join(out,"axe-search.json"),JSON.stringify(results.violations,null,2));
-   if(serious.length)throw Error("Serious search accessibility findings: "+serious.map(x=>x.id).join(","));
   });
   await check("no_uncaught_javascript_errors",async()=>{assert.deepEqual(javascriptErrors,[])});
  }finally{
