@@ -4,35 +4,39 @@
   "researcher_id": "RSH-010",
   "researcher_slug": "safal-dawadi",
   "manuscript_version": "v1.9",
-  "classification": "EXACT_TIMES_NEW_ROMAN_TECHNICAL_QA_REVIEW_NOT_SUBMISSION",
+  "classification": "PU_V113_FORMAT_CORRECTED_TECHNICAL_QA_REVIEW__SCIENTIFIC_SUBMISSION_HOLD",
   "qa_build_timestamp_npt": "2026-10-09",
-  "build_source_commit": "cbf46412cb5a557a5dc1cb7a5993b9645b1d6e3e",
+  "build_source_commit": "e9298ac4617fc62e14c51b569c42519cf27616d4",
   "source_zip_sha256": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
   "drive_source_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
   "drive_source_mirror": "SAME_ID_READBACK_MATCH_CONFIRMED",
   "shared_template": "controls/latex/template/pumlsc-shared.sty",
-  "shared_template_version": "2.1.0",
+  "shared_template_version": "2.2.0",
   "local_scoped_amendment": "RD-LTX-CHG-101",
   "build_engine": "xelatex/biber/xelatex/xelatex",
   "technical_pdf": {
-    "local_build_sha256": "c0f7edd38c4aca1c3fc14b0760236468ca5008aa28c44c3a6f6672f58eb72a5d",
-    "local_byte_length": 227861,
-    "drive_id": "1hXjqcdEylzMilYvUw0wcuwT6LuzJkymz",
-    "drive_fetched_sha256": "fe44f7d0787173ec67931ff1d1d8d52726c08d58400fe3eb24c2adcdfb43c77c",
-    "drive_byte_length": 312623,
-    "provider_transform": "EMBEDDED_CONTENT_CREDENTIALS_ATTACHMENT",
-    "verification": "42_OF_42_TEXT_PIXEL_AND_PAGE_DIMENSIONS_EQUAL__BYTES_DIFFER",
-    "pages": 42,
+    "local_build_sha256": "c235c54387a200ea223b564c10f807e04341c9a461e0bfcb00b468ff922c2eb7",
+    "local_byte_length": 225914,
+    "drive_id": "1M5NChi12VuIfnLN5H9Gs4Ts69W_RkRIO",
+    "drive_fetched_sha256": "c235c54387a200ea223b564c10f807e04341c9a461e0bfcb00b468ff922c2eb7",
+    "drive_byte_length": 225914,
+    "provider_transform": "NONE_IN_THIS_READBACK",
+    "verification": "LOCAL_AND_DRIVE_SHA256_EXACT_MATCH__40_RENDERED_PAGES_A4__NON_SUBMISSION",
+    "pages": 40,
     "a4": true,
     "overfull": 0,
     "latex_warnings": 0,
-    "exact_tnr_embedded": true
+    "exact_tnr_embedded": true,
+    "abstract_word_count": 316,
+    "preliminary_pu_order": "PASS",
+    "scientific_chapters_and_bib": "BYTE_UNCHANGED_FROM_PRE_GIT_V19"
   },
   "qa": {
-    "drive_id": "1ye9GAZ4WcO_eM0vT5B8RgU5GEUR1-vRZ",
-    "zip_sha256": "5a73fb43f204b065210768f9dccc1eb8fbc69f7802aeae56ba621ed60d840da2",
+    "drive_id": "1MS2XKpWPNIDLBlshyfjrzDmUWJ4Deoc1",
+    "zip_sha256": "2e9ddf2bb99cd43c9a97b431b401aa2ea84fdea66d5fd7492299b27b8db5d425",
     "provider_readback": "SHA256_EXACT_MATCH",
-    "full_page_render_count": 42
+    "full_page_render_count": 40,
+    "qa_folder_id": "1M7N-Z1DmWPznvvr6Drih2Wos8zU7dd8K"
   },
   "original_v19_first_build_preserved": {
     "pdf_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
@@ -40,7 +44,7 @@
   },
   "a9": {
     "local_library_id": "10g8-tr417XltYDbk2yItEZjrJ_2xdT7pbPlJgUI8MYo",
-    "last_registered_seq": 15,
+    "last_registered_seq": 17,
     "main_ack_cursor": 5,
     "main_sync": "HOLD_NOT_REQUESTED_APPROVAL_OPEN"
   },
@@ -50,10 +54,42 @@
     "git_source_admitted": "VERIFIED",
     "latex_technical_build": "VERIFIED_PRIVATE_LINUX",
     "github_actions_xelatex": "NOT_CONFIGURED",
-    "pu_full_parity": "HOLD_144_RULES_UNCERTIFIED",
+    "pu_full_parity": "HOLD_FULL_144_RULE_PRODUCTION_CERTIFICATION",
     "scientific_approval": "HOLD",
     "supervisor_approval": "HOLD",
-    "submission_release": "HOLD"
+    "submission_release": "HOLD",
+    "pu_targeted_format_corrections": "VERIFIED_LOCAL_RENDER_FONT_BODY_HEADINGS_STRUCTURE"
   },
-  "git_release_manifest_note": "This manifest-only commit is a metadata update, not a source change. It does not trigger a new scientific PDF."
+  "git_release_manifest_note": "Manifest-only non-manuscript commit; never trigger scientific PDF rebuild from this change.",
+  "format_revision": "v1.9-fmt-r1",
+  "shared_template_amendment": "RD-LTX-CHG-102",
+  "technical_predecessor": {
+    "source_commit": "cbf46412cb5a557a5dc1cb7a5993b9645b1d6e3e",
+    "pdf": {
+      "local_build_sha256": "c0f7edd38c4aca1c3fc14b0760236468ca5008aa28c44c3a6f6672f58eb72a5d",
+      "local_byte_length": 227861,
+      "drive_id": "1hXjqcdEylzMilYvUw0wcuwT6LuzJkymz",
+      "drive_fetched_sha256": "fe44f7d0787173ec67931ff1d1d8d52726c08d58400fe3eb24c2adcdfb43c77c",
+      "drive_byte_length": 312623,
+      "provider_transform": "EMBEDDED_CONTENT_CREDENTIALS_ATTACHMENT",
+      "verification": "42_OF_42_TEXT_PIXEL_AND_PAGE_DIMENSIONS_EQUAL__BYTES_DIFFER",
+      "pages": 42,
+      "a4": true,
+      "overfull": 0,
+      "latex_warnings": 0,
+      "exact_tnr_embedded": true
+    },
+    "retained_same_drive_id": true,
+    "moved_into_folder": "1raOiJ-nQ-ZO5oMLSFB3BkNh5BpGA5qfM"
+  },
+  "drive_reorganization": {
+    "old_pdf_ids_preserved": [
+      "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
+      "1hXjqcdEylzMilYvUw0wcuwT6LuzJkymz"
+    ],
+    "compiled_review_folder_id": "1raOiJ-nQ-ZO5oMLSFB3BkNh5BpGA5qfM",
+    "qa_folder_id": "1M7N-Z1DmWPznvvr6Drih2Wos8zU7dd8K",
+    "local_snapshot_history_id": "1vlBuf5du-KpKkiuIEQe9ppMSJdSHsUz8",
+    "moved_PRE_POST_count": 38
+  }
 }
