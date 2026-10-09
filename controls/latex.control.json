@@ -33,7 +33,7 @@
   "inheritance": "A7_MODULE.json -> shared LaTeX tower -> researcher project config -> admitted source -> build QA -> Drive readback -> A9 separately",
   "pu_format_parity": "PARTIAL_BRIDGE_FULL_PRIVATE_AND_FORMAT_PARITY_HOLD",
   "shared_control_release": "resource/control/latex/v004-20261009",
-  "shared_control_release_sha": null,
+  "shared_control_release_sha": "3489fff9b15444f41fd135fedaec95600065ada2",
   "compatibility_note": "Only route old readers to controls/latex/tower.json; operational source is the canonical tower. No own rules or variants.",
   "project_config_router": "registry/latex-inheritance.json",
   "source_code": "controls/latex/tower.json"

@@ -54,5 +54,6 @@
   "current_release_ref": "resource/control/latex/v004-20261009",
   "release_scope": "historical versioned ref; main is latest operational control; versioned Git refs are not parallel towers",
   "public_source_safety": "Do not import licensed Times New Roman files, private evidence, photographs, scientific data or compiled PDFs",
-  "release_progress": "PENDING_CREATE_RELEASE_REF_AFTER_PROVIDER_VALIDATION"
+  "release_progress": "GITHUB_PROVIDER_VERIFIED__SOURCE_QA_PASS__SCIENTIFIC_SOURCE_NOT_ADMITTED",
+  "current_release_sha": "3489fff9b15444f41fd135fedaec95600065ada2"
 }

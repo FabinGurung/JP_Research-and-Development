@@ -42,8 +42,8 @@
     "classification": "CROSS_LANE_RECONCILIATION_HOLD"
   },
   "control_release_ref": "resource/control/latex/v004-20261009",
-  "control_release_sha": null,
-  "control_release_status": "PENDING_REF_VERIFICATION",
+  "control_release_sha": "3489fff9b15444f41fd135fedaec95600065ada2",
+  "control_release_status": "VERIFIED_IMMUTABLE_GITHUB_CONTROL_RELEASE__PAGES_RUN_37885589040_VERIFY_SEPARATELY",
   "single_tower": {
     "canonical": "controls/latex/tower.json",
     "template": "controls/latex/template/pumlsc-shared.sty",
@@ -51,6 +51,7 @@
     "researcher_count": 11,
     "extension_count": 0,
     "amendment_next": 101,
-    "status": "IMPLEMENTED_PUBLIC_SAFE_INHERITANCE__PRIVATE_SOURCE_COMPILATION_NOT_DONE"
+    "status": "IMPLEMENTED_PUBLIC_SAFE_INHERITANCE__PRIVATE_SOURCE_COMPILATION_NOT_DONE",
+    "release_sha": "3489fff9b15444f41fd135fedaec95600065ada2"
   }
 }

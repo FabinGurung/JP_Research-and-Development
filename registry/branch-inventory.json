@@ -1172,16 +1172,16 @@
     },
     {
       "name": "resource/control/latex/v004-20261009",
-      "commit_sha": "PENDING_RELEASE_COMMIT_READBACK",
+      "commit_sha": "3489fff9b15444f41fd135fedaec95600065ada2",
       "category": "resource",
       "purpose": "Whole-repository immutable baseline of one shared R&D LaTeX manuscript control tower v2.0.0 used by all researchers",
       "primary_source_path": "controls/latex/tower.json",
-      "source_status": "CONTROL_RELEASE_PENDING_FINAL_COMMIT",
+      "source_status": "IMMUTABLE_SHARED_LATEX_CONTROL_RELEASE__SOURCE_QA_PASS__NOT_PU_PRODUCTION_CERTIFIED",
       "version": "v004",
       "owner": "latex",
       "alias_of": null,
       "protected": false,
-      "observation": "REF_CREATION_PENDING_AFTER_MAIN_COMMIT"
+      "observation": "GITHUB_PROVIDER_REF_READBACK_2026-10-09"
     },
     {
       "name": "resource/control/presentation/v001-20261009",
