@@ -2,6 +2,7 @@
 (function(){
   "use strict";
   const root=document.documentElement;
+  root.classList.add("js-enabled");
   const KEY="jp-rd-palette-v1";
   let chosen="dawn";
   try { if(localStorage.getItem(KEY)==="dusk") chosen="dusk"; } catch(_) {}

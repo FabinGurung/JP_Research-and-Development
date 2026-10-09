@@ -384,3 +384,13 @@ h2 {letter-spacing:-.025em}
 .search-title{font-family:Georgia,serif;font-weight:700;font-size:1.12rem;line-height:1.4;overflow-wrap:anywhere}
 #research-more{padding:10px 18px;margin-bottom:22px}
 @media(max-width:800px){.search-results{grid-template-columns:1fr}.search-box{grid-template-columns:minmax(0,1fr)}.search-box label[for="research-category"],#research-category,#research-search,#search-help{grid-column:1;grid-row:auto}}
+
+/* Progressive compact mobile navigation, with keyboard-accessible expansion. */
+.mobile-menu-toggle{display:none;border-radius:9px;border:1px solid var(--line);color:var(--accent);background:var(--panel);font:inherit;font-weight:700;padding:9px 13px;cursor:pointer}
+@media(max-width:920px){
+ :root.js-enabled .mobile-menu-toggle{display:inline-flex;align-items:center;min-height:42px}
+ :root.js-enabled #site-nav-links{display:none;flex-basis:100%;flex-wrap:wrap;gap:8px 15px;padding:12px 2px 5px;border-top:1px solid var(--line)}
+ :root.js-enabled #site-nav-links.is-open{display:flex}
+ :root.js-enabled #site-nav-links a{padding:4px 0}
+ .nav{align-items:center}
+}

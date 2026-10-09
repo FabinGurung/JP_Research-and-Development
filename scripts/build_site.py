@@ -35,7 +35,7 @@ def main():
         slug:load(Path(f"registry/drive-audits/02-thesis/{slug}.json"))
         for slug in ("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta","shisheer-kc","sunil-rana","fabin-gurung","master-index")
     }
-    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js"); shutil.copy2(ROOT/"web/motion.js",out/"assets/motion.js"); shutil.copy2(ROOT/"web/prompt-copy.js",out/"assets/prompt-copy.js"); shutil.copy2(ROOT/"web/search.js",out/"assets/search.js")
+    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js"); shutil.copy2(ROOT/"web/motion.js",out/"assets/motion.js"); shutil.copy2(ROOT/"web/prompt-copy.js",out/"assets/prompt-copy.js"); shutil.copy2(ROOT/"web/search.js",out/"assets/search.js"); shutil.copy2(ROOT/"web/menu.js",out/"assets/menu.js")
     (out/".nojekyll").write_text("",encoding="utf-8")
     # Restore the original public-safe standalone demos into the ONE main Pages deployment.
     # Source blobs retain the archived Git IDs and are immutable until separately revised.
