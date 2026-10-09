@@ -254,12 +254,19 @@ for command in (
     p=subprocess.run(command,cwd=ROOT,text=True,capture_output=True)
     if p.returncode:
         errors.append("thesis infrastructure regression failed "+command[1]+": "+(p.stdout+p.stderr)[-1500:])
+for command in (
+    [sys.executable,str(ROOT/"scripts/latex/universal_compile.py"),"--help"],
+    [sys.executable,str(ROOT/"scripts/latex/pdf_technical_qa.py"),"--help"],
+):
+    p=subprocess.run(command,cwd=ROOT,text=True,capture_output=True)
+    if p.returncode:
+        errors.append("universal Linux build command interface failed "+command[1]+": "+(p.stdout+p.stderr)[-500:])
 if args.site:
     for required_route in ("thesis-infrastructure/index.html","data/researcher-folder-roles.json","data/latex-build-profiles.json"):
         if not (ROOT/args.site/required_route).is_file():
             errors.append("thesis infrastructure website route/data missing: "+required_route)
 # Syntax and executable HOLD/PRESENT source-gate regression: green CI must NOT be construed as PDF certified.
-for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py"):
+for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
     try:
         ast.parse((ROOT/script).read_text(encoding="utf-8"),filename=script)
     except (SyntaxError,OSError) as e:

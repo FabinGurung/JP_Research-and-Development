@@ -93,3 +93,6 @@ The [public control page](https://fabingurung.github.io/JP_Research-and-Developm
 - [Read-only folder planner and handover generator](scripts/researchers/normalize.py) and [11 individualized handovers](docs/researcher-normalization/). No centralized Drive mass migration.
 - [Universal LaTeX source preflight](scripts/latex/universal_preflight.py), [PDF technical inspector](scripts/latex/pdf_technical_qa.py), [11 non-autonomous project profiles](registry/latex-build-profiles.json), [144-rule route ledger](controls/latex/pu-rule-enforcement-matrix.json).
 - [Path-scoped source gates](.github/workflows/researcher-source-gates.yml) do NOT generate scientific PDFs. Full university production parity and A9 Main approval remain separate HOLDs.
+
+- [Authorized XeLaTeX/Biber generic compiler](scripts/latex/universal_compile.py) and [build procedure](docs/UNIVERSAL_THESIS_BUILD_READ_FIRST_20261009.md): dry run by default; real PDF only on explicit owning project authorization.
+- [Governed infrastructure checkpoint](docs/THESIS_INFRASTRUCTURE_RELEASE_20261009.md) and [Git lineage](registry/thesis-infrastructure-run-log.json). This is NOT an A9 Main ACK or a 144-rule PDF certificate.

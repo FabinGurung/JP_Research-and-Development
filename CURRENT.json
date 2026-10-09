@@ -211,5 +211,13 @@
   "latex_control_version": "2.1.0",
   "latex_full_source_rule_audit": "144_OF_144_RULE_IDS_AUDITED__PRODUCTION_QA_HOLD",
   "safal_current_target": "LATEST_V1.9_LOCAL_SEQ15_Q1_B__SOURCE_MIRROR_PENDING",
-  "git_release_policy": "COMMIT_PRE_POST__ANNOTATED_TAG_MAJOR_ONLY_NO_NEW_BRANCH"
+  "git_release_policy": "COMMIT_PRE_POST__ANNOTATED_TAG_MAJOR_ONLY_NO_NEW_BRANCH",
+  "thesis_infrastructure_control": "controls/thesis-infrastructure.json",
+  "thesis_folder_roles": "registry/researcher-folder-roles.json",
+  "thesis_folder_root_readback": "10_OF_11_VERIFIED__RSH004_HOLD",
+  "thesis_infrastructure_source_package": "NAMED_ZIP_NOT_ACCESSIBLE__LIVE_PROVIDER_SOURCE_RECONCILED",
+  "document_automation": "READ_ONLY_PLANNER__UNIVERSAL_PREFLIGHT__AUTHORIZED_LINUX_COMPILER__PDF_TECHNICAL_QA",
+  "document_automation_certification": "CODE_QA_ONLY__FULL_PU_144_RULE_PDF_QA_HOLD",
+  "thesis_physical_migrations": "NONE",
+  "thesis_a9_local_main": "NOT_REGISTERED_OR_ACKED_IN_THIS_GITHUB_RUN"
 }

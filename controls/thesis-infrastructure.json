@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-THESIS-INFRA-001",
+  "status": "ACTIVE_SHARED_ROUTING_AND_VALIDATION__PHYSICAL_MIGRATION_OUT_OF_SCOPE",
+  "owner": "FabinGurung/JP_Research-and-Development",
+  "A7": "IDENTITY_ROUTING_ONLY",
+  "PU_format": "Google Drive PU_LATEX_FORMAT_CONTROL_TOWER_v1.13, source authority Drive ID 1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
+  "thesis_governance": "Google Drive Thesis Control Tower v1.23, Drive ID 1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A",
+  "drive_save_rules": "Google Drive Save Router v1.13, ID 1fRmQCvFvyoSwI0y-wKbOFG-esrkG61Z0dmweGoehCUU",
+  "read_first": "docs/THESIS_INFRASTRUCTURE_RELEASE_20261009.md",
+  "folder_roles": "registry/researcher-folder-roles.json",
+  "folder_contract": "controls/researcher-folder-contract.json",
+  "schema": "schemas/researcher-folder-contract.schema.json",
+  "planner": "scripts/researchers/normalize.py",
+  "researchers": 11,
+  "verified_roots": 10,
+  "hold_researcher": "RSH-004",
+  "compiler": "scripts/latex/universal_compile.py",
+  "compile_default": "DRY_RUN",
+  "compile_in_actions": false,
+  "source_gate": "scripts/latex/universal_preflight.py",
+  "pdf_inspector": "scripts/latex/pdf_technical_qa.py",
+  "qa": "manual full-document and scientific review required",
+  "one_latex_tower": "controls/latex/tower.json",
+  "pu_rule_enforcement_plan": "controls/latex/pu-rule-enforcement-matrix.json",
+  "PU_rules_indexed": 144,
+  "PU_rules_certified": 0,
+  "domain_ownership": {
+    "a7": "identity,routing",
+    "rd": "Git versioned reusable code and folder mappings",
+    "pu_original": "academic format authority",
+    "thesis_tower": "source/reproducibility/QA",
+    "project_owner": "scientific content and physical migration",
+    "a9": "registry, lineage, versioning, ACK"
+  },
+  "versioning": {
+    "pre_post": "nonforced Git SHA commits",
+    "new_snapshot_branches": "not routine",
+    "major_release": "annotated tag after approved milestone + verified capable tool"
+  },
+  "A9": {
+    "main_library_id": "18NE0GIbw0lDDlrIcflGS3_VccDZ2LZn1FoPbebSc71o",
+    "mutated": false,
+    "local_ack_advanced": false,
+    "main_ack_advanced": false,
+    "registration_status": "PENDING_OWNER_AUTHORIZED_LOCAL_A9_PROJECTION"
+  },
+  "governance": "No mass Drive moves, no researcher scientific edits, no generated scientific PDF from unrelated changes"
+}

@@ -566,6 +566,30 @@
         }
       ],
       "close_when": "Confirm actual latest seq15 bytes/hashes, import admitted LaTeX source in public Git, implement full official PU style and verify real exact-font full-document PDF QA, register major release with annotated tag using tag-capable interface."
+    },
+    {
+      "debt_id": "DEBT-RND-THESIS-NORMALIZATION-001",
+      "scope": "REPOSITORY",
+      "category": "THESIS_FOLDER_AND_BUILD_SYSTEM",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Finish owner-scoped thesis role normalization, real PU build certification and A9 registration",
+      "description": "Central Git role registry covers 11/11 researcher profiles, ten verified Drive project roots and 107 folder references; RSH004 root, canonical project IDs, aliases, attached named ZIP verification, actual generic PDF production regression and separate A9 owning Local/Main registration still remain. No physical Drive migration was performed.",
+      "evidence": [
+        {
+          "role": "pu_latex_control",
+          "drive_id": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys"
+        },
+        {
+          "role": "thesis_control",
+          "drive_id": "1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A"
+        },
+        {
+          "role": "A9_main_registry",
+          "drive_id": "18NE0GIbw0lDDlrIcflGS3_VccDZ2LZn1FoPbebSc71o"
+        }
+      ],
+      "close_when": "Raw skeleton ZIP read/compared, canonical project IDs owner verified, each researcher carries out optional authorized physical changes, compiled PDFs undergo complete applicable PU QA, and A9 owner Local/Main registration/ACK independently verified where authorized."
     }
   ]
 }

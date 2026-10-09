@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "RD-THESIS-NORMALIZE-20261009-001",
+  "status": "GITHUB_CI_SOURCE_QA_PASS__DRIVE_READ_ONLY__FULL_PU_AND_A9_HOLD",
+  "date_npt": "2026-10-09",
+  "authority_control": "controls/thesis-infrastructure.json",
+  "source_package": "THESIS_A9_RESEARCHER_NORMALIZATION_SKELETON_v0.1_20261009.zip",
+  "source_package_verified": false,
+  "source_package_note": "Named ZIP not available as uploaded raw file or exact Drive result; user prompt's contract used together with live provider reads",
+  "git_pre": "e33e4db6953f18ecacc9c3f0af537095c7ec144f",
+  "git_changelog": [
+    {
+      "kind": "ROLES",
+      "sha": "5e610e71085e8d38858d2ecb36ec98d94491de80"
+    },
+    {
+      "kind": "HANDOVERS",
+      "sha": "0d9fa3e22f3bd29ab4a2fe349839f80be6d8df35"
+    },
+    {
+      "kind": "LATEX_QA_TOOLS",
+      "sha": "a5f09b2d428ee0f8169ff09992507587cae0803a"
+    },
+    {
+      "kind": "WEB_AND_CI",
+      "sha": "1c6b67afd9be37e66d9cc5dbc67b2fa002984596"
+    },
+    {
+      "kind": "COMPILER",
+      "sha": "c61f00eaaf3f8770d175d3fb538fe4467752ede3"
+    }
+  ],
+  "final_commit": "RESOLVE_MAIN_SHA_AFTER_POST",
+  "source_authorities": [
+    {
+      "role": "save_router",
+      "id": "1fRmQCvFvyoSwI0y-wKbOFG-esrkG61Z0dmweGoehCUU"
+    },
+    {
+      "role": "thesis_master_index",
+      "id": "1bJW5jmI6N7VzRY77KIsn3B--ngaAsVXI3HdM1c8XXHE"
+    },
+    {
+      "role": "pu_control",
+      "id": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys"
+    },
+    {
+      "role": "thesis_control",
+      "id": "1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A"
+    },
+    {
+      "role": "Main_A9",
+      "id": "18NE0GIbw0lDDlrIcflGS3_VccDZ2LZn1FoPbebSc71o"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "RD-INFRA-FOLDER-ROLES-001",
+      "path": "registry/researcher-folder-roles.json",
+      "status": "GIT_VERIFIED"
+    },
+    {
+      "id": "RD-INFRA-PU-QA-001",
+      "path": "controls/latex/pu-rule-enforcement-matrix.json",
+      "status": "INDEXED_UNCERTIFIED"
+    },
+    {
+      "id": "RD-INFRA-BUILD-001",
+      "path": "scripts/latex/universal_compile.py",
+      "status": "SOURCE_ONLY_NO_REAL_PDF_TEST"
+    },
+    {
+      "id": "RD-INFRA-SITE-001",
+      "path": "thesis-infrastructure/",
+      "status": "GITHUB_PAGES_VERIFIED_WORKFLOW_PASS"
+    }
+  ],
+  "artifact_edges": [
+    {
+      "from": "RD-INFRA-FOLDER-ROLES-001",
+      "type": "GOVERNED_BY",
+      "to": "controls/researcher-folder-contract.json"
+    },
+    {
+      "from": "RD-INFRA-PU-QA-001",
+      "type": "DERIVED_FROM",
+      "to": "controls/latex/pu-format-parity-audit.json"
+    },
+    {
+      "from": "RD-INFRA-BUILD-001",
+      "type": "IMPLEMENTS",
+      "to": "controls/latex/build-contract.json"
+    },
+    {
+      "from": "RD-INFRA-SITE-001",
+      "type": "PROJECTS",
+      "to": "RD-INFRA-FOLDER-ROLES-001"
+    }
+  ],
+  "Drive_mutations": 0,
+  "A9_Local_Main_registration": "NOT_PERFORMED__OWNER_EXECUTION_REQUIRED",
+  "source_QA_only": true
+}
