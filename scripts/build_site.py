@@ -25,7 +25,7 @@ def evidence_html(debt):
 
 def shell(title, body, depth=0):
     prefix="../"*depth
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script defer src="{prefix}assets/theme.js"></script><script defer src="{prefix}assets/motion.js"></script></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}thesis-infrastructure/index.html">Thesis folders</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}roadmap/index.html">Roadmap</a><a href="{prefix}branches/index.html">Branches</a><a href="{prefix}how-to/index.html">How to</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch to mauve dusk">☾ Dusk palette</button></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script defer src="{prefix}assets/theme.js"></script><script defer src="{prefix}assets/motion.js"></script><script defer src="{prefix}assets/prompt-copy.js"></script></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}thesis-infrastructure/index.html">Thesis folders</a><a href="{prefix}owner-prompts/index.html">Chat handovers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}roadmap/index.html">Roadmap</a><a href="{prefix}branches/index.html">Branches</a><a href="{prefix}how-to/index.html">How to</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch to mauve dusk">☾ Dusk palette</button></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
 
 def write(out, rel, content):
     p=out/rel; p.parent.mkdir(parents=True,exist_ok=True); p.write_text(content,encoding="utf-8")
@@ -57,7 +57,7 @@ def main():
         slug:load(Path(f"registry/drive-audits/02-thesis/{slug}.json"))
         for slug in ("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta","shisheer-kc","sunil-rana","fabin-gurung","master-index")
     }
-    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js"); shutil.copy2(ROOT/"web/motion.js",out/"assets/motion.js")
+    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js"); shutil.copy2(ROOT/"web/motion.js",out/"assets/motion.js"); shutil.copy2(ROOT/"web/prompt-copy.js",out/"assets/prompt-copy.js")
     (out/".nojekyll").write_text("",encoding="utf-8")
     # Restore the original public-safe standalone demos into the ONE main Pages deployment.
     # Source blobs retain the archived Git IDs and are immutable until separately revised.
@@ -72,6 +72,7 @@ def main():
     new_intro=(ROOT/"web/living-hero.html").read_text(encoding="utf-8")
     new_intro=new_intro.replace("@@RESEARCHERS@@",str(len(researchers))).replace("@@ROOTS@@",str(folder_roles["verified_root_count"]))
     home=home[:old_intro_start]+new_intro+home[old_intro_end:]
+    home=home.replace("</main>",'<section class="wrap section"><h2>Paste-ready researcher handovers</h2><p>One opt-in prompt for each researcher — no migration begins until you paste it into that researcher’s own chat.</p><p><a href="owner-prompts/index.html">Choose and copy a handover →</a></p></section></main>')
     home=home.replace("</main>",'<section class="wrap section"><h2>Unified thesis infrastructure</h2><p>Browse verified project folder roles, source-control policy, university formatting engine and individual researcher handovers. No Drive folders were renamed or moved.</p><p><a href="thesis-infrastructure/index.html">Open thesis folder and automation map →</a></p></section></main>')
     write(out,"index.html",shell("Home",home,0))
     roadmap=load(Path("registry/roadmap.json"))
@@ -215,8 +216,19 @@ def main():
         owner_state=owner_by_id[r["researcher_id"]]["state"]
         owner_section='<section class="section"><h2>Opt-in workspace modernization</h2><p><strong>Execution state:</strong> '+esc(owner_state)+'</p>'
         owner_section+='<p>No folder changes occur unless the user pastes this exact owner-specific prompt in this researcher chat. Deletion is forbidden; safe reuse and evidence-backed archiving are preferred.</p>'
-        owner_section+='<p><a href="'+esc(owner_prompt)+'">Open complete paste-ready owner prompt →</a></p></section>'
+        owner_section+='<p><a href="'+esc("../../owner-prompts/"+r["slug"]+"/index.html")+'">Copy complete handover here →</a> · <a href="'+esc(owner_prompt)+'">Verify Git source →</a></p></section>'
         body=body.replace("</main>",owner_section+"</main>")
+        source=ROOT/"prompts/researchers"/(r["researcher_id"]+"__"+r["slug"]+".md")
+        prompt=source.read_text(encoding="utf-8")
+        status=owner_by_id[r["researcher_id"]]["state"]
+        prompt_body='<main class="wrap hero"><div class="eyebrow">Researcher chat execution · deliberate opt-in</div><h1>'+esc(r["display_name"])+'</h1>'
+        prompt_body+='<p class="lead">Copy this complete, researcher-specific handover and paste it only in the researcher’s original chat. This website does not execute migrations or make Drive changes.</p>'
+        prompt_body+='<div class="notice"><strong>'+esc(r["researcher_id"])+'</strong> · '+esc(status)+' · NO DELETE · NO MAIN ACK</div>'
+        prompt_body+='<section class="section owner-prompt-desk"><div class="owner-prompt-top"><h2>Full owner-chat handover</h2><p><a href="'+esc(REPO_URL+"/blob/main/prompts/researchers/"+r["researcher_id"]+"__"+r["slug"]+".md")+'">Verify Git source →</a></p></div>'
+        prompt_body+='<textarea id="owner-prompt-text" readonly aria-label="Researcher-specific migration prompt" spellcheck="false">'+esc(prompt)+'</textarea>'
+        prompt_body+='<div class="copy-owner-row"><button class="owner-copy-button" type="button" data-copy-owner-prompt="owner-prompt-text">Copy entire prompt</button><span class="owner-copy-status" data-copy-status aria-live="polite">Paste in this researcher’s chat only.</span></div></section>'
+        prompt_body+='<p><a href="../../owner-prompts/index.html">← All owner handovers</a></p></main>'
+        write(out,f'owner-prompts/{r["slug"]}/index.html',shell(r["display_name"]+" — Owner handover",prompt_body,2))
         write(out,f'researchers/{r["slug"]}/index.html',shell(r["display_name"],body,2))
         if researcher_debts:
             debt_cards=""
@@ -225,6 +237,11 @@ def main():
                 debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><p><strong>Category:</strong> {esc(d["category"])} · <strong>Severity:</strong> {esc(d["severity"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
             debt_body=f'<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])} · governed debt</div><h1>{esc(r["display_name"])} — Research Debts</h1><p class="lead">Only verified open/held debt is listed here. Closing an item requires provider-read evidence and an updated registry state.</p><div class="grid">{debt_cards}</div><p><a href="../index.html">← Back to researcher workspace</a></p></main>'
             write(out,f'researchers/{r["slug"]}/debts/index.html',shell(f'{r["display_name"]} Debts',debt_body,3))
+    owner_cards="".join('<article class="card"><h3>'+esc(x["researcher_id"]+" · "+x["display_name"])+'</h3><p>'+esc(owner_by_id[x["researcher_id"]]["state"])+'</p><a href="'+esc(x["slug"]+"/index.html")+'">Read and copy full prompt →</a></article>' for x in researchers)
+    owner_body='<main class="wrap hero"><div class="eyebrow">11 individual researcher handovers</div><h1>A handover reading desk</h1><p class="lead">Each owner-only prompt is inactive until you copy and paste it in that researcher’s chat. No deletion, no mass Drive migration, no scientific edits.</p>'
+    owner_body+='<div class="notice">RSH-004 remains a read-only HOLD until its project root is verified. All others require fresh Drive readback, PRE/POST and owner-specific authority.</div>'
+    owner_body+='<section class="section"><div class="grid">'+owner_cards+'</div></section></main>'
+    write(out,"owner-prompts/index.html",shell("Owner Chat Handovers",owner_body,1))
     folder_summary=[]
     for rr in folder_roles["records"]:
         root_id=rr.get("existing_project_root_drive_id")
@@ -242,7 +259,7 @@ def main():
             +'<p>'+root_link+' · '+str(len(present))+' roles mapped · '+str(len(missing))+' roles unverified as direct child</p>'
             +'<p><strong>Owner migration:</strong> '+esc(migration_state)+' · <strong>A9:</strong> '+esc(rr["a9_main_sync_status"])+'</p>'
             +'<details><summary>Show mapped folders and specialized paths</summary><ul>'+short+extras+'</ul></details>'
-            +'<p><a href="'+esc(prompt_link)+'">Paste-ready execution prompt →</a> · <a href="'+esc(handover_link)+'">Folder audit →</a> · <a href="'+esc("../researchers/"+rr["researcher_slug"]+"/index.html")+'">Workspace →</a></p></article>')
+            +'<p><a href="'+esc("../owner-prompts/"+rr["researcher_slug"]+"/index.html")+'">Copy full owner prompt →</a> · <a href="'+esc(prompt_link)+'">Git source →</a> · <a href="'+esc(handover_link)+'">Folder audit →</a> · <a href="'+esc("../researchers/"+rr["researcher_slug"]+"/index.html")+'">Workspace →</a></p></article>')
     thesis_body='<main class="wrap hero"><div class="eyebrow">R&D · one thesis infrastructure</div><h1>Researcher Drive roles and document automation</h1>'
     thesis_body+='<p class="lead">Eleven registered researchers, ten verified project roots. Drive IDs are stable identity; folder aliases are human names. Reuse is preferred. Nothing here is a bulk folder move or scientific approval.</p>'
     thesis_body+='<div class="flow"><div class="node">A7 researcher ID</div><div class="arrow">→</div><div class="node">Drive folder ID</div><div class="arrow">→</div><div class="node">R&D shared code + one LaTeX tower</div><div class="arrow">→</div><div class="node">Owning project and A9 Local/Main</div></div>'
