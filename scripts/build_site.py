@@ -1,4 +1,213 @@
-er.md"
+#!/usr/bin/env python3
+"""Deterministic static-site publication driver; navigation/renderer helpers are shared."""
+from __future__ import annotations
+import argparse, html, json, shutil
+from pathlib import Path
+from urllib.parse import quote
+from site_core import ROOT, REPO_URL, SITE_URL, load, esc, branch_url, drive_url, evidence_html, shell, write
+from site_pages import build_home, render_start_here, render_owner_prompt, render_owner_directory
+
+def main():
+    ap=argparse.ArgumentParser(); ap.add_argument("--out",default="dist"); args=ap.parse_args()
+    out=ROOT/args.out
+    if out.exists(): shutil.rmtree(out)
+    out.mkdir(parents=True)
+    researchers=load(Path("registry/researchers.json"))["researchers"]
+    folder_roles=load(Path("registry/researcher-folder-roles.json"))
+    owner_status=load(Path("registry/researcher-migration-status.json"))
+    owner_by_id={x["researcher_id"]:x for x in owner_status["records"]}
+    folder_by_slug={x["researcher_slug"]:x for x in folder_roles["records"]}
+    websites=load(Path("registry/websites.json"))["websites"]
+    branches=load(Path("registry/branch-registry.json"))
+    policy=load(Path("controls/repository.control.json"))
+    controls={
+      "Discussion":load(Path("controls/discussion.control.json")),
+      "LaTeX":load(Path("controls/latex/tower.json")),
+      "Presentation":load(Path("controls/presentation.control.json")),
+      "Website":load(Path("controls/website.control.json"))
+    }
+    debts=load(Path("registry/debts.json"))["debts"]
+    manoj_audit=load(Path("registry/drive-audits/02-thesis/manoj-bhandari.json"))
+    avishek_audit=load(Path("registry/drive-audits/02-thesis/avishek-kumar-mandal.json"))
+    root_rescan=load(Path("registry/drive-audits/02-thesis/root-rescan-20261008.json"))
+    batch_audits={
+        slug:load(Path(f"registry/drive-audits/02-thesis/{slug}.json"))
+        for slug in ("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta","shisheer-kc","sunil-rana","fabin-gurung","master-index")
+    }
+    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js"); shutil.copy2(ROOT/"web/motion.js",out/"assets/motion.js"); shutil.copy2(ROOT/"web/prompt-copy.js",out/"assets/prompt-copy.js")
+    (out/".nojekyll").write_text("",encoding="utf-8")
+    # Restore the original public-safe standalone demos into the ONE main Pages deployment.
+    # Source blobs retain the archived Git IDs and are immutable until separately revised.
+    legacy=ROOT/"web/legacy-site"
+    for site_name in ("methodology-demo","hydropower-data-model","hydropower-data-schema","hydropower-data-tables","hydropower-data-graph","hydropower-nepal-map"):
+        src=legacy/site_name
+        if src.is_dir(): shutil.copytree(src,out/site_name,dirs_exist_ok=True)
+    home=build_home(researchers,folder_roles)
+    render_start_here(out)
+    roadmap=load(Path("registry/roadmap.json"))
+    def stage_cards(items,kind):
+        return "".join(
+          '<article class="card"><span class="badge">'+esc(x.get("status",x.get("state","OPEN")))+'</span>'
+          +'<h3>'+esc(x["title"])+'</h3>'
+          +'<p>'+esc(x.get("detail",x.get("done_when","")))+'</p>'
+          +(('<p class="muted">'+esc(x.get("priority",""))+'</p>') if kind=="next" else "")
+          +'</article>' for x in items
+        )
+    delivered=stage_cards(roadmap["developed"],"done")
+    pending=stage_cards(roadmap["next"],"next")
+    holds="".join('<li><strong>'+esc(x["id"])+'</strong> — '+esc(x["state"])+': '+esc(x["reason"])+'</li>' for x in roadmap["holds"])
+    counterpart=roadmap["governance"]["linked_a7_roadmap"]
+    roadmap_body=(
+      '<main class="wrap hero"><div class="eyebrow">R&D · canonical development history and delivery roadmap</div>'
+      '<h1>What we built, and what comes next</h1>'
+      '<p class="lead">Point-in-time audit: 18/18 Drive direct children, 11 researchers, 33 whole-repository Git work refs, two Fabin research modules and six historical static demo directories. A folder audit is not final thesis approval.</p>'
+      '<p><a href="'+esc(counterpart)+'">Open the A7 global control-plane roadmap →</a></p>'
+      '<section class="section"><h2>Delivered</h2><div class="grid">'+delivered+'</div></section>'
+      '<section class="section"><h2>Prioritized next work</h2><div class="grid">'+pending+'</div></section>'
+      '<section class="section"><h2>Holds and debts that must stay visible</h2><ul>'+holds+'</ul></section>'
+      '<section class="section"><h2>Durable handover</h2><p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md">Cross-thread handover for A7 →</a></p>'
+      '<p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/registry/roadmap.json">Machine-readable roadmap source →</a></p></section></main>'
+    )
+    write(out,"roadmap/index.html",shell("R&D Roadmap",roadmap_body,1))
+    # Every observed Git branch (including legacy, template, source and rollback refs).
+    branch_inventory=load(Path("registry/branch-inventory.json"))
+    branch_rows=branch_inventory["branches"]
+    branch_groups=branch_inventory["counts"]
+    category_options="".join(f'<option value="{esc(k)}">{esc(k.replace("-"," ").title())} ({v})</option>' for k,v in sorted(branch_groups.items()))
+    branch_table_rows="".join(
+        '<tr data-branch-row data-category="'+esc(b["category"])+'" data-search="'+esc(" ".join((b["name"],b["category"],b["purpose"],b.get("primary_source_path") or "",b["source_status"])).lower())+'">'
+        +'<td><a href="'+esc(branch_url(b["name"]))+'"><strong>'+esc(b["name"])+'</strong></a></td>'
+        +'<td><span class="branch-pill">'+esc(b["category"])+'</span></td>'
+        +'<td class="branch-description">'+esc(b["purpose"])+'</td>'
+        +'<td class="code">'+esc(b.get("primary_source_path") or "—")+'</td>'
+        +'<td><a class="code" title="'+esc(b["commit_sha"])+'" href="'+esc(REPO_URL+"/commit/"+b["commit_sha"])+'">'+esc(b["commit_sha"][:10])+'</a></td></tr>'
+        for b in branch_rows
+    )
+    branch_body=(
+        '<main class="wrap hero"><div class="eyebrow">Whole-repository Git source · audited branch refs</div>'
+        '<h1>Every branch. Every purpose.</h1>'
+        '<p class="lead">All '+str(len(branch_rows))+' branches observed on '+esc(branch_inventory["observed_date"])+'. Search each full name, role, purpose, source path and exact commit. This is a provider snapshot; GitHub live refs must be reread before a change.</p>'
+        '<div class="notice">The 33 researcher branches still point to shared template code, not individual admitted thesis sources. The new <code>resource/**/v001</code> branches contain the updated whole-repository codebase and scoped source manifests. Original archived references have not been rewritten.</div>'
+        '<section class="section"><div class="branch-toolbar">'
+        '<label>Find branch<input id="branch-search" type="search" placeholder="Search researcher, source, snapshot, commit…" autocomplete="off"></label>'
+        '<label>Branch type<select id="branch-category"><option value="">All categories</option>'+category_options+'</select></label>'
+        '<span class="branch-count" id="branch-visible" aria-live="polite">'+str(len(branch_rows))+' / '+str(len(branch_rows))+' branches</span>'
+        '</div><div class="branch-table-wrap"><table class="branch-table"><thead><tr><th>Git branch</th><th>Type</th><th>Intended use and actual status</th><th>Source path</th><th>Observed SHA</th></tr></thead><tbody>'+branch_table_rows+'</tbody></table></div>'
+        '<p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/registry/branch-inventory.json">Open machine-readable complete branch inventory →</a> · '
+        '<a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/BRANCH_VERSIONING_AND_INVENTORY.md">Open versioning and rollback rule →</a></p>'
+        '</section></main>'
+    )
+    write(out,"branches/index.html",shell("Every Git Branch",branch_body+'<script defer src="../assets/branches.js"></script>',1))
+    home=home.replace("</main>",'<section class="wrap section"><h2>Code, branches and version history</h2><p class="lead">Search '+str(len(branch_rows))+' audited branches, their intended use, code paths and immutable commit snapshots. The single website is built from <code>main</code>.</p><p><a href="branches/index.html">Browse all Git branches →</a></p></section></main>')
+    write(out,"index.html",shell("Home",home,0))
+    directory="".join(f'<article class="card"><h3>{esc(r["display_name"])}</h3><p><span class="badge">{esc(r["qa_status"])}</span></p><p>{esc(r.get("topic_title") or "Topic title: ON HOLD")}</p><a href="{esc(r["slug"])}/index.html">Open →</a></article>' for r in researchers)
+    directory='<p><a href="../thesis-infrastructure/index.html">Explore normalized thesis folder roles and stable Drive IDs →</a></p>'+directory
+    write(out,"researchers/index.html",shell("Researchers",f'<main class="wrap hero"><div class="eyebrow">Researcher index</div><h1>Researcher workspaces</h1><p class="lead">No topic/title is published until human QA verifies it.</p><div class="grid">{directory}</div></main>',1))
+    for r in researchers:
+        lane_html=""
+        for key,label in [("discussion","Discussion"),("latex","LaTeX"),("presentation","Presentation")]:
+            lane=r["lanes"][key]
+            lane_html+=f'<article class="lane"><h3>{label}</h3><div class="code">{esc(lane["branch"])}</div><p class="muted">{esc(lane["content_policy"])}</p><a href="{branch_url(lane["branch"])}">Open Git branch →</a></article>'
+        modules=[w for w in websites if w.get("researcher_id")==r["researcher_id"]]
+        website_section=""
+        if modules:
+            module_cards=""
+            for w in modules:
+                wd=w.get("drive",{})
+                extra=""
+                if w.get("research_title"):
+                    extra+=f'<p><strong>Research:</strong> {esc(w["research_title"])}</p>'
+                if w.get("application_status"):
+                    extra+=f'<p class="muted">Application: {esc(w["application_status"])}</p>'
+                if w.get("research_status"):
+                    extra+=f'<p class="muted">Research state: {esc(w["research_status"])}</p>'
+                if wd.get("current_manuscript_pdf_id"):
+                    extra+=f'<p><a href="{drive_url(wd["current_manuscript_pdf_id"])}">Open current manuscript PDF →</a></p>'
+                if wd.get("submitted_form_e_pdf_id"):
+                    extra+=f'<p><a href="{drive_url(wd["submitted_form_e_pdf_id"])}">Open submitted Form E →</a></p>'
+                if w.get("public_site_path"):
+                    live="https://fabingurung.github.io/JP_Research-and-Development"+w["public_site_path"]
+                    extra+='<p><a href="'+esc(live)+'">Open published website →</a></p>'
+                module_cards+='<article class="lane"><h3>'+esc(w["label"])+'</h3><div class="code">Researcher module · '+esc(w["state"])+'</div>'+extra+'<a href="'+branch_url(w["branch"])+'">Legacy branch (full repo snapshot) →</a></article>'
+            website_section='<section class="section"><h2>Existing website modules</h2><div class="lanes">'+module_cards+'</div></section>'
+        researcher_debts=[d for d in debts if d.get("researcher_id")==r["researcher_id"] and d.get("status") in ("OPEN","HOLD")]
+        debt_section=""
+        if researcher_debts:
+            debt_section=f'<section class="section"><h2>Research debt</h2><div class="notice">{len(researcher_debts)} governed open/held item(s). <a href="debts/index.html">Open debt subpage →</a></div></section>'
+        status_label="TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "HOLD · HUMAN QA REQUIRED"
+        title_value=r.get("topic_title") or "ON HOLD"
+        notice_text=r.get("public_note") or ("Title verified by user; remaining Drive pointers stay on hold pending lane-specific QA." if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "Research topic, title, short page name and all Drive file IDs are intentionally unpublished until human QA.")
+        drive=r["drive"]
+        rows=[
+          ("Discussion Google Doc",drive.get("discussion_google_doc_id")),
+          ("Research project Drive folder",drive.get("project_root_drive_id")),
+          ("Working thesis PDF",drive.get("working_pdf_drive_id")),
+          ("LaTeX source",drive.get("latex_source_drive_id")),
+          ("LaTeX source package",drive.get("latex_source_package_drive_id")),
+          ("Formatting-only preview PDF (NON-PRODUCTION)",drive.get("preview_pdf_drive_id")),
+          ("Formatting preview source ZIP",drive.get("preview_latex_source_package_drive_id")),
+          ("Researcher review matrix",drive.get("discussion_review_matrix_drive_id")),
+          ("Presentation PDF",drive.get("presentation_pdf_drive_id")),
+          ("Presentation PPTX",drive.get("presentation_pptx_drive_id")),
+          ("Word review derivative",drive.get("word_review_derivative_drive_id")),
+          ("Working thesis DOCX",drive.get("working_thesis_docx_drive_id")),
+          ("Unpromoted candidate DOCX",drive.get("candidate_source_docx_drive_id")),
+          ("Scientific audit PDF",drive.get("science_audit_pdf_drive_id")),
+          ("Researcher action PDF",drive.get("researcher_action_pdf_drive_id")),
+          ("Discussion READ FIRST",drive.get("discussion_read_first_drive_id")),
+          ("Live thesis Google Doc",drive.get("thesis_google_doc_id")),
+          ("Live presentation Google Slides",drive.get("presentation_google_slides_drive_id")),
+        ]
+        links="".join(f'<div>{esc(label)}</div><div>{f"""<a href="{drive_url(fid)}">Open Drive file</a>""" if fid else """<span class="badge">ON HOLD</span>"""}</div>' for label,fid in rows)
+        body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">{esc(status_label)}</span></p><div class="notice">{esc(notice_text)}</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>{esc(title_value)}</div><div>Short name</div><div>{esc(r.get("topic_short_name") or "ON HOLD")}</div></div></section><section class="section"><h2>Version control and source</h2><p>Git branches are full-repository commits; these researcher-named refs are compatibility/work lanes. Public-safe website and tool code is versioned in the common <a href="https://github.com/FabinGurung/JP_Research-and-Development/tree/main">GitHub main repository</a>. Original thesis source packages and compiled outputs remain in Google Drive until an explicit source-code admission/migration is approved.</p></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}{debt_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
+        if drive.get("project_root_drive_id"):
+            folder_url="https://drive.google.com/drive/folders/"+drive["project_root_drive_id"]
+            body=body.replace("</main>",'<section class="section"><h2>Canonical project folder</h2><p><a href="'+esc(folder_url)+'">Open complete Google Drive project cabinet →</a></p><p>GitHub contains public-safe source and pointers; the Drive folder contains original/compiled researcher documents subject to Drive permissions.</p></section></main>')
+        if r["slug"]=="safal-dawadi":
+            body=body.replace("</main>",'<section class="section"><h2>LaTeX preparation control</h2><div class="notice">Researcher source, PDF and A9 states are independently versioned. Read live project controls and recent releases before claiming scientific, university-format or A9 Main approval.</div><p><a href="../../controls/latex/safal-dawadi/index.html">Open Safal project LaTeX status →</a></p></section></main>')
+        # Folder-role aliases come from the provider-read registry, not inferred names.
+        mapped=folder_by_slug[r["slug"]]
+        present=[x for x in mapped["roles"] if x["existing_drive_folder_id"]]
+        absent=[x for x in mapped["roles"] if not x["existing_drive_folder_id"]]
+        role_items="".join(
+            '<div>'+esc(x["logical_role"])+'</div><div><a href="'+esc("https://drive.google.com/drive/folders/"+x["existing_drive_folder_id"])+'">'+esc(x["current_name"])+'</a> · '+esc(x["status"])+'</div>'
+            for x in present
+        )
+        unmapped="".join('<li>'+esc(x["logical_role"])+' — '+esc(x["status"])+'</li>' for x in absent)
+        handover=REPO_URL+"/blob/main/docs/researcher-normalization/"+r["researcher_id"]+"__folder_handover.md"
+        folder_section='<section class="section"><h2>Drive folder roles (ID-preserving)</h2>'
+        folder_section+='<p>Role aliases are read-only, project ID is not asserted, and unchanged folders are REUSED. Local/Main acknowledgments are never inferred.</p>'
+        folder_section+='<div class="kvs">'+role_items+'</div>'
+        folder_section+='<details><summary>Unverified direct-child roles ('+str(len(absent))+')</summary><ul>'+unmapped+'</ul></details>'
+        folder_section+='<p><a href="'+esc(handover)+'">Open owner-thread folder normalization handover →</a> · <a href="../../thesis-infrastructure/index.html">All researcher folder roles →</a></p></section>'
+        body=body.replace("</main>",folder_section+"</main>")
+        owner_prompt=REPO_URL+"/blob/main/prompts/researchers/"+r["researcher_id"]+"__"+r["slug"]+".md"
+        owner_state=owner_by_id[r["researcher_id"]]["state"]
+        owner_section='<section class="section"><h2>Opt-in workspace modernization</h2><p><strong>Execution state:</strong> '+esc(owner_state)+'</p>'
+        owner_section+='<p>No folder changes occur unless the user pastes this exact owner-specific prompt in this researcher chat. Deletion is forbidden; safe reuse and evidence-backed archiving are preferred.</p>'
+        owner_section+='<p><a href="'+esc("../../owner-prompts/"+r["slug"]+"/index.html")+'">Copy complete handover here →</a> · <a href="'+esc(owner_prompt)+'">Verify Git source →</a></p></section>'
+        body=body.replace("</main>",owner_section+"</main>")
+        render_owner_prompt(out,r,owner_by_id)
+        write(out,f'researchers/{r["slug"]}/index.html',shell(r["display_name"],body,2))
+        if researcher_debts:
+            debt_cards=""
+            for d in researcher_debts:
+                evidence=evidence_html(d)
+                debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><p><strong>Category:</strong> {esc(d["category"])} · <strong>Severity:</strong> {esc(d["severity"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
+            debt_body=f'<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])} · governed debt</div><h1>{esc(r["display_name"])} — Research Debts</h1><p class="lead">Only verified open/held debt is listed here. Closing an item requires provider-read evidence and an updated registry state.</p><div class="grid">{debt_cards}</div><p><a href="../index.html">← Back to researcher workspace</a></p></main>'
+            write(out,f'researchers/{r["slug"]}/debts/index.html',shell(f'{r["display_name"]} Debts',debt_body,3))
+    render_owner_directory(out,researchers,owner_by_id)
+    folder_summary=[]
+    for rr in folder_roles["records"]:
+        root_id=rr.get("existing_project_root_drive_id")
+        root_link='<a href="'+esc("https://drive.google.com/drive/folders/"+root_id)+'">Verified project root</a>' if root_id else '<strong>HOLD — root unknown</strong>'
+        present=[x for x in rr["roles"] if x["existing_drive_folder_id"]]
+        missing=[x for x in rr["roles"] if not x["existing_drive_folder_id"]]
+        short=""
+        for it in present:
+            short+='<li><code>'+esc(it["logical_role"])+'</code> → <a href="'+esc("https://drive.google.com/drive/folders/"+it["existing_drive_folder_id"])+'">'+esc(it["current_name"])+'</a> · '+esc(it["status"])+'</li>'
+        extras="".join('<li>'+esc(x["logical_role"])+": "+esc(x["current_name"])+'</li>' for x in rr["researcher_specific_extensions"])
+        handover_link=REPO_URL+"/blob/main/docs/researcher-normalization/"+rr["researcher_id"]+"__folder_handover.md"
         prompt_link=REPO_URL+"/blob/main/prompts/researchers/"+rr["researcher_id"]+"__"+rr["researcher_slug"]+".md"
         migration_state=owner_by_id[rr["researcher_id"]]["state"]
         folder_summary.append('<article class="card"><h3>'+esc(rr["researcher_id"]+" · "+rr["researcher_slug"])+'</h3>'

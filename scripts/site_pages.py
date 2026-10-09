@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reusable editorial pages for the R&D portal; pure static rendering."""
+"""Reusable editorial pages for R&D; source authority and URLs unchanged."""
 from __future__ import annotations
 from site_core import ROOT,REPO_URL,esc,write,shell
 
