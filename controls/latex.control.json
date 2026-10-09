@@ -32,8 +32,8 @@
   "migration_status": "controls/latex/migration-status.json",
   "inheritance": "A7_MODULE.json -> shared LaTeX tower -> researcher project config -> admitted source -> build QA -> Drive readback -> A9 separately",
   "pu_format_parity": "PARTIAL_BRIDGE_FULL_PRIVATE_AND_FORMAT_PARITY_HOLD",
-  "shared_control_release": "resource/control/latex/v003-20261009",
-  "shared_control_release_sha": "7e7e93f958273b4588a7a8535da41afa3cada7bc",
+  "shared_control_release": "resource/control/latex/v004-20261009",
+  "shared_control_release_sha": null,
   "compatibility_note": "Only route old readers to controls/latex/tower.json; operational source is the canonical tower. No own rules or variants.",
   "project_config_router": "registry/latex-inheritance.json",
   "source_code": "controls/latex/tower.json"

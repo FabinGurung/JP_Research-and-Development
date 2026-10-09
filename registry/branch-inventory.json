@@ -3,13 +3,13 @@
   "inventory_id": "RD-BRANCH-INVENTORY-20261009-v002",
   "observed_date": "2026-10-09",
   "repository_full_name": "FabinGurung/JP_Research-and-Development",
-  "observed_branch_count": 105,
+  "observed_branch_count": 106,
   "counts": {
     "archive": 49,
     "production": 1,
     "researcher-template": 33,
     "website-marker": 2,
-    "resource": 16,
+    "resource": 17,
     "snapshot": 4
   },
   "branches": [
@@ -1169,6 +1169,19 @@
       "alias_of": null,
       "protected": false,
       "observation": "PROVIDER_READBACK_2026-10-09"
+    },
+    {
+      "name": "resource/control/latex/v004-20261009",
+      "commit_sha": "PENDING_RELEASE_COMMIT_READBACK",
+      "category": "resource",
+      "purpose": "Whole-repository immutable baseline of one shared R&D LaTeX manuscript control tower v2.0.0 used by all researchers",
+      "primary_source_path": "controls/latex/tower.json",
+      "source_status": "CONTROL_RELEASE_PENDING_FINAL_COMMIT",
+      "version": "v004",
+      "owner": "latex",
+      "alias_of": null,
+      "protected": false,
+      "observation": "REF_CREATION_PENDING_AFTER_MAIN_COMMIT"
     },
     {
       "name": "resource/control/presentation/v001-20261009",

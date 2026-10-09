@@ -51,7 +51,8 @@
   "source_authority": "Drive PU v1.13 approved format remains external historical/academic source until complete parity, not another Git operational tower",
   "a7_role": "ID_ROUTING_ONLY__NEVER_OWNS_LATEX_TOWER",
   "drive_role": "University originals, source evidence, compiled PDFs, A9 private registries (no active Git tower clone)",
-  "current_release_ref": "resource/control/latex/v003-20261009",
+  "current_release_ref": "resource/control/latex/v004-20261009",
   "release_scope": "historical versioned ref; main is latest operational control; versioned Git refs are not parallel towers",
-  "public_source_safety": "Do not import licensed Times New Roman files, private evidence, photographs, scientific data or compiled PDFs"
+  "public_source_safety": "Do not import licensed Times New Roman files, private evidence, photographs, scientific data or compiled PDFs",
+  "release_progress": "PENDING_CREATE_RELEASE_REF_AFTER_PROVIDER_VALIDATION"
 }
