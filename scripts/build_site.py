@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import quote
 from site_core import ROOT, REPO_URL, SITE_URL, load, esc, branch_url, drive_url, evidence_html, shell, write
 from site_pages import build_home, render_start_here, render_owner_prompt, render_owner_directory
+from site_search import render_search
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--out",default="dist"); args=ap.parse_args()
@@ -34,7 +35,7 @@ def main():
         slug:load(Path(f"registry/drive-audits/02-thesis/{slug}.json"))
         for slug in ("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta","shisheer-kc","sunil-rana","fabin-gurung","master-index")
     }
-    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js"); shutil.copy2(ROOT/"web/motion.js",out/"assets/motion.js"); shutil.copy2(ROOT/"web/prompt-copy.js",out/"assets/prompt-copy.js")
+    (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css"); shutil.copy2(ROOT/"web/theme.js",out/"assets/theme.js"); shutil.copy2(ROOT/"web/branches.js",out/"assets/branches.js"); shutil.copy2(ROOT/"web/motion.js",out/"assets/motion.js"); shutil.copy2(ROOT/"web/prompt-copy.js",out/"assets/prompt-copy.js"); shutil.copy2(ROOT/"web/search.js",out/"assets/search.js")
     (out/".nojekyll").write_text("",encoding="utf-8")
     # Restore the original public-safe standalone demos into the ONE main Pages deployment.
     # Source blobs retain the archived Git IDs and are immutable until separately revised.
@@ -419,6 +420,7 @@ def main():
         shutil.copy2(src,data_dir/name)
     shutil.copy2(ROOT/"registry/researcher-folder-roles.json",data_dir/"researcher-folder-roles.json")
     shutil.copy2(ROOT/"registry/latex-build-profiles.json",data_dir/"latex-build-profiles.json")
-    print(f"built {out} researchers={len(researchers)}")
+    search_index=render_search(out,researchers,branch_inventory,websites)
+    print(f"built {out} researchers={len(researchers)} search_records={len(search_index['entries'])}")
 
 if __name__=="__main__": main()

@@ -11,6 +11,7 @@ def build_home(researchers,folder_roles):
     new_intro=(ROOT/"web/living-hero.html").read_text(encoding="utf-8")
     new_intro=new_intro.replace("@@RESEARCHERS@@",str(len(researchers))).replace("@@ROOTS@@",str(folder_roles["verified_root_count"]))
     home=home[:old_intro_start]+new_intro+home[old_intro_end:]
+    home=home.replace("</main>",'<section class="wrap section"><h2>Search the R&D catalogue</h2><p>Find researchers, source policies, documents and observed Git branches in one public-safe reading-room index.</p><p><a href="search/index.html">Search research library →</a></p></section></main>')
     home=home.replace("</main>",'<section class="wrap section"><h2>New here? A guided entry point</h2><p>Learn which source controls each task, which checks are truly automated, and what is deliberately waiting for research/project approval.</p><p><a href="start-here/index.html">Open the six-step repository guide →</a></p></section></main>')
     home=home.replace("</main>",'<section class="wrap section"><h2>Paste-ready researcher handovers</h2><p>One opt-in prompt for each researcher — no migration begins until you paste it into that researcher’s own chat.</p><p><a href="owner-prompts/index.html">Choose and copy a handover →</a></p></section></main>')
     home=home.replace("</main>",'<section class="wrap section"><h2>Unified thesis infrastructure</h2><p>Browse verified project folder roles, source-control policy, university formatting engine and individual researcher handovers. No Drive folders were renamed or moved.</p><p><a href="thesis-infrastructure/index.html">Open thesis folder and automation map →</a></p></section></main>')
@@ -19,6 +20,7 @@ def build_home(researchers,folder_roles):
 def render_start_here(out):
     # Reader-friendly repo-only operating guide: no scientific or A9 claims.
     start_cards=[
+       ("0. Search the research library","Find researchers, shared controls, public documentation and Git history.","../search/index.html"),
        ("1. Explore the library","Browse eleven researcher identities, their public-safe source pointers and verified folders.","../researchers/index.html"),
        ("2. Read the shared control towers","Review thesis-wide PU formatting, versioning, scientific boundaries and repeatability requirements.","../controls/latex/index.html"),
        ("3. Copy an owner-specific handover","Pick a researcher prompt. Copying is inert; only pasting it into that owner's chat authorizes bounded work.","../owner-prompts/index.html"),

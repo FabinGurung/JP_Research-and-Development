@@ -94,5 +94,5 @@ def render_search(out,researchers,branches,websites):
     body+='<button id="research-more" class="motion-toggle" type="button" hidden>Show more results</button>'
     body+='<noscript><p>The search interface requires JavaScript. <a href="../researchers/index.html">Browse researchers</a> or <a href="../branches/index.html">browse Git branches</a>.</p></noscript>'
     body+='</section><section class="section"><div class="notice">A matching record is a discovery link, not scientific approval. Researcher migration prompts remain inert until pasted by the user in their owning chat.</div></section></main>'
-    write(out,"search/index.html",shell("Search Research",body,1))
+    write(out,"search/index.html",shell("Search Research",body+'<script defer src="../assets/search.js"></script>',1))
     return index
