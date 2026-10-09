@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "migration_id": "RND-WEB-RESTORE-20261009",
+  "mode": "UNIFIED_MAIN_STATIC_PAGES_BUILD",
+  "source_legacy_ref": "archive/pre-researcher-control-portal-v1-20261007",
+  "source_tree_sha": "b210f2d2dc461c0bf7d2c0975633ddac7ce98008",
+  "republished_directories": [
+    "methodology-demo",
+    "hydropower-data-model",
+    "hydropower-data-schema",
+    "hydropower-data-tables",
+    "hydropower-data-graph",
+    "hydropower-nepal-map"
+  ],
+  "source_republish": "COPY_EXISTING_GIT_BLOBS_NO_SCIENTIFIC_MUTATION",
+  "compiled_outputs": "GOOGLE_DRIVE_LINKS_ONLY",
+  "private_docs_on_github": false,
+  "old_nextjs_app_restored": false,
+  "remaining": "Long-form legacy Next.js research pages not fully ported; static demos and two new generated research landing pages are deployed.",
+  "global_governance": "https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json"
+}

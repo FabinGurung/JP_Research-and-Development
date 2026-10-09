@@ -1,0 +1,142 @@
+{
+  "view": "Interactive Nepal research map",
+  "updated_for": "Current DoED operating-register authority, pinned DoED-NAXA operating point crossmatch, top-ten project overlay, official river/catchment authority registry, spatial CRS policy, and Kali Gandaki A naming correction",
+  "research_boundary": "Only source-backed geography and source-backed project reference points are shown. Project points are not treated as full project footprints. River and basin authorities are now registered, but raw licensed hydrographic geometry and unverified catchment polygons are not republished as if they were open official vectors.",
+  "current_authority_context": "The current DoED operating register used by this research system is dated 18 September 2026 and contains 217 operating hydropower projects. The point crossmatch is a separately pinned July 2026 reconciliation layer and must not be mistaken for a complete September operating register.",
+  "coordinate_rule": "A map feature must describe what its coordinate or geometry actually represents. Project points, river centerlines and catchment polygons are separate geometry classes with separate provenance. Public/interchange geometry is normalized to EPSG:4326; metric queries use PostGIS geography or a verified projected CRS appropriate to the feature location.",
+  "kali_gandaki_correction": "Kali Gandaki is the river/geographic name. Kali Gandaki A is a hydropower project/station. The highlighted 27.931, 83.6152 point is the powerhouse/generating-station point near Beltari/Yamgha, Syangja; the dam/headworks are upstream near Mirmi.",
+  "stored_registers": [
+    {
+      "file": "operating-registry.json",
+      "description": "Governed September 18, 2026 DoED operating-register manifest: 217 operating entries, 211 with non-zero official geographic coordinate extents, and six zero-coordinate exclusions."
+    },
+    {
+      "file": "operating-point-crossmatch.json",
+      "description": "Governed manifest for the pinned July 2026 DoED-NAXA/local reconciliation layer: 201 local point records matched to DoED operating records, using raw NAXA/local coordinates as project reference points."
+    },
+    {
+      "file": "plants.json",
+      "description": "Ten-project emphasized overlay with project-specific coordinate provenance."
+    },
+    {
+      "file": "hydrography-authority.json",
+      "description": "Official-source registry for Survey Department river hydrography, WECS river-basin framework and DHM hydrological attribution."
+    },
+    {
+      "file": "river-basin-registry.json",
+      "description": "Relational identifiers for the ten WECS river basins plus Southern Blocks; polygon geometry remains pending governed vector admission."
+    },
+    {
+      "file": "spatial-crs-policy.json",
+      "description": "CRS and spatial-query rules: EPSG:4326 canonical web geometry, Nepal 1981 reference context, three-zone Nepal TM/MUTM model, and metric-query policy."
+    },
+    {
+      "file": "spatial-query-schema.sql",
+      "description": "PostGIS reference schema for river MultiLineString, catchment MultiPolygon, project-to-river/catchment links, source provenance and GiST indexes."
+    }
+  ],
+  "sources": [
+    {
+      "layer": "Nepal province boundaries",
+      "provider": "geoBoundaries gbOpen",
+      "boundary_id": "NPL-ADM1-38925275",
+      "boundary_level": "ADM1 / Provinces",
+      "boundary_year_represented": "2020",
+      "underlying_source": "Survey Department of Nepal, OCHA FISS",
+      "license": "CC BY 3.0 IGO as reported by geoBoundaries",
+      "metadata_url": "https://www.geoboundaries.org/api/current/gbOpen/NPL/ADM1/"
+    },
+    {
+      "layer": "Current province display names",
+      "provider": "Nepal Tourism Board / Government sources",
+      "reference_url": "https://ntb.gov.np/en/provinces"
+    },
+    {
+      "layer": "Official river / stream hydrography authority",
+      "provider": "Department of Survey, Government of Nepal",
+      "dataset_family": "Digital Topographic Data — Hydrographic layer",
+      "reference_url": "https://www.nationalgeoportal.gov.np/",
+      "distribution_rule_url": "https://dos.gov.np/content/5/distritor--use-and-regulation-directory-2069/",
+      "geometry_class": "LineString / MultiLineString",
+      "publication_status": "authority registered; raw licensed vector not republished in this public repository without redistribution clearance"
+    },
+    {
+      "layer": "Official national river-basin framework",
+      "provider": "Water and Energy Commission Secretariat, Government of Nepal",
+      "reference_url": "https://wecs.gov.np/content/218/river-basin-atlas-of-nepal/",
+      "geometry_class": "Polygon / MultiPolygon",
+      "registered_units": "Koshi, Gandaki, Karnali, Mahakali, Babai, West Rapti, Bagmati, Kamala, Kankai, Mechi, plus Southern Blocks",
+      "publication_status": "official basin framework registered; vector polygon geometry pending governed redistributable source"
+    },
+    {
+      "layer": "Hydrological station / river / basin attribution",
+      "provider": "Department of Hydrology and Meteorology, Government of Nepal",
+      "reference_url": "https://dhm.gov.np/hydrology/river-watch",
+      "geometry_class": "Point",
+      "usage_note": "Supports river and basin attribution at observation stations; not substituted for river centerline or basin polygon geometry."
+    },
+    {
+      "layer": "Current operating hydropower authority — above 1 MW",
+      "provider": "Department of Electricity Development, Nepal",
+      "reference_url": "https://doed.gov.np/pages/powerplantsmorethan1/",
+      "updated": "2026-09-18",
+      "project_count": 197,
+      "total_capacity_mw": 3915.744,
+      "usage_note": "Current operating status and installed-capacity authority for the above-1-MW register. Published coordinates are project extents, not guaranteed facility points."
+    },
+    {
+      "layer": "Current operating hydropower authority — small-plant page",
+      "provider": "Department of Electricity Development, Nepal",
+      "reference_url": "https://doed.gov.np/pages/powerplantslessthan1/",
+      "updated": "2026-09-18",
+      "project_count": 20,
+      "total_capacity_mw": 15.797,
+      "coordinate_qualified": 14,
+      "coordinate_unqualified": 6
+    },
+    {
+      "layer": "Legacy/local hydropower point registry",
+      "provider": "Niti Foundation / NAXA Hydropower Portal",
+      "reference_url": "https://hydro.naxa.com.np/core/datasets/",
+      "published_project_records": 572,
+      "usage_note": "Supplemental project point-coordinate source. Its historical status field is not used as current operating authority."
+    },
+    {
+      "layer": "Pinned DoED-NAXA/local operating point crossmatch",
+      "provider": "abinashkarki/NepalHydroAndEnergy",
+      "repository_url": "https://github.com/abinashkarki/NepalHydroAndEnergy",
+      "commit": "0336879cf5e84fc8fb0fe3ed54294f93b6ecc35f",
+      "license": "MIT",
+      "generated_at": "2026-07-13T12:44:20.090280+00:00",
+      "doed_source_updated_on": "2026-07-02",
+      "local_rows": 572,
+      "matched_local_rows": 545,
+      "operating_local_rows": 201,
+      "external_geojson_sha": "a93c25627cb225ca76cf19fb72dd309951aff613",
+      "external_geojson_url": "https://raw.githubusercontent.com/abinashkarki/NepalHydroAndEnergy/0336879cf5e84fc8fb0fe3ed54294f93b6ecc35f/data/processed/maps/hydropower_project_display_points.geojson",
+      "usage_note": "Map uses raw_lat/raw_lon for rows whose reconciled DoED primary category is operating_record. Processed display geometry may be river-aligned and is not silently substituted for the raw project point. This layer is pinned to July 2026 and does not replace the September 2026 DoED authority."
+    },
+    {
+      "layer": "Top-ten project point coordinates",
+      "provider": "Global Energy Monitor, Niti/NAXA and project/operator sources",
+      "usage_note": "Used for the emphasized ten-project overlay where project-specific point provenance has already been registered in plants.json."
+    },
+    {
+      "layer": "Street basemap",
+      "provider": "OpenStreetMap contributors",
+      "reference_url": "https://www.openstreetmap.org/copyright",
+      "usage_note": "Context basemap only; not treated as a scientific screening result."
+    }
+  ],
+  "authority_registered_geometry_pending": [
+    "Survey Department river / stream centerlines",
+    "WECS river-basin and catchment polygons"
+  ],
+  "planned_not_loaded": [
+    "Terrain and elevation",
+    "Road and grid context",
+    "Protected and sensitive areas",
+    "Hazard context",
+    "PHES and hydropower screening results"
+  ]
+}

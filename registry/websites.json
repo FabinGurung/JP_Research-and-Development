@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
-  "status": "VERIFIED_LEGACY_WEB_MODULES_ONLY",
-  "rule": "Website modules are optional. Do not create a website branch for a researcher unless a real web module is verified or explicitly started.",
+  "status": "PUBLIC_STATIC_MODULES_REPUBLISHED_ON_MAIN__HISTORICAL_NEXT_JS_SOURCE_ARCHIVED",
+  "rule": "Two Fabin public modules now have generated static landing pages and verified Drive resources. Old Next.js source remains archived; the historical interactive static demos are checked into this same main repository build. Do not claim Next.js app was fully ported.",
   "websites": [
     {
       "website_id": "WEB-FABIN-AEC",
@@ -11,10 +11,15 @@
       "label": "AEC",
       "branch": "researcher/fabin-gurung/website/aec",
       "route": "/aec/",
-      "state": "LEGACY_SOURCE_VERIFIED_SELECTIVE_REPUBLISH_PENDING",
+      "state": "RESTORED_MAIN_STATIC_LANDING__LEGACY_AEC_INTERACTIVE_DEMO_REPUBLISHED_WITH_SOURCE_SHA",
       "legacy_source_branch": "archive/pre-researcher-control-portal-v1-20261007",
       "legacy_source_path": "app/aec/page.tsx",
-      "legacy_source_blob_sha": "55fececf18498ae119a00cd6c39a9a52c41064f5"
+      "legacy_source_blob_sha": "55fececf18498ae119a00cd6c39a9a52c41064f5",
+      "public_site_path": "/researchers/fabin-gurung/websites/aec/",
+      "live_page_published_from": "GIT_MAIN_STATIC_GENERATOR",
+      "public_demo_paths": [
+        "/methodology-demo/"
+      ]
     },
     {
       "website_id": "WEB-FABIN-HYDROPOWER-PHD",
@@ -24,7 +29,7 @@
       "label": "Hydropower / PhD",
       "branch": "researcher/fabin-gurung/website/hydropower-phd",
       "route": "/hydropower/",
-      "state": "LEGACY_WEB_SOURCE_VERIFIED__CURRENT_PHD_RESEARCH_POINTERS_VERIFIED__SELECTIVE_REPUBLISH_PENDING",
+      "state": "RESTORED_MAIN_STATIC_LANDING__LEGACY_HYDROPOWER_RESEARCH_DEMOS_REPUBLISHED_WITH_SOURCE_SHA",
       "legacy_source_branch": "archive/pre-researcher-control-portal-v1-20261007",
       "legacy_source_path": "app/hydropower/page.tsx",
       "legacy_source_blob_sha": "04abf274847e07c185406d605ec4a137b0337012",
@@ -55,7 +60,21 @@
         "M4": "NOT_SELECTED_OR_FROZEN",
         "M5": "VALIDATION_DIMENSIONS_DEFINED__NUMERICAL_ACCEPTANCE_CUTOFFS_OPEN",
         "empirical_results": "NOT_FINAL"
-      }
+      },
+      "public_site_path": "/researchers/fabin-gurung/websites/hydropower-phd/",
+      "proposal_defense_public_site_path": "/researchers/fabin-gurung/websites/hydropower-phd/proposal-defense/",
+      "proposal_defense_source": {
+        "pdf_seq16_drive_id": "1LBNbLlrTGXI_ldEIcCSJ47XeTO7PMpwv",
+        "pptx_seq16_drive_id": "1DIMr8WbeyBp554N66VxGsB7GWU3GBu1l",
+        "drive_folder_id": "1z0pHNTVX9pIIqMY9xxKg_C-GkNllA1Q0",
+        "verified": "2026-10-09"
+      },
+      "public_demo_paths": [
+        "/hydropower-data-schema/",
+        "/hydropower-data-tables/",
+        "/hydropower-data-graph/",
+        "/hydropower-nepal-map/"
+      ]
     }
   ]
 }

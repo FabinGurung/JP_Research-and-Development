@@ -11,7 +11,7 @@
   "researcher_content_status": "VERIFIED_RESEARCHER_RECORDS_11__UNADMITTED_ARTIFACTS_RETAINED_AS_DEBTS",
   "main_content_rule": "CODE_MACHINE_READABLE_CONTROLS_AND_LINKS_ONLY",
   "portal_deployment": "GITHUB_PAGES_MAIN_ONLY",
-  "validation": "PENDING_CURRENT_HEAD_GITHUB_ACTIONS_AND_PAGES_READBACK",
+  "validation": "PENDING_CURRENT_HEAD_AFTER_UNIFIED_RESEARCH_SITE_RESTORATION",
   "branch_count": 83,
   "researcher_lane_status": "33_ACTIVE_EMPTY_CORE_LANES__SIX_NEW_SAFAL_DAWADI_AND_SUNIL_RANA",
   "website_module_count": 2,
@@ -140,5 +140,18 @@
     "core_lane_count": 33,
     "github_branch_count": 83,
     "branch_readback": "6_NEW_LANES_PRESENT__THAPA_3_LANES_REMAIN"
+  },
+  "unified_site_migration": {
+    "status": "STAGED_PENDING_PAGES_READBACK",
+    "modules": [
+      "aec",
+      "hydropower-phd",
+      "hydropower-phd/proposal-defense"
+    ],
+    "public_static_legacy_demo_count": 6,
+    "original_nextjs_full_port": "NOT_DONE",
+    "version_control": "ONE_MAIN_CODEBASE_BRANCHES_ARE_WHOLE_REPO_REFS",
+    "global_control": "A7/A9_GIT_DRIVE_BOOTSTRAP.json",
+    "drive_artifacts": "LINKED_NOT_MOVED"
   }
 }

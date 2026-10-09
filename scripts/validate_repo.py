@@ -119,6 +119,7 @@ if args.site:
     expected += [f"researchers/{r['slug']}/debts/index.html" for r in rows if r.get("researcher_id") in debt_researcher_ids]
     expected += ["audits/02-thesis/index.html","audits/02-thesis/manoj-bhandari/index.html","audits/02-thesis/manoj-bhandari/debts/index.html","audits/02-thesis/avishek-kumar-mandal/index.html","audits/02-thesis/avishek-kumar-mandal/debts/index.html"]
     expected += [f"audits/02-thesis/{slug}/{suffix}" for slug in audit_batch_slugs for suffix in ("index.html","debts/index.html")]
+    expected += ["researchers/fabin-gurung/websites/aec/index.html","researchers/fabin-gurung/websites/hydropower-phd/index.html","researchers/fabin-gurung/websites/hydropower-phd/proposal-defense/index.html","methodology-demo/index.html","hydropower-data-model/model.json","hydropower-data-schema/index.html","hydropower-data-tables/index.html","hydropower-data-graph/index.html","hydropower-nepal-map/index.html"]
     for rel in expected:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
 if errors:

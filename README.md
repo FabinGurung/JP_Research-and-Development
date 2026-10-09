@@ -1,6 +1,6 @@
 # JP Research & Development
 
-Code-first research control portal.
+Code-first research control portal, now hosting unified Fabin AEC and Hydropower research landing pages and restored public-safe legacy demos.
 
 ## Current field
 
@@ -39,3 +39,12 @@ python scripts/validate_repo.py
 python scripts/build_site.py --out dist
 python scripts/validate_repo.py --site dist
 ```
+
+## Unified research websites (2026-10-09)
+
+- Fabin AEC / MSc Structural Engineering: `/researchers/fabin-gurung/websites/aec/`
+- Fabin Hydropower / PhD: `/researchers/fabin-gurung/websites/hydropower-phd/`
+- Hydropower proposal defense: `/researchers/fabin-gurung/websites/hydropower-phd/proposal-defense/`
+- Interactive historical demos: `/methodology-demo/`, `/hydropower-nepal-map/`, `/hydropower-data-schema/`, `/hydropower-data-tables/`, `/hydropower-data-graph/`.
+
+The static demos are reused from archived code blobs, not a claim that all archived Next.js pages were migrated. A researcher-specific Git branch snapshots the whole repository; the primary site is one build from `main`. [A7 single bootstrap](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json).

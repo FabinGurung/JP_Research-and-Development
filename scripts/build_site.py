@@ -55,6 +55,12 @@ def main():
     }
     (out/"assets").mkdir(); shutil.copy2(ROOT/"web/styles.css",out/"assets/styles.css")
     (out/".nojekyll").write_text("",encoding="utf-8")
+    # Restore the original public-safe standalone demos into the ONE main Pages deployment.
+    # Source blobs retain the archived Git IDs and are immutable until separately revised.
+    legacy=ROOT/"web/legacy-site"
+    for site_name in ("methodology-demo","hydropower-data-model","hydropower-data-schema","hydropower-data-tables","hydropower-data-graph","hydropower-nepal-map"):
+        src=legacy/site_name
+        if src.is_dir(): shutil.copytree(src,out/site_name,dirs_exist_ok=True)
     home_cards="".join(f'<article class="card"><span class="badge">{esc("TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "ON HOLD · HUMAN QA")}</span><h3>{esc(r["display_name"])}</h3><p>{esc(r.get("topic_title") or "Topic/title and Drive pointers are intentionally unset.")}</p><a href="researchers/{esc(r["slug"])}/index.html">Open researcher workspace →</a></article>' for r in researchers)
     home=f'''<main><section class="wrap hero"><div class="eyebrow">Research control portal</div><h1>JP Research & Development</h1><p class="lead">One thin main branch for shared controls, researcher routing and verified Drive links. Research documents and generated outputs stay in Google Drive; source code lives in governed researcher lanes.</p><p><span class="badge">{len(researchers)} researcher workspaces · selective human QA</span></p></section><section class="wrap section"><h2>Operating architecture</h2><div class="flow"><div class="node">Shared controls</div><div class="arrow">→</div><div class="node">Researcher index</div><div class="arrow">→</div><div class="node">Discussion / LaTeX / Presentation lanes</div><div class="arrow">→</div><div class="node">Google Drive outputs</div></div></section><section class="wrap section"><h2>Researchers</h2><div class="grid">{home_cards}</div></section><section class="wrap section"><h2>Boundaries</h2><div class="controls"><article class="card"><h3>GitHub main</h3><p>Portal code, controls, schemas, registries and links only.</p></article><article class="card"><h3>Researcher branches</h3><p>Discussion pointers, LaTeX source, presentation source/config.</p></article><article class="card"><h3>Google Drive</h3><p>Working Docs, compiled PDFs, generated PPTX/PDF and evidence.</p></article></div></section></main>'''
     write(out,"index.html",shell("Home",home,0))
@@ -82,7 +88,10 @@ def main():
                     extra+=f'<p><a href="{drive_url(wd["current_manuscript_pdf_id"])}">Open current manuscript PDF →</a></p>'
                 if wd.get("submitted_form_e_pdf_id"):
                     extra+=f'<p><a href="{drive_url(wd["submitted_form_e_pdf_id"])}">Open submitted Form E →</a></p>'
-                module_cards+='<article class="lane"><h3>'+esc(w["label"])+'</h3><div class="code">'+esc(w["branch"])+'</div><p class="muted">Route: '+esc(w["route"])+' · '+esc(w["state"])+'</p>'+extra+'<a href="'+branch_url(w["branch"])+'">Open website branch →</a></article>'
+                if w.get("public_site_path"):
+                    live="https://fabingurung.github.io/JP_Research-and-Development"+w["public_site_path"]
+                    extra+='<p><a href="'+esc(live)+'">Open published website →</a></p>'
+                module_cards+='<article class="lane"><h3>'+esc(w["label"])+'</h3><div class="code">Researcher module · '+esc(w["state"])+'</div>'+extra+'<a href="'+branch_url(w["branch"])+'">Historical website branch →</a></article>'
             website_section='<section class="section"><h2>Existing website modules</h2><div class="lanes">'+module_cards+'</div></section>'
         researcher_debts=[d for d in debts if d.get("researcher_id")==r["researcher_id"] and d.get("status") in ("OPEN","HOLD")]
         debt_section=""
@@ -94,6 +103,7 @@ def main():
         drive=r["drive"]
         rows=[
           ("Discussion Google Doc",drive.get("discussion_google_doc_id")),
+          ("Research project Drive folder",drive.get("project_root_drive_id")),
           ("Working thesis PDF",drive.get("working_pdf_drive_id")),
           ("LaTeX source",drive.get("latex_source_drive_id")),
           ("LaTeX source package",drive.get("latex_source_package_drive_id")),
@@ -121,6 +131,46 @@ def main():
                 debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><p><strong>Category:</strong> {esc(d["category"])} · <strong>Severity:</strong> {esc(d["severity"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
             debt_body=f'<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])} · governed debt</div><h1>{esc(r["display_name"])} — Research Debts</h1><p class="lead">Only verified open/held debt is listed here. Closing an item requires provider-read evidence and an updated registry state.</p><div class="grid">{debt_cards}</div><p><a href="../index.html">← Back to researcher workspace</a></p></main>'
             write(out,f'researchers/{r["slug"]}/debts/index.html',shell(f'{r["display_name"]} Debts',debt_body,3))
+    # Unified R&D main codebase: Fabin research subpages are deployed together.
+    sitebase="https://fabingurung.github.io/JP_Research-and-Development"
+    fabin=next(r for r in researchers if r["slug"]=="fabin-gurung")
+    fdrive=fabin["drive"]
+    aec_research=[
+        ("Current MSc Structural thesis working PDF",drive_url(fdrive.get("working_pdf_drive_id"))),
+        ("LaTeX source ZIP (Git source transition pending)",drive_url(fdrive.get("latex_source_package_drive_id"))),
+        ("Midterm presentation PPTX",drive_url(fdrive.get("presentation_pptx_drive_id"))),
+        ("Midterm presentation QA PDF",drive_url(fdrive.get("presentation_pdf_drive_id"))),
+        ("Canonical Drive project cabinet","https://drive.google.com/drive/folders/"+fdrive["project_root_drive_id"]),
+        ("Static AEC methodology demo",sitebase+"/methodology-demo/"),
+        ("JP Structural Analysis engine","https://fabingurung.github.io/JP_Structural_Analysis/"),
+        ("Current GitHub source repository","https://github.com/FabinGurung/JP_Research-and-Development/tree/main")
+    ]
+    def cards_for(links):
+        return "".join('<article class="card"><h3>'+esc(label)+'</h3><a href="'+esc(url)+'">Open →</a></article>' for label,url in links if url)
+    aec_body='<main class="wrap hero"><div class="eyebrow">Fabin Gurung / Paper 01 · MSc Structural Engineering</div><h1>'+esc(fabin["topic_title"])+'</h1><p class="lead">The AEC research website and original interactive methodology demo are now accessible within the unified JP R&D Pages build. v0.9 thesis is a QA-passed WORKING document, not a certified final submission.</p><div class="grid">'+cards_for(aec_research)+'</div><section class="section"><h2>Code and provenance</h2><p>Live portal code is on repository <strong>main</strong>. Restored standalone demos are under <code>web/legacy-site/methodology-demo</code>, retaining the archived public-source blob identities. Git branches are whole-repository snapshots, not one-researcher file stores. Original research documents remain in Drive.</p><p><a href="../../../index.html">← Fabin researcher workspace</a></p></section></main>'
+    write(out,"researchers/fabin-gurung/websites/aec/index.html",shell("Fabin AEC Research",aec_body,4))
+    hydro=next(w for w in websites if w.get("module_slug")=="hydropower-phd")
+    hd=hydro.get("drive",{})
+    proposal=hydro["proposal_defense_source"]
+    hydro_links=[
+        ("Current post-defense manuscript PDF (non-final)",drive_url(hd.get("current_manuscript_pdf_id"))),
+        ("Current LaTeX manuscript source ZIP",drive_url(hd.get("current_manuscript_source_zip_id"))),
+        ("Submitted PhD Form E PDF",drive_url(hd.get("submitted_form_e_pdf_id"))),
+        ("PhD application cabinet","https://drive.google.com/drive/folders/"+hd["phd_application_root_id"]),
+        ("Post-defense working research folder","https://drive.google.com/drive/folders/"+hd["post_defense_revision_root_id"]),
+        ("Proposal defense viewer",sitebase+"/researchers/fabin-gurung/websites/hydropower-phd/proposal-defense/"),
+        ("Nepal hydropower research map · archived demo",sitebase+"/hydropower-nepal-map/"),
+        ("Relational model · schema view",sitebase+"/hydropower-data-schema/"),
+        ("Relational model · table designer",sitebase+"/hydropower-data-tables/"),
+        ("Relational model · interactive graph",sitebase+"/hydropower-data-graph/"),
+        ("GitHub research site source","https://github.com/FabinGurung/JP_Research-and-Development/tree/main")
+    ]
+    hydro_body='<main class="wrap hero"><div class="eyebrow">Fabin Gurung / Paper 02 · Hydropower PhD research</div><h1>'+esc(hydro["research_title"])+'</h1><p class="lead">Post-defense research framework: BIM/GIS, hydropower assets and normalized relationships for traceable infrastructure planning. Current manuscript v0.2 is QA-pass review, NOT a final PhD submission. Historical static visualizations are restored as research demos; they are not new verified site-suitability evidence.</p><div class="grid">'+cards_for(hydro_links)+'</div><section class="section"><h2>Scientific boundaries</h2><p>M1–M3 are not a final all-module scientific freeze, M4 remains unselected and M5 acceptance cutoffs remain open. Prototype GIS research and hydropower research-model demos do not replace formal feasibility, surveys or licensed engineering analysis.</p><p><a href="../../../index.html">← Fabin researcher workspace</a></p></section></main>'
+    write(out,"researchers/fabin-gurung/websites/hydropower-phd/index.html",shell("Fabin Hydropower PhD",hydro_body,4))
+    defense_pdf=drive_url(proposal["pdf_seq16_drive_id"])
+    defense_pptx=drive_url(proposal["pptx_seq16_drive_id"])
+    defense_body='<main class="wrap hero"><div class="eyebrow">Fabin Gurung · PhD proposal defense · governed Drive output</div><h1>Hydropower research proposal defense</h1><p class="lead">Published GitHub page, provider-hosted PDF. This SEQ16 file is a historical proposal-defense output and is not a final defense/submission certificate.</p><p><a href="'+defense_pdf+'">Open proposal-defense PDF in Google Drive →</a> · <a href="'+defense_pptx+'">Open editable PPTX →</a></p><div style="height:70vh;min-height:450px"><iframe title="PhD proposal-defense PDF" style="width:100%;height:100%;border:1px solid #ccd;border-radius:10px" loading="lazy" src="https://drive.google.com/file/d/'+esc(proposal["pdf_seq16_drive_id"])+'/preview"></iframe></div><p>Google Drive permissions or browser privacy settings may block embedded preview; use the direct link above.</p><p><a href="../index.html">← Hydropower research page</a></p></main>'
+    write(out,"researchers/fabin-gurung/websites/hydropower-phd/proposal-defense/index.html",shell("Hydropower Proposal Defense",defense_body,5))
     manoj_debts=[d for d in debts if d.get("audit_slug")=="manoj-bhandari" and d.get("status") in ("OPEN","HOLD")]
     audit_root="audits/02-thesis/manoj-bhandari/"
     manoj_certificate=manoj_audit["verified_certificate"]
@@ -196,7 +246,7 @@ def main():
         else: active_debt_cards+=card
     debt_page=f'<main class="wrap hero"><div class="eyebrow">Research debt / holds</div><h1>Open debts and governed holds</h1><p class="lead">Only OPEN/HOLD items require action. HOLD items are not permission to resume them.</p><div class="grid">{active_debt_cards}</div><section class="section"><h2>Resolved readbacks and closed items</h2><div class="grid">{resolved_debt_cards}</div></section></main>'
     write(out,"debts/index.html",shell("Research Debts",debt_page,1))
-    workspace=f'''<main class="wrap hero"><div class="eyebrow">Repository field</div><h1>Workspace</h1><p class="lead">This repository is a code-and-pointer control plane for R&D. It is not the document warehouse.</p><section class="section"><div class="kvs"><div>Main</div><div>Portal code, shared controls, researcher registry, schemas, Drive/GitHub pointers.</div><div>Discussion lane</div><div>Google Doc ID/link and automation metadata only; discussion prose remains in Drive.</div><div>LaTeX lane</div><div>.tex/.bib/build code; compiled PDF is uploaded to Drive.</div><div>Presentation lane</div><div>TypeScript/PptxGenJS/YAML/JSON/HTML/CSS/SVG; generated PPTX/PDF is uploaded to Drive.</div><div>Archive</div><div>Git history plus legacy branches classified read-only.</div></div></section><section class="section"><h2>Branch state</h2><p>{len(branches["archived_legacy"])} legacy refs are archived under <strong>archive/</strong>. The model defines {len(branches["active_researcher_lanes"])} universal researcher lanes plus {len(branches.get("active_website_modules",[]))} verified optional website lanes.</p></section></main>'''
+    workspace=f'''<main class="wrap hero"><div class="eyebrow">Repository field</div><h1>Workspace</h1><p class="lead">This repository is a code-and-pointer control plane for R&D. It is not the document warehouse.</p><section class="section"><div class="kvs"><div>Main</div><div>Portal code, shared controls, researcher registry, schemas, Drive/GitHub pointers.</div><div>Discussion lane</div><div>Google Doc ID/link and automation metadata only; discussion prose remains in Drive.</div><div>LaTeX lane</div><div>.tex/.bib/build code; compiled PDF is uploaded to Drive.</div><div>Presentation lane</div><div>TypeScript/PptxGenJS/YAML/JSON/HTML/CSS/SVG; generated PPTX/PDF is uploaded to Drive.</div><div>Archive</div><div>Git history plus legacy branches classified read-only.</div></div></section><section class="section"><h2>Branch state</h2><p>{len(branches["archived_legacy"])} legacy refs are archived under <strong>archive/</strong>. The model defines {len(branches["active_researcher_lanes"])} legacy-compatible full-repository branch refs (researcher folders and current code share main) plus {len(branches.get("active_website_modules",[]))} verified optional website lanes.</p></section></main>'''
     workspace=workspace.replace("</main>",'<section class="section"><h2>Additional audited Drive children</h2><p><a href="../audits/02-thesis/index.html">02_Thesis — rescan inventory (18 direct children) →</a></p><p><a href="../audits/02-thesis/manoj-bhandari/index.html">Manoj Bhandari — certificate-only audit →</a></p><p><a href="../audits/02-thesis/avishek-kumar-mandal/index.html">Avishek Kumar Mandal — first-draft intake audit →</a></p><p><a href="../audits/02-thesis/rural-road-maintenance/index.html">Rural Road Maintenance — archive-intake audit →</a></p><p><a href="../audits/02-thesis/safal-dawadi/index.html">Safal Dawadi — CM thesis audit →</a></p><p><a href="../audits/02-thesis/saugat-paneru/index.html">Saugat Paneru — CP114 audit →</a></p><p><a href="../audits/02-thesis/nabin-bista/index.html">Nabin Bista — live Docs audit →</a></p><p><a href="../audits/02-thesis/krishna-kumar-gupta/index.html">Krishna Kumar Gupta — v0.3.5 audit →</a></p><p><a href="../audits/02-thesis/shisheer-kc/index.html">Shisheer KC — CKPT14 baseline and CKPT15 candidate →</a></p><p><a href="../audits/02-thesis/sunil-rana/index.html">Sunil Rana — scientific review →</a></p><p><a href="../audits/02-thesis/fabin-gurung/index.html">Fabin Gurung — v0.9 AEC manuscript →</a></p><p><a href="../audits/02-thesis/master-index/index.html">00 Master Index — shared thesis infrastructure →</a></p></section></main>')
     write(out,"workspace/index.html",shell("Workspace",workspace,1))
     cards=""
