@@ -33,7 +33,7 @@ class CatalogueTests(unittest.TestCase):
         for e in self.data["entries"]:
             self.assertTrue(e["url"].startswith(("../","https://github.com/")))
     def test_no_scientific_approval_from_discovery(self):
-        self.assertIn("not",self.data["description"].lower())
+        self.assertIn("never contains private thesis text",self.data["description"].lower())
 
 if __name__=="__main__":
     unittest.main()
