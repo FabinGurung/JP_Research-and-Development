@@ -83,3 +83,5 @@ The [public control page](https://fabingurung.github.io/JP_Research-and-Developm
 - [144/144 live PU formatting rule IDs audited (production QA incomplete)](controls/latex/pu-format-parity-audit.json).
 - [Safal v1.9 Local seq15 target](researchers/safal-dawadi/latex/source-baseline.json), with same-ID final source/PDF mirror/hash still pending, so Git source import has not yet occurred.
 - [Git commits PRE/POST + annotated-tag-only major releases](docs/LATEX_Q1B_Q2A_Q3A_GOVERNED_CHANGE_20261009.md). Existing 106 refs remain stable. Admitted manuscript `.tex` and `.bib` may reside in this R&D repository.
+
+**Safal runnable Linux handover:** [Read the current source-reconciliation, single-template, preview/production build procedure](docs/HANDOVER_SAFAL_DAWADI_LATEX_EXECUTION_20261009.md). A successful GitHub source gate is not a generated PDF.

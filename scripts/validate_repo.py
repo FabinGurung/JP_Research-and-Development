@@ -221,7 +221,16 @@ if args.site:
         except FileNotFoundError: pass
 
 # Single canonical shared-template and per-researcher extension validation
-import sys
+import ast, sys
+# Syntax and executable HOLD/PRESENT source-gate regression: green CI must NOT be construed as PDF certified.
+for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py"):
+    try:
+        ast.parse((ROOT/script).read_text(encoding="utf-8"),filename=script)
+    except (SyntaxError,OSError) as e:
+        errors.append("Python script syntax/read failed "+script+": "+str(e))
+source_check=subprocess.run([sys.executable,str(ROOT/"scripts/latex/safal_build.py"),"--mode","check"],cwd=ROOT,text=True,capture_output=True)
+if source_check.returncode!=0 or not any(token in source_check.stdout for token in ("SOURCE_GATE=HOLD_NOT_ADMITTED","SOURCE_GATE=SOURCE_PRESENT")):
+    errors.append("Safal build source-check not executable or missing explicit HOLD/PRESENT label: "+(source_check.stdout+source_check.stderr)[:500])
 shared_test=subprocess.run([sys.executable,str(ROOT/"scripts/latex/validate_shared.py")],cwd=ROOT,text=True,capture_output=True)
 if shared_test.returncode!=0:
     errors.append("shared template inheritance check failed: "+(shared_test.stdout+shared_test.stderr).strip()[:3000])

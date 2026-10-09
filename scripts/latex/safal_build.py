@@ -5,6 +5,7 @@ Modes: check (non-compiling), preview (explicit Tinos only, source must be admit
 """
 import argparse, hashlib, json, os, re, shutil, subprocess, tempfile
 from pathlib import Path
+from xml.sax.saxutils import escape as xml_escape
 
 ROOT=Path(__file__).resolve().parents[2]
 CONTROL=ROOT/"controls/projects/safal-dawadi.latex.json"  # historical evidence and build metadata only
@@ -73,7 +74,7 @@ def main():
         fdir=None
         if g.get("source_admission")!="VERIFIED":
             fail("preview cannot bypass admitted verified scientific source")
-    for tool in ("xelatex","biber","pdfinfo","pdffonts","pdftoppm"):
+    for tool in ("xelatex","biber","pdfinfo","pdffonts","pdftoppm","git")+(("fc-cache","fc-match") if args.mode=="compile" else ()):
         if shutil.which(tool) is None: fail("missing compiler or PDF QA tool: "+tool)
     if not args.output_dir: fail("explicit --output-dir is required, not a repository directory")
     out=Path(args.output_dir).resolve()
@@ -89,6 +90,20 @@ def main():
             for n in FONT_FILES:
                 shutil.copy2(Path(fdir)/n,texdir/n)
         env=os.environ.copy()
+        if args.mode=="compile":
+            # Register licensed user-supplied Times New Roman in ephemeral fontconfig
+            # without changing the host or committing any font binary to Git.
+            cfg=work/"fontconfig";cfg.mkdir()
+            conf=cfg/"fonts.conf"
+            conf.write_text('<?xml version="1.0"?>\n<!DOCTYPE fontconfig SYSTEM "fonts.dtd">\n<fontconfig>\n'
+                            '<include ignore_missing="yes">/etc/fonts/fonts.conf</include>\n'
+                            '<dir>'+xml_escape(str(Path(fdir).resolve()))+'</dir>\n'
+                            '<cachedir>'+xml_escape(str(cfg/"cache"))+'</cachedir>\n</fontconfig>\n',encoding="utf-8")
+            env["FONTCONFIG_FILE"]=str(conf)
+            invoke(["fc-cache","-f",str(Path(fdir).resolve())],texdir,env)
+            resolved_font=invoke(["fc-match","-f",r"%{family}\n","Times New Roman"],texdir,env)
+            if "Times New Roman" not in resolved_font:
+                fail("fontconfig did not resolve licensed exact Times New Roman; refusing production compile")
         env["TEXINPUTS"]=str(SHARED.parent)+os.pathsep+str(tree)+os.pathsep+str(tree/"bibliography")+os.pathsep+env.get("TEXINPUTS","")
         env["BIBINPUTS"]=str(tree/"bibliography")+os.pathsep+env.get("BIBINPUTS","")
         sequence=[
