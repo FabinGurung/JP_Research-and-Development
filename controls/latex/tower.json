@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.0.0",
-  "status": "ACTIVE_SINGLE_CANONICAL_CONTROL__FULL_PU_FORMAT_PARITY_PENDING",
+  "version": "2.1.0",
+  "status": "SINGLE_CANONICAL_SOURCE__144_RULE_AUDIT_COMPLETE__RENDER_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
   "authority_path": "controls/latex/tower.json",
@@ -19,7 +19,8 @@
       "controls/latex/release-contract.json"
     ],
     "template": "controls/latex/template/pumlsc-shared.sty",
-    "qa": "controls/latex/qa-contract.json"
+    "qa": "controls/latex/qa-contract.json",
+    "parity_audit": "controls/latex/pu-format-parity-audit.json"
   },
   "inheritance_registry": "registry/latex-inheritance.json",
   "amendment_register": "controls/latex/change-register.json",
@@ -54,6 +55,40 @@
   "current_release_ref": "resource/control/latex/v004-20261009",
   "release_scope": "historical versioned ref; main is latest operational control; versioned Git refs are not parallel towers",
   "public_source_safety": "Do not import licensed Times New Roman files, private evidence, photographs, scientific data or compiled PDFs",
-  "release_progress": "GITHUB_PROVIDER_VERIFIED__SOURCE_QA_PASS__SCIENTIFIC_SOURCE_NOT_ADMITTED",
-  "current_release_sha": "3489fff9b15444f41fd135fedaec95600065ada2"
+  "release_progress": "Q1B_Q2A_Q3A_SOURCE_POLICY__NO_NEW_RELEASE_REF_OR_TAG",
+  "current_release_sha": "3489fff9b15444f41fd135fedaec95600065ada2",
+  "user_decisions": {
+    "Q1": "B selected Local seq15 Safal v1.9 reconciled byte target; physical mirror/hash verification pending",
+    "Q2": "A commits as PRE/POST, annotated tags for major verified releases only; preserve existing branches",
+    "Q3": "A public R&D Git stores admitted researcher LaTeX and BibTeX source; do not insert AI-camouflage or alter legitimate academic wording"
+  },
+  "versioning": {
+    "pre": "previous exact main SHA",
+    "post": "nonforced commit SHA with provider readback",
+    "routine_snapshot_branch": "FORBIDDEN_UNLESS_EXPLICITLY_APPROVED_EXCEPTION",
+    "major_release": "ANNOTATED_GIT_TAG_REQUIRES_TAG_WRITE_TOOL_AND_REMOTE_READBACK",
+    "tag_creation_this_run": "NOT_AVAILABLE_IN_CONNECTED_GITHUB_TOOL",
+    "historical_refs": "PRESERVED_NO_DELETIONS_NO_REPOINT"
+  },
+  "manuscript_source_policy": {
+    "git_root": "researchers/<slug>/latex/manuscript/",
+    "allowed": [
+      ".tex",
+      ".bib",
+      ".cls",
+      ".sty",
+      ".json",
+      ".yaml",
+      ".py",
+      ".sh"
+    ],
+    "academic_output": "Evidence-grounded legitimate scholarly prose, project-specific validated research, normal citations; do not insert internal automation language or fabricate findings",
+    "pdf_output": "Derived versioned artifacts in Drive"
+  },
+  "rule_parity_status": {
+    "audited": 144,
+    "verified_production": 0,
+    "source_missing_numeric_id": "PU-FMT-076",
+    "state": "INVENTORY_COMPLETE__REAL_PDF_PARITY_OPEN"
+  }
 }

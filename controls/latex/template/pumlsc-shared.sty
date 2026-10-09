@@ -1,30 +1,47 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/09 v2.0 One shared R&D PU manuscript base]
-% RD-CONTROL-LATEX-001: ONE centrally maintained style for every researcher.
-% Do NOT copy this .sty into researchers/<slug>/latex.
-% The public-safe baseline below does not certify the full PU-FMT catalog.
+\ProvidesPackage{pumlsc-shared}[2026/10/09 v2.1 one shared PU manuscript source]
+% One reusable source shared by all researchers; NEVER fork into individual manuscripts.
+% PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
+% Format parity/production still require exact-font PDF compilation and every-page render QA.
 \RequirePackage{iftex}
 \ifXeTeX\else
-  \PackageError{pumlsc-shared}{XeLaTeX is required}{Select XeLaTeX. No silent engine fallback.}
+  \PackageError{pumlsc-shared}{XeLaTeX required}{Select XeLaTeX}
 \fi
 \RequirePackage{geometry}
 \geometry{a4paper,twoside=false,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 \RequirePackage{fontspec}
-% Licensed Times New Roman must be available at production compile time.
-% Never place proprietary font binaries in public Git or a student ZIP.
 \setmainfont{Times New Roman}
 \RequirePackage{setspace}
 \onehalfspacing
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\pagestyle{plain}
 \raggedbottom
+\RequirePackage{titlesec}
+\titleformat{\chapter}[display]{\raggedright\normalfont\bfseries\fontsize{12}{14}\selectfont}{CHAPTER \thechapter}{0pt}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+\titleformat{\section}{\raggedright\normalfont\bfseries\fontsize{12}{14}\selectfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\raggedright\normalfont\bfseries\fontsize{12}{14}\selectfont}{\thesubsection}{1em}{}
+\RequirePackage{caption}
+\captionsetup[table]{position=top,justification=raggedright,singlelinecheck=false}
+\captionsetup[figure]{position=bottom,justification=centering,singlelinecheck=false}
+\RequirePackage{booktabs}
+\RequirePackage{hyperref}
+\hypersetup{hidelinks}
 \providecommand{\bibname}{REFERENCES}
 \renewcommand{\bibname}{REFERENCES}
 \providecommand{\refname}{REFERENCES}
 \renewcommand{\refname}{REFERENCES}
-% Stage-specific formal preliminary ordering needs approved project metadata.
 \newcommand{\PUStartPreliminaries}{\pagenumbering{roman}}
+\newcommand{\PUStartTitlePage}{\pagenumbering{roman}\thispagestyle{empty}}
 \newcommand{\PUStartMainBody}{\clearpage\pagenumbering{arabic}}
-% Citation style, title/approval pages, figures and science remain project-specific.
-% No hidden bibliography default and no enforced student/supervisor identity.
+\newcommand{\PUNarrativePrelimHeading}[1]{\par\begin{center}{\bfseries\fontsize{16}{19}\selectfont #1}\end{center}\par}
+\newcommand{\PUListPrelimHeading}[1]{\par\begin{center}{\bfseries\fontsize{14}{17}\selectfont #1}\end{center}\par}
+% Exact official title/approval pages, TOC/LOT/LOF layout, project metadata, logo,
+% bibliography style, appendices and verified contents must be supplied from governed
+% source. This package does NOT invent research facts or claim full template parity.

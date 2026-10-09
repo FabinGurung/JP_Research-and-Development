@@ -1,4 +1,4 @@
-# THE SINGLE R&D LATEX CONTROL TOWER — 2.0.0
+# THE SINGLE R&D LATEX CONTROL TOWER — 2.1.0
 
 **There is one canonical operational owner:** [tower.json](tower.json) on R&D `main`. [pumlsc-shared.sty](template/pumlsc-shared.sty) is the one reusable template. Other JSON files in this directory are **subordinate modules of this single tower**, not separate authorities.
 
@@ -29,3 +29,13 @@ The `001..100` base and `101+` change numbering is an internal *illustrative nam
 ### Single tower's implementation components
 
 [tower.json](tower.json) · [core-rules.json](core-rules.json) · [PU rule index](pu-msc-format.rules.json) · [authorities](format-authorities.json) · [build contract](build-contract.json) · [QA](qa-contract.json) · [release](release-contract.json) · [amendment register](change-register.json) · [extension index](extension-registry.json) · [migration status](migration-status.json).
+
+## Binding 2026-10-09 choices Q1B / Q2A / Q3A
+
+Q1: Latest Safal v1.9 **Local seq15 reconciled target** selected. First-upload v1.9 ZIP/PDF are not the final reconciled hashes. Provider mirror/byte test pending, Git source admission HOLD.
+
+Q2: Previous Git main SHA is PRE; one nonforced commit creates POST. Use **annotated Git tags** for major approved releases only, not repeated snapshot branches. Existing refs remain untouched. Tag-writing tool unavailable in this run; no new branch should be used to emulate it.
+
+Q3: Admitted manuscript `.tex`, bibliography `.bib` and accompanying machine-readable source belong in the public R&D researcher folder. Build normal scholarly content from verified evidence, without internal machine-control notes in student-facing PDF; no unsupported scientific facts or references.
+
+[**Complete inventory of 144 PU-FMT source rules and gap status**](pu-format-parity-audit.json): SOURCE INVENTORY audited 144/144, real format/font/whole-document production parity is NOT complete; PU-FMT-076 is absent in the Drive v1.13 original.

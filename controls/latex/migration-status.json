@@ -7,11 +7,11 @@
   "pre_snapshot_branch": "snapshot/20261009/rnd-main/v003-pre-latex-governance-bridge",
   "pre_snapshot_sha": "7301928ed48344f18adcc54078ccbdbbc4a80ea2",
   "authorization": "USER_EXPLICIT_EXECUTION_HANDOVER_2026-10-09; EXISTING DRIVE FORMAT SOURCE NOT MODIFIED",
-  "controls_version": "2.0.0",
+  "controls_version": "2.1.0",
   "format_rule_ids_observed": 144,
-  "format_rule_ids_interpreted": 16,
+  "format_rule_ids_interpreted": 144,
   "format_rule_ids_full_automated_enforcement": 0,
-  "verification_claim": "Rule-ID indexing and selected interpreted rules only; no full equivalence, no university format certification",
+  "verification_claim": "144/144 source rule text mapped to parity statuses, not automated production certification; XeLaTeX PDF verification not run.",
   "outstanding": [
     "every approved PU rule must be mapped and tested in format validator before cutover",
     "font/logo private runtime and full-page render verification",
@@ -24,7 +24,9 @@
     "Reconcile 2026-10-08 Local seq15 v1.9 QA review against October 2026 source manifest's v1.2 controlled Midterm preview; the two release streams cannot be silently merged.",
     "Main POST LocalLibraryRegistry Safal row43 still reports seq2/2 while Local SyncState reports seq15/cursor5; do not assert Main seq15 ACK.",
     "Validate all 11 real researcher full manuscript imports against one physical template once their sources are legally admitted; current file registry only confirms pointers.",
-    "Collect and promote future source-level PDF fixes centrally using amendment change register and per-researcher exceptions; no production PDF accepted from metadata-only checks."
+    "Collect and promote future source-level PDF fixes centrally using amendment change register and per-researcher exceptions; no production PDF accepted from metadata-only checks.",
+    "Select Safal latest v1.9 Local seq15 target; retrieve and verify reconciled ZIP and 42-page PDF bytes, not the first uploaded v1.9 bytes.",
+    "Create major annotated tag after approval with tag-write capable tool; no tag/branch substituted this run."
   ],
   "source_revisions": {
     "pu": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
@@ -39,7 +41,9 @@
     "local_last_change_seq": 15,
     "local_last_main_cursor_reported": 5,
     "main_registry_row_verified": "seq2_consumed2",
-    "classification": "CROSS_LANE_RECONCILIATION_HOLD"
+    "classification": "CROSS_LANE_RECONCILIATION_HOLD",
+    "latest_selected_target": "V1.9_LOCAL_SEQ15_RECONCILED_USER_Q1B",
+    "candidate_byte_status": "SAME_ID_DRIVE_REPLACEMENT_AND_SOURCE_SHA_RECHECK_PENDING"
   },
   "control_release_ref": "resource/control/latex/v004-20261009",
   "control_release_sha": "3489fff9b15444f41fd135fedaec95600065ada2",
@@ -53,5 +57,17 @@
     "amendment_next": 101,
     "status": "IMPLEMENTED_PUBLIC_SAFE_INHERITANCE__PRIVATE_SOURCE_COMPILATION_NOT_DONE",
     "release_sha": "3489fff9b15444f41fd135fedaec95600065ada2"
-  }
+  },
+  "full_source_rule_audit": {
+    "path": "controls/latex/pu-format-parity-audit.json",
+    "status": "COMPLETE_SOURCE_MAPPING__COMPILATION_HOLD",
+    "counts": {
+      "source_rules": 144,
+      "source_declared": 7,
+      "partial_or_policy": 47,
+      "missing_or_unverified": 90,
+      "full_production_verified": 0
+    }
+  },
+  "git_ref_decision": "COMMIT_PRE_POST_ANNOTATED_TAG_MAJOR_ONLY__NO_NEW_BRANCH"
 }

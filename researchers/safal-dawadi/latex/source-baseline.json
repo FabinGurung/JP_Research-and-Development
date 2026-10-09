@@ -13,10 +13,10 @@
     "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
     "drive_publication": "UNKNOWN"
   },
-  "verification": "IDS_KNOWN__HASHES_NOT_INDEPENDENTLY_RECOMPUTED",
+  "verification": "SELECTED_TARGET_NOT_PHYSICALLY_ADMITTED",
   "source_git_admission": "HOLD",
   "selected_baseline": null,
-  "reason": "Conflicting v1.9 states; no private corpus or researcher source uploaded without authenticated manifest and clearance",
+  "reason": "User selected v1.9 seq15 as canonical target. Not safe to claim it is the physical current source until SHA and same-ID Drive mirror match.",
   "branches": [
     "researcher/safal-dawadi/discussion",
     "researcher/safal-dawadi/latex",
@@ -51,5 +51,15 @@
     "safal_row_consumed_cursor": 2,
     "status": "MAIN_LIBRARY_CLOSEOUT_ACKED_FOR_2026-10-04_SEQ2",
     "note": "Main POST__LocalLibraryRegistry__39 row43 predates reported later Local seq15. Current Main ACK for seq15 not verified."
+  },
+  "selected_target": {
+    "choice": "Q1_B",
+    "label": "Safal v1.9 latest reconciled Local seq15",
+    "source_sha256_reported": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
+    "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
+    "provider_mirror_verified": false,
+    "bytes_rehashed": false,
+    "source_git_admission": "HOLD",
+    "why": "Latest reconciled state in Local; original first uploaded v1.9 ZIP/PDF have different reported hashes"
   }
 }

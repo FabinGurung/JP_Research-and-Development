@@ -1,0 +1,1463 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-PU-FORMAT-PARITY-AUDIT-20261009-001",
+  "source_url": "https://docs.google.com/document/d/1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys/edit",
+  "source_id": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
+  "source_revision": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
+  "control_version": "PU_v1.13",
+  "audited_date_npt": "2026-10-09",
+  "method": "Extract 144 individual PU-FMT statements directly from latest live Drive v1.13, compare selected obligations to shared template source, classify ALL requirements without falsely certifying production and full-page render QA.",
+  "coverage": "144_OF_144_SOURCE_RULE_IDENTIFIERS_MAPPED__FULL_IMPLEMENTATION_NOT_COMPLETE",
+  "absent_from_source": [
+    "PU-FMT-076"
+  ],
+  "counts": {
+    "source_rules": 144,
+    "source_declared": 7,
+    "partial_or_policy": 47,
+    "missing_or_unverified": 90,
+    "full_production_verified": 0
+  },
+  "per_rule": [
+    {
+      "id": "PU-FMT-001",
+      "number": 1,
+      "title": "Authority",
+      "approved_rule": "Official PU/FST guideline is the first formatting authority; original PU/FST MSc DOCX is second when the guideline is silent or visually specific; explicit user-approved conflict resolutions govern documented official-source conflicts; implementation candidates are technical evidence only.",
+      "source_paragraph": 97,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-002",
+      "number": 2,
+      "title": "Paper",
+      "approved_rule": "Use white A4 paper, 21 cm x 29.7 cm, single-sided.",
+      "source_paragraph": 98,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED",
+      "evidence_note": "geometry A4 single sided",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-003",
+      "number": 3,
+      "title": "Margins",
+      "approved_rule": "Use left 3.0 cm; right 2.5 cm; top 2.5 cm; bottom 2.5 cm.",
+      "source_paragraph": 99,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED",
+      "evidence_note": "geometry margin values",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-004",
+      "number": 4,
+      "title": "Body font",
+      "approved_rule": "Use exact Times New Roman, 12 pt, regular, black for normal text. Production builds must verify that a Times New Roman face is embedded in the PDF.",
+      "source_paragraph": 100,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-005",
+      "number": 5,
+      "title": "Font fallback",
+      "approved_rule": "A compatibility fallback may be enabled only as an explicitly logged non-production mode. It must never silently replace Times New Roman in a submission build.",
+      "source_paragraph": 101,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-006",
+      "number": 6,
+      "title": "Line spacing",
+      "approved_rule": "Use 1.5 line spacing for normal thesis prose.",
+      "source_paragraph": 102,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED",
+      "evidence_note": "onehalfspacing",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-007",
+      "number": 7,
+      "title": "Hyphenation",
+      "approved_rule": "Do not break words across lines by hyphenation.",
+      "source_paragraph": 103,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED",
+      "evidence_note": "hyphenpenalty and exhyphenpenalty",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-008",
+      "number": 8,
+      "title": "Paragraphs",
+      "approved_rule": "Use zero global first-line indentation and zero global paragraph-after spacing. Do not invent a thesis-wide indent not supported by PU sources.",
+      "source_paragraph": 104,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-009",
+      "number": 9,
+      "title": "Abstract indent",
+      "approved_rule": "Apply an approximately four-space first-line indent specifically to abstract paragraphs, reflecting the PU abstract instruction.",
+      "source_paragraph": 105,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-010",
+      "number": 10,
+      "title": "Chapter opening",
+      "approved_rule": "Each numbered chapter starts on a new page. Render CHAPTER <N> and the chapter title as a compact left-aligned 12 pt bold hierarchy; chapter title is uppercase.",
+      "source_paragraph": 106,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-011",
+      "number": 11,
+      "title": "Sections",
+      "approved_rule": "Use left-aligned numbered section and subsection headings at 12 pt Times New Roman, bold, with controlled spacing and no decorative color.",
+      "source_paragraph": 107,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-012",
+      "number": 12,
+      "title": "Front matter order",
+      "approved_rule": "Order: Cover; Title; optional Dedication; Declaration; Recommendation; Certificate; Acknowledgements; Abbreviations/Acronyms; Units and Conversions; Abstract; Table of contents; List of tables; List of figures; conditional List of plates/pictures; conditional List of appendices; then main text.",
+      "source_paragraph": 108,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-013",
+      "number": 13,
+      "title": "Mandatory lists",
+      "approved_rule": "Abbreviations/Acronyms and Units and Conversions are included in the approved preliminary sequence. Dedication remains optional; plates/pictures and appendices lists appear only when the corresponding item type exists.",
+      "source_paragraph": 109,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-014",
+      "number": 14,
+      "title": "Preliminary pagination",
+      "approved_rule": "Cover is unnumbered and not counted in Roman preliminaries. Title page is Roman i but the numeral is hidden. Optional Dedication is ii. Declaration is iii if Dedication exists, otherwise ii. Roman numbering continues through the remaining preliminaries.",
+      "source_paragraph": 110,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-015",
+      "number": 15,
+      "title": "Main pagination",
+      "approved_rule": "Start Arabic numbering at Chapter 1, page 1.",
+      "source_paragraph": 111,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED",
+      "evidence_note": "Arabic main-body numbering macro",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-016",
+      "number": 16,
+      "title": "Cover typography",
+      "approved_rule": "Use PU sample hierarchy: 16 pt degree line; 20 pt bold thesis title; 1.6 x 1.6 inch university logo area; principal student/institution/date lines 16 pt with bold where prescribed by the sample; explicit controlled vertical spacing.",
+      "source_paragraph": 112,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-017",
+      "number": 17,
+      "title": "Title page typography",
+      "approved_rule": "Use PU sample hierarchy: 16 pt degree line; 20 pt bold thesis title; 16 pt supervision/submission/student/institution/date blocks as prescribed; controlled LaTeX spacing rather than manual blank paragraphs.",
+      "source_paragraph": 113,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-018",
+      "number": 18,
+      "title": "Narrative front headings",
+      "approved_rule": "Declaration, Recommendation, Certificate, Acknowledgements and Abstract use centered bold 16 pt headings.",
+      "source_paragraph": 114,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-019",
+      "number": 19,
+      "title": "List front headings",
+      "approved_rule": "Table of contents, List of tables, List of figures, List of plates/pictures, List of appendices, Abbreviations/Acronyms and Units and Conversions use centered bold 14 pt headings.",
+      "source_paragraph": 115,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-020",
+      "number": 20,
+      "title": "Dedication",
+      "approved_rule": "Dedication is optional, brief, centered on the page, has no heading, and is not listed in the Table of contents.",
+      "source_paragraph": 116,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-021",
+      "number": 21,
+      "title": "Abstract content format",
+      "approved_rule": "Abstract uses 12 pt Times New Roman, justified, 1.5 spacing, no internal headings, citations, displayed equations, figures, tables or other illustrative material.",
+      "source_paragraph": 117,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-022",
+      "number": 22,
+      "title": "Abstract length",
+      "approved_rule": "Target 300-350 words and one-page containment. Never shrink font or violate margins to force one page; a second page is permitted only when a compliant 300-350-word abstract genuinely cannot fit.",
+      "source_paragraph": 118,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-023",
+      "number": 23,
+      "title": "Keywords",
+      "approved_rule": "Place Keywords below the abstract after one blank line; 3-7 keywords.",
+      "source_paragraph": 119,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-024",
+      "number": 24,
+      "title": "TOC/LOT/LOF",
+      "approved_rule": "Generate automatically. Use 14 pt bold centered headings; 12 pt single-spaced entries; dot leaders; right-aligned page numbers; correct chapter/section/subsection and figure/table numbering.",
+      "source_paragraph": 120,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-025",
+      "number": 25,
+      "title": "List pagination",
+      "approved_rule": "Allow genuine continuation pages rather than shrinking list text below the approved size. Use pagination safeguards to avoid a continuation page containing only one or very few entries when a compliant reflow can solve it.",
+      "source_paragraph": 121,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-026",
+      "number": 26,
+      "title": "Abbreviations",
+      "approved_rule": "Present abbreviations/acronyms alphabetically with 12 pt single-spaced entries and a fixed approximately 2.5 cm abbreviation field before the expansion; do not insert colon/semicolon between abbreviation and meaning.",
+      "source_paragraph": 122,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-027",
+      "number": 27,
+      "title": "Units",
+      "approved_rule": "Present Units and Conversions as a dedicated 12 pt single-spaced list page using a stable two-column layout.",
+      "source_paragraph": 123,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-028",
+      "number": 28,
+      "title": "Table numbering",
+      "approved_rule": "Number tables by chapter (e.g., Table 3.4 means the fourth table of Chapter 3).",
+      "source_paragraph": 124,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-029",
+      "number": 29,
+      "title": "Table caption",
+      "approved_rule": "Place table caption above the table and left-align it. Use Table <chapter.number>. <caption> as the generalized visible pattern.",
+      "source_paragraph": 125,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-030",
+      "number": 30,
+      "title": "Table rules",
+      "approved_rule": "Normal technical/data tables use an open layout with no routine vertical grid lines and selective horizontal rules. Booktabs-style implementation is preferred where it reproduces the PU sample; ordinary horizontal rules remain allowed for special tables that require them.",
+      "source_paragraph": 126,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-031",
+      "number": 31,
+      "title": "Table font size",
+      "approved_rule": "Use 12 pt Times New Roman by default. Reduce only when genuinely necessary, targeting a 10 pt minimum. Below 10 pt requires an explicit documented exception; otherwise split, restructure or rotate the table.",
+      "source_paragraph": 127,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-032",
+      "number": 32,
+      "title": "Table continuation",
+      "approved_rule": "Multipage tables repeat the header and use a clear continuation mechanism; do not shrink excessively merely to keep a table on one page.",
+      "source_paragraph": 128,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-033",
+      "number": 33,
+      "title": "Table width",
+      "approved_rule": "Tables must remain within the text block. Prefer wrapping, flexible columns, landscape pages or splitting before any extreme scaling.",
+      "source_paragraph": 129,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-034",
+      "number": 34,
+      "title": "Table source",
+      "approved_rule": "When a table is reproduced/adapted from another source, place the source with the caption inside square brackets when applicable.",
+      "source_paragraph": 130,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-035",
+      "number": 35,
+      "title": "Figure numbering",
+      "approved_rule": "Number figures by chapter and cite them as Fig. <chapter.number>.",
+      "source_paragraph": 131,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-036",
+      "number": 36,
+      "title": "Figure placement",
+      "approved_rule": "Center the figure/image within the text block and preserve aspect ratio. Constrain width/height to avoid clipping.",
+      "source_paragraph": 132,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-037",
+      "number": 37,
+      "title": "Figure caption",
+      "approved_rule": "Place the figure caption below the figure and center the caption, following the user-approved PU Appendix 17 visual convention.",
+      "source_paragraph": 133,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-038",
+      "number": 38,
+      "title": "Figure source",
+      "approved_rule": "When a figure is reproduced/adapted from another source, include the source with the caption inside square brackets when applicable.",
+      "source_paragraph": 134,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-039",
+      "number": 39,
+      "title": "Figure text size",
+      "approved_rule": "Use 12 pt Times New Roman where figure text is author-controlled; target a 10 pt minimum for necessary compactness. Below 10 pt requires explicit exception and readability QA.",
+      "source_paragraph": 135,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-040",
+      "number": 40,
+      "title": "Float policy",
+      "approved_rule": "Use normal floating placement as the default; force exact placement only when necessary for meaning/layout. Floats must never create clipping or unacceptable near-empty pages.",
+      "source_paragraph": 136,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-041",
+      "number": 41,
+      "title": "Equations",
+      "approved_rule": "Typeset equations with a mathematical equation environment/editor. Number equations sequentially and cite as Eq. (n).",
+      "source_paragraph": 137,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-042",
+      "number": 42,
+      "title": "Cross references",
+      "approved_rule": "Use source-level labels/references for equations, figures, tables, chapters, sections and appendices; do not hard-code reference numbers in prose.",
+      "source_paragraph": 138,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-043",
+      "number": 43,
+      "title": "Citation style",
+      "approved_rule": "Support IEEE, Harvard and APA 7th edition. Every thesis must explicitly choose one in project configuration; there is no hidden default.",
+      "source_paragraph": 139,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-044",
+      "number": 44,
+      "title": "Reference heading",
+      "approved_rule": "Use the thesis-wide heading REFERENCES, regardless of IEEE, Harvard or APA 7th edition choice.",
+      "source_paragraph": 140,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED",
+      "evidence_note": "REFERENCES heading macros",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-045",
+      "number": 45,
+      "title": "Citation consistency",
+      "approved_rule": "Once IEEE, Harvard or APA 7th edition is selected, use it consistently throughout the entire thesis.",
+      "source_paragraph": 141,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-046",
+      "number": 46,
+      "title": "Appendix purpose",
+      "approved_rule": "Appendices are supplementary end matter used for supporting text, data sheets, graphs, code, pictures or other detailed material that should not interrupt the main body.",
+      "source_paragraph": 142,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-047",
+      "number": 47,
+      "title": "Appendix start",
+      "approved_rule": "Start each appendix on a new page; use a centered bold 14 pt Appendix <N>: <TITLE> heading as the approved deterministic implementation.",
+      "source_paragraph": 143,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-048",
+      "number": 48,
+      "title": "Appendix list",
+      "approved_rule": "Generate a List of appendices only when appendices exist; appendix entries use normal sequence and page numbers.",
+      "source_paragraph": 144,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-049",
+      "number": 49,
+      "title": "Headers/footers",
+      "approved_rule": "Do not introduce running headers. Use plain page-number footers; cover/title hide the printed number as required by the pagination rules.",
+      "source_paragraph": 145,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-050",
+      "number": 50,
+      "title": "Widow/orphan",
+      "approved_rule": "Use strong widow/orphan controls and heading-keep safeguards, but do not distort page geometry or font size to satisfy them.",
+      "source_paragraph": 146,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-051",
+      "number": 51,
+      "title": "Near-empty pages",
+      "approved_rule": "Avoid nearly-empty continuation pages when compliant source-level reflow can solve them; never solve them by unapproved font shrinking.",
+      "source_paragraph": 147,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-052",
+      "number": 52,
+      "title": "Overflow",
+      "approved_rule": "No text, table, figure or caption may enter the margins or clip. Treat any overfull box or visible clipping as a QA failure.",
+      "source_paragraph": 148,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-053",
+      "number": 53,
+      "title": "Hyperlinks",
+      "approved_rule": "Preserve internal cross-reference and citation hyperlink functionality while keeping submission-visible link styling black/non-decorative.",
+      "source_paragraph": 149,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-054",
+      "number": 54,
+      "title": "Build authority",
+      "approved_rule": "LaTeX source is the authoritative editable layout source for this generalized template. Manual PDF patching is not an authoritative workflow.",
+      "source_paragraph": 150,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-055",
+      "number": 55,
+      "title": "Compile engine",
+      "approved_rule": "Use XeLaTeX for production so exact Times New Roman can be requested and verified.",
+      "source_paragraph": 151,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED",
+      "evidence_note": "XeTeX engine guard",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-056",
+      "number": 56,
+      "title": "Compile sequence",
+      "approved_rule": "Controlled build sequence: XeLaTeX -> Biber -> XeLaTeX -> XeLaTeX, repeated further if references/lists remain unsettled.",
+      "source_paragraph": 152,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-057",
+      "number": 57,
+      "title": "Precompile gates",
+      "approved_rule": "Before release compile: validate project configuration, citation-style selection, required assets, absence of unresolved placeholders/workflow paths and compliance with the approved format rules.",
+      "source_paragraph": 153,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-058",
+      "number": 58,
+      "title": "PDF verification",
+      "approved_rule": "After compile: validate A4 page size, margins, embedded font identity, page numbering, abstract/keywords, generated lists, unresolved references, and PDF integrity.",
+      "source_paragraph": 154,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-059",
+      "number": 59,
+      "title": "Render QA",
+      "approved_rule": "A successful compiler exit is insufficient. Render the complete final PDF and visually inspect every page for release; during iterative editing inspect all changed pages plus regression pages.",
+      "source_paragraph": 155,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-060",
+      "number": 60,
+      "title": "Regression QA",
+      "approved_rule": "For formatting-only changes, compare renders against the previous approved milestone and verify that only intended visual regions/pages changed.",
+      "source_paragraph": 156,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-061",
+      "number": 61,
+      "title": "Traceability",
+      "approved_rule": "Every approved formatting release preserves source, rules, build instructions, QA checklist, source reconciliation and changelog.",
+      "source_paragraph": 157,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-062",
+      "number": 62,
+      "title": "Content isolation",
+      "approved_rule": "The generalized template/control contains placeholders only and must never import names, titles, research data, results, figures, bibliography entries, conclusions or other project-specific thesis content.",
+      "source_paragraph": 158,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-063",
+      "number": 63,
+      "title": "Academic-facing output",
+      "approved_rule": "Student-facing defense/submission PDFs must contain academic thesis language only and must not expose internal workflow, AI, data-management, source-lock, checkpoint or QA-process narration.",
+      "source_paragraph": 182,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-064",
+      "number": 64,
+      "title": "Internal-control separation",
+      "approved_rule": "Source provenance, lineage, workflow state, unresolved-decision tracking and QA warnings remain in internal control artifacts or an explicitly labeled internal-control build.",
+      "source_paragraph": 183,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-065",
+      "number": 65,
+      "title": "Canonical preliminary wording",
+      "approved_rule": "Declaration, Recommendation and Certificate use the approved PU/FST template wording. Missing administrative/signature fields remain blank or source-level TBD; explanatory replacement prose is prohibited in the student-facing thesis.",
+      "source_paragraph": 184,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-066",
+      "number": 66,
+      "title": "Midterm incompleteness",
+      "approved_rule": "Scientifically incomplete methods/results may be retained in a midterm thesis only with neutral academic wording that accurately states their current status and does not imply completion.",
+      "source_paragraph": 185,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-067",
+      "number": 67,
+      "title": "Shared evidence base",
+      "approved_rule": "Internal-control and student-facing outputs must be generated from the same governed research source/evidence base so that scientific claims/results cannot silently diverge.",
+      "source_paragraph": 186,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-068",
+      "number": 68,
+      "title": "Versioned releases",
+      "approved_rule": "New thesis integrations, formatting-policy migrations or presentation-logic changes create new checkpoints/releases; previous baselines are preserved.",
+      "source_paragraph": 187,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-069",
+      "number": 69,
+      "title": "Missing-field behavior",
+      "approved_rule": "Never fill an unverified name, registration number, signature, date, designation, scientific decision or result merely to make a page appear complete.",
+      "source_paragraph": 188,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-070",
+      "number": 70,
+      "title": "Audit visual identity",
+      "approved_rule": "The INTERNAL AUDIT PDF must carry persistent audit banner/watermark/footer treatment and an unmistakable internal filename so it cannot be confused with a thesis deliverable.",
+      "source_paragraph": 208,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-071",
+      "number": 71,
+      "title": "Audit colors",
+      "approved_rule": "Internal status colors are standardized as red blocker, amber pending, blue information and green verified; they do not appear in normal thesis prose/layout.",
+      "source_paragraph": 209,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-072",
+      "number": 72,
+      "title": "Generic acknowledgements",
+      "approved_rule": "A parameterized generic acknowledgement function uses verified project metadata and never invents missing identities.",
+      "source_paragraph": 210,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-073",
+      "number": 73,
+      "title": "Font build dependency",
+      "approved_rule": "Exact Times New Roman may come from the system or a private build-only licensed cache; proprietary font binaries are excluded from release packages.",
+      "source_paragraph": 211,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-074",
+      "number": 74,
+      "title": "Private font storage",
+      "approved_rule": "Thesis-wide private build resources may hold user-supplied licensed font files for compilation only and remain outside research/source/release packages.",
+      "source_paragraph": 212,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-075",
+      "number": 75,
+      "title": "Fallback labeling",
+      "approved_rule": "Any compatible-font fallback is preview/structural-QA only and cannot be labelled final/production/submission ready.",
+      "source_paragraph": 213,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-077",
+      "number": 77,
+      "title": "Project metadata isolation",
+      "approved_rule": "degree/program, school/faculty, department, supervisor structure, co-supervisor count, and HoD/equivalent authority are project-specific and cannot inherit values from another thesis.",
+      "source_paragraph": 225,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-078",
+      "number": 78,
+      "title": "Degree/program verification",
+      "approved_rule": "the exact award/program wording must be confirmed per thesis and used consistently across all formal preliminary pages.",
+      "source_paragraph": 226,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-079",
+      "number": 79,
+      "title": "Supervisor structure",
+      "approved_rule": "each thesis explicitly records whether co-supervisors exist and their count; only verified identities render in student-facing outputs.",
+      "source_paragraph": 227,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-080",
+      "number": 80,
+      "title": "Academic authority verification",
+      "approved_rule": "HoD, Principal, Program Coordinator or equivalent approval roles render only after project-specific verification; unresolved identities stay blank/generic a",
+      "source_paragraph": 228,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-081",
+      "number": 81,
+      "title": "APA support",
+      "approved_rule": "APA 7th edition is an approved third citation/reference selection alongside IEEE and Harvard.",
+      "source_paragraph": 252,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-082",
+      "number": 82,
+      "title": "APA implementation",
+      "approved_rule": "When APA 7th edition is selected, use a controlled `biblatex-apa` + Biber route unless a project-specific official requirement overrides it.",
+      "source_paragraph": 253,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-083",
+      "number": 83,
+      "title": "Reference-label separation",
+      "approved_rule": "The visible heading is REFERENCES for all supported styles; `.bib` is only the bibliographic source database and its filename does not determine the heading.",
+      "source_paragraph": 254,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-084",
+      "number": 84,
+      "title": "Clean source architecture",
+      "approved_rule": "Authoritative source releases contain editable source, bibliography database, assets, configuration and deterministic rebuild instructions; generated compiler intermediates are not authoritative source.",
+      "source_paragraph": 255,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-085",
+      "number": 85,
+      "title": "Build evidence architecture",
+      "approved_rule": "Preserve sufficient build evidence for long-term reproduction, including compiled reference PDF, logs, relevant generated bibliography output, tool/package versions, environment manifest, checksums and render-QA evidence.",
+      "source_paragraph": 256,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-086",
+      "number": 86,
+      "title": "Optional forensic intermediates",
+      "approved_rule": "`.aux`, `.toc`, `.lof`, `.lot`, `.out`, `.fls`, `.fdb_latexmk`, `.synctex*` and similar generated files may be archived for forensics but are optional and are excluded from the clean authoritative source by default.",
+      "source_paragraph": 257,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-087",
+      "number": 87,
+      "title": "Migration authorization checkpoint",
+      "approved_rule": "Changes to the active generalized control/template/rules must pass a documented pre-migration checkpoint and explicit user authorization before writes continue.",
+      "source_paragraph": 258,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-088",
+      "number": 88,
+      "title": "Research-stage metadata",
+      "approved_rule": "Proposal, Midterm Report, Final Thesis/Report and defense-stage wording are project-specific configuration values and cannot be inherited silently across projects.",
+      "source_paragraph": 259,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-089",
+      "number": 89,
+      "title": "Researcher-action separation",
+      "approved_rule": "Researcher instructions, evidence requests, source confirmations and unresolved workflow notes are prohibited from normal thesis prose and belong in internal/researcher-action artifacts.",
+      "source_paragraph": 283,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-090",
+      "number": 90,
+      "title": "Audit anchoring",
+      "approved_rule": "Internal issues should be anchored to an exact thesis/source location wherever possible.",
+      "source_paragraph": 284,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-091",
+      "number": 91,
+      "title": "Annotated callouts",
+      "approved_rule": "Internal audit packages may use numbered screenshot callouts, arrows/highlights and concise action panels to show exactly where an issue matters.",
+      "source_paragraph": 285,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-092",
+      "number": 92,
+      "title": "Minimum audit issue schema",
+      "approved_rule": "Each actionable issue records Issue ID, status, affected location, finding, significance, authoritative source, missing evidence, requested action, acceptable evidence and target version.",
+      "source_paragraph": 286,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-093",
+      "number": 93,
+      "title": "Questionnaire cross-link",
+      "approved_rule": "When a questionnaire exists, Audit Issue IDs and Questionnaire Q_IDs must cross-reference each other.",
+      "source_paragraph": 287,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-094",
+      "number": 94,
+      "title": "No embedded researcher instructions",
+      "approved_rule": "Questions/instructions to the researcher must not be preserved inside student-facing thesis prose merely for tracking purposes.",
+      "source_paragraph": 288,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-095",
+      "number": 95,
+      "title": "Workflow-language sanitization",
+      "approved_rule": "Student/researcher-facing releases require a pre-release scan for internal workflow/audit language.",
+      "source_paragraph": 289,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-096",
+      "number": 96,
+      "title": "Audit routing",
+      "approved_rule": "Internal audit/researcher-action artifacts route to `06_REVIEW_QA`; clean thesis milestone outputs route to the project’s ordinary PDF/final-deliverable locations.",
+      "source_paragraph": 290,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-097",
+      "number": 97,
+      "title": "Zero new overfull boxes",
+      "approved_rule": "Every controlled build must introduce zero new overfull hbox/vbox warnings relative to the approved baseline; otherwise QA fails or the build is explicitly preview-only.",
+      "source_paragraph": 305,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-098",
+      "number": 98,
+      "title": "Production visible-overflow gate",
+      "approved_rule": "FINAL/PRODUCTION/SUBMISSION releases require zero unresolved overfull boxes with visible layout impact.",
+      "source_paragraph": 306,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-099",
+      "number": 99,
+      "title": "Preview inherited-warning accounting",
+      "approved_rule": "Inherited warnings in preview builds require baseline comparison, count/disposition, affected-page render review and explicit non-production labeling.",
+      "source_paragraph": 307,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-100",
+      "number": 100,
+      "title": "No permanent inherited waiver",
+      "approved_rule": "An inherited warning is not automatically acceptable forever; final production requires fix or evidence-backed non-visible disposition.",
+      "source_paragraph": 308,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-101",
+      "number": 101,
+      "title": "Overfull evidence schema",
+      "approved_rule": "QA records hbox/vbox totals, baseline/new/inherited counts, source location, affected page, excess where available, visible impact, action and status.",
+      "source_paragraph": 309,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-102",
+      "number": 102,
+      "title": "Source-level repair",
+      "approved_rule": "Resolve overflow in authoritative source/layout; do not violate typography/margins or patch the exported PDF to hide it.",
+      "source_paragraph": 310,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-103",
+      "number": 103,
+      "title": "Stage architecture before rewrite",
+      "approved_rule": "Resolve the governed main-body architecture for the selected document stage before rewriting or compiling a stage-converted thesis.",
+      "source_paragraph": 341,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-104",
+      "number": 104,
+      "title": "Source skeleton is not stage authority",
+      "approved_rule": "Proposal/older source file names, TOC and chapter sequence are reusable content evidence, not authority for Midterm/Final chapter structure.",
+      "source_paragraph": 342,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-105",
+      "number": 105,
+      "title": "Constraint is not inclusion",
+      "approved_rule": "Conditional project rules governing budget, timeline, expected outcomes or similar material do not mandate creation/retention of a numbered chapter unless the governed stage architecture requires it.",
+      "source_paragraph": 343,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-106",
+      "number": 106,
+      "title": "Stage-sensitive disposition",
+      "approved_rule": "Time Schedule, Work Plan, Budget, Expected Outcomes and other proposal-stage sections require explicit KEEP/RELOCATE/TRANSFORM/REMOVE disposition before stage migration.",
+      "source_paragraph": 344,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-107",
+      "number": 107,
+      "title": "Structure migration map",
+      "approved_rule": "Every Proposal/Midterm/Final/Defense stage conversion records an old-item-to-target-structure migration map before source edits.",
+      "source_paragraph": 345,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-108",
+      "number": 108,
+      "title": "Semantic TOC release gate",
+      "approved_rule": "Compiler success, citation success and visual QA are insufficient unless the TOC/main-body architecture is semantically appropriate to the selected stage.",
+      "source_paragraph": 346,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-109",
+      "number": 109,
+      "title": "Incomplete midterm within governed architecture",
+      "approved_rule": "Incomplete empirical work is reported neutrally inside the governed Midterm/thesis architecture; do not fabricate results and do not substitute Proposal chapters for missing results.",
+      "source_paragraph": 347,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-110",
+      "number": 110,
+      "title": "Structural conflict stop",
+      "approved_rule": "If current stage authority and inherited source structure remain materially ambiguous after control review, stop before rewrite and obtain the required decision.",
+      "source_paragraph": 348,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-111",
+      "number": 111,
+      "title": "Academic source-note language",
+      "approved_rule": "Student-facing figures, tables and citations use conventional academic language and must not expose internal computer/workflow provenance.",
+      "source_paragraph": 374,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-112",
+      "number": 112,
+      "title": "Thesis-original source-note suppression",
+      "approved_rule": "Figures/tables generated from the thesis's own governed data normally carry no external-style source line; their lineage remains internal.",
+      "source_paragraph": 375,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-113",
+      "number": 113,
+      "title": "External attribution",
+      "approved_rule": "Reproduced/adapted external material is attributed through the selected citation style using normal academic wording, not internal filenames or file metadata.",
+      "source_paragraph": 376,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-114",
+      "number": 114,
+      "title": "Provenance isolation",
+      "approved_rule": "File/sheet/range/code/run/checksum and source-lock metadata remain in internal lineage/audit artifacts and are prohibited from ordinary student-facing captions/prose unless scientifically indispensable.",
+      "source_paragraph": 377,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-115",
+      "number": 115,
+      "title": "Clean LOF/LOT captions",
+      "approved_rule": "Generated List of Figures/List of Tables entries contain clean descriptive titles without source/provenance strings; use optional short captions when the full caption contains an academic external citation.",
+      "source_paragraph": 378,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-116",
+      "number": 116,
+      "title": "Academic-source sanitization gate",
+      "approved_rule": "Student-facing releases require a pre-release scan for computer/provenance wording in prose, captions, LOF and LOT.",
+      "source_paragraph": 379,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-117",
+      "number": 117,
+      "title": "Caption/object adjacency",
+      "approved_rule": "A table/figure caption and number must remain with the corresponding object; detached captions/numbers across a page break are release failures.",
+      "source_paragraph": 402,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-118",
+      "number": 118,
+      "title": "Orphan-heading gate",
+      "approved_rule": "A section/subsection heading must not be stranded at a page bottom without meaningful following content; headings introducing landscape material must travel with that material or retain sufficient same-page introduction.",
+      "source_paragraph": 403,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-119",
+      "number": 119,
+      "title": "Near-empty-page gate",
+      "approved_rule": "Controlled releases must identify and repair avoidable near-empty pages caused by float, orientation or manual page-break behavior; permitted exceptions require explicit disposition.",
+      "source_paragraph": 404,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-120",
+      "number": 120,
+      "title": "Landscape transition integrity",
+      "approved_rule": "Inspect the preceding, landscape, and following pages as a unit; no heading/caption/object may be accidentally split by the orientation transition.",
+      "source_paragraph": 405,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-121",
+      "number": 121,
+      "title": "Multipage-table page-boundary integrity",
+      "approved_rule": "Multipage tables retain caption identity, repeat headers and use a clear continuation mechanism; every boundary is render-checked.",
+      "source_paragraph": 406,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-122",
+      "number": 122,
+      "title": "Appendix opening integrity",
+      "approved_rule": "Appendix opening pages contain the approved appendix heading and substantive appendix content whenever legally possible; avoid heading-only/near-empty openers.",
+      "source_paragraph": 407,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-123",
+      "number": 123,
+      "title": "Forced-placement review",
+      "approved_rule": "`H` floats, `newpage`, `clearpage`, longtable/xltabular and similar forced layout mechanisms require adjacent-page render QA and may not be trusted solely from compiler success.",
+      "source_paragraph": 408,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-124",
+      "number": 124,
+      "title": "Equation render integrity",
+      "approved_rule": "Equations must be real math objects with labels/references and must render without corrupted glyphs, linearized placeholders or clipping.",
+      "source_paragraph": 409,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-125",
+      "number": 125,
+      "title": "Process-flow presentation",
+      "approved_rule": "Genuine process sequences use a structured academic list/diagram/figure rather than raw stacked arrow glyphs or visually improvised pseudo-flowcharts.",
+      "source_paragraph": 410,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-126",
+      "number": 126,
+      "title": "Layout-integrity release gate",
+      "approved_rule": "Page-by-page QA explicitly checks caption adjacency, orphan headings, near-empty pages, landscape transitions, appendix starts, table boundaries, equations and process diagrams in addition to overflow and semantic-structure checks.",
+      "source_paragraph": 411,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-127",
+      "number": 127,
+      "title": "Canonical PU logo pointer",
+      "approved_rule": "Use the thesis-wide canonical logo asset at Drive ID `1bk9iL4ryl7rS3yi3IDHi6vn_3jUYCTyS`; do not search researcher-specific folders as the primary retrieval path.",
+      "source_paragraph": 429,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-128",
+      "number": 128,
+      "title": "Canonical logo integrity",
+      "approved_rule": "The expected canonical logo SHA-256 is `584d4867624405a138aaaafe13791c1291e456a1ceac5b1b5298a63e548d9587`; if a retrieved asset differs, stop and verify before substitution.",
+      "source_paragraph": 430,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-129",
+      "number": 129,
+      "title": "Tinos preview fallback",
+      "approved_rule": "If exact Times New Roman is unavailable, compile using Tinos for PREVIEW/STRUCTURAL-QA only; label the output non-production rather than blocking compilation.",
+      "source_paragraph": 431,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-130",
+      "number": 130,
+      "title": "Production font gate unchanged",
+      "approved_rule": "FINAL/PRODUCTION/SUBMISSION still requires exact Times New Roman and embedded-font verification.",
+      "source_paragraph": 432,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-131",
+      "number": 131,
+      "title": "Dedication vertical placement",
+      "approved_rule": "A brief Dedication is horizontally centered with restrained, balanced vertical placement inside the text block. Arbitrary large vertical spacers or blank-line stacks that push the text into the lower page and create an avoidable empty upper region are prohibited unless an admitted official source explicitly requires that layout.",
+      "source_paragraph": 447,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-132",
+      "number": 132,
+      "title": "Front-matter whitespace integrity",
+      "approved_rule": "Optional front-matter pages must be render-checked for excessive unlabelled whitespace, stranded short text and avoidable near-empty-page appearance; unexplained imbalance is a release defect and must be corrected at source level.",
+      "source_paragraph": 448,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-133",
+      "number": 133,
+      "title": "Fresh active-control resolution",
+      "approved_rule": "Every LaTeX build/rebuild/edit/QA/release starts by freshly resolving and reading the ACTIVE LaTeX format-control pointer from Drive; cached earlier controls or prior-chat memory are prohibited as current authority.",
+      "source_paragraph": 460,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-134",
+      "number": 134,
+      "title": "Runtime canonical-logo retrieval",
+      "approved_rule": "When PU branding is required, retrieve canonical logo Drive ID `1bk9iL4ryl7rS3yi3IDHi6vn_3jUYCTyS` into the current runtime and verify SHA-256 `584d4867624405a138aaaafe13791c1291e456a1ceac5b1b5298a63e548d9587`; cross-researcher lookup, web/AI substitution, and unverified stale caches are not valid primary retrieval routes.",
+      "source_paragraph": 461,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-135",
+      "number": 135,
+      "title": "Verified asset consumption/production gate",
+      "approved_rule": "The verified canonical logo must be present in the controlled source/build asset set and actually consumed by the LaTeX build on required pages. Failure to retrieve/verify it blocks FINAL/PRODUCTION/SUBMISSION status, though non-logo PREVIEW/NON-PRODUCTION structural work may continue where appropriate.",
+      "source_paragraph": 462,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-136",
+      "number": 136,
+      "title": "Logo render and Drive read-back verification",
+      "approved_rule": "Release QA records the canonical logo Drive ID/hash, verifies by rendered-page inspection that the logo is correctly embedded/visible wherever required, and completes governed Drive upload/register/index plus read-back of stable artifact ID, expected filename/type, and canonical parent before completion is claimed.",
+      "source_paragraph": 463,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-137",
+      "number": 137,
+      "title": "Source-first correction",
+      "approved_rule": "All thesis corrections and formatting mutations occur in editable LaTeX or the nearest deterministic machine-readable source, never in the compiled PDF.",
+      "source_paragraph": 487,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-138",
+      "number": 138,
+      "title": "Rendered PDF immutability",
+      "approved_rule": "A compiled thesis PDF is a derived read-only artifact. Manual PDF patching, text injection, page surgery, cropping-as-correction and post-compile content substitution are prohibited.",
+      "source_paragraph": 488,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-139",
+      "number": 139,
+      "title": "Five-stage A9 LaTeX pipeline",
+      "approved_rule": "Audit/authority lock -> source-level construction/edit -> compile/reflow stabilization -> whole-document QA -> release/promotion.",
+      "source_paragraph": 489,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-140",
+      "number": 140,
+      "title": "Frozen-source compile entry gate",
+      "approved_rule": "Compilation begins from a controlled/frozen source candidate whose text/data/figure/font authorities are already resolved; unresolved authority returns the task to the audit/source stage rather than being guessed during compilation.",
+      "source_paragraph": 490,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-141",
+      "number": 141,
+      "title": "Deterministic build loop",
+      "approved_rule": "Production uses XeLaTeX -> Biber -> XeLaTeX -> XeLaTeX stabilization, then exact source-level repair of deterministic defects and recompilation as needed.",
+      "source_paragraph": 491,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-142",
+      "number": 142,
+      "title": "Compile-stage scope containment",
+      "approved_rule": "Compile/reflow work may fix deterministic source/layout/build defects only and must not introduce new scientific analysis, values, prose or figure redraws.",
+      "source_paragraph": 492,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-143",
+      "number": 143,
+      "title": "Immutable authority-asset consumption",
+      "approved_rule": "Locked PDF/vector/raster authority assets may be called unchanged from LaTeX; do not redraw or mutate them unless a separate authorization changes the authority.",
+      "source_paragraph": 493,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-144",
+      "number": 144,
+      "title": "Source recovery before output surgery",
+      "approved_rule": "When native source is incomplete, recover/reconstruct a controlled source branch first. Output-level PDF surgery is never an acceptable substitute.",
+      "source_paragraph": 494,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    },
+    {
+      "id": "PU-FMT-145",
+      "number": 145,
+      "title": "Explicit QA deferral accounting",
+      "approved_rule": "Whole-document QA is the default pre-promotion gate; any user-authorized deferral of human visual QA remains visibly OPEN/DEFERRED and cannot be represented as completed.",
+      "source_paragraph": 495,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY",
+      "evidence_note": "Source rule audited; real implementation and/or evidence still requires work",
+      "actual_compiled_pdf_verified": false
+    }
+  ]
+}

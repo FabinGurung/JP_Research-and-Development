@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "id": "RD-PU-MSC-FORMAT-BRIDGE-001",
-  "control_version": "1.2.0",
+  "control_version": "2.1.0",
   "source_drive_id": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
   "source_version": "v1.13",
   "source_revision": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
@@ -10,722 +10,1154 @@
     {
       "id": "PU-FMT-001",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Authority",
+      "drive_paragraph": 97,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-002",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Paper",
+      "drive_paragraph": 98,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED"
     },
     {
       "id": "PU-FMT-003",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Margins",
+      "drive_paragraph": 99,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED"
     },
     {
       "id": "PU-FMT-004",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Body font",
+      "drive_paragraph": 100,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-005",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Font fallback",
+      "drive_paragraph": 101,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-006",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Line spacing",
+      "drive_paragraph": 102,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED"
     },
     {
       "id": "PU-FMT-007",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Hyphenation",
+      "drive_paragraph": 103,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED"
     },
     {
       "id": "PU-FMT-008",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Paragraphs",
+      "drive_paragraph": 104,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-009",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Abstract indent",
+      "drive_paragraph": 105,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-010",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Chapter opening",
+      "drive_paragraph": 106,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-011",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Sections",
+      "drive_paragraph": 107,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-012",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Front matter order",
+      "drive_paragraph": 108,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-013",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Mandatory lists",
+      "drive_paragraph": 109,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-014",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Preliminary pagination",
+      "drive_paragraph": 110,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-015",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Main pagination",
+      "drive_paragraph": 111,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED"
     },
     {
       "id": "PU-FMT-016",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Cover typography",
+      "drive_paragraph": 112,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-017",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Title page typography",
+      "drive_paragraph": 113,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-018",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Narrative front headings",
+      "drive_paragraph": 114,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-019",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "List front headings",
+      "drive_paragraph": 115,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-020",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Dedication",
+      "drive_paragraph": 116,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-021",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Abstract content format",
+      "drive_paragraph": 117,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-022",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Abstract length",
+      "drive_paragraph": 118,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-023",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Keywords",
+      "drive_paragraph": 119,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-024",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "TOC/LOT/LOF",
+      "drive_paragraph": 120,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-025",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "List pagination",
+      "drive_paragraph": 121,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-026",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Abbreviations",
+      "drive_paragraph": 122,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-027",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Units",
+      "drive_paragraph": 123,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-028",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Table numbering",
+      "drive_paragraph": 124,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-029",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Table caption",
+      "drive_paragraph": 125,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-030",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Table rules",
+      "drive_paragraph": 126,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-031",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Table font size",
+      "drive_paragraph": 127,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-032",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Table continuation",
+      "drive_paragraph": 128,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-033",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Table width",
+      "drive_paragraph": 129,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-034",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Table source",
+      "drive_paragraph": 130,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-035",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Figure numbering",
+      "drive_paragraph": 131,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-036",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Figure placement",
+      "drive_paragraph": 132,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-037",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Figure caption",
+      "drive_paragraph": 133,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-038",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Figure source",
+      "drive_paragraph": 134,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-039",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Figure text size",
+      "drive_paragraph": 135,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-040",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Float policy",
+      "drive_paragraph": 136,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-041",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Equations",
+      "drive_paragraph": 137,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-042",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Cross references",
+      "drive_paragraph": 138,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-043",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Citation style",
+      "drive_paragraph": 139,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-044",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Reference heading",
+      "drive_paragraph": 140,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED"
     },
     {
       "id": "PU-FMT-045",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Citation consistency",
+      "drive_paragraph": 141,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-046",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Appendix purpose",
+      "drive_paragraph": 142,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-047",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Appendix start",
+      "drive_paragraph": 143,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-048",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Appendix list",
+      "drive_paragraph": 144,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-049",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Headers/footers",
+      "drive_paragraph": 145,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-050",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Widow/orphan",
+      "drive_paragraph": 146,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-051",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Near-empty pages",
+      "drive_paragraph": 147,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-052",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Overflow",
+      "drive_paragraph": 148,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-053",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Hyperlinks",
+      "drive_paragraph": 149,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-054",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Build authority",
+      "drive_paragraph": 150,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-055",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Compile engine",
+      "drive_paragraph": 151,
+      "parity_status": "DECLARED_SOURCE_UNRENDERED"
     },
     {
       "id": "PU-FMT-056",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Compile sequence",
+      "drive_paragraph": 152,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-057",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Precompile gates",
+      "drive_paragraph": 153,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-058",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "PDF verification",
+      "drive_paragraph": 154,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-059",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Render QA",
+      "drive_paragraph": 155,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-060",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Regression QA",
+      "drive_paragraph": 156,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-061",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Traceability",
+      "drive_paragraph": 157,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-062",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Content isolation",
+      "drive_paragraph": 158,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-063",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Academic-facing output",
+      "drive_paragraph": 182,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-064",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Internal-control separation",
+      "drive_paragraph": 183,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-065",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Canonical preliminary wording",
+      "drive_paragraph": 184,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-066",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Midterm incompleteness",
+      "drive_paragraph": 185,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-067",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Shared evidence base",
+      "drive_paragraph": 186,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-068",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Versioned releases",
+      "drive_paragraph": 187,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-069",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Missing-field behavior",
+      "drive_paragraph": 188,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-070",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "internal audit PDF must be unmistakably different from student thesis"
+      "summary": "internal audit PDF must be unmistakably different from student thesis",
+      "rule_title": "Audit visual identity",
+      "drive_paragraph": 208,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-071",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Audit colors",
+      "drive_paragraph": 209,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-072",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Generic acknowledgements",
+      "drive_paragraph": 210,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-073",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "exact font must be licensed private build dependency"
+      "summary": "exact font must be licensed private build dependency",
+      "rule_title": "Font build dependency",
+      "drive_paragraph": 211,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-074",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Private font storage",
+      "drive_paragraph": 212,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-075",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "fallback fonts are preview-only"
+      "summary": "fallback fonts are preview-only",
+      "rule_title": "Fallback labeling",
+      "drive_paragraph": 213,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-077",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "do not copy project-specific personnel and program metadata"
+      "summary": "do not copy project-specific personnel and program metadata",
+      "rule_title": "Project metadata isolation",
+      "drive_paragraph": 225,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-078",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Degree/program verification",
+      "drive_paragraph": 226,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-079",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Supervisor structure",
+      "drive_paragraph": 227,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-080",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Academic authority verification",
+      "drive_paragraph": 228,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-081",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "APA7 is a selectable style, not a universal default"
+      "summary": "APA7 is a selectable style, not a universal default",
+      "rule_title": "APA support",
+      "drive_paragraph": 252,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-082",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "APA implementation",
+      "drive_paragraph": 253,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-083",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Reference-label separation",
+      "drive_paragraph": 254,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-084",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "clean authoritative source and build evidence are distinct"
+      "summary": "clean authoritative source and build evidence are distinct",
+      "rule_title": "Clean source architecture",
+      "drive_paragraph": 255,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-085",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Build evidence architecture",
+      "drive_paragraph": 256,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-086",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Optional forensic intermediates",
+      "drive_paragraph": 257,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-087",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "document PRE migration checkpoint and user authorization before control edits"
+      "summary": "document PRE migration checkpoint and user authorization before control edits",
+      "rule_title": "Migration authorization checkpoint",
+      "drive_paragraph": 258,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-088",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Research-stage metadata",
+      "drive_paragraph": 259,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-089",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "internal researcher instructions must not enter normal thesis prose"
+      "summary": "internal researcher instructions must not enter normal thesis prose",
+      "rule_title": "Researcher-action separation",
+      "drive_paragraph": 283,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-090",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Audit anchoring",
+      "drive_paragraph": 284,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-091",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Annotated callouts",
+      "drive_paragraph": 285,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-092",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Minimum audit issue schema",
+      "drive_paragraph": 286,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-093",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Questionnaire cross-link",
+      "drive_paragraph": 287,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-094",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "No embedded researcher instructions",
+      "drive_paragraph": 288,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-095",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Workflow-language sanitization",
+      "drive_paragraph": 289,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-096",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "internal audit/researcher-action artifacts belong to separate QA lane"
+      "summary": "internal audit/researcher-action artifacts belong to separate QA lane",
+      "rule_title": "Audit routing",
+      "drive_paragraph": 290,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-097",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "zero newly introduced overfull box warnings"
+      "summary": "zero newly introduced overfull box warnings",
+      "rule_title": "Zero new overfull boxes",
+      "drive_paragraph": 305,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-098",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "production blocks visible uncorrected overflow"
+      "summary": "production blocks visible uncorrected overflow",
+      "rule_title": "Production visible-overflow gate",
+      "drive_paragraph": 306,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-099",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Preview inherited-warning accounting",
+      "drive_paragraph": 307,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-100",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "inherited warning count is not permanent final waiver"
+      "summary": "inherited warning count is not permanent final waiver",
+      "rule_title": "No permanent inherited waiver",
+      "drive_paragraph": 308,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-101",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Overfull evidence schema",
+      "drive_paragraph": 309,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-102",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Source-level repair",
+      "drive_paragraph": 310,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-103",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Stage architecture before rewrite",
+      "drive_paragraph": 341,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-104",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Source skeleton is not stage authority",
+      "drive_paragraph": 342,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-105",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Constraint is not inclusion",
+      "drive_paragraph": 343,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-106",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Stage-sensitive disposition",
+      "drive_paragraph": 344,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-107",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Structure migration map",
+      "drive_paragraph": 345,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-108",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Semantic TOC release gate",
+      "drive_paragraph": 346,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-109",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Incomplete midterm within governed architecture",
+      "drive_paragraph": 347,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-110",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Structural conflict stop",
+      "drive_paragraph": 348,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-111",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Academic source-note language",
+      "drive_paragraph": 374,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-112",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Thesis-original source-note suppression",
+      "drive_paragraph": 375,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-113",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "External attribution",
+      "drive_paragraph": 376,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-114",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Provenance isolation",
+      "drive_paragraph": 377,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-115",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Clean LOF/LOT captions",
+      "drive_paragraph": 378,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-116",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Academic-source sanitization gate",
+      "drive_paragraph": 379,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-117",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Caption/object adjacency",
+      "drive_paragraph": 402,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-118",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Orphan-heading gate",
+      "drive_paragraph": 403,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-119",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Near-empty-page gate",
+      "drive_paragraph": 404,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-120",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Landscape transition integrity",
+      "drive_paragraph": 405,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-121",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Multipage-table page-boundary integrity",
+      "drive_paragraph": 406,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-122",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Appendix opening integrity",
+      "drive_paragraph": 407,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-123",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Forced-placement review",
+      "drive_paragraph": 408,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-124",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Equation render integrity",
+      "drive_paragraph": 409,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-125",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Process-flow presentation",
+      "drive_paragraph": 410,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-126",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Layout-integrity release gate",
+      "drive_paragraph": 411,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-127",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Canonical PU logo pointer",
+      "drive_paragraph": 429,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-128",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Canonical logo integrity",
+      "drive_paragraph": 430,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-129",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Tinos preview fallback",
+      "drive_paragraph": 431,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-130",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Production font gate unchanged",
+      "drive_paragraph": 432,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-131",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Dedication vertical placement",
+      "drive_paragraph": 447,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-132",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Front-matter whitespace integrity",
+      "drive_paragraph": 448,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-133",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Fresh active-control resolution",
+      "drive_paragraph": 460,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-134",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Runtime canonical-logo retrieval",
+      "drive_paragraph": 461,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-135",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "canonical verified logo must be consumed when applicable"
+      "summary": "canonical verified logo must be consumed when applicable",
+      "rule_title": "Verified asset consumption/production gate",
+      "drive_paragraph": 462,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-136",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "verify logo render plus Drive readback before final claims"
+      "summary": "verify logo render plus Drive readback before final claims",
+      "rule_title": "Logo render and Drive read-back verification",
+      "drive_paragraph": 463,
+      "parity_status": "NOT_IMPLEMENTED_OR_UNVERIFIED"
     },
     {
       "id": "PU-FMT-137",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Source-first correction",
+      "drive_paragraph": 487,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-138",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Rendered PDF immutability",
+      "drive_paragraph": 488,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-139",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Five-stage A9 LaTeX pipeline",
+      "drive_paragraph": 489,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-140",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "source-first staged authority-to-compile pipeline"
+      "summary": "source-first staged authority-to-compile pipeline",
+      "rule_title": "Frozen-source compile entry gate",
+      "drive_paragraph": 490,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-141",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Deterministic build loop",
+      "drive_paragraph": 491,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-142",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Compile-stage scope containment",
+      "drive_paragraph": 492,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-143",
       "bridge_status": "INTERPRETED_REFERENCE_NOT_AUTOMATED",
-      "summary": "locked authority assets remain unmodified"
+      "summary": "locked authority assets remain unmodified",
+      "rule_title": "Immutable authority-asset consumption",
+      "drive_paragraph": 493,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-144",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Source recovery before output surgery",
+      "drive_paragraph": 494,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     },
     {
       "id": "PU-FMT-145",
       "bridge_status": "ID_OBSERVED_REQUIRE_EXACT_PARITY_REVIEW",
-      "summary": null
+      "summary": null,
+      "rule_title": "Explicit QA deferral accounting",
+      "drive_paragraph": 495,
+      "parity_status": "PARTIAL_OR_POLICY_ONLY"
     }
   ],
   "obligations": [
@@ -841,5 +1273,11 @@
   ],
   "parity_status": "PARTIAL_BRIDGE_NOT_CERTIFIED_FULL_145_RULE_COVERAGE",
   "rule_catalog_meaning": "An indexed rule ID is not equivalent to machine enforcement or validation of the full original rule.",
-  "source_of_truth_url": "https://docs.google.com/document/d/1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys/edit"
+  "source_of_truth_url": "https://docs.google.com/document/d/1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys/edit",
+  "full_source_inventory_parity": true,
+  "full_render_or_production_parity": false,
+  "parity_audit": "controls/latex/pu-format-parity-audit.json",
+  "source_gaps": [
+    "PU-FMT-076"
+  ]
 }

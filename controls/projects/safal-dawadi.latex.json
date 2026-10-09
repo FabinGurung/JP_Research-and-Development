@@ -18,7 +18,7 @@
   },
   "manuscript": {
     "version": "v1.9",
-    "classification": "42_PAGE_QUALITATIVE_REVIEW_CANDIDATE_NOT_SUBMISSION_APPROVED",
+    "classification": "V1.9_42_PAGE_USER_SELECTED_LATEST_LOCAL_SEQ15__BYTE_MIRROR_PENDING",
     "scope": [
       "W01 waterproofing",
       "W02 building-associated PCC",
@@ -39,7 +39,7 @@
       "drive_mirror": "UNVERIFIED",
       "source_files": "NOT_LOCATED_THIS_RUN"
     },
-    "conflict": "HOLD_NO_GIT_SOURCE_BASELINE_CHOSEN"
+    "conflict": "PREFERENCE_Q1B_RESOLVED__SAME_ID_BYTES_NOT_VERIFIED"
   },
   "branches": {
     "discussion": "researcher/safal-dawadi/discussion",
@@ -70,7 +70,7 @@
     "compile_mode": "AUTHORIZED_MANUAL_ONLY_AFTER_GATES"
   },
   "gates": {
-    "source_reconciliation": "HOLD",
+    "source_reconciliation": "USER_TARGET_SELECTED__BYTES_PENDING",
     "public_git_clearance": "HOLD",
     "source_admission": "HOLD",
     "exact_font_ci": "NOT_CONFIGURED",
