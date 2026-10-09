@@ -9,10 +9,10 @@
   "researcher_count": 11,
   "lane_count": 33,
   "researcher_content_status": "VERIFIED_RESEARCHER_RECORDS_11__UNADMITTED_ARTIFACTS_RETAINED_AS_DEBTS",
-  "main_content_rule": "CODE_MACHINE_READABLE_CONTROLS_AND_LINKS_ONLY",
+  "main_content_rule": "CODE_AND_ADMITTED_MANUSCRIPT_LATEX_BIB_PLUS_MACHINE_CONTROLS",
   "portal_deployment": "GITHUB_PAGES_MAIN_ONLY",
   "validation": "PENDING_CURRENT_HEAD_AFTER_UNIFIED_RESEARCH_SITE_RESTORATION",
-  "branch_count": 83,
+  "branch_count": 106,
   "researcher_lane_status": "33_ACTIVE_EMPTY_CORE_LANES__SIX_NEW_SAFAL_DAWADI_AND_SUNIL_RANA",
   "website_module_count": 2,
   "website_module_status": "FABIN_AEC_AND_HYDROPOWER_PHD_OPTIONAL_LANES_REGISTERED__HYDROPOWER_PHD_CURRENT_DRIVE_RESEARCH_POINTERS_VERIFIED",
@@ -206,5 +206,10 @@
     "source_version_created": false,
     "compile_script": "scripts/latex/safal_build.py",
     "control_branch_readback": "c02af0a18bc066eea79fd892e444eeaebe7ac1e2"
-  }
+  },
+  "latex_single_tower": "controls/latex/tower.json",
+  "latex_control_version": "2.1.0",
+  "latex_full_source_rule_audit": "144_OF_144_RULE_IDS_AUDITED__PRODUCTION_QA_HOLD",
+  "safal_current_target": "LATEST_V1.9_LOCAL_SEQ15_Q1_B__SOURCE_MIRROR_PENDING",
+  "git_release_policy": "COMMIT_PRE_POST__ANNOTATED_TAG_MAJOR_ONLY_NO_NEW_BRANCH"
 }

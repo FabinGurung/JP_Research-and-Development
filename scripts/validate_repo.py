@@ -154,7 +154,7 @@ if args.site:
         if not (site/rel).is_file(): errors.append(f"site missing {rel}")
 # Shared LaTeX v1.2.0 public-safe governance package
 required_latex=[
-    "controls/latex/README.md","controls/latex/format-authorities.json",
+    "controls/latex/README.md","controls/latex/pu-format-parity-audit.json","controls/latex/format-authorities.json",
     "controls/latex/pu-msc-format.rules.json","controls/latex/build-contract.json",
     "controls/latex/qa-contract.json","controls/latex/release-contract.json",
     "controls/latex/migration-status.json","schemas/latex-project.schema.json",
@@ -166,7 +166,7 @@ required_latex=[
 for p in required_latex:
     if not (ROOT/p).is_file(): errors.append(f"required LaTeX bridge missing: {p}")
     elif p.endswith(".json"): load(p)
-if latex_policy.get("control_id")!="RD-CONTROL-LATEX-001" or latex_policy.get("control_version")!="2.0.0":
+if latex_policy.get("control_id")!="RD-CONTROL-LATEX-001" or latex_policy.get("control_version")!="2.1.0":
     errors.append("LaTeX control identity/version failed")
 if latex_policy.get("shared_package")!="controls/latex/":
     errors.append("shared LaTeX inheritance path failed")
@@ -183,6 +183,14 @@ if rul.get("discovered_unique_rule_ids")!=len({x.get("id") for x in rul.get("rul
     errors.append("PU rule index count/uniqueness wrong")
 if not {"PU-FMT-087","PU-FMT-097","PU-FMT-143"} <= {x.get("id") for x in rul.get("rule_index",[])}:
     errors.append("key PU migration/overfull/immutable rule IDs missing")
+parity=load("controls/latex/pu-format-parity-audit.json")
+audit_ids=[x.get("id") for x in parity.get("per_rule",[])]
+if len(audit_ids)!=144 or len(set(audit_ids))!=144 or set(audit_ids)!={x.get("id") for x in rul.get("rule_index",[])}:
+    errors.append("PU 144-source-rule parity audit incomplete or mismatched")
+if parity.get("absent_from_source")!=["PU-FMT-076"] or parity.get("counts",{}).get("full_production_verified")!=0:
+    errors.append("PU missing source number/production QA gate misrepresented")
+if any(x.get("actual_compiled_pdf_verified") is not False or not x.get("approved_rule") or not x.get("title") for x in parity.get("per_rule",[])):
+    errors.append("PU rule source mapping or QA hold metadata incomplete")
 if mig.get("cutover")!="NOT_APPROVED" or mig.get("format_rule_ids_full_automated_enforcement")!=0:
     errors.append("unearned PU parity promotion")
 if scoped.get("researcher_id")!="RSH-010" or scoped.get("shared_control")!="controls/latex/tower.json":
@@ -195,8 +203,8 @@ if scoped.get("document_stage") not in ("PROPOSAL","MIDTERM","FINAL_THESIS","DEF
     errors.append("invalid or inherited document stage")
 if baseline.get("selected_baseline") is not None or baseline.get("source_git_admission")!="HOLD":
     errors.append("Safal source conflict accidentally promoted")
-if scoped.get("document_stage")!="MIDTERM" or scoped.get("current_manifest_candidate",{}).get("version")!="v1.2":
-    errors.append("Safal current October 2026 Midterm candidate not represented")
+if scoped.get("document_stage")!="FINAL_THESIS" or scoped.get("selected_manuscript_target")!="V1.9_LOCAL_SEQ15_Q1_B_BYTE_MIRROR_PENDING" or scoped.get("current_manifest_candidate",{}).get("version")!="v1.2":
+    errors.append("Safal selected v1.9 latest target or historical v1.2 Midterm pointer lost")
 if baseline.get("latest_manifest_designated_candidate",{}).get("classification")!="CURRENT_CONTROLLED_PREVIEW_NON_PRODUCTION":
     errors.append("Safal October 2026 nonproduction preview state lost")
 if baseline.get("a9_main_registry_observed",{}).get("safal_row_consumed_cursor")!=2:
@@ -206,7 +214,7 @@ if not any(x.get("researcher_id")=="RSH-004" and x.get("slug")=="safal-thapa" fo
 if args.site:
     for route in ("controls/latex/index.html","researchers/safal-dawadi/latex/index.html"):
         if not (ROOT/args.site/route).is_file(): errors.append(f"site missing LaTeX route {route}")
-    for term in ("Source files","Original authorities","Format selection"):
+    for term in ("Source files","Original authorities","Format selection","Full PU formatting source-parity audit","Approved Q1B / Q2A / Q3A"):
         try:
             if term not in (ROOT/args.site/"controls/latex/index.html").read_text(encoding="utf-8"):
                 errors.append(f"latex portal missing section {term}")

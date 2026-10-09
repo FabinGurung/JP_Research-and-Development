@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.0.0",
+  "schema_version": "2.1.0",
   "control_id": "RD-CONTROL-LATEX-001",
   "status": "ALIAS_ROUTING_ONLY_NOT_SECOND_TOWER",
   "branch_pattern": "researcher/<slug>/latex",
@@ -22,7 +22,7 @@
     "duplicated Drive artifacts"
   ],
   "output_pointer": "lane/output.json",
-  "control_version": "2.0.0",
+  "control_version": "2.1.0",
   "shared_package": "controls/latex/",
   "rule_registry": "controls/latex/pu-msc-format.rules.json",
   "format_authorities": "controls/latex/format-authorities.json",
@@ -36,5 +36,6 @@
   "shared_control_release_sha": "3489fff9b15444f41fd135fedaec95600065ada2",
   "compatibility_note": "Only route old readers to controls/latex/tower.json; operational source is the canonical tower. No own rules or variants.",
   "project_config_router": "registry/latex-inheritance.json",
-  "source_code": "controls/latex/tower.json"
+  "source_code": "controls/latex/tower.json",
+  "versioning_policy": "COMMIT_PRE_POST__ANNOTATED_TAG_MAJOR_ONLY__NO_ROUTINE_NEW_BRANCHES"
 }

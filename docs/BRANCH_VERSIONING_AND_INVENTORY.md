@@ -40,3 +40,9 @@ We are not migrating old A9 private research corpora, altering Drive folder cont
 
 - `snapshot/20261009/rnd-main/v002-post-rose-dawn-and-branches` → `3a224e956ec9609f4e107b1883723b3a12f7b476`.
 - `main` advances when the catalog is committed. Its inventory entry records a **point-in-time parent SHA**, not a claim that the current HEAD is frozen. To revert later, choose the actual immutable commit or the v001/v002 snapshot ref and follow a non-destructive rollback procedure.
+
+## 2026-10-09 Q2 A policy supersedes routine snapshot creation
+
+Governed Git editing: first read `main` HEAD SHA (PRE), make a **single non-force commit** (POST), and verify the remote SHA and build/deployment workflows. Do **not** manufacture new PRE/POST snapshot branches or duplicate researcher refs. At accepted major release milestones, create an **annotated Git tag**, verify its remote object and register it. If the connected GitHub tool cannot create tags, report `TAG_WRITE_UNAVAILABLE` and do not substitute another branch. Preserve all **106 previously registered branches** and **49 archived refs** until a separate controlled audit authorizes further archival.
+
+Manual major-tag procedure after release QA: `git tag -a latex/v2.1.0 <APPROVED_COMMIT_SHA> -m "Approved LaTeX template v2.1.0"`; `git push origin refs/tags/latex/v2.1.0`. This is NOT a statement that this tag exists.

@@ -4,10 +4,10 @@ Code-first research control portal, now hosting unified Fabin AEC and Hydropower
 
 ## Current field
 
-This repository stores **code, machine-readable controls, version history, and Google Drive/GitHub pointers**. It does not store working research documents or generated binaries on `main`.
+This repository stores **code, machine-readable controls, version history, and Google Drive/GitHub pointers**. It permits verified research manuscript source `.tex`, `.bib` and related code on `main`; compiled PDFs/PPTX and binary research evidence remain versioned in Drive.
 
 - **Google Drive:** actual working documents, discussion Google Docs, compiled thesis PDFs, generated presentation PPTX/PDF, datasets/evidence when appropriate.
-- **GitHub main:** public portal source, researcher index, shared Discussion/LaTeX/Presentation controls, schemas, scripts, and links.
+- **GitHub main:** manuscript source code, reusable LaTeX template, research registry, controls, schemas, scripts and project links.
 - **Universal researcher lanes:** `researcher/<slug>/discussion`, `researcher/<slug>/latex`, `researcher/<slug>/presentation`.
 - **Optional website modules:** `researcher/<slug>/website/<module-slug>` only when a real web module is verified or explicitly started. Currently verified: Fabin AEC and Fabin Hydropower/PhD.
 - **GitHub Pages:** human-facing researcher/control workspace.
@@ -28,7 +28,7 @@ https://fabingurung.github.io/JP_Research-and-Development/
 
 ## Minimal versioning rule
 
-For Git-managed state, the previous commit SHA is PRE and the new commit SHA is POST. Git history is the archive. Archived branch refs are also physically namespaced under `archive/`.
+For Git-managed state, the previous commit SHA is PRE and the new commit SHA is POST. Git history is the archive. **Q2 A:** no routine snapshot branches; use annotated tags for major accepted releases once supported, preserving existing historical refs. Archived branch refs are also physically namespaced under `archive/`.
 
 Governed research debt is tracked in `registry/debts.json` and projected to the live `/debts/` page. Researcher-scoped debt may also appear under that researcher’s workspace. Do not manufacture duplicate Drive PRE/POST copies or acknowledgement-only commits. Provider readback remains required for external Drive links and production deployment.
 
@@ -77,3 +77,9 @@ Do not infer the 33 named researcher branches contain their final thesis sources
 ## Safal Dawadi scoped LaTeX control
 
 The [public control page](https://fabingurung.github.io/JP_Research-and-Development/controls/latex/safal-dawadi/) and [machine project config](controls/projects/safal-dawadi.latex.json) are governed by [shared LaTeX control](controls/latex.control.json). A7 owns global routing; original private Drive PU/A9 records own format/science. Three existing lanes are legacy template refs; source and PDF compilation remain held pending byte reconciliation and public privacy clearance. See [ownership runbook](docs/LATEX_CONTROL_OWNERSHIP.md).
+
+## Q1B/Q2A/Q3A approval — 2026-10-09
+
+- [144/144 live PU formatting rule IDs audited (production QA incomplete)](controls/latex/pu-format-parity-audit.json).
+- [Safal v1.9 Local seq15 target](researchers/safal-dawadi/latex/source-baseline.json), with same-ID final source/PDF mirror/hash still pending, so Git source import has not yet occurred.
+- [Git commits PRE/POST + annotated-tag-only major releases](docs/LATEX_Q1B_Q2A_Q3A_GOVERNED_CHANGE_20261009.md). Existing 106 refs remain stable. Admitted manuscript `.tex` and `.bib` may reside in this R&D repository.

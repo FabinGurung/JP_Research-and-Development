@@ -542,6 +542,30 @@
         }
       ],
       "close_when": "A separate A9-governed PRE/edit-in-place/provider-readback/POST updates exact title in Master Directory without overwriting lineage."
+    },
+    {
+      "debt_id": "DEBT-RND-LATEX-SAFAL-PARITY-001",
+      "scope": "REPOSITORY",
+      "category": "LATEX_FORMAT_PARITY",
+      "status": "HOLD",
+      "severity": "HIGH",
+      "title": "Complete production PDF parity and Safal seq15 byte mirror",
+      "description": "Live PU v1.13: 144/144 rules source audited, 0 certified full-page actual production PDF checks. Q1 B selects latest Local seq15 v1.9, whose reconciled source/PDF bytes still await same-ID provider mirror/hash readback. Q2 A annotated tag cannot be created by currently available GitHub connector; do not create more snapshot branches.",
+      "evidence": [
+        {
+          "role": "format_control",
+          "drive_id": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys"
+        },
+        {
+          "role": "safal_source_manifest",
+          "drive_id": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ"
+        },
+        {
+          "role": "safal_local_library",
+          "drive_id": "10g8-tr417XltYDbk2yItEZjrJ_2xdT7pbPlJgUI8MYo"
+        }
+      ],
+      "close_when": "Confirm actual latest seq15 bytes/hashes, import admitted LaTeX source in public Git, implement full official PU style and verify real exact-font full-document PDF QA, register major release with annotated tag using tag-capable interface."
     }
   ]
 }
