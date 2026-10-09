@@ -11,7 +11,8 @@
       "status": "TESTED_LOCAL__NOT_GLOBALLY_PROMOTED",
       "path": "researchers/safal-dawadi/latex/extensions/safal-linebreak.tex",
       "reason": "No-hyphenation PU formatting yielded 127 overfull Tinos boxes in 42-page v1.9; a scoped 3em emergency stretch produced zero overfull without chapter or bibliography content changes. Production parity remains held.",
-      "shared_template_modified": false
+      "shared_template_modified": false,
+      "researcher_slug": "safal-dawadi"
     }
   ],
   "allowed_root_pattern": "researchers/<slug>/latex/extensions/",

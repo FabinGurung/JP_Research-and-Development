@@ -64,8 +64,10 @@ if safal_policy.get("researcher_id")!="RSH-010":
     errors.append("Safal scoped LaTeX researcher mismatch")
 if safal_policy.get("branches",{}).get("shared_latex_control_release")!="resource/control/latex/v004-20261009":
     errors.append("shared LaTeX v002 version not linked from Safal")
-if safal_policy.get("gates",{}).get("source_admission")!="HOLD":
-    errors.append("Safal v1.9 Git admission may not be claimed")
+if safal_policy.get("gates",{}).get("source_admission") not in ("HOLD","VERIFIED"):
+    errors.append("Safal source status must be HOLD or verified Git-source admission")
+if safal_policy.get("gates",{}).get("source_admission")=="VERIFIED" and not (ROOT/"researchers/safal-dawadi/latex/manuscript/main.tex").is_file():
+    errors.append("Safal source verified without committed manuscript main.tex")
 if safal_policy.get("original_drive",{}).get("main_ack_reported")!=5:
     errors.append("Safal Main Library cursor not preserved")
 if len(lane_names)!=33: errors.append("expected 33 researcher lanes")
@@ -195,16 +197,37 @@ if mig.get("cutover")!="NOT_APPROVED" or mig.get("format_rule_ids_full_automated
     errors.append("unearned PU parity promotion")
 if scoped.get("researcher_id")!="RSH-010" or scoped.get("shared_control")!="controls/latex/tower.json":
     errors.append("Safal inheritance identity/control mismatch")
-if scoped.get("source_admission")!="HOLD" or scoped.get("scientific_approval")!="HOLD" or scoped.get("release_ready") is not False:
-    errors.append("Safal scientific/source admission must remain HOLD")
+if scoped.get("scientific_approval")!="HOLD" or scoped.get("release_ready") is not False:
+    errors.append("Safal scientific approval and release must remain HOLD")
+git_source_admitted=(scoped.get("source_admission")=="VERIFIED")
+if scoped.get("source_admission") not in ("HOLD","VERIFIED"):
+    errors.append("Safal source admission state must be explicit HOLD or VERIFIED")
+if git_source_admitted:
+    expected_hash="9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd"
+    selected=baseline.get("selected_baseline") or {}
+    if selected.get("artifact_sha256")!=expected_hash or selected.get("drive_source_zip_id")!="1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c":
+        errors.append("Safal verified source admission lacks exact seq15 source authority/hash")
+    if baseline.get("source_git_admission")!="VERIFIED" or baseline.get("selected_target",{}).get("bytes_rehashed") is not True:
+        errors.append("Safal source admission cannot bypass byte verification")
+    if safal_policy.get("gates",{}).get("source_reconciliation")!="VERIFIED" or safal_policy.get("gates",{}).get("public_git_clearance")!="VERIFIED" or safal_policy.get("gates",{}).get("source_admission")!="VERIFIED":
+        errors.append("Safal verified Git admission lacks three explicit source gates")
+    root=ROOT/"researchers/safal-dawadi/latex/manuscript"
+    for rel in ("main.tex","08_reference.bib","chapters/chapter4_results_discussion.tex","safal_pages.tex","safal_dependencies.tex"):
+        if not (root/rel).is_file(): errors.append("Safal verified source file missing: "+rel)
+    for bad in ("pu_fst_final_report.sty","private_fonts/times.ttf","PokharaUniversity.jpg","main.pdf"):
+        if (root/bad).exists(): errors.append("Safal restricted or competing format asset in public Git: "+bad)
 if scoped.get("citation_style") not in ("APA7","IEEE","HARVARD","UNKNOWN"):
     errors.append("invalid project-specific bibliography style")
 if scoped.get("document_stage") not in ("PROPOSAL","MIDTERM","FINAL_THESIS","DEFENSE","UNKNOWN"):
     errors.append("invalid or inherited document stage")
-if baseline.get("selected_baseline") is not None or baseline.get("source_git_admission")!="HOLD":
-    errors.append("Safal source conflict accidentally promoted")
-if scoped.get("document_stage")!="FINAL_THESIS" or scoped.get("selected_manuscript_target")!="V1.9_LOCAL_SEQ15_Q1_B_BYTE_MIRROR_PENDING" or scoped.get("current_manifest_candidate",{}).get("version")!="v1.2":
-    errors.append("Safal selected v1.9 latest target or historical v1.2 Midterm pointer lost")
+if not git_source_admitted and (baseline.get("selected_baseline") is not None or baseline.get("source_git_admission")!="HOLD"):
+    errors.append("Safal source incorrectly promoted before gate verification")
+if scoped.get("document_stage")!="FINAL_THESIS" or scoped.get("current_manifest_candidate",{}).get("version")!="v1.2":
+    errors.append("Safal final-report identity or v1.2 Midterm predecessor pointer lost")
+if git_source_admitted and scoped.get("selected_manuscript_target")!="V1.9_LOCAL_SEQ15_SOURCE_SHA256_VERIFIED__PDF_NOT_RECONCILED":
+    errors.append("Safal admitted Git source must refer to exact v1.9 hash, leaving PDF unresolved")
+if not git_source_admitted and scoped.get("selected_manuscript_target")!="V1.9_LOCAL_SEQ15_Q1_B_BYTE_MIRROR_PENDING":
+    errors.append("Safal held source must preserve its originally reported v1.9 target")
 if baseline.get("latest_manifest_designated_candidate",{}).get("classification")!="CURRENT_CONTROLLED_PREVIEW_NON_PRODUCTION":
     errors.append("Safal October 2026 nonproduction preview state lost")
 if baseline.get("a9_main_registry_observed",{}).get("safal_row_consumed_cursor")!=2:

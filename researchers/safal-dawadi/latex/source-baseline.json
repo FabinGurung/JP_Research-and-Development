@@ -14,8 +14,8 @@
     "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
     "drive_publication": "SOURCE_SAME_ID_REFRESHED__PDF_RECONCILIATION_NOT_VERIFIED"
   },
-  "verification": "VERIFIED_RECONCILED_SOURCE_ZIP_SHA256_AND_DRIVE_SAME_ID_READBACK",
-  "source_git_admission": "GIT_SOURCE_IMPORT_STAGED_AND_PUBLIC_TEXT_REVIEWED",
+  "verification": "EXACT_V19_RECONCILED_SOURCE_ZIP_SHA256_VERIFIED_AND_GIT_READBACK",
+  "source_git_admission": "VERIFIED",
   "selected_baseline": {
     "version": "v1.9",
     "artifact_sha256": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
@@ -69,7 +69,7 @@
     "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
     "provider_mirror_verified": true,
     "bytes_rehashed": true,
-    "source_git_admission": "IMPORT_STAGED_PENDING_POST_COMMIT_READBACK",
+    "source_git_admission": "VERIFIED",
     "why": "Latest reconciled state in Local; original first uploaded v1.9 ZIP/PDF have different reported hashes"
   }
 }

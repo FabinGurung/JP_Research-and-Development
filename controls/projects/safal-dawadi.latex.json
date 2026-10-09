@@ -70,16 +70,16 @@
     "compile_mode": "AUTHORIZED_MANUAL_ONLY_AFTER_GATES"
   },
   "gates": {
-    "source_reconciliation": "VERIFIED_SOURCE_ZIP_SHA256",
-    "public_git_clearance": "SOURCE_TEXT_ONLY__NO_FONT_PHOTO_PDF",
-    "source_admission": "PENDING_GITHUB_READBACK",
+    "source_reconciliation": "VERIFIED",
+    "public_git_clearance": "VERIFIED",
+    "source_admission": "VERIFIED",
     "exact_font_ci": "NOT_CONFIGURED",
-    "git_compilation": "LOCAL_SHARED_TEMPLATE_QA_PASS__GITHUB_BUILD_PENDING",
-    "pdf_qa": "LOCAL_42PAGE_A4_EXACT_TNR_ZERO_OVERFULL__HUMAN_PU_PARITY_HOLD",
+    "git_compilation": "SOURCE_ADMITTED_GITHUB__LOCAL_TNR_AND_TINOS_QA_PASS__CI_COMPILER_PENDING",
+    "pdf_qa": "LOCAL_TECH_42_A4_ZERO_WARNINGS_AND_OVERFULL__PU_FULL_PARITY_HOLD",
     "drive_upload": "NOT_AUTHORIZED",
     "scientific_approval": "HOLD",
     "local_seq": "15_LIVE_LOCAL_VERIFIED",
-    "main_ack": "LOCAL_REPORTS_CURSOR5__MAIN_REGISTRY_ROW_LAST_VERIFIED_2__NOT_SYNCED_SEQ15",
+    "main_ack": "LOCAL_SEQ15_MAIN_CURSOR5_HELD",
     "automated_pdf_compile": "DISABLED_UNTIL_AUTHORIZED_PRIVATE_FONT_RUNNER_AND_RELEASE_GATES"
   },
   "security": {

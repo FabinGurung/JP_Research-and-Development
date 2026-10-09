@@ -102,9 +102,11 @@
       "tower": "controls/latex/tower.json",
       "template": "controls/latex/template/pumlsc-shared.sty",
       "local_configuration": "researchers/safal-dawadi/latex/control.json",
-      "configuration_status": "PROJECT_CONFIG_PRESENT__SOURCE_ADMISSION_HOLD",
+      "configuration_status": "GIT_SOURCE_ADMITTED__SCIENTIFIC_QA_HOLD",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [
+        "RD-LTX-EXT-SAFAL-001"
+      ]
     },
     {
       "researcher_id": "RSH-011",
