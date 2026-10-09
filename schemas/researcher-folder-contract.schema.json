@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "R&D verified researcher folder role registry",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "canonical_roles",
+    "records",
+    "root_drive_id"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "canonical_roles": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "root_drive_id": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "researcher_id",
+          "researcher_slug",
+          "project_id",
+          "project_registry_key",
+          "existing_project_root_drive_id",
+          "root_status",
+          "roles",
+          "researcher_specific_extensions"
+        ],
+        "properties": {
+          "researcher_id": {
+            "type": "string",
+            "pattern": "^RSH-[0-9]{3}$"
+          },
+          "researcher_slug": {
+            "type": "string"
+          },
+          "project_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "project_registry_key": {
+            "type": "string"
+          },
+          "existing_project_root_drive_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "root_status": {
+            "type": "string"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "logical_role",
+                "existing_drive_folder_id",
+                "current_name",
+                "approved_alias",
+                "status",
+                "action"
+              ],
+              "properties": {
+                "logical_role": {
+                  "type": "string"
+                },
+                "existing_drive_folder_id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "current_name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "approved_alias": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "proposed_alias": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "status": {
+                  "type": "string"
+                },
+                "action": {
+                  "type": "string"
+                },
+                "physical_mutation_performed": {
+                  "const": false
+                }
+              }
+            }
+          },
+          "researcher_specific_extensions": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  }
+}

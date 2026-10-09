@@ -1,0 +1,1631 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RND-RESEARCHER-FOLDER-ROLES-V001",
+  "source_registry": "registry/researchers.json",
+  "source_authority": "LIVE_GOOGLE_DRIVE_20261009_DIRECT_CHILDREN_ONLY",
+  "root_drive_id": "1r8FgLsKn8-C-EMkwI3_itupvQbttyoY5",
+  "source_package_status": "NAMED_ZIP_NOT_AVAILABLE_IN_CURRENT_CONVERSATION_OR_LIVE_DRIVE__USER_HANDOVER_PLUS_PROVIDER_READBACK_USED",
+  "policy": "LOGICAL_MAPPING_ONLY_NO_MASS_DRIVE_RENAME_MOVE_OR_CREATION",
+  "project_id_policy": "Null until canonical A9 project identifier is verified; project_registry_key is only a provisional join and NOT a project ID",
+  "canonical_roles": [
+    "00_PROJECT_CONTROL",
+    "00_LOCAL_LIBRARY",
+    "01_SOURCE_ORIGINALS",
+    "02_LATEX_WORKING",
+    "03_PDF_BUILDS",
+    "04_PPTX",
+    "05_DATA_FIGURES",
+    "06_REVIEW_QA",
+    "07_FINAL_DELIVERABLES",
+    "90_LEGACY_ARCHIVE"
+  ],
+  "verified_root_count": 10,
+  "registered_researcher_count": 11,
+  "records": [
+    {
+      "researcher_id": "RSH-001",
+      "researcher_slug": "fabin-gurung",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-001::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1m_J-w1rSgQcmyHL-cbkPwKKejyJ0TbJP",
+      "current_project_root_name": "Fabin_Gurung",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1Ab2RXsYGGsuOd1rXWVtZpb88sCWSLIdk",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": "1rU7vtbTxPimQOA4iP884u4YsEwLxOO93",
+          "current_name": "00_LOCAL_LIBRARY",
+          "approved_alias": "00_LOCAL_LIBRARY",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1-WDqZNrYGiYDRGhDW-qSBy5SDuLPQtq1",
+          "current_name": "01_SOURCE_ORIGINALS",
+          "approved_alias": "01_SOURCE_ORIGINALS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1iFMPEyGFcT8uQsNonYO6xj-HQJ3eSTUq",
+          "current_name": "02_LATEX_WORKING",
+          "approved_alias": "02_LATEX_WORKING",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "1SVdfdof8okWXhPAOeEpSNljOHbu_AKkP",
+          "current_name": "03_PDF_BUILDS",
+          "approved_alias": "03_PDF_BUILDS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "12_5coxF2LLnRwCjHyfX_jbsCWscPacAy",
+          "current_name": "04_PPTX",
+          "approved_alias": "04_PPTX",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "18OHMhw00YLxp9HvUF2fXXIjenYfBh_XC",
+          "current_name": "05_DATA_FIGURES",
+          "approved_alias": "05_DATA_FIGURES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1RtmkTyUA4umUQ5wN8La0xTKNQZl9usA8",
+          "current_name": "06_REVIEW_QA",
+          "approved_alias": "06_REVIEW_QA",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": "1ckvftZoSfxw-q2yItsU_hxzyiEucH5q7",
+          "current_name": "07_FINAL_DELIVERABLES",
+          "approved_alias": "07_FINAL_DELIVERABLES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": "1n1D2Dix0mNVhqsJtGzA7X9F8Nap9jhL_",
+          "current_name": "99_PROJECT_ARCHIVE_AND_LEGACY",
+          "approved_alias": null,
+          "proposed_alias": "90_LEGACY_ARCHIVE",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "09_PUBLIC_OUTPUT_GALLERY",
+          "current_name": "09_THESIS_OUTPUTS_GALLERY__PUBLIC_AND_SUPPORTING_OUTPUTS",
+          "existing_drive_folder_id": "1CJfUDZJEIYjMks8cb1Q4AbSntny_g2xA",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "10_PROTOTYPE",
+          "current_name": "08_RESEARCH_AND_PROTOTYPE_EXTENSIONS",
+          "existing_drive_folder_id": "1ZX8W2uYAQO1qovV28qLLslKXIben5Vl4",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "PHYSICAL_FOLDER_PRESENT_ACK_NOT_INFERRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-002",
+      "researcher_slug": "saugat-paneru",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-002::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1woFRyE_oUwoKxKI815I1nRtWe1382LUT",
+      "current_project_root_name": "Saugat_Paneru",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1abGurIjHX8SClIbBhifqZvNThKnprM3b",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": "1ZEPRopUXSnZgTlaOUtxT5nU0PsFic4in",
+          "current_name": "00_LOCAL_LIBRARY",
+          "approved_alias": "00_LOCAL_LIBRARY",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1b1wqsFAOhn1FGPxn6YcAEXgRyhNPRkB5",
+          "current_name": "01_SOURCE_ORIGINALS",
+          "approved_alias": "01_SOURCE_ORIGINALS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1J6hom2P8O8Z-kOYOr5zzSiQeLC7CnMhc",
+          "current_name": "03_LATEX_PROJECT",
+          "approved_alias": null,
+          "proposed_alias": "02_LATEX_WORKING",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "1oKrx0oLodiczPPci51mAeDPftuIIzsvZ",
+          "current_name": "04_PPTX",
+          "approved_alias": "04_PPTX",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "1ljXOQiGHGBRy_Vmf3xCq9I-gi6lNHAFq",
+          "current_name": "05_DATA_FIGURES",
+          "approved_alias": "05_DATA_FIGURES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1oTD6qg3O2jvKZkAJDARaUznsWRUNG1Tl",
+          "current_name": "06_REVIEW_QA",
+          "approved_alias": "06_REVIEW_QA",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": "1XY-1X9s8yxEZ0UtlHlWRc_twi9b955zX",
+          "current_name": "98_ARCHIVE__LATEX_LEGACY__FROZEN",
+          "approved_alias": null,
+          "proposed_alias": "90_LEGACY_ARCHIVE",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "08_LIVE_DOCUMENTS",
+          "current_name": "08_GOOGLE_DOCS_LIVE",
+          "existing_drive_folder_id": "1gb3AP2Kb5NBMLj9bxwpO0DOnD002j2dY",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "08_WORK_CHECKPOINTS",
+          "current_name": "08_WORK_CHECKPOINTS",
+          "existing_drive_folder_id": "1LETHyCNnyv_euO8_VF2veXyPMnGRuIgn",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "09_DISCUSSION",
+          "current_name": "09_DISCUSSION_RESEARCH_BRAINSTORMING",
+          "existing_drive_folder_id": "195_wauu91S0wXwi9LqnzJ0iERB5_mCLB",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "11_CERTIFICATE",
+          "current_name": "Certificate",
+          "existing_drive_folder_id": "1Il_KCCjrxBvSOCIrCvRjn5anuK7zVYjI",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "PHYSICAL_FOLDER_PRESENT_ACK_NOT_INFERRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-003::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1qOn2pyJ4GFgQLf_wdJ7fEqB6MWBOAPp3",
+      "current_project_root_name": "Nabin_Bista",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1GVnvCpMRQwPTImMhMTEuMNTPVF5tv5R9",
+          "current_name": "00_READ_FIRST__PROJECT_CONTROL",
+          "approved_alias": null,
+          "proposed_alias": "00_PROJECT_CONTROL",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1NrHJgibcEuUQgAj74OOlW9jtp2FSe9Xk",
+          "current_name": "01_ORIGINAL_SOURCES",
+          "approved_alias": null,
+          "proposed_alias": "01_SOURCE_ORIGINALS",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1vrT3n35mQJ3mEVKJRLmw_-4UW5rw7ucZ",
+          "current_name": "02_THESIS_LATEX",
+          "approved_alias": null,
+          "proposed_alias": "02_LATEX_WORKING",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "1KSVVwtxJLQRILVEo3qyJxbG9ERwvewdX",
+          "current_name": "05_PRESENTATION__GOOGLE_SLIDES_PPTX",
+          "approved_alias": null,
+          "proposed_alias": "04_PPTX",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "1r0qhQ6jRXErCyr9Dc7JaV1LmJ0FTZ-wo",
+          "current_name": "06_DATA_TABLES_FIGURES",
+          "approved_alias": null,
+          "proposed_alias": "05_DATA_FIGURES",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1Tl57Dwf_t4uVuQmt2YMC6zblNOO5hHnB",
+          "current_name": "08_REVIEW_QA_CLOSEOUT",
+          "approved_alias": null,
+          "proposed_alias": "06_REVIEW_QA",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": "1zUzZWqGTmv9kxoGDvThaSpFXkz0fkahU",
+          "current_name": "90_ARCHIVE__LEGACY_AND_EXTERNAL",
+          "approved_alias": null,
+          "proposed_alias": "90_LEGACY_ARCHIVE",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "08_LIVE_DOCUMENTS",
+          "current_name": "03_THESIS_GOOGLE_DOCS",
+          "existing_drive_folder_id": "1pldNoZc-toNw31c7igykDft6NszJghSR",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "09_DISCUSSION",
+          "current_name": "04_RESEARCH_DISCUSSION_AND_AUDIT",
+          "existing_drive_folder_id": "15wseRVVIQ3m9KY6s0VyEHqMnCxA4fH0l",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "10_ANALYSIS_CODE",
+          "current_name": "07_CODE_REPRODUCIBILITY",
+          "existing_drive_folder_id": "1qyzTK4qUxwLj5yKhnHBzIW-C_bMOj9Xt",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "11_CERTIFICATE",
+          "current_name": "Certificate",
+          "existing_drive_folder_id": "1TsJkXO1khTw6mqt-3dnXkqyIVpJMEXHV",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "NOT_VERIFIED_OR_NOT_REQUIRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-004",
+      "researcher_slug": "safal-thapa",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-004::PRIMARY_THESIS",
+      "existing_project_root_drive_id": null,
+      "current_project_root_name": null,
+      "root_status": "HOLD_NO_VERIFIED_ROOT",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "HOLD_ROOT_UNVERIFIED",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [],
+      "a9_local_registry_status": "NOT_VERIFIED_OR_NOT_REQUIRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-005",
+      "researcher_slug": "shisheer-kc",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-005::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1e3rMmZCAg4q1nWyJw3zkH-1OUo49dJ8O",
+      "current_project_root_name": "Shisheer_KC",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "12lsWBogu4W2cM-Su3RnRem-9HlOJL7vg",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1wK0FYii-Cj1UF9_FTpu6P9lZ0Z5Gw_1c",
+          "current_name": "01_SOURCE_ORIGINALS",
+          "approved_alias": "01_SOURCE_ORIGINALS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "13mOXoagd1sFp6Wn5N0ZbTs7q8jWbjYeu",
+          "current_name": "02_LATEX_WORKING",
+          "approved_alias": "02_LATEX_WORKING",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "1YXMqA58Uvz8IAYzbJYTUM8kMP8oJbE_b",
+          "current_name": "03_PDF_BUILDS",
+          "approved_alias": "03_PDF_BUILDS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "1h1p3MGcxUxRBQWT6TeJcEh5cJWHCYzFm",
+          "current_name": "04_PPTX",
+          "approved_alias": "04_PPTX",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "1fvqegiAh4jyixKN3sIDD3bvqkx_RGz7X",
+          "current_name": "05_DATA_FIGURES",
+          "approved_alias": "05_DATA_FIGURES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1SerZzEo535SpyzR3dvuF08R77K8ug_LT",
+          "current_name": "06_REVIEW_QA",
+          "approved_alias": "06_REVIEW_QA",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": "1r1knLUcGaqLm9Mu80xwv6ggLLfLaDJFn",
+          "current_name": "07_FINAL_DELIVERABLES",
+          "approved_alias": "07_FINAL_DELIVERABLES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": "1NWboZYFbHYtgjQeCmJ0vDCdLjz5h6cPa",
+          "current_name": "90_IMPORT_ARCHIVES_DO_NOT_DELETE",
+          "approved_alias": null,
+          "proposed_alias": "90_LEGACY_ARCHIVE",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "08_WORK_CHECKPOINTS",
+          "current_name": "08_Work_Checkpoints",
+          "existing_drive_folder_id": "1V6DJ3gAoGz5WRH3GTG3cdGSMwIjroXO0",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "09_DISCUSSION",
+          "current_name": "09_DISCUSSION_RESEARCH_BRAINSTORMING",
+          "existing_drive_folder_id": "134nZsYrzvmmovAI_JugdSFSfylUbUbw5",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "12_FROZEN_CANDIDATE",
+          "current_name": "CKPT15_PHASE4_CORR9_12_CUMULATIVE_CANDIDATE__20261001",
+          "existing_drive_folder_id": "1S7aScsknGanhyxI9-hyHgdb0XOU98qIC",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "NOT_VERIFIED_OR_NOT_REQUIRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-006",
+      "researcher_slug": "binay-karki",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-006::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1Merz8haEG1kdB5rB1oAwjtmCkoU5BBg8",
+      "current_project_root_name": "Binay_Karki",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1TuP_mTgKd5C03fU7ybT8CZmjh2omvv9M",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": "1VLl9_HsLA4H7SUdjSHdyd7rRMG0_CnZY",
+          "current_name": "00_LOCAL_LIBRARY",
+          "approved_alias": "00_LOCAL_LIBRARY",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1xOz787bxb0XyCOJtVC0ziZyDHi2vfMzS",
+          "current_name": "01_SOURCE_ORIGINALS",
+          "approved_alias": "01_SOURCE_ORIGINALS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1h1Sxt5tv32pQok0VTyquPsXKYaqRbjxf",
+          "current_name": "02_LATEX_WORKING",
+          "approved_alias": "02_LATEX_WORKING",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "13mmf5QVPsLxXS2npImRZ4EI6CRKiBVsM",
+          "current_name": "03_PDF_BUILDS",
+          "approved_alias": "03_PDF_BUILDS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "1mY9h4tjZm3JG0J-7Xv8QEcEfkJaMuAZY",
+          "current_name": "04_PPTX",
+          "approved_alias": "04_PPTX",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "18eoUSiJ2fJVUQhYtOfSuWDCV46ji7dYl",
+          "current_name": "05_DATA_FIGURES",
+          "approved_alias": "05_DATA_FIGURES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1W-80y2ptVoyVfB2ZmW6mgd-0sFiDfxoS",
+          "current_name": "06_REVIEW_QA",
+          "approved_alias": "06_REVIEW_QA",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": "1X_wmMlFZOujpGzNc7NaYYoKGxu11b3nD",
+          "current_name": "07_FINAL_DELIVERABLES",
+          "approved_alias": "07_FINAL_DELIVERABLES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "08_WORK_CHECKPOINTS",
+          "current_name": "08_Work_Checkpoints",
+          "existing_drive_folder_id": "15PFKbJX7PXT7iqabuFRTZHV5MH_oPTJT",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "09_DISCUSSION",
+          "current_name": "09_DISCUSSION_RESEARCH_BRAINSTORMING",
+          "existing_drive_folder_id": "1yUhsghCvsNT7XA_p9jAGfZAELzmccPBJ",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "PHYSICAL_FOLDER_PRESENT_ACK_NOT_INFERRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-007",
+      "researcher_slug": "anil-neupane",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-007::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1HJBXi0axr4Y4A-GKv23qhtYeDW6KIwUq",
+      "current_project_root_name": "Anil_Neupane",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1Yxu2d2bou9xiNul0tgtEhJZ4xTryM1fy",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1LdO1aBdT4hETbwRBiOiQWxVRQBiR9wwS",
+          "current_name": "01_SOURCE_ORIGINALS",
+          "approved_alias": "01_SOURCE_ORIGINALS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1yBvfwDmqQRziIpHwcZzcF2oETIBlsGIN",
+          "current_name": "02_LATEX_WORKING",
+          "approved_alias": "02_LATEX_WORKING",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "1VhtMxdZnD0DtnSk_iX5VmNQeKP7nXtDV",
+          "current_name": "03_PDF_BUILDS",
+          "approved_alias": "03_PDF_BUILDS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "1lKD9fDM7ZCa52gojmOM1NX9eF-FRnmKq",
+          "current_name": "04_PPTX",
+          "approved_alias": "04_PPTX",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "1bvDT3Ie5OqIOA2Qc7gXp0yszspxGpYuY",
+          "current_name": "05_DATA_FIGURES",
+          "approved_alias": "05_DATA_FIGURES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1dsJXEeMAPCqCxmgMPuy7Z9ZdQPL1jgvD",
+          "current_name": "06_REVIEW_QA",
+          "approved_alias": "06_REVIEW_QA",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": "1XUSykQfKEeFdEpZ1OMengdRmnVMONt0_",
+          "current_name": "07_FINAL_DELIVERABLES",
+          "approved_alias": "07_FINAL_DELIVERABLES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "08_WORK_CHECKPOINTS",
+          "current_name": "08_Work_Checkpoints",
+          "existing_drive_folder_id": "14L_JjUpJvNBfrzna2CKIEQ-9jvc6yii5",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "NOT_VERIFIED_OR_NOT_REQUIRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-008",
+      "researcher_slug": "rupesh-man-pradhan",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-008::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1DVDvW4kxENqMF-30XP17kG86xD-xkcZ7",
+      "current_project_root_name": "Rupesh_Man_Pradhan",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1DMI-RPJKp8fc9Tu8Q4rW5tZn0FYATgFG",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": "15FIUqeThknqG80McqIIb0WI5uujtLn3j",
+          "current_name": "00_LOCAL_LIBRARY",
+          "approved_alias": "00_LOCAL_LIBRARY",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "16stFo32XQlOg0IuJllek8An5OlSTQdMf",
+          "current_name": "01_SOURCE_ORIGINALS",
+          "approved_alias": "01_SOURCE_ORIGINALS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1fh7biNdNwc6qsfYCYt0LtpIGkP8LOkDg",
+          "current_name": "02_LATEX_WORKING",
+          "approved_alias": "02_LATEX_WORKING",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "1Fufj2VPA8esSf5CXOBh7Ma6H9Qc_K6Mw",
+          "current_name": "03_PDF_BUILDS",
+          "approved_alias": "03_PDF_BUILDS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "1d7hOdTiSM3VdkrKDW0UPB-4kPIYebyyt",
+          "current_name": "04_PPTX",
+          "approved_alias": "04_PPTX",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "17NhSM6GZ2RMxaEvIAl33JEVQ7mu5K7OJ",
+          "current_name": "05_DATA_FIGURES",
+          "approved_alias": "05_DATA_FIGURES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1BIi4Jamv9A8fZqXHBfJ2kMa2ZLRWpqcF",
+          "current_name": "06_REVIEW_QA",
+          "approved_alias": "06_REVIEW_QA",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": "1fdajcCRSax2gpltTBNy-qf0r7GxuJ9S-",
+          "current_name": "07_FINAL_DELIVERABLES",
+          "approved_alias": "07_FINAL_DELIVERABLES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": "1fJX84YwVv4RSDQ2sn9uKxxWRvg0Ji49f",
+          "current_name": "98_ARCHIVE__LATEX_LEGACY__FROZEN",
+          "approved_alias": null,
+          "proposed_alias": "90_LEGACY_ARCHIVE",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "08_LIVE_DOCUMENTS",
+          "current_name": "08_GOOGLE_DOCS_LIVE",
+          "existing_drive_folder_id": "1TvhGL7esrao4HsHaoZkddsAcZLS4P-2l",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "08_WORK_CHECKPOINTS",
+          "current_name": "08_WORK_CHECKPOINTS",
+          "existing_drive_folder_id": "1DgP1xKovzmAWHiswUlc1bj5LCpR7wwt1",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "09_DISCUSSION",
+          "current_name": "09_DISCUSSION_RESEARCH_BRAINSTORMING",
+          "existing_drive_folder_id": "1d6__oN-MDY5TSCd5BaZpVE1ryM99eyn_",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "11_CERTIFICATE",
+          "current_name": "Certificate",
+          "existing_drive_folder_id": "1FiYbL1-naE5yWtNH91iSQk_LeI5qjuK5",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "PHYSICAL_FOLDER_PRESENT_ACK_NOT_INFERRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-009",
+      "researcher_slug": "krishna-kumar-gupta",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-009::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1eUlnpvXTK6UiJlsj3bgKBPYTRdkkNkAn",
+      "current_project_root_name": "Krishna_Kumar_Gupta",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "18N2C0kE3mV4lfc-ap8_p0NF1XEGwtRCb",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1oayODC06JDe_1Yv7kDcTneEhng7N0r5k",
+          "current_name": "02_RESEARCH_DATA_AND_SOURCES",
+          "approved_alias": null,
+          "proposed_alias": "01_SOURCE_ORIGINALS",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1W5w6Yn9Jd7X8HxgJItfFi_1iigpxe7JL",
+          "current_name": "01_ACTIVE_LATEX_PROJECT",
+          "approved_alias": null,
+          "proposed_alias": "02_LATEX_WORKING",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "19Ylyl3rcpxLxMJJldYNjEPY-X4R1Vr4n",
+          "current_name": "03_COMPILED_OUTPUTS",
+          "approved_alias": null,
+          "proposed_alias": "03_PDF_BUILDS",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1NiYK9Yd6z665hGYF0OpNVer7R_5wCpLK",
+          "current_name": "04_GUIDES_AND_REVIEW",
+          "approved_alias": null,
+          "proposed_alias": "06_REVIEW_QA",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": "1Mo4zABkQnCMTKITfNgYrEZqT_y60Vnx8",
+          "current_name": "90_IMPORT_ARCHIVES_DO_NOT_DELETE",
+          "approved_alias": null,
+          "proposed_alias": "90_LEGACY_ARCHIVE",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "current_name": "02_RESEARCH_DATA_AND_SOURCES",
+          "existing_drive_folder_id": "1oayODC06JDe_1Yv7kDcTneEhng7N0r5k",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "08_WORK_CHECKPOINTS",
+          "current_name": "05_VERSION_ARCHIVE",
+          "existing_drive_folder_id": "1l7ZNvXDaDdyLIJmc3aIg9JyuEDJN4y51",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "12_PHOTOS",
+          "current_name": "pictures",
+          "existing_drive_folder_id": "1yoAetFLA96ZFjTaccToE05rX0opKE4ud",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "NOT_VERIFIED_OR_NOT_REQUIRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-010",
+      "researcher_slug": "safal-dawadi",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-010::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP",
+      "current_project_root_name": "Thesis_Safal_Dawadi_Rework_CM",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1TNLBnnXwk6ddbuDbbdEt9UxaAdrdWTLB",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": "1FcIHB7j11qL8Aof22CS8qTTAPqNABcNx",
+          "current_name": "00_LOCAL_LIBRARY",
+          "approved_alias": "00_LOCAL_LIBRARY",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1oAv-Flo13XW27ijhON7ikzh5EVhXNyn-",
+          "current_name": "01_SOURCE_ORIGINALS",
+          "approved_alias": "01_SOURCE_ORIGINALS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "14LU1OSTYFsd00mvYWK1dOFc7lIvepPq_",
+          "current_name": "02_LATEX_WORKING",
+          "approved_alias": "02_LATEX_WORKING",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "1BvPOKd4Q1a8bhG3iCMsfDSM98dhDGFLG",
+          "current_name": "03_PDF_BUILDS",
+          "approved_alias": "03_PDF_BUILDS",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": "1veM5T-c0-bV1rHwWMrSSUe28bJ90cYN2",
+          "current_name": "04_PPTX",
+          "approved_alias": "04_PPTX",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": "1XGRO7qjMiVPGUQB-wHM_VWpfvSxTytbL",
+          "current_name": "05_DATA_FIGURES",
+          "approved_alias": "05_DATA_FIGURES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1VjxnMF1lQvsUORJnQ9PONdaIjr8xDW-F",
+          "current_name": "06_REVIEW_QA",
+          "approved_alias": "06_REVIEW_QA",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": "1dkVj5Ikrqn9Uea4iiuVnbudsIhX5cS5V",
+          "current_name": "07_FINAL_DELIVERABLES",
+          "approved_alias": "07_FINAL_DELIVERABLES",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [],
+      "a9_local_registry_status": "PHYSICAL_FOLDER_PRESENT_ACK_NOT_INFERRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    },
+    {
+      "researcher_id": "RSH-011",
+      "researcher_slug": "sunil-rana",
+      "project_id": null,
+      "project_identity_status": "CANONICAL_PROJECT_ID_NOT_VERIFIED",
+      "project_registry_key": "RSH-011::PRIMARY_THESIS",
+      "existing_project_root_drive_id": "1-YEMV0u9pe78YS9KprCNFQAina3Ef4o4",
+      "current_project_root_name": "Sunil_Rana",
+      "root_status": "PROVIDER_VERIFIED_20261009",
+      "roles": [
+        {
+          "logical_role": "00_PROJECT_CONTROL",
+          "existing_drive_folder_id": "1eaGqv3pxz_1J-JIYxpE8jIy3dppN7lAw",
+          "current_name": "00_PROJECT_CONTROL",
+          "approved_alias": "00_PROJECT_CONTROL",
+          "proposed_alias": null,
+          "status": "VERIFIED_DIRECT_CHILD",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": false,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "00_LOCAL_LIBRARY",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "01_SOURCE_ORIGINALS",
+          "existing_drive_folder_id": "1rfNNUJkLRT5QrdGMZrsz3rucZZj62e4B",
+          "current_name": "02_RESEARCH_DATA_AND_SOURCES",
+          "approved_alias": null,
+          "proposed_alias": "01_SOURCE_ORIGINALS",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "02_LATEX_WORKING",
+          "existing_drive_folder_id": "1Q00fAJaHWv38tag6mFzW-85emSnsUwhI",
+          "current_name": "01_ACTIVE_THESIS_DOCUMENT",
+          "approved_alias": null,
+          "proposed_alias": "02_LATEX_WORKING",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "03_PDF_BUILDS",
+          "existing_drive_folder_id": "1ru7LiIGI-HcwQOAvD5wwaduZVwgRxTfW",
+          "current_name": "03_COMPILED_OUTPUTS",
+          "approved_alias": null,
+          "proposed_alias": "03_PDF_BUILDS",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "04_PPTX",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "06_REVIEW_QA",
+          "existing_drive_folder_id": "1dHq33lyrltnQ227QdQUS-MwbyK3zHnDW",
+          "current_name": "04_GUIDES_AND_REVIEW",
+          "approved_alias": null,
+          "proposed_alias": "06_REVIEW_QA",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "07_FINAL_DELIVERABLES",
+          "existing_drive_folder_id": null,
+          "current_name": null,
+          "approved_alias": null,
+          "proposed_alias": null,
+          "status": "NOT_OBSERVED_DIRECT_CHILD",
+          "action": "HOLD_NO_AUTOCREATE",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "90_LEGACY_ARCHIVE",
+          "existing_drive_folder_id": "1Aia68BT2II6YKBJkluBounxyC4O_TS0K",
+          "current_name": "90_IMPORT_ARCHIVES_DO_NOT_DELETE",
+          "approved_alias": null,
+          "proposed_alias": "90_LEGACY_ARCHIVE",
+          "status": "VERIFIED_ID_ALIAS_REVIEW",
+          "action": "REUSE_EXISTING_ID",
+          "requires_owning_researcher_approval": true,
+          "physical_mutation_performed": false
+        }
+      ],
+      "researcher_specific_extensions": [
+        {
+          "logical_role": "05_DATA_FIGURES",
+          "current_name": "02_RESEARCH_DATA_AND_SOURCES",
+          "existing_drive_folder_id": "1rfNNUJkLRT5QrdGMZrsz3rucZZj62e4B",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        },
+        {
+          "logical_role": "08_WORK_CHECKPOINTS",
+          "current_name": "05_VERSION_ARCHIVE",
+          "existing_drive_folder_id": "1dWa2HR9bYN3faxoCOx9enV6JnvodF7mU",
+          "status": "VERIFIED_SPECIALIZED_FOLDER",
+          "action": "PRESERVE",
+          "physical_mutation_performed": false
+        }
+      ],
+      "a9_local_registry_status": "NOT_VERIFIED_OR_NOT_REQUIRED",
+      "a9_main_sync_status": "UNVERIFIED_NO_AUTO_ACK",
+      "scientific_source_mutated": false
+    }
+  ],
+  "unregistered_sibling_exclusions": [
+    "Rijan_Marahatha",
+    "Manoj_Bhandari",
+    "Avishek_Kumar_Mandal",
+    "Rural_Road_Maintenance_CM__UNRESOLVED_RESEARCHER__ARCHIVE_INTAKE_20260815",
+    "Fabin_Gurung_MScH_Thesis Title",
+    "PhD_Application_Pokhara_University_Fall_2083",
+    "00_SHARED_CERTIFICATE_LATEX_TEMPLATE"
+  ],
+  "writes_to_drive": 0
+}

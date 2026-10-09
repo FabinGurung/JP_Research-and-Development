@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RND-FOLDER-CONTRACT-001",
+  "authority": "controls/thesis-infrastructure.json",
+  "source_control": "Google Drive Thesis Control v1.23 + A9 owning project controls",
+  "drive_id_is_identity": true,
+  "physical_migrations": "OWNING_RESEARCHER_CHAT_ONLY_AFTER_A9_PRE_POST",
+  "roles": [
+    {
+      "logical_role": "00_PROJECT_CONTROL",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "00_PROJECT_CONTROL"
+    },
+    {
+      "logical_role": "00_LOCAL_LIBRARY",
+      "mandatory": false,
+      "creation": "NOT_AUTOMATIC",
+      "name": "00_LOCAL_LIBRARY"
+    },
+    {
+      "logical_role": "01_SOURCE_ORIGINALS",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "01_SOURCE_ORIGINALS"
+    },
+    {
+      "logical_role": "02_LATEX_WORKING",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "02_LATEX_WORKING"
+    },
+    {
+      "logical_role": "03_PDF_BUILDS",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "03_PDF_BUILDS"
+    },
+    {
+      "logical_role": "04_PPTX",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "04_PPTX"
+    },
+    {
+      "logical_role": "05_DATA_FIGURES",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "05_DATA_FIGURES"
+    },
+    {
+      "logical_role": "06_REVIEW_QA",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "06_REVIEW_QA"
+    },
+    {
+      "logical_role": "07_FINAL_DELIVERABLES",
+      "mandatory": true,
+      "creation": "NOT_AUTOMATIC",
+      "name": "07_FINAL_DELIVERABLES"
+    },
+    {
+      "logical_role": "90_LEGACY_ARCHIVE",
+      "mandatory": false,
+      "creation": "NOT_AUTOMATIC",
+      "name": "90_LEGACY_ARCHIVE"
+    }
+  ],
+  "aliases": "Existing approved names take precedence over proposed normalized names",
+  "specializations": [
+    "DOCX-first",
+    "Google Docs",
+    "Google Slides",
+    "Colab",
+    "ETABS/OpenSees/structural simulation",
+    "research datasets",
+    "discussion",
+    "certificate",
+    "milestone checkpoints"
+  ],
+  "source_of_truth_layers": [
+    "A7 identity/routes",
+    "R&D shared code",
+    "Drive approved research evidence",
+    "owning researcher control",
+    "A9 Local/Main registry"
+  ],
+  "no_mass_moves": true
+}
