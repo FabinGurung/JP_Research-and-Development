@@ -297,6 +297,21 @@ if args.site:
                 errors.append("Owner prompt page lacks safeguard "+row["researcher_id"]+" "+marker)
     if not (ROOT/args.site/"assets/prompt-copy.js").is_file():
         errors.append("Owner prompt copy script was not deployed")
+# Public discovery catalogue must remain a non-authoritative index of existing public-safe metadata.
+catalogue_test=subprocess.run([sys.executable,str(ROOT/"scripts/test_site_search.py")],cwd=ROOT,text=True,capture_output=True)
+if catalogue_test.returncode:
+    errors.append("research catalogue regression failed: "+(catalogue_test.stdout+catalogue_test.stderr)[-2500:])
+if args.site:
+    search_page=ROOT/args.site/"search/index.html"
+    search_index=ROOT/args.site/"data/research-index.json"
+    if not search_page.is_file() or not search_index.is_file():
+        errors.append("R&D research search page/data missing")
+    else:
+        data=json.loads(search_index.read_text(encoding="utf-8"))
+        if len(data.get("entries",[]))<100:
+            errors.append("R&D research search index unexpectedly thin")
+        if "research-search" not in search_page.read_text(encoding="utf-8"):
+            errors.append("R&D search control absent")
 if args.site:
     index=ROOT/args.site/"index.html"
     thesis=ROOT/args.site/"thesis-infrastructure/index.html"
@@ -313,7 +328,7 @@ if args.site:
 for path in ("web/living-hero.html","web/motion.js","web/prompt-copy.js","web/styles.css","prompts/researcher_owner_execution_master.md","scripts/researchers/generate_prompts.py","schemas/researcher-migration-status.schema.json","controls/website-living-library.json"):
     if not (ROOT/path).is_file(): errors.append("theme or owner prompt file missing: "+path)
 # Syntax and executable HOLD/PRESENT source-gate regression: green CI must NOT be construed as PDF certified.
-for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/validate_site_links.py","scripts/test_site_links.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/researchers/generate_prompts.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
+for script in ("scripts/latex/safal_build.py","scripts/latex/validate_shared.py","scripts/build_site.py","scripts/validate_site_links.py","scripts/test_site_links.py","scripts/site_core.py","scripts/site_pages.py","scripts/site_search.py","scripts/test_site_search.py","scripts/researchers/normalize.py","scripts/researchers/test_normalization.py","scripts/researchers/generate_prompts.py","scripts/latex/universal_preflight.py","scripts/latex/universal_compile.py","scripts/latex/pdf_technical_qa.py"):
     try:
         ast.parse((ROOT/script).read_text(encoding="utf-8"),filename=script)
     except (SyntaxError,OSError) as e:

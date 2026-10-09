@@ -81,11 +81,26 @@ async function main() {
    await page.screenshot({path:path.join(out,"desktop-owner-prompt.png"),fullPage:true,animations:"disabled"});
   });
   await check("researcher_routes_and_portal_navigation",async()=>{
-   for(const route of ["start-here/","researchers/","thesis-infrastructure/","owner-prompts/","branches/","controls/latex/","roadmap/","how-to/"]){
+   for(const route of ["start-here/","search/","researchers/","thesis-infrastructure/","owner-prompts/","branches/","controls/latex/","roadmap/","how-to/"]){
     const response=await page.goto(base+route,{waitUntil:"domcontentloaded"});
     assert.equal(response.status(),200,route);
     assert.ok(await page.locator("main").count(),route);
    }
+  });
+  await check("catalogue_search_and_filter",async()=>{
+   await page.goto(base+"search/",{waitUntil:"networkidle"});
+   await page.locator(".search-result").first().waitFor();
+   await page.locator("#research-search").fill("Safal");
+   await page.waitForFunction(() => Number(document.querySelectorAll(".search-result").length)>0);
+   assert.ok((await page.locator("#search-summary").innerText()).includes("matching catalogue"));
+   await page.locator("#research-category").selectOption("Researchers");
+   const visible=await page.locator(".search-category").allInnerTexts();
+   assert.ok(visible.length>0);
+   assert.ok(visible.every(x=>x==="Researchers"));
+   await page.screenshot({path:path.join(out,"desktop-search.png"),fullPage:true,animations:"disabled"});
+   await page.locator("#research-search").focus();
+   await page.keyboard.press("Escape");
+   assert.equal(await page.locator("#research-search").inputValue(),"");
   });
   await check("desktop_wcag_axe",async()=>{
    await page.goto(base,{waitUntil:"networkidle"});
@@ -110,6 +125,12 @@ async function main() {
    await assertNoOverflow(mp,"mobile prompt");
    assert.ok(await mp.locator("[data-copy-owner-prompt]").isVisible());
    await mp.screenshot({path:path.join(out,"mobile-owner-prompt.png"),fullPage:true,animations:"disabled"});
+  });
+  await check("mobile_search_no_horizontal_overflow",async()=>{
+   await mp.goto(base+"search/",{waitUntil:"networkidle"});
+   await mp.locator(".search-result").first().waitFor();
+   await assertNoOverflow(mp,"mobile catalogue");
+   await mp.screenshot({path:path.join(out,"mobile-search.png"),fullPage:true,animations:"disabled"});
   });
   await check("mobile_wcag_axe",async()=>{
    await mp.goto(base,{waitUntil:"networkidle"});

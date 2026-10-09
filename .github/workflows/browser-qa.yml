@@ -5,6 +5,8 @@ on:
     paths:
       - 'web/**'
       - 'scripts/build_site.py'
+      - 'scripts/site_*.py'
+      - 'scripts/test_site_search.py'
       - 'scripts/browser_qa.cjs'
       - '.github/workflows/browser-qa.yml'
       - 'registry/researchers.json'
