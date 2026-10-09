@@ -94,6 +94,10 @@ async function main() {
    await page.waitForFunction(() => Number(document.querySelectorAll(".search-result").length)>0);
    assert.ok((await page.locator("#search-summary").innerText()).includes("matching catalogue"));
    await page.locator("#research-category").selectOption("Researchers");
+   await page.waitForFunction(() => {
+     const all=[...document.querySelectorAll(".search-category")];
+     return all.length>0 && all.every(x=>x.textContent==="Researchers");
+   },null,{timeout:6000});
    const visible=await page.locator(".search-category").allInnerTexts();
    assert.ok(visible.length>0);
    assert.ok(visible.every(x=>x==="Researchers"));
