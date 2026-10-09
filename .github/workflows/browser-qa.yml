@@ -1,0 +1,48 @@
+name: R&D real-browser visual + mobile QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'scripts/build_site.py'
+      - 'scripts/browser_qa.cjs'
+      - '.github/workflows/browser-qa.yml'
+      - 'registry/researchers.json'
+      - 'registry/researcher-migration-status.json'
+      - 'prompts/researchers/**'
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate repository before browser QA
+        run: |
+          python scripts/validate_repo.py
+          python scripts/build_site.py --out dist
+          python scripts/validate_repo.py --site dist
+      - name: Install isolated Playwright Chromium test dependencies
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1 @axe-core/playwright@4.11.0
+          npx playwright install --with-deps chromium
+      - name: Exercise real browser: desktop, mobile, clipboard, WCAG and reduced motion
+        run: node scripts/browser_qa.cjs
+      - name: Preserve readable QA report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rd-browser-qa-${{ github.run_id }}
+          path: browser-qa-output/
+          retention-days: 14
+          if-no-files-found: warn
