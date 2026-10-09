@@ -74,6 +74,7 @@ async function main() {
    assert.ok(text.length>4000);
    assert.ok(text.includes("RSH-001"));
    await page.locator("[data-copy-owner-prompt]").click();
+   await page.waitForFunction(() => document.querySelector("[data-copy-status]")?.textContent?.startsWith("Copied."),null,{timeout:7000});
    assert.equal(await page.locator("[data-copy-status]").innerText(),"Copied. Paste it only in this researcher's own chat.");
    const clip=await page.evaluate(()=>navigator.clipboard.readText());
    assert.equal(clip,text);
