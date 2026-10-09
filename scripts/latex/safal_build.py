@@ -85,6 +85,14 @@ def main():
         tree=work/"project"
         shutil.copytree(source,tree)
         texdir=tree/"manuscript"
+        # The institutional logo is a private external dependency, never a public Git blob.
+        private_logo=os.environ.get("SAFAL_LOGO_FILE","")
+        if private_logo:
+            logo=Path(private_logo)
+            if not logo.is_file(): fail("SAFAL_LOGO_FILE does not point to an existing file")
+            shutil.copy2(logo,texdir/"PokharaUniversity.jpg")
+        elif args.mode=="compile":
+            fail("licensed exact-font review requires original institution logo; set SAFAL_LOGO_FILE")
         # Private licensed assets exist only in ephemeral work directory, never Git history or public artifacts.
         if args.mode=="compile":
             for n in FONT_FILES:

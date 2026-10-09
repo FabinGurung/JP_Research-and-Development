@@ -18,7 +18,7 @@
   },
   "manuscript": {
     "version": "v1.9",
-    "classification": "V1.9_42_PAGE_USER_SELECTED_LATEST_LOCAL_SEQ15__BYTE_MIRROR_PENDING",
+    "classification": "V1.9_SOURCE_MIGRATION_CANDIDATE__SCIENTIFIC_QA_HOLD",
     "scope": [
       "W01 waterproofing",
       "W02 building-associated PCC",
@@ -36,8 +36,8 @@
     "later_reconciled_local": {
       "source_sha256_reported": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
       "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
-      "drive_mirror": "UNVERIFIED",
-      "source_files": "NOT_LOCATED_THIS_RUN"
+      "drive_mirror": "SOURCE_SAME_ID_UPDATED__PDF_UNCHANGED",
+      "source_files": "RECOVERED_19_ORIGINAL_TEXT_FILES_PLUS_BUILD_ADAPTER"
     },
     "conflict": "PREFERENCE_Q1B_RESOLVED__SAME_ID_BYTES_NOT_VERIFIED"
   },
@@ -70,12 +70,12 @@
     "compile_mode": "AUTHORIZED_MANUAL_ONLY_AFTER_GATES"
   },
   "gates": {
-    "source_reconciliation": "USER_TARGET_SELECTED__BYTES_PENDING",
-    "public_git_clearance": "HOLD",
-    "source_admission": "HOLD",
+    "source_reconciliation": "VERIFIED_SOURCE_ZIP_SHA256",
+    "public_git_clearance": "SOURCE_TEXT_ONLY__NO_FONT_PHOTO_PDF",
+    "source_admission": "PENDING_GITHUB_READBACK",
     "exact_font_ci": "NOT_CONFIGURED",
-    "git_compilation": "NOT_RUN",
-    "pdf_qa": "NOT_RUN",
+    "git_compilation": "LOCAL_SHARED_TEMPLATE_QA_PASS__GITHUB_BUILD_PENDING",
+    "pdf_qa": "LOCAL_42PAGE_A4_EXACT_TNR_ZERO_OVERFULL__HUMAN_PU_PARITY_HOLD",
     "drive_upload": "NOT_AUTHORIZED",
     "scientific_approval": "HOLD",
     "local_seq": "15_LIVE_LOCAL_VERIFIED",

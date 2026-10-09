@@ -1,0 +1,47 @@
+% RSH-010 project-specific cover/title page text extracted from original verified v1.9 source.
+% No global formatting base is duplicated in this file.
+\newcommand{\PULogo}{%
+  \IfFileExists{\PULogoFile}{\includegraphics[width=1.6in,height=1.6in,keepaspectratio]{\PULogoFile}}{\fbox{\parbox[c][1.6in][c]{1.6in}{\centering UNIVERSITY LOGO\\ FILE REQUIRED}}}%
+}
+\newcommand{\PUCoverPage}{%
+\thispagestyle{empty}
+\begin{center}
+{\bfseries\fontsize{16}{19}\selectfont FINAL REPORT\par}
+\vspace{16pt}
+{\bfseries\fontsize{20}{24}\selectfont \PUThesisTitle\par}
+\vspace{24pt}
+\PULogo\par
+\vfill
+{\bfseries\fontsize{16}{19}\selectfont \PUStudentName\par}
+{\normalsize P.U. Registration No.: \PURegistrationNumber\par}
+{\normalsize Roll No.: \PURollNumber\par}
+\vspace{18pt}
+{\bfseries\fontsize{16}{19}\selectfont \PUSchool\par\PUFaculty\par\PUUniversity\par\PUUniversityLocation\par}
+\vspace{16pt}
+{\fontsize{16}{19}\selectfont \PUSubmissionDate\par}
+\end{center}\clearpage
+}
+\newcommand{\PUTitlePage}{%
+\thispagestyle{empty}
+\begin{center}
+{\bfseries\fontsize{16}{19}\selectfont FINAL REPORT\par}
+\vspace{18pt}
+{\bfseries\fontsize{20}{24}\selectfont \PUThesisTitle\par}
+\vspace{18pt}
+{\normalsize Submitted in partial fulfilment of the requirements for the degree of\par}
+{\bfseries\fontsize{16}{19}\selectfont \PUDegreeName\par}
+\vspace{18pt}
+{\bfseries Supervised by\par}
+{\bfseries \PUSupervisor\par}
+{\normalsize \PUSupervisorOrganization\par}
+\vfill
+{\bfseries Submitted by\par}
+{\bfseries \PUStudentName\par}
+{\normalsize P.U. Registration No.: \PURegistrationNumber\par}
+{\normalsize Roll No.: \PURollNumber\par}
+\vspace{12pt}
+{\bfseries \PUSchool\par\PUFaculty\par\PUUniversity, \PUUniversityLocation\par}
+\vspace{14pt}
+{\bfseries \PUSubmissionDate\par}
+\end{center}\clearpage
+}

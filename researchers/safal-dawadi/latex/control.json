@@ -5,14 +5,14 @@
   "shared_control": "controls/latex/tower.json",
   "shared_package": "controls/latex/",
   "project_legacy_control": "controls/projects/safal-dawadi.latex.json",
-  "source_admission": "HOLD",
+  "source_admission": "PENDING_GITHUB_POST_COMMIT_READBACK",
   "scientific_approval": "HOLD",
   "citation_style": "APA7",
   "citation_evidence": "Existing project-specific R&D config; recheck at source admission",
   "document_stage": "FINAL_THESIS",
   "current_source_manifest": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
   "release_ready": false,
-  "status": "CONFIGURATION_CREATED__SOURCE_NOT_ADMITTED",
+  "status": "SOURCE_STAGED_IN_GIT__TECHNICAL_REVIEW_ONLY",
   "scope": "metadata only: no manuscript code imported",
   "source_baseline": "researchers/safal-dawadi/latex/source-baseline.json",
   "config_revision": "2026-10-09-v003-user-Q1B",
@@ -27,12 +27,14 @@
   },
   "concurrent_local_review": {
     "version": "v1.9",
-    "state": "USER_SELECTED_LATEST_RECONCILED_SOURCE__BYTES_PENDING",
+    "state": "SELECTED_V19_EXACT_SOURCE_ZIP_VERIFIED_AND_DRIVE_SOURCE_REFRESHED",
     "related_data": "source-baseline.json"
   },
   "shared_template": "controls/latex/template/pumlsc-shared.sty",
-  "local_extensions": [],
+  "local_extensions": [
+    "RD-LTX-EXT-SAFAL-001"
+  ],
   "user_override_policy": "ONLY_REGISTERED_REASONED_DELTA_AT_CENTRAL_101_PLUS_CHANGE_ID",
   "project_config_kind": "PARAMETERS_AND_QA_POINTERS_NOT_ANOTHER_TEMPLATE",
-  "selected_manuscript_target": "V1.9_LOCAL_SEQ15_Q1_B_BYTE_MIRROR_PENDING"
+  "selected_manuscript_target": "V1.9_LOCAL_SEQ15_SOURCE_SHA256_VERIFIED__PDF_NOT_RECONCILED"
 }

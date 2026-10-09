@@ -2,9 +2,30 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 101,
+  "next_number": 102,
   "namespace": "RD-LTX-CHG-101+",
-  "entries": [],
+  "entries": [
+    {
+      "change_id": "RD-LTX-CHG-101",
+      "researcher_id": "RSH-010",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Safal v1.9 no-hyphenation emergency-stretch correction, scoped and non-global",
+      "source_paths": [
+        "researchers/safal-dawadi/latex/extensions/safal-linebreak.tex",
+        "researchers/safal-dawadi/latex/manuscript/main.tex"
+      ],
+      "before_after_qa_evidence": "Linux local Tinos test: 127 overfull before, 0 after; exact-font local XeLaTeX+Biber QA: 42 A4, zero overfull and LaTeX warnings; no Git CI or PU 144-rule certification",
+      "pu_rule_references": [
+        "PU-FMT-007"
+      ],
+      "disposition": "PROPOSED",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "source_version": "v1.9",
+      "scientific_approval": "HOLD",
+      "global_propagation": "FORBIDDEN_UNTIL_INDEPENDENT_REGRESSION"
+    }
+  ],
   "required_fields": [
     "change_id",
     "researcher_id",

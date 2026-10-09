@@ -1,0 +1,13 @@
+# Safal Dawadi — verified v1.9 source import
+- Researcher ID: RSH-010; review candidate, not scientifically approved.
+- Original preserved reconciled source ZIP: SHA-256 `9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd`.
+- Original Drive source ZIP ID (same-ID refreshed): `1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c`.
+- Upstream version: Final Report v1.9, Local seq15, Main cursor5 held.
+- Text of scientific chapters, appendix contents, bibliography and project metadata preserved from ZIP.
+- Shared operational template: `controls/latex/template/pumlsc-shared.sty` loaded via `\usepackage{pumlsc-shared}`; no duplicate style source.
+- Project-only definitions: `manuscript/safal_pages.tex`, `manuscript/safal_dependencies.tex`.
+- Scoped amendment: `extensions/safal-linebreak.tex` / central change RD-LTX-CHG-101.
+- Private assets excluded from Git: exact Times New Roman binaries and `PokharaUniversity.jpg`; externally staged at build time.
+- XeLaTeX → Biber → XeLaTeX → XeLaTeX. Technical preview/build may pass without full 144-rule PU parity.
+- Original source package still available in Drive; this Git migration performs limited build-adapter reorganization, not a new scientific version.
+- Derived PDFs and QA documents belong to Drive, NOT public Git.

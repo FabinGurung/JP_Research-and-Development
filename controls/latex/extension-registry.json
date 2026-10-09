@@ -2,7 +2,18 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-RESEARCHER-EXTENSIONS-001",
   "authority": "controls/latex/tower.json",
-  "registered": [],
+  "registered": [
+    {
+      "extension_id": "RD-LTX-EXT-SAFAL-001",
+      "change_id": "RD-LTX-CHG-101",
+      "researcher_id": "RSH-010",
+      "owner": "safal-dawadi",
+      "status": "TESTED_LOCAL__NOT_GLOBALLY_PROMOTED",
+      "path": "researchers/safal-dawadi/latex/extensions/safal-linebreak.tex",
+      "reason": "No-hyphenation PU formatting yielded 127 overfull Tinos boxes in 42-page v1.9; a scoped 3em emergency stretch produced zero overfull without chapter or bibliography content changes. Production parity remains held.",
+      "shared_template_modified": false
+    }
+  ],
   "allowed_root_pattern": "researchers/<slug>/latex/extensions/",
   "required_status": "EXPLICIT_OWNER_AND_CENTRAL_AMENDMENT_ENTRY",
   "addition_rule": "Only genuinely project-specific behavior may live here; never copy pumlsc-shared.sty or the global 1..100 base.",

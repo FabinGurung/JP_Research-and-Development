@@ -6,16 +6,26 @@
     "source_zip_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
     "source_sha256_reported": "80c560f5d89f91cae26dc9113deb91b932e7edf6a9c1fc5de260a5c237c0456c",
     "pdf_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
-    "pdf_sha256_reported": "3a82658cdf8d8817b7042e71b02949460dfc5beac68b58466f9db93285e9f480"
+    "pdf_sha256_reported": "3a82658cdf8d8817b7042e71b02949460dfc5beac68b58466f9db93285e9f480",
+    "status": "PRESERVED_HISTORICAL_PRE_COPY"
   },
   "later_local_reported": {
     "source_sha256_reported": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
     "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
-    "drive_publication": "UNKNOWN"
+    "drive_publication": "SOURCE_SAME_ID_REFRESHED__PDF_RECONCILIATION_NOT_VERIFIED"
   },
-  "verification": "SELECTED_TARGET_NOT_PHYSICALLY_ADMITTED",
-  "source_git_admission": "HOLD",
-  "selected_baseline": null,
+  "verification": "VERIFIED_RECONCILED_SOURCE_ZIP_SHA256_AND_DRIVE_SAME_ID_READBACK",
+  "source_git_admission": "GIT_SOURCE_IMPORT_STAGED_AND_PUBLIC_TEXT_REVIEWED",
+  "selected_baseline": {
+    "version": "v1.9",
+    "artifact_sha256": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
+    "drive_source_zip_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+    "project_local_seq": 15,
+    "scientific_approval": "HOLD",
+    "formatting_adaptation": "RND_SHARED_V2.1_SCOPE_EXCEPTION_RD-LTX-CHG-101",
+    "pdf_publication": "OLD_V19_PDF_ID_NOT_REPLACED",
+    "description": "Exact verified source ZIP, executable Git text adapter; unchanged scientific chapter/reference text"
+  },
   "reason": "User selected v1.9 seq15 as canonical target. Not safe to claim it is the physical current source until SHA and same-ID Drive mirror match.",
   "branches": [
     "researcher/safal-dawadi/discussion",
@@ -57,9 +67,9 @@
     "label": "Safal v1.9 latest reconciled Local seq15",
     "source_sha256_reported": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
     "pdf_sha256_reported": "3d07e4a879f912b0b1d84e0e65c817e22166bd4f7e4be5c10c6525e43e58878a",
-    "provider_mirror_verified": false,
-    "bytes_rehashed": false,
-    "source_git_admission": "HOLD",
+    "provider_mirror_verified": true,
+    "bytes_rehashed": true,
+    "source_git_admission": "IMPORT_STAGED_PENDING_POST_COMMIT_READBACK",
     "why": "Latest reconciled state in Local; original first uploaded v1.9 ZIP/PDF have different reported hashes"
   }
 }
