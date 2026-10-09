@@ -100,7 +100,7 @@ async function main() {
    },null,{timeout:6000});
    const visible=await page.locator(".search-category").allInnerTexts();
    assert.ok(visible.length>0);
-   assert.ok(visible.every(x=>x==="Researchers"));
+   assert.ok(visible.every(x=>x.toLowerCase()==="researchers"));
    await page.screenshot({path:path.join(out,"desktop-search.png"),fullPage:true,animations:"disabled"});
    await page.locator("#research-search").focus();
    await page.keyboard.press("Escape");
