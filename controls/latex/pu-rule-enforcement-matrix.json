@@ -1,0 +1,1926 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RND-PU-144-ROUTE-MATRIX-20261009",
+  "source": "controls/latex/pu-format-parity-audit.json",
+  "authority": "controls/latex/tower.json",
+  "total_approved_source_rules": 144,
+  "status": "PLANNED_VERIFICATION_ROUTES__NO_NEW_FULL_PU_CERTIFICATION",
+  "note": "Per-rule planned deterministic mechanism; no documented test means no enforcement claim. Real full-page QA and scientific source remain independent.",
+  "routes": [
+    "TEMPLATE_SOURCE",
+    "PYTHON_PREFLIGHT",
+    "PDF_TECHNICAL_INSPECTION",
+    "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW",
+    "MANUAL_REVIEW_UNRESOLVED"
+  ],
+  "rules": [
+    {
+      "id": "PU-FMT-001",
+      "title": "Authority",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-001",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-002",
+      "title": "Paper",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-002",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "DECLARED_SOURCE_UNRENDERED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-003",
+      "title": "Margins",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-003",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "DECLARED_SOURCE_UNRENDERED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-004",
+      "title": "Body font",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-004",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-005",
+      "title": "Font fallback",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-005",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-006",
+      "title": "Line spacing",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-006",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "DECLARED_SOURCE_UNRENDERED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-007",
+      "title": "Hyphenation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-007",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "DECLARED_SOURCE_UNRENDERED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-008",
+      "title": "Paragraphs",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-008",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-009",
+      "title": "Abstract indent",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-009",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-010",
+      "title": "Chapter opening",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-010",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-011",
+      "title": "Sections",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-011",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-012",
+      "title": "Front matter order",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-012",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-013",
+      "title": "Mandatory lists",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-013",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-014",
+      "title": "Preliminary pagination",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-014",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-015",
+      "title": "Main pagination",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-015",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "DECLARED_SOURCE_UNRENDERED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-016",
+      "title": "Cover typography",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-016",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-017",
+      "title": "Title page typography",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-017",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-018",
+      "title": "Narrative front headings",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-018",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-019",
+      "title": "List front headings",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-019",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-020",
+      "title": "Dedication",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-020",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-021",
+      "title": "Abstract content format",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-021",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-022",
+      "title": "Abstract length",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-022",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-023",
+      "title": "Keywords",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-023",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-024",
+      "title": "TOC/LOT/LOF",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-024",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-025",
+      "title": "List pagination",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-025",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-026",
+      "title": "Abbreviations",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-026",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-027",
+      "title": "Units",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-027",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-028",
+      "title": "Table numbering",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-028",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-029",
+      "title": "Table caption",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-029",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-030",
+      "title": "Table rules",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-030",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-031",
+      "title": "Table font size",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-031",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-032",
+      "title": "Table continuation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-032",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-033",
+      "title": "Table width",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-033",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-034",
+      "title": "Table source",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-034",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-035",
+      "title": "Figure numbering",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-035",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-036",
+      "title": "Figure placement",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-036",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-037",
+      "title": "Figure caption",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-037",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-038",
+      "title": "Figure source",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-038",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-039",
+      "title": "Figure text size",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-039",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-040",
+      "title": "Float policy",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-040",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-041",
+      "title": "Equations",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-041",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-042",
+      "title": "Cross references",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-042",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-043",
+      "title": "Citation style",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-043",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-044",
+      "title": "Reference heading",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-044",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "DECLARED_SOURCE_UNRENDERED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-045",
+      "title": "Citation consistency",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-045",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-046",
+      "title": "Appendix purpose",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-046",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-047",
+      "title": "Appendix start",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-047",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-048",
+      "title": "Appendix list",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-048",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-049",
+      "title": "Headers/footers",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-049",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-050",
+      "title": "Widow/orphan",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-050",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-051",
+      "title": "Near-empty pages",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-051",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-052",
+      "title": "Overflow",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-052",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-053",
+      "title": "Hyperlinks",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-053",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-054",
+      "title": "Build authority",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-054",
+      "planned_gate_routes": [
+        "MANUAL_REVIEW_UNRESOLVED"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-055",
+      "title": "Compile engine",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-055",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "DECLARED_SOURCE_UNRENDERED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-056",
+      "title": "Compile sequence",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-056",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-057",
+      "title": "Precompile gates",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-057",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-058",
+      "title": "PDF verification",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-058",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-059",
+      "title": "Render QA",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-059",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-060",
+      "title": "Regression QA",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-060",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-061",
+      "title": "Traceability",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-061",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-062",
+      "title": "Content isolation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-062",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-063",
+      "title": "Academic-facing output",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-063",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-064",
+      "title": "Internal-control separation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-064",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-065",
+      "title": "Canonical preliminary wording",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-065",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-066",
+      "title": "Midterm incompleteness",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-066",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-067",
+      "title": "Shared evidence base",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-067",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-068",
+      "title": "Versioned releases",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-068",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-069",
+      "title": "Missing-field behavior",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-069",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-070",
+      "title": "Audit visual identity",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-070",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-071",
+      "title": "Audit colors",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-071",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-072",
+      "title": "Generic acknowledgements",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-072",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-073",
+      "title": "Font build dependency",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-073",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-074",
+      "title": "Private font storage",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-074",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-075",
+      "title": "Fallback labeling",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-075",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-077",
+      "title": "Project metadata isolation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-077",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-078",
+      "title": "Degree/program verification",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-078",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-079",
+      "title": "Supervisor structure",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-079",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-080",
+      "title": "Academic authority verification",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-080",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-081",
+      "title": "APA support",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-081",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-082",
+      "title": "APA implementation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-082",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-083",
+      "title": "Reference-label separation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-083",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-084",
+      "title": "Clean source architecture",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-084",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-085",
+      "title": "Build evidence architecture",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-085",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-086",
+      "title": "Optional forensic intermediates",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-086",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-087",
+      "title": "Migration authorization checkpoint",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-087",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-088",
+      "title": "Research-stage metadata",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-088",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-089",
+      "title": "Researcher-action separation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-089",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-090",
+      "title": "Audit anchoring",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-090",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-091",
+      "title": "Annotated callouts",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-091",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-092",
+      "title": "Minimum audit issue schema",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-092",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-093",
+      "title": "Questionnaire cross-link",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-093",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-094",
+      "title": "No embedded researcher instructions",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-094",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-095",
+      "title": "Workflow-language sanitization",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-095",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-096",
+      "title": "Audit routing",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-096",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-097",
+      "title": "Zero new overfull boxes",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-097",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-098",
+      "title": "Production visible-overflow gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-098",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-099",
+      "title": "Preview inherited-warning accounting",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-099",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-100",
+      "title": "No permanent inherited waiver",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-100",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-101",
+      "title": "Overfull evidence schema",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-101",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-102",
+      "title": "Source-level repair",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-102",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-103",
+      "title": "Stage architecture before rewrite",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-103",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-104",
+      "title": "Source skeleton is not stage authority",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-104",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-105",
+      "title": "Constraint is not inclusion",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-105",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-106",
+      "title": "Stage-sensitive disposition",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-106",
+      "planned_gate_routes": [
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-107",
+      "title": "Structure migration map",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-107",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-108",
+      "title": "Semantic TOC release gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-108",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-109",
+      "title": "Incomplete midterm within governed architecture",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-109",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-110",
+      "title": "Structural conflict stop",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-110",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-111",
+      "title": "Academic source-note language",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-111",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-112",
+      "title": "Thesis-original source-note suppression",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-112",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-113",
+      "title": "External attribution",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-113",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-114",
+      "title": "Provenance isolation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-114",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-115",
+      "title": "Clean LOF/LOT captions",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-115",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-116",
+      "title": "Academic-source sanitization gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-116",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-117",
+      "title": "Caption/object adjacency",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-117",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-118",
+      "title": "Orphan-heading gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-118",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-119",
+      "title": "Near-empty-page gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-119",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-120",
+      "title": "Landscape transition integrity",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-120",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-121",
+      "title": "Multipage-table page-boundary integrity",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-121",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-122",
+      "title": "Appendix opening integrity",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-122",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-123",
+      "title": "Forced-placement review",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-123",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-124",
+      "title": "Equation render integrity",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-124",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-125",
+      "title": "Process-flow presentation",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-125",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-126",
+      "title": "Layout-integrity release gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-126",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-127",
+      "title": "Canonical PU logo pointer",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-127",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-128",
+      "title": "Canonical logo integrity",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-128",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-129",
+      "title": "Tinos preview fallback",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-129",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-130",
+      "title": "Production font gate unchanged",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-130",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-131",
+      "title": "Dedication vertical placement",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-131",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-132",
+      "title": "Front-matter whitespace integrity",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-132",
+      "planned_gate_routes": [
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-133",
+      "title": "Fresh active-control resolution",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-133",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-134",
+      "title": "Runtime canonical-logo retrieval",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-134",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-135",
+      "title": "Verified asset consumption/production gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-135",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-136",
+      "title": "Logo render and Drive read-back verification",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-136",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "NOT_IMPLEMENTED_OR_UNVERIFIED",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-137",
+      "title": "Source-first correction",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-137",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-138",
+      "title": "Rendered PDF immutability",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-138",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-139",
+      "title": "Five-stage A9 LaTeX pipeline",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-139",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-140",
+      "title": "Frozen-source compile entry gate",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-140",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-141",
+      "title": "Deterministic build loop",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-141",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-142",
+      "title": "Compile-stage scope containment",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-142",
+      "planned_gate_routes": [
+        "TEMPLATE_SOURCE",
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-143",
+      "title": "Immutable authority-asset consumption",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-143",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-144",
+      "title": "Source recovery before output surgery",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-144",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    },
+    {
+      "id": "PU-FMT-145",
+      "title": "Explicit QA deferral accounting",
+      "approved_text_digest_reference": "controls/latex/pu-format-parity-audit.json#PU-FMT-145",
+      "planned_gate_routes": [
+        "PYTHON_PREFLIGHT",
+        "PDF_TECHNICAL_INSPECTION",
+        "MANUAL_VISUAL_OR_SCIENTIFIC_REVIEW"
+      ],
+      "implemented_evidence": "PARTIAL_OR_POLICY_ONLY",
+      "certification_status": "NOT_UNIVERSALLY_CERTIFIED",
+      "scientific_authority": "RESEARCHER_SUPERVISOR_ORIGINALS_WHERE_APPLICABLE",
+      "test_evidence_id": null
+    }
+  ],
+  "python_current_coverage": [
+    "researcher profile and root identity",
+    "single shared source",
+    "optional manifest checks",
+    "PDF dimensions/fonts/hash/raster count"
+  ],
+  "qa_not_yet_automated": [
+    "precise margin content bounding boxes",
+    "all preliminary sequence and page numbers",
+    "TOC/LOT/LOF semantic comparison",
+    "correct published research claims",
+    "original logo hash and visible placement",
+    "visual orphan/caption integrity",
+    "supervisor/source approval"
+  ],
+  "full_certification": false
+}
