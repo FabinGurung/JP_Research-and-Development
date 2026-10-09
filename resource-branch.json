@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "source_version": "v001",
+  "date": "2026-10-09",
+  "module_key": "demo/hydro-schema",
+  "title": "Hydropower schema demo",
+  "branch": "resource/demo/hydro-schema/v001-20261009",
+  "role": "STATIC_HTML",
+  "primary_source_path": "web/legacy-site/hydropower-data-schema/",
+  "source_base_commit": "d8474230d0d77abaca2affeb14e6ea63f5715cf0",
+  "public_site_path": "hydropower-data-schema/",
+  "code_authority": "THIS_GIT_COMMIT_WITH_WHOLE_REPOSITORY_TREE",
+  "deliverable_owner": "GOOGLE_DRIVE_AFTER_SUCCESSFUL_REAL_BUILD_AND_PROVIDER_READBACK",
+  "compilation_status": "NOT_TRIGGERED_BY_MANIFEST_ONLY",
+  "original_research_evidence_status": "NOT_IMPORTED_TO_PUBLIC_REPOSITORY",
+  "version_policy": "NEW_CHANGE_NEW_COMMIT__RELEASE_MANIFEST_IN_OWNING_MODULE__IMMUTABLE_DATED_SNAPSHOT_ON_BOUNDARY",
+  "provenance_note": "New branch from latest v001 portal codebase; entire repository tree is in branch. This scoped manifest does not claim to newly generate scientific source or PDF."
+}
