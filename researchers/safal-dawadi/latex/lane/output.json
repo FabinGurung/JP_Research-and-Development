@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "document_kind": "SOURCE_TO_OUTPUT_MANIFEST",
+  "researcher_id": "RSH-010",
+  "researcher_slug": "safal-dawadi",
+  "manuscript_version": "v1.9",
+  "classification": "EXACT_TIMES_NEW_ROMAN_TECHNICAL_QA_REVIEW_NOT_SUBMISSION",
+  "qa_build_timestamp_npt": "2026-10-09",
+  "build_source_commit": "cbf46412cb5a557a5dc1cb7a5993b9645b1d6e3e",
+  "source_zip_sha256": "9c7bb25b84bd4a85aea85f137fdd8d080ab85c8fa18622a6d1ad9386d8f585bd",
+  "drive_source_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+  "drive_source_mirror": "SAME_ID_READBACK_MATCH_CONFIRMED",
+  "shared_template": "controls/latex/template/pumlsc-shared.sty",
+  "shared_template_version": "2.1.0",
+  "local_scoped_amendment": "RD-LTX-CHG-101",
+  "build_engine": "xelatex/biber/xelatex/xelatex",
+  "technical_pdf": {
+    "local_build_sha256": "c0f7edd38c4aca1c3fc14b0760236468ca5008aa28c44c3a6f6672f58eb72a5d",
+    "local_byte_length": 227861,
+    "drive_id": "1hXjqcdEylzMilYvUw0wcuwT6LuzJkymz",
+    "drive_fetched_sha256": "fe44f7d0787173ec67931ff1d1d8d52726c08d58400fe3eb24c2adcdfb43c77c",
+    "drive_byte_length": 312623,
+    "provider_transform": "EMBEDDED_CONTENT_CREDENTIALS_ATTACHMENT",
+    "verification": "42_OF_42_TEXT_PIXEL_AND_PAGE_DIMENSIONS_EQUAL__BYTES_DIFFER",
+    "pages": 42,
+    "a4": true,
+    "overfull": 0,
+    "latex_warnings": 0,
+    "exact_tnr_embedded": true
+  },
+  "qa": {
+    "drive_id": "1ye9GAZ4WcO_eM0vT5B8RgU5GEUR1-vRZ",
+    "zip_sha256": "5a73fb43f204b065210768f9dccc1eb8fbc69f7802aeae56ba621ed60d840da2",
+    "provider_readback": "SHA256_EXACT_MATCH",
+    "full_page_render_count": 42
+  },
+  "original_v19_first_build_preserved": {
+    "pdf_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
+    "sha256": "3a82658cdf8d8817b7042e71b02949460dfc5beac68b58466f9db93285e9f480"
+  },
+  "a9": {
+    "local_library_id": "10g8-tr417XltYDbk2yItEZjrJ_2xdT7pbPlJgUI8MYo",
+    "last_registered_seq": 15,
+    "main_ack_cursor": 5,
+    "main_sync": "HOLD_NOT_REQUESTED_APPROVAL_OPEN"
+  },
+  "gates": {
+    "source_recovered": "VERIFIED",
+    "source_drive_mirrored": "VERIFIED",
+    "git_source_admitted": "VERIFIED",
+    "latex_technical_build": "VERIFIED_PRIVATE_LINUX",
+    "github_actions_xelatex": "NOT_CONFIGURED",
+    "pu_full_parity": "HOLD_144_RULES_UNCERTIFIED",
+    "scientific_approval": "HOLD",
+    "supervisor_approval": "HOLD",
+    "submission_release": "HOLD"
+  },
+  "git_release_manifest_note": "This manifest-only commit is a metadata update, not a source change. It does not trigger a new scientific PDF."
+}
