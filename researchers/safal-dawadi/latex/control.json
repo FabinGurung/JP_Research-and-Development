@@ -12,7 +12,7 @@
   "document_stage": "FINAL_THESIS",
   "current_source_manifest": "1h-pw7TY9hVWHRfolJGvQpnXSprqdaen9fMUnIH2vwlQ",
   "release_ready": false,
-  "status": "VERIFIED_TEXT_SOURCE_GIT_ADMITTED__SCIENTIFIC_HOLD",
+  "status": "PU_PRELIMINARY_FORMAT_CORRECTION_TECHNICAL_QA__SCIENCE_HOLD",
   "scope": "metadata only: no manuscript code imported",
   "source_baseline": "researchers/safal-dawadi/latex/source-baseline.json",
   "config_revision": "2026-10-09-v003-user-Q1B",
@@ -39,5 +39,7 @@
   "selected_manuscript_target": "V1.9_LOCAL_SEQ15_SOURCE_SHA256_VERIFIED__PDF_NOT_RECONCILED",
   "technical_review_output": "researchers/safal-dawadi/latex/lane/output.json",
   "current_scientific_version": "v1.9",
-  "technical_review_build_commit": "cbf46412cb5a557a5dc1cb7a5993b9645b1d6e3e"
+  "technical_review_build_commit": "cbf46412cb5a557a5dc1cb7a5993b9645b1d6e3e",
+  "format_revision": "v1.9-fmt-r1",
+  "shared_template_version": "2.2.0"
 }

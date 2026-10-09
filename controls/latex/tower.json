@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.1.0",
-  "status": "SINGLE_CANONICAL_SOURCE__144_RULE_AUDIT_COMPLETE__RENDER_PARITY_HOLD",
+  "version": "2.2.0",
+  "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
   "authority_path": "controls/latex/tower.json",
@@ -89,6 +89,23 @@
     "audited": 144,
     "verified_production": 0,
     "source_missing_numeric_id": "PU-FMT-076",
-    "state": "INVENTORY_COMPLETE__REAL_PDF_PARITY_OPEN"
+    "state": "TARGETED_GENERIC_PU_CORRECTIONS_COMPILED__FULL_PU_CERTIFICATION_OPEN"
+  },
+  "shared_template_verification": {
+    "focus_version": "2.2.0",
+    "checked_researcher": "RSH-010",
+    "test_mode": "LOCAL_LINUX_XELATEX_EXACT_TIMES_NEW_ROMAN_40_A4_PAGES",
+    "tests": [
+      "front_order",
+      "preliminary_header_sizes_and_positions",
+      "abstract_316_words",
+      "single_spaced_toc_lot_lof",
+      "appendix_list_and_title",
+      "no_overfull",
+      "chapters_and_bibliography_byte_identity"
+    ],
+    "full_144_rule_production_certified": false,
+    "independent_regression_other_researchers": "HOLD",
+    "approval": "TECHNICAL_QA_ONLY"
   }
 }

@@ -19,15 +19,19 @@
 \clearpage
 \input{frontmatter/acknowledgements.tex}
 \clearpage
-\input{frontmatter/abstract.tex}
-\clearpage
-\tableofcontents
-\clearpage
-\listoftables
-\clearpage
 \input{frontmatter/abbreviations.tex}
 \clearpage
 \input{frontmatter/units.tex}
+\clearpage
+\input{frontmatter/abstract.tex}
+\clearpage
+\PUPrintContents
+\clearpage
+\PUPrintTables
+\clearpage
+\PUPrintFigures
+\clearpage
+\PUListOfAppendices
 \clearpage
 \pagenumbering{arabic}\setcounter{page}{1}
 \input{chapters/chapter1_introduction.tex}
@@ -37,7 +41,7 @@
 \input{chapters/chapter5_conclusion_recommendation.tex}
 \printbibliography[heading=bibintoc,title={REFERENCES}]
 \appendix
-\titleformat{\chapter}[display]{\normalfont\bfseries\centering\fontsize{16}{19}\selectfont}{APPENDIX \thechapter}{8pt}{}
+\PUEnableAppendixHeadings
 \input{appendices/appendix_observation_form.tex}
 \input{appendices/appendix_evidence_register.tex}
 \input{appendices/appendix_practitioner_matrix.tex}

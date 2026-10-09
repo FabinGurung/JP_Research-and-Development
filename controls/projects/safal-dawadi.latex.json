@@ -23,7 +23,8 @@
       "W01 waterproofing",
       "W02 building-associated PCC",
       "W03 plaster/masonry"
-    ]
+    ],
+    "format_revision": "v1.9-fmt-r1"
   },
   "source_states": {
     "first_drive": {
@@ -67,7 +68,8 @@
     "source_gate": "scripts/latex/safal_build.py",
     "trigger": "Only Safal project source or manually authorized run, not unrelated website changes",
     "compiler_script": "scripts/latex/safal_build.py",
-    "compile_mode": "AUTHORIZED_MANUAL_ONLY_AFTER_GATES"
+    "compile_mode": "AUTHORIZED_MANUAL_ONLY_AFTER_GATES",
+    "shared_template_control_version": "2.2.0"
   },
   "gates": {
     "source_reconciliation": "VERIFIED",
@@ -75,7 +77,7 @@
     "source_admission": "VERIFIED",
     "exact_font_ci": "NOT_CONFIGURED",
     "git_compilation": "SOURCE_ADMITTED_GITHUB__LOCAL_TNR_AND_TINOS_QA_PASS__CI_COMPILER_PENDING",
-    "pdf_qa": "LOCAL_TECH_42_A4_ZERO_WARNINGS_AND_OVERFULL__PU_FULL_PARITY_HOLD",
+    "pdf_qa": "PU_V113_TARGETED_FORMAT_CORRECTIONS_40_A4_EXACT_TNR__FULL_144_CERTIFICATION_HOLD",
     "drive_upload": "NOT_AUTHORIZED",
     "scientific_approval": "HOLD",
     "local_seq": "15_LIVE_LOCAL_VERIFIED",
