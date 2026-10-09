@@ -1,0 +1,46 @@
+name: Researcher LaTeX source and folder-role gates (NO scientific PDF)
+on:
+  push:
+    branches: [main, 'feature/**', 'researcher/**']
+    paths:
+      - 'researchers/**/latex/**'
+      - 'controls/latex/**'
+      - 'controls/researcher-folder-contract.json'
+      - 'registry/researcher-folder-roles.json'
+      - 'registry/latex-build-profiles.json'
+      - 'schemas/researcher-folder-contract.schema.json'
+      - 'scripts/latex/**'
+      - 'scripts/researchers/**'
+      - '.github/workflows/researcher-source-gates.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'researchers/**/latex/**'
+      - 'controls/latex/**'
+      - 'registry/researcher-folder-roles.json'
+      - 'registry/latex-build-profiles.json'
+      - 'scripts/latex/**'
+      - 'scripts/researchers/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  no-pdf-source-qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify live researcher IDs and folder-role contract
+        run: |
+          python scripts/researchers/normalize.py --validate
+          python scripts/researchers/test_normalization.py
+      - name: Validate single LaTeX control and 144-rule routing
+        run: |
+          python scripts/latex/validate_shared.py
+          python scripts/latex/universal_preflight.py --policy-check
+      - name: Boundary
+        run: echo 'PATH-SCOPED SOURCE-ONLY QA. No XeLaTeX job, no scientific PDF build, no Drive changes, no A9 Main synchronization.'

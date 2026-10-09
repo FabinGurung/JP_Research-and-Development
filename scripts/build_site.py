@@ -25,7 +25,7 @@ def evidence_html(debt):
 
 def shell(title, body, depth=0):
     prefix="../"*depth
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script defer src="{prefix}assets/theme.js"></script></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}roadmap/index.html">Roadmap</a><a href="{prefix}branches/index.html">Branches</a><a href="{prefix}how-to/index.html">How to</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch to mauve dusk">☾ Dusk palette</button></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"><script defer src="{prefix}assets/theme.js"></script></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}thesis-infrastructure/index.html">Thesis folders</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}roadmap/index.html">Roadmap</a><a href="{prefix}branches/index.html">Branches</a><a href="{prefix}how-to/index.html">How to</a><button type="button" class="theme-switch" data-theme-toggle aria-label="Switch to mauve dusk">☾ Dusk palette</button></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
 
 def write(out, rel, content):
     p=out/rel; p.parent.mkdir(parents=True,exist_ok=True); p.write_text(content,encoding="utf-8")
@@ -36,6 +36,8 @@ def main():
     if out.exists(): shutil.rmtree(out)
     out.mkdir(parents=True)
     researchers=load(Path("registry/researchers.json"))["researchers"]
+    folder_roles=load(Path("registry/researcher-folder-roles.json"))
+    folder_by_slug={x["researcher_slug"]:x for x in folder_roles["records"]}
     websites=load(Path("registry/websites.json"))["websites"]
     branches=load(Path("registry/branch-registry.json"))
     policy=load(Path("controls/repository.control.json"))
@@ -63,6 +65,7 @@ def main():
         if src.is_dir(): shutil.copytree(src,out/site_name,dirs_exist_ok=True)
     home_cards="".join(f'<article class="card"><span class="badge">{esc("TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "ON HOLD · HUMAN QA")}</span><h3>{esc(r["display_name"])}</h3><p>{esc(r.get("topic_title") or "Topic/title and Drive pointers are intentionally unset.")}</p><a href="researchers/{esc(r["slug"])}/index.html">Open researcher workspace →</a></article>' for r in researchers)
     home=f'''<main><section class="wrap hero"><div class="eyebrow">Research control portal</div><h1>JP Research & Development</h1><p class="lead">One thin main branch for shared controls, researcher routing and verified Drive links. Research documents and generated outputs stay in Google Drive; code changes are tracked on full-repository Git branches; researcher paths are logical work areas.</p><p><span class="badge">{len(researchers)} researcher workspaces · selective human QA</span></p></section><section class="wrap section"><h2>Operating architecture</h2><div class="flow"><div class="node">Shared controls</div><div class="arrow">→</div><div class="node">Researcher index</div><div class="arrow">→</div><div class="node">Discussion / LaTeX / Presentation lanes</div><div class="arrow">→</div><div class="node">Google Drive outputs</div></div></section><section class="wrap section"><h2>Researchers</h2><div class="grid">{home_cards}</div></section><section class="wrap section"><h2>Boundaries</h2><div class="controls"><article class="card"><h3>GitHub main</h3><p>Portal code, controls, schemas, registries and links only.</p></article><article class="card"><h3>Researcher branches</h3><p>Discussion pointers, LaTeX source, presentation source/config.</p></article><article class="card"><h3>Google Drive</h3><p>Working Docs, compiled PDFs, generated PPTX/PDF and evidence.</p></article></div></section></main>'''
+    home=home.replace("</main>",'<section class="wrap section"><h2>Unified thesis infrastructure</h2><p>Browse verified project folder roles, source-control policy, university formatting engine and individual researcher handovers. No Drive folders were renamed or moved.</p><p><a href="thesis-infrastructure/index.html">Open thesis folder and automation map →</a></p></section></main>')
     write(out,"index.html",shell("Home",home,0))
     roadmap=load(Path("registry/roadmap.json"))
     def stage_cards(items,kind):
@@ -121,6 +124,7 @@ def main():
     home=home.replace("</main>",'<section class="wrap section"><h2>Code, branches and version history</h2><p class="lead">Search '+str(len(branch_rows))+' audited branches, their intended use, code paths and immutable commit snapshots. The single website is built from <code>main</code>.</p><p><a href="branches/index.html">Browse all Git branches →</a></p></section></main>')
     write(out,"index.html",shell("Home",home,0))
     directory="".join(f'<article class="card"><h3>{esc(r["display_name"])}</h3><p><span class="badge">{esc(r["qa_status"])}</span></p><p>{esc(r.get("topic_title") or "Topic title: ON HOLD")}</p><a href="{esc(r["slug"])}/index.html">Open →</a></article>' for r in researchers)
+    directory='<p><a href="../thesis-infrastructure/index.html">Explore normalized thesis folder roles and stable Drive IDs →</a></p>'+directory
     write(out,"researchers/index.html",shell("Researchers",f'<main class="wrap hero"><div class="eyebrow">Researcher index</div><h1>Researcher workspaces</h1><p class="lead">No topic/title is published until human QA verifies it.</p><div class="grid">{directory}</div></main>',1))
     for r in researchers:
         lane_html=""
@@ -184,6 +188,22 @@ def main():
             body=body.replace("</main>",'<section class="section"><h2>Canonical project folder</h2><p><a href="'+esc(folder_url)+'">Open complete Google Drive project cabinet →</a></p><p>GitHub contains public-safe source and pointers; the Drive folder contains original/compiled researcher documents subject to Drive permissions.</p></section></main>')
         if r["slug"]=="safal-dawadi":
             body=body.replace("</main>",'<section class="section"><h2>LaTeX preparation control</h2><div class="notice">R&D CONTROL PREPARED. Safal v1.9 Git source is NOT yet admitted; no exact-font PDF build has occurred. Source conflicts and A9 Main cursor5 remain HELD.</div><p><a href="../../controls/latex/safal-dawadi/index.html">Open Safal project LaTeX status →</a></p></section></main>')
+        # Folder-role aliases come from the provider-read registry, not inferred names.
+        mapped=folder_by_slug[r["slug"]]
+        present=[x for x in mapped["roles"] if x["existing_drive_folder_id"]]
+        absent=[x for x in mapped["roles"] if not x["existing_drive_folder_id"]]
+        role_items="".join(
+            '<div>'+esc(x["logical_role"])+'</div><div><a href="'+esc("https://drive.google.com/drive/folders/"+x["existing_drive_folder_id"])+'">'+esc(x["current_name"])+'</a> · '+esc(x["status"])+'</div>'
+            for x in present
+        )
+        unmapped="".join('<li>'+esc(x["logical_role"])+' — '+esc(x["status"])+'</li>' for x in absent)
+        handover=REPO_URL+"/blob/main/docs/researcher-normalization/"+r["researcher_id"]+"__folder_handover.md"
+        folder_section='<section class="section"><h2>Drive folder roles (ID-preserving)</h2>'
+        folder_section+='<p>Role aliases are read-only, project ID is not asserted, and unchanged folders are REUSED. Local/Main acknowledgments are never inferred.</p>'
+        folder_section+='<div class="kvs">'+role_items+'</div>'
+        folder_section+='<details><summary>Unverified direct-child roles ('+str(len(absent))+')</summary><ul>'+unmapped+'</ul></details>'
+        folder_section+='<p><a href="'+esc(handover)+'">Open owner-thread folder normalization handover →</a> · <a href="../../thesis-infrastructure/index.html">All researcher folder roles →</a></p></section>'
+        body=body.replace("</main>",folder_section+"</main>")
         write(out,f'researchers/{r["slug"]}/index.html',shell(r["display_name"],body,2))
         if researcher_debts:
             debt_cards=""
@@ -192,6 +212,31 @@ def main():
                 debt_cards+=f'<article class="card"><span class="badge">{esc(d["status"])}</span><h3>{esc(d["title"])}</h3><p>{esc(d["description"])}</p><p><strong>Category:</strong> {esc(d["category"])} · <strong>Severity:</strong> {esc(d["severity"])}</p><ul>{evidence}</ul><p><strong>Close when:</strong> {esc(d["close_when"])}</p></article>'
             debt_body=f'<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])} · governed debt</div><h1>{esc(r["display_name"])} — Research Debts</h1><p class="lead">Only verified open/held debt is listed here. Closing an item requires provider-read evidence and an updated registry state.</p><div class="grid">{debt_cards}</div><p><a href="../index.html">← Back to researcher workspace</a></p></main>'
             write(out,f'researchers/{r["slug"]}/debts/index.html',shell(f'{r["display_name"]} Debts',debt_body,3))
+    folder_summary=[]
+    for rr in folder_roles["records"]:
+        root_id=rr.get("existing_project_root_drive_id")
+        root_link='<a href="'+esc("https://drive.google.com/drive/folders/"+root_id)+'">Verified project root</a>' if root_id else '<strong>HOLD — root unknown</strong>'
+        present=[x for x in rr["roles"] if x["existing_drive_folder_id"]]
+        missing=[x for x in rr["roles"] if not x["existing_drive_folder_id"]]
+        short=""
+        for it in present:
+            short+='<li><code>'+esc(it["logical_role"])+'</code> → <a href="'+esc("https://drive.google.com/drive/folders/"+it["existing_drive_folder_id"])+'">'+esc(it["current_name"])+'</a> · '+esc(it["status"])+'</li>'
+        extras="".join('<li>'+esc(x["logical_role"])+": "+esc(x["current_name"])+'</li>' for x in rr["researcher_specific_extensions"])
+        handover_link=REPO_URL+"/blob/main/docs/researcher-normalization/"+rr["researcher_id"]+"__folder_handover.md"
+        folder_summary.append('<article class="card"><h3>'+esc(rr["researcher_id"]+" · "+rr["researcher_slug"])+'</h3>'
+            +'<p>'+root_link+' · '+str(len(present))+' roles mapped · '+str(len(missing))+' roles unverified as direct child</p>'
+            +'<p><strong>A9:</strong> '+esc(rr["a9_main_sync_status"])+'; project_id = NOT VERIFIED</p>'
+            +'<details><summary>Show mapped folders and specialized paths</summary><ul>'+short+extras+'</ul></details>'
+            +'<p><a href="'+esc(handover_link)+'">Individual handover →</a> · <a href="'+esc("../researchers/"+rr["researcher_slug"]+"/index.html")+'">Researcher page →</a></p></article>')
+    thesis_body='<main class="wrap hero"><div class="eyebrow">R&D · one thesis infrastructure</div><h1>Researcher Drive roles and document automation</h1>'
+    thesis_body+='<p class="lead">Eleven registered researchers, ten verified project roots. Drive IDs are stable identity; folder aliases are human names. Reuse is preferred. Nothing here is a bulk folder move or scientific approval.</p>'
+    thesis_body+='<div class="flow"><div class="node">A7 researcher ID</div><div class="arrow">→</div><div class="node">Drive folder ID</div><div class="arrow">→</div><div class="node">R&D shared code + one LaTeX tower</div><div class="arrow">→</div><div class="node">Owning project and A9 Local/Main</div></div>'
+    thesis_body+='<section class="section"><h2>Governed reuse</h2><p>Drive: scientific sources, Google Docs, DOCX, Google Slides, Colab, artifacts and PDFs. Git: shared scripts, admitted manuscript sources, configuration, version history and QA metadata. The owner thread handles authorized physical changes only after A9 PRE/POST and readback.</p>'
+    thesis_body+='<p><a href="'+esc(REPO_URL+"/blob/main/registry/researcher-folder-roles.json")+'">Folder role registry JSON →</a> · <a href="'+esc(REPO_URL+"/blob/main/controls/researcher-folder-contract.json")+'">Folder contract →</a> · <a href="'+esc(REPO_URL+"/blob/main/docs/THESIS_FOLDER_NORMALIZATION_GAP_MATRIX_20261009.md")+'">Gap matrix →</a></p></section>'
+    thesis_body+='<section class="section"><h2>Researcher workspace directory</h2><div class="grid">'+''.join(folder_summary)+'</div></section>'
+    thesis_body+='<section class="section"><h2>Shared automation status</h2><p>PU v1.13 source inventory: 144/144 rule identifiers. Generic build profiles: 11/11. Source preflight and PDF technical inspector are available; full PU 144-rule rendered production compliance remains OPEN. GitHub source gates are not scientific PDF build gates.</p>'
+    thesis_body+='<p><a href="'+esc(REPO_URL+"/blob/main/registry/latex-build-profiles.json")+'">Build profiles →</a> · <a href="'+esc(REPO_URL+"/blob/main/controls/latex/pu-rule-enforcement-matrix.json")+'">144-rule enforcement roadmap →</a> · <a href="../controls/latex/index.html">Single LaTeX tower →</a></p></section></main>'
+    write(out,"thesis-infrastructure/index.html",shell("Thesis Infrastructure",thesis_body,1))
     # Unified R&D main codebase: Fabin research subpages are deployed together.
     sitebase="https://fabingurung.github.io/JP_Research-and-Development"
     fabin=next(r for r in researchers if r["slug"]=="fabin-gurung")
@@ -384,6 +429,8 @@ def main():
     data_dir=out/"data"; data_dir.mkdir()
     for src,name in [(ROOT/"registry/researchers.json","researchers.json"),(ROOT/"registry/branch-registry.json","branch-registry.json"),(ROOT/"registry/websites.json","websites.json"),(ROOT/"registry/debts.json","debts.json"),(ROOT/"controls/repository.control.json","repository-policy.json")]:
         shutil.copy2(src,data_dir/name)
+    shutil.copy2(ROOT/"registry/researcher-folder-roles.json",data_dir/"researcher-folder-roles.json")
+    shutil.copy2(ROOT/"registry/latex-build-profiles.json",data_dir/"latex-build-profiles.json")
     print(f"built {out} researchers={len(researchers)}")
 
 if __name__=="__main__": main()

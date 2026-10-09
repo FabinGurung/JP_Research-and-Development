@@ -85,3 +85,11 @@ The [public control page](https://fabingurung.github.io/JP_Research-and-Developm
 - [Git commits PRE/POST + annotated-tag-only major releases](docs/LATEX_Q1B_Q2A_Q3A_GOVERNED_CHANGE_20261009.md). Existing 106 refs remain stable. Admitted manuscript `.tex` and `.bib` may reside in this R&D repository.
 
 **Safal runnable Linux handover:** [Read the current source-reconciliation, single-template, preview/production build procedure](docs/HANDOVER_SAFAL_DAWADI_LATEX_EXECUTION_20261009.md). A successful GitHub source gate is not a generated PDF.
+
+## Thesis-wide normalized folder and document infrastructure (2026-10-09)
+
+- **[Human navigation: researcher folder roles](https://fabingurung.github.io/JP_Research-and-Development/thesis-infrastructure/)** — 11 registered, ten verified roots; RSH-004 HOLD; immutable Drive identities and alias proposals.
+- [Machine-readable existing folder registry](registry/researcher-folder-roles.json), [canonical logical folder contract](controls/researcher-folder-contract.json), [schema](schemas/researcher-folder-contract.schema.json), [gap matrix](docs/THESIS_FOLDER_NORMALIZATION_GAP_MATRIX_20261009.md).
+- [Read-only folder planner and handover generator](scripts/researchers/normalize.py) and [11 individualized handovers](docs/researcher-normalization/). No centralized Drive mass migration.
+- [Universal LaTeX source preflight](scripts/latex/universal_preflight.py), [PDF technical inspector](scripts/latex/pdf_technical_qa.py), [11 non-autonomous project profiles](registry/latex-build-profiles.json), [144-rule route ledger](controls/latex/pu-rule-enforcement-matrix.json).
+- [Path-scoped source gates](.github/workflows/researcher-source-gates.yml) do NOT generate scientific PDFs. Full university production parity and A9 Main approval remain separate HOLDs.
