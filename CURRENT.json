@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
   "repository": "FabinGurung/JP_Research-and-Development",
-  "architecture": "RESEARCHER_CONTROL_PORTAL_V1",
-  "status": "LIVE_RESEARCHER_CONTROL_PORTAL_V1",
+  "architecture": "RESEARCHER_CONTROL_PORTAL_V2_LIVING_RESEARCH_LIBRARY",
+  "status": "LIVE_CODE_AND_OWNER_NAVIGATION__SCIENTIFIC_AND_A9_GATES_SEPARATE",
   "default_branch": "main",
   "site_url": "https://fabingurung.github.io/JP_Research-and-Development/",
   "source_archive_branch": "archive/pre-researcher-control-portal-v1-20261007",
@@ -11,7 +11,7 @@
   "researcher_content_status": "VERIFIED_RESEARCHER_RECORDS_11__UNADMITTED_ARTIFACTS_RETAINED_AS_DEBTS",
   "main_content_rule": "CODE_AND_ADMITTED_MANUSCRIPT_LATEX_BIB_PLUS_MACHINE_CONTROLS",
   "portal_deployment": "GITHUB_PAGES_MAIN_ONLY",
-  "validation": "PENDING_CURRENT_HEAD_AFTER_UNIFIED_RESEARCH_SITE_RESTORATION",
+  "validation": "CURRENT_HEAD_REQUIRES_GITHUB_ACTIONS_RUN_READBACK__NEVER_INFER_PDF_CERTIFICATION",
   "branch_count": 106,
   "researcher_lane_status": "33_ACTIVE_EMPTY_CORE_LANES__SIX_NEW_SAFAL_DAWADI_AND_SUNIL_RANA",
   "website_module_count": 2,
@@ -233,5 +233,12 @@
   "owner_prompt_site_pages": 11,
   "owner_prompt_copy": "CLIENT_SIDE_ONLY_NO_AUTOMATED_EXECUTION",
   "theme_policy": "controls/website-living-library.json",
-  "owner_migration_status_schema": "schemas/researcher-migration-status.schema.json"
+  "owner_migration_status_schema": "schemas/researcher-migration-status.schema.json",
+  "previous_validation_label": "PENDING_CURRENT_HEAD_AFTER_UNIFIED_RESEARCH_SITE_RESTORATION",
+  "portal_current_code_quality_workflow": ".github/workflows/validate.yml",
+  "portal_current_deployment_workflow": ".github/workflows/pages.yml",
+  "repo_guide": "start-here/index.html",
+  "repo_migrations_deferred": "USER_DEFERRED__NO_DATABASE_OR_DRIVE_MIGRATION_IN_THIS_RUN",
+  "portal_link_check": "scripts/validate_site_links.py",
+  "portal_site_link_tests": "scripts/test_site_links.py"
 }

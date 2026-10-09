@@ -106,3 +106,18 @@ The [11 fully resolved researcher prompts](prompts/researchers/) are inert in Gi
 ### Copy individual handovers directly from the website
 
 [Open the 11-researcher handover reading desk](https://fabingurung.github.io/JP_Research-and-Development/owner-prompts/) to choose one researcher and use **Copy entire prompt**. Copying does not execute any operation; only you pasting it into that researcher's owning chat triggers a bounded governed procedure. [Schema](schemas/researcher-migration-status.schema.json) · [Release and design record](docs/OWNER_HANDOVERS_AND_LIBRARY_THEME_V2_20261009.md).
+
+## Repository-only quality run (2026-10-09)
+
+Use the [start-here operating guide](https://fabingurung.github.io/JP_Research-and-Development/start-here/) for researcher discovery, Git/code QA, owner-prompt routing, source controls, and an explicit boundary between source validation and scientific approval. Database/Drive migrations are **deferred**. No scientific source is edited by site work.
+
+Static-site regression commands:
+
+```bash
+python3 scripts/test_site_links.py
+python3 scripts/build_site.py --out dist
+python3 scripts/validate_site_links.py --site dist
+python3 scripts/validate_repo.py --site dist
+```
+
+The link checker audits internally generated portal routes and assets while keeping six historical standalone demos immutable. It makes no network requests. [Repository-only roadmap](docs/REPO_ONLY_NEXT_STEPS_20261009.md).
