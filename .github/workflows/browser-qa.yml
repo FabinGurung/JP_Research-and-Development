@@ -36,7 +36,7 @@ jobs:
         run: |
           npm install --no-save --no-package-lock playwright@1.56.1 @axe-core/playwright@4.11.0
           npx playwright install --with-deps chromium
-      - name: Exercise real browser: desktop, mobile, clipboard, WCAG and reduced motion
+      - name: 'Exercise real browser: desktop, mobile, clipboard, WCAG and reduced motion'
         run: node scripts/browser_qa.cjs
       - name: Preserve readable QA report and screenshots
         if: always()
