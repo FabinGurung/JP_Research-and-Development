@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "researcher_id": "RSH-010",
   "researcher_slug": "safal-dawadi",
-  "shared_control": "controls/latex.control.json",
+  "shared_control": "controls/latex/tower.json",
   "shared_package": "controls/latex/",
   "project_legacy_control": "controls/projects/safal-dawadi.latex.json",
   "source_admission": "HOLD",
@@ -28,5 +28,9 @@
     "version": "v1.9",
     "state": "LOCAL_SEQ15_REVIEW_HOLD__NOT_MANIFEST_REPLACEMENT",
     "related_data": "source-baseline.json"
-  }
+  },
+  "shared_template": "controls/latex/template/pumlsc-shared.sty",
+  "local_extensions": [],
+  "user_override_policy": "ONLY_REGISTERED_REASONED_DELTA_AT_CENTRAL_101_PLUS_CHANGE_ID",
+  "project_config_kind": "PARAMETERS_AND_QA_POINTERS_NOT_ANOTHER_TEMPLATE"
 }

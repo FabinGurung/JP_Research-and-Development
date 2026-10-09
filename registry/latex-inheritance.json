@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-ALL-RESEARCHER-INHERITANCE-001",
+  "authority": "controls/latex/tower.json",
+  "template": "controls/latex/template/pumlsc-shared.sty",
+  "policy": "ALL_REGISTERED_RESEARCHERS_CONSUME_EXACT_SHARED_TEMPLATE",
+  "auto_enrolled_from": "registry/researchers.json",
+  "researchers": [
+    {
+      "researcher_id": "RSH-001",
+      "slug": "fabin-gurung",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-002",
+      "slug": "saugat-paneru",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-003",
+      "slug": "nabin-bista",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-004",
+      "slug": "safal-thapa",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-005",
+      "slug": "shisheer-kc",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-006",
+      "slug": "binay-karki",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-007",
+      "slug": "anil-neupane",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-008",
+      "slug": "rupesh-man-pradhan",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-009",
+      "slug": "krishna-kumar-gupta",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-010",
+      "slug": "safal-dawadi",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": "researchers/safal-dawadi/latex/control.json",
+      "configuration_status": "PROJECT_CONFIG_PRESENT__SOURCE_ADMISSION_HOLD",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    },
+    {
+      "researcher_id": "RSH-011",
+      "slug": "sunil-rana",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": []
+    }
+  ]
+}

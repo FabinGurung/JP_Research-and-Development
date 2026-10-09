@@ -58,8 +58,8 @@ if len([x for x in observed_branch_rows if x.get("category")=="researcher-templa
     errors.append("legacy 33 researcher lanes must not be falsely promoted to source")
 if len([x for x in observed_branch_rows if x.get("category")=="resource"])!=16:
     errors.append("16 versioned resource branches missing from inventory")
-if latex_policy.get("project_overrides",{}).get("safal-dawadi")!="controls/projects/safal-dawadi.latex.json":
-    errors.append("Safal scoped LaTeX control not routed")
+if latex_policy.get("source_code")!="controls/latex/tower.json" or latex_policy.get("status")!="ALIAS_ROUTING_ONLY_NOT_SECOND_TOWER":
+    errors.append("legacy LaTeX alias is not a single-tower route")
 if safal_policy.get("researcher_id")!="RSH-010":
     errors.append("Safal scoped LaTeX researcher mismatch")
 if safal_policy.get("branches",{}).get("shared_latex_control_release")!="resource/control/latex/v003-20261009":
@@ -166,7 +166,7 @@ required_latex=[
 for p in required_latex:
     if not (ROOT/p).is_file(): errors.append(f"required LaTeX bridge missing: {p}")
     elif p.endswith(".json"): load(p)
-if latex_policy.get("control_id")!="RD-CONTROL-LATEX-001" or latex_policy.get("control_version")!="1.2.0":
+if latex_policy.get("control_id")!="RD-CONTROL-LATEX-001" or latex_policy.get("control_version")!="2.0.0":
     errors.append("LaTeX control identity/version failed")
 if latex_policy.get("shared_package")!="controls/latex/":
     errors.append("shared LaTeX inheritance path failed")
@@ -185,7 +185,7 @@ if not {"PU-FMT-087","PU-FMT-097","PU-FMT-143"} <= {x.get("id") for x in rul.get
     errors.append("key PU migration/overfull/immutable rule IDs missing")
 if mig.get("cutover")!="NOT_APPROVED" or mig.get("format_rule_ids_full_automated_enforcement")!=0:
     errors.append("unearned PU parity promotion")
-if scoped.get("researcher_id")!="RSH-010" or scoped.get("shared_control")!="controls/latex.control.json":
+if scoped.get("researcher_id")!="RSH-010" or scoped.get("shared_control")!="controls/latex/tower.json":
     errors.append("Safal inheritance identity/control mismatch")
 if scoped.get("source_admission")!="HOLD" or scoped.get("scientific_approval")!="HOLD" or scoped.get("release_ready") is not False:
     errors.append("Safal scientific/source admission must remain HOLD")
@@ -212,6 +212,15 @@ if args.site:
                 errors.append(f"latex portal missing section {term}")
         except FileNotFoundError: pass
 
+# Single canonical shared-template and per-researcher extension validation
+import sys
+shared_test=subprocess.run([sys.executable,str(ROOT/"scripts/latex/validate_shared.py")],cwd=ROOT,text=True,capture_output=True)
+if shared_test.returncode!=0:
+    errors.append("shared template inheritance check failed: "+(shared_test.stdout+shared_test.stderr).strip()[:3000])
+if args.site:
+    single_page=ROOT/args.site/"controls/latex/index.html"
+    if single_page.exists() and "One template for every researcher" not in single_page.read_text(encoding="utf-8"):
+        errors.append("canonical shared LaTeX website section missing")
 if errors:
     print("JP R&D VALIDATION: FAIL")
     for e in errors: print("- "+e)

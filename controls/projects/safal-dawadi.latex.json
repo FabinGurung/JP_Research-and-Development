@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0.0",
-  "control_id": "RD-LATEX-SAFAL-001",
+  "control_id": "RD-LATEX-SAFAL-LEGACY-PROFILE-001",
   "researcher_id": "RSH-010",
   "researcher_slug": "safal-dawadi",
-  "status": "CONTROL_PREPARED__SOURCE_NOT_ADMITTED__COMPILE_NOT_ENABLED",
+  "status": "READ_ONLY_LEGACY_PROFILE__SOURCE_NOT_ADMITTED",
   "title": "Assessment of Rework, Its Causes and Impacts in RCC Building Construction Projects of Pokhara Metropolitan City",
   "original_drive": {
     "project_root": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP",
@@ -109,5 +109,9 @@
     "source_sha256_reported": "67703abbce94b9d006f364148d84b12edd87dcd887cb5d00b7375513c8e713fd",
     "pdf_sha256_reported": "e3b099d4b21e4141daf9f63c5064c540654999407e41d4391a5455f1c21d5187"
   },
-  "manuscript_historical_lane": "Existing manuscript v1.9 fields represent later 42-page QA review, NOT the current controlled Midterm v1.2 source-manifest candidate."
+  "manuscript_historical_lane": "Existing manuscript v1.9 fields represent later 42-page QA review, NOT the current controlled Midterm v1.2 source-manifest candidate.",
+  "role": "HISTORICAL_EVIDENCE_AND_COMPATIBILITY_BUILD_PROFILE_NOT_LATEX_CONTROL_TOWER",
+  "canonical_tower": "controls/latex/tower.json",
+  "shared_template": "controls/latex/template/pumlsc-shared.sty",
+  "original_control_id": "RD-LATEX-SAFAL-001"
 }

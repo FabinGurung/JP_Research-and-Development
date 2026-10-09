@@ -3,14 +3,14 @@
   "inventory_id": "RD-BRANCH-INVENTORY-20261009-v002",
   "observed_date": "2026-10-09",
   "repository_full_name": "FabinGurung/JP_Research-and-Development",
-  "observed_branch_count": 104,
+  "observed_branch_count": 105,
   "counts": {
     "archive": 49,
     "production": 1,
     "researcher-template": 33,
     "website-marker": 2,
     "resource": 16,
-    "snapshot": 3
+    "snapshot": 4
   },
   "branches": [
     {
@@ -1360,6 +1360,19 @@
       "primary_source_path": "controls/latex.control.json",
       "source_status": "IMMUTABLE_ROLLBACK_REF",
       "version": "v003",
+      "owner": "R&D",
+      "alias_of": null,
+      "protected": false,
+      "observation": "PROVIDER_READBACK_2026-10-09"
+    },
+    {
+      "name": "snapshot/20261009/rnd-main/v004-pre-single-latex-tower",
+      "commit_sha": "3562265a89a6c42ce077a3959b6377d8ca570d62",
+      "category": "snapshot",
+      "purpose": "Immutable PRE checkpoint before single shared R&D manuscript template refactor",
+      "primary_source_path": "controls/latex/tower.json",
+      "source_status": "IMMUTABLE_ROLLBACK_REF",
+      "version": "v004",
       "owner": "R&D",
       "alias_of": null,
       "protected": false,

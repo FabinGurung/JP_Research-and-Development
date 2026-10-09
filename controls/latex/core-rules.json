@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LTX-CORE-REGISTRY-001",
+  "authority": "controls/latex/tower.json",
+  "version": "2.0.0",
+  "namespace": "RD-LTX-CORE-001..100",
+  "status": "12_CONCRETE_COMMON_RULES__FULL_100_NOT_CLAIMED",
+  "rules": [
+    {
+      "id": "RD-LTX-CORE-001",
+      "key": "ONE_CANONICAL_SOURCE",
+      "summary": "All researchers inherit one shared LaTeX template without copying it",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-002",
+      "key": "EXACT_FONT",
+      "summary": "Production font exact Times New Roman from licensed private environment; fallback preview only",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-003",
+      "key": "PAGE_GEOMETRY",
+      "summary": "A4 single-sided, 3.0cm left and 2.5cm others",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-004",
+      "key": "BODY_TYPOGRAPHY",
+      "summary": "12pt, 1.5 leading; cannot reduce dimensions just to silence warnings",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-005",
+      "key": "CITATION_CONFIG",
+      "summary": "Explicit researcher chosen IEEE, Harvard or APA7; no default",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-006",
+      "key": "SOURCE_FIRST",
+      "summary": "PDF is immutable derived output, all fixes performed in editable source",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-007",
+      "key": "STAGE_AND_PRELIMS",
+      "summary": "Approved stage/preliminary sequence/numbering and semantic TOC/LOT/LOF verified per project",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-008",
+      "key": "SCIENCE_ISOLATION",
+      "summary": "Research claims, administrative metadata, sources and supervisor approvals cannot inherit from other researcher",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-009",
+      "key": "QA_GATES",
+      "summary": "Compilation, font/geometry checks, full render, scientific approval, Drive readback independent",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-010",
+      "key": "REUSE_AND_EXTENSIONS",
+      "summary": "Core template never duplicated; registered project-only deltas only",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-011",
+      "key": "REVERSE_FEEDBACK",
+      "summary": "Every visual template change creates an amendment in ONE central ledger; global fixes update the shared template",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-012",
+      "key": "VERSION_AND_PROVIDER_READBACK",
+      "summary": "A previous commit is rollback; new commit and workflow must pass; never claim A9 Main sync or scientific approval from CI alone",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "PARTIAL_PUBLIC_SAFE_CONTRACT",
+      "provenance": [
+        "controls/latex/format-authorities.json",
+        "controls/latex/README.md"
+      ]
+    }
+  ],
+  "reserved_unused": "013..100 UNUSED; do not fabricate requirements to fill numbers",
+  "academic_pu_rules": "Independent PU-FMT series indexed at controls/latex/pu-msc-format.rules.json; no numbering collision"
+}

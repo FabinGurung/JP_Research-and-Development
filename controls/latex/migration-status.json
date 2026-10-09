@@ -7,7 +7,7 @@
   "pre_snapshot_branch": "snapshot/20261009/rnd-main/v003-pre-latex-governance-bridge",
   "pre_snapshot_sha": "7301928ed48344f18adcc54078ccbdbbc4a80ea2",
   "authorization": "USER_EXPLICIT_EXECUTION_HANDOVER_2026-10-09; EXISTING DRIVE FORMAT SOURCE NOT MODIFIED",
-  "controls_version": "1.2.0",
+  "controls_version": "2.0.0",
   "format_rule_ids_observed": 144,
   "format_rule_ids_interpreted": 16,
   "format_rule_ids_full_automated_enforcement": 0,
@@ -22,7 +22,9 @@
     "verify public Pages Actions after commit",
     "browser-level rendered design QA not automated",
     "Reconcile 2026-10-08 Local seq15 v1.9 QA review against October 2026 source manifest's v1.2 controlled Midterm preview; the two release streams cannot be silently merged.",
-    "Main POST LocalLibraryRegistry Safal row43 still reports seq2/2 while Local SyncState reports seq15/cursor5; do not assert Main seq15 ACK."
+    "Main POST LocalLibraryRegistry Safal row43 still reports seq2/2 while Local SyncState reports seq15/cursor5; do not assert Main seq15 ACK.",
+    "Validate all 11 real researcher full manuscript imports against one physical template once their sources are legally admitted; current file registry only confirms pointers.",
+    "Collect and promote future source-level PDF fixes centrally using amendment change register and per-researcher exceptions; no production PDF accepted from metadata-only checks."
   ],
   "source_revisions": {
     "pu": "AHj4eMScva50X4FQUEYNRGvsY7D5cnesAna_6jom01-4D71ShJsZX1WqDDiYV3VOOmKK1S84-jLi2R7lNOwZvJJKKSGnNOKiK4QoyDJIyh6b",
@@ -41,5 +43,14 @@
   },
   "control_release_ref": "resource/control/latex/v003-20261009",
   "control_release_sha": "7e7e93f958273b4588a7a8535da41afa3cada7bc",
-  "control_release_status": "VERIFIED_GIT_SOURCE_REF__NOT_FULL_PU_RULE_PARITY"
+  "control_release_status": "VERIFIED_GIT_SOURCE_REF__NOT_FULL_PU_RULE_PARITY",
+  "single_tower": {
+    "canonical": "controls/latex/tower.json",
+    "template": "controls/latex/template/pumlsc-shared.sty",
+    "previous_route_alias": "controls/latex.control.json",
+    "researcher_count": 11,
+    "extension_count": 0,
+    "amendment_next": 101,
+    "status": "IMPLEMENTED_PUBLIC_SAFE_INHERITANCE__PRIVATE_SOURCE_COMPILATION_NOT_DONE"
+  }
 }

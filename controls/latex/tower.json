@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-CONTROL-LATEX-001",
+  "version": "2.0.0",
+  "status": "ACTIVE_SINGLE_CANONICAL_CONTROL__FULL_PU_FORMAT_PARITY_PENDING",
+  "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
+  "repo": "FabinGurung/JP_Research-and-Development",
+  "authority_path": "controls/latex/tower.json",
+  "template_entry": "controls/latex/template/pumlsc-shared.sty",
+  "instructions_path": "controls/latex/README.md",
+  "source_of_governance": "RND_MAIN_ONLY",
+  "rules": {
+    "core": "controls/latex/core-rules.json",
+    "external_pu_evidence": "controls/latex/pu-msc-format.rules.json",
+    "dependencies": [
+      "controls/latex/format-authorities.json",
+      "controls/latex/build-contract.json",
+      "controls/latex/qa-contract.json",
+      "controls/latex/release-contract.json"
+    ],
+    "template": "controls/latex/template/pumlsc-shared.sty",
+    "qa": "controls/latex/qa-contract.json"
+  },
+  "inheritance_registry": "registry/latex-inheritance.json",
+  "amendment_register": "controls/latex/change-register.json",
+  "extension_index": "controls/latex/extension-registry.json",
+  "conventions": {
+    "core_namespace": "RD-LTX-CORE-001 through RD-LTX-CORE-100, assigned only when actual rules implemented",
+    "amendment_namespace": "RD-LTX-CHG-101 onwards",
+    "first_unallocated_change_number": 101,
+    "numbering_note": "The 1-100 then 101 numbering is a namespace convention, not proof that one hundred format requirements are implemented. PU-FMT-001..PU-FMT-145 is a separate authority ID space."
+  },
+  "no_duplication": [
+    "No researcher maintains a copy or fork of the global LaTeX template",
+    "Each researcher consumes the SAME current canonical tower and shared pumlsc-shared.sty",
+    "Researcher JSON is a parameter/metadata profile and optional explicit extensions, never a second tower",
+    "The legacy controls/latex.control.json is a routing alias only",
+    "Historical controls/projects/safal-dawadi.latex.json is a compatibility evidence profile only; no formatting code or global rules originate there"
+  ],
+  "change_flow": [
+    "Record PDF defect and reproducible source/before-after evidence in researcher QA trace (private Drive when required)",
+    "Add proposed change to the ONE central change-register.json with next ID >= 101",
+    "Classify as GLOBAL_CANDIDATE or RESEARCHER_ONLY and cite affected researcher, cause, rule IDs, source file(s) and evidence",
+    "For GLOBAL: edit the SINGLE shared .sty/template, update core rule/revision, run validation and all available researcher regression gates; production visual checks remain required",
+    "For RESEARCHER_ONLY: register explicit owner and reason in extension-registry.json, store only the small delta in allowed researcher extensions path; no copied base template",
+    "If a formerly local fix is universally applicable, promote its implementation to the canonical shared template and mark the local amendment superseded; never create independent permanent base copies",
+    "Commit Git change and provider readback; scientific approval and final PDF release separate"
+  ],
+  "change_promotion": "EVERY_VISUAL_TEMPLATE_CHANGE_REQUIRES_CENTRAL_LEDGER_ENTRY__GLOBAL_PROMOTION_REQUIRES_VALIDATION__SCOPED_EXCEPTIONS_ARE_REGISTERED",
+  "bibliography": "Explicit project selection; NO global default",
+  "source_authority": "Drive PU v1.13 approved format remains external historical/academic source until complete parity, not another Git operational tower",
+  "a7_role": "ID_ROUTING_ONLY__NEVER_OWNS_LATEX_TOWER",
+  "drive_role": "University originals, source evidence, compiled PDFs, A9 private registries (no active Git tower clone)",
+  "current_release_ref": "resource/control/latex/v003-20261009",
+  "release_scope": "historical versioned ref; main is latest operational control; versioned Git refs are not parallel towers",
+  "public_source_safety": "Do not import licensed Times New Roman files, private evidence, photographs, scientific data or compiled PDFs"
+}

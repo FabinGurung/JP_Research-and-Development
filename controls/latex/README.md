@@ -1,23 +1,31 @@
-# JP R&D shared LaTeX control tower · 1.2.0
+# THE SINGLE R&D LATEX CONTROL TOWER — 2.0.0
 
-**Operational owner:** R&D GitHub `main`; **global router:** A7; **original academic authority:** approved PU format v1.13 and thesis-wide Drive v1.23; **project scientific authority:** researcher/source manifest.
+**There is one canonical operational owner:** [tower.json](tower.json) on R&D `main`. [pumlsc-shared.sty](template/pumlsc-shared.sty) is the one reusable template. Other JSON files in this directory are **subordinate modules of this single tower**, not separate authorities.
 
-This is a **selective public-safe executable bridge**, **not** a certified replacement for the full Drive rules or private A9 libraries. Read `format-authorities.json` first, then `pu-msc-format.rules.json`, `build-contract.json`, `qa-contract.json`, `release-contract.json`, and `migration-status.json`. Use the researcher's own configuration only after those shared controls.
+## One template for every researcher
 
-## Inheritance
+[registry/latex-inheritance.json](../../registry/latex-inheritance.json) enumerates all 11 registered researchers and points each to the **same exact template path**. Project metadata may change (name, stage, bibliography style, current source manifest, approved project-only extension), but formatting source may not fork.
 
-A7 bootstrap → `A7_MODULE.json` → `controls/latex.control.json` → this package → researcher `control.json` → admitted manuscript → source-level XeLaTeX/Biber build → independent technical/render/scientific gates → Drive PDF readback → separately governed A9 Local/Main registration.
+The historical `controls/latex.control.json` file is an **alias only** and `controls/projects/safal-dawadi.latex.json` retains Safal's historic evidence/QA pointers for compatibility, **not an additional template**. R&D shares source; A7 only routes globally and owns no LaTeX tower. Drive remains the authoritative academic-original source until full parity, not a second executable tower in Git.
 
-## Rules
+## A researcher's compiled-PDF discovery feeds the canonical template
 
-- No global bibliography default. Select IEEE, Harvard or APA 7 explicitly per project.
-- Exact Times New Roman is required for production; never publish font binaries or private manuscript data in Git.
-- Do not edit compiled PDFs; edit source and regenerate.
-- No automatically certified scientific, format or publication success from a passing source gate.
-- Cite Drive originals, keep stable IDs and previous releases. Unmapped PU rules remain authoritative at the Drive source.
+1. Record the original visual/source issue and exact before/after evidence (private evidence stays in Drive).
+2. Allocate the next `RD-LTX-CHG-101+` in [change-register.json](change-register.json); classify GLOBAL_CANDIDATE or RESEARCHER_ONLY.
+3. Global correction: amend `template/pumlsc-shared.sty`, [core-rules.json](core-rules.json) and QA centrally; run validator and independent full render checks where available. Bump the canonical tower version and Git release after QA.
+4. Researcher-only correction: register a reason/owner in [extension-registry.json](extension-registry.json), then add only the delta under the permitted researcher's `latex/extensions/` path. The base still comes from central.
+5. If an exception later proves universal, promote it into shared template and mark original extension superseded. Every registered researcher then obtains it through the one shared path.
 
-[PU original](https://docs.google.com/document/d/1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys/edit) · [Thesis tower](https://docs.google.com/document/d/1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A/edit) · [R&D source-control contract](../latex.control.json).
+The `001..100` base and `101+` change numbering is an internal *illustrative namespace*: 12 actual shared rules currently exist; it does **not** claim 100 completed rules. It does not override separate original PU-FMT rule IDs.
 
-## Current scoped status
+## Safe production boundary
 
-Shared infrastructure prepared; complete rule parity, Safal source admission, private exact-font build and A9 release are **HOLD**. See `migration-status.json`.
+- No hidden universal citation style. IEEE/Harvard/APA7 selected in each project.
+- Production exact Times New Roman from private licensed environment; compatible fallback is preview only.
+- Editable source is canonical; fix source, recompile, run full-page QA. PDFs are immutable derived evidence in Drive.
+- Passing source/CI tests is **not** scientific approval, production format certification, or A9 Main ACK.
+- [Original PU v1.13](https://docs.google.com/document/d/1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys/edit) remains format evidence until full parity, and [thesis control](https://docs.google.com/document/d/1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A/edit) remains private-source governance evidence.
+
+### Single tower's implementation components
+
+[tower.json](tower.json) · [core-rules.json](core-rules.json) · [PU rule index](pu-msc-format.rules.json) · [authorities](format-authorities.json) · [build contract](build-contract.json) · [QA](qa-contract.json) · [release](release-contract.json) · [amendment register](change-register.json) · [extension index](extension-registry.json) · [migration status](migration-status.json).

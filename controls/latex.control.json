@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "2.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "status": "ACTIVE",
+  "status": "ALIAS_ROUTING_ONLY_NOT_SECOND_TOWER",
   "branch_pattern": "researcher/<slug>/latex",
-  "authority": "GIT_FOR_LATEX_SOURCE_GOOGLE_DRIVE_FOR_COMPILED_PDF",
+  "authority": "controls/latex/tower.json",
   "git_content": [
     ".tex",
     ".bib",
@@ -22,59 +22,7 @@
     "duplicated Drive artifacts"
   ],
   "output_pointer": "lane/output.json",
-  "workflow": [
-    "read shared control",
-    "fetch branch",
-    "edit LaTeX source",
-    "compile and QA",
-    "upload working PDF to Drive",
-    "read back Drive ID/link",
-    "update lane/output.json",
-    "commit"
-  ],
-  "project_overrides": {
-    "safal-dawadi": "controls/projects/safal-dawadi.latex.json"
-  },
-  "control_plane_split": {
-    "A7": "Global semantic IDs, provider-routing, privacy and cross-repository edges",
-    "RND": "Shared executable LaTeX rules, QA and source build recipes; specific project control",
-    "DRIVE": "Original scientific decisions, official PU formatting authority, restricted resources, generated PDFs, A9 Local/Main",
-    "GIT_LANES": "Three functional refs per researcher; whole repository commit identity"
-  },
-  "A9_Drive_originals": {
-    "thesis_tower": "1jc6WIqXbAixAYYndeB2Idw59fAzjBbnDKlq49THeu_A",
-    "pu_format_v1_13": "1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys",
-    "migration_status": "SELECTIVE_BRIDGE_NOT_FULL_PRIVATE_A9_CONTROL_PARITY"
-  },
-  "production_rules": {
-    "pdf_compiler_order": [
-      "xelatex",
-      "biber",
-      "xelatex",
-      "xelatex"
-    ],
-    "pu_specific": [
-      "A4 single sided",
-      "Left 3cm; other margins 2.5cm",
-      "12pt exact Times New Roman 1.5 spacing",
-      "Left aligned chapters, no global indent, no split-word hyphenation",
-      "Approved preliminary Roman numbering; abstract 300–350 words",
-      "Explicit bibliography style per researcher, references, table/caption requirements"
-    ],
-    "stages": [
-      "Source admission",
-      "Licensing/dependencies",
-      "Compile",
-      "Technical PDF QA",
-      "Rendered visual QA",
-      "Human scientific review",
-      "Drive upload/readback",
-      "A9 Local registration",
-      "Optional Main ACK"
-    ],
-    "condition": "A green source gate is not a successful production compilation; no PDF release without all required provider QA"
-  },
-  "control_version": "1.2.0",
+  "control_version": "2.0.0",
   "shared_package": "controls/latex/",
   "rule_registry": "controls/latex/pu-msc-format.rules.json",
   "format_authorities": "controls/latex/format-authorities.json",
@@ -85,5 +33,8 @@
   "inheritance": "A7_MODULE.json -> shared LaTeX tower -> researcher project config -> admitted source -> build QA -> Drive readback -> A9 separately",
   "pu_format_parity": "PARTIAL_BRIDGE_FULL_PRIVATE_AND_FORMAT_PARITY_HOLD",
   "shared_control_release": "resource/control/latex/v003-20261009",
-  "shared_control_release_sha": "7e7e93f958273b4588a7a8535da41afa3cada7bc"
+  "shared_control_release_sha": "7e7e93f958273b4588a7a8535da41afa3cada7bc",
+  "compatibility_note": "Only route old readers to controls/latex/tower.json; operational source is the canonical tower. No own rules or variants.",
+  "project_config_router": "registry/latex-inheritance.json",
+  "source_code": "controls/latex/tower.json"
 }

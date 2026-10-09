@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-AUTHORITIES-001",
   "recorded_on": "2026-10-09",
-  "control_version": "1.2.0",
+  "control_version": "2.0.0",
   "precedence": [
     "approved project and official university source for scientific facts",
     "Drive thesis-wide controller for private records and reproducibility",
@@ -39,12 +39,13 @@
     {
       "role": "RND_SHARED_CONTROL",
       "repository": "FabinGurung/JP_Research-and-Development",
-      "path": "controls/latex.control.json",
+      "path": "controls/latex/tower.json",
       "status": "OPERATIONAL_CODE_OWNER"
     }
   ],
   "privacy": "Source documents stay on Drive. Only concise machine-rule interpretations and stable IDs are public. A Drive link is not public distribution approval.",
   "effective_date": "2026-10-09",
   "full_format_parity": "HOLD_EXACT_ALL_RULE_COMPARISON_PENDING",
-  "approval_boundary": "Original university and approved Drive controls prevail on unresolved differences"
+  "approval_boundary": "Original university and approved Drive controls prevail on unresolved differences",
+  "ownership_statement": "Only controls/latex/tower.json owns executable manuscript governance; Drive originals are historical academic authority and A7 routes semantic entities."
 }

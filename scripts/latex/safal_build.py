@@ -6,7 +6,10 @@ import argparse, hashlib, json, os, re, shutil, subprocess, tempfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
-CONTROL=ROOT/"controls/projects/safal-dawadi.latex.json"
+CONTROL=ROOT/"controls/projects/safal-dawadi.latex.json"  # historical evidence and build metadata only
+CANONICAL=ROOT/"controls/latex/tower.json"
+SHARED=ROOT/"controls/latex/template/pumlsc-shared.sty"
+RESEARCHER_CONFIG=ROOT/"researchers/safal-dawadi/latex/control.json"
 FONT_FILES=("times.ttf","timesbd.ttf","timesi.ttf","timesbi.ttf")
 
 def fail(msg):
@@ -32,6 +35,12 @@ def main():
     p.add_argument("--mode",choices=("check","compile"),default="check")
     p.add_argument("--output-dir",help="Private temporary candidate output directory for manual publication review")
     args=p.parse_args()
+    tower=json.loads(CANONICAL.read_text(encoding="utf-8"))
+    configured=json.loads(RESEARCHER_CONFIG.read_text(encoding="utf-8"))
+    if tower.get("control_id")!="RD-CONTROL-LATEX-001" or configured.get("shared_control")!="controls/latex/tower.json":
+        fail("missing or divergent SINGLE shared LaTeX authority")
+    if configured.get("shared_template")!="controls/latex/template/pumlsc-shared.sty" or not SHARED.is_file():
+        fail("shared LaTeX template missing or researcher source not linked")
     c=json.loads(CONTROL.read_text(encoding="utf-8"))
     if c.get("researcher_id")!="RSH-010":
         fail("wrong researcher")
@@ -43,7 +52,13 @@ def main():
         fail("verified reconciled and privacy-cleared Git source has not been admitted")
     source=ROOT/c["build"]["source_root"]
     entry=source/"manuscript/main.tex"
+    # Central shared template must be loaded in any admitted manuscript.
+    # Never copy the shared style to the researcher directory.
+    for stray in source.rglob("pumlsc-shared.sty"):
+        fail("duplicated shared template in researcher source: "+str(stray.relative_to(ROOT)))
     if not entry.is_file(): fail("admitted Git main.tex not found")
+    if r"\\usepackage{pumlsc-shared}" not in entry.read_text(encoding="utf-8"):
+        fail("admitted source must import canonical pumlsc-shared package")
     if args.mode=="check":
         print("SOURCE_GATE=SOURCE_PRESENT__NO_THESIS_PDF_COMPILED")
         return
@@ -67,7 +82,7 @@ def main():
         for n in FONT_FILES:
             shutil.copy2(Path(fdir)/n,texdir/n)
         env=os.environ.copy()
-        env["TEXINPUTS"]=str(tree)+os.pathsep+str(tree/"bibliography")+os.pathsep+env.get("TEXINPUTS","")
+        env["TEXINPUTS"]=str(SHARED.parent)+os.pathsep+str(tree)+os.pathsep+str(tree/"bibliography")+os.pathsep+env.get("TEXINPUTS","")
         env["BIBINPUTS"]=str(tree/"bibliography")+os.pathsep+env.get("BIBINPUTS","")
         sequence=[
             ["xelatex","-interaction=nonstopmode","-halt-on-error","main.tex"],

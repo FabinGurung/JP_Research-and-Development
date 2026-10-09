@@ -13,7 +13,8 @@
     "scientific_approval",
     "citation_style",
     "document_stage",
-    "current_source_manifest"
+    "current_source_manifest",
+    "shared_template"
   ],
   "properties": {
     "schema_version": {
@@ -28,7 +29,7 @@
       "pattern": "^[a-z0-9-]+$"
     },
     "shared_control": {
-      "const": "controls/latex.control.json"
+      "const": "controls/latex/tower.json"
     },
     "source_admission": {
       "enum": [
@@ -94,6 +95,21 @@
     },
     "current_manifest_candidate": {
       "type": "object"
+    },
+    "shared_template": {
+      "const": "controls/latex/template/pumlsc-shared.sty"
+    },
+    "local_extensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "user_override_policy": {
+      "type": "string"
+    },
+    "project_config_kind": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
+  "authority": "controls/latex/tower.json",
+  "next_number": 101,
+  "namespace": "RD-LTX-CHG-101+",
+  "entries": [],
+  "required_fields": [
+    "change_id",
+    "researcher_id",
+    "classification",
+    "summary",
+    "source_paths",
+    "before_after_qa_evidence",
+    "pu_rule_references",
+    "disposition",
+    "target_shared_rule",
+    "git_commit_sha_after_merge"
+  ],
+  "classifications": [
+    "GLOBAL_CANDIDATE",
+    "RESEARCHER_ONLY"
+  ],
+  "dispositions": [
+    "PROPOSED",
+    "VALIDATED",
+    "PROMOTED_GLOBAL",
+    "ACCEPTED_LOCAL",
+    "REJECTED",
+    "SUPERSEDED"
+  ],
+  "semantics": "Every formatting-related source repair discovered in a researcher PDF must be proposed here before its release is called governed. Global repair modifies only canonical shared style/rules after tests; scoped variation gets a registered extension. No automatic unreviewed propagation to other theses.",
+  "science_boundary": "Scientific content changes do not become global LaTeX appearance rules"
+}

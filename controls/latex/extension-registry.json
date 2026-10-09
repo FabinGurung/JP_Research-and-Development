@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-LATEX-RESEARCHER-EXTENSIONS-001",
+  "authority": "controls/latex/tower.json",
+  "registered": [],
+  "allowed_root_pattern": "researchers/<slug>/latex/extensions/",
+  "required_status": "EXPLICIT_OWNER_AND_CENTRAL_AMENDMENT_ENTRY",
+  "addition_rule": "Only genuinely project-specific behavior may live here; never copy pumlsc-shared.sty or the global 1..100 base.",
+  "numbering": "Extensions reference central RD-LTX-CHG-101+ IDs; no new independent project-specific template",
+  "promotion": "If a local delta is generalized, remove/supersede it and update one shared central template"
+}

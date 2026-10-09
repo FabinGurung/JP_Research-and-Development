@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{pumlsc-shared}[2026/10/09 v2.0 One shared R&D PU manuscript base]
+% RD-CONTROL-LATEX-001: ONE centrally maintained style for every researcher.
+% Do NOT copy this .sty into researchers/<slug>/latex.
+% The public-safe baseline below does not certify the full PU-FMT catalog.
+\RequirePackage{iftex}
+\ifXeTeX\else
+  \PackageError{pumlsc-shared}{XeLaTeX is required}{Select XeLaTeX. No silent engine fallback.}
+\fi
+\RequirePackage{geometry}
+\geometry{a4paper,twoside=false,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\RequirePackage{fontspec}
+% Licensed Times New Roman must be available at production compile time.
+% Never place proprietary font binaries in public Git or a student ZIP.
+\setmainfont{Times New Roman}
+\RequirePackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\raggedbottom
+\providecommand{\bibname}{REFERENCES}
+\renewcommand{\bibname}{REFERENCES}
+\providecommand{\refname}{REFERENCES}
+\renewcommand{\refname}{REFERENCES}
+% Stage-specific formal preliminary ordering needs approved project metadata.
+\newcommand{\PUStartPreliminaries}{\pagenumbering{roman}}
+\newcommand{\PUStartMainBody}{\clearpage\pagenumbering{arabic}}
+% Citation style, title/approval pages, figures and science remain project-specific.
+% No hidden bibliography default and no enforced student/supervisor identity.

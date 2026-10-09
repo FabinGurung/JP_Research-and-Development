@@ -22,7 +22,7 @@ https://fabingurung.github.io/JP_Research-and-Development/
 ## Shared controls
 
 - `controls/discussion.control.json`
-- `controls/latex.control.json`
+- **ONE canonical LaTeX manuscript tower and shared template:** [`controls/latex/tower.json`](controls/latex/tower.json) → [`controls/latex/template/pumlsc-shared.sty`](controls/latex/template/pumlsc-shared.sty). Legacy `controls/latex.control.json` is only a route alias.
 - `controls/presentation.control.json`
 - `controls/repository.control.json`
 
