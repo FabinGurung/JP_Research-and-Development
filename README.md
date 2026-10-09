@@ -48,3 +48,12 @@ python scripts/validate_repo.py --site dist
 - Interactive historical demos: `/methodology-demo/`, `/hydropower-nepal-map/`, `/hydropower-data-schema/`, `/hydropower-data-tables/`, `/hydropower-data-graph/`.
 
 The static demos are reused from archived code blobs, not a claim that all archived Next.js pages were migrated. A researcher-specific Git branch snapshots the whole repository; the primary site is one build from `main`. [A7 single bootstrap](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json).
+
+## Current roadmap and A7 handover (2026-10-09)
+
+- **Live roadmap:** https://fabingurung.github.io/JP_Research-and-Development/roadmap/
+- **Editable source:** [registry/roadmap.json](registry/roadmap.json), [docs/ROADMAP.md](docs/ROADMAP.md)
+- **A7 cross-chat handover:** [docs/HANDOVER_TO_A7_20261009.md](docs/HANDOVER_TO_A7_20261009.md)
+- **Global A7 roadmap:** https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html
+
+The roadmap distinguishes delivered work, scientific holds, Git source admission still pending, and private A9 library migration **not yet performed**. Do not treat the public site as scientific or private Main Library authority.

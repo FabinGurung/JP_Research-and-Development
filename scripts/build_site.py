@@ -25,7 +25,7 @@ def evidence_html(debt):
 
 def shell(title, body, depth=0):
     prefix="../"*depth
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}how-to/index.html">How to</a></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)} · JP R&D</title><link rel="stylesheet" href="{prefix}assets/styles.css"></head><body><header class="topbar"><div class="wrap nav"><strong>JP R&D</strong><nav class="navlinks"><a href="{prefix}index.html">Home</a><a href="{prefix}researchers/index.html">Researchers</a><a href="{prefix}workspace/index.html">Workspace</a><a href="{prefix}controls/index.html">Controls</a><a href="{prefix}debts/index.html">Debts</a><a href="{prefix}roadmap/index.html">Roadmap</a><a href="{prefix}how-to/index.html">How to</a></nav></div></header>{body}<footer class="wrap footer">JP Research & Development · code + controls + pointers · working artifacts remain in Google Drive.</footer></body></html>"""
 
 def write(out, rel, content):
     p=out/rel; p.parent.mkdir(parents=True,exist_ok=True); p.write_text(content,encoding="utf-8")
@@ -62,8 +62,33 @@ def main():
         src=legacy/site_name
         if src.is_dir(): shutil.copytree(src,out/site_name,dirs_exist_ok=True)
     home_cards="".join(f'<article class="card"><span class="badge">{esc("TITLE VERIFIED · OTHER POINTERS HOLD" if r["qa_status"]=="TITLE_VERIFIED_OTHER_POINTERS_HOLD" else "ON HOLD · HUMAN QA")}</span><h3>{esc(r["display_name"])}</h3><p>{esc(r.get("topic_title") or "Topic/title and Drive pointers are intentionally unset.")}</p><a href="researchers/{esc(r["slug"])}/index.html">Open researcher workspace →</a></article>' for r in researchers)
-    home=f'''<main><section class="wrap hero"><div class="eyebrow">Research control portal</div><h1>JP Research & Development</h1><p class="lead">One thin main branch for shared controls, researcher routing and verified Drive links. Research documents and generated outputs stay in Google Drive; source code lives in governed researcher lanes.</p><p><span class="badge">{len(researchers)} researcher workspaces · selective human QA</span></p></section><section class="wrap section"><h2>Operating architecture</h2><div class="flow"><div class="node">Shared controls</div><div class="arrow">→</div><div class="node">Researcher index</div><div class="arrow">→</div><div class="node">Discussion / LaTeX / Presentation lanes</div><div class="arrow">→</div><div class="node">Google Drive outputs</div></div></section><section class="wrap section"><h2>Researchers</h2><div class="grid">{home_cards}</div></section><section class="wrap section"><h2>Boundaries</h2><div class="controls"><article class="card"><h3>GitHub main</h3><p>Portal code, controls, schemas, registries and links only.</p></article><article class="card"><h3>Researcher branches</h3><p>Discussion pointers, LaTeX source, presentation source/config.</p></article><article class="card"><h3>Google Drive</h3><p>Working Docs, compiled PDFs, generated PPTX/PDF and evidence.</p></article></div></section></main>'''
+    home=f'''<main><section class="wrap hero"><div class="eyebrow">Research control portal</div><h1>JP Research & Development</h1><p class="lead">One thin main branch for shared controls, researcher routing and verified Drive links. Research documents and generated outputs stay in Google Drive; code changes are tracked on full-repository Git branches; researcher paths are logical work areas.</p><p><span class="badge">{len(researchers)} researcher workspaces · selective human QA</span></p></section><section class="wrap section"><h2>Operating architecture</h2><div class="flow"><div class="node">Shared controls</div><div class="arrow">→</div><div class="node">Researcher index</div><div class="arrow">→</div><div class="node">Discussion / LaTeX / Presentation lanes</div><div class="arrow">→</div><div class="node">Google Drive outputs</div></div></section><section class="wrap section"><h2>Researchers</h2><div class="grid">{home_cards}</div></section><section class="wrap section"><h2>Boundaries</h2><div class="controls"><article class="card"><h3>GitHub main</h3><p>Portal code, controls, schemas, registries and links only.</p></article><article class="card"><h3>Researcher branches</h3><p>Discussion pointers, LaTeX source, presentation source/config.</p></article><article class="card"><h3>Google Drive</h3><p>Working Docs, compiled PDFs, generated PPTX/PDF and evidence.</p></article></div></section></main>'''
     write(out,"index.html",shell("Home",home,0))
+    roadmap=load(Path("registry/roadmap.json"))
+    def stage_cards(items,kind):
+        return "".join(
+          '<article class="card"><span class="badge">'+esc(x.get("status",x.get("state","OPEN")))+'</span>'
+          +'<h3>'+esc(x["title"])+'</h3>'
+          +'<p>'+esc(x.get("detail",x.get("done_when","")))+'</p>'
+          +(('<p class="muted">'+esc(x.get("priority",""))+'</p>') if kind=="next" else "")
+          +'</article>' for x in items
+        )
+    delivered=stage_cards(roadmap["developed"],"done")
+    pending=stage_cards(roadmap["next"],"next")
+    holds="".join('<li><strong>'+esc(x["id"])+'</strong> — '+esc(x["state"])+': '+esc(x["reason"])+'</li>' for x in roadmap["holds"])
+    counterpart=roadmap["governance"]["linked_a7_roadmap"]
+    roadmap_body=(
+      '<main class="wrap hero"><div class="eyebrow">R&D · canonical development history and delivery roadmap</div>'
+      '<h1>What we built, and what comes next</h1>'
+      '<p class="lead">Point-in-time audit: 18/18 Drive direct children, 11 researchers, 33 whole-repository Git work refs, two Fabin research modules and six historical static demo directories. A folder audit is not final thesis approval.</p>'
+      '<p><a href="'+esc(counterpart)+'">Open the A7 global control-plane roadmap →</a></p>'
+      '<section class="section"><h2>Delivered</h2><div class="grid">'+delivered+'</div></section>'
+      '<section class="section"><h2>Prioritized next work</h2><div class="grid">'+pending+'</div></section>'
+      '<section class="section"><h2>Holds and debts that must stay visible</h2><ul>'+holds+'</ul></section>'
+      '<section class="section"><h2>Durable handover</h2><p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/docs/HANDOVER_TO_A7_20261009.md">Cross-thread handover for A7 →</a></p>'
+      '<p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/registry/roadmap.json">Machine-readable roadmap source →</a></p></section></main>'
+    )
+    write(out,"roadmap/index.html",shell("R&D Roadmap",roadmap_body,1))
     directory="".join(f'<article class="card"><h3>{esc(r["display_name"])}</h3><p><span class="badge">{esc(r["qa_status"])}</span></p><p>{esc(r.get("topic_title") or "Topic title: ON HOLD")}</p><a href="{esc(r["slug"])}/index.html">Open →</a></article>' for r in researchers)
     write(out,"researchers/index.html",shell("Researchers",f'<main class="wrap hero"><div class="eyebrow">Researcher index</div><h1>Researcher workspaces</h1><p class="lead">No topic/title is published until human QA verifies it.</p><div class="grid">{directory}</div></main>',1))
     for r in researchers:

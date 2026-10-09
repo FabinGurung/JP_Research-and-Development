@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.0.0",
+  "roadmap_id": "RND-ROADMAP-20261009",
+  "status": "ACTIVE__EVIDENCE_FIRST",
+  "snapshot_date": "2026-10-09",
+  "owner_repository": "FabinGurung/JP_Research-and-Development",
+  "linked_control_plane": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+  "baseline": {
+    "drive_direct_children_audited": 18,
+    "drive_direct_children_in_prior_rescan": 18,
+    "registered_researchers": 11,
+    "researcher_work_refs": 33,
+    "observed_git_branch_refs": 83,
+    "fabin_research_site_modules": 2,
+    "proposal_defense_subpages": 1,
+    "restored_static_legacy_demo_directories": 6,
+    "public_site": "https://fabingurung.github.io/JP_Research-and-Development/",
+    "code_authority": "GIT_COMMIT_REF",
+    "private_original_and_compiled_document_authority": "GOOGLE_DRIVE",
+    "prior_live_pages_success_run": 37871042203,
+    "prior_live_pages_head": "49ffdf74c87769537320f93460dd09b6a4999a26"
+  },
+  "developed": [
+    {
+      "id": "RD-D01",
+      "title": "11 researcher identities and governed route registry",
+      "status": "DELIVERED",
+      "detail": "Includes separate Safal Dawadi (RSH-010), Safal Thapa (RSH-004), Sunil Rana (RSH-011)."
+    },
+    {
+      "id": "RD-D02",
+      "title": "Direct-child evidence inventory and hold pages",
+      "status": "DELIVERED",
+      "detail": "18/18 direct children in the 2026-10-09 audit; per-child audits and dedicated debt subpages. Folder readback is not scientific acceptance."
+    },
+    {
+      "id": "RD-D03",
+      "title": "Shared Discussion/LaTeX/Presentation control contracts",
+      "status": "DELIVERED",
+      "detail": "33 Git branch pointers and reusable templates; branches reference whole repository snapshots."
+    },
+    {
+      "id": "RD-D04",
+      "title": "Fabin AEC and Hydropower research subpages",
+      "status": "DELIVERED",
+      "detail": "Unified static main codebase, proposal-defense viewer, Drive research outputs and restored six historical standalone demo directories."
+    },
+    {
+      "id": "RD-D05",
+      "title": "GitHub Pages, site generation and automated validation",
+      "status": "DELIVERED",
+      "detail": "Python generator and validator; prior Pages deployment success run 37871042203, complete legacy Next.js port excluded."
+    },
+    {
+      "id": "RD-D06",
+      "title": "A7 cross-repository routing contract",
+      "status": "DELIVERED",
+      "detail": "Root A7_MODULE.json and AGENTS.md, shared governance only; researcher scientific truths stay with admitted Drive provider."
+    }
+  ],
+  "next": [
+    {
+      "id": "RD-N01",
+      "priority": "P0",
+      "title": "Keep current Pages run and source/Drive links verified",
+      "state": "ONGOING",
+      "done_when": "Source build/test, latest Pages deployment and exact release/artifact links have provider readback."
+    },
+    {
+      "id": "RD-N02",
+      "priority": "P1",
+      "title": "Reconcile critical thesis-title and source/provenance debts",
+      "state": "OPEN",
+      "done_when": "Rupesh title and Master Directory match; open researcher scientific/source debts close only with owner evidence."
+    },
+    {
+      "id": "RD-N03",
+      "priority": "P1",
+      "title": "Git-admit reproducible research source selectively",
+      "state": "NOT_STARTED",
+      "done_when": "Source is public-safe or in suitable private repo, verified against Drive, committed with build/QA, and release manifest maps commit to Drive PDF/PPTX."
+    },
+    {
+      "id": "RD-N04",
+      "priority": "P1",
+      "title": "Publish provider-backed research artifact lineage",
+      "state": "STAGED",
+      "done_when": "Per-researcher Git commit → build → Drive output → A7 edge and approved Main Library ACK for actual releases; no raw private files in public Git."
+    },
+    {
+      "id": "RD-N05",
+      "priority": "P2",
+      "title": "Complete legacy interactive site port selectively",
+      "state": "PARTIAL",
+      "done_when": "Original Next.js components audited, privacy/asset checks pass, responsive interactive parity verified; retained demos not mistaken for the full Next.js app."
+    },
+    {
+      "id": "RD-N06",
+      "priority": "P2",
+      "title": "Simplify branch and lane operations without destroying refs",
+      "state": "PLANNED",
+      "done_when": "Feature branches cover entire repository, per-researcher work uses directories and code ownership; snapshot/legacy refs maintained for rollback and only later archived by policy."
+    },
+    {
+      "id": "RD-N07",
+      "priority": "P2",
+      "title": "Project-specific release CI/QA and contributor workflows",
+      "state": "PLANNED",
+      "done_when": "Scientific approval gate, source/release checks, docs and interactive portal manifest validated in CI."
+    }
+  ],
+  "holds": [
+    {
+      "id": "MSCH_HYDROPOWER_CORPUS_B013",
+      "state": "HOLD__DO_NOT_RESUME",
+      "reason": "User-directed hold: no further corpus B013 execution."
+    },
+    {
+      "id": "MANOJ_ACTIVE_THESIS_AUTHORITY",
+      "state": "HOLD",
+      "reason": "Certificate reference exists; active thesis-workspace authority unverified."
+    },
+    {
+      "id": "RUPESH_TITLE_AND_OUTPUT_SYNC",
+      "state": "OPEN",
+      "reason": "Working PDF/source still historical title, Master Directory title stale."
+    },
+    {
+      "id": "AVISHEK_FIRST_DRAFT",
+      "state": "HOLD",
+      "reason": "First-draft intake; methodology and active-authority gates unresolved."
+    }
+  ],
+  "governance": {
+    "public_repository": true,
+    "github_site_is_projection": true,
+    "drive_originals_not_migrated": true,
+    "no_mass_research_data_import": true,
+    "scientific_claims_require_researcher_evidence": true,
+    "historic_a9_control_text_not_superseded": true,
+    "linked_a7_roadmap": "https://fabingurung.github.io/JP_A7_System_Registry_and_Knowledge_Graph/roadmap.html"
+  }
+}

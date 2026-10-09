@@ -142,7 +142,7 @@
     "branch_readback": "6_NEW_LANES_PRESENT__THAPA_3_LANES_REMAIN"
   },
   "unified_site_migration": {
-    "status": "STAGED_PENDING_PAGES_READBACK",
+    "status": "SOURCE_DEPLOYMENT_PRIOR_RUN_37871042203_SUCCESS__NEW_ROADMAP_DEPLOYMENT_PENDING",
     "modules": [
       "aec",
       "hydropower-phd",
@@ -152,6 +152,19 @@
     "original_nextjs_full_port": "NOT_DONE",
     "version_control": "ONE_MAIN_CODEBASE_BRANCHES_ARE_WHOLE_REPO_REFS",
     "global_control": "A7/A9_GIT_DRIVE_BOOTSTRAP.json",
-    "drive_artifacts": "LINKED_NOT_MOVED"
+    "drive_artifacts": "LINKED_NOT_MOVED",
+    "prior_verified_deployment": {
+      "run_id": 37871042203,
+      "commit": "49ffdf74c87769537320f93460dd09b6a4999a26",
+      "conclusion": "success"
+    }
+  },
+  "roadmap": {
+    "machine": "registry/roadmap.json",
+    "human": "docs/ROADMAP.md",
+    "public_page": "/roadmap/",
+    "cross_thread_handover": "docs/HANDOVER_TO_A7_20261009.md",
+    "counterpart": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/docs/ROADMAP.md",
+    "status": "PUBLISHED_SOURCE_PENDING_NEW_HEAD_ACTIONS_READBACK"
   }
 }

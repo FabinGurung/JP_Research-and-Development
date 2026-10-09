@@ -17,6 +17,7 @@ root_rescan=load("registry/drive-audits/02-thesis/root-rescan-20261008.json")
 audit_batch_slugs=("rural-road-maintenance","safal-dawadi","saugat-paneru","nabin-bista","krishna-kumar-gupta","shisheer-kc","sunil-rana","fabin-gurung","master-index")
 audit_batch={slug:load(f"registry/drive-audits/02-thesis/{slug}.json") for slug in audit_batch_slugs}
 branches=load("registry/branch-registry.json")
+roadmap=load("registry/roadmap.json")
 policy=load("controls/repository.control.json")
 required=["README.md","CURRENT.json","A7_MODULE.json","registry/researchers.json","registry/websites.json","registry/debts.json","registry/drive-audits/02-thesis/manoj-bhandari.json","registry/drive-audits/02-thesis/binay-karki.json","registry/drive-audits/02-thesis/avishek-kumar-mandal.json","registry/drive-audits/02-thesis/root-rescan-20261008.json","registry/drive-audits/02-thesis/rural-road-maintenance.json","registry/drive-audits/02-thesis/safal-dawadi.json","registry/drive-audits/02-thesis/saugat-paneru.json","registry/drive-audits/02-thesis/nabin-bista.json","registry/drive-audits/02-thesis/krishna-kumar-gupta.json","registry/drive-audits/02-thesis/shisheer-kc.json","registry/drive-audits/02-thesis/sunil-rana.json","registry/drive-audits/02-thesis/fabin-gurung.json","registry/drive-audits/02-thesis/master-index.json","registry/branch-registry.json","controls/repository.control.json","controls/discussion.control.json","controls/latex.control.json","controls/presentation.control.json","controls/website.control.json","schemas/researchers.schema.json","scripts/build_site.py","scripts/validate_repo.py","web/styles.css",".github/workflows/validate.yml",".github/workflows/pages.yml"]
 for p in required:
@@ -40,6 +41,8 @@ for r in rows:
         if b!=exp: errors.append(f"{r.get('slug')}: {kind} branch mismatch")
         if b in lane_names: errors.append(f"duplicate lane {b}")
         lane_names.add(b)
+if roadmap.get("baseline",{}).get("registered_researchers")!=11 or not roadmap.get("developed") or not roadmap.get("next"):
+    errors.append("R&D roadmap missing or wrong researcher scope")
 if len(lane_names)!=33: errors.append("expected 33 researcher lanes")
 reg={x.get("branch") for x in branches.get("active_researcher_lanes",[])}
 if reg!=lane_names: errors.append("branch registry active lanes != researcher registry")
@@ -112,7 +115,7 @@ for f in files:
 ap=argparse.ArgumentParser(); ap.add_argument("--site"); args=ap.parse_args()
 if args.site:
     site=ROOT/args.site
-    expected=["index.html","researchers/index.html","workspace/index.html","how-to/index.html","controls/index.html","debts/index.html"]
+    expected=["index.html","roadmap/index.html","researchers/index.html","workspace/index.html","how-to/index.html","controls/index.html","debts/index.html"]
     expected += [f"researchers/{r['slug']}/index.html" for r in rows]
     expected += [f"controls/{x}/index.html" for x in ("discussion","latex","presentation","website")]
     debt_researcher_ids={d.get("researcher_id") for d in debt_rows if d.get("status") in ("OPEN","HOLD") and d.get("researcher_id")}
