@@ -1,3 +1,9 @@
+# Historical v1 prototype — Superseded by v2
+
+This document describes the initial three-template prototype and is retained for reproducibility. Use [Enterprise Document Engineering v2](DOCUMENT_ENGINEERING_V2_READ_FIRST.md) for the current fourteen-type draft engine. No old client contract is production certified.
+
+---
+
 # A9 Document Engineering
 
 ## Current live position
