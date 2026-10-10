@@ -109,6 +109,18 @@ for p in (ROOT/"researchers").glob("*/latex/extensions/**/*"):
     if p.is_file() and p.relative_to(ROOT).as_posix() not in recorded_extension_paths:
         errors.append("unregistered researcher extension source: "+p.relative_to(ROOT).as_posix())
 
+# Safal-derived cross-researcher semantic inheritance requires one canonical owner.
+semantic_path="controls/latex/authorial-voice-policy.json"
+checker_path="scripts/latex/check_authorial_voice.py"
+semantic=doc(semantic_path)
+if semantic.get("canonical_owner")!=canonical: errors.append("competing semantic tower")
+if tower.get("rules",{}).get("semantic")!=semantic_path: errors.append("semantic tower pointer absent")
+if tower.get("rules",{}).get("validation")!=checker_path: errors.append("semantic checker pointer absent")
+if not (ROOT/checker_path).is_file(): errors.append("missing shared semantic checker")
+for row in inherit_rows:
+    if row.get("semantic_policy")!=semantic_path or row.get("semantic_checker")!=checker_path:
+        errors.append("missing researcher semantic inheritance: "+str(row.get("slug")))
+
 # Shared code should not include private binaries; this validator makes no compile claim.
 txt=(ROOT/sty).read_text(encoding="utf-8") if (ROOT/sty).is_file() else ""
 for test in [r"\setmainfont{Times New Roman}",r"\onehalfspacing","left=3cm",r"\newcommand{\PUStartMainBody}"]:
