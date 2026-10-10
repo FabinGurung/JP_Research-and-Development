@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-010",
+  "manuscript_version": "v1.10",
+  "stage": "PHOTO_INTEGRATION_SOURCE_SNAPSHOT",
+  "status": "REVIEW_ONLY_NOT_SCIENTIFICALLY_APPROVED",
+  "parent_manuscript": "v1.9-fmt-r1",
+  "parent_git_commit": "f1d0238cd42b901cf805cb5e42b444ea3d290b24",
+  "photo_count": 25,
+  "figure_groups": {
+    "waterproofing_threshold": 7,
+    "roof_finish": 5,
+    "masonry": 5,
+    "external_road_comparison": 8
+  },
+  "photos_private": true,
+  "shared_template": "controls/latex/template/pumlsc-shared.sty",
+  "PDF_release_status": "NOT_SCIENTIFICALLY_APPROVED",
+  "notes": [
+    "Previously generated PDF was a local preview, not v1.10 certified production build.",
+    "Source and photograph metadata remain guarded; source branch is the durable version."
+  ]
+}
