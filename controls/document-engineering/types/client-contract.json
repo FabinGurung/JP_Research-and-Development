@@ -40,5 +40,15 @@
   "privacy": "PRIVATE_DATA_DRIVE_ONLY",
   "no_autosign": true,
   "private_clause_map_drive_id": "18XgTt7CAuOpEatWI-1jJosjuR63uey8z",
-  "precedent_parity_status": "EIGHT_SECTIONS_32_CLAUSES_MAPPED__HUMAN_VALIDATION_OPEN"
+  "precedent_parity_status": "EIGHT_SECTIONS_32_CLAUSES_MAPPED__HUMAN_VALIDATION_OPEN",
+  "variants": [
+    {
+      "id": "simple-lumpsum",
+      "source": "templates/enterprise/v2/client-contract-simple-lumpsum.tex",
+      "renderer": "scripts/document_engineering/render_simple_lumpsum.py",
+      "mode": "DRAFT_ONLY",
+      "visible_document_policy": "controls/document-engineering/client-facing-language.policy.json",
+      "use_case": "simple itemized construction scope, fixed agreed amount, missing fields explicitly held"
+    }
+  ]
 }
