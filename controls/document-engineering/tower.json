@@ -1,7 +1,7 @@
 {
   "id": "A9-ENT-DOC-TOWER-001",
   "version": "0.2.0",
-  "status": "DRAFT_SOURCE_INFRASTRUCTURE",
+  "status": "DRAFT_GENERATOR_FOR_INDIVIDUAL_PROJECTS__PRODUCTION_RELEASE_STILL_HOLD",
   "shared_style": "templates/enterprise/v2/enterprise-shared.sty",
   "type_registry": "registry/enterprise-document-types.v2.json",
   "engine": "scripts/document_engineering/engine_v2.py",
@@ -21,5 +21,9 @@
   "private_source_audit_id": "11MKaYPA8BjAMzAFbi96um7Z-Ynyt_XAD",
   "radha_old_draft": "FAILED_WORKING_CANDIDATE_PRESERVE",
   "no_autosign": true,
-  "no_unverified_engineering_claims": true
+  "no_unverified_engineering_claims": true,
+  "client_facing_language_policy": "controls/document-engineering/client-facing-language.policy.json",
+  "public_pdf_language_lint": "scripts/document_engineering/check_client_facing_language.py",
+  "private_short_form_generator": "scripts/document_engineering/render_simple_lumpsum.py",
+  "plain_language_rule": "No internal computer, AI, database or implementation terminology in client-facing documents; controls and source formats remain private."
 }
