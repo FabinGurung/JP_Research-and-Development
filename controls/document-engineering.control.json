@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "owner": "A9_DOCUMENT_ENGINEERING",
-  "status": "NEW_CODE_PREVIEW",
+  "status": "COMPATIBILITY_ALIAS__AUTHORITATIVE_V2_TOWER_POINTER",
   "enterprise_page": "enterprise-documents/",
   "academic_page": "academic-writing/",
   "templates_root": "templates/enterprise/",
@@ -13,5 +13,9 @@
   "human_legal_and_employment_review": "REQUIRED",
   "no_autosign": true,
   "academic_shared_latex_control": "controls/latex/tower.json",
-  "zero_delete": true
+  "zero_delete": true,
+  "canonical_tower": "controls/document-engineering/tower.json",
+  "current_template_registry": "registry/enterprise-document-types.v2.json",
+  "semantics": "controls/document-engineering/semantic-handrails.v2.json",
+  "production_certified": false
 }
