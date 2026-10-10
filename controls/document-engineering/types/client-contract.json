@@ -18,6 +18,11 @@
     "quality_and_defects",
     "variations",
     "termination_and_disputes",
+    "contract_documents_and_drawings",
+    "materials_responsibility",
+    "programme_and_completion",
+    "taxes_and_statutory",
+    "governing_law",
     "signatures"
   ],
   "approval_gates": [
@@ -33,5 +38,7 @@
   "status": "DRAFT_NOT_APPROVED",
   "source_precedent_state": "UNREVIEWED_ORIGINAL",
   "privacy": "PRIVATE_DATA_DRIVE_ONLY",
-  "no_autosign": true
+  "no_autosign": true,
+  "private_clause_map_drive_id": "18XgTt7CAuOpEatWI-1jJosjuR63uey8z",
+  "precedent_parity_status": "EIGHT_SECTIONS_32_CLAUSES_MAPPED__HUMAN_VALIDATION_OPEN"
 }
