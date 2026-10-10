@@ -1,0 +1,35 @@
+name: A9 Enterprise Fourteen PDF Draft Smoke
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'templates/enterprise/v2/**'
+      - 'scripts/document_engineering/engine_v2.py'
+      - '.github/workflows/enterprise-document-pdf-smoke.yml'
+jobs:
+  technical-pdf:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        document: [client-contract, labour-contract, job-contract, salary-contract, experience-letter, recommendation-letter, vendor-quotation, government-quotation, proposal, estimate, material-report, purchase-order, receipt-voucher, payment-slip]
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate fictional drafts only
+        run: python3 scripts/document_engineering/engine_v2.py --demo-all --out qa_build
+      - uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: qa_build/${{ matrix.document }}
+          root_file: ${{ matrix.document }}.tex
+          latexmk_shell_escape: false
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draft-only-${{ matrix.document }}
+          path: qa_build/${{ matrix.document }}/${{ matrix.document }}.pdf
+          retention-days: 3
