@@ -7,7 +7,9 @@
 \definecolor{EngGold}{HTML}{C0A052}
 \newcommand{\DocTitle}[1]{\begin{center}{\color{EngGreen}\LARGE\bfseries #1}\\[2mm]WORKING DRAFT -- NOT FOR SIGNATURE\end{center}{\color{EngGold}\rule{\linewidth}{1.2pt}}}
 \newcommand{\DocMeta}[2]{\par\noindent\textbf{#1:} #2}
-\newcommand{\DocSection}[1]{\par\vspace{3mm}\noindent{\large\bfseries\color{EngGreen}#1}\par{\color{EngGold}\rule{\linewidth}{0.6pt}}\par}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{0pt}
+\newcommand{\DocSection}[1]{\par\smallskip\noindent{\color{EngGold}\rule{2pt}{9pt}}\hspace{5pt}{\color{EngGreen}\bfseries\normalsize #1}\par\nobreak}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\footnotesize A9 Enterprise | Draft}
 \fancyhead[R]{\footnotesize NOT FOR SIGNATURE}
