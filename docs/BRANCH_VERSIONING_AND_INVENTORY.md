@@ -1,3 +1,5 @@
+> **2026-10-11 scoped supersession for R&D source and academic presentations:** The old chain below ending in a Drive Local/Main ACK is historical. For Git-governed source, the accepted chain is Git PRE SHA → commit/PR/QA → Drive output upload and readback → Git release manifest (tag only when approved and verifiably created). Never advance Safal's frozen Local20/Main5 on a routine source edit. [Current authority policy](GIT_DRIVE_AUTHORITY_READ_FIRST.md). Other A9 physical-file/scientific workflows remain separately governed.
+
 # R&D — complete Git branch inventory and versioning (2026-10-09)
 
 The machine inventory [registry/branch-inventory.json](../registry/branch-inventory.json) was made from a fresh live GitHub branch API readback. Every observed branch has full SHA, name, status and grounded purpose, rather than an unverified claim that its contents are independently developed.
