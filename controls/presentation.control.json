@@ -43,7 +43,19 @@
     "JSON"
   ],
   "original_stack_status": "LEGACY_RECOMMENDATION_NOT_ENGINE_AUTHORITY",
-  "github_candidate_status": "REVIEW_PR_PENDING__NOT_PRODUCTION",
+  "github_candidate_status": "SHARED_SOURCE_MERGED__ACADEMIC_APPROVAL_REMAINS_EXTERNAL",
   "drive_current_control_id": "1i2YO58HJ1WVsYnBDP0a0ZJg-29VOPccPnWiWit08ofM",
-  "github_main_control_promoted": false
+  "github_main_control_promoted": true,
+  "canonical_implementation_stack": [
+    "Python",
+    "ReportLab",
+    "python-pptx",
+    "PyMuPDF",
+    "Pillow",
+    "JSON"
+  ],
+  "supported_semantic_slide_types": [
+    "literature_table"
+  ],
+  "literature_table_source": "controls/presentation/generator/a9_literature_table.py"
 }

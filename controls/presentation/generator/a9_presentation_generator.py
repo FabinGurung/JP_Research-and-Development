@@ -95,6 +95,100 @@ def _supervisor_lines(meta):
         lines.append(text)
     return lines
 
+def _lit_columns(slide):
+    """The layout is general-purpose; the words are taken from verified source data."""
+    if slide.get("columns", 3) == 4:
+        return ["Author (Year)", "Key Finding", "Method / Limitation", "Relevance to This Study"], [1.60, 2.75, 1.95, 2.80], ["author_year", "key_finding", "method_or_limitation", "project_relevance"]
+    return ["Author (Year)", "Key Finding", "Relevance to This Study"], [1.95, 3.50, 3.65], ["author_year", "key_finding", "project_relevance"]
+
+
+def _pdf_literature_table(c, slide, font, left, W, H, top, bottom, title_pt):
+    from reportlab.lib.colors import HexColor
+    headers, widths_in, fields = _lit_columns(slide)
+    title = slide.get("title", "Literature Review")
+    c.setFillColor(HexColor("#000000")); c.setFont(font, title_pt)
+    c.drawString(left, H-top-title_pt, title)
+    y = H-top-title_pt-43
+    header_h = 47
+    x = left
+    c.setFillColor(HexColor("#EDEDED"))
+    c.rect(left, y-header_h, sum(widths_in)*72, header_h, fill=1, stroke=0)
+    c.setFillColor(HexColor("#000000"))
+    for label,w in zip(headers,widths_in):
+        c.setFont(font, 13)
+        c.drawString(x+9,y-28,label)
+        x+=w*72
+    y-=header_h
+    rows=slide.get("rows",[])
+    if not rows: raise ValueError("empty literature matrix")
+    row_h=min(123, (y-bottom-34)/len(rows))
+    if row_h < 94: raise ValueError("literature table row overflow: paginate earlier")
+    for row in rows:
+        x=left
+        for field,w in zip(fields,widths_in):
+            val=str(row.get(field, ""))
+            point=13.3 if field in {"key_finding","project_relevance"} else 12.5
+            lines=_wrap_text(val,font,point,w*72-19)
+            if len(lines)*(point*1.23)>row_h-15:
+                raise ValueError(f"literature table cell too long: {field}: {val[:60]}")
+            c.setFont(font,point)
+            for k,line in enumerate(lines):
+                c.drawString(x+9,y-18-k*point*1.23,line)
+            x+=w*72
+        c.setStrokeColor(HexColor("#B5B5B5"))
+        c.line(left,y-row_h,left+sum(widths_in)*72,y-row_h)
+        y-=row_h
+    x=left
+    for w in [0,*widths_in]:
+        if w: x+=w*72
+        c.line(x, H-top-title_pt-43, x,y)
+    c.setStrokeColor(HexColor("#000000"))
+    c.setFont(font,10)
+    c.drawString(left,bottom+10,"Full references are provided in the thesis bibliography.")
+
+
+def _pptx_literature_table(slide, spec, font, left, top, title_pt):
+    from pptx.dml.color import RGBColor
+    from pptx.enum.text import MSO_ANCHOR
+    headers,widths,fields=_lit_columns(spec)
+    _add_textbox(slide,left,top,9.1,0.58,spec.get("title","Literature Review"),title_pt,font)
+    rows=spec.get("rows",[])
+    table_h=0.59+1.60*len(rows)
+    tbl_shape=slide.shapes.add_table(len(rows)+1,len(headers), Inches(left), Inches(1.18), Inches(sum(widths)), Inches(table_h))
+    table=tbl_shape.table
+    for j,w in enumerate(widths): table.columns[j].width=Inches(w)
+    table.rows[0].height=Inches(0.59)
+    for ri in range(1,len(rows)+1): table.rows[ri].height=Inches(1.60)
+    for ri in range(len(rows)+1):
+        for ci,field in enumerate(fields):
+            cell=table.cell(ri,ci)
+            cell.margin_left=Inches(0.12);cell.margin_right=Inches(0.10)
+            cell.margin_top=Inches(0.10);cell.margin_bottom=Inches(0.09)
+            cell.vertical_anchor=MSO_ANCHOR.TOP
+            cell.text=headers[ci] if ri==0 else str(rows[ri-1].get(field,""))
+            cell.fill.solid()
+            cell.fill.fore_color.rgb=RGBColor(237,237,237) if ri==0 else RGBColor(255,255,255)
+            # Native PowerPoint cells remain editable; unobtrusive rules aid scanning.
+            from pptx.oxml.xmlchemy import OxmlElement
+            from pptx.oxml.ns import qn
+            tcpr = cell._tc.get_or_add_tcPr()
+            for edge in ("lnB", "lnR"):
+                tag = qn("a:" + edge)
+                if tcpr.find(tag) is None:
+                    line = OxmlElement("a:" + edge)
+                    line.set("w", "6500")
+                    fill = OxmlElement("a:solidFill")
+                    srgb = OxmlElement("a:srgbClr")
+                    srgb.set("val", "C4C4C4")
+                    fill.append(srgb); line.append(fill); tcpr.append(line)
+            tf=cell.text_frame; tf.word_wrap=True
+            for paragraph in tf.paragraphs:
+                paragraph.font.name=font
+                paragraph.font.size=Pt(12.5 if ci==0 else 13.3)
+                paragraph.font.bold=ri==0
+                paragraph.font.color.rgb=RGBColor(0,0,0)
+    _add_textbox(slide,left,6.58,9.1,0.24,"Full references are provided in the thesis bibliography.",10,font)
+
 def build_pdf(content, theme, out_path, production=False):
     W = theme["canvas"]["width_in"] * PT_PER_IN
     H = theme["canvas"]["height_in"] * PT_PER_IN
@@ -183,6 +277,8 @@ def build_pdf(content, theme, out_path, production=False):
                 c.setFont(font,caption_pt)
                 for k,line in enumerate(_wrap_text(cap,font,caption_pt,W-left-right)):
                     c.drawCentredString(W/2,bottom+22-k*caption_pt*1.15,line)
+        elif stype == "literature_table":
+            _pdf_literature_table(c, slide, font, left, W, H, top, bottom, title_pt)
         elif stype == "closing":
             c.setFont(font, title_pt)
             c.drawCentredString(W/2,H/2+20,slide.get("title",""))
@@ -262,6 +358,8 @@ def build_pptx(content, theme, out_path, production=False):
                     slide.shapes.add_picture(path,Inches(bx+(box_w-pw)/2),Inches(1.15+(box_h-pH)/2),width=Inches(pw),height=Inches(pH))
             if spec.get("caption"):
                 _add_textbox(slide,left,6.55,10-left-right,0.35,spec["caption"],caption_pt,font,align=PP_ALIGN.CENTER)
+        elif stype=="literature_table":
+            _pptx_literature_table(slide,spec,font,left,top,title_pt)
         elif stype=="closing":
             _add_textbox(slide,left,2.8,10-left-right,0.7,spec.get("title",""),title_pt,font,align=PP_ALIGN.CENTER)
             _add_textbox(slide,left,3.6,10-left-right,0.5,spec.get("subtitle",""),16,font,align=PP_ALIGN.CENTER)

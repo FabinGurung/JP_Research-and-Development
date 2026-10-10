@@ -5,6 +5,7 @@ from a9_presentation_validator import load_json, validate_content, sha256_file
 from a9_presentation_generator import build_pdf, build_pptx
 from a9_render_qa import qa_release
 from a9_semantic_checker import check_semantics
+from a9_literature_table import expand_literature_tables
 
 def main():
     ap=argparse.ArgumentParser()
@@ -42,6 +43,7 @@ def main():
             for obj in slide.get("figures",[]):
                 p=Path(obj["path"])
                 if not p.is_absolute(): obj["path"]=str((content_path.parent/p).resolve())
+    content = expand_literature_tables(content)
     build_pdf(content,theme,pdf,production=args.production)
     if not args.no_pptx:
         build_pptx(content,theme,pptx,production=args.production)
@@ -59,6 +61,8 @@ def main():
         "pdf_sha256":report["pdf"]["sha256"],
         "pptx_sha256":report["pptx"]["sha256"] if report["pptx"] else None,
         "render_count":report["pdf"]["pages"],
+        "literature_matrix_pages":sum(s.get("type")=="literature_table" for s in content["slides"]),
+        "literature_matrix_evidence_policy":"SOURCE_AND_FINDING_LOCATOR_REQUIRED__HUMAN_REVIEW_PENDING",
         "production_requested":bool(args.production),
         "title_logo_size_in":content.get("metadata",{}).get("title_logo_size_in",theme.get("branding",{}).get("title_logo_default_in")),
         "supervisor_present":bool((content.get("metadata",{}).get("supervisor") or {}).get("name")),

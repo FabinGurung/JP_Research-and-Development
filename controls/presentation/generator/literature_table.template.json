@@ -1,0 +1,33 @@
+{
+  "literature_references": [
+    {
+      "reference_id": "REF-001",
+      "authors": "<short verified author or institution label>",
+      "year": 2020,
+      "title": "<exact title from current bibliography>",
+      "bibliography_key": "<existing LaTeX/BibTeX citation key>",
+      "source_id": "<source_id from admitted project evidence map>",
+      "source_kind": "PEER_REVIEWED",
+      "doi_or_url": "<verified DOI or publisher URL when available>"
+    }
+  ],
+  "slides": [
+    {
+      "type": "literature_table",
+      "title": "Literature Review",
+      "scientific_role": "BACKGROUND",
+      "columns": 3,
+      "max_rows_per_slide": 3,
+      "rows": [
+        {
+          "reference_id": "REF-001",
+          "key_finding": "<concise finding checked against original source>",
+          "finding_locator": "<page, section, table or paragraph in source>",
+          "project_relevance": "<how it informs this project's stated method, scope or research gap>",
+          "relevance_basis": "<specific thesis objective or manuscript section>",
+          "relevance_type": "METHOD"
+        }
+      ]
+    }
+  ]
+}
