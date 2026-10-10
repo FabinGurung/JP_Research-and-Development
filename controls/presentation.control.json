@@ -3,19 +3,20 @@
   "control_id": "RD-CONTROL-PRESENTATION-001",
   "status": "ACTIVE",
   "branch_pattern": "researcher/<slug>/presentation",
-  "authority": "GIT_FOR_PRESENTATION_SOURCE_GOOGLE_DRIVE_FOR_GENERATED_OUTPUTS",
+  "authority": "GITHUB_VERSION_CONTROL_DRIVE_PRIVATE_SCIENCE_AND_OUTPUTS",
   "recommended_stack": [
-    "TypeScript",
-    "PptxGenJS",
-    "YAML",
+    "Python",
+    "ReportLab",
+    "python-pptx",
     "JSON",
-    "HTML",
-    "CSS",
-    "SVG"
+    "JSON Schema",
+    "PyMuPDF",
+    "Pillow",
+    "GitHub Actions"
   ],
   "optional_stack": [
-    "Playwright/Chromium for PDF-first rendering",
-    "Python only when an explicitly governed renderer requires it"
+    "HTML/CSS/SVG for separate governed visualizations",
+    "XeLaTeX/Biber for manuscript"
   ],
   "forbidden": [
     "committed PPTX binaries",
@@ -24,14 +25,12 @@
   ],
   "output_pointer": "lane/output.json",
   "workflow": [
-    "read shared control",
-    "fetch branch",
-    "edit presentation source/config",
-    "render and QA",
-    "upload PPTX/PDF to Drive",
-    "read back Drive IDs/links",
-    "update lane/output.json",
-    "commit"
+    "read current Git policy/source SHA and admitted Drive research sources",
+    "commit nonforce source changes with automated QA",
+    "upload generated PDF/PPTX to Drive and verify IDs",
+    "record exact output/source relationship in Git release manifest",
+    "tag only if approved and verified",
+    "never increment historic Local/Main for routine version-only work"
   ],
   "canonical_implementation": "controls/presentation/",
   "executable_stack_current_candidate": [
@@ -42,7 +41,7 @@
     "Pillow",
     "JSON"
   ],
-  "original_stack_status": "LEGACY_RECOMMENDATION_NOT_ENGINE_AUTHORITY",
+  "original_stack_status": "LEGACY_TYPESCRIPT_PPTXGENJS_NOT_ACTIVE_EXECUTABLE_ENGINE",
   "github_candidate_status": "SHARED_SOURCE_MERGED__ACADEMIC_APPROVAL_REMAINS_EXTERNAL",
   "drive_current_control_id": "1i2YO58HJ1WVsYnBDP0a0ZJg-29VOPccPnWiWit08ofM",
   "github_main_control_promoted": true,
@@ -55,7 +54,10 @@
     "JSON"
   ],
   "supported_semantic_slide_types": [
-    "literature_table"
+    "literature_table",
+    "methodology_flow"
   ],
-  "literature_table_source": "controls/presentation/generator/a9_literature_table.py"
+  "literature_table_source": "controls/presentation/generator/a9_literature_table.py",
+  "version_control_policy": "controls/git-drive-authority.json",
+  "legacy_drive_local_main_policy": "NO_NEW_VERSION_ONLY_SEQ; PRESERVE_HISTORIC_LOCAL20_MAIN5"
 }

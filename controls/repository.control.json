@@ -18,8 +18,8 @@
       "raw datasets or confidential evidence"
     ]
   },
-  "google_drive_role": "ACTUAL_WORKING_DOCUMENTS_OUTPUTS_AND_EVIDENCE",
-  "github_role": "CODE_VERSION_CONTROL_POINTERS_CONTROLS_AND_PUBLIC_PORTAL",
+  "google_drive_role": "PRIVATE_ORIGINAL_EVIDENCE_AND_COMPILED_DOCUMENT_STORAGE_NO_ROUTINE_VERSION_SEQUENCES",
+  "github_role": "CODE_SOURCE_HISTORY_RELEASE_MANIFEST_PORTAL",
   "minimal_governance": {
     "pre_state": "previous Git commit SHA",
     "post_state": "new Git commit SHA",
@@ -31,14 +31,17 @@
     "do_not_duplicate": [
       "routine PRE/POST Drive snapshots",
       "routine archive copies",
-      "acknowledgement-only commits"
+      "acknowledgement-only commits",
+      "routine Drive Local/Main seq increments for Git-owned source"
     ]
   },
-  "presentation_default": "TypeScript + PptxGenJS + YAML/JSON content; HTML/CSS/SVG permitted for PDF-first rendering. Generated PPTX/PDF lives in Google Drive.",
+  "presentation_default": "Python + ReportLab PDF + python-pptx editable PPTX with JSON and semantic validators. Thesis XeLaTeX/Biber.",
   "lane_storage": {
     "discussion": "Google Doc content stays in Drive; Git branch stores only IDs/links/pointer JSON.",
     "latex": "LaTeX/BibTeX/build code stays in Git; compiled PDF goes to Drive and branch stores the returned Drive ID/link.",
     "presentation": "Presentation source code/config stays in Git; generated PPTX/PDF goes to Drive and branch stores returned Drive IDs/links.",
     "website": "Optional verified website source/config and route pointers live in Git. Do not create a website lane for a researcher without a real verified module or an explicit new website request."
-  }
+  },
+  "version_authority": "GITHUB_FOR_RND_GIT_MANAGED_CODE_AND_RESEARCHER_SOURCE",
+  "version_authority_policy": "controls/git-drive-authority.json"
 }

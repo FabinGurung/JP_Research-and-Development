@@ -1,3 +1,5 @@
+> **CURRENT OWNERSHIP / 2026-10-11:** GitHub is the version-control and release-manifest authority for this academic presentation engine and its researcher source. Google Drive holds private/approved science and delivered PDF/PPTX. Do not restart legacy Drive Local/Main counters for routine source/deck changes. Read [shared Git/Drive policy](../../docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md) and [machine contract](../git-drive-authority.json). Safal old Local20/Main5 are preserved historical facts, not new version counters.
+
 # Academic thesis presentation control — A9 / Pokhara University
 
 One shared presentation engine lives under `controls/presentation/generator/`. **The manuscript is LaTeX; the presentation is Python** (ReportLab PDF + python-pptx editable PPTX). The Drive A9 presentation tower v2.2 remains the academic/source authority; GitHub versions executable code. Do not create a new presentation tower per researcher.
