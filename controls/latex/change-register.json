@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 103,
+  "next_number": 105,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -55,6 +55,39 @@
       "regression_scope": "RSH-010_LOCAL_PASS_OTHERS_NOT_YET_TESTED",
       "scientific_boundary": "NO_NEW_EMPIRICAL_CLAIMS",
       "full_university_certification": "HOLD"
+    },
+    {
+      "change_id": "RD-LTX-CHG-103",
+      "researcher_id": "RSH-010",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Generalized authorial voice, no fabricated fieldwork, human-readable captions, evidence boundaries and advisory semantic validator for all eleven researchers",
+      "source_paths": [
+        "controls/latex/authorial-voice-policy.json",
+        "scripts/latex/check_authorial_voice.py",
+        "controls/latex/tower.json"
+      ],
+      "before_after_qa_evidence": "Safal v1.11-1.12 manuscript issues and corrected source reviewed; reusable linter self-test and source contract (not scientific/human approval)",
+      "pu_rule_references": [],
+      "disposition": "VALIDATED",
+      "target_shared_rule": "controls/latex/authorial-voice-policy.json",
+      "regression_scope": "CONTRACT_AND_STATIC_LINT_ONLY__SCIENTIFIC_ACCEPTANCE_ALWAYS_MANUAL",
+      "global_propagation": "INHERIT_SEMANTIC_POLICY_NOW__DO_NOT_REWRITE_OTHER_RESEARCHERS"
+    },
+    {
+      "change_id": "RD-LTX-CHG-104",
+      "researcher_id": "RSH-010",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Provide opt-in parameterized cover-logo-to-author spacing macro after Safal v1.12 removed a large elastic vfill gap; do not force fixed spacing universally",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "researchers/safal-dawadi/latex/manuscript/safal_pages.tex"
+      ],
+      "before_after_qa_evidence": "Safal v1.12 private exact-TNR PDF visual comparison with v1.11: under-logo gap corrected; other researcher full-page regression remains pending. Macro no-ops unless expressly invoked.",
+      "pu_rule_references": [],
+      "disposition": "VALIDATED",
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "regression_scope": "NON_BREACHING_OPT_IN_API__OTHER_RESEARCHER_RENDER_NOT_CERTIFIED",
+      "global_propagation": "OPTIONAL_ONLY_NO_OVERRIDE"
     }
   ],
   "required_fields": [

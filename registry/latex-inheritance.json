@@ -14,7 +14,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-002",
@@ -24,7 +26,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-003",
@@ -34,7 +38,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-004",
@@ -44,7 +50,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-005",
@@ -54,7 +62,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-006",
@@ -64,7 +74,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-007",
@@ -74,7 +86,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-008",
@@ -84,7 +98,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-009",
@@ -94,7 +110,9 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-010",
@@ -106,7 +124,9 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [
         "RD-LTX-EXT-SAFAL-001"
-      ]
+      ],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
     {
       "researcher_id": "RSH-011",
@@ -116,7 +136,12 @@
       "local_configuration": null,
       "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
       "no_local_base_copy": true,
-      "unique_extension_ids": []
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py"
     }
-  ]
+  ],
+  "semantic_policy": "controls/latex/authorial-voice-policy.json",
+  "semantic_validation": "scripts/latex/check_authorial_voice.py",
+  "semantic_status": "INHERITED_ALL_11__ADVISORY_HUMAN_REVIEW_REQUIRED"
 }

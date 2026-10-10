@@ -43,6 +43,11 @@ def build_index(researchers, branches, websites):
         ("website","Website control and publication","Static publication policy and verified optional researcher websites."),
     ]:
         add("Controls",label,descr,"../controls/"+key+"/index.html",key+" shared source governance template")
+    add("Controls","LaTeX semantic and evidence validation",
+        "Single-tower writing integrity rules, authorial voice, evidence levels and executable Python source checker.",
+        "../controls/latex/semantics/index.html",
+        "semantics authorial voice real field observations photo captions code qa validator thesis",
+        "ACTIVE_POLICY_ADVISORY_CHECK")
     for b in branches["branches"]:
         add("Git branches",b["name"],b.get("purpose") or "Observed repository branch",
             branch_url(b["name"]), (b.get("primary_source_path") or "")+" "+b["category"]+" "+b.get("source_status",""),

@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/09 v2.2 source-checked PU preliminaries, headings and appendices]
+\ProvidesPackage{pumlsc-shared}[2026/10/09 v2.3 source-checked PU preliminaries, headings and appendices]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -87,3 +87,8 @@
   }{}
 }
 \makeatother
+
+% RD-LTX-CHG-104: opt-in, project-configurable cover spacing helper.
+% Only use after the university-approved cover geometry is checked; existing
+% manuscripts are unchanged unless they call this macro deliberately.
+\newcommand{\PUCoverLogoAuthorSpace}[1][30pt]{\par\vspace{#1}}

@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "id": "RD-LTX-CORE-REGISTRY-001",
   "authority": "controls/latex/tower.json",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "namespace": "RD-LTX-CORE-001..100",
-  "status": "12_CONCRETE_COMMON_RULES__FULL_100_NOT_CLAIMED",
+  "status": "15_CONCRETE_COMMON_RULES__FULL_100_NOT_CLAIMED",
   "rules": [
     {
       "id": "RD-LTX-CORE-001",
@@ -137,8 +137,41 @@
         "controls/latex/format-authorities.json",
         "controls/latex/README.md"
       ]
+    },
+    {
+      "id": "RD-LTX-CORE-013",
+      "key": "AUTHORIAL_AND_EVIDENCE_INTEGRITY",
+      "summary": "Each student owns their authentic observational voice, evidence and data; do not invent fieldwork or produce AI administrative narration; style choices follow institution and supervisor",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "SHARED_SEMANTIC_POLICY_PLUS_ADVISORY_CHECK",
+      "provenance": [
+        "controls/latex/authorial-voice-policy.json",
+        "scripts/latex/check_authorial_voice.py"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-014",
+      "key": "HUMAN_READABLE_CAPTIONS",
+      "summary": "Human-facing captions exclude internal source/machine identifiers and fake evidence; IDs retained in source manifests",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "SHARED_SEMANTIC_POLICY_PLUS_ADVISORY_CHECK",
+      "provenance": [
+        "controls/latex/authorial-voice-policy.json",
+        "scripts/latex/check_authorial_voice.py"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-015",
+      "key": "COVER_SPACING_OPTIONAL_INTERFACE",
+      "summary": "Shared template offers opt-in configurable post-logo spacing without changing other researchers' title-page layouts",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "OPT_IN_SHARED_TEX_MACRO__OTHER_RESEARCHER_RENDER_QA_PENDING",
+      "provenance": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "controls/latex/change-register.json"
+      ]
     }
   ],
-  "reserved_unused": "013..100 UNUSED; do not fabricate requirements to fill numbers",
+  "reserved_unused": "016..100 UNUSED; do not fabricate requirements to fill numbers",
   "academic_pu_rules": "Independent PU-FMT series indexed at controls/latex/pu-msc-format.rules.json; no numbering collision"
 }

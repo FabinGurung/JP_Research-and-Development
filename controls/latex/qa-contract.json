@@ -1,13 +1,14 @@
 {
   "schema_version": "1.0.0",
   "id": "RD-LATEX-QA-001",
-  "control_version": "1.2.0",
+  "control_version": "1.3.0",
   "source_gate": [
     "real source exists",
     "manifest reproducible",
     "dependencies and citations declared",
     "correct researcher/stage",
-    "public-source eligibility"
+    "public-source eligibility",
+    "shared semantic policy and read-only lint tool present"
   ],
   "technical_build": [
     "XeLaTeX and Biber successful",
@@ -27,7 +28,8 @@
     "logo SHA and page appearance where required",
     "no clipping, spill, orphaned pages or unintended blank pages",
     "researcher-action/internal audit language absent from student-facing PDF",
-    "audit PDF has unmistakable internal banner/watermark and cannot be confused with thesis"
+    "audit PDF has unmistakable internal banner/watermark and cannot be confused with thesis",
+    "review actual cover post-logo spacing against current university/approved researcher stage; default is not an automatic 30pt norm"
   ],
   "release_decisions": {
     "technical_QA": "independent of human visual QA",
@@ -36,5 +38,13 @@
     "provider_upload": "requires permission, correct folder, stable ID and readback",
     "a9_register": "separate governed Local/Main transaction"
   },
-  "current_automation": "PARTIAL__NO_PUBLIC_OR_PRIVATE_FINAL_PDF_QA_ASSERTED"
+  "current_automation": "PARTIAL__NO_PUBLIC_OR_PRIVATE_FINAL_PDF_QA_ASSERTED",
+  "semantic_manuscript_review": [
+    "Review student authorial perspective; never force first person where institution expects objective third person",
+    "Check for printed administrative identifiers or photo codes in captions/headings without deleting private source identifiers",
+    "Verify that photographs do not become quantified case counts or causal proof by implication",
+    "Match every claimed site, date, method, sample, measured cost and delay to actual project records",
+    "Verify that research assistants and disclosure are represented accurately under institution rules",
+    "Require reviewer approval of factual content; advisory lint is not a science pass"
+  ]
 }

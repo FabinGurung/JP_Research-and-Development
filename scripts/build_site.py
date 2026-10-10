@@ -173,6 +173,13 @@ def main():
                 review_box+='<p><a href="'+esc(pdf_ref)+'">Open current review PDF in Google Drive →</a></p>'
             review_box+='<p class="muted">Previous Git branches remain available as immutable fallbacks. This link does not imply supervisor approval.</p></section>'
             body=body.replace("</main>",review_box+"</main>")
+        # Shared central LaTeX links: visible on EVERY registered researcher page.
+        shared=('<section class="section"><h2>Shared LaTeX, semantics and validation</h2>'
+                '<p>One canonical PU template, academic authorial-integrity policy and '
+                'source/PDF QA system for all researchers; no cross-researcher science.</p>'
+                '<p><a href="../../controls/latex/index.html">Open single LaTeX control tower →</a> · '
+                '<a href="../../controls/latex/semantics/index.html">Semantic rules and checker →</a></p></section>')
+        body=body.replace("</main>",shared+"</main>")
         if r["slug"]=="safal-dawadi":
             body=body.replace("</main>",'<section class="section"><h2>LaTeX preparation control</h2><div class="notice">Researcher source, PDF and A9 states are independently versioned. Read live project controls and recent releases before claiming scientific, university-format or A9 Main approval.</div><p><a href="../../controls/latex/safal-dawadi/index.html">Open Safal project LaTeX status →</a></p></section></main>')
         # Folder-role aliases come from the provider-read registry, not inferred names.
@@ -392,7 +399,14 @@ def main():
             amendments=load(Path("controls/latex/change-register.json"))
             researcher_entries="".join('<li><a href="'+esc(REPO_URL+"/blob/main/registry/latex-inheritance.json")+'">'+esc(x["researcher_id"]+" / "+x["slug"])+'</a> — shared base '+esc(x["template"])+'; '+esc(x["configuration_status"])+'</li>' for x in inheritance["researchers"])
             bridge+='<section class="section"><h2>One template for every researcher</h2><p><strong>ONE SOURCE OF TRUTH:</strong> <a href="'+esc(REPO_URL+"/blob/main/controls/latex/tower.json")+'">canonical tower.json</a> and <a href="'+esc(REPO_URL+"/blob/main/controls/latex/template/pumlsc-shared.sty")+'">one shared LaTeX .sty template</a>. No person has a fork of this baseline. A7 is routing only.</p><p>'+str(len(inheritance["researchers"]))+' researchers inherit this shared template; personal manuscript metadata and explicit additions are parameters, not rival control towers.</p><details><summary>Every researcher and inherited source</summary><ul>'+researcher_entries+'</ul></details></section>'
-            bridge+='<section class="section"><h2>Safal LaTeX chat handover and runnable Linux preview</h2><p><a href="'+esc(REPO_URL+"/blob/main/docs/HANDOVER_SAFAL_DAWADI_LATEX_EXECUTION_20261009.md")+'">Open full governed execution/handover for Safal v1.9 →</a></p><p>Infrastructure CI is stable, but <strong>the latest reconciled seq15 manuscript source is not yet in Git</strong>. After byte-verified source admission, the shared build script supports <code>check</code>, <code>preview</code> (explicit non-production Tinos), and <code>compile</code> (licensed Times New Roman only). No full PU parity or scientific approval is implied.</p></section>'
+            bridge+='<section class="section"><h2>Canonical LaTeX controls: source and validation</h2><p>All eleven researchers inherit this ONE tower. Formatting, authorial integrity, technical validation and scientific review have separate responsibilities.</p><div class="grid">'
+            bridge+='<article class="card"><h3>1. Shared PU template</h3><a href="'+esc(REPO_URL+"/blob/main/controls/latex/template/pumlsc-shared.sty")+'">Open .sty source →</a></article>'
+            bridge+='<article class="card"><h3>2. Semantic integrity</h3><a href="semantics/index.html">Read human-writing and evidence rules →</a></article>'
+            bridge+='<article class="card"><h3>3. Validation Python</h3><a href="'+esc(REPO_URL+"/blob/main/scripts/latex/check_authorial_voice.py")+'">Read executable checker →</a></article>'
+            bridge+='<article class="card"><h3>4. PDF technical QA</h3><a href="'+esc(REPO_URL+"/blob/main/controls/latex/qa-contract.json")+'">Read QA contract →</a></article>'
+            bridge+='<article class="card"><h3>5. Version/change lineage</h3><a href="'+esc(REPO_URL+"/blob/main/controls/latex/change-register.json")+'">Read amendment ledger →</a></article>'
+            bridge+='</div><p><a href="semantics/index.html">Semantic validation walkthrough →</a> · <a href="'+esc(REPO_URL+"/blob/main/registry/latex-inheritance.json")+'">11-researcher inheritance mapping →</a></p></section>'
+            bridge+='<section class="section"><h2>Safal LaTeX chat handover and runnable Linux preview</h2><p><a href="'+esc(REPO_URL+"/blob/main/docs/HANDOVER_SAFAL_DAWADI_LATEX_EXECUTION_20261009.md")+'">Open full governed execution/handover for Safal v1.9 →</a></p><p>The previously recorded v1.9 Local-seq15 state is historical; Safal admitted Git source and v1.12 Drive review links are now listed on the researcher subpage. After byte-verified source admission, the shared build script supports <code>check</code>, <code>preview</code> (explicit non-production Tinos), and <code>compile</code> (licensed Times New Roman only). No full PU parity or scientific approval is implied.</p></section>'
             bridge+='<section class="section"><h2>Shared fixes and numbered local amendments</h2><p>Common rules occupy the 001–100 namespace only as implemented; new tracked proposals start at <strong>101</strong>. A formatting improvement from any thesis must enter the <a href="'+esc(REPO_URL+"/blob/main/controls/latex/change-register.json")+'">one central amendment ledger</a> and is either promoted into the shared .sty after regression QA or logged as a justified researcher-only extension. Local exceptions never duplicate the core.</p><p>Next unallocated ID: '+esc(amendments["next_number"])+'; current recorded amendments: '+str(len(amendments["entries"]))+'. <a href="'+esc(REPO_URL+"/blob/main/controls/latex/extension-registry.json")+'">Project extension index →</a></p></section>'
             parity=load(Path("controls/latex/pu-format-parity-audit.json"))
             par_rows="".join('<tr><td>'+esc(x["id"])+'</td><td>'+esc(x["title"])+'</td><td>'+esc(x["parity_status"])+'</td><td>'+esc(x["evidence_note"])+'</td></tr>' for x in parity["per_rule"])
@@ -401,6 +415,29 @@ def main():
             bridge+='<section class="section"><h2>Approved Q1B / Q2A / Q3A</h2><p><strong>Q1:</strong> Historical Q1B selected the v1.9 seq15 source lineage as its target; later Git/source-admission and formatting-only review changes must be checked against current owning controls. This 2026-10-09 decision snapshot is not a statement of the newest PDF, source hash, approval or A9 cursor.</p><p><strong>Q2:</strong> PRE = earlier Git commit, POST = new non-force commit. Major accepted releases receive annotated Git tags once tag-write is supported; <strong>no routine new snapshot branches</strong>. All historical refs remain preserved.</p><p><strong>Q3:</strong> Admitted academic LaTeX manuscript source (.tex, .bib) belongs under each researcher in this R&D Git repository. Produce normal, evidence-grounded academic writing without internal AI/workflow QA narration or fabricated research.</p><p><a href="'+esc(REPO_URL+"/blob/main/docs/LATEX_Q1B_Q2A_Q3A_GOVERNED_CHANGE_20261009.md")+'">Read source change register →</a></p></section>'
             bridge+='<section class="section"><h2>Release and migration status</h2><p><strong>Bridge:</strong> '+esc(migration["status"])+'</p><p><strong>Cutover:</strong> '+esc(migration["cutover"])+'</p><p><strong>Source states:</strong> '+esc(", ".join(rcontract["states"]))+'</p><p><a href="safal-dawadi/index.html">Safal Dawadi control and release gate →</a> · <a href="../../researchers/safal-dawadi/latex/index.html">Safal researcher workspace →</a></p><h3>Source files</h3><ul>'+contract_links+'</ul></section>'
             body=body.replace("</main>",bridge+"</main>")
+        if slug=="latex":
+            sem=load(Path("controls/latex/authorial-voice-policy.json"))
+            items="".join('<li><strong>'+esc(rule["key"].replace("_"," ").title())+'</strong> — '+esc(rule["requirement"])+'</li>' for rule in sem["rules"])
+            sources=[
+                ("Canonical tower","controls/latex/tower.json"),
+                ("Shared .sty template","controls/latex/template/pumlsc-shared.sty"),
+                ("Semantic policy","controls/latex/authorial-voice-policy.json"),
+                ("Python semantic checker","scripts/latex/check_authorial_voice.py"),
+                ("Template inheritance validator","scripts/latex/validate_shared.py"),
+                ("Universal build preflight","scripts/latex/universal_preflight.py"),
+                ("Full PDF technical QA","scripts/latex/pdf_technical_qa.py"),
+                ("Central amendment register","controls/latex/change-register.json"),
+                ("All researchers' inheritance","registry/latex-inheritance.json"),
+            ]
+            links="".join('<li><a href="'+esc(REPO_URL+"/blob/main/"+p)+'">'+esc(title)+' →</a></li>' for title,p in sources)
+            semantics='<main class="wrap hero"><div class="eyebrow">The ONE R&D LaTeX tower · all researchers</div><h1>Manuscript semantics and validation</h1>'
+            semantics+='<p class="lead">Formatting lives in the shared .sty; scientific meaning and academic authorship are reviewed by humans, assisted by advisory validation code. No Safal-only research facts become universal.</p>'
+            semantics+='<section class="section"><h2>Researcher workflow</h2><div class="flow"><div class="node">Authentic field records</div><div class="arrow">→</div><div class="node">Researcher-owned source</div><div class="arrow">→</div><div class="node">Semantic review</div><div class="arrow">→</div><div class="node">One PU template</div><div class="arrow">→</div><div class="node">PDF + visual QA</div></div></section>'
+            semantics+='<section class="section"><h2>One tower: direct machine-code links</h2><ul>'+links+'</ul><p><code>python3 scripts/latex/check_authorial_voice.py --self-test</code></p><p><code>python3 scripts/latex/check_authorial_voice.py --researcher &lt;researcher-slug&gt; --json</code></p><p>Results are advisory warnings, not corrections or scientific verification.</p></section>'
+            semantics+='<section class="section"><h2>Shared authorial and evidence rules</h2><ol>'+items+'</ol></section>'
+            semantics+='<section class="section"><h2>What Safal v1.11–v1.12 contributed</h2><p><strong>Reusable:</strong> authentic writing perspective, descriptive photographic captions, observed-versus-verified rework, source-first versions, and an opt-in cover spacing helper. <strong>Project-only:</strong> Lamachur, all individual photos, exclusion of road work, the 30pt cover value and Safal’s scientific interpretations. Other researchers must never inherit those facts.</p></section>'
+            semantics+='<section class="section"><h2>Independent release gates</h2><p>Passing code tests is not a completed scientific audit, university-format certification or supervisor approval. The existing full PU rule-parity work remains open. <a href="../index.html">← Back to shared LaTeX tower</a></p></section></main>'
+            write(out,"controls/latex/semantics/index.html",shell("LaTeX Semantics",semantics,3))
         write(out,f"controls/{slug}/index.html",shell(name,body,2))
     saf=load(Path("controls/projects/safal-dawadi.latex.json"))
     pub=saf["source_states"]["first_drive"]
@@ -420,6 +457,19 @@ def main():
 
     current_candidate=baseline["latest_manifest_designated_candidate"]
     research_body=research_body.replace("</main>",'<section class="section"><h2>Current manifest-designated Midterm preview</h2><p>October 2026 v1.2 Midterm; 28 pages, non-production Tinos fallback. No new empirical evidence or university font certification. <a href="'+esc(drive_url(current_candidate["source_zip_id"]))+'">Source ZIP →</a> · <a href="'+esc(drive_url(current_candidate["pdf_id"]))+'">Preview PDF →</a></p><h3>Parallel v1.9 QA review</h3><p>42-page Local seq15 latest review explicitly selected (Q1 B); same-ID Drive source/PDF mirror and SHA readback still required before Git admission. Main ACK for seq15 not independently verified. Main registry last recorded Safal row remains seq2.</p></section></main>')
+    # Supersede old v1.9-only page text with the verified latest registry review.
+    current_safal=next(r for r in researchers if r["slug"]=="safal-dawadi")
+    latest=current_safal["latest_review"]
+    latest_source=REPO_URL+"/tree/"+latest["branch"]+"/"+latest["manuscript_path"]
+    research_body='<main class="wrap hero"><div class="eyebrow">RSH-010 · exact source + Drive review pointers</div>'
+    research_body+='<h1>Safal Dawadi — LaTeX source and validation</h1><p class="lead">The researcher-specific source inherits one shared PU LaTeX template and the universal semantic/evidence policy.</p>'
+    research_body+='<div class="notice"><strong>'+esc(latest["version"])+' is the current technical review.</strong> Scientific and supervisor approval, full university parity and A9 Main closeout remain independent holds.</div>'
+    research_body+='<section class="section"><h2>Current source and derived output</h2>'
+    research_body+='<p><a href="'+esc(latest_source)+'">Open latest versioned manuscript branch →</a></p>'
+    research_body+='<p><a href="'+esc(drive_url(latest["pdf_drive_id"]))+'">Open technical review PDF in Drive →</a> · <a href="'+esc(drive_url(latest["source_zip_drive_id"]))+'">Open private source ZIP in Drive →</a></p>'
+    research_body+='<p><a href="'+esc(REPO_URL+"/tree/"+latest["previous_branch"]+"/researchers/safal-dawadi/latex/manuscript")+'">Open preserved previous Git source →</a></p></section>'
+    research_body+='<section class="section"><h2>Shared controls (used by all researchers)</h2><p><a href="../../../controls/latex/index.html">Single LaTeX tower →</a> · <a href="../../../controls/latex/semantics/index.html">Semantics and validation →</a></p><p>The Safal-only 30pt cover spacing and omission of road work are not imposed on other researchers.</p></section>'
+    research_body+='<section class="section"><h2>Lineage</h2><p><a href="'+esc(REPO_URL+"/blob/main/researchers/safal-dawadi/latex/control.json")+'">Historical project control →</a> · <a href="'+esc(REPO_URL+"/blob/main/registry/researchers.json")+'">Latest version pointers →</a></p><p>Legacy v1.2 Midterm and v1.9 review states remain in source history; they are not the current v1.12 review.</p></section></main>'
     write(out,"researchers/safal-dawadi/latex/index.html",shell("Safal LaTeX Governance",research_body,3))
 
     how=f'''<main class="wrap hero"><div class="eyebrow">ChatGPT operating path</div><h1>How to use this repository</h1><section class="section"><div class="flow"><div class="node">Choose researcher</div><div class="arrow">→</div><div class="node">Choose lane</div><div class="arrow">→</div><div class="node">Read shared control</div><div class="arrow">→</div><div class="node">Work in branch</div></div></section><section class="section"><h2>External output flow</h2><p class="lead">Build/render → upload output to Google Drive → read back the Drive ID/link → update the lane pointer JSON → commit. Git commit history replaces routine duplicate PRE/POST archive copies.</p></section><section class="section"><h2>Presentation recommendation</h2><p>Default to <strong>TypeScript + PptxGenJS + YAML/JSON</strong> for editable presentations. HTML/CSS/SVG may be used for PDF-first rendering. Generated PPTX/PDF files belong in Drive, not Git.</p></section></main>'''
