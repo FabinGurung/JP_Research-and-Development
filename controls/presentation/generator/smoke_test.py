@@ -1,15 +1,25 @@
 from pathlib import Path
 import subprocess, sys, json, hashlib
+from PIL import Image, ImageDraw
 here=Path(__file__).resolve().parent
 out=here/"smoke_build"
 # Build a temporary smoke theme whose expected logo hash is the generated non-scientific demo asset.
 theme=json.loads((here/"theme.default.json").read_text())
-logo=here/"smoke_logo.png"
+logo=out/"smoke_logo.png"
+out.mkdir(exist_ok=True)
+im=Image.new("RGB",(220,220),"white")
+ImageDraw.Draw(im).rectangle((3,3,216,216),outline="black",width=3)
+im.save(logo)
+smoke_content=json.loads((here/"content.example.json").read_text())
+smoke_content["metadata"]["logo"]=str(logo)
+smoke_content["metadata"]["logo_sha256"]=hashlib.sha256(logo.read_bytes()).hexdigest()
+content_file=out/"content.smoke.json"
+content_file.write_text(json.dumps(smoke_content,indent=2))
 h=hashlib.sha256(logo.read_bytes()).hexdigest()
 theme["branding"]["canonical_logo_sha256"]=h
 smoke_theme=here/"theme.smoke.json"
 smoke_theme.write_text(json.dumps(theme,indent=2))
-cmd=[sys.executable,str(here/"build.py"),"--content",str(here/"content.example.json"),"--theme",str(smoke_theme),"--out-dir",str(out),"--fixture"]
+cmd=[sys.executable,str(here/"build.py"),"--content",str(content_file),"--theme",str(smoke_theme),"--out-dir",str(out),"--fixture"]
 r=subprocess.run(cmd,capture_output=True,text=True)
 print(r.stdout)
 if r.returncode:
