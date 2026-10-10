@@ -16,9 +16,12 @@ jobs:
           python-version: '3.13'
       - name: Install pinned generator dependencies
         run: python -m pip install -r controls/presentation/generator/requirements.lock.txt
-      - name: Semantic regression tests
+      - name: Semantic and literature matrix regression tests
         working-directory: controls/presentation/generator
-        run: python -m unittest -v test_a9_semantic_checker
-      - name: Synthetic smoke test (never release certification)
+        run: python -m unittest -v test_a9_semantic_checker test_a9_literature_table
+      - name: Original synthetic presentation smoke test
         working-directory: controls/presentation/generator
         run: python smoke_test.py
+      - name: Three- and four-column literature matrix smoke tests
+        working-directory: controls/presentation/generator
+        run: python run_literature_fixture.py

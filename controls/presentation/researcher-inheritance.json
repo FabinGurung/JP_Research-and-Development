@@ -9,5 +9,8 @@
     "no_cross_researcher_science",
     "no_private_photo_in_public_git",
     "no_licensed_font_in_git"
-  ]
+  ],
+  "shared_literature_policy": "controls/presentation/generator/LITERATURE_TABLE_POLICY.md",
+  "literature_row_authority": "CURRENT_RESEARCHER_BIB_SOURCE_AND_ADMITTED_EVIDENCE",
+  "no_shared_hardcoded_authors": true
 }

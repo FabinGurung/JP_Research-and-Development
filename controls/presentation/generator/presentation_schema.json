@@ -96,7 +96,8 @@
               "section",
               "figure",
               "two_figures",
-              "closing"
+              "closing",
+              "literature_table"
             ]
           },
           "title": {
@@ -124,6 +125,110 @@
             "type": "string"
           },
           "notes": {
+            "type": "string"
+          },
+          "columns": {
+            "enum": [
+              3,
+              4
+            ]
+          },
+          "max_rows_per_slide": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "reference_id",
+                "key_finding",
+                "project_relevance",
+                "finding_locator",
+                "relevance_basis",
+                "relevance_type"
+              ],
+              "properties": {
+                "reference_id": {
+                  "type": "string"
+                },
+                "key_finding": {
+                  "type": "string"
+                },
+                "project_relevance": {
+                  "type": "string"
+                },
+                "finding_locator": {
+                  "type": "string"
+                },
+                "relevance_basis": {
+                  "type": "string"
+                },
+                "relevance_type": {
+                  "enum": [
+                    "METHOD",
+                    "CONTEXT",
+                    "TECHNICAL_BASIS",
+                    "COMPARISON",
+                    "LIMITATION",
+                    "RESEARCH_GAP"
+                  ]
+                },
+                "method_or_limitation": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "literature_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "reference_id",
+          "authors",
+          "year",
+          "title",
+          "source_id",
+          "bibliography_key",
+          "source_kind"
+        ],
+        "properties": {
+          "reference_id": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "source_id": {
+            "type": "string"
+          },
+          "bibliography_key": {
+            "type": "string"
+          },
+          "source_kind": {
+            "enum": [
+              "PEER_REVIEWED",
+              "THESIS",
+              "CODE",
+              "STANDARD",
+              "GUIDELINE",
+              "MANUFACTURER",
+              "OTHER"
+            ]
+          },
+          "doi_or_url": {
             "type": "string"
           }
         }

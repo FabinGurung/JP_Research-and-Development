@@ -53,6 +53,10 @@ def check_semantics(content: dict, evidence_map: dict | None, *, mode: str = "re
         status = record.get("admission_status")
         if status not in _ADMITTED and status not in _FORBIDDEN:
             errors.append(f"source {sid} has missing/unknown admission_status")
+    from a9_literature_table import validate_literature
+    literature = validate_literature(content, evidence_map)
+    errors.extend(literature["errors"])
+    warnings.extend(literature["warnings"])
     for i, slide in enumerate(content.get("slides") or [], 1):
         if not isinstance(slide, dict):
             errors.append(f"slide {i} must be an object")
@@ -65,6 +69,10 @@ def check_semantics(content: dict, evidence_map: dict | None, *, mode: str = "re
             continue
         if content.get("metadata", {}).get("client_facing", True) and _CLIENT_FORBIDDEN.search(text):
             errors.append(f"slide {i} contains internal/machine-control wording")
+        if slide.get("type") == "literature_table":
+            # Per-row cited references, source admission and project relevance are
+            # checked by the literature handler; no redundant slide-level source IDs.
+            continue
         refs = slide.get("evidence_refs") or []
         if not isinstance(refs, list):
             errors.append(f"slide {i} evidence_refs must be an array")

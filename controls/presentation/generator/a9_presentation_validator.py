@@ -83,7 +83,7 @@ def validate_content(content: dict, theme: dict, base_dir: str | Path) -> dict:
 
     for i, slide in enumerate(slides, 1):
         stype = slide.get("type")
-        if stype not in {"title","bullets","section","figure","two_figures","closing"}:
+        if stype not in {"title","bullets","section","figure","two_figures","closing","literature_table"}:
             errors.append(f"slide {i}: unsupported type {stype!r}")
             continue
         title = str(slide.get("title",""))
@@ -131,4 +131,10 @@ def validate_content(content: dict, theme: dict, base_dir: str | Path) -> dict:
                 errors.append(f"slide {i}: two_figures requires exactly 2 figures")
             for j, obj in enumerate(figs, 1):
                 check_asset(obj, f"figure{j}")
+    # The literature-specific semantic gate runs independently with the current evidence map.
+    # Basic structural failures must still be detected on fixture builds.
+    from a9_literature_table import validate_literature
+    lit_structure = validate_literature(content, None, fixture=True)
+    errors.extend(lit_structure["errors"])
+    warnings.extend(lit_structure["warnings"])
     return {"ok": not errors, "errors": errors, "warnings": warnings}

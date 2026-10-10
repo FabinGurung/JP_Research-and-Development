@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "control_id": "RD-CONTROL-PRESENTATION-001",
-  "status": "GITHUB_REVIEW_CANDIDATE__DRIVE_V2_2_REMAINS_ACTIVE",
+  "status": "GITHUB_SHARED_GENERATOR_MERGED__DRIVE_V2_2_REMAINS_ACADEMIC_AUTHORITY",
   "single_academic_tower": true,
   "owner_domain": "academic/thesis",
   "wrapper": "controls/presentation.control.json",
@@ -13,10 +13,21 @@
   "execution_root": "controls/presentation/generator",
   "official_production_font": "Times New Roman",
   "smoke_mode": "FIXTURE_ONLY",
-  "semantic_gate": "CANDIDATE_MACHINE_LINKAGE_VALIDATOR",
+  "semantic_gate": "MACHINE_PROVENANCE_LINKAGE_VALIDATOR__NOT_SCIENTIFIC_TRUTH",
   "visual_qa": "HUMAN_OR_MODEL_REVIEW_REQUIRED",
   "researcher_inheritance": "SINGLE_SHARED_ENGINE_PROJECT_LOCAL_EVIDENCE",
-  "github_main_promoted": false,
+  "github_main_promoted": true,
   "website_deployed": false,
-  "researcher_source_approved": false
+  "researcher_source_approved": false,
+  "literature_table": {
+    "version": "v0.1",
+    "type": "literature_table",
+    "handler": "controls/presentation/generator/a9_literature_table.py",
+    "policy": "controls/presentation/generator/LITERATURE_TABLE_POLICY.md",
+    "template": "controls/presentation/generator/literature_table.template.json",
+    "default_columns": 3,
+    "optional_columns": 4,
+    "max_rows_per_slide": 3,
+    "scientific_status": "SOURCE_LOCATOR_AND_ADMISSION_VALIDATION__HUMAN_FINDING_REVIEW_REQUIRED"
+  }
 }
