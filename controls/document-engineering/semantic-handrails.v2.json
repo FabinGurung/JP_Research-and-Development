@@ -8,7 +8,9 @@
     "Never transfer rates, names, exclusions or signatures between projects.",
     "Fail closed for missing source, arithmetic mismatch, unreviewed public/private exposure.",
     "Draft compile success is not legal/engineering correctness.",
-    "Human legal/finance/engineering approval remains independent of technical tests."
+    "Human legal/finance/engineering approval remains independent of technical tests.",
+    "Client-facing LaTeX prose and rendered PDFs must not contain AI, database, programming, model or internal workflow terminology. Enforce the plain-language checker before release; construction-industry terms remain allowed.",
+    "Client-confirmed lump-sum pricing is a recorded assertion until independently reconciled; never state that an internal financial ledger was checked unless verified."
   ],
   "document_rules": [
     {
@@ -220,5 +222,6 @@
     "G06_EVERY_PAGE_VISUAL_QA",
     "G07_HUMAN_APPROVAL",
     "G08_DRIVE_RELEASE_READBACK"
-  ]
+  ],
+  "plain_language_policy": "controls/document-engineering/client-facing-language.policy.json"
 }
