@@ -18,10 +18,10 @@
 ## 2. Original Overleaf archive and source control
 Original, 102 files: private Drive ID `1wW-_B6bvETGFN_L7XMWcBZlUYBMTqzFP`.
 All 102 private files are stored by family in A9 `02_EXTRACTED_PRIVATE_SOURCE` and checked by name/size.
-A9 original-source QA register: `11MKaYPA8BjAMzAFbi96um7Z-Ynyt_XAD`.
+A9 original-source QA register: `15O8uHISWtMnvGJPW72-kO-vGdHLVJPqU`.
 - 73 TeX, 24 images, 4 PDF and 1 extensionless original.
 - 46 original .tex sources reference inputs/assets; not all dependency closure is verified.
-- One potential TeX primitive risk flag requires manual source security inspection.
+- Revised audit v0.3: 46 source files reference external dependencies; no high-risk primitive matched the corrected simple pattern. Human review remains necessary.
 - Original archive and per-item source files are NOT published in this public repo.
 - Per-file remote hash readback and legal/type-fidelity certifications remain pending.
 
