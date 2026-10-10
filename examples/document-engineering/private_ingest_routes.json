@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "source_zip_file_id": "1wW-_B6bvETGFN_L7XMWcBZlUYBMTqzFP",
+  "source_sha256": "a0986692274647b68b3c839c4be0d827e55345f5502c6e67bab4c4dd61efc924",
+  "destination_parent_folder_id": "1juWAGba3CAm4d0ZcgLosDHn1vcFZSsGy",
+  "categories": {
+    "Salary contract": "1-xuCn33-8la3Y2K4cjTfzcN9KoNZOK7D",
+    "client_contracts": "1sDgCintzuDc0M1vttd-jW7BLL4_jkKFG",
+    "Labour_contract": "1jd62GU7yXXXnlC4ops2-MJKS6c9wtuCF",
+    "Job_contract": "1XoSi0OyWExRMBUFVn5byRV-qHFzzovYM",
+    "Receipt voucher": "1UvxI6zfdQC3Y_asDWkEkij3p1Uiy6uUi",
+    "Payment slip": "1UvxI6zfdQC3Y_asDWkEkij3p1Uiy6uUi",
+    "Purchase Order Letter": "1UvxI6zfdQC3Y_asDWkEkij3p1Uiy6uUi",
+    "Recommendation Letter": "1HlCiUA6D0BGjG1xe7oMKDs_hpYplmbTL",
+    "Experience letter": "1HlCiUA6D0BGjG1xe7oMKDs_hpYplmbTL",
+    "Quotation to vendor": "10kpvggUpTHKLVu0h-xLkThrOPy_MYt4a",
+    "QuotationGovernment": "10kpvggUpTHKLVu0h-xLkThrOPy_MYt4a",
+    "Proposal": "10kpvggUpTHKLVu0h-xLkThrOPy_MYt4a",
+    "Estimate": "1himKnVHifksTWX952aeIzgGkJeicb59P",
+    "MaterialReporting": "1JMNp5H7k8t3uxBhymiefKDHm0YkN1e5-",
+    "Recycle": "16jslduAz1eXvGo53O82ZVFY_fJR9iDii",
+    "Images": "1FY03UTIeIOUFIY5-oX1uk_wzanCnvVZF"
+  }
+}

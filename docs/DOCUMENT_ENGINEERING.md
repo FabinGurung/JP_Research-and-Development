@@ -30,3 +30,11 @@ The academic tower remains controls/latex/tower.json and controls/latex/template
 
 ## Existing ZIP categories
 The public machine-readable family summary is in registry/enterprise-document-catalog.json. Actual client-specific filenames and per-item hashes belong in the private Drive audit manifest, not the public repository.
+
+## Governed private source ingestion
+File-level Drive ingestion is pending. Authorized operator runs source audit in Google Colab with Google Drive access:
+
+    python3 scripts/document_engineering/ingest_zip_drive.py --config examples/document-engineering/private_ingest_routes.json --report /private/plan.json
+    python3 scripts/document_engineering/ingest_zip_drive.py --config examples/document-engineering/private_ingest_routes.json --execute --report /private/readback.json
+
+Default is dry run. --execute uploads only missing entries, checks SHA-256 of the original ZIP, compares pre-existing MD5 checksums and readbacks uploaded IDs/parents/checksums. Private report must not be committed to Git. Do not claim complete migration before running this under authorized credentials.
