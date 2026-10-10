@@ -223,10 +223,10 @@ def build_pptx(content, theme, out_path, production=False):
                 title_y=0.30+pH+0.18
             else:
                 title_y=1.45
-            _add_textbox(slide,left,title_y,10-left-right,1.15,spec.get("title",""),30,font,bold=False,align=PP_ALIGN.CENTER)
-            subtitle_y=title_y+1.12
+            _add_textbox(slide,left,title_y,10-left-right,1.86,spec.get("title",""),30,font,bold=False,align=PP_ALIGN.CENTER)
+            subtitle_y=title_y+1.88
             _add_textbox(slide,left,subtitle_y,10-left-right,0.55,spec.get("subtitle",""),17,font,align=PP_ALIGN.CENTER)
-            meta_y=max(subtitle_y+0.72,4.72)
+            meta_y=max(subtitle_y+0.70,5.28)
             _add_textbox(slide,left,meta_y,10-left-right,0.28,meta.get("researcher",""),11,font,align=PP_ALIGN.CENTER)
             meta_y+=0.32
             for line in _supervisor_lines(meta):
