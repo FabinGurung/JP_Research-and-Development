@@ -1,0 +1,84 @@
+{
+  "type": "methodology_flow",
+  "title": "Research Methodology",
+  "scientific_role": "METHOD",
+  "layout": "horizontal_linear",
+  "direction": "left_to_right",
+  "max_stages_per_slide": 6,
+  "candidate_status": "RESEARCHER_AND_SUPERVISOR_REVIEW_PENDING",
+  "provenance": {
+    "researcher_id": "RSH-010",
+    "researcher": "Safal Dawadi",
+    "source_manuscript_version": "v1.12",
+    "source_commit": "1012e14e91a587c7bfaf4fbdddadf4e343863d73",
+    "source_manifest_id": "1zgV-LpHa8Jw82R6Cr2p28Dxth0QQXRdT",
+    "source_basis": "Current thesis Chapter 3, especially Table 3.1 and §§3.3–3.7",
+    "previous_presentation": "v0.8",
+    "next_presentation_version": "PENDING_APPROVED_REBUILD",
+    "interpretation_guardrail": "Process diagram only; completion of individual repairs, verified causes, financial losses and project delays is not asserted"
+  },
+  "stages": [
+    {
+      "stage_id": "SD-M01",
+      "title": "Account Transcription",
+      "description": "Preserve field accounts, source language, observer and dates where known.",
+      "category": "INPUT",
+      "input": "Reported observations and original notes",
+      "output": "Traceable observation descriptions",
+      "manuscript_locator": "Chapter 3, Table 3.1: Account transcription; §3.1",
+      "evidence_refs": ["SAFAL-V112-MANUSCRIPT"],
+      "evidence_status": "DESCRIBED_PROCEDURE_NOT_CASE_COMPLETION_ASSERTION"
+    },
+    {
+      "stage_id": "SD-M02",
+      "title": "Topic Grouping",
+      "description": "Organize concerns into waterproofing and masonry/plaster work.",
+      "category": "PREPARATION",
+      "input": "Field accounts and selected building photographs",
+      "output": "Two building-work categories",
+      "manuscript_locator": "Chapter 3, Table 3.1: Topic grouping; §3.3",
+      "evidence_refs": ["SAFAL-V112-MANUSCRIPT"],
+      "evidence_status": "DESCRIBED_PROCEDURE"
+    },
+    {
+      "stage_id": "SD-M03",
+      "title": "Mechanism Screening",
+      "description": "List plausible explanations and evidence needed to distinguish them.",
+      "category": "SCREENING",
+      "output": "Alternative mechanisms and verification needs",
+      "manuscript_locator": "Chapter 3, Table 3.1: Mechanism screening; §3.6",
+      "evidence_refs": ["SAFAL-V112-MANUSCRIPT"],
+      "evidence_status": "INTERPRETIVE_NOT_CAUSAL_PROOF"
+    },
+    {
+      "stage_id": "SD-M04",
+      "title": "Technical Comparison",
+      "description": "Check approved drawings and applicable technical references.",
+      "category": "ANALYSIS",
+      "output": "Context-dependent technical assessment",
+      "manuscript_locator": "Chapter 3, Table 3.1: Technical comparison; §3.4",
+      "evidence_refs": ["SAFAL-V112-MANUSCRIPT"],
+      "evidence_status": "APPLICABILITY_REQUIRES_PROJECT_RECORDS"
+    },
+    {
+      "stage_id": "SD-M05",
+      "title": "Event Verification",
+      "description": "Require evidence of original work and later corrective action.",
+      "category": "VERIFICATION",
+      "output": "Verified event or recorded evidence gap",
+      "manuscript_locator": "Chapter 3, Table 3.1: Event classification; §3.5",
+      "evidence_refs": ["SAFAL-V112-MANUSCRIPT"],
+      "evidence_status": "ELIGIBILITY_RULE_NOT_ASSERTED_EVENT_COUNT"
+    },
+    {
+      "stage_id": "SD-M06",
+      "title": "Impact Assessment",
+      "description": "Assess cost or delay only where matched records support it.",
+      "category": "ANALYSIS",
+      "output": "Supported impact or explicitly unquantified item",
+      "manuscript_locator": "Chapter 3, Table 3.1: Consequence assessment; §3.7",
+      "evidence_refs": ["SAFAL-V112-MANUSCRIPT"],
+      "evidence_status": "NO_AGGREGATE_COST_OR_DELAY_CLAIM"
+    }
+  ]
+}
