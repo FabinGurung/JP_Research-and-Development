@@ -473,8 +473,23 @@ def main():
     research_body+='<section class="section"><h2>Lineage</h2><p><a href="'+esc(REPO_URL+"/blob/main/researchers/safal-dawadi/latex/control.json")+'">Historical project control →</a> · <a href="'+esc(REPO_URL+"/blob/main/registry/researchers.json")+'">Latest version pointers →</a></p><p>Legacy v1.2 Midterm and v1.9 review states remain in source history; they are not the current v1.12 review.</p></section></main>'
     write(out,"researchers/safal-dawadi/latex/index.html",shell("Safal LaTeX Governance",research_body,3))
 
-    how=f'''<main class="wrap hero"><div class="eyebrow">ChatGPT operating path</div><h1>How to use this repository</h1><section class="section"><div class="flow"><div class="node">Choose researcher</div><div class="arrow">→</div><div class="node">Choose lane</div><div class="arrow">→</div><div class="node">Read shared control</div><div class="arrow">→</div><div class="node">Work in branch</div></div></section><section class="section"><h2>External output flow</h2><p class="lead">Build/render → upload output to Google Drive → read back the Drive ID/link → update the lane pointer JSON → commit. Git commit history replaces routine duplicate PRE/POST archive copies.</p></section><section class="section"><h2>Presentation recommendation</h2><p>Default to <strong>TypeScript + PptxGenJS + YAML/JSON</strong> for editable presentations. HTML/CSS/SVG may be used for PDF-first rendering. Generated PPTX/PDF files belong in Drive, not Git.</p></section></main>'''
+    how=f'''<main class="wrap hero"><div class="eyebrow">ChatGPT operating path</div><h1>How to use this repository</h1><section class="section"><div class="flow"><div class="node">Choose researcher</div><div class="arrow">→</div><div class="node">Choose lane</div><div class="arrow">→</div><div class="node">Read shared control</div><div class="arrow">→</div><div class="node">Work in branch</div></div></section><section class="section"><h2>External output flow</h2><p class="lead">Build/render → upload output to Google Drive → read back the Drive ID/link → update the lane pointer JSON → commit. Git commit history replaces routine duplicate PRE/POST archive copies.</p></section><section class="section"><h2>Current thesis and presentation technologies</h2><p>The academic presentation engine currently uses Python + ReportLab for PDF and Python + python-pptx for PowerPoint. The thesis manuscript uses LaTeX / XeLaTeX. The literature semantic handler uses Python + JSON with linked citations and evidence checks.</p><p><a href="../technology/index.html">Open the full verified technology and source-code table →</a></p></section></main>'''
     write(out,"how-to/index.html",shell("How to",how,1))
+    # Machine-readable stack register: render the actual active source paths, not legacy recommendations.
+    tech=load(Path("controls/technology-stack.json"))
+    tech_rows="".join(
+        '<tr><th scope="row">'+esc(x["output"])+'</th><td><strong>'+esc(x["technology"])+'</strong></td>'
+        +'<td><a href="'+esc(REPO_URL+"/blob/main/"+x["implementation"])+'">Implementation source →</a></td>'
+        +'<td><a href="'+esc(REPO_URL+"/blob/main/"+x["validation"])+'">Validator / policy →</a></td></tr>'
+        for x in tech["categories"]
+    )
+    tech_body='<main class="wrap hero"><div class="eyebrow">Research infrastructure · current executable technologies</div><h1>Technology and code map</h1>'
+    tech_body+='<p class="lead">This page is generated from the versioned machine-readable control register. These are technologies currently implemented and used by the R&D academic systems, not proposed future alternatives.</p>'
+    tech_body+='<section class="section"><h2>Outputs and technologies</h2><div class="branch-table-wrap"><table class="branch-table"><thead><tr><th>Output</th><th>Technology</th><th>Code</th><th>Guardrail</th></tr></thead><tbody>'+tech_rows+'</tbody></table></div></section>'
+    tech_body+='<section class="section"><h2>Boundaries and checks</h2><ul>'+''.join('<li>'+esc(note)+'</li>' for note in tech["notes"])+'</ul></section>'
+    tech_body+='<section class="section"><p><a href="'+esc(REPO_URL+'/blob/main/controls/technology-stack.json')+'">Inspect machine-readable technology register →</a> · <a href="../controls/presentation/index.html">Presentation control tower →</a></p></section></main>'
+    write(out,"technology/index.html",shell("Technology and Code",tech_body,1))
+
     data_dir=out/"data"; data_dir.mkdir()
     for src,name in [(ROOT/"registry/researchers.json","researchers.json"),(ROOT/"registry/branch-registry.json","branch-registry.json"),(ROOT/"registry/websites.json","websites.json"),(ROOT/"registry/debts.json","debts.json"),(ROOT/"controls/repository.control.json","repository-policy.json")]:
         shutil.copy2(src,data_dir/name)
