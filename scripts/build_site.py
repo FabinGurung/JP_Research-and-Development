@@ -164,6 +164,15 @@ def main():
         if drive.get("project_root_drive_id"):
             folder_url="https://drive.google.com/drive/folders/"+drive["project_root_drive_id"]
             body=body.replace("</main>",'<section class="section"><h2>Canonical project folder</h2><p><a href="'+esc(folder_url)+'">Open complete Google Drive project cabinet →</a></p><p>GitHub contains public-safe source and pointers; the Drive folder contains original/compiled researcher documents subject to Drive permissions.</p></section></main>')
+        latest=r.get("latest_review")
+        if latest:
+            source_ref=REPO_URL+"/tree/"+latest["branch"]+"/"+latest["manuscript_path"]
+            pdf_ref=drive_url(latest.get("pdf_drive_id"))
+            review_box='<section class="section"><h2>Current versioned LaTeX manuscript</h2><div class="notice"><strong>'+esc(latest["version"])+' — technical review only.</strong> '+esc(latest["status"])+'</div><p><a href="'+esc(source_ref)+'">Open latest GitHub LaTeX branch →</a></p>'
+            if pdf_ref:
+                review_box+='<p><a href="'+esc(pdf_ref)+'">Open current review PDF in Google Drive →</a></p>'
+            review_box+='<p class="muted">Previous Git branches remain available as immutable fallbacks. This link does not imply supervisor approval.</p></section>'
+            body=body.replace("</main>",review_box+"</main>")
         if r["slug"]=="safal-dawadi":
             body=body.replace("</main>",'<section class="section"><h2>LaTeX preparation control</h2><div class="notice">Researcher source, PDF and A9 states are independently versioned. Read live project controls and recent releases before claiming scientific, university-format or A9 Main approval.</div><p><a href="../../controls/latex/safal-dawadi/index.html">Open Safal project LaTeX status →</a></p></section></main>')
         # Folder-role aliases come from the provider-read registry, not inferred names.
