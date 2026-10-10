@@ -231,8 +231,10 @@ def _pdf_methodology_flow(c, slide, font, W, H, left, right, top, title_pt):
             ax=x+box_w+arrow_width-5
             p=c.beginPath();p.moveTo(ax,cy);p.lineTo(ax-5,cy+3.5);p.lineTo(ax-5,cy-3.5);p.close()
             c.setFillColor(HexColor('#303030'));c.drawPath(p,stroke=0,fill=1)
-    c.setFillColor(HexColor('#444444'));c.setFont(font,10)
-    c.drawString(left,72,'Method sequence from the current thesis; evidence/verification details remain in the research record.')
+    footnote = str(slide.get('footnote','')).strip()
+    if footnote:
+        c.setFillColor(HexColor('#444444'));c.setFont(font,10)
+        c.drawString(left,72,footnote)
 
 def _pptx_methodology_flow(slide, spec, font, left, top, title_pt):
     from pptx.enum.shapes import MSO_SHAPE, MSO_CONNECTOR
@@ -262,7 +264,9 @@ def _pptx_methodology_flow(slide, spec, font, left, top, title_pt):
             arrow=slide.shapes.add_shape(MSO_SHAPE.RIGHT_ARROW, Inches(x+bw+0.026), Inches(y+h/2-0.08), Inches(gap-0.05), Inches(0.16))
             arrow.fill.solid();arrow.fill.fore_color.rgb=RGBColor(65,65,65)
             arrow.line.fill.background()
-    _add_textbox(slide,left,5.2,9.1,0.4,'Method sequence from the current thesis; full source and verification records remain in the research documentation.',10,font)
+    footnote = str(spec.get('footnote','')).strip()
+    if footnote:
+        _add_textbox(slide,left,5.2,9.1,0.4,footnote,10,font)
 
 def build_pdf(content, theme, out_path, production=False):
     W = theme["canvas"]["width_in"] * PT_PER_IN
