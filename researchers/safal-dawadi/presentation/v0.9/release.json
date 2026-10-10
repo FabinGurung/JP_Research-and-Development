@@ -20,14 +20,15 @@
   "outputs": {
     "pdf": {
       "drive_id": "1WWb8Jf9Aq3IpHvY1H8tn2nVqpgKGy7dY",
-      "sha256": "de1fae638c4dfc669c668417255c47e106e1c8b31c3eb0ec13bc793ecefe933f"
+      "sha256": "064dcf3fa9494884c1894366ec61772526a4a2159c0c4eef18601805fab8a796"
     },
     "pptx": {
       "drive_id": "1LpQD2cehoUwmIzwTzC2dfjELS5OGfehj",
       "sha256": "056e8578619ea62b4af02cc08d4207da66aa2b58c83710b96cf111f0094359f4"
     },
-    "package_drive_id": "1GVBEy-tkzMVRJaX1pAAEidsxFQP3SZoG",
-    "folder_drive_id": "1Wsd-jM_bQnk4ZX-Kc-X7F14gD_ahBMxo"
+    "package_drive_id": "11sz35sw9eHbSKSdQMk3CTtLiUjFXr4uu",
+    "folder_drive_id": "1Wsd-jM_bQnk4ZX-Kc-X7F14gD_ahBMxo",
+    "distribution_manifest_drive_id": "1bIhhPQN9pmBotQXyJmyOjO_1NSc3Tfdh"
   },
   "checks": {
     "structural": "PASS",
