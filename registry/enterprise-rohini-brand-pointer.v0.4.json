@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "profile_id": "ROHINI_ENTERPRISE_LETTERHEAD_V0_4",
+  "status": "REFERENCE_POINTER_ONLY__PRIVATE_ASSET_BYTES_NOT_IN_GIT",
+  "original_company_letterhead_id": "1Yp3-Sn0AKYHZ8TQAVxX0D1Q6wQT8CK0UJ4iqn2bAcEk",
+  "original_company_logo_id": "1qZGmgf9GwNeDXBjPOgrgfOoLFy5VKRJrXcKEvJ8LAb4",
+  "private_derived_logo_image_id": "1Wen-kKUR11860X0mHSrahFHjSbgouFjh",
+  "private_brand_manifest_id": "1a4jduscc8Z5BcQ-EkwETeSflhPL4_K83",
+  "private_brand_folder_id": "1b54vrR531m3_K9dcaq0oqU8PIrJGN-ep",
+  "source_kind": "imported Google Docs with embedded image; original DOCX byte-identity unverified",
+  "source_authority": "live authenticated Google Drive",
+  "local_logo_reference": "assets/rohini-logo.jpg",
+  "local_profile_reference": "company-brand.tex",
+  "document_margins_mm": {
+    "left": 24,
+    "right": 24,
+    "top": 25,
+    "bottom": 25
+  },
+  "inline_project_values": "FORBIDDEN_IN_PUBLIC_REPOSITORY",
+  "pdf_generation": "AUTHORIZED_PRIVATE_COMPILER",
+  "intended_template_path": "templates/enterprise/v2/client-contract-simple-lumpsum-letterhead.tex",
+  "historical_revision": "v0.3 original preserved in owning project Drive",
+  "status_of_project": "DRAFT_NOT_SIGNABLE"
+}
