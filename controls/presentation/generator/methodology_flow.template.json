@@ -1,0 +1,38 @@
+{
+  "type": "methodology_flow",
+  "title": "Research Methodology",
+  "scientific_role": "METHOD",
+  "layout": "horizontal_linear",
+  "direction": "left_to_right",
+  "max_stages_per_slide": 6,
+  "stages": [
+    {
+      "stage_id": "M01",
+      "title": "Source Preparation",
+      "description": "Describe the actual source and procedure in one sentence.",
+      "category": "INPUT",
+      "input": "Named, authorized primary material",
+      "output": "Traceable research input",
+      "manuscript_locator": "Current Chapter 3, named section",
+      "evidence_refs": ["CURRENT_ADMITTED_SOURCE_ID"]
+    },
+    {
+      "stage_id": "M02",
+      "title": "Procedure",
+      "description": "Describe the real recorded method, not a claimed result.",
+      "category": "ANALYSIS",
+      "output": "Documented intermediate analytical material",
+      "manuscript_locator": "Current Chapter 3, named section",
+      "evidence_refs": ["CURRENT_ADMITTED_SOURCE_ID"]
+    },
+    {
+      "stage_id": "M03",
+      "title": "Verification",
+      "description": "Identify the checks and outstanding records.",
+      "category": "VERIFICATION",
+      "output": "Qualified result or explicit evidence gap",
+      "manuscript_locator": "Current Chapter 3, named section",
+      "evidence_refs": ["CURRENT_ADMITTED_SOURCE_ID"]
+    }
+  ]
+}

@@ -189,6 +189,81 @@ def _pptx_literature_table(slide, spec, font, left, top, title_pt):
                 paragraph.font.color.rgb=RGBColor(0,0,0)
     _add_textbox(slide,left,6.58,9.1,0.24,"Full references are provided in the thesis bibliography.",10,font)
 
+
+def _method_stage_text(stage):
+    return str(stage.get('title','')), str(stage.get('description',''))
+
+def _pdf_methodology_flow(c, slide, font, W, H, left, right, top, title_pt):
+    # One semantic row in 4:3 landscape, vector geometry; scientific provenance is a sidecar.
+    from reportlab.lib.colors import HexColor
+    stages=slide['stages']; count=len(stages)
+    if count>6: raise ValueError('methodology must be paginated before rendering')
+    c.setFillColor(HexColor('#141414')); c.setFont(font,title_pt)
+    c.drawString(left,H-top-title_pt,slide.get('title','Methodology'))
+    usable=W-left-right; arrow_width=19 if count>=5 else 25
+    box_w=(usable-arrow_width*(count-1))/count
+    if box_w<65: raise ValueError('methodology nodes are too narrow')
+    h=152; y=H*0.42
+    for i,stage in enumerate(stages):
+        x=left+i*(box_w+arrow_width)
+        c.setFillColor(HexColor('#F5F5F5'));c.setStrokeColor(HexColor('#898989'))
+        c.roundRect(x,y,box_w,h,9,stroke=1,fill=1)
+        c.setFillColor(HexColor('#303030'));c.setFont(font,11)
+        c.drawString(x+8,y+h-17,f'{i+1:02d}')
+        label,description=_method_stage_text(stage)
+        title_lines=_wrap_text(label,font,11.5,box_w-16)
+        if len(title_lines)>3: raise ValueError('methodology title overflow; shorten stage')
+        c.setFont(font,11.5)
+        ty=y+h-41
+        for line in title_lines:
+            c.drawString(x+8,ty,line);ty-=14.3
+        description_lines=_wrap_text(description,font,9.7,box_w-16)
+        if len(description_lines)>6 or ty-14-(len(description_lines)*12)<y+7:
+            raise ValueError('methodology description overflow; shorten stage or paginate')
+        c.setFont(font,9.7)
+        ty-=10
+        for line in description_lines:
+            c.drawString(x+8,ty,line);ty-=12
+        if i<count-1:
+            cy=y+h/2
+            c.setStrokeColor(HexColor('#303030'));c.setLineWidth(1.4)
+            c.line(x+box_w+2,cy,x+box_w+arrow_width-5,cy)
+            ax=x+box_w+arrow_width-5
+            p=c.beginPath();p.moveTo(ax,cy);p.lineTo(ax-5,cy+3.5);p.lineTo(ax-5,cy-3.5);p.close()
+            c.setFillColor(HexColor('#303030'));c.drawPath(p,stroke=0,fill=1)
+    c.setFillColor(HexColor('#444444'));c.setFont(font,10)
+    c.drawString(left,72,'Method sequence from the current thesis; evidence/verification details remain in the research record.')
+
+def _pptx_methodology_flow(slide, spec, font, left, top, title_pt):
+    from pptx.enum.shapes import MSO_SHAPE, MSO_CONNECTOR
+    stages=spec['stages'];n=len(stages)
+    if n>6: raise ValueError('methodology must be paginated before rendering')
+    _add_textbox(slide,left,top,9.1,0.6,spec.get('title','Methodology'),title_pt,font)
+    usable=9.1;gap=0.25 if n>=5 else 0.34
+    bw=(usable-(n-1)*gap)/n
+    if bw < 0.9: raise ValueError('methodology node width insufficient')
+    y=2.55;h=2.10
+    for i, stage in enumerate(stages):
+        x=left+i*(bw+gap)
+        shape=slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE,Inches(x),Inches(y),Inches(bw),Inches(h))
+        shape.fill.solid();shape.fill.fore_color.rgb=RGBColor(245,245,245)
+        shape.line.color.rgb=RGBColor(135,135,135)
+        tf=shape.text_frame;tf.clear();tf.word_wrap=True
+        tf.margin_left=Inches(0.09);tf.margin_right=Inches(0.07)
+        tf.margin_top=Inches(0.11);tf.margin_bottom=Inches(0.08)
+        from pptx.enum.text import MSO_ANCHOR
+        tf.vertical_anchor=MSO_ANCHOR.TOP
+        number=tf.paragraphs[0];number.text=f'{i+1:02d}';number.font.name=font;number.font.size=Pt(10);number.font.color.rgb=RGBColor(35,35,35)
+        title_p=tf.add_paragraph();title_p.text=str(stage.get('title',''))
+        title_p.font.name=font;title_p.font.size=Pt(11.4);title_p.font.bold=True;title_p.font.color.rgb=RGBColor(20,20,20);title_p.space_before=Pt(9)
+        desc_p=tf.add_paragraph();desc_p.text=str(stage.get('description',''))
+        desc_p.font.name=font;desc_p.font.size=Pt(9.6);desc_p.font.color.rgb=RGBColor(35,35,35);desc_p.space_before=Pt(7)
+        if i<n-1:
+            arrow=slide.shapes.add_shape(MSO_SHAPE.RIGHT_ARROW, Inches(x+bw+0.026), Inches(y+h/2-0.08), Inches(gap-0.05), Inches(0.16))
+            arrow.fill.solid();arrow.fill.fore_color.rgb=RGBColor(65,65,65)
+            arrow.line.fill.background()
+    _add_textbox(slide,left,5.2,9.1,0.4,'Method sequence from the current thesis; full source and verification records remain in the research documentation.',10,font)
+
 def build_pdf(content, theme, out_path, production=False):
     W = theme["canvas"]["width_in"] * PT_PER_IN
     H = theme["canvas"]["height_in"] * PT_PER_IN
@@ -279,6 +354,8 @@ def build_pdf(content, theme, out_path, production=False):
                     c.drawCentredString(W/2,bottom+22-k*caption_pt*1.15,line)
         elif stype == "literature_table":
             _pdf_literature_table(c, slide, font, left, W, H, top, bottom, title_pt)
+        elif stype == "methodology_flow":
+            _pdf_methodology_flow(c, slide, font, W, H, left, right, top, title_pt)
         elif stype == "closing":
             c.setFont(font, title_pt)
             c.drawCentredString(W/2,H/2+20,slide.get("title",""))
@@ -360,6 +437,8 @@ def build_pptx(content, theme, out_path, production=False):
                 _add_textbox(slide,left,6.55,10-left-right,0.35,spec["caption"],caption_pt,font,align=PP_ALIGN.CENTER)
         elif stype=="literature_table":
             _pptx_literature_table(slide,spec,font,left,top,title_pt)
+        elif stype=="methodology_flow":
+            _pptx_methodology_flow(slide,spec,font,left,top,title_pt)
         elif stype=="closing":
             _add_textbox(slide,left,2.8,10-left-right,0.7,spec.get("title",""),title_pt,font,align=PP_ALIGN.CENTER)
             _add_textbox(slide,left,3.6,10-left-right,0.5,spec.get("subtitle",""),16,font,align=PP_ALIGN.CENTER)

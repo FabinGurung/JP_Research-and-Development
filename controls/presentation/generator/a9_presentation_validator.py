@@ -83,7 +83,7 @@ def validate_content(content: dict, theme: dict, base_dir: str | Path) -> dict:
 
     for i, slide in enumerate(slides, 1):
         stype = slide.get("type")
-        if stype not in {"title","bullets","section","figure","two_figures","closing","literature_table"}:
+        if stype not in {"title","bullets","section","figure","two_figures","closing","literature_table","methodology_flow"}:
             errors.append(f"slide {i}: unsupported type {stype!r}")
             continue
         title = str(slide.get("title",""))
@@ -137,4 +137,8 @@ def validate_content(content: dict, theme: dict, base_dir: str | Path) -> dict:
     lit_structure = validate_literature(content, None, fixture=True)
     errors.extend(lit_structure["errors"])
     warnings.extend(lit_structure["warnings"])
+    from a9_methodology_flow import validate_methodology
+    method_structure = validate_methodology(content, None, fixture=True)
+    errors.extend(method_structure["errors"])
+    warnings.extend(method_structure["warnings"])
     return {"ok": not errors, "errors": errors, "warnings": warnings}
