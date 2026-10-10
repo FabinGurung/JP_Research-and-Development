@@ -8,6 +8,7 @@ import shutil
 import tempfile
 from pathlib import Path
 from validation_v2 import validate
+from check_client_facing_language import violations
 ROOT=Path(__file__).resolve().parents[2]
 TOKEN=re.compile(r"\{\{([a-z_]+)\}\}")
 ESC={"&":r"\&","%":r"\%","$":r"\$","#":r"\#","_":r"\_","{":r"\{","}":r"\}","\\":r"\textbackslash{}"}
@@ -27,6 +28,8 @@ def render(document):
             except ValueError: raise ValueError("Date must be YYYY-MM-DD: "+k) from None
     if "start_date" in fields and "end_date" in fields and fields["start_date"]>fields["end_date"]:
         raise ValueError("End date before start date")
+    disallowed=violations('\n'.join(fields.values()))
+    if disallowed:raise ValueError('Client document contains forbidden internal terminology: '+', '.join(disallowed))
     arithmetic=validate(document)
     source=(ROOT/"templates/enterprise/v2"/(kind+".tex")).read_text()
     if set(TOKEN.findall(source))!=set(fields): raise ValueError("Template/schema mismatch")
