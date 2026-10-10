@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-010",
+  "manuscript_version": "v1.12",
+  "build_class": "PRIVATE_TIMES_NEW_ROMAN_TECHNICAL_REVIEW_NOT_FINAL",
+  "source_branch": "safal/v1.12-building-only-cover-spacing-20261010",
+  "source_commit": "670fc72ed286f78275a82e3709b8e4e3a0423d32",
+  "parent_source_branch": "safal/v1.11-authorial-revision-20261010",
+  "parent_source_commit": "c9148e80385c3a4f71eaf98bd03dcd3f5be3a129",
+  "main_site_pre_snapshot": "archive/pre-safal-v112-website-pointer-20261010",
+  "canonical_template": "controls/latex/template/pumlsc-shared.sty",
+  "engine": "XeLaTeX/Biber/XeLaTeX/XeLaTeX",
+  "compiled_pdf": {
+    "pages": 43,
+    "paper": "A4",
+    "pdf_sha256": "c72f537a12feed5d00943525ec9b07addc4cee8d25b2d351b9e9d3c347993da5",
+    "file_size_bytes": 2597216,
+    "embedded_images": 18,
+    "site_photo_count": 17,
+    "exact_TNR_embedded": true,
+    "overfull_boxes": 0,
+    "undefined_references": 0,
+    "road_terms_in_pdf": 0
+  },
+  "cover_logo_gap": "fixed 30pt after logo instead of vfill; project-specific safal_pages.tex only",
+  "files": {
+    "pdf_drive_id": "1yh_2sFCV23j3QRGzLMTpqDYGwGHN0ATo",
+    "pdf_folder_id": "10CGAkTXRMs8r_YSxit277s-38MkxgmR8",
+    "latex_source_zip_drive_id": "1zgV-LpHa8Jw82R6Cr2p28Dxth0QQXRdT",
+    "latex_source_folder_id": "14LU1OSTYFsd00mvYWK1dOFc7lIvepPq_",
+    "qa_zip_drive_id": "1eKX2yO0Gr3dcozTo1w7RVmztZRAEjMbf",
+    "qa_folder_id": "1VjxnMF1lQvsUORJnQ9PONdaIjr8xDW-F",
+    "latex_source_zip_sha256": "b6330b91e12b5a4b0038a6caf9ad2020c4621d144cf47c0d8cec55d027a6b9bb",
+    "qa_zip_sha256": "b89f976bf2c28fa6a4d413eaa476df3e52e62624513252b7683d76828871a67b",
+    "pdf_provider_readback_sha256": "c72f537a12feed5d00943525ec9b07addc4cee8d25b2d351b9e9d3c347993da5"
+  },
+  "scientific_approval": "HOLD",
+  "supervisor_approval": "HOLD",
+  "PU_144_rule_certification": "NOT_VERIFIED",
+  "A9_local_main_sync": "NOT_ACKNOWLEDGED_IN_THIS_RUN",
+  "font_binary_policy": "not shared or committed",
+  "notes": [
+    "v1.11 retains all prior source as rollback, no force moves.",
+    "Road/PCC material removed from active v1.12 source and PDF, including the eight related photographs.",
+    "Private photographs included in owner-only ZIP; do not publish ZIP on public GitHub.",
+    "Drive PDFs and archives retain provider read-back verified IDs; this is not a scientific release."
+  ]
+}

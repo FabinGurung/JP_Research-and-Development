@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "RD-LTX-AUTHORIAL-VOICE-001",
+  "status": "PROPOSED_SHARED_GUARDRAIL_PENDING_MERGE",
+  "policy_owner": "R&D single LaTeX control tower",
+  "applies_to": "All thesis researchers inheriting pumlsc-shared.sty, after central approval",
+  "scope": "student-facing manuscript prose, captions and abstracts",
+  "not_scope": "font/layout .sty rules, private evidence IDs, internal JSON/CSV, code identifiers",
+  "principles": [
+    "Researcher-facing prose must reflect the named author's genuine observations, methods and conclusions: no unsupported first-person events or manufactured fieldwork.",
+    "Prefer natural scientific prose and, when first-person perspective is appropriate under the university/supervisor guidance, use I/my/we with correct past tense for completed observations and work.",
+    "Do not refer to the student author as 'the researcher' or 'the practitioner' merely to make their firsthand observations sound independently collected.",
+    "Do not print internal evidence identifiers such as SAFAL-PHOTO-W02B-01, W01/W02/W03, artifact keys, A9, ChatGPT, or control-tower terminology in narrative captions, headings or abstracts. Keep identifiers in private machine-readable evidence registries.",
+    "Preserve third-person language when genuinely discussing another researcher, an interview participant, or cited sources; do not mechanically replace all occurrences.",
+    "Distinguish witnessed conditions from technically diagnosed causes, actual repaired work from mere defects, and verified incremental costs/delays from respondent estimates.",
+    "Do not conceal or falsify the use of writing assistants, research support or generated code; follow institutional disclosure rules.",
+    "Version source before compiling outputs: a PDF is derived from a Git source commit and documented private dependencies. Preserve immutable prior version refs, manifests and output hashes.",
+    "Project-specific prose and voice policy must live in researcher source and semantic lint guidance, not in the universal typographic .sty template."
+  ],
+  "lint": {
+    "student_facing_globs": [
+      "researchers/*/latex/manuscript/chapters/*.tex",
+      "researchers/*/latex/manuscript/frontmatter/abstract.tex",
+      "researchers/*/latex/manuscript/appendices/*.tex"
+    ],
+    "warn_regex": [
+      "(?i)\\bthe researcher (reports?|identified|states?|observed|examined|described|found|did|used)\\b",
+      "(?i)\\bresearcher-reported\\b",
+      "(?i)\\bresearcher-identified\\b",
+      "\\bSAFAL-PHOTO-[A-Z0-9-]+\\b",
+      "\\bW0[1-9]\\b"
+    ],
+    "exempt": [
+      "LaTeX image path arguments",
+      "labels and ref keys",
+      "LaTeX comments",
+      "paragraphs describing other investigators"
+    ],
+    "mode": "warning_review_required",
+    "auto_edit": false,
+    "fail_on_warnings": false
+  },
+  "university_style_override": "Supervisor/institution requirements override whether first-person is appropriate; never force first person for every thesis or discipline",
+  "release_gate": "human check authorial voice and factual ownership with manuscript owner; report missing documentary evidence without inventing facts"
+}

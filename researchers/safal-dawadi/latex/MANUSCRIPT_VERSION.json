@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-010",
+  "manuscript_version": "v1.12",
+  "stage": "BUILDING_ONLY_SCOPE_AND_COVER_SPACING_REVISION",
+  "status": "REVIEW_SOURCE__BUILD_PENDING",
+  "parent_manuscript": "v1.11",
+  "parent_git_commit": "c9148e80385c3a4f71eaf98bd03dcd3f5be3a129",
+  "photo_count": 17,
+  "figure_groups": {
+    "waterproofing_threshold": 7,
+    "roof_finish": 5,
+    "masonry": 5
+  },
+  "photos_private": true,
+  "shared_template": "controls/latex/template/pumlsc-shared.sty",
+  "PDF_release_status": "NOT_SCIENTIFICALLY_APPROVED",
+  "notes": [
+    "Removed all road/PCC pavement materials and the eight related photographs from active v1.12 source; v1.11 preserves them historically.",
+    "The only visual-template modification is a Safal-specific fixed 30 pt vertical separation below cover logo, replacing the large elastic gap.",
+    "No alteration of the central pumlsc-shared.sty or website styling.",
+    "Do not infer scientific validation or full PU 144-rule conformance from successful compilation."
+  ],
+  "parent_branch": "safal/v1.11-authorial-revision-20261010",
+  "parent_version_commit": "c9148e80385c3a4f71eaf98bd03dcd3f5be3a129",
+  "previous_main_unmodified": "v1.9-fmt-r1",
+  "source_branch": "safal/v1.12-building-only-cover-spacing-20261010",
+  "shared_authorial_voice_policy": "controls/latex/authorial-voice-policy.json",
+  "private_binary_policy": "Photos and licensed font assets remain outside public Git",
+  "latex_template": "controls/latex/template/pumlsc-shared.sty",
+  "latest_scientific_authorship": "Safal must personally approve rewritten observational statements and figure captions",
+  "scientific_approval": "HOLD"
+}
