@@ -1,0 +1,25 @@
+{
+  "id": "A9-ENT-DOC-TOWER-001",
+  "version": "0.2.0",
+  "status": "DRAFT_SOURCE_INFRASTRUCTURE",
+  "shared_style": "templates/enterprise/v2/enterprise-shared.sty",
+  "type_registry": "registry/enterprise-document-types.v2.json",
+  "engine": "scripts/document_engineering/engine_v2.py",
+  "canonical_source": "private A9 Drive",
+  "legacy_sources": "unapproved precedents",
+  "academic_tower": "controls/latex/tower.json",
+  "release_gates": [
+    "SOURCE_AUTHORITY",
+    "SEMANTIC_MAPPING",
+    "DATA",
+    "COMPLETENESS",
+    "COMPILATION",
+    "VISUAL",
+    "HUMAN_APPROVAL",
+    "PROVIDER_READBACK"
+  ],
+  "private_source_audit_id": "11MKaYPA8BjAMzAFbi96um7Z-Ynyt_XAD",
+  "radha_old_draft": "FAILED_WORKING_CANDIDATE_PRESERVE",
+  "no_autosign": true,
+  "no_unverified_engineering_claims": true
+}

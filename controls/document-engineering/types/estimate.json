@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "type_id": "estimate",
+  "title": "Construction estimate",
+  "original_archive_family": "Estimate",
+  "required_fields": [
+    "document_ref",
+    "organization_id",
+    "issue_date",
+    "project_identifier",
+    "cad_quantity_ref",
+    "rate_library_ref",
+    "boq_template_ref",
+    "scope",
+    "exclusions",
+    "measurement_rules",
+    "approved_by"
+  ],
+  "approval_gates": [
+    "SOURCE_AUTHORITY",
+    "SEMANTIC_MAPPED",
+    "DATA_CHECKED",
+    "COMPLETE",
+    "COMPILED",
+    "VISUAL_QA",
+    "HUMAN_APPROVED",
+    "DRIVE_READBACK"
+  ],
+  "status": "DRAFT_NOT_APPROVED",
+  "source_precedent_state": "UNREVIEWED_ORIGINAL",
+  "privacy": "PRIVATE_DATA_DRIVE_ONLY",
+  "no_autosign": true
+}

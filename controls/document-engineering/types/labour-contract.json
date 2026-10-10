@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "type_id": "labour-contract",
+  "title": "Labour works agreement",
+  "original_archive_family": "Labour_contract",
+  "required_fields": [
+    "document_ref",
+    "organization_id",
+    "issue_date",
+    "employer",
+    "labour_provider",
+    "project_identifier",
+    "scope_of_work",
+    "start_date",
+    "end_date",
+    "wages_and_hours",
+    "safety_and_entitlements",
+    "termination",
+    "signatures"
+  ],
+  "approval_gates": [
+    "SOURCE_AUTHORITY",
+    "SEMANTIC_MAPPED",
+    "DATA_CHECKED",
+    "COMPLETE",
+    "COMPILED",
+    "VISUAL_QA",
+    "HUMAN_APPROVED",
+    "DRIVE_READBACK"
+  ],
+  "status": "DRAFT_NOT_APPROVED",
+  "source_precedent_state": "UNREVIEWED_ORIGINAL",
+  "privacy": "PRIVATE_DATA_DRIVE_ONLY",
+  "no_autosign": true
+}

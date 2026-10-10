@@ -1,0 +1,103 @@
+{
+  "version": "0.2.0",
+  "types": [
+    {
+      "id": "client-contract",
+      "title": "Client construction agreement",
+      "control": "controls/document-engineering/types/client-contract.json",
+      "template": "templates/enterprise/v2/client-contract.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "labour-contract",
+      "title": "Labour works agreement",
+      "control": "controls/document-engineering/types/labour-contract.json",
+      "template": "templates/enterprise/v2/labour-contract.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "job-contract",
+      "title": "Employment agreement",
+      "control": "controls/document-engineering/types/job-contract.json",
+      "template": "templates/enterprise/v2/job-contract.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "salary-contract",
+      "title": "Salary agreement",
+      "control": "controls/document-engineering/types/salary-contract.json",
+      "template": "templates/enterprise/v2/salary-contract.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "experience-letter",
+      "title": "Experience certificate",
+      "control": "controls/document-engineering/types/experience-letter.json",
+      "template": "templates/enterprise/v2/experience-letter.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "recommendation-letter",
+      "title": "Recommendation letter",
+      "control": "controls/document-engineering/types/recommendation-letter.json",
+      "template": "templates/enterprise/v2/recommendation-letter.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "vendor-quotation",
+      "title": "Vendor quotation",
+      "control": "controls/document-engineering/types/vendor-quotation.json",
+      "template": "templates/enterprise/v2/vendor-quotation.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "government-quotation",
+      "title": "Government tender quotation",
+      "control": "controls/document-engineering/types/government-quotation.json",
+      "template": "templates/enterprise/v2/government-quotation.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "proposal",
+      "title": "Professional proposal",
+      "control": "controls/document-engineering/types/proposal.json",
+      "template": "templates/enterprise/v2/proposal.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "estimate",
+      "title": "Construction estimate",
+      "control": "controls/document-engineering/types/estimate.json",
+      "template": "templates/enterprise/v2/estimate.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "material-report",
+      "title": "Materials usage report",
+      "control": "controls/document-engineering/types/material-report.json",
+      "template": "templates/enterprise/v2/material-report.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "purchase-order",
+      "title": "Purchase order",
+      "control": "controls/document-engineering/types/purchase-order.json",
+      "template": "templates/enterprise/v2/purchase-order.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "receipt-voucher",
+      "title": "Receipt voucher",
+      "control": "controls/document-engineering/types/receipt-voucher.json",
+      "template": "templates/enterprise/v2/receipt-voucher.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "payment-slip",
+      "title": "Payment advice",
+      "control": "controls/document-engineering/types/payment-slip.json",
+      "template": "templates/enterprise/v2/payment-slip.tex",
+      "status": "DRAFT"
+    }
+  ]
+}

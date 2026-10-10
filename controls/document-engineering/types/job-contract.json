@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "type_id": "job-contract",
+  "title": "Employment agreement",
+  "original_archive_family": "Job_contract",
+  "required_fields": [
+    "document_ref",
+    "organization_id",
+    "issue_date",
+    "employer",
+    "employee",
+    "role",
+    "start_date",
+    "end_date",
+    "duties",
+    "working_hours",
+    "pay_and_benefits",
+    "leave_and_entitlements",
+    "termination",
+    "signatures"
+  ],
+  "approval_gates": [
+    "SOURCE_AUTHORITY",
+    "SEMANTIC_MAPPED",
+    "DATA_CHECKED",
+    "COMPLETE",
+    "COMPILED",
+    "VISUAL_QA",
+    "HUMAN_APPROVED",
+    "DRIVE_READBACK"
+  ],
+  "status": "DRAFT_NOT_APPROVED",
+  "source_precedent_state": "UNREVIEWED_ORIGINAL",
+  "privacy": "PRIVATE_DATA_DRIVE_ONLY",
+  "no_autosign": true
+}
