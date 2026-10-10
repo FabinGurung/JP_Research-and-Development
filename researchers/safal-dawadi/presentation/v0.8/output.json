@@ -1,0 +1,20 @@
+{
+  "version": "v0.8",
+  "status": "SUPERVISOR_REVIEW_NOT_FINAL",
+  "source_manuscript": "v1.12",
+  "source_commit": "1012e14e91a587c7bfaf4fbdddadf4e343863d73",
+  "shared_engine_commit": "227912185bcde234035fa8af7c4f58301a6a2923",
+  "previous_version": "v0.7",
+  "pdf_drive_id": "14uv7kqOENjHWQlowjunBv9eniwNqVYhx",
+  "pptx_drive_id": "1CUKzCgoOLvCCqsDuhO0tJkxcveHEWQjP",
+  "qa_drive_id": "1xOMkf32W89q52sQzV7RFQbi32HMpSE5t",
+  "source_config_drive_id": "1T-unnX-b-ucbcJ0xbt0zVHpHfTI6z-PF",
+  "release_manifest_drive_id": "1-K1nStk2T1_v28ShXq0j1gf_snQ7wpJ_",
+  "slides": 34,
+  "literature_table_slides": 3,
+  "peer_reviewed_sources": 6,
+  "technical_sources": 2,
+  "photos_preserved": 17,
+  "scientific_status": "REVIEW_NOT_CERTIFIED",
+  "git_content_policy": "PUBLIC_SAFE_JSON_ONLY__PRIVATE_PHOTO_AND_FONT_BYTES_EXTERNAL"
+}

@@ -1,0 +1,659 @@
+{
+  "metadata": {
+    "project_id": "SAFAL_DAWADI_REWORK_CM_PROP",
+    "title": "Assessment of Rework, Its Causes and Impacts in RCC Building Construction Projects of Pokhara Metropolitan City",
+    "researcher": "Safal Dawadi",
+    "date": "October 2026",
+    "program": "MSc Construction Management | Pokhara University",
+    "client_facing": true,
+    "logo": "institutional_assets/PU_OFFICIAL_LOGO_CANONICAL.jpg",
+    "logo_sha256": "584d4867624405a138aaaafe13791c1291e456a1ceac5b1b5298a63e548d9587",
+    "title_logo_size_in": 2.25,
+    "supervisor_available": true,
+    "supervisor": {
+      "name": "Asst. Prof. Yam Bahadur Thapa"
+    },
+    "co_supervisors_available": false,
+    "co_supervisors": [],
+    "researcher_registration": "2025-1-06-0072",
+    "stage": "SUPERVISOR_REVIEW_NOT_FINAL__LITERATURE_TABLES_PUBLISHER_ABSTRACT_CHECKED"
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "Assessment of Rework, Its Causes and Impacts in RCC Building Construction Projects of Pokhara Metropolitan City",
+      "scientific_role": "NON_SCIENTIFIC",
+      "evidence_refs": [],
+      "subtitle": "Final Report Presentation"
+    },
+    {
+      "type": "bullets",
+      "title": "Presentation Outline",
+      "scientific_role": "NON_SCIENTIFIC",
+      "evidence_refs": [],
+      "bullets": [
+        "Background and research objectives",
+        "Literature review, study approach and field documentation",
+        "Waterproofing and threshold observations",
+        "Roof, masonry and plaster observations",
+        "Discussion, conclusions and recommendations"
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Understanding Construction Rework",
+      "scientific_role": "BACKGROUND",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "Rework involves correcting, removing or repeating work already executed.",
+        "A visible defect is a reason to investigate, not proof of completed rework.",
+        "Both the original work and the corrective intervention must be established.",
+        "Additional cost and time need separate, traceable records."
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Research Background",
+      "scientific_role": "BACKGROUND",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "The study considers construction-quality concerns in RCC building work in Pokhara.",
+        "The main subjects are waterproofing and masonry/plaster workmanship.",
+        "Water ingress and cracking may have multiple explanations.",
+        "The aim is to describe what was observed before assigning a cause or consequence."
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Research Objectives",
+      "scientific_role": "METHOD",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "Document building-work concerns in waterproofing and masonry/plaster.",
+        "Discuss relevant construction mechanisms and technical requirements.",
+        "Identify the records needed to confirm actual corrective work.",
+        "Recommend practical inspections and rework-prevention measures."
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Study Scope and Evidence",
+      "scientific_role": "METHOD",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "Area of interest: Pokhara Metropolitan City.",
+        "Approach: qualitative construction-site observations and technical review.",
+        "Visual material: 17 building-work photographs in the current manuscript.",
+        "Road pavement and other non-building photographs are excluded.",
+        "The record does not support city-wide rework rates or financial totals."
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Methodology",
+      "scientific_role": "METHOD",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "Record construction concerns and the available field accounts.",
+        "Group observations by waterproofing or masonry/plaster work.",
+        "Read photographs descriptively before assessing possible mechanisms.",
+        "Compare with the project details, technical guidance and literature.",
+        "Separate suspected concerns from documented corrective events."
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "When Is Rework Verified?",
+      "scientific_role": "METHOD",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "Observed concern: a condition visible on site or described in a field account.",
+        "Suspected case: identifiable earlier work and a possible subsequent correction.",
+        "Verified event: previous execution and corrective intervention both documented.",
+        "Measured impact: additional labour, materials, cost or time linked to that event."
+      ]
+    },
+    {
+      "type": "literature_table",
+      "title": "Literature Review",
+      "scientific_role": "BACKGROUND",
+      "columns": 3,
+      "max_rows_per_slide": 3,
+      "rows": [
+        {
+          "reference_id": "REF-FORCADA2017",
+          "key_finding": "Analysis of 788 incidents in Spanish building projects linked rework cost to initial contract value and company distance.",
+          "project_relevance": "Illustrates the need for case-level records; its cost model cannot estimate Pokhara project losses.",
+          "finding_locator": "Publisher abstract, findings/conclusion",
+          "relevance_basis": "Chapter 2, section 2.1; Objective 3",
+          "relevance_type": "METHOD"
+        },
+        {
+          "reference_id": "REF-LOVE2022",
+          "key_finding": "This review links rework reduction to error-management culture, leadership, and learning rather than cause lists alone.",
+          "project_relevance": "Supports prevention and reporting discussions without assigning an unverified local cause.",
+          "finding_locator": "Publisher abstract, concluding framework",
+          "relevance_basis": "Chapter 2, section 2.1; Objective 4",
+          "relevance_type": "CONTEXT"
+        },
+        {
+          "reference_id": "REF-SAFAPOUR2019",
+          "key_finding": "The authors identify early indicators of manageable rework causes and link them to preventive construction practices.",
+          "project_relevance": "Informs proposed pre-covering inspections for wet areas, masonry interfaces, and finish work.",
+          "finding_locator": "Publisher abstract, study aim and findings summary",
+          "relevance_basis": "Chapter 2, section 2.1; Objective 4",
+          "relevance_type": "TECHNICAL_BASIS"
+        },
+        {
+          "reference_id": "REF-ASADI2023",
+          "key_finding": "The paper classifies rework causes across design, procurement and construction stages and assigns contract-party roles.",
+          "project_relevance": "Helps separate plausible source categories from causes proven in a particular Pokhara case.",
+          "finding_locator": "Publisher abstract; sections 4-6; Tables 2-8",
+          "relevance_basis": "Chapter 2, section 2.1; Objectives 2-3",
+          "relevance_type": "METHOD"
+        },
+        {
+          "reference_id": "REF-GARG2021",
+          "key_finding": "The study identifies stakeholder coordination and site-worker training among important construction rework drivers.",
+          "project_relevance": "Provides comparative context for supervision; these rankings are not measurements from Pokhara.",
+          "finding_locator": "Publisher abstract and article highlights",
+          "relevance_basis": "Chapter 2, section 2.1; Objective 2",
+          "relevance_type": "COMPARISON"
+        },
+        {
+          "reference_id": "REF-HWANG2019",
+          "key_finding": "In the Singapore sample, projects using BIM tended to report lower rework occurrence and impact.",
+          "project_relevance": "Supports better design review and documentation, not a claim of BIM use at the observed sites.",
+          "finding_locator": "Publisher abstract, results and strategies",
+          "relevance_basis": "Chapter 2, section 2.1; Objective 4",
+          "relevance_type": "COMPARISON"
+        }
+      ]
+    },
+    {
+      "type": "literature_table",
+      "title": "Technical Basis",
+      "scientific_role": "BACKGROUND",
+      "columns": 3,
+      "max_rows_per_slide": 3,
+      "rows": [
+        {
+          "reference_id": "REF-DUDBC2024",
+          "key_finding": "NBC 205:2024 is explicitly scoped to low-rise RC buildings without masonry infill.",
+          "project_relevance": "Check the actual building system and drawings before declaring any masonry-band provision applicable.",
+          "finding_locator": "DUDBC official NBC 205:2024 title/scope and building-code catalogue",
+          "relevance_basis": "Chapter 2, section 2.3; Objective 2",
+          "relevance_type": "TECHNICAL_BASIS"
+        },
+        {
+          "reference_id": "REF-LATICRETE2026",
+          "key_finding": "HYDRO BAN installation instructions specify compatible drain, penetration and movement-joint treatments.",
+          "project_relevance": "Guides comparison of wet-area details; applicability depends on the specified product, not every membrane.",
+          "finding_locator": "HYDRO BAN installation instructions, drains/penetrations and movement joints",
+          "relevance_basis": "Chapter 2, section 2.2; Objective 2",
+          "relevance_type": "TECHNICAL_BASIS"
+        }
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Waterproofing: Main Concerns",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "Continuity at wet-area floors, corners, drains and pipe penetrations.",
+        "Transition details at door thresholds and adjoining walls.",
+        "Roof falls, parapet interfaces, outlets and possible moisture paths.",
+        "Compatibility of waterproofing layers with later tile, screed or plaster work."
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010"
+    },
+    {
+      "type": "bullets",
+      "title": "Lamachur Door Threshold",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "The field account describes leakage near a residential-house door threshold.",
+        "It also describes exposure, correction and reinstatement near the threshold.",
+        "The photographs show construction stages but do not verify every date or cause.",
+        "Costs, quantities and delay were not established in the current manuscript."
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010"
+    },
+    {
+      "type": "two_figures",
+      "title": "Threshold: Exposed Construction Detail",
+      "caption": "Exposed material and adjacent construction at the residential door threshold.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W01A-01",
+        "SAFAL-PHOTO-W01A-02"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figures": [
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01A-01.jpg"
+        },
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01A-02.jpg"
+        }
+      ]
+    },
+    {
+      "type": "two_figures",
+      "title": "Threshold: Tiled Approach",
+      "caption": "Tiled doorway and terrace-facing approach; appearance alone does not diagnose leakage.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W01A-03",
+        "SAFAL-PHOTO-W01A-04"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figures": [
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01A-03.jpg"
+        },
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01A-04.jpg"
+        }
+      ]
+    },
+    {
+      "type": "two_figures",
+      "title": "Threshold: After Surface Work",
+      "caption": "Door jamb, tile junction and edge strip following visible surface work.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W01A-05",
+        "SAFAL-PHOTO-W01A-06"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figures": [
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01A-05.jpg"
+        },
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01A-06.jpg"
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Threshold: Site Work",
+      "caption": "Personnel working near the threshold; intervention shown without an authenticated event chronology.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W01A-07"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figure": {
+        "path": "private_photos/SAFAL-PHOTO-W01A-07.jpg"
+      }
+    },
+    {
+      "type": "bullets",
+      "title": "Waterproofing: What Must Be Checked?",
+      "scientific_role": "METHOD",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "Identify the actual source of water: membrane, drainage, plumbing or another path.",
+        "Inspect membrane upstands, corners, penetrations and substrate preparation.",
+        "Use system-specific installation instructions and appropriate water testing.",
+        "Document the original detail and the corrective work before counting rework."
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Other Roof and Finish Observations",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "Separate images show a stair finish, parapet surfaces, roof edges and capping.",
+        "Discoloration and surface marks do not establish a single leakage mechanism.",
+        "These photographs come from different conditions, not one confirmed event.",
+        "Drawings, drainage details and site inspection are needed for diagnosis."
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010"
+    },
+    {
+      "type": "two_figures",
+      "title": "Finish and Parapet Surfaces",
+      "caption": "Stair finish deterioration and light-coloured marks on a parapet surface.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W01B-01",
+        "SAFAL-PHOTO-W01B-02"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figures": [
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01B-01.jpg"
+        },
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01B-02.jpg"
+        }
+      ]
+    },
+    {
+      "type": "two_figures",
+      "title": "Roof and Edge Conditions",
+      "caption": "Roof surface discoloration and sloped roof/edge finishing conditions.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W01B-03",
+        "SAFAL-PHOTO-W01B-04"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figures": [
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01B-03.jpg"
+        },
+        {
+          "path": "private_photos/SAFAL-PHOTO-W01B-04.jpg"
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Parapet Capping Detail",
+      "caption": "Parapet capping showing a visible local joint; performance has not been tested.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W01B-05"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figure": {
+        "path": "private_photos/SAFAL-PHOTO-W01B-05.jpg"
+      }
+    },
+    {
+      "type": "bullets",
+      "title": "Masonry and Plaster Workmanship",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "Wall junctions require examination of intended bonding or connector details.",
+        "Cracks near intersections may have more than one possible cause.",
+        "Brick absorption, mortar preparation, curing and substrate conditions matter.",
+        "Concealed sill/lintel details cannot be confirmed from external marks alone."
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010"
+    },
+    {
+      "type": "two_figures",
+      "title": "Masonry Construction Stages",
+      "caption": "Unfinished wall junctions and brickwork during ongoing construction.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W03-01",
+        "SAFAL-PHOTO-W03-02"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figures": [
+        {
+          "path": "private_photos/SAFAL-PHOTO-W03-01.jpg"
+        },
+        {
+          "path": "private_photos/SAFAL-PHOTO-W03-02.jpg"
+        }
+      ]
+    },
+    {
+      "type": "two_figures",
+      "title": "Wall Junction and RC Interface",
+      "caption": "Unfinished masonry intersection and an RC–masonry interface.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W03-03",
+        "SAFAL-PHOTO-W03-04"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figures": [
+        {
+          "path": "private_photos/SAFAL-PHOTO-W03-03.jpg"
+        },
+        {
+          "path": "private_photos/SAFAL-PHOTO-W03-04.jpg"
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "title": "Masonry Elevation",
+      "caption": "Marked masonry bay; concealed reinforcement and band details remain unverified.",
+      "scientific_role": "OBSERVATION",
+      "evidence_refs": [
+        "SAFAL-PHOTO-W03-05"
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010",
+      "figure": {
+        "path": "private_photos/SAFAL-PHOTO-W03-05.jpg"
+      }
+    },
+    {
+      "type": "bullets",
+      "title": "Interpreting Plaster Cracks",
+      "scientific_role": "INTERPRETATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "Check whether the wall junction is bonded, butted or joined with designed ties.",
+        "Review drawings and applicable code requirements for openings and bands.",
+        "Investigate movement, material preparation, plaster thickness and curing.",
+        "Avoid selecting a cosmetic repair before identifying the likely mechanism."
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010"
+    },
+    {
+      "type": "bullets",
+      "title": "Comparison of the Two Work Categories",
+      "scientific_role": "INTERPRETATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "Waterproofing: verify membrane continuity, drainage paths and transitions.",
+        "Masonry/plaster: verify connection details, materials and curing.",
+        "In both, appearance alone does not establish cause or cost.",
+        "Inspection before concealment can help reveal workmanship concerns."
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010"
+    },
+    {
+      "type": "bullets",
+      "title": "Recommendations: Waterproofing",
+      "scientific_role": "RECOMMENDATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "Check wet-area and terrace details against approved designs.",
+        "Inspect the substrate and continuity at corners, thresholds and penetrations.",
+        "Use compatible product systems and required tests before covering finishes.",
+        "Keep dated inspection, repair and reinstatement records."
+      ],
+      "recommendation_basis": "Manuscript v1.12 Chapter 5 and active technical bibliography"
+    },
+    {
+      "type": "bullets",
+      "title": "Recommendations: Masonry and Plaster",
+      "scientific_role": "RECOMMENDATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "Inspect intersecting wall connections against the approved drawings.",
+        "Verify required opening reinforcement for the actual building type.",
+        "Check brick condition, mortar preparation, curing and plaster substrate.",
+        "Investigate recurring cracks before covering or replacing finishes."
+      ],
+      "recommendation_basis": "Manuscript v1.12 Chapter 5 and active technical bibliography"
+    },
+    {
+      "type": "bullets",
+      "title": "Study Limitations",
+      "scientific_role": "LIMITATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "This is a qualitative discussion based on selected field accounts and photographs.",
+        "The 17 images are not a representative sample of Pokhara building projects.",
+        "Site records have not been fully matched to every photographed condition.",
+        "No verified city-wide event count, cost estimate or project delay is claimed."
+      ]
+    },
+    {
+      "type": "bullets",
+      "title": "Conclusions",
+      "scientific_role": "INTERPRETATION",
+      "evidence_refs": [
+        "SAFAL-V112-MANUSCRIPT",
+        "SAFAL-V112-REFERENCES"
+      ],
+      "bullets": [
+        "The reviewed field material illustrates practical waterproofing and masonry concerns.",
+        "Technical causes require site-specific inspection, drawings and, where needed, tests.",
+        "Documentation must link earlier work to any claimed corrective intervention.",
+        "Quality checks before finishing and reliable site records remain important."
+      ],
+      "admission_decision_id": "SAFAL-V112-DESCRIPTIVE-REVIEW-USER-BUILD-APPROVAL-20261010"
+    },
+    {
+      "type": "bullets",
+      "title": "Selected References",
+      "scientific_role": "BACKGROUND",
+      "evidence_refs": [
+        "SAFAL-V112-REFERENCES",
+        "SAFAL-V112-MANUSCRIPT"
+      ],
+      "bullets": [
+        "Forcada et al. (2017) — Factors Affecting Rework Costs in Construction.",
+        "Safapour & Kermanshachi (2019) — Early indicators and mitigation.",
+        "Love et al. (2022) — Why rework occurs and how to mitigate it.",
+        "Asadi et al. (2023) — Rework causes classification.",
+        "Full bibliography and technical sources: Safal Dawadi, thesis v1.12."
+      ]
+    },
+    {
+      "type": "closing",
+      "title": "Thank You",
+      "scientific_role": "NON_SCIENTIFIC",
+      "evidence_refs": [],
+      "subtitle": "Questions and Discussion"
+    }
+  ],
+  "literature_references": [
+    {
+      "reference_id": "REF-FORCADA2017",
+      "authors": "Forcada et al.",
+      "year": 2017,
+      "title": "Factors Affecting Rework Costs in Construction",
+      "bibliography_key": "forcada2017",
+      "source_id": "SAFAL-LIT-FORCADA2017",
+      "source_kind": "PEER_REVIEWED",
+      "doi_or_url": "https://doi.org/10.1061/(ASCE)CO.1943-7862.0001324"
+    },
+    {
+      "reference_id": "REF-LOVE2022",
+      "authors": "Love et al.",
+      "year": 2022,
+      "title": "State of Science: Why Does Rework Occur in Construction? What Are Its Consequences? And What Can be Done to Mitigate Its Occurrence?",
+      "bibliography_key": "love2022",
+      "source_id": "SAFAL-LIT-LOVE2022",
+      "source_kind": "PEER_REVIEWED",
+      "doi_or_url": "https://doi.org/10.1016/j.eng.2022.05.010"
+    },
+    {
+      "reference_id": "REF-SAFAPOUR2019",
+      "authors": "Safapour & Kermanshachi",
+      "year": 2019,
+      "title": "Identifying Early Indicators of Manageable Rework Causes and Selecting Mitigating Best Practices for Construction",
+      "bibliography_key": "safapour2019",
+      "source_id": "SAFAL-LIT-SAFAPOUR2019",
+      "source_kind": "PEER_REVIEWED",
+      "doi_or_url": "https://doi.org/10.1061/(ASCE)ME.1943-5479.0000669"
+    },
+    {
+      "reference_id": "REF-ASADI2023",
+      "authors": "Asadi et al.",
+      "year": 2023,
+      "title": "Rework causes classification model with liable parties of the contract in construction projects",
+      "bibliography_key": "asadi2023",
+      "source_id": "SAFAL-LIT-ASADI2023",
+      "source_kind": "PEER_REVIEWED",
+      "doi_or_url": "https://doi.org/10.3389/fbuil.2023.1143829"
+    },
+    {
+      "reference_id": "REF-GARG2021",
+      "authors": "Garg & Misra",
+      "year": 2021,
+      "title": "Causal model for rework in building construction for developing countries",
+      "bibliography_key": "garg2021",
+      "source_id": "SAFAL-LIT-GARG2021",
+      "source_kind": "PEER_REVIEWED",
+      "doi_or_url": "https://doi.org/10.1016/j.jobe.2021.103180"
+    },
+    {
+      "reference_id": "REF-HWANG2019",
+      "authors": "Hwang et al.",
+      "year": 2019,
+      "title": "Effect of BIM on Rework in Construction Projects in Singapore: Status Quo, Magnitude, Impact, and Strategies",
+      "bibliography_key": "hwang2019",
+      "source_id": "SAFAL-LIT-HWANG2019",
+      "source_kind": "PEER_REVIEWED",
+      "doi_or_url": "https://doi.org/10.1061/(ASCE)CO.1943-7862.0001600"
+    },
+    {
+      "reference_id": "REF-DUDBC2024",
+      "authors": "DUDBC",
+      "year": 2024,
+      "title": "Nepal National Building Code: Published Building Code Catalogue (including NBC 205:2024 and NBC 201)",
+      "bibliography_key": "dudbc2024",
+      "source_id": "SAFAL-LIT-DUDBC2024",
+      "source_kind": "CODE",
+      "doi_or_url": "https://dudbc.gov.np/content/13279/nepal-national-building-code-nbc-205--2024/"
+    },
+    {
+      "reference_id": "REF-LATICRETE2026",
+      "authors": "LATICRETE",
+      "year": 2026,
+      "title": "HYDRO BAN Waterproofing Membrane: Product Information and Installation Resources",
+      "bibliography_key": "laticrete2026",
+      "source_id": "SAFAL-LIT-LATICRETE2026",
+      "source_kind": "MANUFACTURER",
+      "doi_or_url": "https://www.laticrete.com/en/products/hydro-ban"
+    }
+  ]
+}
