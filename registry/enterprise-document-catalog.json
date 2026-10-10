@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "catalog_id": "A9-DOC-ENG-001",
-  "release_status": "DRAFT_PUBLIC_CODE",
+  "release_status": "V2_FOURTEEN_DRAFT_TYPE_MODULES__LEGAL_AND_FORMAT_REVIEW_OPEN",
   "source_archive": {
     "entry_count": 102,
     "tex_count": 73,
@@ -16,26 +16,93 @@
     "remote_sha256_verification": "NOT_PERFORMED_ALL_FILES",
     "source_original_sha256_verified": true,
     "duplicate_filename_resolution": "SEPARATE_EXPERIENCE_AND_RECOMMENDATION_SOURCE_FOLDERS",
-    "reference_contract": "PRIVATE_BISHAL_MAIN_CONSTRUCTION_AGREEMENT__NOT_SUBCONTRACT_AMENDMENT"
+    "reference_contract": "PRIVATE_BISHAL_MAIN_CONSTRUCTION_AGREEMENT__NOT_SUBCONTRACT_AMENDMENT",
+    "source_engineering_audit_drive_id": "11MKaYPA8BjAMzAFbi96um7Z-Ynyt_XAD"
   },
   "templates": [
     {
-      "id": "works-contract",
-      "name": "Construction works agreement",
-      "path": "templates/enterprise/works_contract.tex",
-      "status": "DRAFT"
+      "id": "client-contract",
+      "name": "Client construction agreement",
+      "path": "templates/enterprise/v2/client-contract.tex",
+      "status": "DRAFT_NOT_APPROVED"
     },
     {
-      "id": "experience-letter",
-      "name": "Experience letter",
-      "path": "templates/enterprise/experience_letter.tex",
-      "status": "DRAFT"
+      "id": "labour-contract",
+      "name": "Labour works agreement",
+      "path": "templates/enterprise/v2/labour-contract.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "job-contract",
+      "name": "Employment agreement",
+      "path": "templates/enterprise/v2/job-contract.tex",
+      "status": "DRAFT_NOT_APPROVED"
     },
     {
       "id": "salary-contract",
       "name": "Salary agreement",
-      "path": "templates/enterprise/salary_contract.tex",
-      "status": "DRAFT"
+      "path": "templates/enterprise/v2/salary-contract.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "experience-letter",
+      "name": "Experience certificate",
+      "path": "templates/enterprise/v2/experience-letter.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "recommendation-letter",
+      "name": "Recommendation letter",
+      "path": "templates/enterprise/v2/recommendation-letter.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "vendor-quotation",
+      "name": "Vendor quotation",
+      "path": "templates/enterprise/v2/vendor-quotation.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "government-quotation",
+      "name": "Government tender quotation",
+      "path": "templates/enterprise/v2/government-quotation.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "proposal",
+      "name": "Professional proposal",
+      "path": "templates/enterprise/v2/proposal.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "estimate",
+      "name": "Construction estimate",
+      "path": "templates/enterprise/v2/estimate.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "material-report",
+      "name": "Materials usage report",
+      "path": "templates/enterprise/v2/material-report.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "purchase-order",
+      "name": "Purchase order",
+      "path": "templates/enterprise/v2/purchase-order.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "receipt-voucher",
+      "name": "Receipt voucher",
+      "path": "templates/enterprise/v2/receipt-voucher.tex",
+      "status": "DRAFT_NOT_APPROVED"
+    },
+    {
+      "id": "payment-slip",
+      "name": "Payment advice",
+      "path": "templates/enterprise/v2/payment-slip.tex",
+      "status": "DRAFT_NOT_APPROVED"
     }
   ],
   "categories": [
@@ -108,5 +175,28 @@
     "public_github": "nonconfidential code templates and controls",
     "private_drive": "original zip, extracted sensitive documents, brand assets, signed outputs",
     "academic_latex_authority": "controls/latex/tower.json"
-  }
+  },
+  "legacy_templates": [
+    {
+      "id": "works-contract",
+      "name": "Construction works agreement",
+      "path": "templates/enterprise/works_contract.tex",
+      "status": "SUPERSEDED_PROTOTYPE_NOT_FOR_NEW_DOCUMENTS"
+    },
+    {
+      "id": "experience-letter",
+      "name": "Experience letter",
+      "path": "templates/enterprise/experience_letter.tex",
+      "status": "SUPERSEDED_PROTOTYPE_NOT_FOR_NEW_DOCUMENTS"
+    },
+    {
+      "id": "salary-contract",
+      "name": "Salary agreement",
+      "path": "templates/enterprise/salary_contract.tex",
+      "status": "SUPERSEDED_PROTOTYPE_NOT_FOR_NEW_DOCUMENTS"
+    }
+  ],
+  "module_count": 14,
+  "shared_control": "controls/document-engineering/tower.json",
+  "automated_quality": "SCHEMA_AND_ARITHMETIC_SOURCE_TESTS_ONLY"
 }
