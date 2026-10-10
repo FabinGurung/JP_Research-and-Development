@@ -1,0 +1,16 @@
+{
+  "candidate":"A9 presentation generator v2.2 scientific semantic-gate candidate",
+  "basis_control":"A9 presentation tower v2.2 (Drive ID 1i2YO58HJ1WVsYnBDP0a0ZJg-29VOPccPnWiWit08ofM)",
+  "basis_generator":"A9 generator v2.1 original sha256 fce6266ed54e724ce049909051f110bd0d99ea638cda65979cc1528f9da4d6b4",
+  "status":"CANDIDATE_NOT_APPROVED_NOT_CURRENT",
+  "researcher_facts_included":false,
+  "private_assets_included":false,
+  "production_font_certification":"NOT_CLAIMED",
+  "semantic_test":"PASS_7_OF_7",
+  "original_generator_smoke":"PASS",
+  "candidate_smoke":"PASS",
+  "fail_closed_missing_evidence":"PASS",
+  "visual_qa_automation":"NOT_FULLY_EXECUTABLE_OR_CERTIFIED",
+  "required_next_gates":["A9 scientific and QA review","PR review and tests","approved release and updated active-control pointers","site deployment readback","researcher evidence admission and supervisor approval"],
+  "date":"2026-10-10"
+}

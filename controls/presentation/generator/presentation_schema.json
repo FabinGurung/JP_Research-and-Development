@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A9 Presentation Content v2.1",
+  "type": "object",
+  "required": [
+    "metadata",
+    "slides"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "title",
+        "researcher"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "researcher": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "program": {
+          "type": "string"
+        },
+        "client_facing": {
+          "type": "boolean"
+        },
+        "logo": {
+          "type": "string"
+        },
+        "logo_sha256": {
+          "type": "string"
+        },
+        "title_logo_size_in": {
+          "type": "number",
+          "exclusiveMinimum": 2.0
+        },
+        "supervisor": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "designation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ]
+        },
+        "co_supervisors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "designation": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          }
+        },
+        "supervisor_available": {
+          "type": "boolean"
+        },
+        "co_supervisors_available": {
+          "type": "boolean"
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "title",
+              "bullets",
+              "section",
+              "figure",
+              "two_figures",
+              "closing"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "subtitle": {
+            "type": "string"
+          },
+          "bullets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "figure": {
+            "type": "object"
+          },
+          "figures": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "caption": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "generator_version": "2.1.0",
+  "python": "3.13.5",
+  "packages": {
+    "reportlab": "4.4.9",
+    "python-pptx": "1.0.2",
+    "Pillow": "12.3.0",
+    "PyMuPDF": "1.26.7"
+  },
+  "canonical_renderer": "reportlab 4.4.9 PDF canvas",
+  "pptx_compatibility_renderer": "python-pptx 1.0.2",
+  "qa_renderer": "PyMuPDF 1.26.7",
+  "notes": "v2.1 adds governed 2.25 in title-logo gate and mandatory verified supervisor/co-supervisor title metadata. Production Times New Roman remains separately mandatory."
+}

@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"A9 Presentation Researcher Evidence Map v0.1 Candidate",
+  "type":"object",
+  "required":["project_id","source_commit","source_manifest_id","sources"],
+  "properties":{
+    "project_id":{"type":"string","minLength":1},
+    "source_commit":{"type":"string","minLength":7},
+    "source_manifest_id":{"type":"string","minLength":1},
+    "sources":{"type":"array","items":{"type":"object","required":["source_id","admission_status"],
+      "properties":{"source_id":{"type":"string","minLength":1},"admission_status":{"enum":["ADMITTED_CURRENT","APPROVED_CURRENT","REJECTED","SUPERSEDED","CANDIDATE","UNVERIFIED","NOT_ADMITTED","PRIVATE_ONLY"]},"description":{"type":"string"}}}}
+  }
+}

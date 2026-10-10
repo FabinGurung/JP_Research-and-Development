@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "Generalized A9 Presentation Generator \u2014 Smoke Test",
+    "researcher": "DEMO ONLY \u2014 NO RESEARCHER SCIENCE",
+    "date": "2026-10-05",
+    "program": "Generic academic presentation test",
+    "client_facing": true,
+    "logo": "smoke_logo.png",
+    "logo_sha256": "1771182bb80c9aea5adbd95a1312c49d780db1111c1cc09668125e31ff10c8df",
+    "title_logo_size_in": 2.25,
+    "supervisor_available": true,
+    "supervisor": {
+      "name": "DEMO SUPERVISOR",
+      "designation": "Demo academic role"
+    },
+    "co_supervisors_available": true,
+    "co_supervisors": [
+      {
+        "role": "Co-Supervisor",
+        "name": "DEMO CO-SUPERVISOR",
+        "designation": "Demo role"
+      }
+    ]
+  },
+  "slides": [
+    {
+      "type": "title",
+      "title": "Generalized Presentation Generator",
+      "subtitle": "Executable acceptance test \u2014 no scientific content"
+    },
+    {
+      "type": "bullets",
+      "title": "What this generator proves",
+      "bullets": [
+        "Fixed 4:3 geometry and governed typography floors.",
+        "PDF-first deterministic rendering from structured JSON content.",
+        "A title logo larger than twice the former baseline is enforced.",
+        "Supervisor and available co-supervisor title metadata are enforced.",
+        "Per-page render QA, hashes, montage, and release manifest are produced."
+      ]
+    },
+    {
+      "type": "section",
+      "title": "Reusable Architecture",
+      "subtitle": "Content + theme + validators + build + QA"
+    },
+    {
+      "type": "closing",
+      "title": "Smoke Test Complete",
+      "subtitle": "This sample contains no thesis-specific facts or figures."
+    }
+  ]
+}
