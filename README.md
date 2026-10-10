@@ -1,3 +1,5 @@
+> **CURRENT GIT/DRIVE AUTHORITY — 2026-10-11:** For R&D thesis/presentation source, GitHub governs versions, commits, release manifests and history. Drive retains private research originals, institution controls and PDF/PPTX artifacts. **Do not create routine A9 Drive Local/Main sequence entries for Git-managed changes.** Safal's legacy Local20/Main5 remain historical; sequences 6–20 are not acknowledged. Read [Git/Drive authority policy](docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md) and [machine control](controls/git-drive-authority.json) before any A9 closeout. Separate research-science/physical-Drive operations still follow applicable controls.
+
 # JP Research & Development
 
 Code-first research control portal, now hosting unified Fabin AEC and Hydropower research landing pages and restored public-safe legacy demos.

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RND-GIT-DRIVE-AUTHORITY-20261011",
+  "status": "ACTIVE_SCOPE_LIMITED_CUTOVER",
+  "effective_date_npt": "2026-10-11",
+  "decision_basis": "USER_APPROVED_20261011__GITHUB_VERSION_CONTROL_DRIVE_STORAGE",
+  "scope": {
+    "included": [
+      "JP_Research-and-Development version-controlled code/config/schema",
+      "academic presentation shared generator and researcher presentation source",
+      "Git-managed LaTeX source and reproducible build recipes",
+      "new commits and release metadata for these workstreams"
+    ],
+    "excluded": [
+      "other companies/unrelated A9 control domains",
+      "unmigrated purely Drive-native business workflows",
+      "private source/evidence scientific admission",
+      "physical Drive reorganization unless independently authorized"
+    ]
+  },
+  "authority": {
+    "github": "GIT_COMMITS_BRANCHES_PULL_REQUESTS_TAGS_RELEASES_CI_AND_APPROVED_MILESTONE_HISTORY",
+    "google_drive": "PRIVATE_ORIGINALS_PROJECT_STATE_ADMITTED_EVIDENCE_FULL_RESEARCH_DATA_DOCUMENTS_AND_DELIVERABLE_BINARIES",
+    "university_and_supervisor": "SCIENTIFIC_CLAIMS_AND_APPLICABLE_ACADEMIC_FORMAT_GATE",
+    "bridge": "TYPED_GIT_MANIFEST_WITH_EXACT_COMMIT_HASH_DRIVE_ID_SHA256_IF_VERIFIED_SOURCE_PROVENANCE"
+  },
+  "version_event_contract": {
+    "pre": "CURRENT_VERIFIED_GIT_SHA",
+    "change": "GIT_BRANCH_AND_COMMIT_NON_FORCE",
+    "post": "NEW_VERIFIED_GIT_SHA_AND_CI_RESULTS",
+    "outputs": "GOOGLE_DRIVE_FILE_ID_MIME_SIZE_AND_HASH_IF_VERIFIED",
+    "release": "GIT_VERSIONED_MANIFEST; TAG_ONLY_IF_APPROVED_AND_PROVIDER_WRITABLE_AND_VERIFIED",
+    "do_not": "AUTOINCREMENT_A9_LOCAL_OR_MAIN_DRIVE_SEQUENCES_FOR_VERSION_ONLY_CHANGE",
+    "recovery": "CHECK_GIT_READ_FIRST_AND_CURRENT_MAIN_SHA_BEFORE_CREATING_ANY_NEW_CONTROL_OR_LEDGER",
+    "outputs_not_in_git": [
+      "private_site_photos",
+      "licensed_fonts",
+      "thesis_pdf_binary",
+      "presentation_pdf_binary",
+      "editable_pptx_binary",
+      "secret_or_personal_data"
+    ]
+  },
+  "supersession": {
+    "old_lane_library": "REPLACE_WITH_RESEARCHER_GIT_SOURCE_BRANCH_AND_HISTORY_FOR_VERSION_CONTROL; PRESERVE_DRIVE_RESEARCH_RECORDS",
+    "old_local_library": "HISTORIC_READ_ONLY_REGISTER_FOR_GIT_MIGRATED_VERSION_EVENTS; MIGRATE_FUTURE_MACHINE_METADATA_TO_GIT_MANIFEST",
+    "old_main_library": "HISTORIC_ACK_AND_DRIVE_STORAGE_INDEX; NEVER_DECLARE_OLDER_UNACKNOWLEDGED_EVENTS_SYNCED",
+    "precedence": "THIS_SCOPED_GIT_VERSION_POLICY_OVERRIDES_OLDER_PRESENTATION_READFIRST_A9_DRIVE_SEQUENCE_COMMANDS_ONLY_FOR_GIT_VERSION_CONTROL",
+    "no_retcon": "NEVER_DELETE_OR_REWRITE_HISTORICAL_ROWS_OR_ACKS",
+    "exception": "A separate researcher data mutation, physical Drive move, legally required preservation or source-admission workflow may still require scoped Drive PRE/POST or ledger; record rationale explicitly, never fabricate ACK"
+  },
+  "safal_dawadi": {
+    "researcher_id": "RSH-010",
+    "legacy_local_spreadsheet_id": "10g8-tr417XltYDbk2yItEZjrJ_2xdT7pbPlJgUI8MYo",
+    "historical_local_last_seq": 20,
+    "legacy_main_spreadsheet_id": "18NE0GIbw0lDDlrIcflGS3_VccDZ2LZn1FoPbebSc71o",
+    "historical_main_last_ack": 5,
+    "unacknowledged_legacy_range": {
+      "from": 6,
+      "to": 20,
+      "status": "HISTORICALLY_UNACKNOWLEDGED_NOT_DISCARDED_NOT_SYNCED"
+    },
+    "future_local_seq_creation": "DISABLED_FOR_GIT_VERSION_ONLY_PRESENTATION_AND_SOURCE_CHANGES",
+    "latest_presentation": {
+      "version": "v0.9",
+      "git_branch": "safal/presentation/v0.9-methodology-flow-20261010",
+      "git_commit": "9036ed6bd3ab9b4d2628380e331df02cc05cc974",
+      "pdf_drive_id": "1WWb8Jf9Aq3IpHvY1H8tn2nVqpgKGy7dY",
+      "pptx_drive_id": "1LpQD2cehoUwmIzwTzC2dfjELS5OGfehj",
+      "scientific_final_approval": "NOT_IMPLIED_BY_CUTOVER"
+    }
+  },
+  "migration_record": {
+    "drive_decision_doc_id": "1CYzEnpPDyPSLXwGq8LG1auckd_qiHoreGZ9jiWvki3Q",
+    "drive_evidence_folder_id": "1YyXg_-MvTzbzAIzikaM7__tysPqi469J",
+    "github_read_first": "docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md",
+    "github_legacy_backlog": "registry/legacy-a9-ledger-index.json",
+    "mandatory_crosslink": "READ_FIRST_IN_GIT_AND_DRIVE_SHARED_PRESENTATION_AND_SAFAL_PROJECT",
+    "checkpoint_kind": "ONE_TIME_POLICY_MIGRATION_NOT_NEW_SCIENTIFIC_RELEASE"
+  }
+}

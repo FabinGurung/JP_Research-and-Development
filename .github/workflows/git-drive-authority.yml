@@ -1,0 +1,31 @@
+name: Git and Drive authority contract
+on:
+  pull_request:
+    paths:
+      - 'controls/git-drive-authority.json'
+      - 'controls/presentation.control.json'
+      - 'controls/presentation/tower.json'
+      - 'controls/repository.control.json'
+      - 'docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md'
+      - 'registry/legacy-a9-ledger-index.json'
+      - 'registry/migrations/git-drive-authority-20261011.json'
+      - 'researchers/safal-dawadi/presentation/GOVERNANCE_READ_FIRST.md'
+      - 'scripts/test_git_drive_authority.py'
+      - '.github/workflows/git-drive-authority.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'controls/git-drive-authority.json'
+      - 'registry/legacy-a9-ledger-index.json'
+      - 'scripts/test_git_drive_authority.py'
+  workflow_dispatch:
+jobs:
+  check-source-ownership:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Enforce single Git-versioning authority and legacy preservation
+        run: python -m unittest discover -s scripts -p 'test_git_drive_authority.py' -v

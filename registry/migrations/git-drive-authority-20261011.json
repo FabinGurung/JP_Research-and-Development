@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "id": "RND-GIT-DRIVE-CUTOVER-20261011",
+  "date": "2026-10-11",
+  "scope": "R&D GIT-MANAGED SCIENTIFIC_SOURCE_AND_PRESENTATIONS_ONLY",
+  "authorization": "USER_DIRECT_REQUEST_20261011",
+  "github_pre_commit": "265383b90dd9213e5afa39a609133a0168e19c50",
+  "github_post_commit": "READ_LIVE_MERGED_MAIN_HEAD",
+  "decision_drive_doc_id": "1CYzEnpPDyPSLXwGq8LG1auckd_qiHoreGZ9jiWvki3Q",
+  "evidence_folder_id": "1YyXg_-MvTzbzAIzikaM7__tysPqi469J",
+  "pre_copies": {
+    "thesis_readfirst": "1MZMpII_nDoAAgAGoXocRNEbuDRECO8jBYvm4ok7umMk",
+    "presentation_readfirst": "1O01jx7bFbd06n0NTjJE-Dfyak8a2CUPxzPd1r3TSvKs",
+    "presentation_tower": "14D9IRtlNmSLjNWCexXqUAzYKS1PjIAY9eciaSEx9HlY",
+    "safal_readfirst": "1lCYQZCkwGdN78NTp6-bwilAcHn3Ly7lLesiw36G556A",
+    "local_spreadsheet": "1QCcM6kV6Dc7sTnpBkoqZImrlVd-HYCOgb0azKXm5vLU",
+    "main_spreadsheet": "1Tii8DYfRrdzMQe0hzPiw1wlYvtXFSKzXo94qNag7dj0"
+  },
+  "current_release": "safal/presentation/v0.9-methodology-flow-20261010",
+  "old_local_seq20_preserved": true,
+  "old_main_ack5_preserved": true,
+  "backlog": "registry/legacy-a9-ledger-index.json",
+  "no_deletions": true,
+  "no_broad_drive_folder_moves": true,
+  "no_scientific_state_promotion": true
+}

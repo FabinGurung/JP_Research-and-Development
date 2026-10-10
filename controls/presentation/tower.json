@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "control_id": "RD-CONTROL-PRESENTATION-001",
-  "status": "GITHUB_SHARED_GENERATOR_MERGED__DRIVE_V2_2_REMAINS_ACADEMIC_AUTHORITY",
+  "status": "GITHUB_CODE_VERSION_AUTHORITY__DRIVE_V2_2_FORMAT_SOURCE_AUTHORITY",
   "single_academic_tower": true,
   "owner_domain": "academic/thesis",
   "wrapper": "controls/presentation.control.json",
@@ -56,5 +56,10 @@
     "validation": "ADMITTED_SOURCE_LINKAGE_AND_TOPOLOGY__NOT_SCIENTIFIC_COMPLETION_CERTIFICATION",
     "researcher_science_location": "researchers/{slug}/presentation/methodology_flow.candidate.v0.1.json"
   },
-  "methodology_flow_code_status": "IMPLEMENTED_IN_SHARED_GIT_CODE__RESEARCHER_SCIENCE_REVIEW_SEPARATE"
+  "methodology_flow_code_status": "IMPLEMENTED_IN_SHARED_GIT_CODE__RESEARCHER_SCIENCE_REVIEW_SEPARATE",
+  "version_control_authority": "GITHUB",
+  "private_scientific_originals": "GOOGLE_DRIVE",
+  "git_drive_policy": "controls/git-drive-authority.json",
+  "legacy_a9_library_status": "HISTORICAL_FOR_GIT_VERSION_ONLY__NEVER_INCREMENT_IN_ROUTINE_BUILD",
+  "safal_legacy_index": "registry/legacy-a9-ledger-index.json"
 }

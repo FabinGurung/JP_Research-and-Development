@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "id": "RND-SAFAL-A9-HISTORY-20261011",
+  "status": "ARCHIVED_LEGACY_UNACKNOWLEDGED_RECORDS_PRESERVED",
+  "local": {
+    "drive_id": "10g8-tr417XltYDbk2yItEZjrJ_2xdT7pbPlJgUI8MYo",
+    "last_local_seq": 20
+  },
+  "main": {
+    "drive_id": "18NE0GIbw0lDDlrIcflGS3_VccDZ2LZn1FoPbebSc71o",
+    "last_ack_cursor": 5
+  },
+  "unacknowledged": {
+    "from_seq": 6,
+    "to_seq": 20,
+    "disposition": "PRESERVE_AS_HISTORIC_NOT_SYNCHRONIZED"
+  },
+  "github_cutover_for_future_version_events": true,
+  "scientific_approval_changed": false,
+  "last_presentation": {
+    "version": "v0.9",
+    "branch": "safal/presentation/v0.9-methodology-flow-20261010",
+    "source_sha": "9036ed6bd3ab9b4d2628380e331df02cc05cc974",
+    "pdf_drive_id": "1WWb8Jf9Aq3IpHvY1H8tn2nVqpgKGy7dY",
+    "pptx_drive_id": "1LpQD2cehoUwmIzwTzC2dfjELS5OGfehj"
+  },
+  "policy": "controls/git-drive-authority.json",
+  "reconciliation": "separate authorized operation if ever required, not automatic"
+}
