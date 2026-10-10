@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "policy_id": "RD-LTX-SEMANTIC-001",
+  "version": "1.0.0",
+  "status": "ACTIVE_SHARED_POLICY__SCIENTIFIC_ACCEPTANCE_ALWAYS_RESEARCHER_SPECIFIC",
+  "canonical_owner": "controls/latex/tower.json",
+  "scope": "All registered researchers using the single R&D LaTeX control tower; applies to student-facing source and PDF review, irrespective of document genre or whether first-person writing is allowed",
+  "separation_of_concerns": {
+    "format_template": "controls/latex/template/pumlsc-shared.sty",
+    "semantic_rules": "controls/latex/authorial-voice-policy.json",
+    "validation_tool": "scripts/latex/check_authorial_voice.py",
+    "human_scientific_authority": "researcher, supervisor and relevant university rules",
+    "evidence_owner": "owning researcher's private Drive/project records"
+  },
+  "rules": [
+    {
+      "id": "RD-LTX-SEM-001",
+      "key": "STUDENT_AUTHORIAL_OWNERSHIP",
+      "requirement": "Write from the student's actual experience and research role; avoid framing the student as an external interview respondent when they are the author. First-person past tense is permitted only when supported by field records and institution/supervisor writing rules. Third person is correct for genuine outside authors/participants."
+    },
+    {
+      "id": "RD-LTX-SEM-002",
+      "key": "NO_FABRICATED_METHOD",
+      "requirement": "Never invent sites, participant responses, fieldwork, site diaries, interviews, sample sizes, times, costs, causal diagnoses, academic credentials, consent, approvals, or laboratory tests."
+    },
+    {
+      "id": "RD-LTX-SEM-003",
+      "key": "EVIDENCE_SEPARATION",
+      "requirement": "Distinguish photograph, direct observation, suspected defect, documented corrective event, verified physical cause, measured cost and critical-path delay. An image alone does not confirm a cause or rework quantity."
+    },
+    {
+      "id": "RD-LTX-SEM-004",
+      "key": "NATURAL_HUMAN_CAPTIONS",
+      "requirement": "Use descriptive academic figure/table captions, not internal machine control IDs, A9 labels, ChatGPT/QA jargon or case codes. Keep stable photo IDs in private manifests and source graphic paths, not in typeset captions. Never remove legitimate published research identifiers."
+    },
+    {
+      "id": "RD-LTX-SEM-005",
+      "key": "SCIENTIFIC_SCOPE_ISOLATION",
+      "requirement": "Every researcher owns their objectives, admitted populations, cases, photos and conclusions. Scope exclusion is manuscript-specific; Safal's road-case exclusion must not automatically remove valid road research from other projects."
+    },
+    {
+      "id": "RD-LTX-SEM-006",
+      "key": "REFERENCE_INTEGRITY",
+      "requirement": "Citations must support their actual claims; removing a research topic requires removing its unneeded discussion/figures and unused bibliography entries without deleting unrelated evidence in the preserved previous version."
+    },
+    {
+      "id": "RD-LTX-SEM-007",
+      "key": "ASSISTANCE_DISCLOSURE",
+      "requirement": "Do not misrepresent AI/writing assistance or conceal its use when disclosure is required. Student must review, correct and accept the manuscript content."
+    },
+    {
+      "id": "RD-LTX-SEM-008",
+      "key": "SOURCE_FIRST_VERSIONS",
+      "requirement": "Preserve prior source/ref, advance source version and source commit, compile from exact approved candidate plus private deps, record PDF SHA and toolchain, upload to correct Drive folder and read back ID/parent before calling deliverable complete."
+    },
+    {
+      "id": "RD-LTX-SEM-009",
+      "key": "LAYOUT_VS_SEMANTICS",
+      "requirement": "Typography/layout belongs in one .sty; semantic integrity in this JSON plus validator; student-specific cover content and spacing variants belong in project configuration. Generalized shared cover-gap helper is opt-in, not a forced 30pt global change."
+    },
+    {
+      "id": "RD-LTX-SEM-010",
+      "key": "GATES_INDEPENDENT",
+      "requirement": "Static linting, exact-font PDF compilation, whole-page visual QA, science review, full PU formatting acceptance, and A9 Local/Main acknowledgment are separate gates. No one gate implies another."
+    }
+  ],
+  "linter": {
+    "default": "ADVISORY",
+    "fail_only_if_requested": true,
+    "scan": "manuscript frontmatter abstracts, chapters and appendices",
+    "guardrails": [
+      "Flag student-self third-person constructions for review, not automatic replacement",
+      "Flag uppercase administrative photo identifiers only where visible text is detectable",
+      "No repair or prose rewriting in validation code",
+      "False positives reviewed by manuscript owner; never blanket-forbid first/third person"
+    ],
+    "test_contract": "scripts/latex/check_authorial_voice.py --self-test"
+  },
+  "permissions": "Never upload private original photographs or licensed font binaries to public repository",
+  "institution_override": "Applicable PU and supervisor directions on style, authorship and ethics take precedence",
+  "lineage": {
+    "derived_from": "RSH-010 v1.11 author-voice correction and v1.12 source/figure/cover-spacing work",
+    "semantic_promotion": "GENERAL_RULES_ONLY",
+    "copy_research_content": false
+  }
+}
