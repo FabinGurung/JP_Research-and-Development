@@ -12,5 +12,8 @@
   ],
   "shared_literature_policy": "controls/presentation/generator/LITERATURE_TABLE_POLICY.md",
   "literature_row_authority": "CURRENT_RESEARCHER_BIB_SOURCE_AND_ADMITTED_EVIDENCE",
-  "no_shared_hardcoded_authors": true
+  "no_shared_hardcoded_authors": true,
+  "methodology_component": "controls/presentation/generator/a9_methodology_flow.py",
+  "methodology_researcher_json": "researchers/{slug}/presentation/methodology_flow.candidate.v0.1.json",
+  "methodology_shared_content_boundary": "NO_RESEARCHER_SCIENCE_IN_GLOBAL_ENGINE"
 }

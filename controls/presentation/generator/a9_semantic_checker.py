@@ -57,6 +57,10 @@ def check_semantics(content: dict, evidence_map: dict | None, *, mode: str = "re
     literature = validate_literature(content, evidence_map)
     errors.extend(literature["errors"])
     warnings.extend(literature["warnings"])
+    from a9_methodology_flow import validate_methodology
+    methodology = validate_methodology(content, evidence_map)
+    errors.extend(methodology["errors"])
+    warnings.extend(methodology["warnings"])
     for i, slide in enumerate(content.get("slides") or [], 1):
         if not isinstance(slide, dict):
             errors.append(f"slide {i} must be an object")
@@ -69,7 +73,7 @@ def check_semantics(content: dict, evidence_map: dict | None, *, mode: str = "re
             continue
         if content.get("metadata", {}).get("client_facing", True) and _CLIENT_FORBIDDEN.search(text):
             errors.append(f"slide {i} contains internal/machine-control wording")
-        if slide.get("type") == "literature_table":
+        if slide.get("type") in {"literature_table", "methodology_flow"}:
             # Per-row cited references, source admission and project relevance are
             # checked by the literature handler; no redundant slide-level source IDs.
             continue

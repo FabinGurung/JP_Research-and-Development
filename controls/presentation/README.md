@@ -34,3 +34,7 @@ The smoke test is **synthetic only**, never researcher evidence admission. Revie
 
 ## Inheritance
 Every research workspace `researchers/{researcher_slug}/presentation/` references this shared engine with only project-local content, current .bib, evidence-map IDs, and private assets. No Safal research claims or author findings are copied automatically to another researcher.
+
+## Methodology visual handrail v0.1
+
+For normal PU 4:3 landscape presentations, **one-row horizontal left-to-right methodology flow** is the current executable default. It uses native editable PowerPoint nodes/arrows and matching PDF vectors. Keep 3–6 stages per slide; seven or more paginate without shrinking. Research stages, outputs, admitted evidence IDs and manuscript locators are **researcher-specific** input JSON, never hardcoded into the common renderer. Read `generator/METHODOLOGY_FLOW_READ_FIRST.md`, `generator/METHODOLOGY_FLOW_POLICY.md`, `generator/methodology_flow.template.json` and `generator/a9_methodology_flow.py`. Other layouts (swimlane/feedback) are future proposals, not enabled. Validate with `test_a9_methodology_flow.py`; preview renders do not constitute supervisor approval or amend existing researcher PPTX/PDF.

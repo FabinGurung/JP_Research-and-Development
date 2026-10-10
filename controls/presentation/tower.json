@@ -29,5 +29,32 @@
     "optional_columns": 4,
     "max_rows_per_slide": 3,
     "scientific_status": "SOURCE_LOCATOR_AND_ADMISSION_VALIDATION__HUMAN_FINDING_REVIEW_REQUIRED"
-  }
+  },
+  "methodology_flow": {
+    "version": "v0.1",
+    "type": "methodology_flow",
+    "default_layout": "horizontal_linear",
+    "direction": "left_to_right",
+    "canvas": "EXISTING_PU_4_3_LANDSCAPE",
+    "implemented_layouts": [
+      "horizontal_linear"
+    ],
+    "planned_not_implemented": [
+      "horizontal_grouped",
+      "horizontal_swimlane",
+      "horizontal_feedback"
+    ],
+    "stages_per_slide": {
+      "min": 3,
+      "max": 6,
+      "overflow": "AUTOPAGINATE_NO_SHRINK"
+    },
+    "flow_logic": "AUTO_ADJACENT_OR_EXPLICIT_ADJACENT_NO_UNVERIFIED_BRANCH",
+    "handler": "controls/presentation/generator/a9_methodology_flow.py",
+    "policy": "controls/presentation/generator/METHODOLOGY_FLOW_POLICY.md",
+    "template": "controls/presentation/generator/methodology_flow.template.json",
+    "validation": "ADMITTED_SOURCE_LINKAGE_AND_TOPOLOGY__NOT_SCIENTIFIC_COMPLETION_CERTIFICATION",
+    "researcher_science_location": "researchers/{slug}/presentation/methodology_flow.candidate.v0.1.json"
+  },
+  "methodology_flow_code_status": "IMPLEMENTED_IN_SHARED_GIT_CODE__RESEARCHER_SCIENCE_REVIEW_SEPARATE"
 }
