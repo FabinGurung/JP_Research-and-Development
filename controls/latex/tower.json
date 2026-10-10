@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
@@ -16,11 +16,14 @@
       "controls/latex/format-authorities.json",
       "controls/latex/build-contract.json",
       "controls/latex/qa-contract.json",
-      "controls/latex/release-contract.json"
+      "controls/latex/release-contract.json",
+      "controls/latex/authorial-voice-policy.json"
     ],
     "template": "controls/latex/template/pumlsc-shared.sty",
     "qa": "controls/latex/qa-contract.json",
-    "parity_audit": "controls/latex/pu-format-parity-audit.json"
+    "parity_audit": "controls/latex/pu-format-parity-audit.json",
+    "semantic": "controls/latex/authorial-voice-policy.json",
+    "validation": "scripts/latex/check_authorial_voice.py"
   },
   "inheritance_registry": "registry/latex-inheritance.json",
   "amendment_register": "controls/latex/change-register.json",
@@ -92,7 +95,7 @@
     "state": "TARGETED_GENERIC_PU_CORRECTIONS_COMPILED__FULL_PU_CERTIFICATION_OPEN"
   },
   "shared_template_verification": {
-    "focus_version": "2.2.0",
+    "focus_version": "2.3.0",
     "checked_researcher": "RSH-010",
     "test_mode": "LOCAL_LINUX_XELATEX_EXACT_TIMES_NEW_ROMAN_40_A4_PAGES",
     "tests": [
@@ -107,5 +110,18 @@
     "full_144_rule_production_certified": false,
     "independent_regression_other_researchers": "HOLD",
     "approval": "TECHNICAL_QA_ONLY"
+  },
+  "semantic_gate": {
+    "policy": "controls/latex/authorial-voice-policy.json",
+    "checker": "scripts/latex/check_authorial_voice.py",
+    "mode": "ACTIVE_POLICY__ADVISORY_CHECKER__HUMAN_REVIEW",
+    "applicable_researchers": 11,
+    "scientific_authority": "RESEARCHER_AND_SUPERVISOR_ONLY"
+  },
+  "cover_spacing_helper": {
+    "command": "\\PUCoverLogoAuthorSpace[<length>]",
+    "default_if_invoked": "30pt",
+    "scope": "OPT_IN_ONLY_NO_CHANGE_TO_EXISTING_COVERS",
+    "origin": "Safal v1.12 corrected large under-logo gap; not a universal compulsory 30pt gap"
   }
 }
