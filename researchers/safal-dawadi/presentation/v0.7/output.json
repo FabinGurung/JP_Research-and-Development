@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-010",
+  "presentation_version": "v0.7",
+  "status": "SUPERVISOR_REVIEW_NOT_FINAL",
+  "source_version": "v1.12",
+  "source_commit": "1012e14e91a587c7bfaf4fbdddadf4e343863d73",
+  "shared_generator": "controls/presentation/generator",
+  "shared_generator_main_commit": "4d3708b72720eb11356c9e0169f6c86a1f5318d8",
+  "control_drive_id": "1i2YO58HJ1WVsYnBDP0a0ZJg-29VOPccPnWiWit08ofM",
+  "local_presentation_source": "researchers/safal-dawadi/presentation/v0.7/presentation_content.json",
+  "private_evidence_map_drive_archive": "17_ImBGd9StI1nRPaDRLZEYnVJjmeBHUp",
+  "outputs": {
+    "pdf": {
+      "drive_id": "1pDZmZfpt9D7E-mMFRFq824Yx4IYrRW2Y",
+      "status": "PROVIDER_READBACK_PASS"
+    },
+    "pptx": {
+      "drive_id": null,
+      "status": "LOCAL_BUILT_QA_PASS__DRIVE_UPLOAD_PROVIDER_SAFETY_BLOCK"
+    },
+    "qa": {
+      "drive_id": "1nYNxRuYwAn7KNBJimKTz6kvLu2nBPjIE",
+      "status": "PROVIDER_READBACK_PASS"
+    },
+    "gallery": {
+      "drive_id": "1m7fyn8gIEQUTp0Met1BIskpz3Vtt8Pan",
+      "status": "PROVIDER_READBACK_PASS"
+    }
+  },
+  "validation": {
+    "slides": 32,
+    "photos_private": 17,
+    "pdf_font": "Times New Roman",
+    "slide_format": "4:3",
+    "semantic": "SCOPED_PRESENTATION_EVIDENCE_PASS_NOT_SCIENTIFIC_APPROVAL",
+    "pub_release": false
+  },
+  "supervisor_status": "PENDING_FINAL_APPROVAL",
+  "co_supervisor_available": false,
+  "merge_policy": "PENDING_SUPERVISOR_REVIEW",
+  "a9_main_ack": "NOT_ISSUED"
+}
