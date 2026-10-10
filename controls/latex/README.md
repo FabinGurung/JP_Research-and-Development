@@ -1,6 +1,43 @@
-# THE SINGLE R&D LATEX CONTROL TOWER — 2.1.0
+# THE SINGLE R&D LATEX CONTROL TOWER — 2.3.0
 
 **There is one canonical operational owner:** [tower.json](tower.json) on R&D `main`. [pumlsc-shared.sty](template/pumlsc-shared.sty) is the one reusable template. Other JSON files in this directory are **subordinate modules of this single tower**, not separate authorities.
+
+
+## Three connected controls; still ONE tower
+
+The [tower.json](tower.json) on \`main\` is the **single machine authority** and researcher entry point. These are separate responsibilities **inside that tower**, not rival towers:
+
+| Layer | Exact canonical file | Purpose |
+|---|---|---|
+| 1. Formatting | [pumlsc-shared.sty](template/pumlsc-shared.sty) | Reusable PU page/font/section layout; does not author scientific prose |
+| 2. Manuscript semantics | [authorial-voice-policy.json](authorial-voice-policy.json) | Authentic research voice, evidence/causation, human-readable captions, citations, ethics |
+| 3. Technical validation | [check_authorial_voice.py](../../scripts/latex/check_authorial_voice.py), [validate_shared.py](../../scripts/latex/validate_shared.py), [universal_preflight.py](../../scripts/latex/universal_preflight.py) | Advisory prose warnings, shared inheritance integrity and project-specific source preflight |
+| 4. PDF QA | [qa-contract.json](qa-contract.json), [pdf_technical_qa.py](../../scripts/latex/pdf_technical_qa.py) | Exact fonts, references, all-page visual QA, source/PDF provenance |
+| 5. Change and release history | [change-register.json](change-register.json) and [release-contract.json](release-contract.json) | Central numbered amendments, bounded release/Drive readback |
+
+**Invocation for another researcher:**
+
+\`\`\`bash
+python3 scripts/latex/check_authorial_voice.py --self-test
+python3 scripts/latex/check_authorial_voice.py --researcher nabin-bista --json
+# Review warnings with the researcher; do not auto-rewrite science.
+python3 scripts/latex/validate_shared.py
+python3 scripts/latex/universal_preflight.py --policy-check
+\`\`\`
+
+The semantic checker is intentionally **advisory**; use \`--fail-on-warning\` only as an explicit review-team requirement. It cannot verify real field observations or certify university ethics/approval. First person is **not mandatory**, and genuine citations to other researchers remain third person. Never conceal writing assistance when institutional disclosure applies.
+
+### Lessons generalized from Safal v1.11–v1.12
+
+- Make the researcher's *own verified* field descriptions natural and context-appropriate, rather than calling the student an external "practitioner" or "the researcher" in every sentence; require human factual approval.
+- Separate photographed site condition from verified repairs, causes, measured time and cost. Never synthesize missing case records.
+- Keep private media IDs and administrative code names in evidence manifests / \`\\includegraphics\` paths, not printed captions.
+- Excluding road work was **Safal-specific**; valid road research by another researcher must not be removed.
+- The main PU style now offers an **opt-in** \`\\PUCoverLogoAuthorSpace[30pt]\` spacing helper. Safal's 30pt gap is not a new universal university requirement. This helper does not modify any existing cover unless deliberately invoked. Validate each title/cover page visually and against its approved university source.
+- Source snapshot first, then build exact-font PDF and verify the provenance SHA; upload outputs into the owning Drive folders with provider readback; keep A9 and scientific approvals separate.
+
+**Status:** Generalized semantic source rules and opt-in formatting API are reusable from the canonical tower. Independent full-document rendering for all other researchers and full PU 144-rule certification remain unverified; do not infer publication approval from a green code test.
+
 
 ## One template for every researcher
 
@@ -16,7 +53,7 @@ The historical `controls/latex.control.json` file is an **alias only** and `cont
 4. Researcher-only correction: register a reason/owner in [extension-registry.json](extension-registry.json), then add only the delta under the permitted researcher's `latex/extensions/` path. The base still comes from central.
 5. If an exception later proves universal, promote it into shared template and mark original extension superseded. Every registered researcher then obtains it through the one shared path.
 
-The `001..100` base and `101+` change numbering is an internal *illustrative namespace*: 12 actual shared rules currently exist; it does **not** claim 100 completed rules. It does not override separate original PU-FMT rule IDs.
+The `001..100` base and `101+` change numbering is an internal *illustrative namespace*: 15 actual shared rules currently exist; it does **not** claim 100 completed rules. It does not override separate original PU-FMT rule IDs.
 
 ## Safe production boundary
 
