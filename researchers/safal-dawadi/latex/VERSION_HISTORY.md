@@ -1,11 +1,12 @@
 # Safal Dawadi — Git-controlled LaTeX version history
 
-**Latest working manuscript:** [v1.11](https://github.com/FabinGurung/JP_Research-and-Development/tree/safal/v1.11-authorial-revision-20261010/researchers/safal-dawadi/latex/manuscript)
+**Latest working manuscript:** [v1.12](https://github.com/FabinGurung/JP_Research-and-Development/tree/safal/v1.12-building-only-cover-spacing-20261010/researchers/safal-dawadi/latex/manuscript)
 
 | Source version | Git ref | Purpose | Status |
 |---|---|---|---|
 | v1.9-fmt-r1 | [main (read-only scientific baseline)](https://github.com/FabinGurung/JP_Research-and-Development/tree/main/researchers/safal-dawadi/latex/manuscript) | 40-page technical review | Preserved; original source approval remains HOLD |
 | v1.10 | [safal/v1.10-photo-snapshot-20261010](https://github.com/FabinGurung/JP_Research-and-Development/tree/safal/v1.10-photo-snapshot-20261010/researchers/safal-dawadi/latex/manuscript) | Initial 25-photo source integration | Frozen fallback/snapshot; not publication certified |
+| v1.12 | [safal/v1.12-building-only-cover-spacing-20261010](https://github.com/FabinGurung/JP_Research-and-Development/tree/safal/v1.12-building-only-cover-spacing-20261010/researchers/safal-dawadi/latex/manuscript) | Building-only research scope; all road matter removed; adjusted cover logo spacing | LATEST REVIEW, source build pending |
 | v1.11 | [safal/v1.11-authorial-revision-20261010](https://github.com/FabinGurung/JP_Research-and-Development/tree/safal/v1.11-authorial-revision-20261010/researchers/safal-dawadi/latex/manuscript) | Correct author voice, human figure captions, remove machine codes, preserve limited evidence conclusions | Latest **source-review** candidate; production PDF and author approval pending |
 
 The former photo review PR #6 remains a historic predecessor; v1.11 is [draft PR #7](https://github.com/FabinGurung/JP_Research-and-Development/pull/7).
