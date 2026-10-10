@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "A9-ENT-SEMANTICS-001",
+  "status": "POLICIES_ACTIVE_VALIDATION_PARTIAL",
+  "universal_rules": [
+    "Only the owning Google Drive project/company record supplies private factual values.",
+    "Historical contracts are source precedents, never automatic legal authority.",
+    "Never transfer rates, names, exclusions or signatures between projects.",
+    "Fail closed for missing source, arithmetic mismatch, unreviewed public/private exposure.",
+    "Draft compile success is not legal/engineering correctness.",
+    "Human legal/finance/engineering approval remains independent of technical tests."
+  ],
+  "document_rules": [
+    {
+      "type_id": "client-contract",
+      "review_checks": [
+        "verify legal party names and contractor/client capacities",
+        "map scope inclusions/exclusions item by item",
+        "identify drawings, measurement authority, tax and payment terms",
+        "check material responsibility, variation approvals, defects and dispute terms"
+      ],
+      "reject_flags": [
+        "borrowed historical prices",
+        "unapproved subcontract restriction",
+        "unstated client works versus contractor works",
+        "unsupported work-completion claim"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "labour-contract",
+      "review_checks": [
+        "distinguish worker employee versus independent labour contractor",
+        "verify working hours, wage, overtime and legal entitlements",
+        "site occupational safety and tools allocation",
+        "attendance or quantity measurement and termination"
+      ],
+      "reject_flags": [
+        "disguised employment status",
+        "unlawful waiver of entitlements"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "job-contract",
+      "review_checks": [
+        "verify position, duties and employment classification",
+        "verify notice, probation, leave and statutory deductions",
+        "check legally authorized signatories"
+      ],
+      "reject_flags": [
+        "fabricated employment history",
+        "unenforceable restrictions"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "salary-contract",
+      "review_checks": [
+        "separate gross, deduction and net",
+        "check payment cycle and statutory contributions",
+        "verify live payroll authority"
+      ],
+      "reject_flags": [
+        "gross presented as net",
+        "invented salary amount"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "experience-letter",
+      "review_checks": [
+        "verify dates and job title against personnel register",
+        "verify duties evidence and signatory authority"
+      ],
+      "reject_flags": [
+        "invented experience",
+        "unsupported professional designation"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "recommendation-letter",
+      "review_checks": [
+        "identify recommender relationship and firsthand evidence",
+        "distinguish factual attestation from subjective opinion",
+        "check subject consent and authorized disclosure"
+      ],
+      "reject_flags": [
+        "fabricated achievements",
+        "unsupported third-party endorsement"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "vendor-quotation",
+      "review_checks": [
+        "check buyer and vendor roles, offer validity and unit rates",
+        "tax and currency basis and delivery obligations",
+        "each line traced to pricing evidence"
+      ],
+      "reject_flags": [
+        "inconsistent rates",
+        "ambiguous tax inclusion"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "government-quotation",
+      "review_checks": [
+        "check exact tender rules and eligibility",
+        "submission deadline, forms and validity",
+        "no unsupported regulatory certification"
+      ],
+      "reject_flags": [
+        "invented tender eligibility",
+        "unverified bid bond"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "proposal",
+      "review_checks": [
+        "separate problem, deliverables and acceptance criteria",
+        "scope assumptions, exclusions and schedule",
+        "proposal validity and commercial approval"
+      ],
+      "reject_flags": [
+        "unfunded commitments",
+        "unapproved completion guarantee"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "estimate",
+      "review_checks": [
+        "takeoff only from CAD repository and verified FIDs",
+        "rate library as independent source",
+        "BOQ template not quantity authority",
+        "match units and arithmetic with checked exclusions"
+      ],
+      "reject_flags": [
+        "fictional takeoff",
+        "BOQ quantity generated from a rate template"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "material-report",
+      "review_checks": [
+        "opening plus receipts minus usage equals closing",
+        "verify site and dated source records",
+        "separate PPC/OPC and other materials by material IDs"
+      ],
+      "reject_flags": [
+        "textual remarks substituted for material quantity",
+        "unverified stock"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "purchase-order",
+      "review_checks": [
+        "verify supplier, quantities, taxes and delivery",
+        "budget and procurement authority",
+        "inspection and change/return terms"
+      ],
+      "reject_flags": [
+        "purchase without authorization"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "receipt-voucher",
+      "review_checks": [
+        "verify received amount and payment method",
+        "link bank/cash evidence and invoice",
+        "check receipt is not represented as tax invoice"
+      ],
+      "reject_flags": [
+        "fictitious receipt",
+        "paid assertion without evidence"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    },
+    {
+      "type_id": "payment-slip",
+      "review_checks": [
+        "verify recipient, payment period and gross/net",
+        "check source timesheet or payable ledger",
+        "deductions and confirmation evidence"
+      ],
+      "reject_flags": [
+        "invented payment",
+        "gross/net conflation"
+      ],
+      "automatic_enforcement": "REQUIRED_FIELDS_AND_APPLICABLE_ARITHMETIC_ONLY",
+      "human_review": "REQUIRED"
+    }
+  ],
+  "gates": [
+    "G01_ORIGINAL_AUTHORITY",
+    "G02_SEMANTIC_MAPPING",
+    "G03_TYPED_DATA_AND_CALC",
+    "G04_CLAUSE_COMPLETENESS",
+    "G05_LATEX_COMPILE",
+    "G06_EVERY_PAGE_VISUAL_QA",
+    "G07_HUMAN_APPROVAL",
+    "G08_DRIVE_RELEASE_READBACK"
+  ]
+}
