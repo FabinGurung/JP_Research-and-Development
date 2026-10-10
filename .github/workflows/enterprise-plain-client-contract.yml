@@ -1,0 +1,49 @@
+name: A9 Plain-language Contract Variant QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'controls/document-engineering/client-facing-language.policy.json'
+      - 'templates/enterprise/v2/client-contract-simple-lumpsum.tex'
+      - 'templates/enterprise/v2/enterprise-shared.sty'
+      - 'scripts/document_engineering/check_client_facing_language.py'
+      - 'scripts/document_engineering/render_simple_lumpsum.py'
+      - 'examples/document-engineering/sample_simple_lumpsum.json'
+      - '.github/workflows/enterprise-plain-client-contract.yml'
+  pull_request:
+    paths:
+      - 'templates/enterprise/v2/client-contract-simple-lumpsum.tex'
+      - 'scripts/document_engineering/check_client_facing_language.py'
+      - 'scripts/document_engineering/render_simple_lumpsum.py'
+  workflow_dispatch:
+jobs:
+  source-and-render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate plain-language policy and fictional input
+        run: |
+          python3 -m py_compile scripts/document_engineering/check_client_facing_language.py scripts/document_engineering/render_simple_lumpsum.py
+          python3 scripts/document_engineering/check_client_facing_language.py --self-test
+          python3 scripts/document_engineering/render_simple_lumpsum.py --data examples/document-engineering/sample_simple_lumpsum.json --out qa/simple
+      - uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: qa/simple
+          root_file: construction-works-agreement.tex
+          latexmk_shell_escape: false
+      - name: Inspect fictional PDF visible wording
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          pdfinfo qa/simple/construction-works-agreement.pdf | grep -q 'Pages:'
+          python3 scripts/document_engineering/check_client_facing_language.py --pdf qa/simple/construction-works-agreement.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fictional-plain-language-contract-draft
+          path: qa/simple/construction-works-agreement.pdf
+          retention-days: 3
