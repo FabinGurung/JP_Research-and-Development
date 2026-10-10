@@ -302,8 +302,8 @@
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": null,
-        "working_pdf_drive_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
-        "latex_source_package_drive_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+        "working_pdf_drive_id": "1yh_2sFCV23j3QRGzLMTpqDYGwGHN0ATo",
+        "latex_source_package_drive_id": "1zgV-LpHa8Jw82R6Cr2p28Dxth0QQXRdT",
         "presentation_pdf_drive_id": "12p7nBS0wj-ceEXCdux9PbKO0RsYEEsC_",
         "presentation_pptx_drive_id": "1O85erUmaDz7JMhmVNPAOG7QXvIky_Hb4",
         "project_root_drive_id": "1iMAzOXrs-9xivI25I2TS9Kd5afpY8MeP"
@@ -322,7 +322,24 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Verified Safal Dawadi (NOT Safal Thapa). MSc Construction Management v1.9 qualitative review is not final or supervisor-approved; field case/source admission and Local/Main synchronization remain gated. The selected presentation is separately governed."
+      "public_note": "Verified Safal Dawadi (NOT Safal Thapa). Latest v1.12 building-only manuscript has 17 source photos and a compiled exact-TNR technical-review PDF. Supervisor/scientific acceptance, 144-rule formatting audit and A9 Main sync remain HOLD; v1.11 is a preserved earlier branch.",
+      "previous_review": {
+        "working_pdf_drive_id": "1R9lRxDfgrvB1-s-o4-Y7GuN56zeD5itb",
+        "latex_source_package_drive_id": "1mgJ-_-Jc-z4XionxbjfpD9zinynSor9c",
+        "version": "v1.9",
+        "status": "preserved_historical_pointers"
+      },
+      "latest_review": {
+        "version": "v1.12",
+        "branch": "safal/v1.12-building-only-cover-spacing-20261010",
+        "manuscript_path": "researchers/safal-dawadi/latex/manuscript",
+        "pdf_drive_id": "1yh_2sFCV23j3QRGzLMTpqDYGwGHN0ATo",
+        "source_zip_drive_id": "1zgV-LpHa8Jw82R6Cr2p28Dxth0QQXRdT",
+        "qa_zip_drive_id": "1eKX2yO0Gr3dcozTo1w7RVmztZRAEjMbf",
+        "status": "TECHNICAL_PDF_QA_PASS__SUPERVISOR_AND_SCIENTIFIC_APPROVAL_HOLD",
+        "scope": "WATERPROOFING_AND_MASONRY_BUILDING_ONLY__17_SITE_PHOTOS",
+        "previous_branch": "safal/v1.11-authorial-revision-20261010"
+      }
     },
     {
       "researcher_id": "RSH-011",
