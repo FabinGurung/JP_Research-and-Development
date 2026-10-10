@@ -56,5 +56,5 @@
     "validation": "ADMITTED_SOURCE_LINKAGE_AND_TOPOLOGY__NOT_SCIENTIFIC_COMPLETION_CERTIFICATION",
     "researcher_science_location": "researchers/{slug}/presentation/methodology_flow.candidate.v0.1.json"
   },
-  "methodology_flow_code_status": "REVIEW_CANDIDATE_UNTIL_MERGED"
+  "methodology_flow_code_status": "IMPLEMENTED_IN_SHARED_GIT_CODE__RESEARCHER_SCIENCE_REVIEW_SEPARATE"
 }
