@@ -1,0 +1,24 @@
+{
+  "template_id": "client-contract-simple-lumpsum",
+  "company_name": "Sample Construction Company",
+  "owner_name": "Example Owner",
+  "project_name": "Example Residence",
+  "house_area_sqft": 1100,
+  "total_npr": 5000000,
+  "site_address": "",
+  "agreement_date": "",
+  "scope_items": [
+    {
+      "heading": "Example floor finishing",
+      "description": "at the sample property."
+    },
+    {
+      "heading": "Example exterior finishing",
+      "description": "with mutually agreed materials."
+    }
+  ],
+  "demolition_clause": "Any permitted demolition and ownership of recovered materials shall follow a signed schedule.",
+  "materials_clause": "Supply responsibilities shall be recorded before signing. No rates or quantities are inferred.",
+  "completion_clause": "Payments, programme, taxes and defect periods shall be agreed and attached before execution.",
+  "confirmation_clause": "Both parties must review and sign before the agreement takes effect."
+}
