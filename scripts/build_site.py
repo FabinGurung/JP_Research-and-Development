@@ -415,6 +415,29 @@ def main():
             bridge+='<section class="section"><h2>Approved Q1B / Q2A / Q3A</h2><p><strong>Q1:</strong> Historical Q1B selected the v1.9 seq15 source lineage as its target; later Git/source-admission and formatting-only review changes must be checked against current owning controls. This 2026-10-09 decision snapshot is not a statement of the newest PDF, source hash, approval or A9 cursor.</p><p><strong>Q2:</strong> PRE = earlier Git commit, POST = new non-force commit. Major accepted releases receive annotated Git tags once tag-write is supported; <strong>no routine new snapshot branches</strong>. All historical refs remain preserved.</p><p><strong>Q3:</strong> Admitted academic LaTeX manuscript source (.tex, .bib) belongs under each researcher in this R&D Git repository. Produce normal, evidence-grounded academic writing without internal AI/workflow QA narration or fabricated research.</p><p><a href="'+esc(REPO_URL+"/blob/main/docs/LATEX_Q1B_Q2A_Q3A_GOVERNED_CHANGE_20261009.md")+'">Read source change register →</a></p></section>'
             bridge+='<section class="section"><h2>Release and migration status</h2><p><strong>Bridge:</strong> '+esc(migration["status"])+'</p><p><strong>Cutover:</strong> '+esc(migration["cutover"])+'</p><p><strong>Source states:</strong> '+esc(", ".join(rcontract["states"]))+'</p><p><a href="safal-dawadi/index.html">Safal Dawadi control and release gate →</a> · <a href="../../researchers/safal-dawadi/latex/index.html">Safal researcher workspace →</a></p><h3>Source files</h3><ul>'+contract_links+'</ul></section>'
             body=body.replace("</main>",bridge+"</main>")
+        if slug=="latex":
+            sem=load(Path("controls/latex/authorial-voice-policy.json"))
+            items="".join('<li><strong>'+esc(rule["key"].replace("_"," ").title())+'</strong> — '+esc(rule["requirement"])+'</li>' for rule in sem["rules"])
+            sources=[
+                ("Canonical tower","controls/latex/tower.json"),
+                ("Shared .sty template","controls/latex/template/pumlsc-shared.sty"),
+                ("Semantic policy","controls/latex/authorial-voice-policy.json"),
+                ("Python semantic checker","scripts/latex/check_authorial_voice.py"),
+                ("Template inheritance validator","scripts/latex/validate_shared.py"),
+                ("Universal build preflight","scripts/latex/universal_preflight.py"),
+                ("Full PDF technical QA","scripts/latex/pdf_technical_qa.py"),
+                ("Central amendment register","controls/latex/change-register.json"),
+                ("All researchers' inheritance","registry/latex-inheritance.json"),
+            ]
+            links="".join('<li><a href="'+esc(REPO_URL+"/blob/main/"+p)+'">'+esc(title)+' →</a></li>' for title,p in sources)
+            semantics='<main class="wrap hero"><div class="eyebrow">The ONE R&D LaTeX tower · all researchers</div><h1>Manuscript semantics and validation</h1>'
+            semantics+='<p class="lead">Formatting lives in the shared .sty; scientific meaning and academic authorship are reviewed by humans, assisted by advisory validation code. No Safal-only research facts become universal.</p>'
+            semantics+='<section class="section"><h2>Researcher workflow</h2><div class="flow"><div class="node">Authentic field records</div><div class="arrow">→</div><div class="node">Researcher-owned source</div><div class="arrow">→</div><div class="node">Semantic review</div><div class="arrow">→</div><div class="node">One PU template</div><div class="arrow">→</div><div class="node">PDF + visual QA</div></div></section>'
+            semantics+='<section class="section"><h2>One tower: direct machine-code links</h2><ul>'+links+'</ul><p><code>python3 scripts/latex/check_authorial_voice.py --self-test</code></p><p><code>python3 scripts/latex/check_authorial_voice.py --researcher &lt;researcher-slug&gt; --json</code></p><p>Results are advisory warnings, not corrections or scientific verification.</p></section>'
+            semantics+='<section class="section"><h2>Shared authorial and evidence rules</h2><ol>'+items+'</ol></section>'
+            semantics+='<section class="section"><h2>What Safal v1.11–v1.12 contributed</h2><p><strong>Reusable:</strong> authentic writing perspective, descriptive photographic captions, observed-versus-verified rework, source-first versions, and an opt-in cover spacing helper. <strong>Project-only:</strong> Lamachur, all individual photos, exclusion of road work, the 30pt cover value and Safal’s scientific interpretations. Other researchers must never inherit those facts.</p></section>'
+            semantics+='<section class="section"><h2>Independent release gates</h2><p>Passing code tests is not a completed scientific audit, university-format certification or supervisor approval. The existing full PU rule-parity work remains open. <a href="../index.html">← Back to shared LaTeX tower</a></p></section></main>'
+            write(out,"controls/latex/semantics/index.html",shell("LaTeX Semantics",semantics,3))
         write(out,f"controls/{slug}/index.html",shell(name,body,2))
     saf=load(Path("controls/projects/safal-dawadi.latex.json"))
     pub=saf["source_states"]["first_drive"]
