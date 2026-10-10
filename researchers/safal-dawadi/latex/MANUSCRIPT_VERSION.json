@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-010",
+  "manuscript_version": "v1.11",
+  "stage": "AUTHORIAL_LANGUAGE_REVISION_AND_HUMAN_CAPTIONS",
+  "status": "REVIEW_SOURCE__PENDING_PRIVATE_XELATEX_PDF_QA_AND_SAFAL_APPROVAL",
+  "parent_manuscript": "v1.10",
+  "parent_git_commit": "f1d0238cd42b901cf805cb5e42b444ea3d290b24",
+  "photo_count": 25,
+  "figure_groups": {
+    "waterproofing_threshold": 7,
+    "roof_finish": 5,
+    "masonry": 5,
+    "external_road_comparison": 8
+  },
+  "photos_private": true,
+  "shared_template": "controls/latex/template/pumlsc-shared.sty",
+  "PDF_release_status": "NOT_SCIENTIFICALLY_APPROVED",
+  "notes": [
+    "Previously generated PDF was a local preview, not v1.10 certified production build.",
+    "Source and photograph metadata remain guarded; source branch is the durable version."
+  ],
+  "parent_branch": "safal/v1.10-photo-snapshot-20261010",
+  "parent_version_commit": "0912ea564431f67cfbd04fb294eb7c884a48c8ed",
+  "previous_main_unmodified": "v1.9-fmt-r1",
+  "source_branch": "safal/v1.11-authorial-revision-20261010",
+  "shared_authorial_voice_policy": "controls/latex/authorial-voice-policy.json",
+  "private_binary_policy": "Photos and licensed font assets remain outside public Git",
+  "latex_template": "controls/latex/template/pumlsc-shared.sty",
+  "latest_scientific_authorship": "Safal must personally approve rewritten observational statements and figure captions",
+  "scientific_approval": "HOLD"
+}

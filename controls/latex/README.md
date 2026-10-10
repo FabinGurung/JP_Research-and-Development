@@ -39,3 +39,20 @@ Q2: Previous Git main SHA is PRE; one nonforced commit creates POST. Use **annot
 Q3: Admitted manuscript `.tex`, bibliography `.bib` and accompanying machine-readable source belong in the public R&D researcher folder. Build normal scholarly content from verified evidence, without internal machine-control notes in student-facing PDF; no unsupported scientific facts or references.
 
 [**Complete inventory of 144 PU-FMT source rules and gap status**](pu-format-parity-audit.json): SOURCE INVENTORY audited 144/144, real format/font/whole-document production parity is NOT complete; PU-FMT-076 is absent in the Drive v1.13 original.
+
+
+## Student-author voice and evidence semantics (proposed cross-researcher rule)
+
+The canonical `pumlsc-shared.sty` controls typography and document structure. **It must NOT manufacture the voice, evidence, research method or conclusions of a student author.** The project manuscript owns that text.
+
+See [authorial-voice-policy.json](authorial-voice-policy.json) and run the advisory semantic checker:
+
+```bash
+python3 scripts/latex/check_authorial_voice.py --researcher safal-dawadi
+```
+
+Before release, a student must review the Abstract, Introduction, Methodology, Results, Conclusions and EVERY figure caption. Replace irrelevant phrases such as "the researcher observed" or "practitioner-reported" when those words refer to the student writing their own research; natural first-person past-tense statements may be appropriate if the university/supervisor permits. Do not mechanically change references to other investigators or make unsupported "I measured/verified" claims. Never print private `SAFAL-PHOTO-...` identifiers or internal case codes in the thesis; retain them in the source mapping and private photo register. Preserve accurate AI-assistance disclosure. **Scientific/authorial claims need student approval; the typography template cannot certify them.**
+
+**Version discipline:** new scientific/content edit => new source version/ref and provenance manifest before production PDF. The PDF is a derivative, not the primary file. Never overwrite the previous source snapshot, force-move an approved release, or use an unverified local preview as the official university build.
+
+**Status:** This shared guideline is on a researcher-reviewed PR branch until the shared LaTeX owner approves and merges it. Do not label it active for all researchers prematurely.
