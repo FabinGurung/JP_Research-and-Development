@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{enterprise-shared}
+\geometry{margin=23mm,top=25mm,bottom=23mm}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{tabularx,array,enumitem,fancyhdr,lastpage,needspace}
+\definecolor{RohiniGreen}{HTML}{20533D}
+\definecolor{RohiniGold}{HTML}{B79443}
+\definecolor{LightGreen}{HTML}{EDF5F0}
+\definecolor{Muted}{HTML}{4A5A52}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist[enumerate]{leftmargin=6.5mm,itemsep=3pt,topsep=4pt,parsep=0pt}
+\setlength{\headheight}{23pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{RohiniGreen}{\textbf{@@CONTRACTOR_UPPER@@}}}
+\fancyhead[R]{\small\textcolor{Muted}{AGREEMENT}}
+\fancyfoot[L]{\footnotesize Draft for review}
+\fancyfoot[R]{\footnotesize Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{RohiniGold}\leaders\hrule height \headrulewidth\hfill}}
+\newcommand{\sect}[1]{\par\Needspace{5\baselineskip}\vspace{4pt}{\color{RohiniGreen}\large\bfseries #1}\par{\color{RohiniGold}\rule{\linewidth}{0.7pt}}\vspace{-3pt}}
+\begin{document}
+\begin{center}
+{\color{RohiniGreen}\fontsize{17.5}{21}\selectfont\bfseries CONSTRUCTION WORKS AGREEMENT}\\[3pt]
+{\small\color{Muted}@@PROJECT_NAME@@ --- Draft for Review}
+\end{center}
+{\color{RohiniGold}\rule{\linewidth}{1.5pt}}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{39mm}X@{}}
+Contractor & @@CONTRACTOR_NAME@@\\
+Client / Owner & @@CLIENT_NAME@@\\
+Project & @@PROJECT_NAME@@\\
+Site address & \underline{\hspace{97mm}}\\
+Stated house area & @@HOUSE_AREA@@\\
+Agreement date & \underline{\hspace{48mm}}\\
+\end{tabularx}
+
+\sect{1. Final Contract Value}
+The Owner and the Contractor agree to the \textbf{final lump-sum contract value of NPR @@PRICE_NPR@@/-} (@@PRICE_WORDS@@) for the works expressly described below. The price is not based on a presumed rate per square foot. Any change in price or scope must be agreed in writing and signed by both parties.
+
+\sect{2. Agreed Works}
+The Contractor shall carry out and complete the following works at the project site:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+@@SCOPE_ITEMS@@
+\end{enumerate}
+
+\sect{3. Demolition Materials and Salvage Rights}
+@@DEMOLITION_CLAUSE@@
+
+\sect{4. Material Responsibilities and Limits}
+@@MATERIAL_CLAUSE@@
+
+\sect{5. Completion, Payment and Workmanship}
+@@COMPLETION_CLAUSE@@
+
+\sect{6. Confirmation and Signatures}
+@@CONFIRMATION_CLAUSE@@
+\par\vspace{5mm}\noindent
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\dimexpr\linewidth-4pt\relax}{@{}X@{\hspace{9mm}}X@{}}
+\textbf{For the Owner} & \textbf{For the Contractor} \\
+@@CLIENT_NAME@@ & @@CONTRACTOR_SIGNATORY@@\\[12mm]
+Signature: \rule{28mm}{.4pt} & Signature: \rule{28mm}{.4pt}\\
+Date: \rule{30mm}{.4pt} & Date: \rule{30mm}{.4pt}\\
+\end{tabularx}
+\end{document}
