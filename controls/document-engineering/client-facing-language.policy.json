@@ -1,0 +1,40 @@
+{
+  "policy_id": "A9-ENT-CLIENT-PLAIN-LANGUAGE-001",
+  "version": "1.0.0",
+  "state": "ACTIVE_DRAFT_OUTPUT_GATE",
+  "scope": [
+    "all client-facing LaTeX-generated agreements, quotations, letters, reports and payment papers",
+    "all externally circulated PDF or rendered text"
+  ],
+  "rule": "Documents delivered to clients must contain plain contractual/business language only. Internal computer, AI, database, model, code, workflow and project-control implementation terminology must never be included in the printed document. LaTeX source commands and private calculation/validation mechanisms remain behind the scenes.",
+  "forbidden_visible_phrases": [
+    "AI",
+    "artificial intelligence",
+    "ChatGPT",
+    "LLM",
+    "database",
+    "SQL",
+    "JSON",
+    "GitHub",
+    "Python",
+    "source code",
+    "control tower",
+    "semantic guardrail",
+    "machine language",
+    "low-level language",
+    "prompt",
+    "A9",
+    "model output",
+    "compiled by"
+  ],
+  "exceptions": "Business construction terms, such as MS railing, uPVC and safe demolition methods, remain allowed. This policy does not forbid computer systems from being used privately to build, validate and preserve source files.",
+  "gates": [
+    "scan free-text fields before LaTeX interpolation",
+    "scan the extracted text of the final rendered PDF",
+    "human visual read-through",
+    "do not release if detected internal terminology exists"
+  ],
+  "output_status_rule": "No user-facing document may claim legal or commercial approval from a successful compilation test.",
+  "all_type_modules": 14,
+  "public_private_boundary": "Public repository contains only generic blank source and policy, never client contract values or signatures."
+}
