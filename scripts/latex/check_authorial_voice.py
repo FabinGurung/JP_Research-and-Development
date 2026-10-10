@@ -7,7 +7,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 CONTROL = REPO / "controls/latex/authorial-voice-policy.json"
-PHOTO_PATTERN = re.compile(r"SAFAL-PHOTO-[A-Z0-9-]+")
+PHOTO_PATTERN = re.compile(r"\b[A-Z][A-Z0-9-]*PHOTO-[A-Z0-9-]+\b")
 TECH_CODE = re.compile(r"\\bW0[1-9]\\b")
 STUDENT_AS_THIRD_PERSON = re.compile(r"\\bthe researcher\\s+(?:reports?|states?|identified|observed|examined|described|found|did|used)\\b", re.I)
 ADMIN = re.compile(r"\\b(?:researcher-reported|researcher-identified)\\b", re.I)
@@ -19,6 +19,8 @@ def visible_text(tex: str) -> str:
     for raw in tex.splitlines():
         # Treat unescaped '%' as start of comment.
         line = re.split(r"(?<!\\)%", raw, maxsplit=1)[0]
+        # Internal private photo paths are not text printed on a typeset page.
+        line = re.sub(r"private_photos/[A-Za-z0-9_.-]+", "", line)
         line = re.sub(r"\\(?:includegraphics|IfFileExists|label|ref|pageref|input|addbibresource)(?:\\[[^\\]]*\\])?(?:\\{[^{}]*\\})+", " ", line)
         cleaned.append(line)
     return "\n".join(cleaned)
