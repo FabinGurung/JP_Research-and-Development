@@ -1,0 +1,18 @@
+{
+  "template_id": "works-contract",
+  "fields": {
+    "contract_ref": "DEMO-001",
+    "organization": "Example Construction Company",
+    "client": "Example Client",
+    "contractor": "Example Contractor",
+    "project": "Example Granite and Tile Work",
+    "location": "Example Project Site",
+    "effective_date": "2026-10-10",
+    "scope": "Staircase granite, floor tile, skirting and molding quantities as approved in signed measurements.",
+    "measurement_and_rates": "Measure each approved item by agreed units; enter gross quantity, deductions, net quantity and rate in a separate signed measurement sheet.",
+    "schedule": "Commencement date, sequencing and completion date require written agreement.",
+    "payment_terms": "Pay on checked work quantities and accepted invoices according to agreed milestones.",
+    "quality_terms": "Jointly inspect levels, finish, slope, grout, materials and site acceptance before payment.",
+    "variation_terms": "Record any changes and rates in writing before variation works proceed."
+  }
+}

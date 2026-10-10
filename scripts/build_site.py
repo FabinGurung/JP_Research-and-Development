@@ -7,6 +7,7 @@ from urllib.parse import quote
 from site_core import ROOT, REPO_URL, SITE_URL, load, esc, branch_url, drive_url, evidence_html, shell, write
 from site_pages import build_home, render_start_here, render_owner_prompt, render_owner_directory
 from site_search import render_search
+from site_document_engineering import build_document_pages
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--out",default="dist"); args=ap.parse_args()
@@ -479,6 +480,7 @@ def main():
         shutil.copy2(src,data_dir/name)
     shutil.copy2(ROOT/"registry/researcher-folder-roles.json",data_dir/"researcher-folder-roles.json")
     shutil.copy2(ROOT/"registry/latex-build-profiles.json",data_dir/"latex-build-profiles.json")
+    build_document_pages(out)
     search_index=render_search(out,researchers,branch_inventory,websites)
     print(f"built {out} researchers={len(researchers)} search_records={len(search_index['entries'])}")
 

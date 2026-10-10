@@ -1,0 +1,31 @@
+name: A9 Document Engineering source QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'templates/enterprise/**'
+      - 'scripts/document_engineering/**'
+      - 'examples/document-engineering/**'
+      - 'registry/enterprise-document-catalog.json'
+      - '.github/workflows/document-engineering.yml'
+  pull_request:
+    paths:
+      - 'templates/enterprise/**'
+      - 'scripts/document_engineering/**'
+      - 'examples/document-engineering/**'
+  workflow_dispatch:
+jobs:
+  safe-sample-qa:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate public dummy LaTeX
+        run: |
+          python3 scripts/document_engineering/build.py --data examples/document-engineering/sample_works_contract.json --out /tmp/a9-test
+          test -s /tmp/a9-test/works-contract.tex
+          ! grep -F '{{' /tmp/a9-test/works-contract.tex

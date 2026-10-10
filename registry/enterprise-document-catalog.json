@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_id": "A9-DOC-ENG-001",
+  "release_status": "DRAFT_PUBLIC_CODE",
+  "source_archive": {
+    "entry_count": 102,
+    "tex_count": 73,
+    "image_count": 24,
+    "pdf_count": 4,
+    "extensionless_count": 1,
+    "sha256": "a0986692274647b68b3c839c4be0d827e55345f5502c6e67bab4c4dd61efc924",
+    "private_drive_file_id": "1wW-_B6bvETGFN_L7XMWcBZlUYBMTqzFP",
+    "file_level_drive_ingestion": "PENDING"
+  },
+  "templates": [
+    {
+      "id": "works-contract",
+      "name": "Construction works agreement",
+      "path": "templates/enterprise/works_contract.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "experience-letter",
+      "name": "Experience letter",
+      "path": "templates/enterprise/experience_letter.tex",
+      "status": "DRAFT"
+    },
+    {
+      "id": "salary-contract",
+      "name": "Salary agreement",
+      "path": "templates/enterprise/salary_contract.tex",
+      "status": "DRAFT"
+    }
+  ],
+  "categories": [
+    [
+      "Client contracts",
+      10
+    ],
+    [
+      "Labour contracts",
+      3
+    ],
+    [
+      "Job contracts",
+      6
+    ],
+    [
+      "Salary contracts",
+      7
+    ],
+    [
+      "Experience letters",
+      1
+    ],
+    [
+      "Recommendation letters",
+      1
+    ],
+    [
+      "Quotations to vendors",
+      3
+    ],
+    [
+      "Government quotations",
+      3
+    ],
+    [
+      "Proposals",
+      3
+    ],
+    [
+      "Estimates and BOQ",
+      17
+    ],
+    [
+      "Material reporting",
+      2
+    ],
+    [
+      "Receipt vouchers",
+      3
+    ],
+    [
+      "Payment slips",
+      1
+    ],
+    [
+      "Purchase orders",
+      1
+    ],
+    [
+      "Historical recycle",
+      19
+    ],
+    [
+      "Supporting images",
+      22
+    ]
+  ],
+  "boundaries": {
+    "public_github": "nonconfidential code templates and controls",
+    "private_drive": "original zip, extracted sensitive documents, brand assets, signed outputs",
+    "academic_latex_authority": "controls/latex/tower.json"
+  }
+}
