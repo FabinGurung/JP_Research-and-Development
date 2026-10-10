@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "A9_ENT_ORG_PROFILE_ROUTER_V2",
+  "status": "DISPLAY_PROFILES_ONLY__NOT_LEGAL_ENTITY_VERIFICATION",
+  "shared_tower": "controls/document-engineering/tower.json",
+  "privacy": "LOGOS_SIGNATURES_STAMPS_TAX_CERTIFICATES_PRIVATE_DRIVE_ONLY",
+  "profiles": [
+    {
+      "id": "rohini",
+      "display_name": "Rohini Engineering and Builders Pvt. Ltd.",
+      "entity_id": null,
+      "legal_document_authority": "PRIVATE_DRIVE_REQUIRED",
+      "branding_authority": "PRIVATE_DRIVE_PENDING",
+      "enabled_document_family_count": 14,
+      "client_workstream": "07_Radha_Roka",
+      "release_state": "HOLD"
+    },
+    {
+      "id": "fishtail",
+      "display_name": "Fishtail Builders Pvt. Ltd.",
+      "entity_id": null,
+      "legal_document_authority": "PRIVATE_DRIVE_REQUIRED",
+      "branding_authority": "PRIVATE_DRIVE_PENDING",
+      "enabled_document_family_count": 14,
+      "release_state": "HOLD"
+    },
+    {
+      "id": "paila-pilates",
+      "display_name": "Paila Pilates",
+      "entity_id": null,
+      "legal_document_authority": "UNVERIFIED",
+      "branding_authority": "PRIVATE_DRIVE_PENDING",
+      "enabled_document_family_count": 14,
+      "release_state": "HOLD"
+    }
+  ],
+  "rules": [
+    "Profiles parameterize a single shared code engine; do not duplicate template code by company",
+    "Verify registered legal identity and signing authority from current private company records",
+    "Branding assets must be explicitly approved per organization and must not be copied between entities",
+    "Signature/stamp never inserted without explicit authorized consent",
+    "Existing private records and outputs stay inside owning company/project Drive"
+  ]
+}
