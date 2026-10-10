@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "R&D shared controls + executable source in GitHub; Google Drive holds approved scientific data and compiled artifacts",
+  "confirmed_at": "2026-10-10",
+  "categories": [
+    {
+      "output": "Thesis manuscript PDF",
+      "technology": "LaTeX / XeLaTeX (Biber bibliography)",
+      "implementation": "controls/latex/template/pumlsc-shared.sty",
+      "validation": "controls/latex/qa-contract.json",
+      "scope": "Academic manuscript engine"
+    },
+    {
+      "output": "Presentation PDF",
+      "technology": "Python + ReportLab",
+      "implementation": "controls/presentation/generator/a9_presentation_generator.py",
+      "validation": "controls/presentation/generator/a9_render_qa.py",
+      "scope": "PDF slide renderer"
+    },
+    {
+      "output": "Editable presentation PPTX",
+      "technology": "Python + python-pptx",
+      "implementation": "controls/presentation/generator/a9_presentation_generator.py",
+      "validation": "controls/presentation/generator/a9_render_qa.py",
+      "scope": "Native PowerPoint tables and text"
+    },
+    {
+      "output": "Literature semantic handler",
+      "technology": "Python + JSON",
+      "implementation": "controls/presentation/generator/a9_literature_table.py",
+      "validation": "controls/presentation/generator/LITERATURE_TABLE_POLICY.md",
+      "scope": "3-column default; 4-column optional; source links and pagination"
+    },
+    {
+      "output": "Semantic validation and tests",
+      "technology": "Python + JSON Schema + GitHub Actions",
+      "implementation": "controls/presentation/generator/a9_semantic_checker.py",
+      "validation": ".github/workflows/a9-presentation-candidate.yml",
+      "scope": "Admission links and regression gates; not scientific truth"
+    },
+    {
+      "output": "Presentation content contract",
+      "technology": "JSON + JSON Schema",
+      "implementation": "controls/presentation/generator/presentation_schema.json",
+      "validation": "controls/presentation/generator/a9_presentation_validator.py",
+      "scope": "Structured researcher inputs, no hardcoded findings"
+    },
+    {
+      "output": "Site publication",
+      "technology": "Python static HTML builder + CSS + JavaScript + GitHub Pages",
+      "implementation": "scripts/build_site.py",
+      "validation": "scripts/test_site_links.py",
+      "scope": "Public-safe website only"
+    }
+  ],
+  "notes": [
+    "The current academic presentation engine is Python/ReportLab/python-pptx, not legacy TypeScript/PptxGenJS advice.",
+    "Repository checks and PDF/PPTX structural validation do not independently establish the scientific accuracy of a literature finding.",
+    "Source/configuration belongs in Git; private photos, licensed fonts and published outputs belong in authorized private storage."
+  ]
+}
