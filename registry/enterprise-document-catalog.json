@@ -10,7 +10,13 @@
     "extensionless_count": 1,
     "sha256": "a0986692274647b68b3c839c4be0d827e55345f5502c6e67bab4c4dd61efc924",
     "private_drive_file_id": "1wW-_B6bvETGFN_L7XMWcBZlUYBMTqzFP",
-    "file_level_drive_ingestion": "PENDING"
+    "file_level_drive_ingestion": "COMPLETE_102_102_PROVIDER_NAME_SIZE_READBACK",
+    "qa_html_drive_file_id": "1cTkhtadrjK6dFNwbiTFsNDn7kCcRRZ4Z",
+    "qa_manifest_drive_file_id": "1mBRpSFVSUdPZLHD-6asZ3vaNZsDc7SQe",
+    "remote_sha256_verification": "NOT_PERFORMED_ALL_FILES",
+    "source_original_sha256_verified": true,
+    "duplicate_filename_resolution": "SEPARATE_EXPERIENCE_AND_RECOMMENDATION_SOURCE_FOLDERS",
+    "reference_contract": "PRIVATE_BISHAL_MAIN_CONSTRUCTION_AGREEMENT__NOT_SUBCONTRACT_AMENDMENT"
   },
   "templates": [
     {

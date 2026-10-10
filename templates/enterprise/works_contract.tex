@@ -1,34 +1,68 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[margin=25mm]{geometry}
+\usepackage[margin=24mm,top=27mm,bottom=24mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage{parskip}
+\usepackage{xcolor,parskip,booktabs,tabularx,mdframed,fancyhdr,lastpage}
+\definecolor{GreenDark}{HTML}{1A4D2E}
+\definecolor{GreenMid}{HTML}{2D6A4F}
+\definecolor{GreenPale}{HTML}{EEF7F2}
+\definecolor{Gold}{HTML}{C9A84C}
+\definecolor{DarkText}{HTML}{1C1C1C}
+\newcommand{\sectionbanner}[1]{\vspace{3mm}\noindent
+\colorbox{GreenDark}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+\vspace{2mm}\color{white}\bfseries\hspace{2mm}#1\vspace{2mm}}}
+\par\noindent{\color{Gold}\rule{\linewidth}{1.3pt}}\vspace{1mm}}
+\newcommand{\clausehead}[2]{\noindent{\color{GreenDark}\bfseries #1\quad #2}\par}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{GreenDark}\footnotesize {{organization}}}
+\fancyhead[R]{\color{DarkText}\footnotesize CONTRACT SOURCE / DRAFT}
+\fancyfoot[C]{\scriptsize Agreement ref: {{contract_ref}}\quad Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
 \begin{document}
+\color{DarkText}
 \begin{center}
-{\Large\bfseries AGREEMENT FOR CONSTRUCTION WORKS}\\[4mm]
-Reference: {{contract_ref}}
+{\color{GreenDark}\bfseries\LARGE AGREEMENT FOR CONSTRUCTION WORKS}\\[2mm]
+{\color{GreenMid}\small Reference: {{contract_ref}}}
 \end{center}
-\textbf{Organization:} {{organization}}\\
-\textbf{Client:} {{client}}\\
-\textbf{Contractor:} {{contractor}}\\
-\textbf{Project:} {{project}}\\
-\textbf{Location:} {{location}}\\
-\textbf{Effective date:} {{effective_date}}
-\section*{1. Scope}
+{\color{Gold}\rule{\linewidth}{1.4pt}}
+\begin{mdframed}[backgroundcolor=GreenPale,linecolor=Gold,linewidth=.8pt]
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{33mm}X@{}}
+Organization & {{organization}}\\
+Client & {{client}}\\
+Contractor & {{contractor}}\\
+Project & {{project}}\\
+Location & {{location}}\\
+Effective Date & {{effective_date}}
+\end{tabularx}
+\end{mdframed}
+\sectionbanner{SECTION 1 --- PROJECT DETAILS AND SCOPE}
+\clausehead{1.1}{Included Works}
 {{scope}}
-\section*{2. Measurement, Rate and Units}
+\sectionbanner{SECTION 2 --- MEASUREMENT, QUANTITY, RATE AND UNITS}
+\clausehead{2.1}{Measurement and Pricing Basis}
 {{measurement_and_rates}}
-\section*{3. Duration}
+\sectionbanner{SECTION 3 --- COMMENCEMENT AND COMPLETION}
+\clausehead{3.1}{Programme}
 {{schedule}}
-\section*{4. Payment}
+\sectionbanner{SECTION 4 --- FINANCIAL TERMS AND PAYMENT}
+\clausehead{4.1}{Commercial Schedule}
 {{payment_terms}}
-\section*{5. Quality and Acceptance}
+\sectionbanner{SECTION 5 --- MATERIALS, QA AND DEFECTS}
+\clausehead{5.1}{Inspection and Acceptance}
 {{quality_terms}}
-\section*{6. Variations}
+\sectionbanner{SECTION 6 --- EXCLUSIONS AND VARIATION APPROVALS}
+\clausehead{6.1}{Changes to the Agreed Scope}
 {{variation_terms}}
-\section*{7. Approval Gate}
-This draft must undergo legal, commercial, safety, insurance, defects,
-tax and dispute-resolution review before the parties sign it.
-\vspace{15mm}
-\noindent Client signature:\ \hrulefill \quad Contractor signature:\ \hrulefill
+\sectionbanner{SECTION 7 --- LEGAL APPROVAL AND SIGNING}
+This is a reusable business-template source, not an approved or executed agreement.
+Before signing, verify legal identities, governing law, safety, insurance, taxes,
+defects period, default and termination clauses, measurement evidence, pricing,
+signing authority and all relevant project-specific exclusions.
+\vspace{10mm}
+\begin{tabularx}{\linewidth}{@{}XX@{}}
+\textbf{For Client} & \textbf{For Contractor}\\[10mm]
+Signature:\ \rule{42mm}{.4pt} & Signature:\ \rule{42mm}{.4pt}\\[6mm]
+Date:\ \rule{42mm}{.4pt} & Date:\ \rule{42mm}{.4pt}
+\end{tabularx}
 \end{document}

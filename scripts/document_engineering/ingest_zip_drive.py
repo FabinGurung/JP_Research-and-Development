@@ -83,6 +83,10 @@ def main():
             if group not in cfg["categories"]:
                 raise RuntimeError("Unknown source category: "+group)
             parts=logical.parts[1:]
+            # Two original source families share the exact filename Pradip adhikari.tex.
+            # Keep both distinct, matching the existing completed A9 ingestion.
+            if group in ("Experience letter", "Recommendation Letter"):
+                parts=(group,)+parts
             data=archive.read(info)
             if len(data)>100_000_000:
                 raise RuntimeError("Oversize entry")
