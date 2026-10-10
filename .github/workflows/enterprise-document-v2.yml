@@ -1,0 +1,33 @@
+name: A9 Enterprise Document Engine v2
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'controls/document-engineering/**'
+      - 'templates/enterprise/v2/**'
+      - 'scripts/document_engineering/engine_v2.py'
+      - 'scripts/document_engineering/validation_v2.py'
+      - '.github/workflows/enterprise-document-v2.yml'
+  pull_request:
+    paths:
+      - 'controls/document-engineering/**'
+      - 'templates/enterprise/v2/**'
+      - 'scripts/document_engineering/engine_v2.py'
+      - 'scripts/document_engineering/validation_v2.py'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python syntax and 14-type schema/arithmetic smoke tests
+        run: |
+          python3 -m py_compile scripts/document_engineering/engine_v2.py scripts/document_engineering/validation_v2.py
+          python3 scripts/document_engineering/engine_v2.py --self-test
+          python3 scripts/document_engineering/engine_v2.py --demo-all --out /tmp/a9-v2
+          test "$(find /tmp/a9-v2 -name '*.tex' | wc -l)" -eq 14
