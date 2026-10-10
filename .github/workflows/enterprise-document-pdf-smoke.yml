@@ -6,6 +6,8 @@ on:
     paths:
       - 'templates/enterprise/v2/**'
       - 'scripts/document_engineering/engine_v2.py'
+      - 'scripts/document_engineering/check_client_facing_language.py'
+      - 'controls/document-engineering/client-facing-language.policy.json'
       - '.github/workflows/enterprise-document-pdf-smoke.yml'
 jobs:
   technical-pdf:
@@ -28,6 +30,11 @@ jobs:
           working_directory: qa_build/${{ matrix.document }}
           root_file: ${{ matrix.document }}.tex
           latexmk_shell_escape: false
+      - name: Confirm business language in rendered sample PDF
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python3 scripts/document_engineering/check_client_facing_language.py --pdf qa_build/${{ matrix.document }}/${{ matrix.document }}.pdf
       - uses: actions/upload-artifact@v4
         with:
           name: draft-only-${{ matrix.document }}
