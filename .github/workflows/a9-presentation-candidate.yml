@@ -1,0 +1,24 @@
+name: A9 Presentation Candidate Checks
+on:
+  pull_request:
+    paths:
+      - 'controls/presentation/**'
+      - '.github/workflows/a9-presentation-candidate.yml'
+      - 'controls/presentation.control.json'
+  workflow_dispatch:
+jobs:
+  source-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned generator dependencies
+        run: python -m pip install -r controls/presentation/generator/requirements.lock.txt
+      - name: Semantic regression tests
+        working-directory: controls/presentation/generator
+        run: python -m unittest -v test_a9_semantic_checker
+      - name: Synthetic smoke test (never release certification)
+        working-directory: controls/presentation/generator
+        run: python smoke_test.py

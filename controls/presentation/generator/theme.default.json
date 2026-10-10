@@ -1,0 +1,61 @@
+{
+  "system": {
+    "name": "A9 + PU MSc Presentation Generator v2.1",
+    "control_version": "v2.2",
+    "control_drive_id": "1i2YO58HJ1WVsYnBDP0a0ZJg-29VOPccPnWiWit08ofM",
+    "qa_drive_id": "1oaGJzgPhoxw6eNN2vlfiuzNzwo6BjcUNOZu3Z9NbOV0",
+    "rule_registry_drive_id": "1q9gz1e8sdJkOo8U-ZpvglDOqHVw1N2_N3TkVqy6JCiY"
+  },
+  "canvas": {
+    "width_in": 10.0,
+    "height_in": 7.5
+  },
+  "safe_margins_in": {
+    "left": 0.45,
+    "right": 0.45,
+    "top": 0.3,
+    "bottom": 0.38
+  },
+  "fonts": {
+    "production_family": "Times New Roman",
+    "preview_family": "Tinos",
+    "title_pt": 30,
+    "body_pt": 20,
+    "caption_pt": 13,
+    "footer_pt": 9
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "text": "#000000",
+    "line": "#000000"
+  },
+  "rules": {
+    "max_text_only_bullets": 5,
+    "max_bullet_chars": 180,
+    "max_title_chars": 90,
+    "client_forbidden_terms": [
+      "chatgpt",
+      "openai",
+      "ai model",
+      "checkpoint",
+      "source-lock",
+      "drive id",
+      "runtime path",
+      "qa pass",
+      "qa fail",
+      "controlled draft",
+      "release management"
+    ],
+    "supervisor_required_when_available": true,
+    "additional_supervisors_required_when_available": true
+  },
+  "branding": {
+    "title_logo_baseline_in": 1.0,
+    "title_logo_min_in": 2.25,
+    "title_logo_default_in": 2.25,
+    "title_logo_required": true,
+    "canonical_logo_drive_id": "1bk9iL4ryl7rS3yi3IDHi6vn_3jUYCTyS",
+    "canonical_logo_sha256": "584d4867624405a138aaaafe13791c1291e456a1ceac5b1b5298a63e548d9587",
+    "preserve_aspect_ratio": true
+  }
+}

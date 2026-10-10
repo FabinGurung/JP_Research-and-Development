@@ -32,5 +32,18 @@
     "read back Drive IDs/links",
     "update lane/output.json",
     "commit"
-  ]
+  ],
+  "canonical_implementation": "controls/presentation/",
+  "executable_stack_current_candidate": [
+    "Python",
+    "ReportLab",
+    "python-pptx",
+    "PyMuPDF",
+    "Pillow",
+    "JSON"
+  ],
+  "original_stack_status": "LEGACY_RECOMMENDATION_NOT_ENGINE_AUTHORITY",
+  "github_candidate_status": "REVIEW_PR_PENDING__NOT_PRODUCTION",
+  "drive_current_control_id": "1i2YO58HJ1WVsYnBDP0a0ZJg-29VOPccPnWiWit08ofM",
+  "github_main_control_promoted": false
 }

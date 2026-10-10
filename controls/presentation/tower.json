@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "control_id": "RD-CONTROL-PRESENTATION-001",
+  "status": "GITHUB_REVIEW_CANDIDATE__DRIVE_V2_2_REMAINS_ACTIVE",
+  "single_academic_tower": true,
+  "owner_domain": "academic/thesis",
+  "wrapper": "controls/presentation.control.json",
+  "existing_drive_control": "1i2YO58HJ1WVsYnBDP0a0ZJg-29VOPccPnWiWit08ofM",
+  "drive_rule_registry": "1q9gz1e8sdJkOo8U-ZpvglDOqHVw1N2_N3TkVqy6JCiY",
+  "drive_generator": "1cMzqAigBw5pVGPZOwte7k04QXfHiWWIA",
+  "drive_generator_sha256": "fce6266ed54e724ce049909051f110bd0d99ea638cda65979cc1528f9da4d6b4",
+  "drive_semantic_candidate_folder": "1OOFFnJVQKYEt9IIqGQV1C4uIOV5HVTBf",
+  "execution_root": "controls/presentation/generator",
+  "official_production_font": "Times New Roman",
+  "smoke_mode": "FIXTURE_ONLY",
+  "semantic_gate": "CANDIDATE_MACHINE_LINKAGE_VALIDATOR",
+  "visual_qa": "HUMAN_OR_MODEL_REVIEW_REQUIRED",
+  "researcher_inheritance": "SINGLE_SHARED_ENGINE_PROJECT_LOCAL_EVIDENCE",
+  "github_main_promoted": false,
+  "website_deployed": false,
+  "researcher_source_approved": false
+}

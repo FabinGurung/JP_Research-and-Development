@@ -1,0 +1,13 @@
+{
+  "status": "CONTRACT_ONLY__WORKSPACE_ADOPTION_PENDING",
+  "researcher_registry_source": "registry/researchers.json",
+  "engine": "controls/presentation/generator",
+  "researcher_presentation_folder_pattern": "researchers/{researcher_slug}/presentation/",
+  "workspace_count_verified_here": 0,
+  "rule": "Each registered researcher inherits shared template but authorizes project-local source and admission separately",
+  "safety": [
+    "no_cross_researcher_science",
+    "no_private_photo_in_public_git",
+    "no_licensed_font_in_git"
+  ]
+}
