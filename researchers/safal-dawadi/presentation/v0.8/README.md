@@ -1,0 +1,5 @@
+# Safal Dawadi presentation v0.8 — source-linked literature matrices
+
+Derived from Safal LaTeX v1.12 and presentation v0.7; old sources and artifacts are preserved. Uses one shared academic generator from `controls/presentation/generator/` with `a9_literature_table.py` and semantic/structural validators. Two literature slides and one technical-basis slide replace the old generic bullet list. All 17 photos remain privately stored. The content JSON stores no photo bytes, font files or generated PPTX/PDF.
+
+Rows use six articles and two technical authorities already in thesis v1.12 bibliography and independently checked against publisher/institutional abstracts or official technical pages. Their local relevance is explicitly interpretive and not evidence of actual case cost/delay or structural noncompliance. Full source/paper review and supervisor signoff remain outstanding. `output.json` provides Drive PDF/PPTX and QA pointers; private source/evidence JSON is in authorized Drive review storage.
