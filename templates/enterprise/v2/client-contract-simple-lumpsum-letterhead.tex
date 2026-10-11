@@ -33,17 +33,32 @@
 \thispagestyle{firstpage}
 \noindent\textbf{\footnotesize PAN No.: \BrandPAN}\hfill\textbf{\footnotesize Registration No.: \BrandRegistration}\par
 \vspace{2mm}
-\noindent\begin{minipage}[c]{.21\linewidth}
-  \includegraphics[width=29mm,height=29mm,keepaspectratio]{\BrandLogoFile}
-\end{minipage}%
-\hfill\begin{minipage}[c]{.77\linewidth}
-  \centering\textbf{\fontsize{16}{19}\selectfont\BrandCompany}\par\vspace{2mm}
+% Letterhead text remains centered, with no logo in the page header.
+\begin{center}
+  {\textbf{\fontsize{16}{19}\selectfont\BrandCompany}}\par\vspace{2mm}
   {\small\BrandAddress}\par
-\end{minipage}
+\end{center}
 \vspace{2.5mm}
 \noindent\textbf{\footnotesize Reference No.: \underline{\hspace{39mm}}}\hfill\textbf{\footnotesize Date: \underline{\hspace{27mm}}}\par
 {\color{RohiniGold}\rule{\linewidth}{1.2pt}}
 \vspace{2mm}
 % The private, project-specific contract contents are resolved from Drive.
+
+% Reusable signing block: company logo is placed only beside the contractor
+% signature on the concluding page, without obstructing signature/date lines.
+\newcommand{\ContractPartySignatures}[1]{%
+  \Needspace{11\baselineskip}
+  \par\vspace{5mm}\noindent
+  \renewcommand{\arraystretch}{1.25}
+  \begin{tabularx}{\dimexpr\linewidth-4pt\relax}{@{}X@{\hspace{9mm}}X@{}}
+  \textbf{For the Owner} & \textbf{For the Contractor} \\
+  #1 & Authorized representative\\[1.5mm]
+  \parbox[c][23mm][c]{\linewidth}{\strut} &
+  \parbox[c][23mm][c]{\linewidth}{\centering\includegraphics[width=19mm,height=19mm,keepaspectratio]{\BrandLogoFile}}\\[2mm]
+  Signature: \rule{28mm}{.4pt} & Signature: \rule{28mm}{.4pt}\\[1.5mm]
+  Date: \rule{30mm}{.4pt} & Date: \rule{30mm}{.4pt}\\
+  \end{tabularx}
+}
+
 \input{contract-content.tex}
 \end{document}
