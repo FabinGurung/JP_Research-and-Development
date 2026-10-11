@@ -1,19 +1,22 @@
 % A9 shared public-safe milestone table style, no private project contents.
 % Requires array, longtable, xcolor[table].
+% Company branding may set EnterpriseTableHeaderColor; currency from owning contract.
 % A client contract may include this file in a private authorized compile.
+\providecommand{\EnterpriseTableHeaderColor}{black}
+\providecommand{\EnterpriseTableCurrency}{Amount}
 \newenvironment{EnterpriseMilestoneSchedule}{%
  \begingroup\small\renewcommand{\arraystretch}{1.22}%
  \rowcolors{2}{gray!7}{white}
  \begin{longtable}{@{}>{\centering\arraybackslash}p{7mm}p{94mm}>{\raggedleft\arraybackslash}p{12mm}>{\raggedleft\arraybackslash}p{28mm}@{}}%
- \rowcolor{RohiniGreen}\color{white}\bfseries No. &
+ \rowcolor{\EnterpriseTableHeaderColor}\color{white}\bfseries No. &
  \color{white}\bfseries Milestone event &
  \color{white}\bfseries \% &
- \color{white}\bfseries Amount\\
+ \color{white}\bfseries \EnterpriseTableCurrency\\
  \endfirsthead
- \rowcolor{RohiniGreen}\color{white}\bfseries No. &
+ \rowcolor{\EnterpriseTableHeaderColor}\color{white}\bfseries No. &
  \color{white}\bfseries Milestone event (continued) &
  \color{white}\bfseries \% &
- \color{white}\bfseries Amount\\
+ \color{white}\bfseries \EnterpriseTableCurrency\\
  \endhead
 }{\end{longtable}\endgroup}
 \newcommand{\EnterpriseMilestone}[4]{#1 & #2 & #3\% & #4\\}
