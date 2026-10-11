@@ -1,0 +1,60 @@
+{
+  "schema_version": "a9.enterprise.client_contract_principles.v1",
+  "status": "REUSABLE_CLAUSE_STRUCTURE__PROJECT_APPROVAL_REQUIRED",
+  "source_relation": "Historical Bishal Paija subcontract clauses are conceptual precedents only. Do not copy confidential parties, prices, brand specs, penalties, subcontract restrictions or old time periods.",
+  "clause_families": [
+    {
+      "id": "SCOPE",
+      "rule": "Written included works and exclusions control commercial obligations. Distinguish general structural/services works from specific finishing/compound works."
+    },
+    {
+      "id": "DRAWINGS",
+      "rule": "Signed Appendix A drawing register governs technical details only. Require number, revision, date, attachments and signature before treating drawings as contract documents."
+    },
+    {
+      "id": "VARIATIONS",
+      "rule": "Changes in scope, materials, drawings, price or programme require both parties' prior written approval. Structural deviations may require qualified engineer review."
+    },
+    {
+      "id": "QUALITY_MATERIALS",
+      "rule": "Workmanship and materials require specifications and approved substitutions; differentiate owner-supplied materials and contractor-supplied materials."
+    },
+    {
+      "id": "MILESTONES",
+      "rule": "Financial schedule must reconcile against contract value. Written event certification required for commencement and completion milestones; due days are a project-specific approved term."
+    },
+    {
+      "id": "RETENTION",
+      "rule": "Specify final withheld instalment versus proportionate deductions, start event, calendar duration and release prerequisites. No invented deductions."
+    },
+    {
+      "id": "DEFECTS",
+      "rule": "DLP appears separately from last payment trigger; DLP duration does not itself delay the retained final instalment unless expressly agreed."
+    },
+    {
+      "id": "SALVAGE",
+      "rule": "Demolition and material title transfer must be clearly stated; confirm lawful authority, third-party rights, permitted recovery, safety and waste disposal."
+    },
+    {
+      "id": "DEFAULT_DISPUTE",
+      "rule": "Provide written notice, fair cure opportunity, negotiation and legally reviewed dispute routes; never copy historical penalties or interest rates by default."
+    },
+    {
+      "id": "EXECUTION",
+      "rule": "Do not issue an agreement before party authority, taxes, dates, signed appendices, payment terms and legal review are resolved."
+    }
+  ],
+  "prohibited_inheritance": [
+    "historical monetary figures",
+    "subcontract-only non-circumvention clauses",
+    "automatic interest",
+    "percentage termination compensation",
+    "client-specific dates",
+    "unverified building measurements"
+  ],
+  "public_private": {
+    "public": "template control and safe formatting only",
+    "private": "parties, project clause choices, approved rates, drawings, signatures"
+  },
+  "system_status": "DRAFT_GENERATION_ALLOWED__CONTRACT_ISSUE_REQUIRES_REVIEW"
+}
