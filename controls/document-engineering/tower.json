@@ -25,5 +25,11 @@
   "client_facing_language_policy": "controls/document-engineering/client-facing-language.policy.json",
   "public_pdf_language_lint": "scripts/document_engineering/check_client_facing_language.py",
   "private_short_form_generator": "scripts/document_engineering/render_simple_lumpsum.py",
-  "plain_language_rule": "No internal computer, AI, database or implementation terminology in client-facing documents; controls and source formats remain private."
+  "plain_language_rule": "No internal computer, AI, database or implementation terminology in client-facing documents; controls and source formats remain private.",
+  "payment_schedule_control": "controls/document-engineering/payment-schedule.policy.v1.json",
+  "client_contract_clause_control": "controls/document-engineering/client-contract-reusable-clauses.policy.v1.json",
+  "payment_arithmetic_engine": "scripts/document_engineering/validate_payment_schedule.py",
+  "shared_payment_format": "templates/enterprise/v2/partials/payment-schedule.tex",
+  "contract_release_rule": "TECHNICAL_MILESTONE_ARITHMETIC_PASS_NEVER_MEANS_SIGNED_OR_LEGAL_APPROVAL",
+  "originals_unchanged": true
 }
