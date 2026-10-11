@@ -50,5 +50,15 @@
       "visible_document_policy": "controls/document-engineering/client-facing-language.policy.json",
       "use_case": "simple itemized construction scope, fixed agreed amount, missing fields explicitly held"
     }
-  ]
+  ],
+  "payment_schedule_policy": "controls/document-engineering/payment-schedule.policy.v1.json",
+  "reusable_payment_table": "templates/enterprise/v2/partials/payment-schedule.tex",
+  "schedule_validator": "scripts/document_engineering/validate_payment_schedule.py",
+  "clause_policy": "controls/document-engineering/client-contract-reusable-clauses.policy.v1.json",
+  "notes_model": [
+    "retention_period",
+    "defects_liability_period",
+    "demolition_and_salvage_when_applicable"
+  ],
+  "approval_policy": "TECHNICAL_QA_NOT_EQUAL_LEGAL_OR_HUMAN_APPROVAL"
 }
