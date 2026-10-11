@@ -1,0 +1,43 @@
+{
+  "schema_version": "a9.enterprise.payment_schedule.policy.v1",
+  "status": "REUSABLE_DRAFT_CONTROL_PENDING_CONTRACT_APPROVAL",
+  "source_authority": "LIVE_PRIVATE_PROJECT_RECORDS",
+  "applies_to": [
+    "client-contract",
+    "labour-contract",
+    "job-contract",
+    "quotation",
+    "proposal",
+    "purchase-order"
+  ],
+  "fields": [
+    "currency",
+    "total_contract_value",
+    "milestones[number,event,trigger,percent,amount]",
+    "retention",
+    "defects_liability",
+    "approval_evidence"
+  ],
+  "qa_controls": {
+    "amount_math": "SUM_PERCENTS_100;SUM_AMOUNT_EQUALS_CONTRACT;EACH_RATE_TIMES_CONTRACT_EQUALS_AMOUNT_TO_CURRENCY_PRECISION",
+    "trigger": "COMMENCEMENT_AND_COMPLETION_ALLOWED_ONLY_WITH_WRITTEN_EVENT_CERTIFICATION",
+    "no_invented_terms": "MISSING_PAYMENT_DUE_DAYS_OR_CERTIFIER_AUTHORITY_REMAIN_EXPLICIT_HOLDS",
+    "retention": "DECLARE_WHETHER_FINAL_WITHHELD_INSTALLMENT_OR_DEDUCTIONS_ACROSS_EARLIER_PAYMENTS",
+    "dlp": "MUST_BE_SEPARATE_PARAGRAPH_NOT_PART_OF_LAST_MILESTONE_TRIGGER;RETENTION_RELEASE_NOT_HELD_FOR_FULL_DLP_UNLESS_EXPLICIT",
+    "drawing_precedence": "ATTACHED_SIGNED_DRAWING_REGISTER_CONTROLS_TECHNICAL_DIMENSIONS;WRITTEN_SIGNED_SCOPE_AND_EXCLUSIONS_CONTROLS_COMMERCIAL_INCLUSION;DISCREPANCIES_REQUIRE_SIGNED_VARIATION",
+    "demolition_salvage": "INDEPENDENT_CONTRACTUAL_NOTE_AND_OWNER_LAWFUL_TITLE_CHECK_WHEN_PRESENT",
+    "units_currency": "CURRENCY_EXPLICIT;NO_MIXING_INR_AND_NPR",
+    "share_to_project": "DONT_COMMIT_PROJECT_INPUTS_OR_LOGOS_TO_PUBLIC_REPOSITORY"
+  },
+  "release_gates": [
+    "PROJECT_AUTHORITY",
+    "SIGNED_DRAWING_REGISTER",
+    "SCOPE_PAYMENT_CONSISTENCY",
+    "MILESTONE_AMOUNT_PASS",
+    "TERMS_REVIEW",
+    "HUMAN_APPROVAL",
+    "SIGNED_CONTRACT",
+    "DRIVE_READBACK"
+  ],
+  "default_state": "DRAFT_NOT_SIGNABLE"
+}
