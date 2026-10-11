@@ -1,0 +1,41 @@
+name: A9 Shared Payment Schedule QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'controls/document-engineering/payment-schedule.policy.v1.json'
+      - 'controls/document-engineering/client-contract-reusable-clauses.policy.v1.json'
+      - 'scripts/document_engineering/validate_payment_schedule.py'
+      - 'templates/enterprise/v2/partials/payment-schedule.tex'
+      - '.github/workflows/enterprise-payment-schedule-validation.yml'
+  pull_request:
+    paths:
+      - 'controls/document-engineering/payment-schedule.policy.v1.json'
+      - 'scripts/document_engineering/validate_payment_schedule.py'
+      - 'templates/enterprise/v2/partials/payment-schedule.tex'
+  workflow_dispatch:
+jobs:
+  verify-shared-schedule:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check syntax and decimal arithmetic safeguards
+        run: |
+          python3 -m py_compile scripts/document_engineering/validate_payment_schedule.py
+          python3 scripts/document_engineering/validate_payment_schedule.py --self-test
+      - name: Validate policy keys
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('controls/document-engineering/payment-schedule.policy.v1.json').read_text())
+          c=json.loads(Path('controls/document-engineering/client-contract-reusable-clauses.policy.v1.json').read_text())
+          assert 'qa_controls' in p
+          assert 'clause_families' in c and len(c['clause_families']) >= 8
+          print('PASS shared enterprise schedule and source clause policies')
+          PY
