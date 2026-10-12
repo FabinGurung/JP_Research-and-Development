@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0.0",
+  "audit_id": "A9-ENT-TEMPLATE-NORMALIZATION-20261012",
+  "mode": "INVENTORY_AND_HUMAN_QA_NO_DELETION",
+  "canonical_count": 14,
+  "canonical": [
+    {
+      "position": 1,
+      "type_id": "client-contract",
+      "title": "Client Construction Agreement",
+      "path": "templates/enterprise/v2/client-contract.tex",
+      "group": "contracts",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 2,
+      "type_id": "labour-contract",
+      "title": "Labour Works Agreement",
+      "path": "templates/enterprise/v2/labour-contract.tex",
+      "group": "contracts",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 3,
+      "type_id": "job-contract",
+      "title": "Employment / Job Agreement",
+      "path": "templates/enterprise/v2/job-contract.tex",
+      "group": "employment",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 4,
+      "type_id": "salary-contract",
+      "title": "Salary Agreement",
+      "path": "templates/enterprise/v2/salary-contract.tex",
+      "group": "employment",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 5,
+      "type_id": "experience-letter",
+      "title": "Experience Certificate",
+      "path": "templates/enterprise/v2/experience-letter.tex",
+      "group": "employment",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 6,
+      "type_id": "recommendation-letter",
+      "title": "Recommendation Letter",
+      "path": "templates/enterprise/v2/recommendation-letter.tex",
+      "group": "employment",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 7,
+      "type_id": "vendor-quotation",
+      "title": "Vendor Quotation",
+      "path": "templates/enterprise/v2/vendor-quotation.tex",
+      "group": "commercial",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 8,
+      "type_id": "government-quotation",
+      "title": "Government Tender Quotation",
+      "path": "templates/enterprise/v2/government-quotation.tex",
+      "group": "commercial",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 9,
+      "type_id": "proposal",
+      "title": "Professional Proposal",
+      "path": "templates/enterprise/v2/proposal.tex",
+      "group": "commercial",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 10,
+      "type_id": "estimate",
+      "title": "Construction Estimate",
+      "path": "templates/enterprise/v2/estimate.tex",
+      "group": "engineering_estimates",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 11,
+      "type_id": "material-report",
+      "title": "Materials Usage Report",
+      "path": "templates/enterprise/v2/material-report.tex",
+      "group": "site_records",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 12,
+      "type_id": "purchase-order",
+      "title": "Purchase Order",
+      "path": "templates/enterprise/v2/purchase-order.tex",
+      "group": "commercial",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 13,
+      "type_id": "receipt-voucher",
+      "title": "Receipt Voucher",
+      "path": "templates/enterprise/v2/receipt-voucher.tex",
+      "group": "financial",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    },
+    {
+      "position": 14,
+      "type_id": "payment-slip",
+      "title": "Payment Advice / Slip",
+      "path": "templates/enterprise/v2/payment-slip.tex",
+      "group": "financial",
+      "decision": "KEEP_CANONICAL_DRAFT_PENDING_HUMAN_QA",
+      "production_approved": false
+    }
+  ],
+  "overlaps": [
+    {
+      "id": "legacy-client-works-contract",
+      "family": "client-contract",
+      "path": "templates/enterprise/works_contract.tex",
+      "classification": "SUPERSEDED_V1_PROTOTYPE",
+      "recommended_disposition": "RETAIN_AS_READONLY_HISTORY",
+      "decision": "PENDING_USER_QA"
+    },
+    {
+      "id": "legacy-salary-contract",
+      "family": "salary-contract",
+      "path": "templates/enterprise/salary_contract.tex",
+      "classification": "SUPERSEDED_V1_PROTOTYPE",
+      "recommended_disposition": "RETAIN_AS_READONLY_HISTORY",
+      "decision": "PENDING_USER_QA"
+    },
+    {
+      "id": "legacy-experience-letter",
+      "family": "experience-letter",
+      "path": "templates/enterprise/experience_letter.tex",
+      "classification": "SUPERSEDED_V1_PROTOTYPE",
+      "recommended_disposition": "RETAIN_AS_READONLY_HISTORY",
+      "decision": "PENDING_USER_QA"
+    },
+    {
+      "id": "short-form-client-contract",
+      "family": "client-contract",
+      "path": "templates/enterprise/v2/client-contract-simple-lumpsum.tex",
+      "classification": "SHORT_FORM_VARIANT_ON_MAIN",
+      "recommended_disposition": "REGISTER_AS_VARIANT_NOT_NEW_TYPE",
+      "decision": "PENDING_USER_QA"
+    },
+    {
+      "id": "branded-client-contract",
+      "family": "client-contract",
+      "path": "templates/enterprise/v2/client-contract-simple-lumpsum-letterhead.tex",
+      "branch": "work/enterprise-radha-roka-v0.6-approved-payment-scope-20261011",
+      "classification": "BRANDED_VARIANT_ON_PROJECT_WORK_BRANCH_ONLY",
+      "recommended_disposition": "RETAIN_PRIVATE_PROJECT_INSTANCE_AND_REVIEW_GENERIC_STYLE_BEFORE_MAIN_PROMOTION",
+      "decision": "PENDING_USER_QA"
+    }
+  ],
+  "shared_components_not_standalone": [
+    "templates/enterprise/v2/enterprise-shared.sty",
+    "templates/enterprise/v2/partials/payment-schedule.tex",
+    "controls/document-engineering/tower.json",
+    "registry/enterprise-document-types.v2.json"
+  ],
+  "rules": [
+    "Only canonical type IDs can be selected for routine document types",
+    "Layout variants cannot be promoted to independent document types without user QA",
+    "Historical `.tex` sources and source ZIP are immutable references, never silently deleted",
+    "No automated equivalence claim solely based on overlapping filenames or similar purposes",
+    "Identical-text duplicates require a separate exact content hash test before deduplication"
+  ],
+  "user_qa_fields": [
+    "KEEP",
+    "VARIANT",
+    "MERGE_WITH_CANONICAL",
+    "ARCHIVE_CODE_REFERENCE",
+    "NEEDS_FURTHER_REVIEW"
+  ],
+  "review_status": "AWAITING_USER_QA__ZERO_DELETE"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "A9-ACADEMIC-FAMILY-001",
+  "family_id": "academic",
+  "status": "FAMILY_ROUTER_ACTIVE__SCIENTIFIC_REVIEW_EXTERNAL",
+  "scope": "Research writing, thesis infrastructure, scientific papers, researcher workspaces, discussions, presentations and academic web modules",
+  "website_route": "academic-writing/",
+  "governance": "GITHUB_VERSIONED_CONTROLS__PRIVATE_RESEARCH_EVIDENCE_IN_DRIVE",
+  "children": [
+    {
+      "id": "academic_latex",
+      "canonical_control": "controls/latex/tower.json",
+      "role": "University manuscript formatting, provenance, semantic science validation"
+    },
+    {
+      "id": "academic_presentation",
+      "canonical_control": "controls/presentation/tower.json",
+      "role": "Research presentation generation and evidence/visual QA"
+    },
+    {
+      "id": "research_discussion",
+      "canonical_control": "controls/discussion.control.json",
+      "role": "Research discussion and source provenance"
+    },
+    {
+      "id": "research_websites",
+      "canonical_control": "controls/website.control.json",
+      "role": "Optional researcher website modules"
+    },
+    {
+      "id": "research_governance",
+      "canonical_control": "controls/repository.control.json",
+      "role": "Research branch and repository rules"
+    }
+  ],
+  "disallowed_as_child": [
+    "controls/document-engineering/tower.json",
+    "templates/enterprise/v2"
+  ],
+  "semantic_rules": [
+    "Academic proof and scientific truth require independently verified evidence; fluent text or a passing build does not establish correctness",
+    "Never infer findings, author credentials, university approval or supervisor approval",
+    "Thesis formatting and presentation production retain their existing separate specialized authorities",
+    "Researcher source/evidence remains private and scoped to the registered researcher",
+    "Do not import contract clauses, company branding or enterprise payment logic into academic manuscript controls"
+  ],
+  "unified_release_claim": "NO_AUTO_APPROVAL",
+  "legacy_url_policy": "RETAIN_ALL_EXISTING_RESEARCH_URLS_UNCHANGED",
+  "versioning": "GIT_EXACT_COMMIT_AND_VERIFIED_DRIVE_REFS"
+}

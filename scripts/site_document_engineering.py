@@ -22,15 +22,13 @@ def build_document_pages(out):
       '<div class="node">Verify private facts</div><div class="arrow">→</div><div class="node">Generate TeX</div><div class="arrow">→</div>'
       '<div class="node">Compile & review</div><div class="arrow">→</div><div class="node">Approve & archive in Drive</div></div>'
       '<p><a href="'+esc(REPO_URL+'/blob/main/docs/DOCUMENT_ENGINEERING.md')+'">Operating instructions →</a></p></section></main>')
+    enterprise=enterprise.replace('</main>',
+      '<section class="section"><h2>Template normalization QA</h2>'
+      '<p>Fourteen canonical draft types and five overlapping/historical sources are inventoried for your review. '
+      'No files have been removed.</p>'
+      '<p><a href="template-audit/index.html">Review template collisions and variants →</a></p></section></main>')
     write(out,"enterprise-documents/index.html",shell("Enterprise Documents",enterprise,1))
-    academic=('<main class="wrap hero"><div class="eyebrow">A9 · Document Engineering</div><h1>Academic Writing</h1>'
-      '<p class="lead">Thesis, manuscripts, journal papers, BibTeX, research reports and university publication standards.</p>'
-      '<section class="section"><h2>Existing shared LaTeX authority</h2>'
-      '<div class="grid"><article class="card"><h3>Format tower</h3><a href="'+esc(REPO_URL+'/blob/main/controls/latex/tower.json')+'">Shared LaTeX controls →</a></article>'
-      '<article class="card"><h3>Research library</h3><a href="../researchers/index.html">Researcher workspaces →</a></article>'
-      '<article class="card"><h3>Production build procedure</h3><a href="'+esc(REPO_URL+'/blob/main/docs/UNIVERSAL_THESIS_BUILD_READ_FIRST_20261009.md')+'">Compile guide →</a></article></div></section>'
-      '<section class="section"><h2>Authority boundary</h2><p>University rules, supervisor approval, originals and generated PDFs are governed by the academic owner, not the enterprise contract templates.</p></section></main>')
-    write(out,"academic-writing/index.html",shell("Academic Writing",academic,1))
+
 
     tower=load(Path("controls/document-engineering/tower.json"))
     typed=load(Path("registry/enterprise-document-types.v2.json"))["types"]
@@ -61,3 +59,32 @@ def build_document_pages(out):
       '</section></main>')
     write(out,"enterprise-documents/control-tower/index.html",shell("Enterprise Document Control Tower",body,2))
 
+
+    audit=load(Path("registry/enterprise-template-normalization-audit.v0.1.json"))
+    rows="".join(
+        '<tr><td>'+str(t["position"])+'</td><td>'+esc(t["title"])+'</td>'
+        '<td><code>'+esc(t["type_id"])+'</code></td>'
+        '<td><a href="'+esc(REPO_URL+'/blob/main/'+t["path"])+'">Source</a></td>'
+        '<td>'+esc(t["decision"])+'</td></tr>' for t in audit["canonical"])
+    extras="".join(
+        '<tr><td>'+esc(x["id"])+'</td><td>'+esc(x["family"])+'</td>'
+        '<td><a href="'+esc(REPO_URL+'/blob/'+x.get("branch","main")+'/'+x["path"])+'">Inspect</a></td>'
+        '<td>'+esc(x["classification"])+'</td><td>'+esc(x["decision"])+'</td></tr>'
+        for x in audit["overlaps"])
+    audit_body=(
+        '<main class="wrap hero"><div class="eyebrow">Enterprise Documents · Human QA</div>'
+        '<h1>Template normalization inventory</h1>'
+        '<p class="lead">Fourteen callable document types, three legacy prototypes and two client-contract variants.'
+        ' Related filenames are not evidence of identical source. Nothing has been deleted or merged.</p>'
+        '<section class="section"><h2>Canonical draft types (14)</h2>'
+        '<div class="table-scroll"><table><thead><tr><th>No.</th><th>Type</th><th>ID</th><th>Source</th><th>Review state</th></tr></thead>'
+        '<tbody>'+rows+'</tbody></table></div></section>'
+        '<section class="section"><h2>Overlaps and variants to QA (5)</h2>'
+        '<div class="table-scroll"><table><thead><tr><th>Candidate</th><th>Family</th><th>Source</th><th>Classification</th><th>Review state</th></tr></thead>'
+        '<tbody>'+extras+'</tbody></table></div></section>'
+        '<section class="section"><h2>Before any cleanup</h2>'
+        '<p>Compare semantics, required fields, rendering, data security and legal approvals. Retain historical Git SHAs, '
+        'original Overleaf sources and private project revisions. Approve canonical IDs and variant names individually.</p>'
+        '<p><a href="'+esc(REPO_URL+'/blob/main/registry/enterprise-template-normalization-audit.v0.1.json')+
+        '">Open machine-readable audit →</a></p></section></main>')
+    write(out,"enterprise-documents/template-audit/index.html",shell("Enterprise Template QA",audit_body,2))

@@ -1,0 +1,26 @@
+{
+  "job_id": "EXAMPLE-ENT-0001",
+  "family_id": "enterprise",
+  "task_type_id": "client-contract",
+  "mode": "VALIDATE",
+  "engine_commit": "0000000000000000000000000000000000000000",
+  "sources": [
+    {
+      "authority": "GIT_PUBLIC",
+      "source_id": "EXAMPLE_SOURCE",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "revision": "EXAMPLE_ONLY"
+    }
+  ],
+  "output_kinds": [
+    "QA_REPORT"
+  ],
+  "inputs": {
+    "fixture_only": true
+  },
+  "authorized_actions": [
+    "READ"
+  ],
+  "approval_ref": null,
+  "runtime_digest": null
+}

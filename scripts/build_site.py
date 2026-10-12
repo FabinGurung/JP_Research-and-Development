@@ -8,6 +8,7 @@ from site_core import ROOT, REPO_URL, SITE_URL, load, esc, branch_url, drive_url
 from site_pages import build_home, render_start_here, render_owner_prompt, render_owner_directory
 from site_search import render_search
 from site_document_engineering import build_document_pages
+from site_family_portal import build_family_home, build_academic_portal
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--out",default="dist"); args=ap.parse_args()
@@ -44,7 +45,7 @@ def main():
     for site_name in ("methodology-demo","hydropower-data-model","hydropower-data-schema","hydropower-data-tables","hydropower-data-graph","hydropower-nepal-map"):
         src=legacy/site_name
         if src.is_dir(): shutil.copytree(src,out/site_name,dirs_exist_ok=True)
-    home=build_home(researchers,folder_roles)
+    home=build_family_home(researchers,folder_roles)
     render_start_here(out)
     roadmap=load(Path("registry/roadmap.json"))
     def stage_cards(items,kind):
@@ -496,6 +497,7 @@ def main():
     shutil.copy2(ROOT/"registry/researcher-folder-roles.json",data_dir/"researcher-folder-roles.json")
     shutil.copy2(ROOT/"registry/latex-build-profiles.json",data_dir/"latex-build-profiles.json")
     build_document_pages(out)
+    build_academic_portal(out)
     search_index=render_search(out,researchers,branch_inventory,websites)
     print(f"built {out} researchers={len(researchers)} search_records={len(search_index['entries'])}")
 
