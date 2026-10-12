@@ -46,7 +46,7 @@ def build_academic_portal(out):
         cards = "".join(
             '<article class="card"><h3>' + esc(item["title"]) + '</h3>'
             '<p>' + esc(item["description"]) + '</p>'
-            '<p><a href="../' + esc(item["route"]) + '/index.html">Open workspace →</a></p></article>'
+            '<p><a href="../' + esc(item["route"]) + '/' + esc(item.get("file", "index.html")) + '">Open workspace →</a></p></article>'
             for item in group["items"]
         )
         groups.append('<section class="section"><h2>' + esc(group["group"]) + '</h2>'
