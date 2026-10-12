@@ -21,6 +21,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/validate_repo.py
+      - run: python scripts/validate_document_families.py
+      - run: python scripts/ai_runtime/validate_job.py --self-test
       - run: python scripts/test_site_links.py
       - run: python scripts/build_site.py --out dist
       - run: python scripts/validate_repo.py --site dist
