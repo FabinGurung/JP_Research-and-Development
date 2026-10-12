@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "A9-AI-FIRST-REPRODUCIBLE-JOBS-001",
+  "status": "PROTOCOL_AND_LOCAL_VALIDATOR_IMPLEMENTED__PRIVATE_EXECUTION_BRIDGE_PENDING",
+  "mission": "AI acts as the user-facing orchestrator; independently versioned deterministic tools validate facts, render artifacts and prove source lineage",
+  "human_interface": "Natural language request and explicit approval only; no routine manual spreadsheet/LaTeX/software operation expected",
+  "computer_interface": "Versioned schemas, source digest manifests, stable PK/FK identities, pure-source transformers, local/private authorized executors, GitHub actions for public-safe fixtures, provider readback",
+  "job_flow": [
+    "CLASSIFY_FAMILY",
+    "RESOLVE_AUTHORITY",
+    "READ_LIVE_PRIVATE_SOURCES",
+    "FREEZE_REFERENCES_HASHES_AND_TOOLCHAIN",
+    "PARSE_TYPED_INPUT",
+    "VALIDATE_SCHEMA_UNITS_SEMANTIC_CONSTRAINTS",
+    "RENDER_WITH_DETERMINISTIC_TOOL",
+    "INDEPENDENT_QA_AND_SOURCE_COVERAGE",
+    "REQUEST_HUMAN_APPROVAL_WHEN_REQUIRED",
+    "RELEASE_WITH_PROVIDER_READBACK_AND_AUDIT"
+  ],
+  "never_do": [
+    "Trust chat memory or generated wording as source authority",
+    "Invent engineering quantities, contractual rates, scientific findings, signatures or approvals",
+    "Mark success from compiler-only validation",
+    "Upload private company/research inputs to public GitHub Actions",
+    "Treat two equal prompts as identical inputs when live source revisions differ",
+    "Delete legacy originals or uncontrolled normalized copies",
+    "Retry file ingestion blindly after an ambiguous tool timeout"
+  ],
+  "output_contract": {
+    "required": [
+      "job_id",
+      "family_id",
+      "status",
+      "source_refs",
+      "input_fingerprint",
+      "engine_commit",
+      "qa_gates",
+      "output_refs",
+      "blockers"
+    ],
+    "valid_status": [
+      "DRAFT",
+      "QA_PASS_NOT_APPROVED",
+      "HOLD",
+      "FAILED",
+      "APPROVED_RELEASED"
+    ]
+  },
+  "determinism": {
+    "guarantee_scope": "IDENTICAL_CANONICAL_INPUT_BYTES_AND_PINNED_SOURCE_REFS_PRODUCE_IDENTICAL_INPUT_FINGERPRINT",
+    "dependencies": [
+      "pinned source digests",
+      "pinned engine Git SHA",
+      "pinned compiler/container digest",
+      "ordered data and stable locale/timezone",
+      "canonical JSON serialization",
+      "fixed output naming"
+    ],
+    "limits": "Identical natural-language prompts, unpinned online data, AI interpretation, and generated PDF metadata cannot be guaranteed bitwise identical. Exact 100/100 correctness is not scientifically guaranteed.",
+    "fail_closed": "Missing/changed evidence, missing approvals or runtime mismatch -> HOLD or FAILED; never invent substitutions."
+  },
+  "boundary": {
+    "enterprise": "controls/document-engineering/tower.json",
+    "academic": "controls/academic-writing/tower.json",
+    "shared_router": "controls/family-router.v0.1.json"
+  },
+  "execution_bridge": {
+    "status": "NOT_IMPLEMENTED",
+    "note": "A real private authenticated job runner is needed to fetch company/private academic records and perform authorized writes. The website is not yet a full document-builder app."
+  }
+}

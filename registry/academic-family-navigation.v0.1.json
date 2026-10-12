@@ -1,0 +1,118 @@
+{
+  "version": "0.1.0",
+  "family_id": "academic",
+  "preserve_legacy_urls": true,
+  "groups": [
+    {
+      "group": "Research workspaces",
+      "items": [
+        {
+          "title": "Researchers",
+          "route": "researchers",
+          "description": "Individual research workspaces and source records"
+        },
+        {
+          "title": "Thesis infrastructure",
+          "route": "thesis-infrastructure",
+          "description": "Folder roles, admitted manuscript sources and university controls"
+        },
+        {
+          "title": "Researcher handovers",
+          "route": "owner-prompts",
+          "description": "Copy-only approved handovers for each research owner"
+        },
+        {
+          "title": "Academic workspace",
+          "route": "workspace",
+          "description": "Researcher working areas and tools"
+        }
+      ]
+    },
+    {
+      "group": "Academic writing and controls",
+      "items": [
+        {
+          "title": "Academic family control",
+          "route": "academic-writing/control-tower",
+          "description": "Academic authority boundary and child control towers"
+        },
+        {
+          "title": "LaTeX thesis control",
+          "route": "controls/latex",
+          "description": "Canonical manuscript typesetting and semantic source rules"
+        },
+        {
+          "title": "Academic controls",
+          "route": "controls",
+          "description": "Discussion, LaTeX, presentation and research website controls"
+        },
+        {
+          "title": "Research search library",
+          "route": "search",
+          "description": "Research-only public-safe resource and history search"
+        }
+      ]
+    },
+    {
+      "group": "Guidance and quality",
+      "items": [
+        {
+          "title": "Start here",
+          "route": "start-here",
+          "description": "Guided research operating instructions"
+        },
+        {
+          "title": "Open research debts",
+          "route": "debts",
+          "description": "Scientific and documentation holds, not automatic completion"
+        },
+        {
+          "title": "Research roadmap",
+          "route": "roadmap",
+          "description": "Research implementation roadmap and outstanding QA"
+        },
+        {
+          "title": "Git branches and history",
+          "route": "branches",
+          "description": "Version history and observed branch inventory"
+        },
+        {
+          "title": "Technology",
+          "route": "technology",
+          "description": "Research tools and implementation technology"
+        },
+        {
+          "title": "How to",
+          "route": "how-to",
+          "description": "Research workflow and operating guidance"
+        }
+      ]
+    },
+    {
+      "group": "Research demos and modules",
+      "items": [
+        {
+          "title": "Methodology demo",
+          "route": "methodology-demo",
+          "description": "Historical AEC method demonstration"
+        },
+        {
+          "title": "Hydropower data model",
+          "route": "hydropower-data-model",
+          "description": "Historical data modelling demo",
+          "file": "model.json"
+        },
+        {
+          "title": "Hydropower data graph",
+          "route": "hydropower-data-graph",
+          "description": "Historical data graph demo"
+        },
+        {
+          "title": "Hydropower Nepal map",
+          "route": "hydropower-nepal-map",
+          "description": "Historical hydropower geography demo"
+        }
+      ]
+    }
+  ]
+}

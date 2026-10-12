@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "router_id": "A9-RND-TWO-FAMILY-001",
+  "primary_navigation": [
+    "home",
+    "enterprise-documents",
+    "academic-writing"
+  ],
+  "families": {
+    "enterprise": {
+      "control": "controls/document-engineering/tower.json",
+      "type_registry": "registry/enterprise-document-types.v2.json",
+      "audit": "registry/enterprise-template-normalization-audit.v0.1.json",
+      "private_originals": "A9 company/project Drive",
+      "url": "enterprise-documents/",
+      "release": "BUSINESS_DOMAIN_HUMAN_APPROVAL_REQUIRED"
+    },
+    "academic": {
+      "control": "controls/academic-writing/tower.json",
+      "navigation": "registry/academic-family-navigation.v0.1.json",
+      "private_originals": "Researcher/university Drive",
+      "url": "academic-writing/",
+      "release": "SCIENTIFIC_AND_INSTITUTIONAL_APPROVAL_REQUIRED"
+    }
+  },
+  "safe_route_rules": [
+    "Classify task by intended document/evidence and owner, not only title or phrase",
+    "Enterprise and academic family controls must be separate and cannot inherit clauses from one another",
+    "Shared low-level validation and rendering utilities may be reused without copying business/academic semantics",
+    "Ambiguous family authority is a HOLD requesting the owner to choose",
+    "All legacy academic URLs remain valid and discoverable through Academic Writing",
+    "Website is an index and visualization; private records and authorized compute perform real work"
+  ],
+  "enforcement_status": "SOURCE_VALIDATION_AND_SITE_ROUTING_ONLY__NOT_AUTOMATED_CLASSIFIER"
+}

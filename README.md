@@ -2,6 +2,16 @@
 
 # JP Research & Development
 
+## Two-family website architecture (2026-10-12)
+
+The top-level portal has three entries only: **Home**, [Enterprise Documents](https://fabingurung.github.io/JP_Research-and-Development/enterprise-documents/) and [Academic Writing](https://fabingurung.github.io/JP_Research-and-Development/academic-writing/). Researcher workspaces, thesis infrastructure, academic LaTeX and presentations, scientific controls, handovers, history, roadmaps and research demos are catalogued under Academic Writing; original URLs remain stable.
+
+The family controls are independent: `controls/document-engineering/tower.json` (enterprise), `controls/academic-writing/tower.json` (academic), and `controls/family-router.v0.1.json` (routing). The existing academic LaTeX and presentation authorities remain unchanged. The [14-template QA inventory](registry/enterprise-template-normalization-audit.v0.1.json) preserves three old prototypes and two layout variants without deletion.
+
+[AI-first execution protocol](docs/AI_FIRST_FAMILY_ROUTING_READ_FIRST.md) defines typed inputs, immutable source refs, pinned engine versions, fail-closed QA, artifact readback and explicit human approval. Same canonical input produces the same input fingerprint; correctness and private execution are **not guaranteed** without evidence and authorized runtime.
+
+
+
 Code-first research control portal, now hosting unified Fabin AEC and Hydropower research landing pages and restored public-safe legacy demos.
 
 ## Current field

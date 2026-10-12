@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A9 AI-first canonical job request v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "job_id",
+    "family_id",
+    "task_type_id",
+    "mode",
+    "engine_commit",
+    "sources",
+    "output_kinds",
+    "inputs"
+  ],
+  "properties": {
+    "job_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$"
+    },
+    "family_id": {
+      "enum": [
+        "enterprise",
+        "academic"
+      ]
+    },
+    "task_type_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,63}$"
+    },
+    "mode": {
+      "enum": [
+        "VALIDATE",
+        "DRAFT",
+        "EXECUTE"
+      ]
+    },
+    "engine_commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "authority",
+          "source_id",
+          "sha256",
+          "revision"
+        ],
+        "properties": {
+          "authority": {
+            "enum": [
+              "DRIVE_PRIVATE",
+              "GIT_PUBLIC",
+              "AUTHORIZED_OTHER"
+            ]
+          },
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "revision": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "output_kinds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "authorized_actions": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "READ",
+          "DRAFT",
+          "WRITE_PRIVATE",
+          "RELEASE"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "approval_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "runtime_digest": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "EXECUTE"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "sources": {
+            "minItems": 1
+          }
+        },
+        "required": [
+          "runtime_digest",
+          "approval_ref"
+        ]
+      }
+    }
+  ]
+}

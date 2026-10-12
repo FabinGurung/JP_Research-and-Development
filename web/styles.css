@@ -394,3 +394,9 @@ h2 {letter-spacing:-.025em}
  :root.js-enabled #site-nav-links a{padding:4px 0}
  .nav{align-items:center}
 }
+
+/* Two-family portal: no extra top-level research tabs. */
+.family-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.family-grid .card { min-height: 190px; }
+.table-scroll { width: 100%; overflow-x: auto; }
+@media (max-width: 740px) { .family-grid { grid-template-columns: 1fr; } }
