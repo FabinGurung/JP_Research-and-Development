@@ -1,0 +1,61 @@
+name: A9 Enterprise v3 - Compile 14 canonical candidate PDFs
+on:
+  push:
+    branches: [feature/enterprise-v3-canonical-14-qa-20261012]
+    paths:
+      - 'templates/enterprise/v3/**'
+      - 'registry/enterprise-document-v3-candidates.json'
+      - 'examples/document-engineering/v3/**'
+      - 'scripts/document_engineering/engine_v3.py'
+      - '.github/workflows/enterprise-v3-preview.yml'
+  workflow_dispatch:
+jobs:
+  generate-demo-pdfs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check fourteen fields and source isolation
+        run: |
+          python3 -m py_compile scripts/document_engineering/engine_v3.py
+          python3 scripts/document_engineering/engine_v3.py --self-test
+      - name: Install TeX compiler, PDF quality inspection
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends latexmk texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended poppler-utils
+      - name: Compile all 14 fictional QA samples
+        run: |
+          python3 scripts/document_engineering/engine_v3.py --demo-all --out /tmp/a9-v3 --compile
+          test "$(find /tmp/a9-v3 -name '*.pdf' | wc -l)" -eq 14
+      - name: Extract and verify readable PDF content
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess
+          root=Path("/tmp/a9-v3")
+          pdfs=sorted(root.glob("*/*.pdf"))
+          assert len(pdfs)==14
+          report=["# A9 v3 fictional PDF preflight","All outputs are fictional QA samples, not approved documents.",""]
+          for p in pdfs:
+              meta=subprocess.check_output(["pdfinfo",str(p)],text=True)
+              pages=next(int(l.split(":",1)[1]) for l in meta.splitlines() if l.startswith("Pages:"))
+              text=subprocess.check_output(["pdftotext","-layout",str(p),"-"],text=True)
+              assert "FICTIONAL SAMPLE" in text or "FICTIONAL" in text, p.name
+              assert "NOT FOR SIGNATURE" in text, p.name
+              assert len(text.strip())>200
+              report.append(f"- {p.parent.name}: {pages} page(s), {len(text)} chars, PDF technical PASS")
+          (root/"README-QA.md").write_text("\n".join(report)+"\n")
+          print("\n".join(report))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: enterprise-v3-14-pdfs-fictitious-qa
+          path: |
+            /tmp/a9-v3/**/*.pdf
+            /tmp/a9-v3/**/*.qa.json
+            /tmp/a9-v3/README-QA.md
+          retention-days: 15
