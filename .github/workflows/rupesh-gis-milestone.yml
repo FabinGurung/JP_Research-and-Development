@@ -1,0 +1,44 @@
+name: Rupesh GIS governed candidate milestone
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/**'
+      - '.github/workflows/rupesh-gis-milestone.yml'
+permissions:
+  contents: write
+concurrency:
+  group: rupesh-gis-v0-1-4-milestone
+  cancel-in-progress: false
+jobs:
+  preview-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify candidate milestone without private research data
+        run: python researchers/rupesh-man-pradhan/gis/source_snapshot.py
+      - name: Annotated tag and GitHub prerelease after validation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GIT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          TAG='rupesh-gis/v0.1.4-preview'
+          if git ls-remote --exit-code --tags origin "refs/tags/${TAG}" >/dev/null; then
+            echo "Tag already exists; never change immutable historical milestones"
+            gh release view "$TAG" >/dev/null && exit 0
+            echo "Existing tag has no release; stop for reconciliation"
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a "$TAG" "$GIT_SHA" -m 'Rupesh GIS V01.4 preview provenance milestone; external map tiles unverified'
+          git push origin "refs/tags/${TAG}"
+          gh release create "$TAG" --verify-tag --prerelease \
+            --title 'Rupesh GIS V01.4 — Preview QA milestone (imagery unverified)' \
+            --notes-file researchers/rupesh-man-pradhan/gis/RELEASE_NOTES.md
