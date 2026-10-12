@@ -1,0 +1,19 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{enterprise-v3}
+\begin{document}
+\EnterpriseHeading{Material Receipt and Usage Report}{ {{document_status}} }
+\EnterpriseMeta{Reference}{ {{document_ref}} }
+\EnterpriseMeta{Organization ID}{ {{organization_id}} }
+\EnterpriseMeta{Issue date}{ {{issue_date}} }
+\EnterpriseSection{Report Identity}
+\EnterpriseField{Project Identifier}{ {{project_identifier}} }
+\EnterpriseField{Report Period}{ {{report_period}} }
+\EnterpriseField{Site}{ {{site}} }
+\EnterpriseSection{Transaction Source Records}
+\EnterpriseField{Receipts Reference}{ {{receipts_reference}} }
+\EnterpriseField{Usage Reference}{ {{usage_reference}} }
+{{document_table}}
+\EnterpriseSection{Checking}
+\EnterpriseField{Checked By}{ {{checked_by}} }
+\EnterpriseWarning{DRAFT SAMPLE - This material demonstrates layout only. Parties, amounts, eligibility, specifications, workmanship and approval must be independently verified before any actual issue.}
+\end{document}

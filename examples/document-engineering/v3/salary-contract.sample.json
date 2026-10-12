@@ -1,0 +1,18 @@
+{
+  "template_id": "salary-contract",
+  "fixture_only": true,
+  "fields": {
+    "document_ref": "DEMO-SALARY-001",
+    "organization_id": "DEMO-ORG-001",
+    "issue_date": "2026-10-12",
+    "employer": "Sample Employers Pvt. Ltd. (fictional)",
+    "employee": "Example Worker (fictional)",
+    "role": "Site Coordinator (illustrative)",
+    "effective_date": "2026-10-12",
+    "gross_pay": "Illustrative only: NPR 35,000 (unverified demonstration amount).",
+    "pay_period": "Monthly payroll cycle (fictional sample).",
+    "benefits": "Illustrative travel and meal allowances; not an enforceable offer.",
+    "statutory_deductions": "Tax and other required deductions are not calculated in this sample.",
+    "signatures": "Owner and contractor: signature / date lines are intentionally blank."
+  }
+}
