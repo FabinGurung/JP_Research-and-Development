@@ -41,9 +41,27 @@ async function main() {
    await page.goto(base,{waitUntil:"networkidle"});
    await page.locator("[data-winged-book]").waitFor();
    assert.equal(await page.locator("[data-motion-toggle]").count(),1);
-   assert.ok((await page.locator("h1").first().innerText()).includes("Where curiosity"));
+   assert.ok((await page.locator("h1").first().innerText()).includes("One workspace."));
+   assert.equal(await page.locator("#site-nav-links a").count(),3);
+   assert.equal(await page.locator('a[href="academic-writing/index.html"]').count()>=1,true);
+   assert.equal(await page.locator('a[href="enterprise-documents/index.html"]').count()>=1,true);
    await assertNoOverflow(page,"desktop");
    await page.screenshot({path:path.join(out,"desktop-home.png"),fullPage:true,animations:"disabled"});
+  });
+  await check("two_family_research_and_template_audit",async()=>{
+   await page.goto(base+"academic-writing/",{waitUntil:"networkidle"});
+   assert.ok((await page.locator("h1").innerText()).includes("Research, theses"));
+   assert.ok(await page.getByText("Thesis infrastructure",{exact:true}).count()>=1);
+   assert.ok(await page.locator('a[href="../researchers/index.html"]').count()>=1);
+   await assertNoOverflow(page,"academic writing");
+   await page.goto(base+"academic-writing/control-tower/",{waitUntil:"networkidle"});
+   assert.ok((await page.locator("h1").innerText()).includes("Academic Writing Control"));
+   await page.goto(base+"enterprise-documents/template-audit/",{waitUntil:"networkidle"});
+   assert.ok((await page.locator("h1").innerText()).includes("Template normalization"));
+   assert.equal(await page.locator("tbody").first().locator("tr").count(),14);
+   assert.equal(await page.locator("tbody").last().locator("tr").count(),5);
+   await assertNoOverflow(page,"enterprise template audit");
+   await page.goto(base,{waitUntil:"networkidle"});
   });
   await check("desktop_pause_and_resume",async()=>{
    const btn=page.locator("[data-motion-toggle]");
@@ -127,7 +145,7 @@ async function main() {
   mp.on("pageerror",e=>javascriptErrors.push(String(e)));
   await check("mobile_390px_navigation_and_screenshot",async()=>{
    await mp.goto(base,{waitUntil:"networkidle"});
-   assert.ok(await mp.locator("nav a").count()>=6);
+   assert.equal(await mp.locator("#site-nav-links a").count(),3);
    await assertNoOverflow(mp,"mobile homepage");
    await mp.screenshot({path:path.join(out,"mobile-home.png"),fullPage:true,animations:"disabled"});
   });
