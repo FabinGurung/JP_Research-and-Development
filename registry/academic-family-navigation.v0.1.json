@@ -99,7 +99,8 @@
         {
           "title": "Hydropower data model",
           "route": "hydropower-data-model",
-          "description": "Historical data modelling demo"
+          "description": "Historical data modelling demo",
+          "file": "model.json"
         },
         {
           "title": "Hydropower data graph",
