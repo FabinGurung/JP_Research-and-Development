@@ -16,11 +16,16 @@ def sha256(data: bytes) -> str:
 def check_manifest() -> dict:
     m = json.loads(MANIFEST.read_text(encoding="utf-8"))
     assert m["id"] == "RMP-GIS-MILESTONE-20261012-V01_4"
-    assert m["release_tag"] == "rupesh-gis/v0.1.4-preview"
-    assert m["release_class"] == "QA_CANDIDATE_NOT_SCIENTIFIC_APPROVAL"
+    assert m["release_tag"] == "rupesh-gis/v0.1.4-source"
+    assert m["release_class"] == "GIT_SOURCE_MILESTONE_PREVIEW_NO_LIVE_TILE_APPROVAL"
     assert m["counts"] == {"input_records":266,"engineered":150,"non_engineered":116,"pokhara_display":265,"held_outliers":1}
     assert m["qa"]["live_tile_fetch"] == "UNVERIFIED_IN_USER_BROWSER"
-    assert m["source"]["source_only_notebook_git_status"].startswith("NOT_YET_COMMITTED")
+    assert m["source"]["source_only_notebook_git_status"] == "GIT_COMMITTED_OUTPUT_FREE_NOTEBOOK_SOURCE"
+    notebook = BASE / "RMP_GIS_V01_4_SOURCE_ONLY.ipynb"
+    assert notebook.is_file(), "Source-only notebook missing from Git"
+    assert sha256(notebook.read_bytes()) == m["source"]["source_only_notebook_sha256_after_stripping_outputs_and_normalizing_metadata"], "Git notebook hash mismatch"
+    nb = json.loads(notebook.read_text(encoding="utf-8"))
+    assert len(nb["cells"]) == 9 and all(not c.get("outputs") for c in nb["cells"]), "Public source contains execution outputs"
     assert m["privacy"]["raw_coordinate_records_in_public_git"] is False
     for k in ["original_spreadsheet_sha256","notebook_sha256_with_outputs",
               "source_only_notebook_sha256_after_stripping_outputs_and_normalizing_metadata"]:

@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: rupesh-gis-v0-1-4-milestone
+  group: rupesh-gis-v0-1-4-source-milestone
   cancel-in-progress: false
 jobs:
   preview-release:
@@ -28,7 +28,7 @@ jobs:
           GIT_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
-          TAG='rupesh-gis/v0.1.4-preview'
+          TAG='rupesh-gis/v0.1.4-source'
           if git ls-remote --exit-code --tags origin "refs/tags/${TAG}" >/dev/null; then
             echo "Tag already exists; never change immutable historical milestones"
             gh release view "$TAG" >/dev/null && exit 0
@@ -40,5 +40,5 @@ jobs:
           git tag -a "$TAG" "$GIT_SHA" -m 'Rupesh GIS V01.4 preview provenance milestone; external map tiles unverified'
           git push origin "refs/tags/${TAG}"
           gh release create "$TAG" --verify-tag --prerelease \
-            --title 'Rupesh GIS V01.4 — Preview QA milestone (imagery unverified)' \
+            --title 'Rupesh GIS V01.4 — Versioned-source QA milestone (imagery unverified)' \
             --notes-file researchers/rupesh-man-pradhan/gis/RELEASE_NOTES.md

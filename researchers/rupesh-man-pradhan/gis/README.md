@@ -2,7 +2,7 @@
 
 **Repository is public; original survey coordinates, research files, generated map and Colab outputs remain in Google Drive.**
 
-This is the first **Git-governed milestone manifest** for the Rupesh GIS mapping lane. It records the last tested V01.4 implementation by exact provider file ID and SHA-256, without publicly copying any of the 266 building coordinates.
+This is a **Git-governed milestone source package** for the Rupesh GIS mapping lane. It records the last tested V01.4 implementation by exact provider file ID and SHA-256, without publicly copying any of the 266 building coordinates.
 
 ## Verified operational baseline
 
@@ -18,11 +18,11 @@ This is the first **Git-governed milestone manifest** for the Rupesh GIS mapping
 
 Git owns this control, the executable notebook-extraction procedure and changes to release metadata. Google Drive owns the actual source workbook, the output-bearing Colab notebook, generated private map, QA checkpoint, and full scientific context. The stable Drive IDs and source SHA-256 are registered in [milestone.v0.1.4.json](milestone.v0.1.4.json).
 
-**Gap:** the fully runnable, output-stripped notebook has not yet been imported into the public Git source tree. Its verified local sanitized SHA-256 is pinned in the manifest; Git currently contains the source-recovery and verification procedure, **not** a copy of the whole V01.4 mapping implementation. This requires a separate Git source migration after privacy review. Do not say the notebook itself is Git-versioned.
+**Now closed:** the complete runnable, output-stripped V01.4 notebook source is committed as [`RMP_GIS_V01_4_SOURCE_ONLY.ipynb`](RMP_GIS_V01_4_SOURCE_ONLY.ipynb). Its exact SHA-256 is pinned in the manifest and verified by release QA. It contains code, not saved outputs or the private researcher spreadsheet. The original output-bearing execution notebook remains in Drive.
 
 ## Release quality boundary
 
-The version tag `rupesh-gis/v0.1.4-preview`, if created and read back, denotes **repository provenance/QA candidate milestone**, not scientific approval and not a promise that tile servers work. GitHub Releases are project-wide Git snapshots; do not mistake the tag for an isolated researcher-only database.
+The version tag `rupesh-gis/v0.1.4-source`, if created and read back, denotes **repository provenance/QA candidate milestone**, not scientific approval and not a promise that tile servers work. GitHub Releases are project-wide Git snapshots; do not mistake the tag for an isolated researcher-only database.
 
 CI tests the immutable manifest and extractor before tagging. The tag must not be re-pointed or substituted with a new branch. If tag/release cannot be created, the control must report `TAG_WRITE_UNAVAILABLE`, not claim success.
 

@@ -4,8 +4,8 @@
   "researcher": "Rupesh Man Pradhan",
   "researcher_project_root_drive_id": "1DVDvW4kxENqMF-30XP17kG86xD-xkcZ7",
   "code_milestone": "v0.1.4",
-  "release_tag": "rupesh-gis/v0.1.4-preview",
-  "release_class": "QA_CANDIDATE_NOT_SCIENTIFIC_APPROVAL",
+  "release_tag": "rupesh-gis/v0.1.4-source",
+  "release_class": "GIT_SOURCE_MILESTONE_PREVIEW_NO_LIVE_TILE_APPROVAL",
   "status": "COORDINATE_RENDERER_QA_PASS__LIVE_BASEMAP_UNVERIFIED",
   "governance_authority": "controls/git-drive-authority.json",
   "milestone_created": "2026-10-12",
@@ -16,8 +16,9 @@
     "notebook_drive_id": "1xw37A932TR0jeTRyproLTCp5hu74skv4",
     "notebook_sha256_with_outputs": "9b62521d0100aced49e17e2e6caf5e0e488d1268dfb606aa28824b44a0b78484",
     "source_only_notebook_sha256_after_stripping_outputs_and_normalizing_metadata": "61bedcbb7120ad9c1d86ce313608f9538e010b77dcd3b14ba27ab3ead037d6af",
-    "source_only_notebook_git_status": "NOT_YET_COMMITTED_FULL_SOURCE__MANIFEST_AND_EXTRACTOR_ONLY",
-    "source_only_git_migration_gate": "OPEN"
+    "source_only_notebook_git_status": "GIT_COMMITTED_OUTPUT_FREE_NOTEBOOK_SOURCE",
+    "source_only_git_migration_gate": "CLOSED",
+    "source_only_notebook_git_path": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V01_4_SOURCE_ONLY.ipynb"
   },
   "outputs": {
     "map_html_drive_id": "1S2OyAZv_ZSLeXn6W4FR5SPGyjifvmgZ4",
@@ -54,13 +55,13 @@
     "previous_versions": "Drive originals/snapshots retained unchanged",
     "routine_a9_local_main_seq_increment": false,
     "git_pre_post_commit_required": true,
-    "tag_only_after_ci_and_provider_readback": true
+    "tag_only_after_ci_and_provider_readback": true,
+    "previous_preview_tag": "rupesh-gis/v0.1.4-preview"
   },
   "next_gates": [
     "VERIFY_LIVE_BASEMAP_IN_USER_BROWSER",
     "CONFIRM_CRS",
     "REVIEW_WARD33_AND_WARD30",
-    "MIGRATE_COMPLETE_OUTPUT_STRIPPED_NOTEBOOK_SOURCE_INTO_GIT",
     "REVIEW_DRIVE_SHARING",
     "SCIENTIFIC_APPROVAL_SEPARATE"
   ]
