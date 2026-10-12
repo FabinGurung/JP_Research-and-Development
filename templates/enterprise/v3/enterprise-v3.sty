@@ -25,6 +25,8 @@
 }
 \newcommand{\EnterpriseMeta}[2]{\noindent\begin{tabularx}{\linewidth}{@{}>{\bfseries\color{EnterpriseInk}}p{40mm}X@{}}#1 & #2\end{tabularx}\par}
 \newcommand{\EnterpriseSection}[1]{\par\Needspace{4\baselineskip}\vspace{3mm}{\bfseries\color{EnterpriseInk}\large #1}\par\vspace{-1mm}{\color{EnterpriseAccent}\rule{\linewidth}{.5pt}}\par\vspace{1mm}}
-\newcommand{\EnterpriseField}[2]{\par\noindent{\color{EnterpriseInk}\bfseries #1}\par{\color{EnterpriseMuted}#2}\par\vspace{2mm}}
+\newlength{\EnterpriseFieldGap}
+\setlength{\EnterpriseFieldGap}{2mm}
+\newcommand{\EnterpriseField}[2]{\par\noindent{\color{EnterpriseInk}\bfseries #1}\par{\color{EnterpriseMuted}#2}\par\vspace{\EnterpriseFieldGap}}
 \newcommand{\EnterpriseWarning}[1]{\par\vspace{3mm}\noindent\fcolorbox{EnterpriseAccent}{EnterprisePale}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{\footnotesize #1}}\par}
 \newcommand{\EnterpriseSignature}{\par\vspace{4mm}\noindent\begin{tabularx}{\linewidth}{@{}X@{\hspace{14mm}}X@{}}Prepared by: \rule{32mm}{.4pt}&Checked by: \rule{32mm}{.4pt}\\[3mm]Date: \rule{30mm}{.4pt}&Approved by: \rule{30mm}{.4pt}\end{tabularx}}
