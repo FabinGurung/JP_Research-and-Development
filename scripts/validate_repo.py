@@ -323,7 +323,7 @@ if args.site:
     thesis=ROOT/args.site/"thesis-infrastructure/index.html"
     if index.is_file():
         homepage=index.read_text(encoding="utf-8")
-        for text_needed in ("data-winged-book","data-motion-toggle","Where curiosity","assets/motion.js"):
+        for text_needed in ("data-winged-book","data-motion-toggle","One workspace.","enterprise-documents/index.html","academic-writing/index.html","assets/motion.js"):
             if text_needed not in homepage:
                 errors.append("Living library hero missing "+text_needed)
     if thesis.is_file():
