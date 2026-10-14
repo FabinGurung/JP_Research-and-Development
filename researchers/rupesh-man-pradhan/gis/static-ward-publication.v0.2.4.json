@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "edition": "RMP_GIS_V02.4_THESIS_WARD_PUBLICATION_PLATE",
+  "parent": "rupesh-gis/v0.1.4-source",
+  "previous_source_commit": "799f7e2717d400a6d8f4f791d49bd5720b823542",
+  "status": "GIT_SOURCE_AND_DRIVE_FIGURE_REGISTERED__SCIENTIFIC_BOUNDARY_ADMISSION_PENDING",
+  "version_governance": "Git code commits; Google Drive scientific sources and figures; no routine A9 sequence advance",
+  "source": {
+    "git_path": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_4_THESIS_WARD_PLATE.py",
+    "github_blob_sha": "3348903030a1e7d112350a839b3245383f15de3b",
+    "sha256": "167b78fb903423d03aa1a6d505cbb62aed868a4d8662f272decbc0d7d94d1b4f",
+    "drive_id": "1DTdtVOdjbCQdrJ4YeB5LNhJ1UCdyyC8p"
+  },
+  "output_png": {
+    "drive_id": "1eadHA4d5qUb68t8H2n7-ji4226VCzMah",
+    "sha256": "ec285f895bcb28618193e977097e2bcb719d222ea6f0552c2f0480018c33701c",
+    "dimensions_px": [
+      4962,
+      3507
+    ],
+    "dpi": 300
+  },
+  "reproducibility_zip": {
+    "drive_id": "1_qLe5Er9IEqxM2X-Uptktx54YtM2Gn0L",
+    "sha256": "a825e9321a6ffbb3ee24d060bbbb7cee7703a5184cb93e4f965cefadb8d68eec"
+  },
+  "inputs": {
+    "ward_counts": {
+      "name": "RMP_WARD_COUNTS_SPATIAL_VS_RECORDED_v0.2.0.csv",
+      "sha256": "e23259684a339b915087b97ccf8fe97ad3c32718517b09691e03ea84ad97b3ab",
+      "drive_id": "1xVA8wf30x_JGMIqVQNPSJfDdCPgl008I"
+    },
+    "generalized_display_geometry": {
+      "name": "RMP_WARD_DISPLAY_GEOMETRY_CACHE_v0.2.1.json",
+      "sha256": "8c9dfe446c5b307443cc0013ddaf4d34e978f27f7aeab126cbb75a34441b8b8c",
+      "drive_id": "1nwqkZVB1NIl8PCekJodRp1RpPlylkjU6"
+    },
+    "nepal_locator": {
+      "name": "NEPAL_NATURAL_EARTH_110M_LOCATOR.geojson",
+      "sha256": "c29fb5401e8ee884fd65c01ab932e6b936758fabff0104f0021914c1b9c90db2",
+      "source": "Natural Earth 1:110m Admin 0 countries; Nepal subset",
+      "stored_in_reproducibility_zip": true
+    }
+  },
+  "logic": {
+    "source_record_count": 266,
+    "engineered_total": 150,
+    "non_engineered_total": 116,
+    "wards_with_both_categories": 27,
+    "source_label_to_spatial_ward_reassignments": 50,
+    "spatial_ward_governs_counts": true,
+    "ward33_manual_inclusion_count": 1,
+    "individual_points_rendered": false,
+    "projection": "WGS 84 / UTM zone 45N (EPSG:32645)",
+    "fixed_square_side_km": 44.128,
+    "minimum_outward_margin_km": 5,
+    "spatial_joins_recomputed_in_this_edition": false,
+    "ward_geom": "Earlier full-resolution KLL/OSM ward spatial join; simplified from original map solely for visualization",
+    "nepal_inset": "Natural Earth actual country outline; locator extent is approximate"
+  },
+  "governance": {
+    "git_tag_for_this_edition": null,
+    "no_new_a9_local_main_sequence": true,
+    "scientific_admission_pending": [
+      "Current official ward-boundary authority",
+      "Ward 33 input coordinate correction or continued explicit exception",
+      "Researcher figure number/caption signoff"
+    ],
+    "predecessor_versions_preserved": [
+      "V01.4",
+      "V02.0",
+      "V02.1",
+      "V02.2",
+      "V02.3"
+    ]
+  },
+  "google_doc": "https://docs.google.com/document/d/1QWfTPK9TMCKp0tdZjSql3pcgZhiskmMNE8K3R3G9HDM/edit"
+}

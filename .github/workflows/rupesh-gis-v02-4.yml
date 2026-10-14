@@ -1,0 +1,39 @@
+name: Rupesh GIS V02.4 source and manifest verification
+on:
+  push:
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_4_THESIS_WARD_PLATE.py'
+      - 'researchers/rupesh-man-pradhan/gis/static-ward-publication.v0.2.4.json'
+      - 'researchers/rupesh-man-pradhan/gis/README_V02_4_THESIS_PUBLICATION.md'
+      - '.github/workflows/rupesh-gis-v02-4.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Static source compilation and exact manifest agreement
+        run: |
+          python - <<'PY'
+          import ast,hashlib,json,pathlib
+          root=pathlib.Path('researchers/rupesh-man-pradhan/gis')
+          source=root/'RMP_GIS_V02_4_THESIS_WARD_PLATE.py'
+          manifest=json.loads((root/'static-ward-publication.v0.2.4.json').read_text())
+          ast.parse(source.read_text(encoding='utf-8'))
+          actual=hashlib.sha256(source.read_bytes()).hexdigest()
+          assert actual==manifest['source']['sha256'], 'GIS Python source differs from pinned commit manifest'
+          assert manifest['logic']['source_record_count']==266
+          assert manifest['logic']['wards_with_both_categories']==27
+          assert manifest['logic']['source_label_to_spatial_ward_reassignments']==50
+          assert manifest['logic']['spatial_ward_governs_counts']
+          assert manifest['logic']['ward33_manual_inclusion_count']==1
+          assert manifest['output_png']['dpi']==300
+          assert manifest['source']['drive_id'] and manifest['output_png']['drive_id']
+          assert manifest['governance']['no_new_a9_local_main_sequence']
+          print('RMP GIS V02.4 source and manifest PASS (scientific geospatial QA remains separately governed)')
+          PY
