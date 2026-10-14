@@ -56,5 +56,13 @@
     "gis_folder": "1oIxLqgNrHiNq4HoFGoZNhFNfk5NwxdBt",
     "map_folder": "1iAP-wSc4nSqjNW8odXaFg-ymQNNb46zj",
     "source_folder": "1BKX9SteT80KVTJ_Dzv1Cm7NPzy4xSXRI"
+  },
+  "previous_version_archive": {
+    "version": "V02.2",
+    "source_git_path": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_2_PUBLICATION_LAYOUT.py",
+    "source_drive_id": "1Aqm97TP_pofnMv8QM6CUnbUiVy8wB0Ah",
+    "png_drive_id": "1LNSN4FWR5qf78iYnCEsljUV6VM3oI8UA",
+    "receipt_drive_id": "12SZyMoF92zqQEWgBEe1Wg55XCuLA1aq9",
+    "status": "PRESERVED_FOR_ROLLBACK__DO_NOT_DELETE"
   }
 }
