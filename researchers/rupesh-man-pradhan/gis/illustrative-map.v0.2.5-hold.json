@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_id": "RMP-GIS-V02_5-ILLUSTRATIVE-VISUAL-HOLD-20261015",
+  "edition": "V02.5-visual-hold",
+  "release_tag": "rupesh-gis/v0.2.5-visual-hold",
+  "recorded_at_npt": "2026-10-15",
+  "status": "PRESERVED_AS_ILLUSTRATIVE_REFERENCE__NOT_THESIS_VALIDATED",
+  "publication_admitted": false,
+  "scientifically_verified": false,
+  "asset": {
+    "file_name": "REFERENCE_ONLY__RMP_GIS_MAP_VISUAL_DRAFT__UNVERIFIED_POINT_POSITIONS__20261015.png",
+    "google_drive_id": "1OE99djULCvk7UPjnZADrhhCdMRP7GPDh",
+    "drive_url": "https://drive.google.com/file/d/1OE99djULCvk7UPjnZADrhhCdMRP7GPDh/view",
+    "local_content_sha256": "3acee31fd577f2e21a2df5f373c2773cac23b7a1c37b7d6ab4e02d0be48928d1",
+    "local_byte_size": 1849811,
+    "drive_metadata_size_verified": 1849811,
+    "drive_parent_archive_folder_id": "13tEQMvG2lGA3SNWd_WEwrBn6Hsxda-T_",
+    "source_media_class": "GENERATED_RASTER_ILLUSTRATION",
+    "reproduction_source": "NOT_AVAILABLE_AS_DETERMINISTIC_GIS_SOURCE"
+  },
+  "validated_predecessor": {
+    "edition": "V02.4",
+    "git_source_path": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_4_THESIS_WARD_PLATE.py",
+    "manifest_path": "researchers/rupesh-man-pradhan/gis/static-ward-publication.v0.2.4.json",
+    "output_png_drive_id": "1eadHA4d5qUb68t8H2n7-ji4226VCzMah",
+    "status": "REPRODUCIBLE_STATIC_AGGREGATE_FIGURE__SCIENTIFIC_BOUNDARY_APPROVAL_PENDING"
+  },
+  "research_record": {
+    "input_rows": 266,
+    "engineered": 150,
+    "non_engineered": 116,
+    "spatial_rows": 265,
+    "outside_polygon_user_approved_exception": 1,
+    "source_ward_mismatches_to_spatial_polygon": 50,
+    "approved_rule": "SPATIAL_WARD_FOR_POLYGON_ASSIGNMENT",
+    "non_engineered_ok_filter": "NOT_VERIFIED_OR_APPLIED_TO_GENERATED_IMAGE"
+  },
+  "figure_audit": {
+    "point_positions_match_input_coordinates": false,
+    "point_count_matches_266": "NOT_VERIFIED",
+    "strict_non_engineered_ok_scope_applied": false,
+    "ward_polygon_geometry_is_verified": false,
+    "nepal_shapefile_was_used": false,
+    "graticule_is_computationally_generated": false,
+    "scalebar_is_computationally_verified": false,
+    "coordinate_reference_system_proven_in_figure": false,
+    "privacy_and_thesis_readiness": "NOT_APPROVED"
+  },
+  "visual_contents": {
+    "engineered_symbol": "blue triangles (illustrated)",
+    "non_engineered_symbol": "orange circles (illustrated)",
+    "ward_choropleth": "multi-hue ward polygons (illustrated)",
+    "nepal_inset": "illustrated national locator with Pokhara marker",
+    "graticule": "degree-formatted tick labels and guide lines (unverified)",
+    "scalebar": "labeled 5 km (unverified)",
+    "figure_scope": "visual design reference only"
+  },
+  "next_work_required": [
+    "Recover original non-engineered workbook and validate which ward headings carry literal OK marks",
+    "Perform coordinate-based spatial selection directly on authoritative full-resolution ward geometry",
+    "Plot only eligible points in EPSG:32645 without visual redistribution",
+    "Use genuine sourced Nepal administrative shapefile/GeoPackage data, licensed and versioned",
+    "Calculate 5 km square extent, graticule and 5 km scale bar from actual CRS",
+    "Create static high-DPI PNG plus reproducible Python source, private output receipt and metadata",
+    "Only then permit a distinct scientifically reviewed publication milestone"
+  ],
+  "governance": {
+    "github_public_metadata_only": true,
+    "survey_coordinate_rows_in_public_git": false,
+    "no_new_a9_local_main_for_git_version": true,
+    "never_retag_existing_release": true
+  }
+}

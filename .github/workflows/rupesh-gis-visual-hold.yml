@@ -1,0 +1,44 @@
+name: Rupesh GIS V02.5 immutable visual-hold prerelease
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/illustrative-map.v0.2.5-hold.json'
+      - 'researchers/rupesh-man-pradhan/gis/verify_visual_hold.py'
+      - '.github/workflows/rupesh-gis-visual-hold.yml'
+permissions:
+  contents: write
+concurrency:
+  group: rupesh-gis-v0-2-5-visual-hold
+  cancel-in-progress: false
+jobs:
+  preserve-and-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Confirm artwork cannot be mistaken for verified GIS output
+        run: python researchers/rupesh-man-pradhan/gis/verify_visual_hold.py
+      - name: Create immutable annotated archival tag and prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GIT_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          TAG='rupesh-gis/v0.2.5-visual-hold'
+          if git ls-remote --exit-code --tags origin "refs/tags/${TAG}" >/dev/null; then
+            gh release view "$TAG" >/dev/null && exit 0
+            echo "Tag exists but release is missing; stop for reconciliation"
+            exit 1
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a "$TAG" "$GIT_SHA" -m 'Rupesh GIS V02.5: IMAGE ONLY; geospatial positions not verified; not thesis publication'
+          git push origin "refs/tags/${TAG}"
+          gh release create "$TAG" --verify-tag --prerelease \
+            --title 'Rupesh GIS V02.5 — Archival visual HOLD (not thesis GIS)' \
+            --notes-file researchers/rupesh-man-pradhan/gis/RELEASE_NOTES_V02_5_VISUAL_HOLD.md
