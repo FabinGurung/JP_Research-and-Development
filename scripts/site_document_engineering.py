@@ -5,7 +5,7 @@ from site_core import REPO_URL, esc, load, shell, write
 def build_document_pages(out):
     c=load(Path("registry/enterprise-document-catalog.json"))
     current=load(Path("registry/enterprise-document-types.json"))
-    cards="".join('<article class="card"><h3>'+esc(x["title"])+'</h3><p class="muted">Draft source — approval required</p><p><a href="'+esc(REPO_URL+"/blob/main/"+x["path"])+'">View LaTeX →</a></p></article>' for x in current["templates"])
+    cards="".join('<article class="card"><h3>'+esc(x["title"])+'</h3><p class="muted">Approved template layout · actual documents require review</p><p><a href="'+esc(REPO_URL+"/blob/main/"+x["path"])+'">View LaTeX →</a></p></article>' for x in current["templates"])
     categories="".join('<li>'+esc(a)+': '+str(b)+'</li>' for a,b in c["categories"])
     enterprise=('<main class="wrap hero"><div class="eyebrow">A9 · Document Engineering</div><h1>Enterprise Documents</h1>'
       '<p class="lead">Contracts, experience letters, salary agreements, quotations, purchase orders, vouchers, estimates and proposals. '
@@ -25,7 +25,7 @@ def build_document_pages(out):
       '<p><a href="'+esc(REPO_URL+'/blob/main/docs/DOCUMENT_ENGINEERING.md')+'">Operating instructions →</a></p></section></main>')
     enterprise=enterprise.replace('</main>',
       '<section class="section"><h2>Template normalization QA</h2>'
-      '<p>Fourteen canonical draft types and five overlapping/historical sources are inventoried for your review. '
+      '<p>Fourteen v3 template layouts are approved; five older/variant sources remain preserved as historical references. '
       'No files have been removed.</p>'
       '<p><a href="template-audit/index.html">Review template collisions and variants →</a></p></section></main>')
     write(out,"enterprise-documents/index.html",shell("Enterprise Documents",enterprise,1))
@@ -35,8 +35,8 @@ def build_document_pages(out):
     typed=load(Path("registry/enterprise-document-types.json"))["templates"]
     cards2="".join('<article class="card"><h3>'+esc(m["title"])+'</h3>'
       '<p class="muted">Template layout approved · project issuance requires review</p>'
-      '<p><a href="'+esc(REPO_URL+"/blob/main/"+m["control"])+'">Semantic fields and gates →</a> '
-      '· <a href="'+esc(REPO_URL+"/blob/main/"+m["template"])+'">LaTeX source →</a></p></article>'
+      '<p><a href="'+esc(REPO_URL+"/blob/main/controls/document-engineering/types/"+m["id"]+".json")+'">Semantic fields and gates →</a> '
+      '· <a href="'+esc(REPO_URL+"/blob/main/"+m["path"])+'">LaTeX source →</a></p></article>'
       for m in typed)
     gates=tower["release_gates"]
     gatecards="".join('<article class="card"><h3>'+esc(g)+'</h3>'
