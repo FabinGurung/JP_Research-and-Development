@@ -1,0 +1,33 @@
+{
+  "template_id": "vendor-quotation",
+  "fixture_only": true,
+  "fields": {
+    "document_ref": "DEMO-VENDOR-001",
+    "organization_id": "DEMO-ORG-001",
+    "issue_date": "2026-10-12",
+    "vendor": "Illustrative Materials Supplier (fictional)",
+    "customer": "Sample Builders Pvt. Ltd. (fictional)",
+    "quotation_ref": "DEMO-QUOTE-001",
+    "valid_until": "2026-11-30",
+    "specification": "Illustrative supplies: ordinary cement, aggregate and galvanized binding wire.",
+    "payment_terms": "Illustrative payment milestones require written certification and approved project-specific rates.",
+    "tax_terms": "VAT and statutory treatment to be confirmed; illustrative figures do not include actual taxes.",
+    "signatory": "Authorized signatory - blank pending review."
+  },
+  "table_rows": [
+    {
+      "description": "Ordinary Portland Cement",
+      "quantity": "10",
+      "unit": "bag",
+      "amount": "9,000.00",
+      "source_ref": "FICTIONAL-DEMO-NOT-VALID"
+    },
+    {
+      "description": "Binding Wire",
+      "quantity": "4",
+      "unit": "kg",
+      "amount": "440.00",
+      "source_ref": "FICTIONAL-DEMO-NOT-VALID"
+    }
+  ]
+}

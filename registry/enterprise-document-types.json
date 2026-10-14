@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0.0",
+  "version": "3.0.0",
+  "registry_id": "A9-ENTERPRISE-SINGLE-CANONICAL-TEMPLATE-REGISTRY",
+  "state": "ACTIVE_FOR_DRAFT_GENERATION__HUMAN_RELEASE_GATES_STILL_APPLY",
+  "selected_on": "2026-10-14",
+  "approval_scope": "USER_APPROVED_14_REVIEW_PDF_LAYOUTS_NOT_INDIVIDUAL_CLIENT_FACTS",
+  "template_count": 14,
+  "style": "templates/enterprise/v3/enterprise-v3.sty",
+  "style_git_blob_sha": "e4045844479365090b349f6f0451720fa47a1e07",
+  "renderer": "scripts/document_engineering/engine_v3.py",
+  "resolver": "scripts/document_engineering/resolve_template.py",
+  "historical_registry": "registry/enterprise-historical-tex-sources.v1.json",
+  "historical_prior_registry": "registry/enterprise-document-types.v2.json",
+  "historical_original_archive_drive_id": "1wW-_B6bvETGFN_L7XMWcBZlUYBMTqzFP",
+  "qa_evidence": {
+    "github_actions_run": "38201154107",
+    "qa_booklet_drive_id": "1wN3fMKS5EW4xnOnLcnlgUxPX5se6C4jb",
+    "review_status": "APPROVED_BY_USER"
+  },
+  "routing_rules": [
+    "Only registry/enterprise-document-types.json is authoritative for unqualified names",
+    "Every name and alias resolves to exactly one canonical type and exactly one v3 TeX source",
+    "All v1, v2, and special project branches remain available solely by explicit versioned reference",
+    "No automatic fallback to older template versions",
+    "A source digest mismatch blocks routing; no auto-correction",
+    "No contract, procurement, salary or engineering claim is approved by template layout approval"
+  ],
+  "templates": [
+    {
+      "id": "client-contract",
+      "title": "Construction Works Agreement",
+      "path": "templates/enterprise/v3/client-contract.tex",
+      "sample": "examples/document-engineering/v3/client-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "client_legal_name",
+        "contractor_legal_name",
+        "project_identifier",
+        "site_location",
+        "scope_of_work",
+        "inclusions_and_exclusions",
+        "measurement_and_rates",
+        "payment_terms",
+        "quality_and_defects",
+        "variations",
+        "termination_and_disputes",
+        "contract_documents_and_drawings",
+        "materials_responsibility",
+        "programme_and_completion",
+        "taxes_and_statutory",
+        "governing_law",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/client-contract.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "c362c5d11a6a483ef13ac2ec14b6c09391da5013",
+      "aliases": [
+        "client contract",
+        "client construction agreement",
+        "construction works agreement",
+        "construction agreement"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "labour-contract",
+      "title": "Labour Works Agreement",
+      "path": "templates/enterprise/v3/labour-contract.tex",
+      "sample": "examples/document-engineering/v3/labour-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "labour_provider",
+        "project_identifier",
+        "scope_of_work",
+        "start_date",
+        "end_date",
+        "wages_and_hours",
+        "safety_and_entitlements",
+        "termination",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/labour-contract.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "6a9253fb2015aa7b4073d39b68f3600551ed8daa",
+      "aliases": [
+        "labour contract",
+        "labor contract",
+        "labour works agreement",
+        "labor works agreement"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "job-contract",
+      "title": "Employment Agreement",
+      "path": "templates/enterprise/v3/job-contract.tex",
+      "sample": "examples/document-engineering/v3/job-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "employee",
+        "role",
+        "start_date",
+        "end_date",
+        "duties",
+        "working_hours",
+        "pay_and_benefits",
+        "leave_and_entitlements",
+        "termination",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/job-contract.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "e8105bf328653d06ab500815a33e21cb97a9b5ee",
+      "aliases": [
+        "job contract",
+        "employment agreement",
+        "employment contract",
+        "job agreement"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "salary-contract",
+      "title": "Salary Agreement",
+      "path": "templates/enterprise/v3/salary-contract.tex",
+      "sample": "examples/document-engineering/v3/salary-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "employee",
+        "role",
+        "effective_date",
+        "gross_pay",
+        "pay_period",
+        "benefits",
+        "statutory_deductions",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/salary-contract.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "fdea678bf00d698a1323fb32fee9915349d1f38a",
+      "aliases": [
+        "salary contract",
+        "salary agreement"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "experience-letter",
+      "title": "Certificate of Employment",
+      "path": "templates/enterprise/v3/experience-letter.tex",
+      "sample": "examples/document-engineering/v3/experience-letter.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "employee",
+        "role",
+        "start_date",
+        "end_date",
+        "verified_duties",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/experience-letter.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "ae674ebe782706af6f8691ae18c624a6539cdeeb",
+      "aliases": [
+        "experience letter",
+        "experience certificate",
+        "certificate of employment"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "recommendation-letter",
+      "title": "Letter of Recommendation",
+      "path": "templates/enterprise/v3/recommendation-letter.tex",
+      "sample": "examples/document-engineering/v3/recommendation-letter.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "recommender",
+        "subject_person",
+        "relationship",
+        "verified_experience",
+        "recommendation",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/recommendation-letter.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "42b737fdaa90e33a262af7e278008a0718a4acb2",
+      "aliases": [
+        "recommendation letter",
+        "letter of recommendation"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "vendor-quotation",
+      "title": "Vendor Quotation",
+      "path": "templates/enterprise/v3/vendor-quotation.tex",
+      "sample": "examples/document-engineering/v3/vendor-quotation.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "vendor",
+        "customer",
+        "quotation_ref",
+        "valid_until",
+        "specification",
+        "payment_terms",
+        "tax_terms",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/vendor-quotation.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "e51d34b79c7c1a42960f5878ea2acb437fff52b8",
+      "aliases": [
+        "vendor quotation",
+        "quotation to vendor",
+        "supplier quotation"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "government-quotation",
+      "title": "Government Tender Quotation",
+      "path": "templates/enterprise/v3/government-quotation.tex",
+      "sample": "examples/document-engineering/v3/government-quotation.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "bidder",
+        "authority",
+        "tender_ref",
+        "valid_until",
+        "eligibility",
+        "technical_compliance",
+        "tax_terms",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/government-quotation.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "11d9ed6700b773589e9ab530c955b1e1d68377e5",
+      "aliases": [
+        "government quotation",
+        "government tender quotation",
+        "quotation to government"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "proposal",
+      "title": "Professional Services Proposal",
+      "path": "templates/enterprise/v3/proposal.tex",
+      "sample": "examples/document-engineering/v3/proposal.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "proposer",
+        "client",
+        "objectives",
+        "scope",
+        "deliverables",
+        "staffing",
+        "schedule",
+        "financial_terms",
+        "exclusions",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/proposal.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "a4763e2a32e9f78c687c50a066f17c7ca0b771b4",
+      "aliases": [
+        "proposal",
+        "professional proposal",
+        "professional services proposal"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "estimate",
+      "title": "Construction Cost Estimate",
+      "path": "templates/enterprise/v3/estimate.tex",
+      "sample": "examples/document-engineering/v3/estimate.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "project_identifier",
+        "cad_quantity_ref",
+        "rate_library_ref",
+        "boq_template_ref",
+        "scope",
+        "exclusions",
+        "measurement_rules",
+        "approved_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/estimate.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "fed81bc86d2f53cefdec77ada0cf00465e43152a",
+      "aliases": [
+        "estimate",
+        "construction estimate",
+        "construction cost estimate"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "material-report",
+      "title": "Material Receipt and Usage Report",
+      "path": "templates/enterprise/v3/material-report.tex",
+      "sample": "examples/document-engineering/v3/material-report.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "project_identifier",
+        "report_period",
+        "site",
+        "receipts_reference",
+        "usage_reference",
+        "checked_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/material-report.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "1908d7f5bb90c218b6edd2bf6f03cc5b8be04f5f",
+      "aliases": [
+        "material report",
+        "material reporting",
+        "material usage report",
+        "materials usage report",
+        "material receipt and usage report"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "purchase-order",
+      "title": "Purchase Order",
+      "path": "templates/enterprise/v3/purchase-order.tex",
+      "sample": "examples/document-engineering/v3/purchase-order.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "buyer",
+        "vendor",
+        "po_ref",
+        "delivery_site",
+        "delivery_date",
+        "inspection",
+        "terms",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/purchase-order.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "914c680efe150aad15170cf7b9f7679bba5e6a8f",
+      "aliases": [
+        "purchase order",
+        "purchase order letter"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "receipt-voucher",
+      "title": "Receipt Voucher",
+      "path": "templates/enterprise/v3/receipt-voucher.tex",
+      "sample": "examples/document-engineering/v3/receipt-voucher.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "receiver",
+        "payer",
+        "voucher_ref",
+        "receipt_date",
+        "amount",
+        "currency",
+        "payment_reference",
+        "approved_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/receipt-voucher.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "69d1390c74594e2b7dd744c708b23090b92eb785",
+      "aliases": [
+        "receipt voucher",
+        "receipt"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    },
+    {
+      "id": "payment-slip",
+      "title": "Payment Advice",
+      "path": "templates/enterprise/v3/payment-slip.tex",
+      "sample": "examples/document-engineering/v3/payment-slip.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "payer",
+        "payee",
+        "payment_period",
+        "currency",
+        "payment_date",
+        "payment_reference",
+        "approved_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/payment-slip.tex",
+      "status": "TEMPLATE_LAYOUT_APPROVED_2026-10-14__PROJECT_ISSUE_HOLD",
+      "approved_git_blob_sha": "c161a3f4304ad8441812cf7e9b3cf68058be3742",
+      "aliases": [
+        "payment slip",
+        "payment advice",
+        "payment advice slip"
+      ],
+      "layout_qa_approved": true,
+      "legal_factual_approval": false
+    }
+  ]
+}

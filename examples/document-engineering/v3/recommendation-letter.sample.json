@@ -1,0 +1,15 @@
+{
+  "template_id": "recommendation-letter",
+  "fixture_only": true,
+  "fields": {
+    "document_ref": "DEMO-RECOMMEND-001",
+    "organization_id": "DEMO-ORG-001",
+    "issue_date": "2026-10-12",
+    "recommender": "Example Team Lead (fictional)",
+    "subject_person": "Example Candidate (fictional)",
+    "relationship": "Illustrative supervisory relationship only.",
+    "verified_experience": "No actual experience is being certified. Supporting personnel records are required.",
+    "recommendation": "Illustrative recommendation statement; independent evidence and consent are required before issuing a real letter.",
+    "signatory": "Authorized signatory - blank pending review."
+  }
+}

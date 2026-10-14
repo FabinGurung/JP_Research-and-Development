@@ -1,0 +1,21 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{enterprise-v3}
+\begin{document}
+\EnterpriseHeading{Construction Cost Estimate}{ {{document_status}} }
+\EnterpriseMeta{Reference}{ {{document_ref}} }
+\EnterpriseMeta{Organization ID}{ {{organization_id}} }
+\EnterpriseMeta{Issue date}{ {{issue_date}} }
+\EnterpriseSection{Project and Source Authorities}
+\EnterpriseField{Project Identifier}{ {{project_identifier}} }
+\EnterpriseField{CAD Quantity Ref}{ {{cad_quantity_ref}} }
+\EnterpriseField{Rate Library Ref}{ {{rate_library_ref}} }
+\EnterpriseField{BOQ Template Ref}{ {{boq_template_ref}} }
+\EnterpriseSection{Estimate Basis and Scope}
+\EnterpriseField{Scope}{ {{scope}} }
+\EnterpriseField{Exclusions}{ {{exclusions}} }
+\EnterpriseField{Measurement Rules}{ {{measurement_rules}} }
+{{document_table}}
+\EnterpriseSection{Checking}
+\EnterpriseField{Approved By}{ {{approved_by}} }
+\EnterpriseWarning{DRAFT SAMPLE - This material demonstrates layout only. Parties, amounts, eligibility, specifications, workmanship and approval must be independently verified before any actual issue.}
+\end{document}

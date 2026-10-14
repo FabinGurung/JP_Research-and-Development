@@ -1,0 +1,21 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{enterprise-v3}
+\begin{document}
+\EnterpriseHeading{Purchase Order}{ {{document_status}} }
+\EnterpriseMeta{Reference}{ {{document_ref}} }
+\EnterpriseMeta{Organization ID}{ {{organization_id}} }
+\EnterpriseMeta{Issue date}{ {{issue_date}} }
+\EnterpriseSection{Parties and Purchase Identification}
+\EnterpriseField{Buyer}{ {{buyer}} }
+\EnterpriseField{Vendor}{ {{vendor}} }
+\EnterpriseField{Po Ref}{ {{po_ref}} }
+\EnterpriseSection{Delivery and Inspection}
+\EnterpriseField{Delivery Site}{ {{delivery_site}} }
+\EnterpriseField{Delivery Date}{ {{delivery_date}} }
+\EnterpriseField{Inspection}{ {{inspection}} }
+{{document_table}}
+\EnterpriseSection{Purchase Terms and Authorization}
+\EnterpriseField{Terms}{ {{terms}} }
+\EnterpriseField{Signatory}{ {{signatory}} }
+\EnterpriseWarning{DRAFT SAMPLE - This material demonstrates layout only. Parties, amounts, eligibility, specifications, workmanship and approval must be independently verified before any actual issue.}
+\end{document}

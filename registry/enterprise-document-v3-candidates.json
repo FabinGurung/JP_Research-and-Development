@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "A9-ENT-14-CANONICAL-20261012-v3-CANDIDATE",
+  "state": "HUMAN_QA_REQUIRED_NOT_PROMOTED",
+  "original_sources": "PRESERVED_AND_UNMODIFIED",
+  "original_archive_drive_id": "1wW-_B6bvETGFN_L7XMWcBZlUYBMTqzFP",
+  "historical_git_snapshot_ref": "snapshot/enterprise-v2-before-v3-normalization-20261012",
+  "historical_git_commit": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1",
+  "unmodified_previous_registry": "registry/enterprise-document-types.v2.json",
+  "style": "templates/enterprise/v3/enterprise-v3.sty",
+  "renderer": "scripts/document_engineering/engine_v3.py",
+  "entrypoint_contract": "TEMPLATE_ID + VERIFIED_TYPED_PRIVATE_INPUT + EXPLICIT_APPROVAL_GATES",
+  "template_count": 14,
+  "templates": [
+    {
+      "id": "client-contract",
+      "title": "Construction Works Agreement",
+      "path": "templates/enterprise/v3/client-contract.tex",
+      "sample": "examples/document-engineering/v3/client-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "client_legal_name",
+        "contractor_legal_name",
+        "project_identifier",
+        "site_location",
+        "scope_of_work",
+        "inclusions_and_exclusions",
+        "measurement_and_rates",
+        "payment_terms",
+        "quality_and_defects",
+        "variations",
+        "termination_and_disputes",
+        "contract_documents_and_drawings",
+        "materials_responsibility",
+        "programme_and_completion",
+        "taxes_and_statutory",
+        "governing_law",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/client-contract.tex"
+    },
+    {
+      "id": "labour-contract",
+      "title": "Labour Works Agreement",
+      "path": "templates/enterprise/v3/labour-contract.tex",
+      "sample": "examples/document-engineering/v3/labour-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "labour_provider",
+        "project_identifier",
+        "scope_of_work",
+        "start_date",
+        "end_date",
+        "wages_and_hours",
+        "safety_and_entitlements",
+        "termination",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/labour-contract.tex"
+    },
+    {
+      "id": "job-contract",
+      "title": "Employment Agreement",
+      "path": "templates/enterprise/v3/job-contract.tex",
+      "sample": "examples/document-engineering/v3/job-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "employee",
+        "role",
+        "start_date",
+        "end_date",
+        "duties",
+        "working_hours",
+        "pay_and_benefits",
+        "leave_and_entitlements",
+        "termination",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/job-contract.tex"
+    },
+    {
+      "id": "salary-contract",
+      "title": "Salary Agreement",
+      "path": "templates/enterprise/v3/salary-contract.tex",
+      "sample": "examples/document-engineering/v3/salary-contract.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "employee",
+        "role",
+        "effective_date",
+        "gross_pay",
+        "pay_period",
+        "benefits",
+        "statutory_deductions",
+        "signatures"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/salary-contract.tex"
+    },
+    {
+      "id": "experience-letter",
+      "title": "Certificate of Employment",
+      "path": "templates/enterprise/v3/experience-letter.tex",
+      "sample": "examples/document-engineering/v3/experience-letter.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "employer",
+        "employee",
+        "role",
+        "start_date",
+        "end_date",
+        "verified_duties",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/experience-letter.tex"
+    },
+    {
+      "id": "recommendation-letter",
+      "title": "Letter of Recommendation",
+      "path": "templates/enterprise/v3/recommendation-letter.tex",
+      "sample": "examples/document-engineering/v3/recommendation-letter.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "recommender",
+        "subject_person",
+        "relationship",
+        "verified_experience",
+        "recommendation",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/recommendation-letter.tex"
+    },
+    {
+      "id": "vendor-quotation",
+      "title": "Vendor Quotation",
+      "path": "templates/enterprise/v3/vendor-quotation.tex",
+      "sample": "examples/document-engineering/v3/vendor-quotation.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "vendor",
+        "customer",
+        "quotation_ref",
+        "valid_until",
+        "specification",
+        "payment_terms",
+        "tax_terms",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/vendor-quotation.tex"
+    },
+    {
+      "id": "government-quotation",
+      "title": "Government Tender Quotation",
+      "path": "templates/enterprise/v3/government-quotation.tex",
+      "sample": "examples/document-engineering/v3/government-quotation.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "bidder",
+        "authority",
+        "tender_ref",
+        "valid_until",
+        "eligibility",
+        "technical_compliance",
+        "tax_terms",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/government-quotation.tex"
+    },
+    {
+      "id": "proposal",
+      "title": "Professional Services Proposal",
+      "path": "templates/enterprise/v3/proposal.tex",
+      "sample": "examples/document-engineering/v3/proposal.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "proposer",
+        "client",
+        "objectives",
+        "scope",
+        "deliverables",
+        "staffing",
+        "schedule",
+        "financial_terms",
+        "exclusions",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/proposal.tex"
+    },
+    {
+      "id": "estimate",
+      "title": "Construction Cost Estimate",
+      "path": "templates/enterprise/v3/estimate.tex",
+      "sample": "examples/document-engineering/v3/estimate.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "project_identifier",
+        "cad_quantity_ref",
+        "rate_library_ref",
+        "boq_template_ref",
+        "scope",
+        "exclusions",
+        "measurement_rules",
+        "approved_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/estimate.tex"
+    },
+    {
+      "id": "material-report",
+      "title": "Material Receipt and Usage Report",
+      "path": "templates/enterprise/v3/material-report.tex",
+      "sample": "examples/document-engineering/v3/material-report.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "project_identifier",
+        "report_period",
+        "site",
+        "receipts_reference",
+        "usage_reference",
+        "checked_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/material-report.tex"
+    },
+    {
+      "id": "purchase-order",
+      "title": "Purchase Order",
+      "path": "templates/enterprise/v3/purchase-order.tex",
+      "sample": "examples/document-engineering/v3/purchase-order.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "buyer",
+        "vendor",
+        "po_ref",
+        "delivery_site",
+        "delivery_date",
+        "inspection",
+        "terms",
+        "signatory"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/purchase-order.tex"
+    },
+    {
+      "id": "receipt-voucher",
+      "title": "Receipt Voucher",
+      "path": "templates/enterprise/v3/receipt-voucher.tex",
+      "sample": "examples/document-engineering/v3/receipt-voucher.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "receiver",
+        "payer",
+        "voucher_ref",
+        "receipt_date",
+        "amount",
+        "currency",
+        "payment_reference",
+        "approved_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/receipt-voucher.tex"
+    },
+    {
+      "id": "payment-slip",
+      "title": "Payment Advice",
+      "path": "templates/enterprise/v3/payment-slip.tex",
+      "sample": "examples/document-engineering/v3/payment-slip.sample.json",
+      "base_fields": [
+        "document_ref",
+        "organization_id",
+        "issue_date",
+        "payer",
+        "payee",
+        "payment_period",
+        "currency",
+        "payment_date",
+        "payment_reference",
+        "approved_by"
+      ],
+      "qa_status": "FICTIONAL_SAMPLE_ONLY_PENDING_HUMAN_QA",
+      "legacy": "templates/enterprise/v2/payment-slip.tex"
+    }
+  ],
+  "not_new_document_types": [
+    "enterprise-v3.sty",
+    "client-contract-simple-lumpsum.tex",
+    "client-contract-simple-lumpsum-letterhead.tex"
+  ],
+  "policy": [
+    "One callable canonical document type ID per family, one v3 layout candidate per ID",
+    "Current v2 and legacy .tex sources unchanged in Git and private archive",
+    "Machine QA and PDF compilation do not certify contractual or statutory correctness",
+    "Public sample data fictional; no real client files in CI",
+    "Do not promote canonical registry to v3 without user review"
+  ]
+}

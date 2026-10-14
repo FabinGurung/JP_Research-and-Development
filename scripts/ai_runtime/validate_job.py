@@ -36,7 +36,7 @@ def validate(doc):
         raise ValueError("Unknown family")
     task = doc["task_type_id"]
     if family == "enterprise":
-        canonical = json.loads((ROOT / "registry/enterprise-document-types.v2.json").read_text(encoding="utf-8"))["types"]
+        canonical = json.loads((ROOT / "registry/enterprise-document-types.json").read_text(encoding="utf-8"))["types"]
         valid = {c["id"] for c in canonical}
     else:
         valid = {"thesis", "manuscript", "presentation", "discussion", "research-website", "source-audit", "research-record"}

@@ -1,0 +1,17 @@
+{
+  "template_id": "receipt-voucher",
+  "fixture_only": true,
+  "fields": {
+    "document_ref": "DEMO-RECEIPT-001",
+    "organization_id": "DEMO-ORG-001",
+    "issue_date": "2026-10-12",
+    "receiver": "Sample Builders Pvt. Ltd. (fictional)",
+    "payer": "Example Customer (fictional)",
+    "voucher_ref": "DEMO-RV-001",
+    "receipt_date": "2026-10-12",
+    "amount": "NPR 12,500 (fictional sample; no actual payment occurred).",
+    "currency": "NPR",
+    "payment_reference": "Illustrative transaction reference - no transfer or receipt asserted.",
+    "approved_by": "Approval not granted - review signature required."
+  }
+}

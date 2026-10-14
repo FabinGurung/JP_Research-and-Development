@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "id": "A9-ENT-HISTORICAL-TEX-INVENTORY-20261012",
+  "source_commit": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1",
+  "source_branch": "snapshot/enterprise-v2-before-v3-normalization-20261012",
+  "original_overleaf_zip_drive_id": "1wW-_B6bvETGFN_L7XMWcBZlUYBMTqzFP",
+  "original_archive_item_count": 102,
+  "changes_to_old_sources": 0,
+  "historical_code_tex_count": 19,
+  "sources": [
+    {
+      "path": "templates/enterprise/experience_letter.tex",
+      "git_blob_sha": "f093d47732b5153fa39b661bba7d64f1c9659a36",
+      "bytes": 577,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/salary_contract.tex",
+      "git_blob_sha": "79ac2c077b39fc127fb77c9a704de5777c614ef6",
+      "bytes": 744,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/client-contract-simple-lumpsum.tex",
+      "git_blob_sha": "9b209ce34e5a55bd728b7b134be704f335cbf636",
+      "bytes": 2818,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/client-contract.tex",
+      "git_blob_sha": "e3e49097a7568ae79a66a9f5e48065f62d1c5fdb",
+      "bytes": 1402,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/estimate.tex",
+      "git_blob_sha": "c6a8855b6023eba15ea365687418e5b869c7833e",
+      "bytes": 797,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/experience-letter.tex",
+      "git_blob_sha": "8be33e87ff8ed96b1032fc6bd85d88c9894f44aa",
+      "bytes": 685,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/government-quotation.tex",
+      "git_blob_sha": "1777d50ff4d97ad0a4ea34f7b001c57e4910166e",
+      "bytes": 755,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/job-contract.tex",
+      "git_blob_sha": "bf5f42f1dc64461eb97db647397081ee2fc50b0a",
+      "bytes": 867,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/labour-contract.tex",
+      "git_blob_sha": "c58997fa741024e5886d43b5cc9151a945d8a599",
+      "bytes": 880,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/material-report.tex",
+      "git_blob_sha": "9a653d0cb172cdfba1f6f683e6cfed26befc6cd0",
+      "bytes": 698,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/partials/payment-schedule.tex",
+      "git_blob_sha": "a456f3d11550e334472a70280e6a710ed918ca5b",
+      "bytes": 1242,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/payment-slip.tex",
+      "git_blob_sha": "83c892f639fa5f31c36ef8ed3f1f47e7d58d30ee",
+      "bytes": 697,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/proposal.tex",
+      "git_blob_sha": "879c0b40b5372b295cda3900e5cf0589448f57b2",
+      "bytes": 799,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/purchase-order.tex",
+      "git_blob_sha": "8a743c5831fb77b24619109d26203464a4e30c2c",
+      "bytes": 706,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/receipt-voucher.tex",
+      "git_blob_sha": "eddfbf1303b644501c3d58d16eb73926f1075633",
+      "bytes": 729,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/recommendation-letter.tex",
+      "git_blob_sha": "3b57cefbc2194d828638ebc05957ec13b9a46c69",
+      "bytes": 699,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/salary-contract.tex",
+      "git_blob_sha": "be18cd9f21025fa1ee0f9e10436ce60e9dee7f22",
+      "bytes": 775,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/v2/vendor-quotation.tex",
+      "git_blob_sha": "af82e2bd6033d4d89fd52f1b83587199224661ef",
+      "bytes": 738,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    },
+    {
+      "path": "templates/enterprise/works_contract.tex",
+      "git_blob_sha": "671204a2c1d3baec9a8d3e55f1bdcb95cfdd0a5f",
+      "bytes": 2912,
+      "immutable_at": "3a3fa4103797ae8dd601d5ec94aeff6b74ea03f1"
+    }
+  ],
+  "additional_project_variant_on_branch": {
+    "branch": "work/enterprise-radha-roka-v0.6-approved-payment-scope-20261011",
+    "path": "templates/enterprise/v2/client-contract-simple-lumpsum-letterhead.tex",
+    "note": "Preserved independent development branch, not copied into public candidate default."
+  },
+  "retention_rule": "NO_DELETE_NO_REWRITE_WITHOUT_SEPARATE_QA_AUTHORIZATION"
+}
