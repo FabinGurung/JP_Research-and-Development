@@ -24,7 +24,9 @@
     },
     "display_geometry": {
       "name": "RMP_WARD_DISPLAY_GEOMETRY_CACHE_v0.2.1.json",
-      "status": "NOT_IN_GIT_ONLY_LOCAL_CACHE"
+      "drive_id": "1nwqkZVB1NIl8PCekJodRp1RpPlylkjU6",
+      "sha256": "8c9dfe446c5b307443cc0013ddaf4d34e978f27f7aeab126cbb75a34441b8b8c",
+      "governance": "Cartographic generalized display only; not for new spatial joins"
     },
     "input_research_data": {
       "source": "Rupesh's original Drive workbook, not public Git"
@@ -45,7 +47,7 @@
   "qa": {
     "python_execution": "PASS",
     "image_render": "PASS",
-    "source_integrity": "GIT_BLOB_CREATED__REPOSITORY_COMMIT_PENDING",
+    "source_integrity": "GIT_SOURCE_BLOB_READBACK_PASS__DRIVE_MIRROR_VERIFIED",
     "scientific_admission": "BLOCKED_ON_SPATIAL_WARD_RECONCILIATION_AND_BOUNDARY_AUTHORITY",
     "previous_versions_deleted": false,
     "code_release_tag": "NONE__REVIEW_EDITIONS_USE_COMMITS"
