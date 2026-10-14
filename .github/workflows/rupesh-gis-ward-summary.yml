@@ -1,0 +1,26 @@
+name: Rupesh V02.0 GIS source validation (private evidence stays in Drive)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_WARD_SUMMARY_SOURCE_ONLY.ipynb'
+      - 'researchers/rupesh-man-pradhan/gis/ward-summary.v0.2.0.json'
+      - 'researchers/rupesh-man-pradhan/gis/validate_ward_summary_source.py'
+      - '.github/workflows/rupesh-gis-ward-summary.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/**'
+      - '.github/workflows/rupesh-gis-ward-summary.yml'
+permissions:
+  contents: read
+jobs:
+  source-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate output-free notebook and honest QA gates
+        run: python researchers/rupesh-man-pradhan/gis/validate_ward_summary_source.py
