@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RMP-GIS-STATIC-ATLAS-V02-1",
+  "status": "GENERATED__REVIEW_CANDIDATE_NOT_FINAL_THESIS_ADMISSION",
+  "generated_at_npt": "2026-10-14",
+  "baseline_release": "rupesh-gis/v0.1.4-source",
+  "parent_v02_source_commit": "3964b4dee18789f2d68ebb8c908ec66f35255a73",
+  "map_frame": {
+    "label": "5 km offset square map frame",
+    "projected_crs": "EPSG:32645",
+    "method": "minimum 5km outward from Pokhara ward envelope; equal width and height; derived for this display from V02.0 original 234.15km square SVG cartographic cache",
+    "approximately_km_per_side": 44.128,
+    "not": "100 km"
+  },
+  "product_presentation": "STATIC_THESIS_PNG_ONLY_NO_INTERACTIVE_REQUIRED",
+  "git": {
+    "path": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_1_STATIC_WARD_ATLAS.py",
+    "runtime": "Python 3, matplotlib, numpy, shapely; no Colab/online tiles required once QA CSV and display cache are present"
+  },
+  "drive": {
+    "researcher_gis_root": "1oIxLqgNrHiNq4HoFGoZNhFNfk5NwxdBt",
+    "png": {
+      "id": "1LPf032vcXFEdJ7GudGFvlQM1JrIWB8Gh",
+      "url": "https://drive.google.com/file/d/1LPf032vcXFEdJ7GudGFvlQM1JrIWB8Gh/view"
+    },
+    "previous_v02_png": {
+      "id": "1VCU2mkAJVP9_NZ99zABt9aQ4GZ083-07",
+      "url": "https://drive.google.com/file/d/1VCU2mkAJVP9_NZ99zABt9aQ4GZ083-07/view"
+    },
+    "ward_counts_qa": {
+      "id": "1xVA8wf30x_JGMIqVQNPSJfDdCPgl008I",
+      "url": "https://drive.google.com/file/d/1xVA8wf30x_JGMIqVQNPSJfDdCPgl008I/view"
+    },
+    "geometry_display_cache": {
+      "id": "1OuxUmdXGTfJm2XVauYW7v9bbLdxEGqix",
+      "url": "https://drive.google.com/file/d/1OuxUmdXGTfJm2XVauYW7v9bbLdxEGqix/view"
+    },
+    "run_receipt": {
+      "id": "1btnjiCEofdGJ1Ml0_37y858zxX92Kqle",
+      "url": "https://drive.google.com/file/d/1btnjiCEofdGJ1Ml0_37y858zxX92Kqle/view"
+    },
+    "local_executed_py": {
+      "id": "1_7QlVkg-QsC4knBqZlfoulEMy1_9sNfJ",
+      "url": "https://drive.google.com/file/d/1_7QlVkg-QsC4knBqZlfoulEMy1_9sNfJ/view"
+    }
+  },
+  "qa": {
+    "total_points": 266,
+    "engineered": 150,
+    "non_engineered": 116,
+    "qualifying_wards": 27,
+    "source_geometry_ward_conflicts": 50,
+    "user_approved_original_ward33_geographic_exception": 1,
+    "ward_layer": "historical OSM/Kathmandu Living Labs 33 wards, not certified authoritative current 2026 ward boundary",
+    "original_points_embedded_in_png": false,
+    "static_png_generated_locally": true,
+    "regeneration_requires": "fetch private-safe aggregate CSV and map-only display cache from Drive; supply as CLI args"
+  },
+  "scientific_boundary": "Display built from V02.0 geometrically assigned ward aggregate counts + generalized historical polygons. Full-precision point-in-polygon QA is inherited, not rerun in v02.1. Ward assignment discrepancies and polygon authority unresolved. Do not promote to final publication."
+}

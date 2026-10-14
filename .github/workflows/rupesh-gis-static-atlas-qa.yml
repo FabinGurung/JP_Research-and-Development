@@ -1,0 +1,35 @@
+name: Rupesh GIS static atlas source QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_1_STATIC_WARD_ATLAS.py'
+      - 'researchers/rupesh-man-pradhan/gis/static-ward-atlas.v0.2.1.json'
+      - '.github/workflows/rupesh-gis-static-atlas-qa.yml'
+  pull_request:
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_1_STATIC_WARD_ATLAS.py'
+      - 'researchers/rupesh-man-pradhan/gis/static-ward-atlas.v0.2.1.json'
+jobs:
+  source-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile source without private research data
+        run: python -m py_compile researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_1_STATIC_WARD_ATLAS.py
+      - name: Check public-safe manifest links
+        run: |
+          python - <<'PY'
+          import json
+          p='researchers/rupesh-man-pradhan/gis/static-ward-atlas.v0.2.1.json'
+          data=json.load(open(p))
+          assert data['qa']['total_points']==266
+          assert data['map_frame']['approximately_km_per_side']>40
+          assert data['map_frame']['approximately_km_per_side']<50
+          assert data['drive']['png']['url'].startswith('https://drive.google.com/')
+          assert 'NOT_FINAL_THESIS_ADMISSION' in data['status']
+          print('Static GIS manifest: PASS (scientific review remains open)')
+          PY
