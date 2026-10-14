@@ -1,0 +1,56 @@
+name: A9 Enterprise v3 Approved Milestone Tag and Release
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'registry/enterprise-document-types.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: enterprise-v3-approved-tag
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Enforce exact approved source, unique routes and source compiler tests
+        run: |
+          python3 scripts/document_engineering/resolve_template.py --self-test
+          python3 scripts/document_engineering/engine_v3.py --self-test
+          python3 scripts/validate_document_families.py
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          r=json.loads(Path("registry/enterprise-document-types.json").read_text())
+          assert r["version"]=="3.0.0" and len(r["templates"])==14
+          paths=[r["style"]]+[x["path"] for x in r["templates"]]
+          shas=[r["style_git_blob_sha"]]+[x["approved_git_blob_sha"] for x in r["templates"]]
+          for path,sha in zip(paths,shas):
+              actual=subprocess.check_output(["git","rev-parse",f"HEAD:{path}"],text=True).strip()
+              assert actual==sha, f"Approved immutable source changed: {path}"
+          print("PASS 15 exact Git source digests, all 14 named templates")
+          PY
+      - name: Create immutable annotated milestone tag and GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: a9-enterprise-docs-v3.0.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          existing="$(git ls-remote --tags origin "refs/tags/${TAG}" | awk '{print $1}')"
+          if [[ -n "$existing" ]]; then
+            echo "Refusing to replace existing milestone tag $TAG"
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$TAG" -m "Approved A9 Enterprise Templates v3.0.0 - 14 unique named layouts"
+          git push origin "refs/tags/$TAG"
+          gh release create "$TAG" --title "A9 Enterprise Documents v3.0.0 - 14 canonical templates" --notes-file docs/ENTERPRISE_V3_RELEASE_NOTES.md --verify-tag

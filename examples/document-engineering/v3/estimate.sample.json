@@ -1,0 +1,33 @@
+{
+  "template_id": "estimate",
+  "fixture_only": true,
+  "fields": {
+    "document_ref": "DEMO-ESTIMATE-001",
+    "organization_id": "DEMO-ORG-001",
+    "issue_date": "2026-10-12",
+    "project_identifier": "DEMO-PROJECT-001",
+    "cad_quantity_ref": "DEMO-CAD-FID-ONLY; not a verified drawing takeoff.",
+    "rate_library_ref": "DEMO-RATE-SOURCE-ONLY; not an approved rate.",
+    "boq_template_ref": "BOQ template layout only - not an authority for quantities.",
+    "scope": "Demonstration scope only; dimensions, construction quantities and cost require approved technical sources.",
+    "exclusions": "Out-of-scope items to be listed specifically in a real agreement.",
+    "measurement_rules": "Units and deductions shall follow agreed standards; this sample is not a measurement certification.",
+    "approved_by": "Approval not granted - review signature required."
+  },
+  "table_rows": [
+    {
+      "description": "Demo masonry measurement (unverified)",
+      "quantity": "12",
+      "unit": "m3",
+      "amount": "15,000.00",
+      "source_ref": "FICTIONAL-DEMO-NOT-VALID"
+    },
+    {
+      "description": "Demo plaster measurement (unverified)",
+      "quantity": "45",
+      "unit": "m2",
+      "amount": "9,000.00",
+      "source_ref": "FICTIONAL-DEMO-NOT-VALID"
+    }
+  ]
+}

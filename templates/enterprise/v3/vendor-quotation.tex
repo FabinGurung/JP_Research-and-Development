@@ -1,0 +1,22 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{enterprise-v3}
+\begin{document}
+\EnterpriseHeading{Vendor Quotation}{ {{document_status}} }
+\EnterpriseMeta{Reference}{ {{document_ref}} }
+\EnterpriseMeta{Organization ID}{ {{organization_id}} }
+\EnterpriseMeta{Issue date}{ {{issue_date}} }
+\EnterpriseSection{Buyer and Supplier}
+\EnterpriseField{Vendor}{ {{vendor}} }
+\EnterpriseField{Customer}{ {{customer}} }
+\EnterpriseField{Quotation Ref}{ {{quotation_ref}} }
+\EnterpriseField{Valid Until}{ {{valid_until}} }
+\EnterpriseSection{Supply Description}
+\EnterpriseField{Specification}{ {{specification}} }
+\EnterpriseSection{Commercial Terms}
+\EnterpriseField{Payment Terms}{ {{payment_terms}} }
+\EnterpriseField{Tax Terms}{ {{tax_terms}} }
+{{document_table}}
+\EnterpriseSection{Authorization}
+\EnterpriseField{Signatory}{ {{signatory}} }
+\EnterpriseWarning{DRAFT SAMPLE - This material demonstrates layout only. Parties, amounts, eligibility, specifications, workmanship and approval must be independently verified before any actual issue.}
+\end{document}

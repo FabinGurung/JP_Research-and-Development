@@ -1,0 +1,20 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{enterprise-v3}
+\begin{document}
+\EnterpriseHeading{Receipt Voucher}{ {{document_status}} }
+\EnterpriseMeta{Reference}{ {{document_ref}} }
+\EnterpriseMeta{Organization ID}{ {{organization_id}} }
+\EnterpriseMeta{Issue date}{ {{issue_date}} }
+\EnterpriseSection{Receipt Identity}
+\EnterpriseField{Receiver}{ {{receiver}} }
+\EnterpriseField{Payer}{ {{payer}} }
+\EnterpriseField{Voucher Ref}{ {{voucher_ref}} }
+\EnterpriseField{Receipt Date}{ {{receipt_date}} }
+\EnterpriseSection{Payment Information}
+\EnterpriseField{Amount}{ {{amount}} }
+\EnterpriseField{Currency}{ {{currency}} }
+\EnterpriseField{Payment Reference}{ {{payment_reference}} }
+\EnterpriseSection{Approval}
+\EnterpriseField{Approved By}{ {{approved_by}} }
+\EnterpriseWarning{DRAFT SAMPLE - This material demonstrates layout only. Parties, amounts, eligibility, specifications, workmanship and approval must be independently verified before any actual issue.}
+\end{document}

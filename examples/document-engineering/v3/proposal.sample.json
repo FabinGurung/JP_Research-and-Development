@@ -1,0 +1,19 @@
+{
+  "template_id": "proposal",
+  "fixture_only": true,
+  "fields": {
+    "document_ref": "DEMO-PROPOSAL-001",
+    "organization_id": "DEMO-ORG-001",
+    "issue_date": "2026-10-12",
+    "proposer": "Illustrative Engineering Services (fictional)",
+    "client": "Example Client (fictional)",
+    "objectives": "Demonstrate a repeatable design and reporting deliverable structure.",
+    "scope": "Demonstration scope only; dimensions, construction quantities and cost require approved technical sources.",
+    "deliverables": "Illustrative site visit report, drawing register, review comments and final handover pack.",
+    "staffing": "Illustrative project lead and reviewer - no named personnel committed.",
+    "schedule": "Demonstration two-stage programme; dates are not agreed.",
+    "financial_terms": "Prices, taxes and reimbursables to be agreed before issue.",
+    "exclusions": "Out-of-scope items to be listed specifically in a real agreement.",
+    "signatory": "Authorized signatory - blank pending review."
+  }
+}

@@ -25,7 +25,11 @@ def validate():
     assert all(route and ".." not in route for route in links)
     aud=read("registry/enterprise-template-normalization-audit.v0.1.json")
     reg=read("registry/enterprise-document-types.v2.json")["types"]
-    assert len(aud["canonical"])==len(reg)==14
+    active=read("registry/enterprise-document-types.json")["templates"]
+    assert len(aud["canonical"])==len(reg)==len(active)==14
+    assert {x["id"] for x in active}=={x["id"] for x in reg}
+    assert len({x["path"] for x in active})==14
+    assert all(x["path"].startswith("templates/enterprise/v3/") for x in active)
     assert {x["type_id"] for x in aud["canonical"]}=={x["id"] for x in reg}
     assert all((ROOT/x["path"]).is_file() for x in aud["canonical"])
     assert all((ROOT/x["path"]).is_file() for x in aud["overlaps"] if "branch" not in x)

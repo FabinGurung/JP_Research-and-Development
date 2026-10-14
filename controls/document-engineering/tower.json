@@ -1,10 +1,10 @@
 {
   "id": "A9-ENT-DOC-TOWER-001",
-  "version": "0.2.0",
-  "status": "DRAFT_GENERATOR_FOR_INDIVIDUAL_PROJECTS__PRODUCTION_RELEASE_STILL_HOLD",
-  "shared_style": "templates/enterprise/v2/enterprise-shared.sty",
-  "type_registry": "registry/enterprise-document-types.v2.json",
-  "engine": "scripts/document_engineering/engine_v2.py",
+  "version": "3.0.0",
+  "status": "V3_TEMPLATE_LAYOUT_APPROVED__PRIVATE_DOCUMENT_RELEASE_GATES_REQUIRED",
+  "shared_style": "templates/enterprise/v3/enterprise-v3.sty",
+  "type_registry": "registry/enterprise-document-types.json",
+  "engine": "scripts/document_engineering/engine_v3.py",
   "canonical_source": "private A9 Drive",
   "legacy_sources": "unapproved precedents",
   "academic_tower": "controls/latex/tower.json",
@@ -31,5 +31,11 @@
   "payment_arithmetic_engine": "scripts/document_engineering/validate_payment_schedule.py",
   "shared_payment_format": "templates/enterprise/v2/partials/payment-schedule.tex",
   "contract_release_rule": "TECHNICAL_MILESTONE_ARITHMETIC_PASS_NEVER_MEANS_SIGNED_OR_LEGAL_APPROVAL",
-  "originals_unchanged": true
+  "originals_unchanged": true,
+  "name_router": "scripts/document_engineering/resolve_template.py",
+  "one_active_template_per_name": true,
+  "no_legacy_implicit_fallback": true,
+  "old_archives_are_immutable": true,
+  "release_approval_scope": "14 template layouts approved for draft generation, not automatic approval of real project documents",
+  "release_tag": "a9-enterprise-docs-v3.0.0"
 }
