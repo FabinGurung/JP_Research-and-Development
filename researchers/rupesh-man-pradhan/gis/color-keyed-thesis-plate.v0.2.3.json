@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "edition": "RMP_GIS_V02.3_WARD_COLOR_KEY_THESIS_PLATE",
+  "previous_version": "V02.2 (local figure and source preserved)",
+  "status": "THESIS_REVIEW_CANDIDATE_NOT_SCIENTIFIC_APPROVAL",
+  "parent_milestone": "rupesh-gis/v0.1.4-source",
+  "parent_git_commit": "c5be5a6ccc8912abc8bdda86e91a1dcda6fa403c",
+  "files": {
+    "python_source": {
+      "git_path": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_3_COLOR_KEYED_THESIS_PLATE.py",
+      "drive_id": "1kMg1BC1ilKZUSQnrNCddLr9q--9bpKj4",
+      "sha256": "dfaf530b2dcd9def1f7c38c99597fa1a7dcb8687645ee2c07a55a67417ed55df"
+    },
+    "static_png": {
+      "drive_id": "1jllWxqUewK3gmViVZ3gol2OIRYSSg9Fu",
+      "sha256": "66afe31ac33147aa036dc47c085840d2627b17050d072059805ffb6a1760740e",
+      "width_px": 4962,
+      "height_px": 3507,
+      "dpi": 300
+    },
+    "source_counts": {
+      "drive_id": "1xVA8wf30x_JGMIqVQNPSJfDdCPgl008I",
+      "name": "RMP_WARD_COUNTS_SPATIAL_VS_RECORDED_v0.2.0.csv"
+    },
+    "display_geometry": {
+      "name": "RMP_WARD_DISPLAY_GEOMETRY_CACHE_v0.2.1.json",
+      "status": "NOT_IN_GIT_ONLY_LOCAL_CACHE"
+    },
+    "input_research_data": {
+      "source": "Rupesh's original Drive workbook, not public Git"
+    }
+  },
+  "science": {
+    "total_source_building_records": 266,
+    "engineered": 150,
+    "non_engineered": 116,
+    "qualifying_wards": 27,
+    "source_spatial_ward_conflicts": 50,
+    "user_approved_ward33_manual_inclusion": 1,
+    "ward_boundary_authority": "Kathmandu Living Labs / OpenStreetMap historical 33-ward boundary, NOT certified",
+    "crs": "EPSG:32645",
+    "frame": "5 km outward minimum from Pokhara municipal boundary, fixed square extent (44.128 km side)",
+    "map": "Static thesis publication PNG with 27 ward colors keyed to side count legend; no private building point coordinates."
+  },
+  "qa": {
+    "python_execution": "PASS",
+    "image_render": "PASS",
+    "source_integrity": "GIT_BLOB_CREATED__REPOSITORY_COMMIT_PENDING",
+    "scientific_admission": "BLOCKED_ON_SPATIAL_WARD_RECONCILIATION_AND_BOUNDARY_AUTHORITY",
+    "previous_versions_deleted": false,
+    "code_release_tag": "NONE__REVIEW_EDITIONS_USE_COMMITS"
+  },
+  "drive": {
+    "gis_folder": "1oIxLqgNrHiNq4HoFGoZNhFNfk5NwxdBt",
+    "map_folder": "1iAP-wSc4nSqjNW8odXaFg-ymQNNb46zj",
+    "source_folder": "1BKX9SteT80KVTJ_Dzv1Cm7NPzy4xSXRI"
+  }
+}
