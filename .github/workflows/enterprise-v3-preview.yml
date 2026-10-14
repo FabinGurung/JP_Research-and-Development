@@ -1,11 +1,18 @@
 name: A9 Enterprise v3 - Compile 14 canonical candidate PDFs
 on:
   push:
-    branches: [feature/enterprise-v3-canonical-14-qa-20261012]
+    branches: [feature/enterprise-v3-canonical-14-qa-20261012, release/enterprise-v3-canonical-20261014]
     paths:
       - 'templates/enterprise/v3/**'
       - 'registry/enterprise-document-v3-candidates.json'
       - 'examples/document-engineering/v3/**'
+      - 'scripts/document_engineering/engine_v3.py'
+      - '.github/workflows/enterprise-v3-preview.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'templates/enterprise/v3/**'
+      - 'registry/enterprise-document-types.json'
       - 'scripts/document_engineering/engine_v3.py'
       - '.github/workflows/enterprise-v3-preview.yml'
   workflow_dispatch:
