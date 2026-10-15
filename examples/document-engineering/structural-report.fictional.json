@@ -1,0 +1,50 @@
+{
+  "schema": "jp.structural-report.input.v0.1",
+  "metadata": {
+    "report_id": "DEMO-001",
+    "project_id": "FICTIONAL-NO-CLIENT",
+    "title": "Structural Analysis and Design Report - Fictional Demonstration",
+    "building_usage": "Illustrative low-rise frame",
+    "revision": "0.1-DRAFT",
+    "authority_id": "FICTIONAL-GOVERNED-INPUT"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction and source basis",
+      "narrative": "This is a fictional software demonstration. No real site, actual client, or engineer is represented.",
+      "claims": []
+    },
+    {
+      "id": "general_data",
+      "title": "Materials, sections and load assumptions",
+      "narrative": "All real quantities require a governed model and adopted code edition.",
+      "claims": []
+    },
+    {
+      "id": "analysis",
+      "title": "Solver outputs and independent verification",
+      "narrative": "OpenSees is an optional primary solver. No actual solver execution is asserted by this fixture.",
+      "claims": [
+        {
+          "label": "Fundamental period",
+          "value": "not computed",
+          "unit": "s",
+          "status": "HOLD"
+        }
+      ]
+    },
+    {
+      "id": "seismic_checks",
+      "title": "Seismic and structural irregularity checks",
+      "narrative": "Only checked numerical evidence can populate output fields.",
+      "claims": []
+    },
+    {
+      "id": "design",
+      "title": "Columns, beams, slab, footing, staircase design",
+      "narrative": "Member design is a separate engineering computation module, never inferred from force plots.",
+      "claims": []
+    }
+  ]
+}

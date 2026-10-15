@@ -1,0 +1,25 @@
+{
+  "schema": "jp.enterprise.document_template_candidate.v0.1",
+  "id": "structural-analysis-report",
+  "title": "Structural Analysis and Design Report",
+  "status": "DRAFT_ENGINEERING_MODULE_PENDING_VALIDATION",
+  "template": "templates/enterprise/structural-analysis-report/v0.1/main.tex",
+  "renderer": "scripts/document_engineering/build_structural_report.py",
+  "example": "examples/document-engineering/structural-report.fictional.json",
+  "analytical_authority_repository": "FabinGurung/JP_Structural_Analysis",
+  "role": "REPORT_RENDERING_ONLY",
+  "input_authority": "PRIVATE_NORMALIZED_MODEL_AND_PROVENANCE",
+  "no_implicit_upgrading_of_14_enterprise_v3_templates": true,
+  "a7_read_only_catalogue": true,
+  "release_gates": [
+    "SOURCE_INPUTS",
+    "MODEL_QA",
+    "OPEN_SOURCE_ANALYSIS",
+    "INDEPENDENT_VERIFICATION",
+    "MEMBER_DESIGN",
+    "NBC_EDITION",
+    "VISUAL_QA",
+    "ENGINEER_ACCEPTANCE",
+    "DRIVE_ARCHIVE"
+  ]
+}

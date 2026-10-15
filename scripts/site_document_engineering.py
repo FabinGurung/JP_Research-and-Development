@@ -28,6 +28,15 @@ def build_document_pages(out):
       '<p>Fourteen v3 template layouts are approved; five older/variant sources remain preserved as historical references. '
       'No files have been removed.</p>'
       '<p><a href="template-audit/index.html">Review template collisions and variants →</a></p></section></main>')
+    enterprise=enterprise.replace('</main>',
+      '<section class="section"><h2>Structural Analysis and Design Report — new draft candidate</h2>'
+      '<p>Public-safe LaTeX report layout and deterministic draft renderer. Numerical methods, solver runs, NBC checks, '
+      'member design and validation are owned by the separate JP Structural Analysis engine; private precedents stay in Drive.</p>'
+      '<p><strong>State:</strong> New candidate, not one of the fourteen approved V3 template routes; no completed engineer-approved SAR.</p>'
+      '<p><a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/templates/enterprise/structural-analysis-report/v0.1/README.md">Read the template and usage →</a> · '
+      '<a href="https://github.com/FabinGurung/JP_Research-and-Development/blob/main/templates/enterprise/structural-analysis-report/v0.1/main.tex">LaTeX source →</a> · '
+      '<a href="https://github.com/FabinGurung/JP_Structural_Analysis/">Analysis engine →</a></p>'
+      '</section></main>')
     write(out,"enterprise-documents/index.html",shell("Enterprise Documents",enterprise,1))
 
 
