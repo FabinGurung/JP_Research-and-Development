@@ -160,3 +160,10 @@ python3 scripts/validate_repo.py --site dist
 Browser QA requires a Node/Chromium environment and uses the pinned versions from its workflow. No backend, analytics, private Drive data or production thesis PDF compile was added.
 
 [Detailed phase checkpoint](docs/RND_BROWSER_ARCHITECTURE_SEARCH_RELEASE_20261009.md).
+
+## Federated repository boundary — A7 is an index, not this product's template owner
+
+**This repository owns** its own domain source, execution contracts, templates, tests, user documentation and Git history: research, enterprise and academic templates, LaTeX/presentation controls, researcher website and versioned R&D code, while original/compiled sensitive outputs remain at declared Drive provider. [A7](https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph) is a **read-only federated service catalogue / metadata index** of repository identities, source owner, capability/version/status, links and cross-module history pointers; it is not a global template engine or writable copy of this product's controls.
+
+**No implicit A7 mutations:** ChatGPT, CI and other AI must not create, edit, publish, repair or synchronize A7 as a side effect of work in this repository. A7 updates require a **separate, explicitly user-authorized A7-scoped task**. Record stale catalogue metadata as a pending link/change recommendation locally. Product templates remain with their *bounded-context owner*. The AI-Aided Design drawing template belongs to [CAD/AAD](https://github.com/FabinGurung/JP_Computer-Aided-Drawings/tree/main/governance/aad), not A7. Existing private source custody, branch/version controls, professional approval and specialty-owned records continue to govern.
+
