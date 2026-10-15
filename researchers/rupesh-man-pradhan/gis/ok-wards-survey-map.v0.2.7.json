@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "researcher": "Rupesh Man Pradhan",
+  "artifact_id": "RMP-GIS-V02_7-OK-WARD-SURVEY-POINT-MAP",
+  "edition": "v0.2.7",
+  "release_status": "GIT_SOURCE_REGISTERED__PRIVATE_DRIVE_FIGURE_PRESERVED__SCIENTIFIC_BOUNDARY_CERTIFICATION_PENDING",
+  "figure_type": "STATIC_PNG",
+  "code_path": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_7_OK_WARDS_SURVEY_MAP.py",
+  "source_code_sha256": "dab753939cb181931a2159de199b8745b922f213c3df01e4662ae1967688d642",
+  "coordinates_publicly_embedded": false,
+  "map_png": {
+    "drive_id": "1GZBgLjStrMe7sbyxp5WGcQh3GUdOr9oU",
+    "sha256": "7f8d8552d2cdb38e1bf2e16195feac5a4f0b5cf16576401cfbcb7e41ea45c810",
+    "bytes": 1146333
+  },
+  "source_xlsx": {
+    "drive_id": "1piJxk-V3xUl_CB0NxEnc5g1G2hbp1WK0",
+    "sha256": "19982a5a718a81fe71d65c30935714ea6dae88db0a7670a2927b61de60ec88c7"
+  },
+  "new_boundary_archive": {
+    "drive_id": "1OofaW0cP7UxvdFE-awBIWEMAvXIg_kjZ",
+    "sha256": "ec59d335db0b767023451a9cd34f6214e2343eeb0ec9667a658b2f938e3c1c77",
+    "municipality_layer": "Local Unit/local_unit.shp",
+    "datum": "NepalDD / Everest 1830",
+    "local_unit_rows": 777
+  },
+  "ward_display": {
+    "drive_id": "1nwqkZVB1NIl8PCekJodRp1RpPlylkjU6",
+    "sha256": "8c9dfe446c5b307443cc0013ddaf4d34e978f27f7aeab126cbb75a34441b8b8c",
+    "source": "33 historical ward GIS polygons derived from KLL/OSM V02.0 as a generalized display cache",
+    "reference_github": "https://github.com/KathmanduLivingLabs/prepare-pokhara-api-server/blob/master/geojson-data/wards.json"
+  },
+  "full_resolution_spatial_join_sha256": "642c8fd18f7d2e2e53af3104e598e278f586b93fbf27425f9964749bf7be634e",
+  "qa": {
+    "ok_wards": [
+      11,
+      21,
+      24,
+      25,
+      26,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "total_original_points": 266,
+    "full_resolution_spatially_eligible": 104,
+    "plotted_engineered": 50,
+    "plotted_non_engineered": 45,
+    "plotted_total": 95,
+    "held_due_to_display_boundary_precision": 9,
+    "excluded_non_ok_and_unlocated": 162,
+    "uncertain_unlocated_point_count": 1,
+    "geometry_union_iou_with_uploaded_municipality": 0.9852299836018127,
+    "selected_spatial_ward_is_authority": true
+  },
+  "projection": "EPSG:32645",
+  "square_extent_side_m": 44216.67209703749,
+  "output_creation_method": "python geopandas matplotlib shapely pyproj",
+  "qa_receipt": {
+    "drive_id": "1dbVMSV9QUXs2cdkyBxoAFgsnvcWof1An",
+    "sha256": "c46cebd83f8c1a3ba8b69b46a663cc358b400668cdedf09197f55ce7d270241f"
+  },
+  "held_points_private_drive_id": "1majfbUdYF0FDjruPhIksKz_HiYp6Dxpj",
+  "code_mirror_drive_id": "1vo4X2roMb1S_eybQOilq4pD9s1PUMMhB",
+  "first_render_archived_id": "1cc6I358U1ySOBjg8CxFLrFACRmHx4sT3",
+  "rollout_rules": {
+    "never_retag_old_release": true,
+    "a9_seq_not_incremented": true,
+    "publication_approval_separate": true,
+    "source_workbook_unchanged": true
+  },
+  "remaining_authority_gate": "Validate current official ward boundaries; historical generalized ward display causes 9 near-border holds. Do not claim final scientific publication approval."
+}

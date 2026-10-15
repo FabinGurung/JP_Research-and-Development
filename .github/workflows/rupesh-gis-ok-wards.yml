@@ -1,0 +1,21 @@
+name: Rupesh GIS V02.7 reproducibility register
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_7_OK_WARDS_SURVEY_MAP.py'
+      - 'researchers/rupesh-man-pradhan/gis/ok-wards-survey-map.v0.2.7.json'
+      - 'researchers/rupesh-man-pradhan/gis/validate_ok_ward_v02_7.py'
+      - '.github/workflows/rupesh-gis-ok-wards.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax and public manifest controls
+        run: |
+          python -m py_compile researchers/rupesh-man-pradhan/gis/RMP_GIS_V02_7_OK_WARDS_SURVEY_MAP.py
+          python researchers/rupesh-man-pradhan/gis/validate_ok_ward_v02_7.py
