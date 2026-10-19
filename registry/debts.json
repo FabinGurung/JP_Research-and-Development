@@ -315,17 +315,24 @@
       "category": "REGISTRAR_AND_MAIN_SYNC",
       "status": "OPEN",
       "severity": "MEDIUM",
-      "title": "Saugat CP114 project registrar and Main sync not run",
-      "description": "LaTeX LATEX-SEQ-028 closed with provider readback, but project-local Registrar and Main Library synchronization were expressly NOT RUN.",
+      "title": "Saugat CP114 legacy Project Registrar / Main ACK remained unrun at Git cutover",
+      "description": "The CP114 LaTeX lane was CLOSED at LATEX-SEQ-028, but its pre-cutover project-local Registrar and Main Library ACK were explicitly NOT RUN. Effective 2026-10-11, R&D Git/Drive authority moves NEW Git-managed source/version events to Git commits and manifests instead of issuing new routine A9 Local/Main sequences. This change does NOT retroactively acknowledge CP114's historical unsynced entries. The Saugat CP114 Git control-bridge and exact Drive hashes are registered at researchers/saugat-paneru/latex/source-baseline.json; full manuscript source import and shared-template parity remain pending.",
       "evidence": [
         {
           "role": "cp114_checkpoint",
           "drive_id": "1-Q93vMWLc7NzmfeJ5djiUEAlmf3600kq"
         }
       ],
-      "close_when": "Complete separate A9 registrar/Main sync with exact provider readback and ACK without replaying closed discussion or LaTeX sequences.",
+      "close_when": "A separately authorized, provider-verified historical Registrar/Main reconciliation or explicit formally governed backlog disposition; never assert an ACK from the Git cutover alone.",
       "researcher_id": "RSH-002",
-      "researcher_slug": "saugat-paneru"
+      "researcher_slug": "saugat-paneru",
+      "git_cutover_context": {
+        "effective": "2026-10-11",
+        "source": "docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md",
+        "scope": "ROUTINE_FUTURE_GIT_MANAGED_VERSION_EVENTS_ONLY",
+        "legacy_ack": "HISTORICAL_UNACKNOWLEDGED",
+        "git_pointer": "researchers/saugat-paneru/latex/source-baseline.json"
+      }
     },
     {
       "debt_id": "DEBT-NABIN-001",
