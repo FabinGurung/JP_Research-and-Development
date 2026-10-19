@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/09 v2.3 source-checked PU preliminaries, headings and appendices]
+\ProvidesPackage{pumlsc-shared}[2026/10/20 v2.4 opt-in 3x cover logo and build-month metadata]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -41,6 +41,7 @@
 \RequirePackage{caption}
 \captionsetup[table]{position=top,justification=raggedright,singlelinecheck=false}
 \captionsetup[figure]{position=bottom,justification=centering,singlelinecheck=false}
+\RequirePackage{graphicx}
 \RequirePackage{booktabs}
 \RequirePackage{hyperref}
 \hypersetup{hidelinks}
@@ -92,3 +93,22 @@
 % Only use after the university-approved cover geometry is checked; existing
 % manuscripts are unchanged unless they call this macro deliberately.
 \newcommand{\PUCoverLogoAuthorSpace}[1][30pt]{\par\vspace{#1}}
+
+
+% RD-LTX-CHG-107: project-opt-in university logo scaling. Defaults to the
+% legacy 1.6in render box. The Saugat project sets the scale to 3.0; this
+% generic API does not silently alter any other researcher's cover.
+\providecommand{\PUCoverLogoScale}{1}
+\newcommand{\PUCoverLogoBaseDimension}{1.6in}
+\newlength{\PUCoverLogoRenderSize}
+\newcommand{\PUScaledCoverLogo}[1]{%
+  \begingroup
+  \setlength{\PUCoverLogoRenderSize}{\PUCoverLogoBaseDimension}%
+  \setlength{\PUCoverLogoRenderSize}{\PUCoverLogoScale\PUCoverLogoRenderSize}%
+  \includegraphics[width=\PUCoverLogoRenderSize,height=\PUCoverLogoRenderSize,keepaspectratio]{#1}%
+  \endgroup}
+% Date follows the XeLaTeX compilation calendar instead of a hardcoded month.
+% Every project explicitly chooses whether its submission month should follow
+% the build clock; archival/final-approved submission dates may stay pinned.
+\newcommand{\PUCurrentMonthYear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi, \number\year}
