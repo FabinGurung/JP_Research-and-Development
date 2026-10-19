@@ -20,7 +20,8 @@
 \defbibheading{pubibliography}{\chapter*{REFERENCES}\addcontentsline{toc}{chapter}{REFERENCES}}
 \setcounter{secnumdepth}{3}\setcounter{tocdepth}{3}
 % Local, source-verified student and supervisor metadata is in project_config.tex.
-\newcommand{\PULogo}{\includegraphics[width=1.6in,height=1.6in,keepaspectratio]{\PULogoFile}}
+% University logo size comes from the shared PU template; image stays local.
+\newcommand{\PULogo}{\PUScaledCoverLogo{\PULogoFile}}
 \newcommand{\PURegistrationLine}{\par{\fontsize{12}{18}\selectfont (\PURegistrationNumber)}\par\vspace{14pt}}
 \newcommand{\PUCoverPage}{%
 \thispagestyle{empty}\begin{center}
