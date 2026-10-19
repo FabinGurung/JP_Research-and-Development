@@ -24,7 +24,7 @@
       "tower": "controls/latex/tower.json",
       "template": "controls/latex/template/pumlsc-shared.sty",
       "local_configuration": null,
-      "configuration_status": "GIT_CP114_SOURCE_IMPORTED__SHARED_TEMPLATE_116P_QA__RELEASE_PARITY_PENDING",
+      "configuration_status": "GIT_CP114_SOURCE_IMPORTED__SHARED_TEMPLATE_115P_LOCAL_PARITY_QA_PASS__DRIVE_RELEASE_HOLD",
       "no_local_base_copy": true,
       "unique_extension_ids": [
         "RD-LTX-EXT-SAUGAT-001",
