@@ -35,8 +35,9 @@
     },
     "qa_drive_id": "1uzUg5XAnz-M3xKhQ-CFARsYBtoBUoaBY",
     "readback": "CP114_VERIFIED",
-    "user_visual_review": "APPROVED_CP114_RELEASE",
-    "scientific_final_submission_approval": "NOT_ASSERTED"
+    "user_visual_review": "NOT_SEPARATELY_CERTIFIED_BY_USER",
+    "scientific_final_submission_approval": "NOT_ASSERTED",
+    "render_qa": "ASSISTANT_TARGETED_VISUAL_QA_PASS__115_OF_115_RENDERABLE"
   },
   "git": {
     "repository": "FabinGurung/JP_Research-and-Development",
