@@ -97,13 +97,13 @@ def render(payload):
     source=re.sub(r"(?m)^\\EnterpriseWarning\{DRAFT SAMPLE[^\n]*\}\s*$","",source)
     for tag in ("Reference","Organization ID"):
         source=re.sub(r"(?m)^\\EnterpriseMeta\{"+re.escape(tag)+r"\}\{[^\n]*\}\s*$","",source)
-    source=source.replace(r"\\EnterpriseField{Project Identifier}",r"\\EnterpriseField{Project}")
-    source=source.replace(r"\\EnterpriseField{CAD Quantity Ref}",r"\\EnterpriseField{Quantity source}")
-    source=source.replace(r"\\EnterpriseField{Rate Library Ref}",r"\\EnterpriseField{Pricing basis}")
-    source=source.replace(r"\\EnterpriseField{BOQ Template Ref}",r"\\EnterpriseField{Schedule of quantities}")
+    source=source.replace(r"\EnterpriseField{Project Identifier}",r"\EnterpriseField{Project}")
+    source=source.replace(r"\EnterpriseField{CAD Quantity Ref}",r"\EnterpriseField{Quantity source}")
+    source=source.replace(r"\EnterpriseField{Rate Library Ref}",r"\EnterpriseField{Pricing basis}")
+    source=source.replace(r"\EnterpriseField{BOQ Template Ref}",r"\EnterpriseField{Schedule of quantities}")
     # Freeze output presentation, not the canonical .sty or original template source.
-    output_headers=(r"\\fancyhead[L]{}\\fancyhead[R]{}\\fancyfoot[L]{}")
-    source=source.replace(r"\\begin{document}",r"\\begin{document}"+"\n"+output_headers,1)
+    output_headers=(r"\fancyhead[L]{}\fancyhead[R]{}\fancyfoot[L]{}")
+    source=source.replace(r"\begin{document}",r"\begin{document}"+"\n"+output_headers,1)
     visible_keys=set(TOKEN.findall(source)) - {"document_status"}
     for k in sorted(visible_keys):
         issues=violations(fields[k])
