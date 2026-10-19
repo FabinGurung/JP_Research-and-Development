@@ -13,6 +13,26 @@
       "reason": "No-hyphenation PU formatting yielded 127 overfull Tinos boxes in 42-page v1.9; a scoped 3em emergency stretch produced zero overfull without chapter or bibliography content changes. Production parity remains held.",
       "shared_template_modified": false,
       "researcher_slug": "safal-dawadi"
+    },
+    {
+      "extension_id": "RD-LTX-EXT-SAUGAT-001",
+      "change_id": "RD-LTX-CHG-105",
+      "researcher_id": "RSH-002",
+      "researcher_slug": "saugat-paneru",
+      "owner": "saugat-paneru",
+      "path": "researchers/saugat-paneru/latex/extensions/saugat_project_adapter.sty",
+      "status": "TESTED_LOCAL__PARITY_PENDING",
+      "shared_template_modified": false
+    },
+    {
+      "extension_id": "RD-LTX-EXT-SAUGAT-002",
+      "change_id": "RD-LTX-CHG-105",
+      "researcher_id": "RSH-002",
+      "researcher_slug": "saugat-paneru",
+      "owner": "saugat-paneru",
+      "path": "researchers/saugat-paneru/latex/extensions/saugat_compat.sty",
+      "status": "TESTED_LOCAL__PARITY_PENDING",
+      "shared_template_modified": false
     }
   ],
   "allowed_root_pattern": "researchers/<slug>/latex/extensions/",
