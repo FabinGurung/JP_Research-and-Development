@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "researcher_id": "RSH-002",
   "researcher_slug": "saugat-paneru",
-  "updated_at": "2026-10-19",
+  "updated_at": "2026-10-20",
   "source_control_admission": "VERIFIED_GIT_SOURCE_IMPORTED__SHARED_TEMPLATE_115P_CP114_TOC_PARITY_LOCAL_QA__DRIVE_PROMOTION_PENDING",
   "authority_policy": "docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md",
   "current_scientific_manuscript": {
@@ -49,7 +49,7 @@
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
     "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
     "saugat_cp114_compiled_with_shared_template": false,
-    "status": "FULL_TEXT_SOURCE_IMPORTED__SHARED_TEMPLATE_CP114_115P_LOCAL_QA_PASS__CP114_CURRENT_RETAINED",
+    "status": "FULL_TEXT_SOURCE_IMPORTED__COVER_MONTH_115P_LOCAL_QA_PASS__CP114_CURRENT_RETAINED",
     "source_import_commit": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
     "imported_text_files": 58,
     "shared_template_blob_sha": "f6d8b8fba284603604358d50eed285f722b0c3a0",
@@ -109,6 +109,28 @@
       "drive_upload": "NOT_PERFORMED",
       "current_promotion": "NOT_PERFORMED",
       "global_144_rule_approval": "HOLD"
+    },
+    "cover_month_format_qa": {
+      "scope": "RSH-002_ONLY__FORMAT_QA",
+      "change_id": "RD-LTX-CHG-107",
+      "shared_template_version": "2.4.0",
+      "template_blob_sha": "6fb77b6f09773e29bd1159a4dc4ec2d7f773aa06",
+      "researcher_adapter_blob_sha": "242418f5f4f14cf325f77833596717981322e7d3",
+      "project_config_blob_sha": "bc1617338164150f99427a66fc32faffe9e9c13d",
+      "project_logo_asset": "assets/PokharaUniversity.jpg",
+      "logo_scale_factor": 3,
+      "logo_prev_size_inches": 1.6,
+      "logo_new_slot_inches": 4.8,
+      "month_policy": "EACH_LATEX_BUILD_USES_COMPILATION_MONTH_YEAR",
+      "qa_render_date": "October, 2026",
+      "qa_pdf_sha256": "5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428",
+      "qa_pdf_bytes": 55177712,
+      "qa_pages": 115,
+      "visual_validation": "LOGO_TRUE_3X_W_AND_H__115_115_PAGES_RENDER__ALL_115_PAGE_TEXT_IDENTICAL_AFTER_MONTH_NORMALIZATION",
+      "full_144_rule_certification": "HOLD",
+      "drive_upload": "NOT_PERFORMED",
+      "current_scientific_checkpoint": "CP114_UNCHANGED",
+      "production_release": "NOT_PROMOTED"
     }
   },
   "debt": {
