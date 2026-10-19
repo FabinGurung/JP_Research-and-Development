@@ -1,0 +1,77 @@
+
+\subsection{Material, Section and Loading Inputs}
+The seven ETABS model definitions examined at $Z=0.35$ record a common M20 concrete material, HYSD415/HYSD500 reinforcement definitions, 125~mm floor slabs, and the load-pattern family summarized below. The tables summarize model inputs used in the analyses rather than introducing a new design calculation.
+
+\begin{table}[!htbp]
+\centering
+\caption{Principal material properties used in the ETABS models.}
+\label{tab:material_properties}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Material & $f_c$/$f_y$ (MPa) & $E$ (MPa) & $\nu$ & Use in source model \\
+\midrule
+M20 concrete & $f_c=20$ & 22360.68 & 0.20 & RC beams, columns and slabs \\
+HYSD415 rebar & $f_y=415$ & 200000 & -- & Longitudinal/confining reinforcement definitions \\
+HYSD500 rebar & $f_y=500$ & 200000 & -- & Longitudinal/confining reinforcement definitions \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Principal section families used in the seven ETABS models.}
+\label{tab:section_properties}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lll@{}}
+\toprule
+Element & Source section family & Nominal size \\
+\midrule
+Beam & M20 rectangular beam & 250$\times$355 mm and 250$\times$380 mm \\
+Column & M20 rectangular column & 350$\times$350 mm; selected stair columns 400$\times$400 mm \\
+Floor slab & M20 shell/slab & 125 mm \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Load patterns and seismic cases used in the seven-model analyses.}
+\label{tab:load_patterns}
+\small
+\begin{tabular}{@{}lp{8.5cm}@{}}
+\toprule
+Group & Recorded source definitions \\
+\midrule
+Gravity & Dead (self-weight), Floor Live, Roof Live, Staircase, Floor Finish \\
+Wall & Peripheral Wall, Internal Wall, Parapet Wall \\
+Seismic & EQx ULS, EQy ULS, EQx SLS, EQy SLS; 5\% accidental eccentricity was specified in the Regular model \\
+Mass source & Dead + floor finish + wall loads at full factor, with 0.30 of Floor Live and Staircase in the Regular model \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{NBC 105:2025 Response Spectrum Basis}
+The modal response-spectrum method uses the NBC 105:2025 spectral-shape-factor definition. Figure~\ref{fig:nbc105_mrsm_spectrum} reproduces the official code figure used as the spectral reference; the study demand cases use Soil Types C and D and the zone factors listed above.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.86\textwidth]{figures/ch1/nbc105_2025_mrsm_spectrum.png}
+\caption{NBC 105:2025 response spectrum (Source: NBC 105:2025 \cite{nbc105_2025}).}
+\label{fig:nbc105_mrsm_spectrum}
+\end{figure}
+
+Figure~\ref{fig:nbc105_mrsm_spectrum} shows the code spectral-shape basis used for modal response-spectrum analysis. The study applies this code-defined demand framework to the selected soil classes and seismic zone factors rather than deriving a separate project-specific response spectrum \cite{nbc105_2025}.
+
+\FloatBarrier
+
+\subsection{Modal Analysis and Mass-Participation Extraction}
+The modal-analysis dataset is retained as seven model-specific workbooks, one for each Regular, L, L1, L2, T, U, and Non-Parallel configuration. Each workbook contains the worksheet \texttt{Modal Participating Mass Ratios} with twelve modes for each retained demand block. The extracted fields include modal period, frequency, per-mode translational participation (UX and UY), and cumulative translational participation (SumUX and SumUY). The seven source workbooks are preserved with the LaTeX reproducibility project and were normalized into a 420-row dataset used to generate the modal tables. The workbook-to-table source mapping and file hashes are retained with the electronic project records.
+
+For the printed seven-model comparison, the Soil Type C, $Z=0.40$ block is used so that the modal summary is on the same matched basis as the principal response comparison in Chapter~4. The remaining source blocks are retained in the normalized electronic dataset and are not discarded.
+
+\input{generated/tables/modal_extraction_fields.tex}
+\FloatBarrier

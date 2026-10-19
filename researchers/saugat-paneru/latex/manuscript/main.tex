@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper]{report}
+\input{project_config.tex}
+\usepackage{pumlsc-shared}
+\usepackage{saugat_project_adapter}
+\usepackage{saugat_compat}
+\usepackage{subcaption}
+
+% Preserve the validated CP66 visible reference content: the CP66 list did not print DOI/URL fields.
+\AtEveryBibitem{\clearfield{doi}\clearfield{url}\clearfield{urldate}}
+
+% Project-specific title page retains the verified CP66 co-supervisor identity.
+\renewcommand{\PUTitlePage}{%
+  \thispagestyle{empty}%
+  \begin{center}
+  {\fontsize{16}{20}\selectfont Thesis for the Degree of \PUDegreeName\par}\vspace{14pt}
+  {\bfseries\fontsize{20}{24}\selectfont \PUThesisTitle\par}\vspace{26pt}
+  {\bfseries\fontsize{16}{20}\selectfont Supervised by \PUSupervisor\par}\vspace{10pt}
+  {\bfseries\fontsize{16}{20}\selectfont Co-supervised by \PUCoSupervisorOne\par}\vspace{26pt}
+  {\fontsize{16}{20}\selectfont A thesis submitted in partial fulfilment of the requirements for the degree of \PUDegreeName\par}\vfill
+  {\bfseries\fontsize{16}{20}\selectfont \PUStudentName\par}
+  \PURegistrationLine
+  {\bfseries\fontsize{16}{20}\selectfont \PUSchool\par\PUFaculty\par\PUUniversity, \PUUniversityLocation\par}\vspace{14pt}
+  {\bfseries\fontsize{16}{20}\selectfont \PUSubmissionDate\par}
+  \end{center}
+}
+
+\begin{document}
+\PUCoverPage
+\clearpage
+
+% Title is logical Roman i but numeral is hidden by the title page style.
+\pagenumbering{roman}\setcounter{page}{1}
+\PUTitlePage
+\ifPUIncludeDedication
+  \clearpage\thispagestyle{plain}\input{frontmatter/dedication.tex}
+\fi
+\PUDeclarationPage
+\PURecommendationPage
+\PUCertificatePage
+\PUAcknowledgementsPage
+\input{frontmatter/abbreviations.tex}
+\input{frontmatter/units.tex}
+\PUAbstractPage
+\PUTableOfContents
+\PUListOfTables
+\PUListOfFigures
+\ifPUIncludePlates\PUListOfPlates\fi
+\ifPUIncludeAppendices\PUListOfAppendices\fi
+
+\clearpage\pagenumbering{arabic}\setcounter{page}{1}
+\input{chapters/chapter1_introduction.tex}
+\input{chapters/chapter2_literature_review.tex}
+\input{chapters/chapter3_methodology.tex}
+\input{chapters/chapter4_results_discussion.tex}
+\input{chapters/chapter5_conclusion.tex}
+
+\clearpage
+% Retain the approved final two reference positions.
+\nocite{is456,sthapita2022mrt}
+\printbibliography[heading=pubibliography]
+
+\ifPUIncludeAppendices
+  \input{appendices/appendix1_hinge.tex}
+\fi
+\end{document}

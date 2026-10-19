@@ -1,0 +1,27 @@
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[>=Latex,node distance=1.2cm]
+\node[draw,rounded corners,align=center,text width=0.24\textwidth,minimum height=1.15cm] (a) {\textbf{NBC 205:1994}\\Mandatory Rules of Thumb (MRT)};
+\node[draw,rounded corners,align=center,text width=0.28\textwidth,minimum height=1.15cm,right=of a] (b) {\textbf{Draft Final NBC 205:2012}\\Ready-to-Use detailing reference};
+\node[draw,rounded corners,align=center,text width=0.25\textwidth,minimum height=1.15cm,right=of b] (c) {\textbf{NBC 205:2024}\\Ready-to-Use Detailing (RUD)};
+\draw[->,thick] (a) -- (b);
+\draw[->,thick] (b) -- (c);
+\end{tikzpicture}
+\caption{Evolution of NBC 205 provisions.}
+\label{fig:nbc205_evolution}
+\end{figure}
+
+Figure~\ref{fig:nbc205_evolution} shows the progression from the earlier Mandatory Rules of Thumb to the 2012 ready-to-use reference and the current NBC 205:2024 RUD provisions. The sequence is used to distinguish the historical design basis from the current detailing framework assessed in this thesis.
+
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/ch1/nbc105_2025_seismic_zone_map.png}
+\caption{Seismic zoning of Nepal (Source: NBC 105:2025 \cite{nbc105_2025}).}
+\label{fig:nepal_seismic_zoning}
+\end{figure}
+
+Figure~\ref{fig:nepal_seismic_zoning} places the study within the national seismic-demand framework. The zone factors used in the analytical cases represent the code-defined regional demand levels and are applied together with the selected soil classes in the subsequent response evaluation \cite{nbc105_2025}.
+
+\FloatBarrier

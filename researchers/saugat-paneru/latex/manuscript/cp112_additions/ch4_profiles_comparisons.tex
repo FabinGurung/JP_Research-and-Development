@@ -1,0 +1,99 @@
+
+\subsection{Complete Governing Drift Profiles}
+Figures~\ref{fig:drift_profiles_cp112a} and~\ref{fig:drift_profiles_cp112b} expand the governing-drift comparison from a single maximum to the complete main-storey ULS profiles for Soil Type C, $Z=0.40$. The profiles confirm that Story~2 governs the reported maximum for every model; the T configuration is the only model in which the Y-direction value slightly exceeds the X-direction value at the governing storey (0.004618 versus 0.004597).
+
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[t]{0.48\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/cp112_generated/drift_regular.png}\subcaption{Regular}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/cp112_generated/drift_l.png}\subcaption{L-shaped}
+\end{subfigure}
+
+\begin{subfigure}[t]{0.48\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/cp112_generated/drift_l1.png}\subcaption{L1-shaped}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/cp112_generated/drift_l2.png}\subcaption{L2-shaped}
+\end{subfigure}
+\caption{ULS drift profiles: Regular, L, L1 and L2.}
+\label{fig:drift_profiles_cp112a}
+\end{figure}
+
+Figure~\ref{fig:drift_profiles_cp112a} shows that the governing drift occurs at Story~2 for the Regular, L, L1 and L2 configurations under the matched Soil Type C, $Z=0.40$ case. The profile shapes are similar in general form, but the magnitudes differ, with L2 showing the lowest governing drift among these four models.
+
+
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[t]{0.48\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/cp112_generated/drift_t.png}\subcaption{T-shaped}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/cp112_generated/drift_u.png}\subcaption{U-shaped}
+\end{subfigure}
+
+\begin{subfigure}[t]{0.48\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/cp112_generated/drift_non_parallel.png}\subcaption{Non-Parallel}
+\end{subfigure}
+\caption{ULS drift profiles: T, U and Non-Parallel.}
+\label{fig:drift_profiles_cp112b}
+\end{figure}
+
+Figure~\ref{fig:drift_profiles_cp112b} confirms Story~2 as the governing level for the T, U and Non-Parallel configurations. The U-shaped model has the largest governing drift in the seven-model comparison, while the Non-Parallel model remains lower under the same matched demand case.
+
+\FloatBarrier
+
+\subsection{Percentage Change Relative to the Regular Reference}
+Table~\ref{tab:percent_change_regular_cp112} expresses selected response quantities relative to the Regular reference using $(R_i-R_{reg})/R_{reg}\times100$. The storey-shear percentage is based on the available EQx Soil C, $Z=0.40$ Story-1 results because a corresponding EQy shear series is unavailable.
+
+\begin{table}[!htbp]
+\centering
+\caption{Percentage change from the Regular reference for selected response quantities.}
+\label{tab:percent_change_regular_cp112}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Model & EQx shear & Max ULS drift & Max CM--CR & Peak pushover shear & Max PP disp. \\
+ & (\%) & (\%) & (\%) & (\%) & (\%) \\
+\midrule
+Regular & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 \\
+L & -10.6 & -0.5 & +46.0 & -2.0 & -0.6 \\
+L1 & -24.2 & -4.5 & +60.8 & -12.5 & -5.6 \\
+L2 & -14.2 & -15.9 & +198.0 & -1.8 & -18.7 \\
+T & -23.5 & -3.5 & +19.3 & -10.7 & -4.8 \\
+U & -5.3 & +3.6 & +6.5 & +2.5 & +3.9 \\
+Non-Parallel & -8.6 & -15.5 & +210.8 & -0.5 & -18.1 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The comparison demonstrates why a single irregularity ranking is inappropriate. L2 and Non-Parallel show much larger CM--CR separation than the Regular reference while simultaneously exhibiting lower governing drift and lower maximum performance-point displacement. Conversely, U is close to the Regular model in EQx storey shear but exceeds it slightly in governing drift, first-peak pushover capacity, and maximum performance-point displacement. Geometry therefore changes different response measures in different directions.
+
+\begin{table}[!htbp]
+\centering
+\caption{Detailed CM--CR coordinates at the governing main-storey separation for each model.}
+\label{tab:cmcr_detailed_cp112}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llrrrrrrr@{}}
+\toprule
+Model & Case / story & CM-X & CM-Y & CR-X & CR-Y & $\Delta X$ & $\Delta Y$ & Resultant \\
+ & & \multicolumn{7}{c}{(m)} \\
+\midrule
+Regular & D,0.35 / Story2 & 5.6885 & 3.1168 & 6.0619 & 2.9802 & -0.3734 & 0.1366 & 0.3976 \\
+L & C,0.25 / Story1 & 4.8491 & 3.3662 & 5.4237 & 3.2835 & -0.5746 & 0.0827 & 0.5805 \\
+L1 & C,0.25 / Story1 & 4.5223 & 3.8090 & 5.1408 & 3.6464 & -0.6185 & 0.1626 & 0.6395 \\
+L2 & C,0.25 / Story1 & 3.7215 & 3.1287 & 4.8085 & 3.6021 & -1.0870 & -0.4734 & 1.1856 \\
+T & C,0.30 / Story2 & 5.6314 & 3.7622 & 6.1018 & 3.6945 & -0.4704 & 0.0677 & 0.4752 \\
+U & C,0.25 / Story2 & 5.6880 & 2.9827 & 6.0731 & 2.8046 & -0.3851 & 0.1781 & 0.4243 \\
+Non-Parallel & C,0.25 / Story2 & 3.7987 & 3.1802 & 4.9046 & 3.7352 & -1.1059 & -0.5550 & 1.2374 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+The large separations in L2 and Non-Parallel arise from different geometric mechanisms. L2 combines a stepped re-entrant topology with an asymmetric distribution of plan area, while the Non-Parallel model combines area deficit with skewed framing orientation. The Regular, L, L1, T and U cases have smaller governing separations, but their maxima occur under different demand cases and storeys. CM--CR separation is therefore retained as a descriptive mass--stiffness eccentricity measure, not as a substitute for the NBC diaphragm-edge torsional-irregularity ratio.
+\FloatBarrier

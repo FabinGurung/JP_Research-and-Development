@@ -1,0 +1,8 @@
+model,direction,governing_story,max_abs_drift,limit,utilization_pct
+Regular,X,Story2,0.004784,0.025,19.136
+L,X,Story2,0.004758,0.025,19.032
+L1,X,Story2,0.00457,0.025,18.28
+L2,X,Story2,0.004025,0.025,16.099999999999998
+T,Y,Story2,0.004618,0.025,18.472
+U,X,Story2,0.004954,0.025,19.816
+Non-Parallel,X,Story2,0.004041,0.025,16.164
