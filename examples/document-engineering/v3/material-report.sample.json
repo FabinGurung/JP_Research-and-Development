@@ -5,23 +5,23 @@
     "document_ref": "DEMO-MATERIALS-001",
     "organization_id": "DEMO-ORG-001",
     "issue_date": "2026-10-12",
-    "project_identifier": "DEMO-PROJECT-001",
+    "project_identifier": "Example Residence",
     "report_period": "Illustrative week ending 2026-10-12",
-    "site": "Sample construction site (fictional)",
-    "receipts_reference": "Example gate entry register DEMO-GRN (not an actual transaction)",
-    "usage_reference": "Example usage register DEMO-USE (not an actual transaction)",
+    "site": "example construction site (illustrative)",
+    "receipts_reference": "Example gate entry register illustrative reference (not an actual transaction)",
+    "usage_reference": "Example usage register illustrative reference (not an actual transaction)",
     "checked_by": "Not checked; authorized site reviewer required."
   },
   "table_rows": [
     {
-      "description": "Sample cement receipts",
+      "description": "example cement receipts",
       "quantity": "20",
       "unit": "bags",
       "amount": "20.00",
       "source_ref": "FICTIONAL-DEMO-NOT-VALID"
     },
     {
-      "description": "Sample cement issued",
+      "description": "example cement issued",
       "quantity": "8",
       "unit": "bags",
       "amount": "8.00",
