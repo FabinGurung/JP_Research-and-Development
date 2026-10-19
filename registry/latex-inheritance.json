@@ -24,9 +24,12 @@
       "tower": "controls/latex/tower.json",
       "template": "controls/latex/template/pumlsc-shared.sty",
       "local_configuration": null,
-      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "configuration_status": "GIT_CP114_SOURCE_IMPORTED__SHARED_TEMPLATE_116P_QA__RELEASE_PARITY_PENDING",
       "no_local_base_copy": true,
-      "unique_extension_ids": [],
+      "unique_extension_ids": [
+        "RD-LTX-EXT-SAUGAT-001",
+        "RD-LTX-EXT-SAUGAT-002"
+      ],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
       "semantic_checker": "scripts/latex/check_authorial_voice.py"
     },
