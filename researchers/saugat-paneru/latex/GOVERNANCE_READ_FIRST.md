@@ -1,3 +1,5 @@
+> **CURRENT GIT SOURCE MIGRATION — 2026-10-19:** The CP114 58-file editable text/code source has now been imported on GitHub main: [source commit 2ba8728](https://github.com/FabinGurung/JP_Research-and-Development/commit/2ba8728cdf433899c6c10c108b9dae6740dc968a). [Shared-template QA candidate PDF (116 pages, exact Times New Roman)](https://drive.google.com/file/d/1JbN0d-lOEMCgpFxyXKRj7FhNFeGpuuxr/view) is compiled and rendered, but **not promoted**; the original CP114 115-page PDF remains CURRENT. Existing text/figures/data were not scientifically rewritten. See [machine manifest](source-baseline.json). Any older “source not yet imported” statements below are historic pre-migration status notes.
+
 # Saugat Paneru — LaTeX source-control entry
 
 **Effective Git/Drive authority:** [R&D Git/Drive READ FIRST](../../../docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md) · [machine contract](../../../controls/git-drive-authority.json).
