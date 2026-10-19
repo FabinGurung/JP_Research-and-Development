@@ -3,7 +3,7 @@
   "researcher_id": "RSH-002",
   "researcher_slug": "saugat-paneru",
   "updated_at": "2026-10-19",
-  "source_control_admission": "GIT_CONTROL_BRIDGE_VERIFIED__FULL_MANUSCRIPT_SOURCE_NOT_YET_IMPORTED",
+  "source_control_admission": "VERIFIED_GIT_TEXT_SOURCE_IMPORTED__EXACT_TNR_116P_TEMPLATE_QA_CANDIDATE",
   "authority_policy": "docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md",
   "current_scientific_manuscript": {
     "checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
@@ -30,7 +30,7 @@
       "bib_files": 1,
       "project_specific_sty_files": 2,
       "archive_inventory_sha256": "b71a00856fc5ed7507a4601d0a796bd984f861ba9c194aa507538f2fa0e7bc5f",
-      "source_in_github": "NOT_YET_ADMITTED",
+      "source_in_github": "VERIFIED_TEXT_SOURCE_ADMITTED_IN_GIT_2ba8728",
       "source_in_drive": "PROVIDER_VERIFIED"
     },
     "qa_drive_id": "1uzUg5XAnz-M3xKhQ-CFARsYBtoBUoaBY",
@@ -49,14 +49,37 @@
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
     "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
     "saugat_cp114_compiled_with_shared_template": false,
-    "status": "SOURCE_POINTERS_IN_GIT__FULL_TEMPLATE_MIGRATION_PENDING"
+    "status": "FULL_TEXT_SOURCE_IMPORTED__SHARED_TEMPLATE_QA_PASS__CP114_CURRENT_RETAINED",
+    "source_import_commit": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
+    "imported_text_files": 58,
+    "shared_template_blob_sha": "f6d8b8fba284603604358d50eed285f722b0c3a0",
+    "shared_template_saugat_qa_candidate": true,
+    "source_content_parity": "33_OF_33_SUBORDINATE_TEX_BIB_SOURCES_BYTE_IDENTICAL_TO_CP114",
+    "binary_assets_held_in_drive": 143,
+    "project_adapter": "researchers/saugat-paneru/latex/manuscript/saugat_project_adapter.sty",
+    "pdf_candidate": {
+      "status": "QA_CANDIDATE_NOT_CURRENT",
+      "drive_id": "1JbN0d-lOEMCgpFxyXKRj7FhNFeGpuuxr",
+      "folder_id": "1Nz2CRnrnYvRXEFHzs29mdvWWw3bPIgGi",
+      "sha256": "db134c2b4254fe84ea6aceff966620407b08b0f5f3d63487554ad6777a5565f8",
+      "bytes": 55177717,
+      "pages": 116,
+      "exact_times_new_roman": true,
+      "render_qa": "116_OF_116_PASS",
+      "zero_tex_errors": true,
+      "zero_overfull": true,
+      "zero_undefined_refs": true,
+      "zero_biber_warnings": true,
+      "template_parity": "ONE_PAGE_REFLOW_VS_115P_CP114__HOLD_PROMOTION"
+    }
   },
   "debt": {
-    "scientific_provenance": "OPEN_EVIDENCE_GATED",
+    "scientific_provenance": "CP114_ADMITTED_AS_IS__NOT_A_SOURCE_MIGRATION_BLOCKER",
     "legacy_project_registrar": "NOT_RUN_AT_CP114",
     "legacy_main_library_sync": "NOT_RUN_AT_CP114",
     "disposition": "HISTORICAL_UNACKNOWLEDGED__DO_NOT_SYNTHESIZE_ACK",
     "new_git_managed_versioning": "ACTIVE_FROM_2026-10-11_POLICY",
-    "full_text_source_import": "PENDING_PUBLIC_SAFE_SOURCE_ADMISSION_AND_SHARED_TEMPLATE_PARITY_QA"
+    "full_text_source_import": "CLOSED_GIT_SOURCE_IMPORTED",
+    "historical_ack": "LOCAL_GLOBAL51_MAIN49_PLUS_LATER_UNMERGED_EVENTS__NO_FALSE_ACK"
   }
 }
