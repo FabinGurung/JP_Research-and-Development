@@ -3,7 +3,7 @@
   "researcher_id": "RSH-002",
   "researcher_slug": "saugat-paneru",
   "updated_at": "2026-10-19",
-  "source_control_admission": "VERIFIED_GIT_TEXT_SOURCE_IMPORTED__EXACT_TNR_116P_TEMPLATE_QA_CANDIDATE",
+  "source_control_admission": "VERIFIED_GIT_SOURCE_IMPORTED__SHARED_TEMPLATE_115P_CP114_TOC_PARITY_LOCAL_QA__DRIVE_PROMOTION_PENDING",
   "authority_policy": "docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md",
   "current_scientific_manuscript": {
     "checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
@@ -49,14 +49,14 @@
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
     "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
     "saugat_cp114_compiled_with_shared_template": false,
-    "status": "FULL_TEXT_SOURCE_IMPORTED__SHARED_TEMPLATE_QA_PASS__CP114_CURRENT_RETAINED",
+    "status": "FULL_TEXT_SOURCE_IMPORTED__SHARED_TEMPLATE_CP114_115P_LOCAL_QA_PASS__CP114_CURRENT_RETAINED",
     "source_import_commit": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
     "imported_text_files": 58,
     "shared_template_blob_sha": "f6d8b8fba284603604358d50eed285f722b0c3a0",
     "shared_template_saugat_qa_candidate": true,
     "source_content_parity": "33_OF_33_SUBORDINATE_TEX_BIB_SOURCES_BYTE_IDENTICAL_TO_CP114",
     "binary_assets_held_in_drive": 143,
-    "project_adapter": "researchers/saugat-paneru/latex/manuscript/saugat_project_adapter.sty",
+    "project_adapter": "researchers/saugat-paneru/latex/extensions/saugat_project_adapter.sty",
     "pdf_candidate": {
       "status": "QA_CANDIDATE_NOT_CURRENT",
       "drive_id": "1JbN0d-lOEMCgpFxyXKRj7FhNFeGpuuxr",
@@ -98,6 +98,17 @@
       "post_main": "13kRkolAP_3vNko7gR0ThZKPdl3Msk7MAPFU29B1rRMs",
       "post_local": "1U2G_OczMx5jidz3IbofRc-plbSHx4VgpIzvG3HTEUX0",
       "limitation": "LATEX_SEQ026_028_CLOSED_LANE_ONLY__GIT_CUTOVER__NO_RETROACK"
+    },
+    "scoped_format_parity_repair": {
+      "branch": "saugat/cp114-toc-parity-20261019",
+      "adapter_blob_sha": "1e73c5f80409743ada934a740322678f98db288f",
+      "qa_report": "researchers/saugat-paneru/latex/qa/CP114_SHARED_TEMPLATE_TOC_PARITY_20261019.md",
+      "shared_template_unchanged": true,
+      "local_pdf_sha256": "2f8c4566377df5af4efa23e4d2804ced8e415b9764f90c63f2e0003557f1ab59",
+      "pages": 115,
+      "drive_upload": "NOT_PERFORMED",
+      "current_promotion": "NOT_PERFORMED",
+      "global_144_rule_approval": "HOLD"
     }
   },
   "debt": {
