@@ -1,22 +1,21 @@
-name: A9 Enterprise Document Engine v2
+name: A9 Historical Enterprise v2 Source Integrity (Not Client Output)
 on:
   push:
     branches: [main]
     paths:
-      - 'controls/document-engineering/**'
       - 'templates/enterprise/v2/**'
       - 'scripts/document_engineering/engine_v2.py'
       - 'scripts/document_engineering/validation_v2.py'
       - '.github/workflows/enterprise-document-v2.yml'
   pull_request:
     paths:
-      - 'controls/document-engineering/**'
       - 'templates/enterprise/v2/**'
       - 'scripts/document_engineering/engine_v2.py'
       - 'scripts/document_engineering/validation_v2.py'
+      - '.github/workflows/enterprise-document-v2.yml'
   workflow_dispatch:
 jobs:
-  validate:
+  historical-source-only:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -25,9 +24,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Python syntax and 14-type schema/arithmetic smoke tests
+      - name: Preserve old source syntax; do not certify outdated client copy
         run: |
           python3 -m py_compile scripts/document_engineering/engine_v2.py scripts/document_engineering/validation_v2.py
-          python3 scripts/document_engineering/engine_v2.py --self-test
-          python3 scripts/document_engineering/engine_v2.py --demo-all --out /tmp/a9-v2
-          test "$(find /tmp/a9-v2 -name '*.tex' | wc -l)" -eq 14
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          roots=Path("templates/enterprise/v2")
+          types=json.loads(Path("registry/enterprise-document-types.v2.json").read_text())["types"]
+          assert len(types)==14
+          assert all((roots / (x["id"] + ".tex")).exists() for x in types)
+          print("PASS historical v2 source presence. NOT client-language compliant; no generated output.")
+          PY

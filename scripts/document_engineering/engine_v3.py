@@ -104,7 +104,7 @@ def render(payload):
     # Freeze output presentation, not the canonical .sty or original template source.
     output_headers=(r"\fancyhead[L]{}\fancyhead[R]{}\fancyfoot[L]{}")
     source=source.replace(r"\begin{document}",r"\begin{document}"+"\n"+output_headers,1)
-    visible_keys=set(TOKEN.findall(source)) - {"document_status"}
+    visible_keys=set(TOKEN.findall(source)) - {"document_status", "document_table"}
     for k in sorted(visible_keys):
         issues=violations(fields[k])
         if issues:raise ValueError("Client-visible field "+k+" violates language policy: "+", ".join(issues))

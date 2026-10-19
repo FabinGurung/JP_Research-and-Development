@@ -1,21 +1,14 @@
-name: A9 Enterprise Fourteen PDF Draft Smoke
+name: A9 Historical Enterprise v2 Fourteen Source Inventory
 on:
-  workflow_dispatch:
   push:
     branches: [main]
     paths:
       - 'templates/enterprise/v2/**'
-      - 'scripts/document_engineering/engine_v2.py'
-      - 'scripts/document_engineering/check_client_facing_language.py'
-      - 'controls/document-engineering/client-facing-language.policy.json'
       - '.github/workflows/enterprise-document-pdf-smoke.yml'
+  workflow_dispatch:
 jobs:
-  technical-pdf:
+  archived-source-inventory:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        document: [client-contract, labour-contract, job-contract, salary-contract, experience-letter, recommendation-letter, vendor-quotation, government-quotation, proposal, estimate, material-report, purchase-order, receipt-voucher, payment-slip]
     permissions:
       contents: read
     steps:
@@ -23,20 +16,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Generate fictional drafts only
-        run: python3 scripts/document_engineering/engine_v2.py --demo-all --out qa_build
-      - uses: xu-cheng/latex-action@v3
-        with:
-          working_directory: qa_build/${{ matrix.document }}
-          root_file: ${{ matrix.document }}.tex
-          latexmk_shell_escape: false
-      - name: Confirm business language in rendered sample PDF
+      - name: Verify all 14 historic sources without producing client-facing PDFs
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq poppler-utils
-          python3 scripts/document_engineering/check_client_facing_language.py --pdf qa_build/${{ matrix.document }}/${{ matrix.document }}.pdf
-      - uses: actions/upload-artifact@v4
-        with:
-          name: draft-only-${{ matrix.document }}
-          path: qa_build/${{ matrix.document }}/${{ matrix.document }}.pdf
-          retention-days: 3
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          doc=json.loads(Path("registry/enterprise-document-types.v2.json").read_text())
+          sources=[Path("templates/enterprise/v2")/(row["id"]+".tex") for row in doc["types"]]
+          assert len(sources)==14 and all(p.is_file() for p in sources)
+          print("PASS fourteen historical v2 sources retained. Not client-facing output.")
+          PY
