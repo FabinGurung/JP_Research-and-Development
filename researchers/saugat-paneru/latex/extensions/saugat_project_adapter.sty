@@ -20,7 +20,8 @@
 \defbibheading{pubibliography}{\chapter*{REFERENCES}\addcontentsline{toc}{chapter}{REFERENCES}}
 \setcounter{secnumdepth}{3}\setcounter{tocdepth}{3}
 % Local, source-verified student and supervisor metadata is in project_config.tex.
-\newcommand{\PULogo}{\includegraphics[width=1.6in,height=1.6in,keepaspectratio]{\PULogoFile}}
+% University logo size comes from the shared PU template; image stays local.
+\newcommand{\PULogo}{\PUScaledCoverLogo{\PULogoFile}}
 \newcommand{\PURegistrationLine}{\par{\fontsize{12}{18}\selectfont (\PURegistrationNumber)}\par\vspace{14pt}}
 \newcommand{\PUCoverPage}{%
 \thispagestyle{empty}\begin{center}
@@ -50,7 +51,7 @@
 \makeatother
 \newcounter{puappendix}
 \renewcommand{\thepuappendix}{\arabic{puappendix}}
-\newcommand{\PUAppendix}[1]{\clearpage\stepcounter{puappendix}\addcontentsline{loa}{section}{Appendix \thepuappendix: #1}\addcontentsline{toc}{chapter}{Appendix \thepuappendix: #1}\begin{center}\bfseries\fontsize{14}{18}\selectfont Appendix \thepuappendix: #1\end{center}\vspace{24pt}}
+\newcommand{\PUAppendix}[1]{\clearpage\stepcounter{puappendix}\addcontentsline{loa}{saugatappendix}{Appendix \thepuappendix. #1}\addcontentsline{toc}{chapter}{Appendix \thepuappendix: #1}\begin{center}\bfseries\fontsize{14}{18}\selectfont Appendix \thepuappendix: #1\end{center}\vspace{24pt}}
 \newenvironment{PUAbbreviations}{\clearpage\addcontentsline{toc}{chapter}{Abbreviations/Acronyms}\PUListPrelimHeading{Abbreviations/Acronyms}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\begin{tabular}{@{}p{2.5cm}p{\dimexpr\textwidth-2.5cm-2\tabcolsep\relax}@{}}}{\end{tabular}\endgroup}
 \newenvironment{PUUnits}{\clearpage\addcontentsline{toc}{chapter}{Units and Conversions}\PUListPrelimHeading{Units and Conversions}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\begin{tabular}{@{}p{2.5cm}p{\dimexpr\textwidth-2.5cm-2\tabcolsep\relax}@{}}}{\end{tabular}\endgroup}
 \newcommand{\PUTableCompact}{\fontsize{10}{12}\selectfont}
@@ -76,3 +77,29 @@
 \setlength{\cftfignumwidth}{6.5em}
 \renewcommand{\cfttabpresnum}{Table\ }
 \setlength{\cfttabnumwidth}{6.5em}
+
+% CP114 front-matter parity override: narrow, researcher-specific legacy list
+% presentation. The shared PU engine continues to own geometry, font, body,
+% chapter headings, and general format defaults. Ref: CP114 official 115p.
+\renewcommand{\cftdotsep}{1.5}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchapfont}{\normalfont\fontsize{12}{14.4}\selectfont}
+\renewcommand{\cftchappagefont}{\normalfont\fontsize{12}{14.4}\selectfont}
+\renewcommand{\cftsecfont}{\normalfont\fontsize{12}{14.4}\selectfont}
+\renewcommand{\cftsecpagefont}{\normalfont\fontsize{12}{14.4}\selectfont}
+\renewcommand{\cftsubsecfont}{\normalfont\fontsize{12}{14.4}\selectfont}
+\renewcommand{\cftsubsecpagefont}{\normalfont\fontsize{12}{14.4}\selectfont}
+\setlength{\cftbeforechapskip}{4pt}
+\setlength{\cftbeforesecskip}{0pt}
+\cftsetrmarg{6.5em}
+\cftsetpnumwidth{3.8em}
+\setlength{\cftfignumwidth}{4.8em}
+\setlength{\cfttabnumwidth}{5.4em}
+\newcommand{\SaugatCPListTitle}[1]{\begin{center}\bfseries\fontsize{14}{18}\selectfont #1\end{center}\vspace{12pt}}
+\makeatletter
+\newcommand{\l@saugatappendix}{\@dottedtocline{0}{0em}{7em}}
+\renewcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{chapter}{Table of contents}\SaugatCPListTitle{Table of contents}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{toc}\endgroup}
+\renewcommand{\PUListOfTables}{\clearpage\addcontentsline{toc}{chapter}{List of tables}\SaugatCPListTitle{List of tables}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lot}\endgroup}
+\renewcommand{\PUListOfFigures}{\clearpage\addcontentsline{toc}{chapter}{List of figures}\SaugatCPListTitle{List of figures}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lof}\endgroup}
+\renewcommand{\PUListOfAppendices}{\clearpage\addcontentsline{toc}{chapter}{List of appendices}\SaugatCPListTitle{List of appendices}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{loa}\endgroup}
+\makeatother

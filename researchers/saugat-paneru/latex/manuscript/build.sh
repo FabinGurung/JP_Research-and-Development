@@ -14,6 +14,8 @@ elif [[ "$mode" == production ]]; then
   fc-match -f '%{family}' 'Times New Roman' | grep -q '^Times New Roman' || { echo 'Exact Times New Roman not registered' >&2; exit 3; }
 else echo 'usage: ./build.sh preview|production' >&2;exit 2;fi
 mkdir -p "$here/.build"
+# Calendar-driven title-page month follows Nepal local time at month boundaries.
+export TZ=Asia/Kathmandu
 cd "$here"
 export TEXINPUTS="$template/:$repo/researchers/saugat-paneru/latex/extensions/:${TEXINPUTS:-}:"
 for pass in 1 2 3 4; do

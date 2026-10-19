@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
@@ -123,5 +123,24 @@
     "default_if_invoked": "30pt",
     "scope": "OPT_IN_ONLY_NO_CHANGE_TO_EXISTING_COVERS",
     "origin": "Safal v1.12 corrected large under-logo gap; not a universal compulsory 30pt gap"
+  },
+  "cover_date_helpers": {
+    "change_id": "RD-LTX-CHG-107",
+    "template": "controls/latex/template/pumlsc-shared.sty",
+    "logo_macro": "\\PUScaledCoverLogo{<project-owned image path>}",
+    "logo_scale_parameter": "\\PUCoverLogoScale",
+    "logo_legacy_default": 1,
+    "month_macro": "\\PUCurrentMonthYear",
+    "date_binding_policy": "OPT_IN_BY_RESEARCHER_PROJECT_CONFIG__HISTORIC_RELEASES_RETAIN_FIXED_DATES",
+    "saugat_opt_in": {
+      "researcher_id": "RSH-002",
+      "scale": 3,
+      "date_mode": "BUILD_MONTH",
+      "qa_pdf_sha256": "5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428",
+      "pages": 115,
+      "pdf_release": "NOT_PROMOTED"
+    },
+    "independent_researcher_render_certification": "NOT_ASSERTED",
+    "all_144_university_rules_certification": "HOLD"
   }
 }

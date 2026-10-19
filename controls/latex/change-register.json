@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 106,
+  "next_number": 108,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -105,6 +105,43 @@
       "git_commit_sha_after_merge": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
       "global_propagation": "FORBIDDEN_UNTIL_CROSS_RESEARCHER_REGRESSION",
       "scientific_boundary": "CP114_CONTENT_PRESERVED"
+    },
+    {
+      "change_id": "RD-LTX-CHG-106",
+      "researcher_id": "RSH-002",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Restore Saugat CP114 exact-TNR front-matter TOC/LOT/LOF and appendix-list typography through the registered scoped adapter without altering the shared template or scientific source.",
+      "source_paths": [
+        "researchers/saugat-paneru/latex/extensions/saugat_project_adapter.sty"
+      ],
+      "before_after_qa_evidence": "Old Git candidate 116 pages, SHA db134c2b4254fe84ea6aceff966620407b08b0f5f3d63487554ad6777a5565f8; repaired locally from exact Git blob 1e73c5f80409743ada934a740322678f98db288f + frozen CP114 assets + private TNR: 115 A4 pages, SHA 2f8c4566377df5af4efa23e4d2804ced8e415b9764f90c63f2e0003557f1ab59; 115/115 pages rendered, front matter 1–10 identical extracted text, appendices identical, all images present; Drive upload and production CURRENT promotion pending. Exact evidence: researchers/saugat-paneru/latex/qa/CP114_SHARED_TEMPLATE_TOC_PARITY_20261019.md.",
+      "pu_rule_references": [],
+      "disposition": "VALIDATED",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "FORBIDDEN_UNTIL_INDEPENDENT_CROSS_RESEARCHER_PARITY",
+      "scientific_boundary": "ALL_ADMITTED_CP114_SCIENTIFIC_SUBFILES_UNCHANGED",
+      "production_status": "LOCAL_QA_ONLY_NOT_CURRENT"
+    },
+    {
+      "change_id": "RD-LTX-CHG-107",
+      "researcher_id": "RSH-002",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Add globally reusable, opt-in scaled cover university logo and current-compilation month/year macros to one canonical shared template; Saugat opts into 3x original logo size (1.6in slot to 4.8in) and rolling date. No change to other researchers without explicit configuration.",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "researchers/saugat-paneru/latex/extensions/saugat_project_adapter.sty",
+        "researchers/saugat-paneru/latex/manuscript/project_config.tex"
+      ],
+      "before_after_qa_evidence": "LOCAL Saugat full XeLaTeX/Biber/XeLaTeX/XeLaTeX stabilized with private exact TNR; 115 A4 pages; final logo width and height exactly 3x the previous 115-page candidate image bbox; October 2026 present on both title pages; page text identical to previous approved 115-page Git QA candidate after replacing October 2026 with September 2026 (115/115 pages). Candidate PDF SHA 5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428; source and local output are QA only, not a Drive release. Final measured exact factors ~3.00002; all 115 pages rendered. Source QA zip SHA 52200665d4340070c83384325beeea690f4cd67898bf9d8c86754019123e25c8.",
+      "pu_rule_references": [],
+      "disposition": "VALIDATED",
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "git_commit_sha_after_merge": null,
+      "regression_scope": "SAUGAT_EXACT_FONT_LOCAL_115P_PASS__GLOBAL_OPTIONAL_APIS_ONLY__CROSS_RESEARCHER_PARITY_NOT_CERTIFIED",
+      "global_propagation": "API_AVAILABLE_BUT_OPT_IN_ONLY__NO_FORCED_OTHER_RESEARCHER_COVER_CHANGE",
+      "scientific_boundary": "33_OF_33_PROTECTED_CP114_SCIENTIFIC_TEX_AND_BIB_SOURCE_NOT_EDITED",
+      "production_status": "NEW_QA_ONLY__CP114_CURRENT_RETAINED"
     }
   ],
   "required_fields": [

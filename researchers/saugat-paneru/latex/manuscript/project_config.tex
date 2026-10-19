@@ -22,7 +22,11 @@
 \def\PUFaculty{Faculty of Science and Technology}
 \def\PUUniversity{Pokhara University}
 \def\PUUniversityLocation{Nepal}
-\def\PUSubmissionDate{September, 2026}
+% Compile-time month/year is intentional for this new QA candidate.
+% Historical CP114 production uses its archived, fixed date unchanged.
+\def\PUSubmissionDate{\PUCurrentMonthYear}
+% Saugat opts into the requested threefold size of the legacy 1.6in logo slot.
+\def\PUCoverLogoScale{3.0}
 \def\PULogoFile{assets/PokharaUniversity.jpg}
 \def\PUBibliographyFile{references.bib}
 \def\PUDepartment{}
