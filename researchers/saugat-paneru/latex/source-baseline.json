@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "researcher_slug": "saugat-paneru",
+  "updated_at": "2026-10-19",
+  "source_control_admission": "GIT_CONTROL_BRIDGE_VERIFIED__FULL_MANUSCRIPT_SOURCE_NOT_YET_IMPORTED",
+  "authority_policy": "docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md",
+  "current_scientific_manuscript": {
+    "checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
+    "latex_lane_sequence": "LATEX-SEQ-028",
+    "latex_lane_commit": "SAUGAT-LATEX-20261007-CP114-V022-TITLE-PLAN-SUBFIGURE-HUMANIZATION-TNR-0028",
+    "full_title": "Seismic Assessment of Low-Rise Reinforced Concrete Buildings in Nepal: Applicability of NBC 205 Ready-to-Use Guidelines",
+    "live_current_drive_id": "1138hLUcRPPzXay5p-cniLV5R8nk3oedJ",
+    "release_folder_id": "1mDMwrxZDLe9msebAG6H7dGuoo-ONxLHL",
+    "read_first_doc_id": "1eSQ8uNp-ysRGU8PI06HiDjxZsswQmxYEtUb__k5hhLk",
+    "production_pdf": {
+      "drive_id": "1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh",
+      "sha256": "55efba49159d1f5931d042f539c3f3efcd22df0684b1e565d27819a0a6c935cb",
+      "size_bytes": 55177159,
+      "pages": 115,
+      "exact_times_new_roman": true,
+      "evidence": "VERIFIED_DRIVE_AUTHORITY_AND_LOCAL_SOURCE_HASH"
+    },
+    "source_package": {
+      "drive_id": "1yL3G-EUGA32FDBhkdImXk9NManfW_vyA",
+      "sha256": "3af05ae5647de3311ac2941c387d3513fe76a5d29e8d6b6aaae152fb1a653bef",
+      "size_bytes": 58589314,
+      "archive_file_count": 210,
+      "tex_files": 33,
+      "bib_files": 1,
+      "project_specific_sty_files": 2,
+      "archive_inventory_sha256": "b71a00856fc5ed7507a4601d0a796bd984f861ba9c194aa507538f2fa0e7bc5f",
+      "source_in_github": "NOT_YET_ADMITTED",
+      "source_in_drive": "PROVIDER_VERIFIED"
+    },
+    "qa_drive_id": "1uzUg5XAnz-M3xKhQ-CFARsYBtoBUoaBY",
+    "readback": "CP114_VERIFIED",
+    "user_visual_review": "APPROVED_CP114_RELEASE",
+    "scientific_final_submission_approval": "NOT_ASSERTED"
+  },
+  "git": {
+    "repository": "FabinGurung/JP_Research-and-Development",
+    "control_path": "researchers/saugat-paneru/latex/GOVERNANCE_READ_FIRST.md",
+    "source_future_path": "researchers/saugat-paneru/latex/manuscript/",
+    "researcher_branch": "researcher/saugat-paneru/latex",
+    "researcher_branch_status": "OLD_SHARED_TEMPLATE_BASELINE_NOT_CP114_SOURCE",
+    "shared_tower": "controls/latex/tower.json",
+    "shared_template": "controls/latex/template/pumlsc-shared.sty",
+    "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
+    "saugat_cp114_compiled_with_shared_template": false,
+    "status": "SOURCE_POINTERS_IN_GIT__FULL_TEMPLATE_MIGRATION_PENDING"
+  },
+  "debt": {
+    "scientific_provenance": "OPEN_EVIDENCE_GATED",
+    "legacy_project_registrar": "NOT_RUN_AT_CP114",
+    "legacy_main_library_sync": "NOT_RUN_AT_CP114",
+    "disposition": "HISTORICAL_UNACKNOWLEDGED__DO_NOT_SYNTHESIZE_ACK",
+    "new_git_managed_versioning": "ACTIVE_FROM_2026-10-11_POLICY",
+    "full_text_source_import": "PENDING_PUBLIC_SAFE_SOURCE_ADMISSION_AND_SHARED_TEMPLATE_PARITY_QA"
+  }
+}
