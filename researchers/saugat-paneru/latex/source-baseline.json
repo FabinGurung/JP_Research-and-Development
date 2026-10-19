@@ -71,6 +71,19 @@
       "zero_undefined_refs": true,
       "zero_biber_warnings": true,
       "template_parity": "ONE_PAGE_REFLOW_VS_115P_CP114__HOLD_PROMOTION"
+    },
+    "migration_ci": {
+      "status": "FAIL_SHARED_TEMPLATE_EXTENSION_REGISTRY_UNREGISTERED",
+      "details_issue": "https://github.com/FabinGurung/JP_Research-and-Development/issues/26",
+      "failed_runs": [
+        "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39201841778",
+        "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39201841742",
+        "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39201841741"
+      ],
+      "source_import_verified": true,
+      "latex_compilation_verified": true,
+      "global_main_ci": "NOT_PASSING",
+      "production_release_promotion": "BLOCKED"
     }
   },
   "debt": {
