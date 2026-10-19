@@ -15,7 +15,7 @@ elif [[ "$mode" == production ]]; then
 else echo 'usage: ./build.sh preview|production' >&2;exit 2;fi
 mkdir -p "$here/.build"
 cd "$here"
-export TEXINPUTS="$template/:${TEXINPUTS:-}:"
+export TEXINPUTS="$template/:$repo/researchers/saugat-paneru/latex/extensions/:${TEXINPUTS:-}:"
 for pass in 1 2 3 4; do
  xelatex -no-pdf -interaction=nonstopmode -halt-on-error -file-line-error -output-directory="$here/.build" "$fontflag\input{main.tex}"
  if [[ $pass == 1 ]];then biber --input-directory "$here/.build" --output-directory "$here/.build" main;fi
