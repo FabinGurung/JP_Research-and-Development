@@ -73,26 +73,40 @@
       "template_parity": "ONE_PAGE_REFLOW_VS_115P_CP114__HOLD_PROMOTION"
     },
     "migration_ci": {
-      "status": "FAIL_SHARED_TEMPLATE_EXTENSION_REGISTRY_UNREGISTERED",
-      "details_issue": "https://github.com/FabinGurung/JP_Research-and-Development/issues/26",
-      "failed_runs": [
-        "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39201841778",
-        "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39201841742",
-        "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39201841741"
+      "status": "PASS_SHARED_TEMPLATE_SINGLE_INHERITANCE__REPO_VALIDATION__PAGES_DEPLOY",
+      "extension_registration_commit": "2850acb54d7d168a954467b5ff98f2f54e51d2af",
+      "duplicated_styles_removed": true,
+      "registered_extensions": [
+        "RD-LTX-EXT-SAUGAT-001",
+        "RD-LTX-EXT-SAUGAT-002"
       ],
+      "validated_head": "21b0b7e161f2197b4595c612c4b3e889989fdab1",
+      "validation_run": "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39255415023",
+      "pages_run": "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/39255414983",
       "source_import_verified": true,
       "latex_compilation_verified": true,
-      "global_main_ci": "NOT_PASSING",
-      "production_release_promotion": "BLOCKED"
+      "production_release_promotion": "NOT_PERFORMED__116_PAGE_CANDIDATE_STILL_QA_ONLY"
+    },
+    "history_sync": {
+      "run": "A9-SAUGAT-MAIN-G50_51-20261019-R01",
+      "local_seq": 51,
+      "main_ack_cursor": 51,
+      "artifacts_projected": 6,
+      "edges_projected": 8,
+      "pre_main": "1J9DeDPlbblIV-tMAAz-0dXf-ptrHKaTkkVx7pUKBbUU",
+      "pre_local": "1mrxjvAUHv_Le8nAdHqepISvFGbbp4ayCv8dGLY25KUc",
+      "post_main": "13kRkolAP_3vNko7gR0ThZKPdl3Msk7MAPFU29B1rRMs",
+      "post_local": "1U2G_OczMx5jidz3IbofRc-plbSHx4VgpIzvG3HTEUX0",
+      "limitation": "LATEX_SEQ026_028_CLOSED_LANE_ONLY__GIT_CUTOVER__NO_RETROACK"
     }
   },
   "debt": {
     "scientific_provenance": "CP114_ADMITTED_AS_IS__NOT_A_SOURCE_MIGRATION_BLOCKER",
-    "legacy_project_registrar": "NOT_RUN_AT_CP114",
-    "legacy_main_library_sync": "NOT_RUN_AT_CP114",
+    "legacy_project_registrar": "CP114_NOT_RETRO_MERGED__GIT_CUTOVER_NO_VERSION_ONLY_SEQ",
+    "legacy_main_library_sync": "CLOSED_ACK_LOCAL51_MAIN51_20261019",
     "disposition": "HISTORICAL_UNACKNOWLEDGED__DO_NOT_SYNTHESIZE_ACK",
     "new_git_managed_versioning": "ACTIVE_FROM_2026-10-11_POLICY",
     "full_text_source_import": "CLOSED_GIT_SOURCE_IMPORTED",
-    "historical_ack": "LOCAL_GLOBAL51_MAIN49_PLUS_LATER_UNMERGED_EVENTS__NO_FALSE_ACK"
+    "historical_ack": "GLOBAL50_51_ACKED_20261019__LATEX_SEQ026_028_NOT_REPLAYED"
   }
 }
