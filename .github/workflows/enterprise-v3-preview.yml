@@ -7,6 +7,8 @@ on:
       - 'registry/enterprise-document-v3-candidates.json'
       - 'examples/document-engineering/v3/**'
       - 'scripts/document_engineering/engine_v3.py'
+      - 'scripts/document_engineering/check_client_facing_language.py'
+      - 'controls/document-engineering/client-facing-language.policy.json'
       - '.github/workflows/enterprise-v3-preview.yml'
   pull_request:
     branches: [main]
@@ -29,6 +31,7 @@ jobs:
       - name: Check fourteen fields and source isolation
         run: |
           python3 -m py_compile scripts/document_engineering/engine_v3.py
+          python3 scripts/document_engineering/check_client_facing_language.py --self-test
           python3 scripts/document_engineering/engine_v3.py --self-test
       - name: Install TeX compiler, PDF quality inspection
         run: |
@@ -51,8 +54,9 @@ jobs:
               meta=subprocess.check_output(["pdfinfo",str(p)],text=True)
               pages=next(int(l.split(":",1)[1]) for l in meta.splitlines() if l.startswith("Pages:"))
               text=subprocess.check_output(["pdftotext","-layout",str(p),"-"],text=True)
-              assert "FICTIONAL SAMPLE" in text or "FICTIONAL" in text, p.name
-              assert "NOT FOR SIGNATURE" in text, p.name
+              assert "DRAFT" not in text.upper() and "NOT FOR SIGNATURE" not in text.upper(), p.name
+              assert "ORGANIZATION ID" not in text.upper(), p.name
+              subprocess.run(["python3","scripts/document_engineering/check_client_facing_language.py","--pdf",str(p)],check=True)
               assert len(text.strip())>200
               report.append(f"- {p.parent.name}: {pages} page(s), {len(text)} chars, PDF technical PASS")
           (root/"README-QA.md").write_text("\n".join(report)+"\n")

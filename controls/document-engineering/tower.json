@@ -37,5 +37,13 @@
   "no_legacy_implicit_fallback": true,
   "old_archives_are_immutable": true,
   "release_approval_scope": "14 template layouts approved for draft generation, not automatic approval of real project documents",
-  "release_tag": "a9-enterprise-docs-v3.0.0"
+  "release_tag": "a9-enterprise-docs-v3.0.0",
+  "client_facing_language_policy_version": "1.1.0",
+  "visible_output_rule": "No internal QA/status words, project folder slugs, database-style IDs or AI/computer terminology in generated client-facing TeX or PDF. Hidden source metadata and filenames retain immutable provenance.",
+  "visible_output_enforcement": [
+    "v3 pre-render visible field validation",
+    "v3 generated LaTeX validation",
+    "v3 final PDF text validation",
+    "human visual QA"
+  ]
 }
