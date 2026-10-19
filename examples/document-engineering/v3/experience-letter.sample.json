@@ -5,12 +5,12 @@
     "document_ref": "DEMO-EXPERIENCE-001",
     "organization_id": "DEMO-ORG-001",
     "issue_date": "2026-10-12",
-    "employer": "Sample Employers Pvt. Ltd. (fictional)",
-    "employee": "Example Worker (fictional)",
+    "employer": "example Employers Pvt. Ltd. (illustrative)",
+    "employee": "Example Worker (illustrative)",
     "role": "Site Coordinator (illustrative)",
     "start_date": "2026-10-12",
     "end_date": "2026-12-31",
-    "verified_duties": "Illustrative sample duties: drawing register administration, inspections scheduling and log maintenance. Not a real employment certification.",
+    "verified_duties": "Illustrative example duties: drawing register administration, inspections scheduling and log maintenance. Not a real employment certification.",
     "signatory": "Authorized signatory - blank pending review."
   }
 }

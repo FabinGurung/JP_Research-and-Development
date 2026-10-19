@@ -14,6 +14,7 @@ import subprocess
 from datetime import date
 from pathlib import Path
 from resolve_template import resolve
+from check_client_facing_language import violations, check_pdf, check_tex
 
 ROOT=Path(__file__).resolve().parents[2]
 REGISTRY=ROOT/"registry/enterprise-document-types.json"
@@ -26,10 +27,6 @@ DATE_KEYS={"issue_date","valid_until","effective_date","receipt_date",
 TABLE_FAMILIES={"vendor-quotation","government-quotation","estimate","material-report","purchase-order"}
 SOURCE_GATES=("ORIGINAL_AUTHORITY","SEMANTIC_MAPPING","TYPED_DATA","COMPLETENESS",
               "COMPILATION","VISUAL_REVIEW","HUMAN_APPROVAL","PROVIDER_READBACK")
-FORBIDDEN=re.compile(
-    r"\b(?:chatgpt|artificial intelligence|LLM|database|github|python|json|"
-    r"control tower|semantic guardrail|machine language|low-level language|"
-    r"source code|model output)\b",re.I)
 
 def escape(value):
     if not isinstance(value,str) or not value.strip() or len(value)>20000:
@@ -82,12 +79,9 @@ def render(payload):
             except ValueError as e:raise ValueError("ISO YYYY-MM-DD required: "+k) from e
     if "start_date" in fields and "end_date" in fields and fields["end_date"]<fields["start_date"]:
         raise ValueError("Period ends before start")
-    visible="\n".join(fields.values())
-    if FORBIDDEN.search(visible):
-        raise ValueError("Internal software terminology is not permitted in business document text")
     source=(ROOT/info["path"]).read_text(encoding="utf-8")
     tokens=set(TOKEN.findall(source))
-    computed={"document_status": "FICTIONAL SAMPLE - FOR LAYOUT REVIEW ONLY" if payload.get("fixture_only") else "WORKING DRAFT - NOT FOR SIGNATURE"}
+    computed={"document_status": ""}
     if typ in TABLE_FAMILIES:
         computed["document_table"]=table_render(payload.get("table_rows"))
         if payload.get("fixture_only") is not True:
@@ -98,8 +92,26 @@ def render(payload):
         raise ValueError("Unsupported table data on this document type")
     if tokens!=required|set(computed):
         raise ValueError("Typed schema and LaTeX template token mismatch: "+str(sorted(tokens^(required|set(computed)))))
+    # The immutable v3 source is an internal layout authority, not its printed output.
+    # Remove internal review/status furniture only from generated client copies.
+    source=re.sub(r"(?m)^\\EnterpriseWarning\{DRAFT SAMPLE[^\n]*\}\s*$","",source)
+    for tag in ("Reference","Organization ID"):
+        source=re.sub(r"(?m)^\\EnterpriseMeta\{"+re.escape(tag)+r"\}\{[^\n]*\}\s*$","",source)
+    source=source.replace(r"\EnterpriseField{Project Identifier}",r"\EnterpriseField{Project}")
+    source=source.replace(r"\EnterpriseField{CAD Quantity Ref}",r"\EnterpriseField{Quantity source}")
+    source=source.replace(r"\EnterpriseField{Rate Library Ref}",r"\EnterpriseField{Pricing basis}")
+    source=source.replace(r"\EnterpriseField{BOQ Template Ref}",r"\EnterpriseField{Schedule of quantities}")
+    # Freeze output presentation, not the canonical .sty or original template source.
+    output_headers=(r"\fancyhead[L]{}\fancyhead[R]{}\fancyfoot[L]{}")
+    source=source.replace(r"\begin{document}",r"\begin{document}"+"\n"+output_headers,1)
+    visible_keys=set(TOKEN.findall(source)) - {"document_status", "document_table"}
+    for k in sorted(visible_keys):
+        issues=violations(fields[k])
+        if issues:raise ValueError("Client-visible field "+k+" violates language policy: "+", ".join(issues))
     result=TOKEN.sub(lambda m:computed[m.group(1)] if m.group(1) in computed else escape(fields[m.group(1)]),source)
     if TOKEN.search(result):raise ValueError("Unresolved placeholder")
+    if violations(result):
+        raise ValueError("Client-facing LaTeX contains prohibited identifiers/status: "+", ".join(violations(result)))
     qa={"type_id":typ,"state":"FICTIONAL_QA_SAMPLE" if payload.get("fixture_only") else "DRAFT_NOT_SIGNABLE",
         "originals_unchanged":True,"template_path":info["path"],
         "source_sha256":hashlib.sha256(source.encode()).hexdigest(),
@@ -114,6 +126,7 @@ def build(payload,out,compile_pdf=False):
     name=qa["type_id"]
     target=out/(name+".tex")
     target.write_text(tex,encoding="utf-8")
+    check_tex(target)
     shutil.copy2(ROOT/"templates/enterprise/v3/enterprise-v3.sty",out/"enterprise-v3.sty")
     if compile_pdf:
         if not shutil.which("latexmk"):raise RuntimeError("No latexmk compiler")
@@ -127,6 +140,8 @@ def build(payload,out,compile_pdf=False):
         if "Overfull \\hbox" in logfile or "Overfull \\vbox" in logfile:
             raise ValueError("Unresolved page margin overflow: "+name)
         pdf=target.with_suffix(".pdf")
+        check_pdf(pdf)
+        qa["pdf_client_language"]="PASS"
         qa["pdf_sha256"]=hashlib.sha256(pdf.read_bytes()).hexdigest()
         qa["pdf_size_bytes"]=pdf.stat().st_size
         qa["compilation"]="PASS_TECHNICAL_VISUAL_REVIEW_PENDING"
@@ -150,7 +165,13 @@ def selftest():
         except ValueError:pass
         else:raise AssertionError("Missing required field accepted")
         count+=1
-    print(f"PASS {count}/14 typed templates, fictional source isolation, placeholder and missing-field checks")
+    # A database-style client name must be rejected rather than silently rewritten.
+    negative=json.loads((ROOT/"examples/document-engineering/v3/client-contract.sample.json").read_text())
+    negative["fields"]["project_identifier"]="07_Example_Client"
+    try:render(negative)
+    except ValueError:pass
+    else:raise AssertionError("Machine-like project name reached printable output")
+    print(f"PASS {count}/14 typed templates and client-visible semantics")
 
 def main():
     p=argparse.ArgumentParser()

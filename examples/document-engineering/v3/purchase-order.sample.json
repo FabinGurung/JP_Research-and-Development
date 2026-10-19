@@ -5,9 +5,9 @@
     "document_ref": "DEMO-ORDER-001",
     "organization_id": "DEMO-ORG-001",
     "issue_date": "2026-10-12",
-    "buyer": "Sample Builders Pvt. Ltd. (fictional)",
-    "vendor": "Illustrative Materials Supplier (fictional)",
-    "po_ref": "DEMO-PO-001",
+    "buyer": "example Builders Pvt. Ltd. (illustrative)",
+    "vendor": "Illustrative Materials Supplier (illustrative)",
+    "po_ref": "illustrative reference",
     "delivery_site": "Illustrative delivery location only",
     "delivery_date": "2026-11-30",
     "inspection": "Goods acceptance subject to physical inspection, condition and quantity confirmation.",
@@ -16,14 +16,14 @@
   },
   "table_rows": [
     {
-      "description": "Sample cement order",
+      "description": "example cement order",
       "quantity": "20",
       "unit": "bags",
       "amount": "18,000.00",
       "source_ref": "FICTIONAL-DEMO-NOT-VALID"
     },
     {
-      "description": "Sample sand order",
+      "description": "example sand order",
       "quantity": "1",
       "unit": "lot",
       "amount": "8,000.00",
