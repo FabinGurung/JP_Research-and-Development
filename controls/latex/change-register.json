@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 106,
+  "next_number": 107,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -105,6 +105,23 @@
       "git_commit_sha_after_merge": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
       "global_propagation": "FORBIDDEN_UNTIL_CROSS_RESEARCHER_REGRESSION",
       "scientific_boundary": "CP114_CONTENT_PRESERVED"
+    },
+    {
+      "change_id": "RD-LTX-CHG-106",
+      "researcher_id": "RSH-002",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Restore Saugat CP114 exact-TNR front-matter TOC/LOT/LOF and appendix-list typography through the registered scoped adapter without altering the shared template or scientific source.",
+      "source_paths": [
+        "researchers/saugat-paneru/latex/extensions/saugat_project_adapter.sty"
+      ],
+      "before_after_qa_evidence": "Old Git candidate 116 pages, SHA db134c2b4254fe84ea6aceff966620407b08b0f5f3d63487554ad6777a5565f8; repaired locally from exact Git blob 1e73c5f80409743ada934a740322678f98db288f + frozen CP114 assets + private TNR: 115 A4 pages, SHA 2f8c4566377df5af4efa23e4d2804ced8e415b9764f90c63f2e0003557f1ab59; 115/115 pages rendered, front matter 1–10 identical extracted text, appendices identical, all images present; Drive upload and production CURRENT promotion pending. Exact evidence: researchers/saugat-paneru/latex/qa/CP114_SHARED_TEMPLATE_TOC_PARITY_20261019.md.",
+      "pu_rule_references": [],
+      "disposition": "VALIDATED",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "FORBIDDEN_UNTIL_INDEPENDENT_CROSS_RESEARCHER_PARITY",
+      "scientific_boundary": "ALL_ADMITTED_CP114_SCIENTIFIC_SUBFILES_UNCHANGED",
+      "production_status": "LOCAL_QA_ONLY_NOT_CURRENT"
     }
   ],
   "required_fields": [
