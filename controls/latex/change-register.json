@@ -133,7 +133,7 @@
         "researchers/saugat-paneru/latex/extensions/saugat_project_adapter.sty",
         "researchers/saugat-paneru/latex/manuscript/project_config.tex"
       ],
-      "before_after_qa_evidence": "LOCAL Saugat full XeLaTeX/Biber/XeLaTeX/XeLaTeX stabilized with private exact TNR; 115 A4 pages; final logo width and height exactly 3x the previous 115-page candidate image bbox; October 2026 present on both title pages; page text identical to previous approved 115-page Git QA candidate after replacing October 2026 with September 2026 (115/115 pages). Candidate PDF SHA 9d02774d0d913e68274ed89a66544bf93a9e3684ada099dbf7a9ec03fbd9ad6b; source and local output are QA only, not a Drive release.",
+      "before_after_qa_evidence": "LOCAL Saugat full XeLaTeX/Biber/XeLaTeX/XeLaTeX stabilized with private exact TNR; 115 A4 pages; final logo width and height exactly 3x the previous 115-page candidate image bbox; October 2026 present on both title pages; page text identical to previous approved 115-page Git QA candidate after replacing October 2026 with September 2026 (115/115 pages). Candidate PDF SHA 5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428; source and local output are QA only, not a Drive release. Final measured exact factors ~3.00002; all 115 pages rendered. Source QA zip SHA 52200665d4340070c83384325beeea690f4cd67898bf9d8c86754019123e25c8.",
       "pu_rule_references": [],
       "disposition": "VALIDATED",
       "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
