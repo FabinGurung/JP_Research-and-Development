@@ -29,3 +29,7 @@ A formatting-only **zero-line-break** experiment grouped 5 compound term familie
 6. **Release:** Once corrected source + independently recompiled PDF pass all applicable gates, merge a new controlled version with CI; update Drive binary deliverables and canonical `CURRENT_CHECKPOINT` with SHA256 readbacks. Keep CP114's science frozen.
 
 **Next actual milestone:** `M2 — V2.5 FORMAT_QA_FROZEN` once the above format blockers are closed with verified evidence. Date is *gate-driven*, not an invented schedule. `M3 — V2.5 PRODUCTION_RELEASED` follows merge, documented review/approval, Drive upload, checksum/readback and stable CURRENT update. 
+
+## Durable figure evidence (Google Drive)
+
+Full 650-span under-10pt **candidate screening** report, 15 affected source-figure pages, locations/font families/precise bounds and original 5 compound line-end breaks: [FIGURE_TYPE_LEGIBILITY_SCREEN_v1__20261020.json](https://drive.google.com/file/d/1D9Y5A1oXg7GcoK5WJ92x5j_ndUhNyttb/view). SHA256 `30c499e36a04535d9e5ebee7b1ac2503453d01c476c32895f648b42311d2c361`, **provider re-download hash verified**. Do not confuse 650 small spans with 650 distinct source defects: labels appear repeatedly across plots. The smallest observed embedded plotted font is 1.96pt (pp65–66), requiring source-level figure regeneration or grounded exception.
