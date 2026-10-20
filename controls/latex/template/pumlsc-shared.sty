@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/20 v2.4 opt-in 3x cover logo and build-month metadata]
+\ProvidesPackage{pumlsc-shared}[2026/10/20 v2.5-RC1 opt-in 144-rule compliance controls]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -112,3 +112,21 @@
 % the build clock; archival/final-approved submission dates may stay pinned.
 \newcommand{\PUCurrentMonthYear}{%
   \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi, \number\year}
+
+
+% RD-LTX-CHG-110 / PU-FMT-007 — explicit, opt-in strict no-discretionary-
+% hyphenation profile for FORMAT-QA candidates. The default shared template
+% remains unchanged for other researchers. This requires document-wide
+% regression/render QA before any manuscript is promoted to production.
+\newcommand{\PUEnforceNoHyphenation}{%
+  \pretolerance=10000\relax
+  \tolerance=1800\relax
+  \hyphenpenalty=10000\relax
+  \exhyphenpenalty=10000\relax
+  \emergencystretch=3em\relax
+}
+% PU-FMT-016 explicit deviation register. The official PU reference specifies
+% a 1.6-inch logo slot. Scale 3.0 is Saugat's user-approved 2026-10-20
+% alternative and MUST be visibly accounted for in the 144-rule audit.
+\providecommand{\PUCoverLogoRuleOverrideAuthority}{NONE}
+\providecommand{\PUCoverLogoRuleOverrideReason}{NONE}
