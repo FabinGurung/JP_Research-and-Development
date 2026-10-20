@@ -65,6 +65,21 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "81700b3344968ab1f2b2ac8d01c11cf04c5c5c02",
     "source_branch": "saugat/cp114-v24-production-format-promotion-20261020",
-    "tag": "NOT_CREATED"
+    "tag": "NOT_CREATED",
+    "pending_qa_candidate_branch": "latex/pu-v2-5-144-rule-audit-saugat-20261020",
+    "pending_144_rule_audit": "controls/latex/audits/PU144_RSH002_CP114_v2_5_RC1_20261020.json"
+  },
+  "checkpoint_resolution": {
+    "status": "ONE_UNAMBIGUOUS_CANONICAL_CURRENT_CHECKPOINT_FILENAME_VERIFIED",
+    "folder_id": "1vZr5559DA-e8fb0TDn46sVvT9JfRyVWV",
+    "canonical_current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "canonical_name": "CURRENT_CHECKPOINT",
+    "legacy_scientific_checkpoint_drive_id": "1138hLUcRPPzXay5p-cniLV5R8nk3oedJ",
+    "legacy_scientific_checkpoint_name": "SCIENTIFIC_BASELINE_CP114__20261007__ORIGINAL_CHECKPOINT.md",
+    "original_id_preserved_for_rollback": true,
+    "previous_name_rename_required_due_to_markdown_byte_overwrite_unsupported": true,
+    "canonical_file_id_changed": true,
+    "permanent_links_old_id_remain_to_scientific_baseline": true,
+    "versioning_notes": "Future governance reads CURRENT_CHECKPOINT by folder+name and validates producer PDF+Git manifest; direct old Drive ID intentionally remains historical only."
   }
 }
