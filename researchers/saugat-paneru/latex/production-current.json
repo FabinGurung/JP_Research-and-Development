@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "researcher": "Saugat Paneru",
+  "production_release_id": "SAUGAT_CP114_GIT_V2_4_FORMAT_PRODUCTION_20261020",
+  "release_version": "CP114-GIT-v2.4-FORMAT-20261020",
+  "promoted_date_npt": "2026-10-20",
+  "status": "CURRENT_PRODUCTION_FORMAT_RELEASE__USER_AUTHORIZED",
+  "scientific_checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
+  "scientific_content_status": "UNCHANGED_FROM_CP114",
+  "new_production": {
+    "pdf_drive_id": "1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg",
+    "pdf_sha256": "5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428",
+    "pdf_bytes": 55177712,
+    "pages": 115,
+    "page_size": "A4",
+    "exact_font": "Times New Roman subset embedded",
+    "source_zip_drive_id": "1eMgFKcjYin6SIO4-SUC1d70c1qADttOi",
+    "source_zip_sha256": "425f125ec3f19d48215cfbf559b1180bea2154b09940b2d8022e7b4183f25ac8",
+    "source_zip_bytes": 58591934,
+    "all_143_original_research_assets_hash_verified": true,
+    "readback": "GOOGLE_DRIVE_PROVIDER_ROUNDTRIP_SHA256_PASS",
+    "release_folder_id": "1ZM8TSjj5fKiTCjoCjvD215KAxho_o8yK",
+    "release_read_first_drive_id": "1Q0S3pn-dOUQJ-oDH6M7wAmjBuO9Z8qbl",
+    "current_production_pointer_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "binary_manifest_drive_id": "10UfCJp5n80QVIoABC3zktH6HwRcsAQlj"
+  },
+  "format_changes": {
+    "shared_template": "controls/latex/template/pumlsc-shared.sty",
+    "version": "2.4.0",
+    "first_page_logo_scale": "3X",
+    "date_policy": "CURRENT_MONTH_YEAR_AT_LATEX_COMPILE",
+    "date_printed_in_current_pdf": "October, 2026"
+  },
+  "accepted_authorization": {
+    "source": "USER_DIRECT_CHAT_2026_10_20",
+    "decision": "AUTHORIZE_TO_REPLACE_SCIENTIFIC_PRODUCTION_RELEASE",
+    "scope": "FORMAT_ONLY_CP114_CONTENT_PRESERVED",
+    "university_formatting_status": "USER_REPORTED_ACCEPTED",
+    "independently_verified_university_certificate": false,
+    "old_global_audit_144_status": "OPEN_NOT_CERTIFIED",
+    "old_global_audit_counts": {
+      "source_declared": 7,
+      "partial_or_policy": 47,
+      "missing_or_unverified": 90,
+      "fully_production_verified": 0
+    }
+  },
+  "rollback": {
+    "scientific_original_cp114_pdf_drive_id": "1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh",
+    "scientific_original_cp114_pdf_sha256": "55efba49159d1f5931d042f539c3f3efcd22df0684b1e565d27819a0a6c935cb",
+    "scientific_original_cp114_zip_drive_id": "1yL3G-EUGA32FDBhkdImXk9NManfW_vyA",
+    "pre_current_checkpoint_drive_snapshot_id": "1mehCh3sTRR0rV6zX4ldeKUhcdNboZmb0",
+    "legacy_scientific_current_checkpoint_drive_id": "1138hLUcRPPzXay5p-cniLV5R8nk3oedJ",
+    "status": "ORIGINALS_PRESERVED_NOT_DELETED"
+  },
+  "independent_recompile": {
+    "fresh_from_complete_zip": true,
+    "pages": 115,
+    "normalized_text_parity_all_pages": true,
+    "compiled_pdf_sha256": "dba7b89a1c345e5dff9df09aa7bd463985c4bab70e4ea9d47bce71a10868c86e"
+  },
+  "science_debt": "UNCHANGED_CP114_EQX_EQY_PUSHOVER_HINGES_FOUR_STOREY",
+  "version_control": {
+    "governance": "controls/git-drive-authority.json",
+    "source_main_pre": "81700b3344968ab1f2b2ac8d01c11cf04c5c5c02",
+    "source_branch": "saugat/cp114-v24-production-format-promotion-20261020",
+    "tag": "NOT_CREATED"
+  }
+}
