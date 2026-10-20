@@ -189,7 +189,7 @@
     {
       "change_id": "RD-LTX-CHG-110",
       "researcher_id": "RSH-002",
-      "classification": "RESEARCHER_MILESTONE_QA__NO_SHARED_TEMPLATE_SOURCE_MUTATION",
+      "classification": "RESEARCHER_ONLY",
       "summary": "M2 completed by freezing exactly the currently approved CP114 scientific manuscript + v2.4 LaTeX formatting and original 143 CP114 source assets, with all 115 A4 pages checked, fresh rebuild page-text parity, and all 144 source rules individually dispositioned. User explicitly declined science figure repair now.",
       "source_paths": [
         "researchers/saugat-paneru/latex/source-baseline.json",
@@ -218,7 +218,8 @@
       "user_scope": "USE_WHATEVER_LIVE_CP114_IS_USING__NO_GRAPH_REGENERATION__QA_LAYOUT_FOLIOS_144_AUDIT",
       "production_status": "V2_4_CURRENT_UNCHANGED__M2_SOURCE_MILESTONE_RELEASED_SEPARATELY",
       "full_144_certification": "NOT_CLAIMED",
-      "next_gate": "New separate source successor only if revising original figure sizes or strict 144-rule conformity"
+      "next_gate": "New separate source successor only if revising original figure sizes or strict 144-rule conformity",
+      "classification_note": "M2_SOURCE_QA_MILESTONE__NO_SHARED_TEMPLATE_MUTATION"
     }
   ],
   "required_fields": [
