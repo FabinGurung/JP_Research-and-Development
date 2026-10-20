@@ -25,7 +25,12 @@
     "full_source_file_count": 214,
     "xelatex_after_macro_rewrite": "PASS_115P_A4",
     "production_promotion": "NOT_PERFORMED",
-    "versioned_reference": "RD-LTX-CHG-110"
+    "versioned_reference": "RD-LTX-CHG-110",
+    "drive_qa_folder_id": "1hrR8zwIB7gCa5bPY-ALhKUeJOEeOZsux",
+    "drive_candidate_pdf_id": "1cyww5Sx2jTkYLEmjKWoacysICGZaZkXd",
+    "drive_candidate_source_zip_id": "1Uhk2EII9NJMYYKX_yDRJ7HEnKbP3MNOi",
+    "drive_candidate_sha256_roundtrip": "PASS_PDF_AND_ZIP_IDENTICAL",
+    "local_pdf_status": "QA_RC1_ONLY_NOT_CURRENT"
   },
   "measurement": {
     "production_page_count": 115,
