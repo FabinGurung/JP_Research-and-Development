@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 110,
+  "next_number": 111,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -185,6 +185,34 @@
       "global_144_rule_audit": "OPEN_7_DECLARED_47_PARTIAL_90_UNVERIFIED_0_FULL_CERTIFIED",
       "production_status": "GIT_V2_4_FORMAT_PRODUCTION_CURRENT",
       "release_tag": "NOT_CREATED"
+    },
+    {
+      "change_id": "RD-LTX-CHG-110",
+      "researcher_id": "RSH-002",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "PU 144-rule source-to-PDF enumerated audit v2.5-RC1 for Saugat CP114: new opt-in strict no-hyphenation profile, explicit PU-FMT-016 3x logo override provenance, and 144-entry source-backed machine/human audit. Production CP114 v2.4 unchanged.",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "researchers/saugat-paneru/latex/extensions/saugat_project_adapter.sty",
+        "researchers/saugat-paneru/latex/manuscript/project_config.tex",
+        "controls/latex/audits/PU144_RSH002_CP114_v2_5_RC1_20261020.json",
+        "controls/latex/audits/PU144_RSH002_CP114_v2_5_RC1_20261020.md"
+      ],
+      "before_after_qa_evidence": "Direct source 1FjbNdNN_Fb_tKoapaYHW2jLoEF9lqxrYPYrCwTi87Ys, source lists 144 IDs PU-FMT-001...145 with missing 076. v2.4 PDF 115 A4 pages, logo user-deviation 3×, source/PDF Times New Roman, canonical logo exact SHA. Strict 2.5-RC1 XeLaTeX+Biber built 115 A4 pages/81 image occurrences, zero overfull boxes; suspected line-end automatic hyphenation drops 182→5, but 61 pages reflow and 320 underfull warnings remain. Full 144/144 format certification NOT claimed; current production v2.4 retained.",
+      "pu_rule_references": [
+        "PU-FMT-007",
+        "PU-FMT-016",
+        "PU-FMT-039",
+        "PU-FMT-059",
+        "PU-FMT-060"
+      ],
+      "disposition": "PROPOSED_RC1_NOT_PRODUCTION",
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "global_propagation": "NONE_NEW_MACRO_OPT_IN_ONLY",
+      "regression_scope": "SAUGAT_115_PAGE_LOCAL_CANDIDATE_ONLY__FULL_VISUAL_NOT_ACCEPTED",
+      "scientific_boundary": "NO_CP114_CONTENT_OR_RESULTS_CHANGED",
+      "production_status": "CP114_GIT_V2_4_PRODUCTION_UNCHANGED",
+      "full_144_certification": "NOT_PASSED"
     }
   ],
   "required_fields": [
