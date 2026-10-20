@@ -49,7 +49,7 @@
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
     "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
     "saugat_cp114_compiled_with_shared_template": false,
-    "status": "GIT_CP114_SOURCE_AND_V2_4_QA_DELIVERABLES_IN_DRIVE__143_BINARY_ASSETS_RESTORATION_VERSIONED__CURRENT_CP114_UNCHANGED",
+    "status": "SCIENTIFIC_CP114_PRESERVED__PRODUCTION_FORMAT_GIT_V2_4_PROMOTED_20261020",
     "source_import_commit": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
     "imported_text_files": 58,
     "shared_template_blob_sha": "f6d8b8fba284603604358d50eed285f722b0c3a0",
@@ -130,13 +130,16 @@
       "full_144_rule_certification": "HOLD",
       "drive_upload": "PERFORMED_VERIFIED_SHA256_ROUNDTRIP",
       "current_scientific_checkpoint": "CP114_UNCHANGED",
-      "production_release": "STILL_ON_HOLD_144_RULE_FORMAT_ACCEPTANCE_MISSING",
+      "production_release": "USER_AUTHORIZED_FORMAT_ONLY_RELEASE__20261020",
       "drive_pdf_id": "10tMkCe8gh0oDXT5qV7c3txU-J9bGfl1v",
       "drive_source_zip_id": "1dHZYKN8sD36m88RkVriTLRa_gAfhwjmA",
       "drive_source_zip_sha256": "425f125ec3f19d48215cfbf559b1180bea2154b09940b2d8022e7b4183f25ac8",
       "provider_readback": "DIRECT_FILE_REDOWNLOAD_SHA256_MATCH_PDF_AND_ZIP",
       "post_upload_duplicate_id": "1ABIZkp75er7GmzXxv1v-3YpdvaDCuBTX",
-      "post_upload_duplicate_disposition": "ARCHIVED_BYTE_IDENTICAL_NOT_DELETED"
+      "post_upload_duplicate_disposition": "ARCHIVED_BYTE_IDENTICAL_NOT_DELETED",
+      "drive_production_pdf_id": "1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg",
+      "drive_production_source_zip_id": "1eMgFKcjYin6SIO4-SUC1d70c1qADttOi",
+      "old_global_144_rule_status": "OPEN_NOT_CERTIFIED"
     },
     "asset_migration": {
       "change_id": "RD-LTX-CHG-108",
@@ -165,9 +168,13 @@
       },
       "current_checkpoint": "CP114_UNCHANGED",
       "global_144_format_gate": "HOLD",
-      "production_release": "NOT_PERFORMED",
-      "tag": "NOT_CREATED"
-    }
+      "production_release": "FORMAT_ONLY_RELEASE_PROMOTED_TO_CURRENT",
+      "tag": "NOT_CREATED",
+      "current_production_pdf_drive_id": "1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg",
+      "production_pointer_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+      "scientific_current_checkpoint": "CP114_UNCHANGED"
+    },
+    "production_pointer": "researchers/saugat-paneru/latex/production-current.json"
   },
   "debt": {
     "scientific_provenance": "CP114_ADMITTED_AS_IS__NOT_A_SOURCE_MIGRATION_BLOCKER",
