@@ -17,7 +17,15 @@
     "scientific_baseline": "CP114_UNCHANGED",
     "production_pdf_drive_id": "1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg",
     "candidate_pdf_status": "LOCAL_QA_ONLY_NOT_CURRENT",
-    "no_production_promotion": true
+    "no_production_promotion": true,
+    "local_pdf_sha256": "85f62106df9db57c8e4063d7e45ddc09203dd3fec8bfbf881a02af053c17535b",
+    "local_pdf_bytes": 55177509,
+    "local_full_source_zip_sha256": "b535633bbe1c4bc704f7874c3ea21ecb551a3f44ed22ee25d69e9c5aa144ccbd",
+    "local_full_source_zip_bytes": 58593134,
+    "full_source_file_count": 214,
+    "xelatex_after_macro_rewrite": "PASS_115P_A4",
+    "production_promotion": "NOT_PERFORMED",
+    "versioned_reference": "RD-LTX-CHG-110"
   },
   "measurement": {
     "production_page_count": 115,
@@ -36,7 +44,9 @@
     "canonical_logo_sha256": "584d4867624405a138aaaafe13791c1291e456a1ceac5b1b5298a63e548d9587",
     "logo_multiplier": 3,
     "official_logo_slot_inch": 1.6,
-    "user_override_slot_inch": 4.8
+    "user_override_slot_inch": 4.8,
+    "full_preliminary_text_including_figure_output": "UNCHANGED_SCIENTIFIC_SOURCE__PAGE_REFLOW_ONLY",
+    "post_macro_xelatex_pass": "PASS_NO_FATAL_ERRORS_115P"
   },
   "summary": {
     "PARTIAL_EVIDENCE": 76,
