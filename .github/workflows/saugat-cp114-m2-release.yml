@@ -1,0 +1,103 @@
+name: Saugat CP114 M2 frozen-source approved milestone release
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/saugat-cp114-m2-release.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: saugat-cp114-m2-sourceqa-release
+  cancel-in-progress: false
+jobs:
+  release-after-debt-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fail-closed standard repository and single-template validation
+        run: |
+          set -euo pipefail
+          python scripts/validate_repo.py
+          python scripts/latex/validate_shared.py
+          python scripts/latex/universal_preflight.py --policy-check
+      - name: Fail-closed M2 debt, exact source SHA and frozen science boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          frozen='5717d0edf313868739f16a603a11340d6e35ac99'
+          tag='saugat-cp114-m2.0.0-source-qa-20261020'
+          def read(path): return json.loads(Path(path).read_text())
+          gate=read('researchers/saugat-paneru/latex/qa/CP114_M2_DEBT_RELEASE_GATE_20261020.json')
+          source=read('researchers/saugat-paneru/latex/source-baseline.json')
+          prod=read('researchers/saugat-paneru/latex/production-current.json')
+          audit=read('controls/latex/audits/PU144_RSH002_CP114_M2_FROZEN_LIVE_20261020.json')
+          assert gate['release_tag']==tag
+          assert gate['frozen_git_source_commit']==frozen
+          assert gate['decision']=='M2_SCOPE_RELEASE_READY__NO_M2_BLOCKING_DEBT'
+          assert gate['blocking_m2_debt']==[]
+          assert len(gate['resolved_blocking_debt'])==8
+          assert all(x['status']=='CLOSED' for x in gate['resolved_blocking_debt'])
+          assert len(gate['deferred_out_of_scope'])>=4
+          assert gate['scope_boundaries']['full_144_rule_certified'] is False
+          assert gate['scope_boundaries']['scientific_data_modified'] is False
+          assert gate['scope_boundaries']['production_current_changed'] is False
+          assert source['git']['milestone_M2']['state'].startswith('CLOSED__')
+          assert source['git']['milestone_M2']['m2_source_zip_sha256']==gate['frozen_artifacts']['m2_source_zip_sha256']
+          assert source['git']['milestone_M2']['original_research_assets_byte_identical_to_cp114']==143
+          assert source['git']['milestone_M2']['scientific_tex_bib_byte_identical_to_cp114']==32
+          assert source['git']['milestone_M2']['page_count']==115
+          assert source['git']['milestone_M2']['all_144_certified'] is False
+          assert prod['new_production']['pdf_drive_id']==gate['frozen_artifacts']['production_pdf_drive_id']
+          assert prod['new_production']['pdf_sha256']==gate['frozen_artifacts']['production_pdf_sha256']
+          assert audit['scientific_checkpoint']=='CP114'
+          assert len(audit['entries'])==144
+          assert len({x['number'] for x in audit['entries']})==144
+          assert {x['number'] for x in audit['entries']}==set(range(1,146))-{76}
+          assert audit['release_policy']['all_144_compliant'] is False
+          assert audit['release_policy']['scientific_edits_permitted'] is False
+          assert sum(audit['summary_counts'].values())==144
+          subprocess.run(['git','cat-file','-e',frozen+'^{commit}'],check=True)
+          ancestor=subprocess.run(['git','merge-base','--is-ancestor',frozen,'HEAD'],check=False)
+          assert ancestor.returncode==0, 'M2 source freeze not ancestor of release HEAD'
+          changed=set(subprocess.check_output(['git','diff','--name-only',frozen,'HEAD'],text=True).splitlines())
+          allowed={
+              '.github/workflows/saugat-cp114-m2-release.yml',
+              'researchers/saugat-paneru/latex/qa/CP114_M2_DEBT_RELEASE_GATE_20261020.json',
+              'researchers/saugat-paneru/latex/qa/CP114_M2_RELEASE_NOTES_20261020.md',
+          }
+          assert changed==allowed, f'Unexpected change since M2 frozen source: {sorted(changed ^ allowed)}'
+          assert Path('researchers/saugat-paneru/latex/qa/CP114_M2_RELEASE_NOTES_20261020.md').is_file()
+          print('M2 RELEASE GATE PASS; 8 resolved M2 blockers; 144 independently dispositioned with explicit open debt')
+          PY
+      - name: Check PR history and create immutable annotated tag and GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          TAG: saugat-cp114-m2.0.0-source-qa-20261020
+        run: |
+          set -euo pipefail
+          [[ "$(gh pr view 33 -R "$REPO" --json mergedAt --jq '.mergedAt != null')" == 'true' ]]
+          [[ "$(gh pr view 32 -R "$REPO" --json mergedAt,state --jq '.mergedAt == null and .state == "CLOSED"')" == 'true' ]]
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" > /dev/null 2>&1; then
+            git fetch origin "refs/tags/$TAG:refs/tags/$TAG"
+            [[ "$(git rev-parse "${TAG}^{commit}")" == "$GITHUB_SHA" ]] || { echo 'Tag target mismatch; STOP'; exit 1; }
+            gh release view "$TAG" -R "$REPO" > /dev/null || { echo 'Tag exists but Release missing; STOP'; exit 1; }
+            echo "Existing valid tag/release $TAG verified without mutation"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a "$TAG" "$GITHUB_SHA" -m 'Saugat CP114 M2 frozen-live LaTeX / 115p QA; M2 debt closed with explicit residual format and scientific holds'
+          git push origin "refs/tags/$TAG"
+          gh release create "$TAG" -R "$REPO" --verify-tag --title 'Saugat CP114 — M2 frozen live LaTeX, 143 assets and 115-page QA' --notes-file researchers/saugat-paneru/latex/qa/CP114_M2_RELEASE_NOTES_20261020.md
+          gh release view "$TAG" -R "$REPO" --json url,isDraft,isPrerelease,tagName --jq '{url,tagName,isDraft,isPrerelease}'
