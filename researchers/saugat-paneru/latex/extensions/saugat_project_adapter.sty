@@ -67,11 +67,10 @@
 % source metadata. Shared headings, page geometry, font and captions remain
 % authoritative; this prevents the shared-template hyphenation defaults from
 % pushing existing approved wording beyond PU margins.
-\pretolerance=500
-\tolerance=1800
-\hyphenpenalty=500
-\exhyphenpenalty=50
-\emergencystretch=3em
+% PU-FMT-007 opt-in strict source-level profile. RC1: not an approved
+% production replacement; verify 115-page render, hyphenated line breaks,
+% underfull boxes and figure/caption adjacency before accepting.
+\PUEnforceNoHyphenation
 % Figure/table numbering widths from verified CP114 List of Figures/Tables.
 \renewcommand{\cftfigpresnum}{Fig.\ }
 \setlength{\cftfignumwidth}{6.5em}
