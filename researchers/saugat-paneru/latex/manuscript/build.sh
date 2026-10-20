@@ -6,6 +6,9 @@ here="$(cd -- "$(dirname -- "$0")" && pwd)"
 repo="$(git -C "$here" rev-parse --show-toplevel)"
 template="$repo/controls/latex/template"
 test -f "$template/pumlsc-shared.sty" || { echo 'Missing canonical Git LaTeX template' >&2; exit 2; }
+# No research binaries are committed to public Git. Require exact recovered CP114 assets.
+# Restore once from verified Drive source ZIP with ../scripts/restore_cp114_assets.py.
+python3 "$repo/researchers/saugat-paneru/latex/scripts/restore_cp114_assets.py" --check --root "$here"
 mode="${1:-preview}"
 if [[ "$mode" == preview ]]; then
   fontflag='\def\PUPreviewTinosFont{1}'
