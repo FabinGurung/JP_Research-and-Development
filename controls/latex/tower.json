@@ -138,7 +138,13 @@
       "date_mode": "BUILD_MONTH",
       "qa_pdf_sha256": "5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428",
       "pages": 115,
-      "pdf_release": "NOT_PROMOTED"
+      "pdf_release": "NOT_PROMOTED",
+      "qa_pdf_drive_id": "10tMkCe8gh0oDXT5qV7c3txU-J9bGfl1v",
+      "qa_source_zip_drive_id": "1dHZYKN8sD36m88RkVriTLRa_gAfhwjmA",
+      "qa_source_zip_sha256": "425f125ec3f19d48215cfbf559b1180bea2154b09940b2d8022e7b4183f25ac8",
+      "qa_provider_readback": "PASS_SHA256_BOTH_ASSETS",
+      "scientific_release": "CP114_CURRENT_RETAINED",
+      "global_144_rule": "HOLD"
     },
     "independent_researcher_render_certification": "NOT_ASSERTED",
     "all_144_university_rules_certification": "HOLD"

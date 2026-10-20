@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 108,
+  "next_number": 109,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -142,6 +142,27 @@
       "global_propagation": "API_AVAILABLE_BUT_OPT_IN_ONLY__NO_FORCED_OTHER_RESEARCHER_COVER_CHANGE",
       "scientific_boundary": "33_OF_33_PROTECTED_CP114_SCIENTIFIC_TEX_AND_BIB_SOURCE_NOT_EDITED",
       "production_status": "NEW_QA_ONLY__CP114_CURRENT_RETAINED"
+    },
+    {
+      "change_id": "RD-LTX-CHG-108",
+      "researcher_id": "RSH-002",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Repair Saugat CP114 v2.4 migrated source package after discovering 58 missing referenced PDF graphics; restore and SHA256-register all 143 original CP114 research binaries from the accepted source ZIP, check reproducibility before Git-only builds, store corrected 115-page candidate PDF and 213-file source ZIP in Drive with provider SHA256 readback.",
+      "source_paths": [
+        "researchers/saugat-paneru/latex/asset-manifest-cp114.json",
+        "researchers/saugat-paneru/latex/scripts/restore_cp114_assets.py",
+        "researchers/saugat-paneru/latex/manuscript/build.sh",
+        "researchers/saugat-paneru/latex/source-baseline.json"
+      ],
+      "before_after_qa_evidence": "Prior incomplete v2.4 source ZIP SHA 52200665d4340070c83384325beeea690f4cd67898bf9d8c86754019123e25c8 omitted 58 CP114 PDF figures and failed fresh XeLaTeX build. New complete source ZIP Drive 1dHZYKN8sD36m88RkVriTLRa_gAfhwjmA SHA 425f125ec3f19d48215cfbf559b1180bea2154b09940b2d8022e7b4183f25ac8; 143 binary input assets verified original SHA. New v2.4 PDF Drive 10tMkCe8gh0oDXT5qV7c3txU-J9bGfl1v SHA 5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428; both independently re-downloaded byte-identical. Fresh complete ZIP recompiles 115 pages A4, all 115 pages extracted text identical to uploaded PDF. Read-first Drive ID 16atxKfC-Y4nbLpuVtUMliunN30Jl23pI; original CP114 unchanged.",
+      "pu_rule_references": [],
+      "disposition": "VALIDATED",
+      "target_shared_rule": null,
+      "global_propagation": "FORBIDDEN_RESEARCHER_BINARY_SOURCE_ONLY",
+      "scientific_boundary": "32_PROTECTED_TEX_BIB_SOURCES_UNCHANGED__ALL_143_BINARY_RESEARCH_ASSETS_SHA_MATCH_CP114",
+      "format_parity": "115P_REBUILT_LOCAL__SHARED_FULL_144_RULE_HOLD",
+      "production_status": "GIT_SOURCE_AND_DRIVE_CANDIDATE_QA_ONLY__NO_NEW_SCIENTIFIC_CURRENT",
+      "tag_status": "NOT_CREATED"
     }
   ],
   "required_fields": [

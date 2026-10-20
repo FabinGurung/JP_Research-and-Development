@@ -49,7 +49,7 @@
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
     "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
     "saugat_cp114_compiled_with_shared_template": false,
-    "status": "FULL_TEXT_SOURCE_IMPORTED__COVER_MONTH_115P_LOCAL_QA_PASS__CP114_CURRENT_RETAINED",
+    "status": "GIT_CP114_SOURCE_AND_V2_4_QA_DELIVERABLES_IN_DRIVE__143_BINARY_ASSETS_RESTORATION_VERSIONED__CURRENT_CP114_UNCHANGED",
     "source_import_commit": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
     "imported_text_files": 58,
     "shared_template_blob_sha": "f6d8b8fba284603604358d50eed285f722b0c3a0",
@@ -128,9 +128,45 @@
       "qa_pages": 115,
       "visual_validation": "LOGO_TRUE_3X_W_AND_H__115_115_PAGES_RENDER__ALL_115_PAGE_TEXT_IDENTICAL_AFTER_MONTH_NORMALIZATION",
       "full_144_rule_certification": "HOLD",
-      "drive_upload": "NOT_PERFORMED",
+      "drive_upload": "PERFORMED_VERIFIED_SHA256_ROUNDTRIP",
       "current_scientific_checkpoint": "CP114_UNCHANGED",
-      "production_release": "NOT_PROMOTED"
+      "production_release": "STILL_ON_HOLD_144_RULE_FORMAT_ACCEPTANCE_MISSING",
+      "drive_pdf_id": "10tMkCe8gh0oDXT5qV7c3txU-J9bGfl1v",
+      "drive_source_zip_id": "1dHZYKN8sD36m88RkVriTLRa_gAfhwjmA",
+      "drive_source_zip_sha256": "425f125ec3f19d48215cfbf559b1180bea2154b09940b2d8022e7b4183f25ac8",
+      "provider_readback": "DIRECT_FILE_REDOWNLOAD_SHA256_MATCH_PDF_AND_ZIP",
+      "post_upload_duplicate_id": "1ABIZkp75er7GmzXxv1v-3YpdvaDCuBTX",
+      "post_upload_duplicate_disposition": "ARCHIVED_BYTE_IDENTICAL_NOT_DELETED"
+    },
+    "asset_migration": {
+      "change_id": "RD-LTX-CHG-108",
+      "assets_authority": "CP114_ORIGINAL_SOURCE_ZIP",
+      "asset_manifest": "researchers/saugat-paneru/latex/asset-manifest-cp114.json",
+      "binary_asset_count": 143,
+      "types": {
+        "pdf": 58,
+        "png": 77,
+        "xlsx": 7,
+        "jpg": 1
+      },
+      "source_files_untouched": "32_PROTECTED_SUBFILE_TEX_BIB_SHA256_MATCH_ORIGINAL",
+      "first_source_zip_defect": "MISSING_58_PDF_FIGURES",
+      "corrected_source_zip_sha256": "425f125ec3f19d48215cfbf559b1180bea2154b09940b2d8022e7b4183f25ac8",
+      "drive_qa_folder_id": "1Nz2CRnrnYvRXEFHzs29mdvWWw3bPIgGi",
+      "qa_pdf_id": "10tMkCe8gh0oDXT5qV7c3txU-J9bGfl1v",
+      "qa_zip_id": "1dHZYKN8sD36m88RkVriTLRa_gAfhwjmA",
+      "qa_manifest_143_id": "1lEFyFY8MMG0P6NuZV7Ihk434zBqPLO5-",
+      "qa_read_first_id": "16atxKfC-Y4nbLpuVtUMliunN30Jl23pI",
+      "pdf_zip_provider_readback": "EXACT_HASH_AND_SIZES_MATCH",
+      "local_independent_rebuild": {
+        "pages": 115,
+        "full_text_identical_to_uploaded_pdf": 115,
+        "sha256": "dba7b89a1c345e5dff9df09aa7bd463985c4bab70e4ea9d47bce71a10868c86e"
+      },
+      "current_checkpoint": "CP114_UNCHANGED",
+      "global_144_format_gate": "HOLD",
+      "production_release": "NOT_PERFORMED",
+      "tag": "NOT_CREATED"
     }
   },
   "debt": {
