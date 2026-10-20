@@ -66,5 +66,19 @@
     "source_main_pre": "81700b3344968ab1f2b2ac8d01c11cf04c5c5c02",
     "source_branch": "saugat/cp114-v24-production-format-promotion-20261020",
     "tag": "NOT_CREATED"
+  },
+  "checkpoint_resolution": {
+    "status": "ONE_CANONICAL_CURRENT_CHECKPOINT_NAME",
+    "folder_id": "1vZr5559DA-e8fb0TDn46sVvT9JfRyVWV",
+    "current_checkpoint_name": "CURRENT_CHECKPOINT",
+    "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "historical_scientific_baseline_name": "SCIENTIFIC_BASELINE_CP114__20261007__ORIGINAL_CHECKPOINT.md",
+    "historical_scientific_baseline_drive_id": "1138hLUcRPPzXay5p-cniLV5R8nk3oedJ",
+    "rollback_pre_snapshot_id": "1mehCh3sTRR0rV6zX4ldeKUhcdNboZmb0",
+    "method": "RENAME_OLD_BASIS_AND_PROMOTE_EXISTING_NEW_POINTER_BY_NAME__NO_BYTES_LOST",
+    "same_old_checkpoint_id_was_preserved_for_historical_links": true,
+    "active_pointer_id_changed": true,
+    "content_sha_and_file_size_verified_before_rename": true,
+    "provider_folder_readback": true
   }
 }
