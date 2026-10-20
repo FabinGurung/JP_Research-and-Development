@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "release_gate_id": "RSH002_CP114_M2_RELEASE_GATE_20261020",
+  "release_tag": "saugat-cp114-m2.0.0-source-qa-20261020",
+  "milestone": "M2__CP114_FROZEN_LIVE_SOURCE_115P_LAYOUT_QA",
+  "decision": "M2_SCOPE_RELEASE_READY__NO_M2_BLOCKING_DEBT",
+  "decision_date_npt": "2026-10-20",
+  "user_authority": "Keep exactly the CP114 live LaTeX and research images; document rather than repair figures and hyphenation now; clear the M2 scope debt before tagging and releasing.",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "format_production": "v2.4_CURRENT_UNCHANGED",
+  "tag_target_policy": "NEW_GOVERNED_RELEASE_COMMIT_AFTER_PR33_SOURCE_FREEZE__NOT_A_NEW_SCIENTIFIC_CP",
+  "frozen_git_source_commit": "5717d0edf313868739f16a603a11340d6e35ac99",
+  "m2_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/33",
+  "resolved_blocking_debt": [
+    {
+      "key": "M2-001",
+      "status": "CLOSED",
+      "scope": "Freeze original scientific manuscript",
+      "proof": "32 protected TeX/BibTeX modules byte-identical to CP114"
+    },
+    {
+      "key": "M2-002",
+      "status": "CLOSED",
+      "scope": "Preserve source figures and originals",
+      "proof": "143/143 CP114 binary assets SHA256 match; original 58 PDF, 77 PNG, 7 XLSX, 1 JPG"
+    },
+    {
+      "key": "M2-003",
+      "status": "CLOSED",
+      "scope": "Reproducible full build and all-page layout audit",
+      "proof": "115 A4 pages, 115/115 normalized text parity, 81/81 image instances, Arabic 1–98 and roman through xvi, 0 overfull; 252 inherited underfull warnings logged"
+    },
+    {
+      "key": "M2-004",
+      "status": "CLOSED",
+      "scope": "Enumerate applicability and disposition of all 144 live university format rules",
+      "proof": "144 tracked individually; 43 scoped technical passes, 76 partial, 22 independently unverified, 2 accepted deviations, 1 deferred figure legibility. No claim 144/144 certified."
+    },
+    {
+      "key": "M2-005",
+      "status": "CLOSED",
+      "scope": "Drive artifact storage and independent readback",
+      "proof": "58,634,352-byte M2 complete source ZIP SHA256 cb0175ebfda6cd9960b55a94743c85862f11f4fd828b86c162d5315bbb39d521. Provider re-downloaded and SHA verified."
+    },
+    {
+      "key": "M2-006",
+      "status": "CLOSED",
+      "scope": "Governed Git merge and CI",
+      "proof": "PR #33 merged to 5717d0edf313868739f16a603a11340d6e35ac99; 3/3 GitHub CI passed."
+    },
+    {
+      "key": "M2-007",
+      "status": "CLOSED",
+      "scope": "Version control conflict from experimental v2.5 candidate",
+      "proof": "PR #32 closed without merge; RC1 candidate archived, not silently promoted; RD-LTX-CHG-110 used by M2 with valid RESEARCHER_ONLY classification."
+    },
+    {
+      "key": "M2-008",
+      "status": "CLOSED",
+      "scope": "Canonical Drive checkpoint and rollback",
+      "proof": "Single CURRENT_CHECKPOINT ID 1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN, original CP114 historical checkpoint preserved ID 1138hLUcRPPzXay5p-cniLV5R8nk3oedJ; separate M2 checkpoint."
+    }
+  ],
+  "blocking_m2_debt": [],
+  "deferred_out_of_scope": [
+    {
+      "key": "NEXT-FMT-01",
+      "status": "OPEN_DEFERRED_USER_APPROVED",
+      "issue": "https://github.com/FabinGurung/JP_Research-and-Development/issues/34",
+      "details": "76 partially verified and 22 independently unverified PU rules; separate 144/144 institutional certification not claimed."
+    },
+    {
+      "key": "NEXT-FMT-02",
+      "status": "OPEN_DEFERRED_USER_APPROVED",
+      "issue": "https://github.com/FabinGurung/JP_Research-and-Development/issues/34",
+      "details": "PU-FMT-007 original line-break/hyphenation and 252 inherited underfull boxes retained to preserve live source."
+    },
+    {
+      "key": "NEXT-FMT-03",
+      "status": "OPEN_DEFERRED_USER_APPROVED",
+      "issue": "https://github.com/FabinGurung/JP_Research-and-Development/issues/34",
+      "details": "PU-FMT-016 user-approved 3x logo deviation and PU-FMT-039 original small chart/plan labels; do not redraw from guessed data."
+    },
+    {
+      "key": "NEXT-SCI-01",
+      "status": "OPEN_OUTSIDE_LATEX_M2",
+      "issue": "https://github.com/FabinGurung/JP_Research-and-Development/issues/35",
+      "details": "EQx/EQy provenance, pushover node and hinge metadata, four-storey response comparisons. No scientific correctness certification."
+    },
+    {
+      "key": "LEGACY-A9-ACK",
+      "status": "HISTORICAL_NOT_RECONCILED_AS_PART_OF_M2",
+      "details": "Earlier A9 local/main science-checkpoint registrar/ACK issues are historical and were not retroactively declared done by this Git/Drive source milestone."
+    }
+  ],
+  "frozen_artifacts": {
+    "m2_source_zip_drive_id": "1oX41LNfFMYQ7YHeISBmHqTgz3Ztt_mSS",
+    "m2_source_zip_sha256": "cb0175ebfda6cd9960b55a94743c85862f11f4fd828b86c162d5315bbb39d521",
+    "source_zip_file_count": 218,
+    "original_live_files": 213,
+    "all_original_assets": 143,
+    "scientific_protected_modules": 32,
+    "m2_drive_folder_id": "1fEum6IG0BkWB-rSPDbeOk9F2-Zwab0yB",
+    "source_call_manifest_id": "1Uc40Z-vaOMypgDUjceb4XGDVGQXhXjFF",
+    "page_ledger_id": "1-RM6WRBfsasOiyLE8dafYoSFMBgdh7Wl",
+    "visual_contact_sheet_id": "1wLeRa3hw9wEMoJEWTByr-t1bSb1pfMo-",
+    "m2_checkpoint_id": "1Lmimu89LHKF5Hb6vmzTYJY_5Eh7hDCR_",
+    "production_pdf_drive_id": "1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg",
+    "production_pdf_sha256": "5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428"
+  },
+  "scope_boundaries": {
+    "scoped_milestone_release": true,
+    "new_scientific_manuscript_or_cp": false,
+    "scientific_data_modified": false,
+    "full_144_rule_certified": false,
+    "university_approval_certificate_created": false,
+    "private_binary_data_added_to_public_git": false,
+    "production_current_changed": false,
+    "release_asset_policy": "GitHub release notes contain Drive pointers and checksums only; do NOT upload private research binaries, workbooks or licensed fonts."
+  },
+  "git_release": {
+    "status": "PENDING_RELEASE_JOB",
+    "target_repository": "FabinGurung/JP_Research-and-Development",
+    "mechanism": "SINGLE_USE_GITHUB_ACTIONS_CONTENTS_WRITE__ANNOTATED_TAG_AND_GITHUB_RELEASE",
+    "postcondition": "Verify tag commit, published release URL, release notes, and baseline CURRENT unchanged before declaring complete."
+  }
+}
