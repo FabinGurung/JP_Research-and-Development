@@ -174,7 +174,29 @@
       "production_pointer_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
       "scientific_current_checkpoint": "CP114_UNCHANGED"
     },
-    "production_pointer": "researchers/saugat-paneru/latex/production-current.json"
+    "production_pointer": "researchers/saugat-paneru/latex/production-current.json",
+    "pu144_qa_candidate": {
+      "status": "V2_5_RC1_ONLY_NOT_PRODUCTION",
+      "shared_template_candidate": "2.5.0-RC1",
+      "branch": "latex/pu-v2-5-144-rule-audit-saugat-20261020-r2",
+      "pdf_drive_id": "1cyww5Sx2jTkYLEmjKWoacysICGZaZkXd",
+      "pdf_sha256": "85f62106df9db57c8e4063d7e45ddc09203dd3fec8bfbf881a02af053c17535b",
+      "pdf_pages": 115,
+      "source_drive_id": "1Uhk2EII9NJMYYKX_yDRJ7HEnKbP3MNOi",
+      "source_sha256": "b535633bbe1c4bc704f7874c3ea21ecb551a3f44ed22ee25d69e9c5aa144ccbd",
+      "audit_md": "controls/latex/audits/PU144_RSH002_CP114_v2_5_RC1_20261020.md",
+      "audit_json": "controls/latex/audits/PU144_RSH002_CP114_v2_5_RC1_20261020.json",
+      "scoped_technical_verification": 43,
+      "partial": 76,
+      "deviations": 2,
+      "figure_font_review": 1,
+      "not_independently_verified": 22,
+      "all_144_pass": false,
+      "render_qa": "115P_A4__81_IMAGES__0_OVERFULL__320_UNDERFULL__61_PAGES_REFLOW",
+      "production_current_pdf_id": "1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg",
+      "scientific_baseline": "CP114_UNCHANGED",
+      "drive_roundtrip_sha256": "PASS"
+    }
   },
   "debt": {
     "scientific_provenance": "CP114_ADMITTED_AS_IS__NOT_A_SOURCE_MIGRATION_BLOCKER",
