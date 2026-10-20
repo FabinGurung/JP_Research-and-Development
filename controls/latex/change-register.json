@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 109,
+  "next_number": 110,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -163,6 +163,28 @@
       "format_parity": "115P_REBUILT_LOCAL__SHARED_FULL_144_RULE_HOLD",
       "production_status": "GIT_SOURCE_AND_DRIVE_CANDIDATE_QA_ONLY__NO_NEW_SCIENTIFIC_CURRENT",
       "tag_status": "NOT_CREATED"
+    },
+    {
+      "change_id": "RD-LTX-CHG-109",
+      "researcher_id": "RSH-002",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Promote Saugat CP114 scientific-content-identical v2.4 shared-template thesis PDF and complete research-source ZIP to new CURRENT PRODUCTION FORMAT revision after direct user authorization and user-reported university formatting acceptance; preserve frozen CP114 original and version history.",
+      "source_paths": [
+        "researchers/saugat-paneru/latex/production-current.json",
+        "researchers/saugat-paneru/latex/source-baseline.json",
+        "researchers/saugat-paneru/latex/GOVERNANCE_READ_FIRST.md",
+        "registry/latex-inheritance.json"
+      ],
+      "before_after_qa_evidence": "Drive production PDF 1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg SHA256 5bbe2bcf006f16f823e796ca9c6722c122de69c27cec7955803d98b07b6d3428, 115 A4 pages; production source ZIP 1eMgFKcjYin6SIO4-SUC1d70c1qADttOi SHA256 425f125ec3f19d48215cfbf559b1180bea2154b09940b2d8022e7b4183f25ac8. Both re-downloaded, byte identical. CP114 original PDF 1aFVnwamHhp2Xpjmg10UfMPBwK031HMTh and original ZIP 1yL3G-EUGA32FDBhkdImXk9NManfW_vyA unchanged. PRE CURRENT snapshot 1mehCh3sTRR0rV6zX4ldeKUhcdNboZmb0. New Drive production pointer 1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN. Full 144-rule certification not claimed.",
+      "pu_rule_references": [],
+      "disposition": "USER_AUTHORIZED_FORMAT_RELEASE",
+      "target_shared_rule": null,
+      "global_propagation": "NONE_RESEARCHER_ONLY",
+      "scientific_boundary": "CP114_SCIENTIFIC_CONTENT_UNCHANGED",
+      "academic_format_basis": "UNIVERSITY_ACCEPTANCE_REPORTED_BY_USER_NOT_INDEPENDENTLY_DOCUMENTED",
+      "global_144_rule_audit": "OPEN_7_DECLARED_47_PARTIAL_90_UNVERIFIED_0_FULL_CERTIFIED",
+      "production_status": "GIT_V2_4_FORMAT_PRODUCTION_CURRENT",
+      "release_tag": "NOT_CREATED"
     }
   ],
   "required_fields": [
