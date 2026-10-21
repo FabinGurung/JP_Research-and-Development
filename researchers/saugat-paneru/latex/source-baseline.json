@@ -49,7 +49,7 @@
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
     "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
     "saugat_cp114_compiled_with_shared_template": false,
-    "status": "SCIENTIFIC_CP114_PRESERVED__PRODUCTION_FORMAT_GIT_V2_4_PROMOTED_20261020",
+    "status": "SCIENTIFIC_CP114_PRESERVED__GIT_V2_4_DISC_V024_S02_EDITORIAL_CURRENT_20261021",
     "source_import_commit": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
     "imported_text_files": 58,
     "shared_template_blob_sha": "f6d8b8fba284603604358d50eed285f722b0c3a0",
@@ -219,7 +219,7 @@
     },
     "discussion_v024_s02_candidate": {
       "id": "RSH002_DISC_V024_S02_MINIMAL_LATEX_CANDIDATE_20261021",
-      "status": "GIT_PR_DRAFT_ONLY__EXACT_TNR_115_PAGE_BUILD_QA_VERIFIED__NOT_CURRENT",
+      "status": "APPROVED_BY_USER__MERGED_PR37__PROMOTED_CURRENT_20261021",
       "source_main_pre": "ac3384d36f155433e98a4ce47d1ee462c1bbcb7c",
       "branch": "saugat/disc-v024-s02-minimal-manuscript-candidate-20261021",
       "source_diff_files": [
@@ -253,8 +253,20 @@
       "readback_sha256": "VERIFIED_BOTH",
       "source_changes_authorized_as_compiled_candidate": true,
       "git_change_register_id": "RD-LTX-CHG-111",
-      "no_merge_no_new_science_no_current_promotion": true
-    }
+      "no_merge_no_new_science_no_current_promotion": false,
+      "git_pr": 37,
+      "merged_source_commit": "bb70dc2e2bed78bf25a8dda6530507577731faad",
+      "current_production_pdf_drive_id": "1NRLCgy7F8vIMzGs03zadiVC8SsuhEh5J",
+      "current_production_source_zip_drive_id": "1Ts1BniRbLb_Ft9fiBME2LsKsIfr0CCzR",
+      "promoted_version": "CP114-GIT-v2.4-DISC-V024-S02-20261021",
+      "current_pointer_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+      "current_pointer_pre_snapshot_id": "1fCKIowI1_bxKohTmXPdwy9r-NCfN2_dI",
+      "production_binary_provider_readback": "BOTH_SHA256_MATCH",
+      "git_registration_change_id": "RD-LTX-CHG-112",
+      "source_only_not_current": false,
+      "no_new_science_no_m2_mutation": true
+    },
+    "previous_production_status": "SCIENTIFIC_CP114_PRESERVED__PRODUCTION_FORMAT_GIT_V2_4_PROMOTED_20261020"
   },
   "debt": {
     "scientific_provenance": "CP114_ADMITTED_AS_IS__NOT_A_SOURCE_MIGRATION_BLOCKER",
