@@ -1,0 +1,106 @@
+name: Saugat CP114 M3 approved editorial production release
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/saugat-cp114-m3-editorial-release.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: saugat-cp114-m3-editorial-production
+  cancel-in-progress: false
+jobs:
+  release-verified-current:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate R&D repository and single shared LaTeX control
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/validate_repo.py
+          python scripts/latex/validate_shared.py
+          python scripts/latex/universal_preflight.py --policy-check
+      - name: Fail-closed frozen scientific source and production-receipt validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          def j(path): return json.loads(Path(path).read_text())
+          parent='3190958cfb5148751bbe68ccf4c565a35f56f024'
+          tag='saugat-cp114-m3.0.0-editorial-production-20261021'
+          base='researchers/saugat-paneru/latex'
+          p=j(f'{base}/production-current.json')
+          src=j(f'{base}/source-baseline.json')
+          a=j(f'{base}/qa/DISC_V024_S02_35_ITEM_NEXT_LATEX_ADMISSION_LEDGER_20261021.json')
+          ch=j('controls/latex/change-register.json')
+          assert p['release_version']=='CP114-GIT-v2.4-DISC-V024-S02-20261021'
+          assert p['status']=='CURRENT_PRODUCTION__USER_APPROVED_EDITORIAL_UPDATE__GIT_MAIN_MERGED'
+          assert p['version_control']['source_pr']==37
+          assert p['version_control']['source_merged_commit']=='bb70dc2e2bed78bf25a8dda6530507577731faad'
+          assert p['new_production']['pdf_drive_id']=='1NRLCgy7F8vIMzGs03zadiVC8SsuhEh5J'
+          assert p['new_production']['pdf_sha256']=='b08e3ebb1ea1849d25cf07e69bf77492099a99acb3cb24889c44db46a449c342'
+          assert p['new_production']['source_zip_drive_id']=='1Ts1BniRbLb_Ft9fiBME2LsKsIfr0CCzR'
+          assert p['new_production']['source_zip_sha256']=='9fc5c47ecdde9c788c9678d9fd31b41aed41b6e6b15dbf555f514d12297504bd'
+          assert p['new_production']['pages']==115
+          assert p['new_production']['all_143_original_research_assets_hash_verified'] is True
+          assert 'ROUNDTRIP_SHA256_PASS' in p['new_production']['readback']
+          assert p['checkpoint_resolution']['current_checkpoint_drive_id']=='1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN'
+          assert p['checkpoint_resolution']['before_copy']=='1fCKIowI1_bxKohTmXPdwy9r-NCfN2_dI'
+          assert p['checkpoint_resolution']['after_pointer_provider_readback_exact'] is True
+          assert p['scientific_content_status'].startswith('CP114_ADMITTED_NUMERICAL_RESULTS_UNCHANGED')
+          assert p['accepted_authorization']['decision']=='AUTHORIZE_S02_MINIMAL_EDITORIAL_REVISION_AS_CURRENT'
+          assert p['accepted_authorization']['full_144_rule_certification'] is False
+          assert p['independent_recompile']['changed_physical_pdf_pages']==[10,89,90,91]
+          assert p['independent_recompile']['image_placements_unchanged']==81
+          assert p['independent_recompile']['overfull_boxes']==0
+          assert p['previous_formatted_production']['previous_pdf_drive_id']=='1tuXDpv1eP9bPqVbLfqimmRMQTQo8Eqvg'
+          assert src['git']['milestone_M2']['m2_source_zip_drive_id']=='1oX41LNfFMYQ7YHeISBmHqTgz3Ztt_mSS'
+          assert src['git']['discussion_v024_s02_candidate']['merged_source_commit']=='bb70dc2e2bed78bf25a8dda6530507577731faad'
+          assert src['git']['discussion_v024_s02_candidate']['source_only_not_current'] is False
+          assert len(a['rows'])==35
+          from collections import Counter
+          tally=Counter(x['final_disposition'] for x in a['rows'])
+          assert tally=={'ALREADY_PRESENT':19,'IMPLEMENTED':4,'REQUIRES_SOURCE':6,'DEFERRED':4,'VISUAL_REVIEW':2}
+          assert ch['entries'][-1]['change_id']=='RD-LTX-CHG-112'
+          assert ch['next_number']==113
+          assert tag in Path(f'{base}/qa/CP114_M3_EDITORIAL_PRODUCTION_RELEASE_NOTES_20261021.md').read_text()
+          subprocess.run(['git','cat-file','-e',parent+'^{commit}'],check=True)
+          subprocess.run(['git','merge-base','--is-ancestor',parent,'HEAD'],check=True)
+          changed=set(subprocess.check_output(['git','diff','--name-only',parent,'HEAD'],text=True).splitlines())
+          allowed={'.github/workflows/saugat-cp114-m3-editorial-release.yml',f'{base}/qa/CP114_M3_EDITORIAL_PRODUCTION_RELEASE_NOTES_20261021.md'}
+          assert changed==allowed, f'Unexpected change since promoted CURRENT: {changed ^ allowed}'
+          print('M3 scoped release evidence PASS; 35 S02 items accounted, unresolved scientific/format debt expressly retained')
+          PY
+      - name: Guarded annotated tag and GitHub Release from approved main
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          TAG: saugat-cp114-m3.0.0-editorial-production-20261021
+        run: |
+          set -euo pipefail
+          [[ "$(gh pr view 37 -R "$REPO" --json mergedAt --jq '.mergedAt != null')" == 'true' ]]
+          [[ "$(gh pr view 38 -R "$REPO" --json mergedAt --jq '.mergedAt != null')" == 'true' ]]
+          gh release view saugat-cp114-m2.0.0-source-qa-20261020 -R "$REPO" > /dev/null
+          if git ls-remote --exit-code --tags origin "refs/tags/$TAG" > /dev/null 2>&1; then
+            git fetch origin "refs/tags/$TAG:refs/tags/$TAG"
+            [[ "$(git rev-parse "${TAG}^{commit}")" == "$GITHUB_SHA" ]] || { echo 'Existing tag target conflict; STOP'; exit 1; }
+            gh release view "$TAG" -R "$REPO" > /dev/null || { echo 'Tag exists but no GitHub Release; STOP'; exit 1; }
+            echo 'Existing tag/Release verified; no rewrite'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a "$TAG" "$GITHUB_SHA" -m 'Saugat Paneru CP114 M3: user-approved 115-page S02 editorial PDF CURRENT, original scientific source and M2 preserved'
+          git push origin "refs/tags/$TAG"
+          gh release create "$TAG" -R "$REPO" --verify-tag --title 'Saugat CP114 — M3 approved S02 editorial thesis (115 A4 pages)' --notes-file researchers/saugat-paneru/latex/qa/CP114_M3_EDITORIAL_PRODUCTION_RELEASE_NOTES_20261021.md
+          gh release view "$TAG" -R "$REPO" --json url,tagName,isDraft,isPrerelease --jq '{url,tagName,isDraft,isPrerelease}'
