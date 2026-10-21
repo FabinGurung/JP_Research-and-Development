@@ -216,6 +216,44 @@
       "figure_recreation": false,
       "rc1_new_hyphenation_source_promoted": false,
       "production_current_pdf_changed": false
+    },
+    "discussion_v024_s02_candidate": {
+      "id": "RSH002_DISC_V024_S02_MINIMAL_LATEX_CANDIDATE_20261021",
+      "status": "GIT_PR_DRAFT_ONLY__EXACT_TNR_115_PAGE_BUILD_QA_VERIFIED__NOT_CURRENT",
+      "source_main_pre": "ac3384d36f155433e98a4ce47d1ee462c1bbcb7c",
+      "branch": "saugat/disc-v024-s02-minimal-manuscript-candidate-20261021",
+      "source_diff_files": [
+        "manuscript/frontmatter/abstract.tex",
+        "manuscript/chapters/chapter5_conclusion.tex",
+        "manuscript/cp112_additions/ch4_gii_summary_traceability.tex"
+      ],
+      "discussion_version": "DISC-SEQ-024",
+      "supervisor_input": "S02__2026-10-12",
+      "full_teacher_ledger": "qa/DISC_V024_S02_35_ITEM_NEXT_LATEX_ADMISSION_LEDGER_20261021.json",
+      "qa_report": "qa/DISC_V024_S02_CANDIDATE_BUILD_QA_READ_FIRST_20261021.md",
+      "shared_template_exact_blob": "6fb77b6f09773e29bd1159a4dc4ec2d7f773aa06",
+      "project_adapter_exact_blob": "242418f5f4f14cf325f77833596717981322e7d3",
+      "current_scientific_checkpoint": "CP114_UNCHANGED",
+      "current_formatted_production": "CP114-GIT-v2.4-FORMAT-20261020_UNCHANGED",
+      "candidate_pdf_drive_id": "1ZMBpPWGV4Kv6MzYHuM0XOgJr1u-sN_OG",
+      "candidate_pdf_sha256": "b08e3ebb1ea1849d25cf07e69bf77492099a99acb3cb24889c44db46a449c342",
+      "candidate_complete_source_drive_id": "10-yUstfX6lrsMEJLvsBRDVj_tlDhtudE",
+      "candidate_complete_source_sha256": "9fc5c47ecdde9c788c9678d9fd31b41aed41b6e6b15dbf555f514d12297504bd",
+      "source_assets_preserved": 143,
+      "compiled_pdf_pages": 115,
+      "normalized_text_changed_pages": [
+        10,
+        89,
+        90,
+        91
+      ],
+      "image_placements_preserved": 81,
+      "overfull_boxes": 0,
+      "numbered_objective_link_rewrite_done": true,
+      "readback_sha256": "VERIFIED_BOTH",
+      "source_changes_authorized_as_compiled_candidate": true,
+      "git_change_register_id": "RD-LTX-CHG-111",
+      "no_merge_no_new_science_no_current_promotion": true
     }
   },
   "debt": {
