@@ -1,19 +1,15 @@
-# Project contract lane — PRJ-000029 / REB-002
+# Governed client-contract project lane — PRJ-000029 / REB-002
 
-This is an **explicitly authorized project-specific Git branch**, not a new shared LaTeX template and not a separate copy of every project. A Git branch tracks an entire repository snapshot; the allowlist limits this lane's intentional changed paths.
+This is a **project-specific code-and-control lane**, not an additional shared template or a publication of the underlying private agreement. A Git branch is an entire repository snapshot; the intended changed-path allowlist is limited to the branch registry, reusable schema and this project's code-only route metadata.
 
-## Source architecture
-- **Single approved shared template:** [client-contract.tex](../../../v3/client-contract.tex)
-- **Shared compiler:** `scripts/document_engineering/compile_v3_private_client_instance.py` in this repository.
-- **Per-client edited LaTeX body, logo, full legal/financial terms, source PDF and rendered contract:** private **Google Drive** in that client's governed agreements folder. Neither full client body nor the PDF is safe to commit to this public repository.
-- **Public-safe semantic schema:** `schemas/enterprise/client-contract-instance.schema.json`.
-- **Client status:** Draft, not signed, not engineer-approved.
+## Ownership
+- Reusable canonical public layout: `templates/enterprise/v3/client-contract.tex` (approved v3).
+- Generic private-instance compiler: `scripts/document_engineering/compile_v3_private_client_instance.py` (reuse existing; do not duplicate).
+- Generic semantic input schema: `schemas/enterprise/client-contract-instance.schema.json`.
+- Project-specific finalized or working LaTeX body, facts, attachments, signatures, financial schedule and compiled PDF: permission-controlled **Google Drive**, with stable provider IDs and revisions recorded in the private artifact manifest.
 
-## Version sequence
-Use existing commit SHA as PRE and this project's registered branch HEAD as POST. A private source ZIP containing the exact `.tex` and its style/logo dependencies plus compiled PDF is uploaded to Drive under the approved project folder. Log source SHA-256, generated PDF SHA-256 and Drive provider IDs in the private source package. Never infer private-contract approval or publication from a passing workflow.
+## Versioning and QA
+Use Git commits to version changes to public-safe generator/code/semantic metadata. Use original Drive file IDs, private source package digest and exact PDF digest for private document revisions. Numeric instalments should reconcile to the governing total; displayed two-decimal percentages may need an explicit rounding note. An existing as-received drawing may be **available but not signed**. Services and compound scope require appropriate client/contractor agreement. Unpriced VOs must remain unpriced until approved and documented.
 
-## Project-specific required validations
-Milestones must use an auditable amount sum; displayed percentages can round to 99.99% while exact NPR instalments control 100%. Original architectural/structural sources can be `AVAILABLE_AS_RECEIVED_NOT_SIGNED`: they are not "missing" and not automatically approved. Plumbing/sanitary/electrical and compound/railings may be subject to Contractor–Client mutual agreement. Unpriced VO-01 rear decorative butta and VO-02 MS→SS railings must remain `null` priced until a signed VO, and SS covers all included railing locations. Client/private amount values are never checked into this public repo.
-
-## Publication
-Communications & Web may publish a **public-safe, authorization-aware pointer** only after the current project-publication settings explicitly allow it. No contract PDF, full LaTeX instance or private numeric schedule goes onto public GitHub Pages.
+## Public-safety and publication gate
+Do **not** commit the full project LaTeX instance, private source filenames/IDs, financial amounts, personal contractual details, engineering original files or compiled PDF to this public repository or Pages. Site publication remains HOLD until the owning public/private publication authority authorizes the exact safe projection. A green GitHub Action means only its listed tests passed; it does not establish legal or engineering approval.
