@@ -1,0 +1,50 @@
+name: Enterprise Contract - Source Evidence and Semantic QA
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'schemas/enterprise/client-contract-instance.schema.json'
+      - 'controls/document-engineering/client-contract-reusable-clauses.policy.v1.json'
+      - 'scripts/document_engineering/validate_contract_source_evidence.py'
+      - '.github/workflows/enterprise-contract-source-evidence.yml'
+  push:
+    branches:
+      - 'project/**/contract'
+    paths:
+      - 'schemas/enterprise/client-contract-instance.schema.json'
+      - 'controls/document-engineering/client-contract-reusable-clauses.policy.v1.json'
+      - 'scripts/document_engineering/validate_contract_source_evidence.py'
+      - '.github/workflows/enterprise-contract-source-evidence.yml'
+      - 'templates/enterprise/projects/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-semantic-evidence:
+    name: Public schema & synthetic self-test only (no private client source)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned schema validator
+        run: python -m pip install jsonschema==4.23.0
+      - name: Validate semantic source/evidence controls
+        run: python scripts/document_engineering/validate_contract_source_evidence.py --self-test
+      - name: Verify immutable shared v3 canonical source registration
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          reg=json.loads(Path('registry/enterprise-document-types.json').read_text())
+          c=next(x for x in reg['templates'] if x['id']=='client-contract')
+          p=Path(c['path']).read_bytes()
+          sha=hashlib.sha1(b'blob '+str(len(p)).encode()+b'\0'+p).hexdigest()
+          assert sha == c['approved_git_blob_sha'], 'Shared v3 canonical source changed without approval'
+          print('PASS canonical layout blob unchanged; no private PDFs or attachments in this CI')
+          PY
+      - name: Publication safety statement
+        run: |
+          echo 'Private client PDF, original drawings, financial terms and signed agreements are not GitHub Actions artifacts.'
+          echo 'Only generic schema/code QA is executed. This run is not contractual or engineering certification.'
