@@ -42,6 +42,26 @@
     {
       "id": "EXECUTION",
       "rule": "Do not issue an agreement before party authority, taxes, dates, signed appendices, payment terms and legal review are resolved."
+    },
+    {
+      "id": "SOURCE_SHEET_CITATIONS",
+      "rule": "For every original drawing set linked to a contract, record canonical provider ID, MIME, exact source digest, total pages and numbered-sheet citation ranges. Separate what the source actually depicts from commercial user scope and any engineering signoff."
+    },
+    {
+      "id": "ORIGINAL_APPENDIX",
+      "rule": "When requested, append the exact as-received original PDF sheets to the client PDF as a source appendix, verify page count and original SHA-256, preserve original Drive binary/file ID and independently retain the non-merged contract PDF. Do not treat attachment as design approval."
+    },
+    {
+      "id": "MUTUAL_AGREEMENT_SCOPE",
+      "rule": "For unprovided plumbing/electrical routes and compound/railing design, say mutual written contractor-client agreement is required; an available septic/soak-pit detail does not prove complete plumbing design. Changes to railing grade/scope must have independent VO controls."
+    },
+    {
+      "id": "CLIENT_DELIVERY_AND_INTERNAL_QA",
+      "rule": "Use clear client-facing document names with version and no internal DRAFT/AUDIT marker. Render an ordinary agreement title, legal effectiveness/signature conditions, and human-readable references; never print internal lifecycle status, machine IDs, QA, AI/implementation terms or source digests in the contract. Separately maintain full unsigned/execution status, internal QA and evidence in restricted Drive/private manifests. This respects docs/document-engineering/enterprise-client-visible-semantics-v1.1.md."
+    },
+    {
+      "id": "STRUCTURAL_NOMENCLATURE",
+      "rule": "Reconcile milestone slab/roof-level names and structural elements to signed sheet references before labeling structurally approved; drawings as-received are descriptive evidence only."
     }
   ],
   "prohibited_inheritance": [
@@ -56,5 +76,6 @@
     "public": "template control and safe formatting only",
     "private": "parties, project clause choices, approved rates, drawings, signatures"
   },
-  "system_status": "DRAFT_GENERATION_ALLOWED__CONTRACT_ISSUE_REQUIRES_REVIEW"
+  "system_status": "DRAFT_GENERATION_ALLOWED__CONTRACT_ISSUE_REQUIRES_REVIEW",
+  "project_specific_copy_rule": "Historic project-specific contracts may suggest clause questions but cannot be reissued as another client's signed terms. All new project deliverables require their own source and commercial agreement."
 }
