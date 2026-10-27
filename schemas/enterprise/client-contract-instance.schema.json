@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Enterprise construction client-contract instance: private data input contract",
+  "description": "Semantic, project-agnostic validation contract for a private client-specific source document. Source file and rendered PDF reside in an authorized private provider; this schema is public-safe and never stores completed client values.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project",
+    "source_control",
+    "publication",
+    "milestones",
+    "contract_drawings",
+    "variation_orders",
+    "draft_state"
+  ],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": [
+        "project_id",
+        "organization_id",
+        "company_project_code"
+      ],
+      "properties": {
+        "project_id": {
+          "type": "string"
+        },
+        "organization_id": {
+          "type": "string"
+        },
+        "company_project_code": {
+          "type": "string"
+        }
+      }
+    },
+    "source_control": {
+      "type": "object",
+      "required": [
+        "canonical_template_git_blob",
+        "private_source_provider",
+        "private_source_revision"
+      ],
+      "properties": {
+        "canonical_template_git_blob": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "private_source_provider": {
+          "const": "GOOGLE_DRIVE"
+        },
+        "private_source_revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "private_source_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "publication": {
+      "type": "object",
+      "required": [
+        "is_public",
+        "private_pdf_in_public_repo"
+      ],
+      "properties": {
+        "is_public": {
+          "type": "boolean"
+        },
+        "private_pdf_in_public_repo": {
+          "const": false
+        },
+        "site_link_visibility": {
+          "enum": [
+            "AUTHORIZED_ONLY",
+            "PUBLIC_SAFE_SUMMARY_ONLY",
+            "HOLD"
+          ]
+        }
+      }
+    },
+    "milestones": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "sequence",
+          "description",
+          "percentage_display",
+          "amount_npr"
+        ],
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 8
+          },
+          "percentage_display": {
+            "type": "string",
+            "pattern": "^[0-9]{1,3}(\\.[0-9]{1,4})?$"
+          },
+          "amount_npr": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "contract_drawings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "discipline",
+          "source_available",
+          "approval_status",
+          "source_provider"
+        ],
+        "properties": {
+          "discipline": {
+            "type": "string"
+          },
+          "source_available": {
+            "type": "boolean"
+          },
+          "approval_status": {
+            "enum": [
+              "VERIFIED_SIGNED",
+              "AVAILABLE_AS_RECEIVED_NOT_SIGNED",
+              "MUTUAL_AGREEMENT_REQUIRED",
+              "UNVERIFIED"
+            ]
+          },
+          "source_provider": {
+            "type": "string"
+          },
+          "revision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "variation_orders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "description",
+          "approval_status",
+          "amount_npr"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^VO-[0-9]{2,}$"
+          },
+          "description": {
+            "type": "string"
+          },
+          "approval_status": {
+            "enum": [
+              "PROPOSED_UNPRICED",
+              "PRICED_PENDING_SIGNATURE",
+              "SIGNED",
+              "VOID"
+            ]
+          },
+          "amount_npr": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "draft_state": {
+      "enum": [
+        "DRAFT_NOT_EXECUTED",
+        "PENDING_SIGNATURE",
+        "EXECUTED_WITH_EVIDENCE"
+      ]
+    }
+  }
+}
