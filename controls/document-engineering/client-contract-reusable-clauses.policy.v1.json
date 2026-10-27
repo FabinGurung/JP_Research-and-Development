@@ -57,7 +57,7 @@
     },
     {
       "id": "CLIENT_DELIVERY_AND_INTERNAL_QA",
-      "rule": "Client-facing filenames use stable document name plus version, without internal DRAFT/AUDIT naming markers. Unsigned client-facing document must still visibly state FOR REVIEW / NOT EXECUTED. Keep internal QA, suggestions, manifests and source audit separately in restricted Drive; never false-claim execution."
+      "rule": "Use clear client-facing document names with version and no internal DRAFT/AUDIT marker. Render an ordinary agreement title, legal effectiveness/signature conditions, and human-readable references; never print internal lifecycle status, machine IDs, QA, AI/implementation terms or source digests in the contract. Separately maintain full unsigned/execution status, internal QA and evidence in restricted Drive/private manifests. This respects docs/document-engineering/enterprise-client-visible-semantics-v1.1.md."
     },
     {
       "id": "STRUCTURAL_NOMENCLATURE",
