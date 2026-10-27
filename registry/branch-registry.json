@@ -420,5 +420,23 @@
       "researcher/sunil-rana/latex",
       "researcher/sunil-rana/presentation"
     ]
-  }
+  },
+  "project_contract_lanes": [
+    {
+      "branch": "project/reb-002-basanti-poudel-baral/contract",
+      "project_id": "PRJ-000029",
+      "company_project_code": "REB-002",
+      "status": "ACTIVE_CODE_ONLY_PRIVATE_PROJECT_MATERIAL_STAYS_DRIVE",
+      "scope": "PROJECT_CONTRACT_LATEX_ROUTING_SCHEMA_AND_SOURCE_POINTERS",
+      "writable_paths": [
+        "templates/enterprise/projects/PRJ-000029/",
+        "schemas/enterprise/client-contract-instance.schema.json",
+        "registry/branch-registry.json"
+      ],
+      "explicit_user_authorization_date": "2026-10-27",
+      "compiled_output_policy": "PRIVATE_GOOGLE_DRIVE_ONLY",
+      "no_other_project_changes": true
+    }
+  ],
+  "project_contract_branch_policy": "project/<company-project-code>-<slug>/contract (explicitly authorized, per-project, code/metadata only, one registered branch per active contract workstream)"
 }
