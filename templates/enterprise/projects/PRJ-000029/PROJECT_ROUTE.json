@@ -23,7 +23,29 @@
     "engineering_approval": "UNVERIFIED"
   },
   "draft_state": "DRAFT_NOT_EXECUTED",
-  "website_projection": "HOLD_PRIVATE_PROJECT",
+  "website_projection": "HOLD_PRIVATE_PROJECT__GENERIC_QA_METHOD_PUBLIC_SAFE",
   "do_not_duplicate_historical_party_contracts": true,
-  "change_record": "User explicitly instructed scoped project-specific Git versioning on 2026-10-27"
+  "change_record": "User explicitly instructed scoped project-specific Git versioning on 2026-10-27",
+  "latest_private_artifact": {
+    "version": "v0.3",
+    "authority": "GOOGLE_DRIVE_PRIVATE",
+    "provider_readback": "VERIFIED",
+    "deliverables": [
+      "CONTRACT_PDF",
+      "CONTRACT_WITH_EXACT_ORIGINAL_SOURCE_APPENDIX_PDF",
+      "EDITABLE_LATEX_PROJECT_ZIP"
+    ],
+    "contract_pages": 5,
+    "attached_original_pages": 21,
+    "source_sheet_citations": "PRESENT_IN_PRIVATE_CONTRACT",
+    "internal_review": "PRIVATE_GOOGLE_DOC",
+    "execution": "UNSIGNED__NOT_APPROVED_FOR_ISSUE"
+  },
+  "semantic_contract": {
+    "schema": "schemas/enterprise/client-contract-instance.schema.json",
+    "clauses": "controls/document-engineering/client-contract-reusable-clauses.policy.v1.json",
+    "validator": "scripts/document_engineering/validate_contract_source_evidence.py",
+    "workflow": ".github/workflows/enterprise-contract-source-evidence.yml",
+    "public_pages_method": "enterprise-documents/source-backed-contracts/"
+  }
 }
