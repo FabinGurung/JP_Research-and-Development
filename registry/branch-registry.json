@@ -431,11 +431,15 @@
       "writable_paths": [
         "templates/enterprise/projects/PRJ-000029/",
         "schemas/enterprise/client-contract-instance.schema.json",
-        "registry/branch-registry.json"
+        "registry/branch-registry.json",
+        "controls/document-engineering/client-contract-reusable-clauses.policy.v1.json",
+        "scripts/document_engineering/validate_contract_source_evidence.py",
+        ".github/workflows/enterprise-contract-source-evidence.yml"
       ],
       "explicit_user_authorization_date": "2026-10-27",
       "compiled_output_policy": "PRIVATE_GOOGLE_DRIVE_ONLY",
-      "no_other_project_changes": true
+      "no_other_project_changes": true,
+      "semantic_publication_status": "PUBLIC_SAFE_GENERIC_CODE_AND_ROUTING_ONLY__PRIVATE_DOCUMENTS_IN_GOOGLE_DRIVE"
     }
   ],
   "project_contract_branch_policy": "project/<company-project-code>-<slug>/contract (explicitly authorized, per-project, code/metadata only, one registered branch per active contract workstream)"
