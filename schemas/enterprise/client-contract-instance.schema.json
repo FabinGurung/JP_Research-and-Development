@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Enterprise construction client-contract instance: private data input contract",
-  "description": "Semantic, project-agnostic validation contract for a private client-specific source document. Source file and rendered PDF reside in an authorized private provider; this schema is public-safe and never stores completed client values.",
+  "description": "Semantic private-client-contract instance including original source attachments, verifiable page citations, scope classification, content/filename status separation, and compiled-output QA. Public code/schema only; completed client instances remain private.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -191,6 +191,201 @@
         "PENDING_SIGNATURE",
         "EXECUTED_WITH_EVIDENCE"
       ]
+    },
+    "contract_value_npr": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Optional governing base contract amount; cross-check against milestone amounts by companion validator."
+    },
+    "source_documents": {
+      "type": "array",
+      "description": "Private provider source documents appended, linked or incorporated by reference. Available as-received is distinct from signed/approved.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_ref",
+          "source_provider",
+          "sha256",
+          "page_count",
+          "approval_status",
+          "usage"
+        ],
+        "properties": {
+          "source_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_provider": {
+            "enum": [
+              "GOOGLE_DRIVE",
+              "OTHER_RESTRICTED_PROVIDER"
+            ]
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "page_count": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "approval_status": {
+            "enum": [
+              "AS_RECEIVED_UNVERIFIED",
+              "APPROVED_SIGNED_WITH_EVIDENCE",
+              "MUTUAL_AGREEMENT_REQUIRED"
+            ]
+          },
+          "usage": {
+            "enum": [
+              "TECHNICAL_REFERENCE_ONLY",
+              "INCORPORATED_ON_SIGNATURE",
+              "CONTRACT_ATTACHMENT"
+            ]
+          },
+          "source_uri": {
+            "type": "string",
+            "format": "uri"
+          },
+          "original_bytes_preserved": {
+            "const": true
+          }
+        }
+      }
+    },
+    "source_citations": {
+      "type": "array",
+      "description": "Page-specific links from contract clause or milestone to as-received evidence, distinguishing recorded facts, user-supplied commercial scope, unapproved proposals and decisions needed.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "citation_id",
+          "source_ref",
+          "first_page",
+          "last_page",
+          "contract_scope_key",
+          "assertion_type"
+        ],
+        "properties": {
+          "citation_id": {
+            "type": "string",
+            "pattern": "^SRC-[0-9]{2,}$"
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "first_page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "last_page": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "contract_scope_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertion_type": {
+            "enum": [
+              "SOURCE_FACT",
+              "USER_SUPPLIED_SCOPE",
+              "MUTUAL_AGREEMENT_REQUIRED",
+              "PROPOSAL_NOT_APPROVED",
+              "HOLD"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "attachment_bundle": {
+      "type": "object",
+      "description": "Compiler deliverable attachment information, with approval state separate from technical embedding.",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "originals_unchanged",
+        "appended_pages"
+      ],
+      "properties": {
+        "method": {
+          "enum": [
+            "REFERENCED_ONLY",
+            "PDF_APPEND_AS_RECEIVED",
+            "NONE"
+          ]
+        },
+        "originals_unchanged": {
+          "const": true
+        },
+        "appended_pages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "contract_pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "combined_pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "combined_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "client_delivery": {
+      "type": "object",
+      "description": "Clean client-facing filenames and status text, with private audit and internal QA stored separately.",
+      "additionalProperties": false,
+      "required": [
+        "basename",
+        "contract_execution_status",
+        "internal_audit_separate"
+      ],
+      "properties": {
+        "basename": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]+_v[0-9]+\\.[0-9]+\\.(pdf|tex)$"
+        },
+        "contract_execution_status": {
+          "enum": [
+            "FOR_REVIEW_NOT_EXECUTED",
+            "EXECUTED_WITH_SIGNATURE_EVIDENCE"
+          ]
+        },
+        "internal_audit_separate": {
+          "const": true
+        }
+      }
+    },
+    "scope_control": {
+      "type": "object",
+      "properties": {
+        "drawing_is_commercial_scope": {
+          "const": false
+        },
+        "scope_inclusions_require_mutual_confirmation": {
+          "type": "boolean"
+        },
+        "unpriced_variation_amounts_are_null": {
+          "type": "boolean"
+        },
+        "mutual_agreement_services": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
