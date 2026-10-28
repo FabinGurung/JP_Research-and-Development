@@ -49,7 +49,7 @@
     },
     {
       "id": "ORIGINAL_APPENDIX",
-      "rule": "When requested, append the exact as-received original PDF sheets to the client PDF as a source appendix, verify page count and original SHA-256, preserve original Drive binary/file ID and independently retain the non-merged contract PDF. Do not treat attachment as design approval."
+      "rule": "Default A/B/C arrangement keeps original drawings separate: Document A cites Document B by exact file, revision and sheet/page; Document C separately governs candidate/approved materials. Only append original PDFs verbatim upon explicit request and preserve unmerged originals. Attachment or citation never implies signed design approval."
     },
     {
       "id": "MUTUAL_AGREEMENT_SCOPE",
@@ -77,5 +77,58 @@
     "private": "parties, project clause choices, approved rates, drawings, signatures"
   },
   "system_status": "DRAFT_GENERATION_ALLOWED__CONTRACT_ISSUE_REQUIRES_REVIEW",
-  "project_specific_copy_rule": "Historic project-specific contracts may suggest clause questions but cannot be reissued as another client's signed terms. All new project deliverables require their own source and commercial agreement."
+  "project_specific_copy_rule": "Historic project-specific contracts may suggest clause questions but cannot be reissued as another client's signed terms. All new project deliverables require their own source and commercial agreement.",
+  "delivery_standard": "docs/document-engineering/CONSTRUCTION_AGREEMENT_THREE_DOCUMENT_STANDARD.md",
+  "default_document_package": [
+    {
+      "code": "A",
+      "name": "Construction Works Agreement",
+      "default_embeds_other_pdfs": false,
+      "outputs": [
+        "EDITABLE_LATEX",
+        "COMPILED_PDF"
+      ],
+      "references": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "code": "B",
+      "name": "Architectural/Structural Drawing Register and Original Files",
+      "source_originals_preserved": true,
+      "can_have_multiple_original_files": true,
+      "requires_page_sheet_citations": true
+    },
+    {
+      "code": "C",
+      "name": "Materials and Workmanship Schedule",
+      "separate_revision_and_approval": true,
+      "requires_brand_or_to_be_agreed": true,
+      "requires_source_and_responsibility": true
+    }
+  ],
+  "material_specification_requirements": [
+    "MATERIAL_AND_INTENDED_USE",
+    "BRAND_OR_MUTUALLY_SELECTED_MANUFACTURER",
+    "PROFILE_MODEL_GRADE_THICKNESS_AND_GLAZING_IF_APPLICABLE",
+    "SOURCE_CITATION_AND_VERSION",
+    "CANDIDATE_VS_APPROVED_STATUS",
+    "EQUIVALENTS_REQUIRE_WRITTEN_CONSENT",
+    "SUPPLY_AND_INSTALLATION_RESPONSIBILITY",
+    "TESTS_INSPECTION_AND_WARRANTY",
+    "VO_AND_CONFLICTS"
+  ],
+  "window_material_rule": {
+    "default_to_aluminium": false,
+    "rule": "Use the project approved window material, not historical aluminium defaults. When user selects uPVC, define approved manufacturer/system, profile and glass subject to project-specific source and approval; historical 88 mm section and 5 mm glass are candidates, not universal normative requirements.",
+    "monsoon_installation_items": [
+      "weather seals",
+      "frame-wall sealant",
+      "drainage outlets and sloped sill",
+      "reinforcement and corrosion-resistant hardware",
+      "as-built opening measurements"
+    ],
+    "prohibit_unverified_brand": true
+  }
 }
