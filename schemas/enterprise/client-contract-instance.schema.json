@@ -386,6 +386,155 @@
           }
         }
       }
+    },
+    "delivery_documents": {
+      "type": "array",
+      "description": "Optional three-document A/B/C deliverables register for new source-backed client agreements. Three distinct logical deliverables; Document B may list multiple existing original files.",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "document_kind",
+          "status",
+          "provider_reference"
+        ],
+        "properties": {
+          "code": {
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "document_kind": {
+            "enum": [
+              "CONSTRUCTION_WORKS_AGREEMENT",
+              "SOURCE_DRAWINGS",
+              "MATERIALS_AND_WORKMANSHIP_SCHEDULE"
+            ]
+          },
+          "status": {
+            "enum": [
+              "CANDIDATE",
+              "PENDING_APPROVAL",
+              "APPROVED_WITH_EVIDENCE",
+              "AS_RECEIVED_UNVERIFIED"
+            ]
+          },
+          "provider_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "revision": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_citations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "supplier_approved": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "material_specifications": {
+      "type": "array",
+      "description": "Project candidate/approved materials in private instance; no global brand selection or price defaults.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "material",
+          "work_item",
+          "product_description",
+          "brand_or_manufacturer",
+          "approval_status",
+          "source_type",
+          "supplier_responsibility"
+        ],
+        "properties": {
+          "material": {
+            "type": "string",
+            "minLength": 2
+          },
+          "work_item": {
+            "type": "string",
+            "minLength": 2
+          },
+          "product_description": {
+            "type": "string",
+            "minLength": 8
+          },
+          "brand_or_manufacturer": {
+            "type": "string",
+            "minLength": 2
+          },
+          "approval_status": {
+            "enum": [
+              "HISTORICAL_CANDIDATE",
+              "PROPOSED_FOR_MUTUAL_AGREEMENT",
+              "APPROVED_WITH_EVIDENCE",
+              "SUPERSEDED"
+            ]
+          },
+          "source_type": {
+            "enum": [
+              "HISTORICAL_LATEX",
+              "AS_RECEIVED_DRAWING",
+              "MANUFACTURER_DATA",
+              "GOVERNMENT_REFERENCE",
+              "CLIENT_CONTRACTOR_APPROVAL"
+            ]
+          },
+          "source_reference": {
+            "type": "string"
+          },
+          "supplier_responsibility": {
+            "enum": [
+              "OWNER",
+              "CONTRACTOR",
+              "TO_BE_AGREED"
+            ]
+          },
+          "profile_series": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "glazing_thickness_mm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "approved_equivalent_rule": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "approval_evidence": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
     }
   }
 }
