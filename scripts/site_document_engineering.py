@@ -39,20 +39,23 @@ def build_document_pages(out):
       '</section></main>')
     enterprise=enterprise.replace('</main>',
       '<section class="section"><h2>Contracts with traceable source appendices</h2>'
-      '<p>A compiled client contract can identify drawings by sheet range and append untouched source pages. '
-      'The documented scope and authorized changes remain separate from what a drawing happens to depict. '
+      '<p>A construction agreement should normally be delivered separately from original drawing PDFs and the materials/workmanship schedule. '
+      'Agreement A references source drawings B by sheet/page and the separately approved materials C; drawn scope is not automatically included. '
       'Only restricted Drive holds real client files; public Pages contains reusable method and code only.</p>'
-      '<p><a href="source-backed-contracts/">View source-to-scope documentation and checks →</a></p></section></main>')
+      '<p><a href="source-backed-contracts/">View source-to-scope documentation and checks →</a> · '
+      '<a href="'+esc(REPO_URL+'/blob/main/docs/document-engineering/CONSTRUCTION_AGREEMENT_THREE_DOCUMENT_STANDARD.md')+'">Three-file A/B/C material standard →</a></p></section></main>')
     write(out,"enterprise-documents/index.html",shell("Enterprise Documents",enterprise,1))
     source_body=(
       '<main class="wrap hero"><div class="eyebrow">A9 · Enterprise Document Engineering</div>'
       '<h1>Source-backed construction agreements</h1>'
+      '<p>Document A: agreement. Document B: architectural/structural source drawings with exact sheet citations. Document C: materials and workmanship schedule with brands and approved equivalents. None is silently merged with another.</p>'
       '<p class="lead">Original drawings stay in their authoritative storage. Client agreements can link and cite exact source sheets, while keeping actual approved commercial scope explicit.</p>'
+      '<p><a href="'+esc(REPO_URL+'/blob/main/docs/document-engineering/CONSTRUCTION_AGREEMENT_THREE_DOCUMENT_STANDARD.md')+'">Read reusable three-document creation rules and materials specification fields →</a></p>'
       '<section class="section"><h2>Source-to-scope chain</h2><div class="flow">'
       '<div class="node">Original private drawings</div><div class="arrow">→</div>'
       '<div class="node">Sheet-level citations</div><div class="arrow">→</div>'
       '<div class="node">Contract scope and VOs</div><div class="arrow">→</div>'
-      '<div class="node">Immutable source appendix</div></div></section>'
+      '<div class="node">Three separate A / B / C files</div></div></section>'
       '<section class="section"><h2>Review boundaries</h2><p>A source drawing being available does not mean it is signed or issue-for-construction. '
       'Plumbing, electrical, compound and railing work may require mutually agreed details. Variations have no invented prices. '
       'Milestone amounts must reconcile to the base total even where printed percentages are rounded.</p></section>'
