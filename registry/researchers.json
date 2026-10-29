@@ -91,7 +91,9 @@
         "seq051_source_reported_compiled_pdf_drive_id": "1acStTowwFusRZuJqmXH95L_k2PLoXwaX",
         "seq051_source_reported_latex_zip_drive_id": "1bNh4grOhczm7SYrjfCiUxM4McVJhJXZ-",
         "seq052_full_compiled_pdf_drive_id": "1_WDQgN8TT83XFCJ_rYFoYgCf_xYV3ztj",
-        "seq052_complete_latex_zip_drive_id": "1qn1m6Jk3O7p6qSkH0HzLSS9GZZi3xNJF"
+        "seq052_complete_latex_zip_drive_id": "1qn1m6Jk3O7p6qSkH0HzLSS9GZZi3xNJF",
+        "seq053_full_compiled_pdf_drive_id": "1rZuTXvyx6llElRg35yFou1gucl66POyI",
+        "seq053_complete_latex_zip_drive_id": "1xHZp-Oxk-sA6QjJLN0a7fApp3AKpqbSA"
       },
       "lanes": {
         "discussion": {
@@ -107,9 +109,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Latest separately compiled LATEX_SEQ052: 95 A4 pages. Real Infectious and Communicable Disease Hospital, Lekhnath Pokhara, G+4; unperformed pushover sections removed; Tables 3.1/3.4/3.5 updated and previously obscured Block 5 spring values corrected from the submitted DOCX. All 32 reconstructed results plots retained. Engineering source data are researcher-reported and not independent as-built certification. Earlier permanent CURRENT PDF unchanged.",
+      "public_note": "Nabin's newest separately compiled academic manuscript is LATEX_SEQ053 (69 pages). A full logic QA rebuilt Chapter4 around the 24 comparable block/support modal periods, 24 both-horizontal-axis 90-percent modal mass checks, 32 distinct source charts, and the researcher-adopted 4-band ISDR classification. Former SEQ052 one-prototype results are intact in the private audit source archive and no longer misattributed to the six-block hospital. Historical CURRENT Drive ID unchanged; independent ETABS or as-built certification not claimed.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "LATEX_SEQ052_FULL_95PAGE_MANUSCRIPT_COMPILED__HISTORICAL_CURRENT_PRESERVED",
+      "git_source_status": "LATEX_SEQ053_69_PAGE_EVIDENCE_ALIGNED_FULL_THESIS_COMPILED__SEQ052_AND_HISTORICAL_CURRENT_PRESERVED",
       "next_handoff_prompt_path": "researchers/nabin-bista/latex/prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md",
       "open_task_issue_numbers": [
         51,
