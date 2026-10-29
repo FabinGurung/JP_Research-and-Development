@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "id": "RSH002_S03_DISC025_M4_20261029",
+  "researcher_id": "RSH-002",
+  "date": "2026-10-29",
+  "scope": "UNMERGED_CANDIDATE__NO_CURRENT_PROMOTION",
+  "git_pre_main_sha": "29726a94b408b4093927bcc31c379b0069e56341",
+  "git_branch": "saugat/disc-v025-s03-m4-source-candidate-20261029",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "production_current": "CP114-GIT-v2.4-DISC-V024-S02-20261021",
+  "production_pdf_drive_id": "1NRLCgy7F8vIMzGs03zadiVC8SsuhEh5J",
+  "m3_immutable_release": "saugat-cp114-m3.0.0-editorial-production-20261021",
+  "source_original_s03_docx_drive_id": "1lqtdr9mpvWC8Frc1--iiMVKfFqVVzvX7",
+  "source_original_s03_sha256": "ddefd807f6b81733b57c58a2746dc3cbac86f137bcbf92d5d3e6540ad97705ef",
+  "discussion_doc": "1lF5WKoido1Tzgk6D9ZFLbkVjV3TCwZinrNnLfVF7bA0",
+  "discussion_tabs": [
+    "t.9yohiavlvciz",
+    "t.3lzifqnht9po",
+    "t.pvfp9udbobvx"
+  ],
+  "items": [
+    {
+      "id": "S03-01",
+      "status": "BLOCKED_IDENTITY_PROOF",
+      "disposition": "Co-supervisor Devendra Man Palikhey retains M3 spelling; professional Er. prefix and Kathmandu University organization are not independently confirmed. Need signed university record/credible current professional credential.",
+      "candidate_tex_paths": []
+    },
+    {
+      "id": "S03-02",
+      "status": "CANDIDATE_EDIT_IMPLEMENTED",
+      "disposition": "S02 already adopted in M3. Reconciled new S03 Abstract against all five CP114 demand cases; did not replay S02 or overclaim RUD eligibility.",
+      "candidate_tex_paths": [
+        "researchers/saugat-paneru/latex/manuscript/frontmatter/abstract.tex"
+      ]
+    },
+    {
+      "id": "S03-03",
+      "status": "CANDIDATE_PARTIAL_IMPLEMENTED",
+      "disposition": "Geometric Irregularity Index expanded in major method exposition, Chapter 4 heading and captions. GII retained in compact table/formula/legacy plot labels where expansion would impair readability; complete researcher style review remains.",
+      "candidate_tex_paths": [
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter3_methodology.tex",
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter4_results_discussion.tex",
+        "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch3_model_geometry.tex",
+        "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_gii_summary_traceability.tex"
+      ]
+    },
+    {
+      "id": "S03-04",
+      "status": "CANDIDATE_EDIT_IMPLEMENTED",
+      "disposition": "Original readable three-panel editable TikZ methods diagram in Chapter 1: equivalent static, response spectrum and nonlinear pushover. Only conceptual diagrams; no synthetic ETABS numerical curves.",
+      "candidate_tex_paths": [
+        "researchers/saugat-paneru/latex/manuscript/figures/concepts/s03_three_analysis_methods.tex",
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter1_introduction.tex"
+      ]
+    },
+    {
+      "id": "S03-05",
+      "status": "HUMAN_RESEARCHER_ATTESTATION_PENDING",
+      "disposition": "Personal authorship and scientific understanding must be read and confirmed by researcher; automated compilation cannot certify authorial voice or supervisor acceptance.",
+      "candidate_tex_paths": []
+    },
+    {
+      "id": "S03-06",
+      "status": "CANDIDATE_EDIT_IMPLEMENTED",
+      "disposition": "S03 proposed Abstract not pasted wholesale. Verified 18 failing frames for Soil D Z=0.35 against existing CP114 Chapter 4 table; preserved X/Y, soil/zone, first-peak vs PP, CM-CR not torsion, height limitations.",
+      "candidate_tex_paths": [
+        "researchers/saugat-paneru/latex/manuscript/frontmatter/abstract.tex"
+      ]
+    },
+    {
+      "id": "S03-07",
+      "status": "CANDIDATE_EDIT_IMPLEMENTED",
+      "disposition": "Preserved M3 paragraph conclusion format and all six-objective crosswalk; added original CP114 Soil D design-check result and final-step hinge caveat; RUD extension framed as future investigation, not certified applicability. Recommendations unchanged.",
+      "candidate_tex_paths": [
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter5_conclusion.tex"
+      ]
+    }
+  ],
+  "prior_S02_items": {
+    "already_present": 19,
+    "implemented_M3": 4,
+    "requires_source": 6,
+    "deferred": 4,
+    "visual_review": 2
+  },
+  "candidate_build": {
+    "pdf_drive_id": "1gEoUHO50ZD3URRMJQpIR1F5MPPKP-2CJ",
+    "pdf_sha256": "e48c58788ea5047f782efba51b175b2b9f77a7e127b6c7c38bdea8ad82ad9088",
+    "pdf_bytes": 55178784,
+    "pages_A4": 116,
+    "original_image_placements_preserved": 81,
+    "original_143_research_assets_byte_identical": true,
+    "original_methods_figure": "figures/concepts/s03_three_analysis_methods.tex",
+    "overfull": 0,
+    "underfull_inherited": 252,
+    "undefined_references": false,
+    "source_zip_drive_id": "1lHbTW2bGo0nfPSXgrcpouApBPfy_HdOy",
+    "source_zip_sha256": "d37b39d519ff3481656527b2b8d02c066e7c6cc1449e3651a2667de313e133f8",
+    "provider_raw_sha256_readback": "PASS_PDF_AND_ZIP",
+    "drive_folder": "1o2DNdmiU9dMs5WdlTaUJx3DNsaSK0wDu"
+  },
+  "promotion": {
+    "status": "NOT_AUTHORIZED_NOT_CURRENT",
+    "new_scientific_checkpoint": "NOT_CREATED",
+    "tag": "NOT_CREATED",
+    "human_review_required": true,
+    "co_supervisor_verification_required": true
+  },
+  "debt": [
+    "https://github.com/FabinGurung/JP_Research-and-Development/issues/34",
+    "https://github.com/FabinGurung/JP_Research-and-Development/issues/35"
+  ]
+}
