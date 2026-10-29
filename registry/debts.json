@@ -621,8 +621,8 @@
       "category": "SOURCE_CUSTODY_REPAIR",
       "status": "HOLD",
       "severity": "MEDIUM",
-      "title": "Provider-publish recovered SEQ049 source assets and verify fresh bibliography build",
-      "description": "Original corrected SEQ049 source ZIP 235 entries lacks two figure PDFs. Exact PDF bytes recovered from SEQ046 and added to local 237-entry archive with all original entries preserved. Repaired ZIP SHA256 a669bfbab87416c58743589e5abbf1b77787a34c24a763c813353414e16bdadf. Local XeLaTeX using preserved main.bbl produces 69 pages, but BibTeX is absent in local runtime; a clean bibliography rebuild and Drive upload/readback are not complete.",
+      "title": "Bibliography generation consistency and historical source custody validation",
+      "description": "The original corrected SEQ049 source ZIP lacked two figure PDFs. Exact historical figures have now been restored and Build02 source ZIP stored in the existing dedicated Drive QA folder (ID 1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ), read back SHA matching 4dad5c43cf88725eca65f6fa148e497a4e8e97fdbbd0f36efe6dfef2504e7e87. Independently compiled Build02 PDF was provider-downloaded and matches the 69-page CURRENT PDF in every page's 72dpi pixels and normalized text. Remaining HOLD: clean bibtex8 regenerates 20 bibitems, dropping uncited dongol2020 from preserved 21-entry main.bbl and renumbering references; a scientific literature/citation decision is required. Do not silently change the historical manuscript or CURRENT PDF.",
       "evidence": [
         {
           "role": "seq049_source_zip",
@@ -635,9 +635,18 @@
         {
           "role": "current_pdf",
           "drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93"
+        },
+        {
+          "role": "qa_build02_zip",
+          "drive_id": "1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ"
+        },
+        {
+          "role": "qa_build02_pdf",
+          "drive_id": "1_FHsrt9FlhYhn2dBy0Ptq24HLqDCbGjQ"
         }
       ],
-      "close_when": "Upload repaired ZIP to existing Drive archive, verify exact SHA/ID, run BibTeX-capable clean compile, preserve original ZIP and update Git pointer."
+      "close_when": "Resolve legacy uncited dongol2020 scholarly bibliography decision in an authorized future manuscript revision; fresh BibTeX generation must then give stable acceptable citations, with independent PDF layout and full-reference QA. Do not require byte identity to old MAIN PDF after an approved scientific text change.",
+      "last_qa_at_npt": "2026-10-29"
     },
     {
       "debt_id": "DEBT-NABIN-004",

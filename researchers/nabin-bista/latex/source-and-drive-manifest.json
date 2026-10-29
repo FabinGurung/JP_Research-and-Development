@@ -46,7 +46,7 @@
   "current_pdf_verified_sha256": "8f82830a97600cc6aa069e01405f1ba3f29b72a847bd8f719f87d46744dd02a6",
   "current_pdf_verified_pages": 69,
   "original_zip_completeness": "TWO_REFERENCED_FIGURE_PDFS_MISSING",
-  "repaired_bundle_status": "DRIVE_PROVIDER_METADATA_VERIFIED__TECHNICAL_SOURCE_PATCH01_NOT_NEW_SCIENTIFIC_RELEASE",
+  "repaired_bundle_status": "QA_BUILD02_COMPLETE_SOURCE_PROVIDER_SHA_VERIFIED__69_PAGE_PARITY_PASS__BIBTEX_REGEN_CITATION_HOLD",
   "repaired_bundle_sha256": "a669bfbab87416c58743589e5abbf1b77787a34c24a763c813353414e16bdadf",
   "source_custody_audit": "researchers/nabin-bista/latex/SEQ049_SOURCE_CUSTODY_QA.json",
   "next_latex_release": "LATEX_SEQ050_CANDIDATE_ONLY_AFTER_NEW_SOURCE_INTAKE_AND_FRESH_CURRENT_CHECK",
@@ -77,5 +77,29 @@
     "next_scientific_version": "LATEX_SEQ050_NOT_ISSUED",
     "portal_publish_status": "SOURCE-QA-ONLY__DO_NOT_MARK_NEXT_PDF_CURRENT",
     "checksum_readback_level": "LOCALLY_COMPUTED_SHA__PROVIDER_ID_NAME_SIZE_PARENT_VERIFIED"
+  },
+  "technical_qa_build02": {
+    "status": "DRIVE_PROVIDER_DOWNLOADED_AND_FULL_69_PAGE_PARITY_PASS",
+    "source_zip_drive_id": "1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ",
+    "source_zip_url": "https://drive.google.com/file/d/1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ/view",
+    "source_zip_provider_sha256": "4dad5c43cf88725eca65f6fa148e497a4e8e97fdbbd0f36efe6dfef2504e7e87",
+    "source_zip_bytes": 24804157,
+    "source_zip_entries": 240,
+    "pdf_drive_id": "1_FHsrt9FlhYhn2dBy0Ptq24HLqDCbGjQ",
+    "pdf_url": "https://drive.google.com/file/d/1_FHsrt9FlhYhn2dBy0Ptq24HLqDCbGjQ/view",
+    "pdf_provider_sha256": "5fadb11ac6edd3cfff464dd712729f61a73d9defbe8e705742a5e01b2a573192",
+    "pdf_local_compiled_sha256": "396db823c83e4a23c70337e07e4c414d5203ae19c773918950d7bfee2df69e02",
+    "pdf_provider_bytes": 6828071,
+    "provider_pdf_extra_attachment": "Content Credentials added by upload workflow",
+    "pdf_pages": 69,
+    "diff_source_current_72dpi_pixels": 0,
+    "diff_source_current_extracted_text_pages": 0,
+    "bibliography": "historic main.bbl retained; clean bibtex8 drops uncited dongol2020; no silent bibliography mutation",
+    "sciences_new_admitted": false,
+    "production_pdf_promoted": false,
+    "current_pdf_drive_id_unchanged": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "qa_folder": "https://drive.google.com/drive/folders/1suykLbQ3b2u1cHY-k3G7q7mRDzgDdI5_",
+    "qa_git_record": "researchers/nabin-bista/latex/audits/seq049-fullqa-build02-20261029.json",
+    "next_release": "LATEX_SEQ050_HOLD"
   }
 }

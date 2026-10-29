@@ -85,7 +85,9 @@
         "presentation_google_slides_drive_id": "1mS98aVngfuFJMaW9z9EmhQT-3QspRKW7NhgRwF9T8F4",
         "project_root_drive_id": "1qOn2pyJ4GFgQLf_wdJ7fEqB6MWBOAPp3",
         "current_compiled_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
-        "current_latex_source_archive_drive_id": "1noTWs5mOFjn10-i3rVSBbWlex1C12CJB"
+        "current_latex_source_archive_drive_id": "1noTWs5mOFjn10-i3rVSBbWlex1C12CJB",
+        "qa_build02_pdf_drive_id": "1_FHsrt9FlhYhn2dBy0Ptq24HLqDCbGjQ",
+        "qa_build02_source_zip_drive_id": "1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ"
       },
       "lanes": {
         "discussion": {
@@ -101,9 +103,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "The current SEQ049 submission PDF is 69 pages and dated September 2026; its permanent Google Drive ID is unchanged. The Git manuscript source is version-controlled, but the shared-style conversion and source-asset custody repair remain explicitly held. The older Google Docs v1.0 is not synchronized and must not be presented as the current PDF.",
+      "public_note": "Current academic thesis remains LATEX_SEQ049 (69 pages, September 2026). Separately archived technical QA Build02 PDF matches all 69 CURRENT pages visually and textually; its source ZIP has 240 entries. BibTeX regeneration of the historical bibliography drops an uncited dongol2020 item and remains scholarly review HOLD. New six-block data not admitted and LATEX_SEQ050 not released.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "LATEX_SEQ049_GIT_MAIN_SOURCE_IMPORTED__HISTORICAL_ENTRYPOINT__TEMPLATE_PORT_HELD"
+      "git_source_status": "LATEX_SEQ049_CODE_ON_MAIN__QA_BUILD02_69_PAGE_PIXEL_PARITY_PASS__SCIENTIFIC_SEQ050_HOLD"
     },
     {
       "researcher_id": "RSH-004",
