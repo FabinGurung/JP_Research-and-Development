@@ -195,5 +195,49 @@
     "audit_doc_id": "1l4tMJoOV8BSDTur5Ay27GQ7XNboHD9Yb2D2p1ibopXk",
     "provider_readback": "PDF/ZIP ID_TITLE_SIZE_PARENT verified; exact upload byte hash not independently rehashed"
   },
-  "latest_separately_compiled_manuscript": "LATEX_SEQ052"
+  "latest_separately_compiled_manuscript": "LATEX_SEQ053",
+  "seq053_research_logic_release": {
+    "release_id": "LATEX_SEQ053",
+    "date_npt": "2026-10-29",
+    "status": "SEPARATELY_COMPILED_FULL_THESIS_69_A4_PAGES__LOGIC_QA_PASS__NOT_ENGINEERING_CERTIFICATION",
+    "pdf_drive_id": "1rZuTXvyx6llElRg35yFou1gucl66POyI",
+    "pdf_local_sha256": "d35610af4d62690c58e446032498e26e56c590c68bb7b0cd68b839705d016d77",
+    "pdf_compiled_local_bytes": 9824736,
+    "pdf_provider_bytes": 9914203,
+    "source_zip_drive_id": "1xHZp-Oxk-sA6QjJLN0a7fApp3AKpqbSA",
+    "source_zip_bytes": 78101318,
+    "source_zip_files": 168,
+    "source_zip_local_sha256": "8ef21b3aa4ab6bf41f945eac468818faa69a42e1b497a7d3bdff4a16ba00cd13",
+    "original_data_preserved": true,
+    "prior_seq052_pdf_id": "1_WDQgN8TT83XFCJ_rYFoYgCf_xYV3ztj",
+    "permanent_historical_CURRENT_id_unchanged": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "audit_detail_doc_id": "1gsl_Ylq3GU-M8D9zB4HpDZsTCYgCgz_C7_un9pR195M",
+    "audit_historical_doc_id": "1hgD2c3XeN44v8mXGHI0-6Vl_zxl5eGcIiTMqdagb9rs",
+    "audit_source_zip_id": "1C-v-FVEEedj4vnpgZxi5dNgdugmIMw40",
+    "parent_google_drive_folder_id": "1QccDP86valFxfqNHpaFM4-_y2KSExC2l",
+    "logic_alignment": {
+      "rq1": "24_MODAL_PERIODS_6x4_TO_WITHIN_BLOCK_CHANGE_TO_CONCLUSION",
+      "rq2": "BOTH_AXIS_90_PCT_FIRST_MODE_TO_MODE5_10_CONCLUSION",
+      "rq3": "36_EXCEL_CHART_OBJECTS_MINUS_4_MISFILED_DUPLICATES_EQUALS_32_PLOTS",
+      "rq4": "4_BAND_DRIFT_SCREENING_NOT_RECAST_HISTORICAL_FRAGILITY"
+    },
+    "data_result_changes": "Remove older unmapped single-prototype values from main current hospital Chapter4; preserve old source in versioned private audit.",
+    "qa": {
+      "pages": 69,
+      "paper": "A4",
+      "nonblank_pages": 69,
+      "result_plots": 32,
+      "figure_sources_in_tex": 54,
+      "missing_figure_files": 0,
+      "clipped_text_blocks": 0,
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "latex_errors": 0,
+      "prohibited_admin_words_in_compiled_pdf": 0,
+      "physical_asbuilt_validation": false
+    },
+    "git_source_strategy": "Private binary research and complete LaTeX source in immutable SHA registered Drive ZIP; repository code/manifest tracks release logic and restoration links.",
+    "provider_readback": "ID_NAME_SIZE_PARENT_VERIFIED__NOT_PROVIDER_BYTE_SHA",
+    "scientific_scope": "SOURCE_WORKBOOK_STATISTICS_AND_PLOTS_ONLY; NO_CLAIM_OF_INDEPENDENT_ETABS_OR_AS_BUILT_CERTIFICATION"
+  }
 }

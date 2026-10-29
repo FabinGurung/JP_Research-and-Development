@@ -365,7 +365,9 @@
       "reconciled_npt": "2026-10-29",
       "current_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
       "last_seq052_update": "2026-10-29",
-      "seq052_outcome": "Unperformed pushover content removed from active SEQ052 manuscript; underlying nonlinear fragility provenance separately HOLD."
+      "seq052_outcome": "Unperformed pushover content removed from active SEQ052 manuscript; underlying nonlinear fragility provenance separately HOLD.",
+      "last_seq053_update": "2026-10-29",
+      "seq053_outcome": "Main thesis writing and comparative model logic reconciled; unrelated single-model values moved into immutable archived audit. Original model/waveform science limitations remain independent of technical QA."
     },
     {
       "debt_id": "DEBT-NABIN-002",
@@ -680,7 +682,9 @@
       "description": "Establish architectural grids, six original ETABS model references, storeys, support/diaphragm/separation constraints, producing software and load cases. Preserve old Oct plots ZIP and plan; do not replace Table 3.1 or Chapter 3 before identity evidence.",
       "close_when": "Six blocks mapped to verified ETABS files and old prototype; accepted scientific change map signed off with source-cell/model references.",
       "opened_npt": "2026-10-29",
-      "last_evidence_stage_qa_npt": "2026-10-29"
+      "last_evidence_stage_qa_npt": "2026-10-29",
+      "last_seq053_update": "2026-10-29",
+      "seq053_outcome": "Main thesis writing and comparative model logic reconciled; unrelated single-model values moved into immutable archived audit. Original model/waveform science limitations remain independent of technical QA."
     },
     {
       "debt_id": "DEBT-NABIN-006",
@@ -712,7 +716,9 @@
       "opened_npt": "2026-10-29",
       "last_evidence_stage_qa_npt": "2026-10-29",
       "last_seq052_update": "2026-10-29",
-      "seq052_outcome": "SEQ052 full PDF preserves 32 source plots and all researcher figures; source-model and methodology verification remains HOLD."
+      "seq052_outcome": "SEQ052 full PDF preserves 32 source plots and all researcher figures; source-model and methodology verification remains HOLD.",
+      "last_seq053_update": "2026-10-29",
+      "seq053_outcome": "Main thesis writing and comparative model logic reconciled; unrelated single-model values moved into immutable archived audit. Original model/waveform science limitations remain independent of technical QA."
     }
   ]
 }
