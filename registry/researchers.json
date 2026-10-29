@@ -87,7 +87,9 @@
         "current_compiled_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
         "current_latex_source_archive_drive_id": "1noTWs5mOFjn10-i3rVSBbWlex1C12CJB",
         "qa_build02_pdf_drive_id": "1_FHsrt9FlhYhn2dBy0Ptq24HLqDCbGjQ",
-        "qa_build02_source_zip_drive_id": "1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ"
+        "qa_build02_source_zip_drive_id": "1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ",
+        "seq051_source_reported_compiled_pdf_drive_id": "1acStTowwFusRZuJqmXH95L_k2PLoXwaX",
+        "seq051_source_reported_latex_zip_drive_id": "1bNh4grOhczm7SYrjfCiUxM4McVJhJXZ-"
       },
       "lanes": {
         "discussion": {
@@ -103,9 +105,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Nabin's CURRENT academic thesis is still LATEX_SEQ049 (69 pages, September 2026). A separate 15-page two-batch source-admission preview was independently compiled and privately archived with all original October research sources and historical SEQ049 source. All 67 workbooks, 228 tabs, 36 chart objects and 24 modal block/support pairs inventoried. Seven Block5 spring cells remain masked; six-block identity and fragility science remain HOLD. This preview is NOT a revised academic thesis or LATEX_SEQ050 release.",
+      "public_note": "SEQ051 103-page full manuscript and complete source are archived in Drive; new appendix reproduces 32 unique chart caches from Nabin's 67-workbook RESULT PLOT ZIP. Four chart objects in a misfiled Block4 fragility file under Block6 were excluded as non-independent duplicates. This is an issued SOURCE-REPORTED supplemental figure release; original ETABS/ground-motion scientific validation is not independently certified. The long-standing permanent CURRENT ID was NOT overwritten.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "SEQ049_CURRENT_PRESERVED__15_PAGE_SOURCE_QA_ANNEX_DONE__SEQ050_SCIENTIFIC_HOLD",
+      "git_source_status": "LATEX_SEQ051_SEPARATE_FULL_THESIS_REPORTED_CHARTS_PDF_COMPILED__PERMANENT_CURRENT_PRESERVED",
       "next_handoff_prompt_path": "researchers/nabin-bista/latex/prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md",
       "open_task_issue_numbers": [
         51,

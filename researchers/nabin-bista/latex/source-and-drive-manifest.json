@@ -128,5 +128,31 @@
     "scientific_research_holds": "MODEL_IDENTITIES_9_FLAGS_BLOCK5_SPRINGS_GAZETAS_MAPPING_FRAGILITY_WAVEFORM_BIBTEX",
     "next_scientific_version": "NOT_ISSUED",
     "historic_current_pdf_unchanged": true
+  },
+  "seq051_source_reported_results_release": {
+    "status": "DRIVE_PDF_AND_SOURCE_PROVIDER_METADATA_VERIFIED__SCIENTIFIC_METHOD_HOLDS_REMAIN",
+    "release_name": "LATEX_SEQ051",
+    "scientific_scope": "SOURCE_REPORTED_WORKBOOK_CACHED_RESULTS_NOT_AUTHENTICATED_ETABS",
+    "compiled_pdf_drive_id": "1acStTowwFusRZuJqmXH95L_k2PLoXwaX",
+    "compiled_pdf_bytes": 15193322,
+    "compiled_pdf_local_sha256": "8f32c42e498bc28556cbedc7216d43f6c017467609ec17e5c0a0dcdcd1e036f1",
+    "source_zip_drive_id": "1bNh4grOhczm7SYrjfCiUxM4McVJhJXZ-",
+    "source_zip_bytes": 87580617,
+    "source_zip_local_sha256": "108ec2bff266c4a4c88e33bd06c9889744cd82b72f7fc512d58cf55a9f86a338",
+    "source_original_results_zip_drive_id": "1IQ3_7F51xXM8WOJ3z9WKAtzCII99GcZU",
+    "original_zip_sha256": "c32844ec525745fc03dace9bee87515b793761476c4f2d54cc74f1f865d729e2",
+    "source_workbooks": 67,
+    "embedded_excel_charts": 36,
+    "reconstructed_figures": 32,
+    "rejected_misfiled_duplicate_charts": 4,
+    "pdf_physical_pages": 103,
+    "prior_seq050_pdf_physical_pages": 82,
+    "all_32_latex_charts_have_figure_labels": true,
+    "unresolved_bibliography_citations": false,
+    "source_catalog": "seq051_assets/SOURCE_CHART_LINEAGE.json (inside source ZIP)",
+    "exact_drive_folder_id": "1BafCrLr2SvF4I8D2ebVV45LHLKv6BmAu",
+    "academic_validation": "NOT_INDEPENDENTLY_VERIFIED",
+    "permanent_current_unchanged": true,
+    "drive_source_readback": "ID_SIZE_PARENT_NAME_VERIFIED; RAW_PROVIDER_SHA_NOT_REHASHED"
   }
 }
