@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 113,
+  "next_number": 114,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -291,6 +291,47 @@
       "latex_sequence_counter_incremented": false,
       "tag": "NOT_CREATED_NOT_REQUIRED_FOR_CURRENT",
       "university_144_certificate": "NOT_ISSUED",
+      "debt_issues": [
+        "34",
+        "35"
+      ]
+    },
+    {
+      "change_id": "RD-LTX-CHG-113",
+      "researcher_id": "RSH-002",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "New S03 / Discussion V025 source-first candidate ONLY: short verified five-case Abstract including original Soil D/Z0.35=18; targeted Conclusions, GII long-form caption/style, original three-panel TikZ introduction schematic. No model analysis changes. Identity/Er and human authorship not certified; M3 CURRENT untouched.",
+      "source_paths": [
+        "researchers/saugat-paneru/latex/manuscript/frontmatter/abstract.tex",
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter1_introduction.tex",
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter3_methodology.tex",
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter4_results_discussion.tex",
+        "researchers/saugat-paneru/latex/manuscript/chapters/chapter5_conclusion.tex",
+        "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch3_model_geometry.tex",
+        "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_gii_summary_traceability.tex",
+        "researchers/saugat-paneru/latex/manuscript/figures/concepts/s03_three_analysis_methods.tex",
+        "researchers/saugat-paneru/latex/qa/DISC_V025_S03_SEVEN_ITEM_M4_ADMISSION_CANDIDATE_20261029.json"
+      ],
+      "before_after_qa_evidence": "PRE Git 29726a94b408b4093927bcc31c379b0069e56341. M3 source/PDF immutable. M4 compiled 116 A4 pages with private exact TNR 4 XeLaTeX+Biber, all 143 M3 source research assets byte identical and 81/81 images, 0 overfull, 252 inherited underfull, no undefined reference, no outside-page spans; original TikZ methods figure visually verified. Candidate PDF Drive 1gEoUHO50ZD3URRMJQpIR1F5MPPKP-2CJ SHA256 e48c58788ea5047f782efba51b175b2b9f77a7e127b6c7c38bdea8ad82ad9088; candidate full source Drive 1lHbTW2bGo0nfPSXgrcpouApBPfy_HdOy SHA256 d37b39d519ff3481656527b2b8d02c066e7c6cc1449e3651a2667de313e133f8; both independent provider raw-download hashes matched.",
+      "pu_rule_references": [
+        "PU-FMT-002",
+        "PU-FMT-014",
+        "PU-FMT-015",
+        "PU-FMT-039"
+      ],
+      "disposition": "QA_CANDIDATE_ONLY__S03_01_IDENTITY_BLOCKED__S03_05_HUMAN_REVIEW_PENDING__M3_REMAINS_CURRENT",
+      "target_shared_rule": null,
+      "global_propagation": "NONE_RESEARCHER_ONLY",
+      "scientific_boundary": "CP114_RESEARCH_RESULTS_PRESERVED__NO_NEW_ETABS_RESULTS_OR_CODE_ACCEPTANCE",
+      "discussion_basis": "DISC-SEQ-025 / ANNEX S03 2026-10-29",
+      "discussion_lane_modified": false,
+      "original_143_assets_changed": false,
+      "co_supervisor_professional_prefix_verified": false,
+      "researcher_personal_authorship_approval": false,
+      "git_pr_status": "PENDING_CI__NO_MERGE",
+      "tag": "NOT_CREATED",
+      "release": "NOT_CREATED",
+      "production_status": "UNCHANGED_M3_CURRENT",
       "debt_issues": [
         "34",
         "35"
