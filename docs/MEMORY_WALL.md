@@ -101,6 +101,21 @@ Every released PDF must record: researcher ID, scientific CP, manuscript sequenc
 
 Do not equate code CI, an unsigned print-proof certificate, or a successful PDF render with university format certification. Keep old Git tags, scientific originals, Drive PDF/ZIP and checkpoint PRE snapshots intact. Do not auto-increment historical A9 Drive Local/Main counters for routine Git source changes.
 
+## Read-first protocol for future ChatGPT/researcher sessions
+
+A new session must resolve authorities in this order: (1) current GitHub `main` SHA; (2) this Memory Wall; (3) actual current domain machine tower/control; (4) the owning researcher's version/source and style manifest; (5) current Drive scientific source and PDF/checkpoint; (6) pending PR/CI/debt. **Do not use previous chat narrative to overwrite current source evidence.** A Memory Wall is an address-and-operating-principle navigator, not a substitute for audit trails, old chat archives, Git source history or Google Drive original research.
+
+## Known reconciliation debt to clear before making this binding
+
+These are **observed discrepancies**, not reasons to rewrite history:
+- `controls/latex/README.md` still has a `2.3.0` heading although current `controls/latex/tower.json` records `2.4.0`. Fix the stale heading after agreeing the single release/version policy.
+- Historical `registry/branch-registry.json` marks researcher's `researcher/<slug>/latex` placeholders as empty. Saugat/Nabin instead have active source on `main` and more recent task branches; do not mistakenly build from placeholder refs.
+- `controls/latex/release-contract.json` retains older A9 Local/Main ACK states and fields; current scoped `controls/git-drive-authority.json` supersedes that routine Git-version work. Review/update the subordinate contract without asserting older unacknowledged history was completed.
+- Existing 11 inheritance entries are metadata enrollment, not eleven fully source-admitted/buildable theses.
+- No verified atomic per-researcher sequence allocator or global template-change owner gate exists yet. This proposal defines the intended contract, not implemented automation.
+
+Any correction should receive its own scoped PR, preserving historical records and validating all current source-gates.
+
 ## 9. Implementation status
 
 **ALREADY REAL:** single template path; 11 registered identities; extensions; central change register; Git PRE/POST; CI source checks; Drive release hashes on governed researcher releases.
