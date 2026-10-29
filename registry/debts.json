@@ -363,7 +363,9 @@
       "researcher_id": "RSH-003",
       "researcher_slug": "nabin-bista",
       "reconciled_npt": "2026-10-29",
-      "current_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93"
+      "current_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+      "last_seq052_update": "2026-10-29",
+      "seq052_outcome": "Unperformed pushover content removed from active SEQ052 manuscript; underlying nonlinear fragility provenance separately HOLD."
     },
     {
       "debt_id": "DEBT-NABIN-002",
@@ -692,7 +694,9 @@
       "description": "New DOCX Table 3.4 renders seven Block 5 values as literal #########. The other five blocks' spring vectors are readable but unit conventions, footing geometry, assignment paths and actual ETABS loads must be reconciled. Do not infer Block 5 missing values from similar Block 6 values.",
       "close_when": "Obtain untruncated source model/table, trace all 18 block-soil cases and 6 DOF each to input records, check formula/unit and coordinate sign, and validate full row-level comparison.",
       "opened_npt": "2026-10-29",
-      "last_evidence_stage_qa_npt": "2026-10-29"
+      "last_evidence_stage_qa_npt": "2026-10-29",
+      "last_seq052_update": "2026-10-29",
+      "seq052_outcome": "All seven masked Block5 spring values obtained from researcher correction and placed in Table3.4; ETABS as-built provenance still HOLD."
     },
     {
       "debt_id": "DEBT-NABIN-007",
@@ -706,7 +710,9 @@
       "description": "Earlier 67-workbook plots ZIP, 12 motion names, six old model images and plan are not in the released single-prototype SEQ049 thesis. New 7z contains the identical plan, four identical block views and revised Block 5/6 variants. Source ZIP Build02 contains only one old prototype diagram and one old 3D JPEG. Both batches must be inventoried in a staged candidate and each admitted output page/figure/table mapped before release.",
       "close_when": "For every approved new item log original SHA, extraction/derived code, candidate path, exact LaTeX includegraphics/table call, caption/label, final PDF page, visual QA result, and PR/Drive evidence; fail production if any admitted asset is missing.",
       "opened_npt": "2026-10-29",
-      "last_evidence_stage_qa_npt": "2026-10-29"
+      "last_evidence_stage_qa_npt": "2026-10-29",
+      "last_seq052_update": "2026-10-29",
+      "seq052_outcome": "SEQ052 full PDF preserves 32 source plots and all researcher figures; source-model and methodology verification remains HOLD."
     }
   ]
 }
