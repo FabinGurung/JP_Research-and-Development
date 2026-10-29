@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.1.0",
+  "record_id": "NABIN-RSH003-SEQ049-FULLQA-BUILD02-20261029",
+  "researcher_id": "RSH-003",
+  "manuscript_release": "LATEX_SEQ049",
+  "build_identity": "QA_BUILD02",
+  "scientific_version_increment": false,
+  "status": "TECHNICAL_69_PAGE_PARITY_PASS__BIBTEX_SCIENTIFIC_CITATION_HOLD",
+  "control_authorities": [
+    "controls/latex/tower.json",
+    "docs/GIT_DRIVE_AUTHORITY_READ_FIRST.md",
+    "researchers/nabin-bista/latex/source-and-drive-manifest.json"
+  ],
+  "evidence": {
+    "current_pdf_original_sha256": "8f82830a97600cc6aa069e01405f1ba3f29b72a847bd8f719f87d46744dd02a6",
+    "rebuilt_local_pdf_sha256": "396db823c83e4a23c70337e07e4c414d5203ae19c773918950d7bfee2df69e02",
+    "downloaded_provider_pdf_sha256": "5fadb11ac6edd3cfff464dd712729f61a73d9defbe8e705742a5e01b2a573192",
+    "uploaded_pdf_bytes": 6828071,
+    "uploaded_pdf_content_credentials_attachment": true,
+    "source_zip_sha256_provider_readback": "4dad5c43cf88725eca65f6fa148e497a4e8e97fdbbd0f36efe6dfef2504e7e87",
+    "source_zip_bytes": 24804157,
+    "source_zip_entries": 240,
+    "current_pages": 69,
+    "rebuilt_pages": 69,
+    "all_page_render_pixels_equal_at_72dpi": true,
+    "all_page_text_equal_after_nfkc": true,
+    "bibliography_present": true,
+    "no_undefined_citations": true,
+    "source_tex_changed": false,
+    "source_bib_changed": false,
+    "former_238_zip_entries_byte_preserved": true,
+    "source_zip_crc_pass": true
+  },
+  "bibliography_rebuild": {
+    "engine": "bibtex8",
+    "success": true,
+    "historical_bbl_entries": 21,
+    "clean_bibtex_generated_entries": 20,
+    "missing_key": "dongol2020",
+    "cause": "historic BBL contains citation absent from current .tex source",
+    "applied_to_final_pdf": false,
+    "decision": "PRESERVE_HISTORICAL_BBL_FOR_PARITY__REQUIRE_SCHOLARLY_APPROVAL_TO_CHANGE_CITATIONS"
+  },
+  "limitations": {
+    "all_page_figure_semantic_validation": "NOT SCIENTIFICALLY VERIFIED",
+    "full_2026_six_block_results_admission": false,
+    "ETABS_original_models_mapped": false,
+    "ground_motion_record_provenance": false,
+    "damage_state_definitions_harmonized": false,
+    "shared_style_template_migrated": false,
+    "scientific_release_050": false
+  },
+  "provider_links": {
+    "qa_folder": "https://drive.google.com/drive/folders/1suykLbQ3b2u1cHY-k3G7q7mRDzgDdI5_",
+    "source_zip": "https://drive.google.com/file/d/1cWquSDwDglFjBCdVKbjsdKk9BgfVW8lJ/view",
+    "recompiled_pdf": "https://drive.google.com/file/d/1_FHsrt9FlhYhn2dBy0Ptq24HLqDCbGjQ/view",
+    "current_pdf": "https://drive.google.com/file/d/199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93/view"
+  }
+}
