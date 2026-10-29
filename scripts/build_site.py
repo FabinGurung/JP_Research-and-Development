@@ -178,6 +178,11 @@ def main():
             source_state = r.get("git_source_status", "Source imported; independent PDF QA pending")
             git_source_url = REPO_URL + "/blob/main/" + source_path
             body = body.replace("</main>", '<section class="section"><h2>Versioned thesis source</h2><p><a href="' + esc(git_source_url) + '">Open Nabin thesis source manifest in GitHub →</a></p><p class="muted">' + esc(source_state) + '</p></section></main>')
+        if r.get("next_handoff_prompt_path"):
+            handoff_url = REPO_URL + "/blob/main/" + r["next_handoff_prompt_path"]
+            issue_numbers = r.get("open_task_issue_numbers", [])
+            issue_list = "".join('<li><a href="' + esc(REPO_URL + "/issues/" + str(v)) + '">Task #' + esc(str(v)) + '</a></li>' for v in issue_numbers)
+            body = body.replace("</main>", '<section class="section"><h2>Researcher release handoff and pending tasks</h2><p><a href="' + esc(handoff_url) + '">Read complete LaTeX source-to-PDF inclusion plan</a></p><p>Intake material is not yet an approved thesis release. See tracked scientific and figure-completeness tasks before proposing a new PDF.</p><ul>' + issue_list + '</ul></section></main>')
         if drive.get("project_root_drive_id"):
             folder_url="https://drive.google.com/drive/folders/"+drive["project_root_drive_id"]
             body=body.replace("</main>",'<section class="section"><h2>Canonical project folder</h2><p><a href="'+esc(folder_url)+'">Open complete Google Drive project cabinet →</a></p><p>GitHub contains public-safe source and pointers; the Drive folder contains original/compiled researcher documents subject to Drive permissions.</p></section></main>')
