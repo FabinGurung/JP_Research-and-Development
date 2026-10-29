@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "date_npt": "2026-10-29",
+  "status": "DISCUSSION_ONLY_INDEPENDENT_SOURCE_QA__LATEX_SEQ050_HOLD",
+  "inputs": {
+    "plot_zip_sha256": "c32844ec525745fc03dace9bee87515b793761476c4f2d54cc74f1f865d729e2",
+    "plan_pdf_sha256": "0a6b050f50dc05e895be0866216d29ac6aaa51aee2d92db6b6eff7038f0c1d5f",
+    "current_seq049_pdf_sha256": "8f82830a97600cc6aa069e01405f1ba3f29b72a847bd8f719f87d46744dd02a6"
+  },
+  "evidence_checks": {
+    "zip_crc": "PASS",
+    "number_of_zip_files": 74,
+    "xlsx_workbooks": 67,
+    "xlsx_tabs": 228,
+    "source_charts": 36,
+    "images": 6,
+    "modal_cases": 24,
+    "modal_periods_extracted": 24,
+    "dual_axis_mass_90_modes_extracted": 24,
+    "fragility_sheets_inspected": 28,
+    "fragility_arithmetic_spotcheck": "0.15590894917368253_g_REPRODUCED_EXACTLY",
+    "source_label_flags": 14,
+    "unresolved_model_identity_flags": 9,
+    "rejected_misfiled_duplicate_flags": 5,
+    "duplicate_evidence": "four populated XLSX worksheets each have identical 490 cell values vs original BLOCK4 counterpart",
+    "damage_state_contradiction": "four source workbook levels IO-0.5 LS-1.0 CP-2.0 FAIL-4.0 percent vs current five-level Table3.5"
+  },
+  "decision": {
+    "manuscript_admissions": 0,
+    "release_seq": "NOT_CREATED",
+    "scientific_signoff": "NOT_GRANTED",
+    "full_original_etabs_project_verified": false,
+    "original_time_histories_verified": false,
+    "source_scope_mapped_to_old_Gplus5": false,
+    "shared_template_ported": false,
+    "pdf_build_completed": false,
+    "current_pdf_mutated": false
+  },
+  "private_detail_authority": "NABIN_BISTA__SEQ050__SCIENTIFIC_ADMISSION_AND_CHAPTER_CHANGE_MAP__DRAFT_v0.1__20261029 plus fixed-ID Discussion Chapter 13; exact Drive IDs not published here",
+  "blocked_next_actions": [
+    "Source model identity and six-block structural relationship",
+    "Nine remaining worksheet/file ID conflicts",
+    "Four-versus-five damage-state threshold definitions",
+    "Original nonlinear records, station and response axis",
+    "FEMA coefficient sheet and pushover proof",
+    "Fully cited new chapter-change map, all-page visual QA, original complete PDF bibliography validation"
+  ]
+}

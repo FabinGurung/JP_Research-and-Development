@@ -4,7 +4,7 @@
   "researcher_id": "RSH-003",
   "researcher_slug": "nabin-bista",
   "record_type": "RESEARCHER_SOURCE_INTAKE_PUBLIC_SAFE_INDEX",
-  "current_state": "PROVIDER_UPLOAD_VERIFIED__DISCUSSION_DOCREV01_POST_VERIFIED__SCIENCE_ADMISSION_HOLD",
+  "current_state": "DOCREV02_PROVIDER_VERIFIED__24_MODAL_CASES_CHECKED__DUPLICATE_REJECTED__SCIENCE_HOLD",
   "date_npt": "2026-10-29",
   "originals": [
     {
@@ -33,12 +33,13 @@
   },
   "google_docs_version": {
     "stable_document_id": "PRIVATE_IN_OWNING_DRIVE_AUDIT",
-    "chapter": "DISCUSSION CHAPTER 12",
+    "chapter": "DISCUSSION CHAPTERS 12 AND 13",
     "pre_post_copies": "CREATED_AND_PROVIDER_READ",
-    "revision_contract": "FIXED_CURRENT_ID_PLUS_DOCREV01_PRE_POST",
+    "revision_contract": "FIXED_CURRENT_ID_PLUS_DOCREV01_AND_DOCREV02_PRE_POST",
     "private_audit": "NABIN_BISTA__20261029__RESULT_PLOTS_PLAN__SOURCE_INTAKE_MANIFEST_AUDIT_v1.0",
     "native_document_updated_in_place": true,
-    "format_reference_tab_unmodified": true
+    "format_reference_tab_unmodified": true,
+    "private_admission_map": "NABIN_BISTA__SEQ050__SCIENTIFIC_ADMISSION_AND_CHAPTER_CHANGE_MAP__DRAFT_v0.1__20261029"
   },
   "authority": {
     "researcher": "RSH-003",
@@ -54,17 +55,22 @@
     "old_vs_new_thesis_scope": "HOLD",
     "fragility_direction": "NOT_VERIFIED_BY_FILENAME",
     "barpark_barpak_provenance": "HOLD",
-    "excel_labels": "14_FLAGS",
-    "numeric_admission": "NOT_GRANTED"
+    "excel_labels": "9_HOLD_MODEL_IDENTITY__5_REJECTED_MISFILED_BLOCK4_DUPLICATE",
+    "numeric_admission": "DISCUSSION_ONLY_NOT_MANUSCRIPT_ADMITTED",
+    "modal_extracts": "24_CASES_SOURCE_VERIFIED_FIRST_PERIOD_AND_BOTH_90_PERCENT_MODE",
+    "fragility_spotcheck": "ONE_FORECAST_FORMULA_REPRODUCED_EXACTLY__SCIENCE_UNVERIFIED",
+    "four_level_vs_five_level_damage_state_definitions": "INCONSISTENT__HOLD",
+    "duplicate_block4_misfiled_block6": "ALL_4_SHEETS_IDENTICAL_NUMERIC_CELL_VALUES__NOT_INDEPENDENT_BLOCK6_SOURCE"
   },
   "release_boundary": {
     "current_latex_release": "LATEX_SEQ049",
-    "candidate_next_release": "LATEX_SEQ050_CONDITIONAL",
+    "candidate_next_release": "LATEX_SEQ050_STILL_NOT_ISSUED",
     "current_pdf_mutated": false,
     "new_pdf_produced": false,
     "manuscript_prose_modified": false,
     "science_approval": false,
-    "missing_figures_repair_separate_from_new_intake": true
+    "missing_figures_repair_separate_from_new_intake": true,
+    "main_pdf_promoted": false
   },
   "next_handoff": "researchers/nabin-bista/latex/prompts/SEQ050_SIX_BLOCK_RESULTS_INTAKE_READ_FIRST.md",
   "privacy": "PUBLIC_SAFE_METADATA_ONLY; exact original Drive IDs, granular workbook inventory and source imagery retained in private Google Docs/Drive"
