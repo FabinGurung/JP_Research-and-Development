@@ -42,5 +42,15 @@
   ],
   "original_archive_entrypoint_filename": "main.tex",
   "git_original_main_renamed_for_shared_style_gate": true,
-  "current_git_execution_status": "ARCHIVAL_SOURCE_NOT_PRODUCTION_ENTRYPOINT__REQUIRES_SEPARATE_SHARED_TEMPLATE_PORT_AND_EXTERNAL_FIGURE_QA"
+  "current_git_execution_status": "ARCHIVAL_SOURCE_NOT_PRODUCTION_ENTRYPOINT__REQUIRES_SEPARATE_SHARED_TEMPLATE_PORT_AND_EXTERNAL_FIGURE_QA",
+  "current_pdf_verified_sha256": "8f82830a97600cc6aa069e01405f1ba3f29b72a847bd8f719f87d46744dd02a6",
+  "current_pdf_verified_pages": 69,
+  "original_zip_completeness": "TWO_REFERENCED_FIGURE_PDFS_MISSING",
+  "repaired_bundle_status": "LOCAL_REPAIR_SHA_AND_69_PAGE_TEST_PASS__DRIVE_UPLOAD_HOLD",
+  "repaired_bundle_sha256": "a669bfbab87416c58743589e5abbf1b77787a34c24a763c813353414e16bdadf",
+  "source_custody_audit": "researchers/nabin-bista/latex/SEQ049_SOURCE_CUSTODY_QA.json",
+  "next_latex_release": "LATEX_SEQ050_CANDIDATE_ONLY_AFTER_NEW_SOURCE_INTAKE_AND_FRESH_CURRENT_CHECK",
+  "historical_bibliography_engine": "bibtex",
+  "global_template_bibliography_engine": "biber",
+  "historical_main_bbl_present": true
 }

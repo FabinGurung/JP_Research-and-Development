@@ -101,9 +101,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Live fixed-ID Google Docs thesis v1.0 migrated from v13 scientific authority. Defense Google Slides CP01 and Discussion are separate. Examiner details, units and conversions, native list/page fields, and scientific provenance remain open; not final submission.",
+      "public_note": "The current SEQ049 submission PDF is 69 pages and dated September 2026; its permanent Google Drive ID is unchanged. The Git manuscript source is version-controlled, but the shared-style conversion and source-asset custody repair remain explicitly held. The older Google Docs v1.0 is not synchronized and must not be presented as the current PDF.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "LATEX_SEQ049_SOURCE_IMPORTED_ON_RESEARCHER_NAMED_BRANCH__PDF_BUILD_NOT_RUN_IN_ACTIONS"
+      "git_source_status": "LATEX_SEQ049_GIT_MAIN_SOURCE_IMPORTED__HISTORICAL_ENTRYPOINT__TEMPLATE_PORT_HELD"
     },
     {
       "researcher_id": "RSH-004",

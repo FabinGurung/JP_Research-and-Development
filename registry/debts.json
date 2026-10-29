@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "status": "ACTIVE_RESEARCH_DEBT_REGISTER",
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-29",
   "debts": [
     {
       "debt_id": "DEBT-RUPESH-001",
@@ -349,28 +349,30 @@
       "debt_id": "DEBT-NABIN-001",
       "scope": "RESEARCHER",
       "category": "SCIENCE_SOURCE_RECONCILIATION",
-      "status": "OPEN",
+      "status": "HOLD",
       "severity": "MEDIUM",
       "title": "Nabin discussion-derived SSI/pushover/fragility evidence remains provisional",
-      "description": "SSI spring implementation, earthquake record provenance/PGA, X-only fragility direction, pushover producing model version and load workbook inconsistencies are not all reconciled; beta figures are not automatically manuscript-admitted.",
+      "description": "Current LATEX_SEQ049 source/PDF baseline verified, but primary SSI, pushover, FEMA coefficient and fragility provenance remain conditional. Response direction is not evidenced and Barpark/Barpak identity remains unresolved. Latest Git source import does not confer scientific approval.",
       "evidence": [
         {
           "role": "discussion_current",
           "drive_id": "1eLsGVmUxMyHx0QKeQv25SiR325c8jy3grfdXmkkz9xk"
         }
       ],
-      "close_when": "Reconcile sources, validate models and provenance, obtain researcher decisions and issue bounded manuscript handoffs.",
+      "close_when": "Primary researcher evidence resolves model versions, target displacement and 12-event record provenance; verify source and obtain bounded researcher approval before new manuscript admission.",
       "researcher_id": "RSH-003",
-      "researcher_slug": "nabin-bista"
+      "researcher_slug": "nabin-bista",
+      "reconciled_npt": "2026-10-29",
+      "current_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93"
     },
     {
       "debt_id": "DEBT-NABIN-002",
       "scope": "RESEARCHER",
       "category": "SUBMISSION_AND_MIGRATION",
-      "status": "OPEN",
+      "status": "HOLD",
       "severity": "MEDIUM",
-      "title": "Nabin live Google Docs administrative fields/list refresh and Main ACK pending",
-      "description": "External examiner identity and signatures, authoritative units/conversions and native Google Docs TOC/list page references remain incomplete/unverified. Local migration seq2 closed, Main ACK was deferred.",
+      "title": "Legacy Google Docs v1.0 thesis unsynchronized with current SEQ049 PDF",
+      "description": "Current stable PDF LATEX_SEQ049 has 69 pages, September 2026 and updated examiner/coordinator. Separate live Google Docs v1.0 still contains August 2026 and an external examiner placeholder. SEQ46 audit-only Google Doc is historic, not new current audit. Routine A9 Main ACK on Git version-only work was superseded by scoped Git/Drive policy; no unverified acknowledgement may be manufactured.",
       "evidence": [
         {
           "role": "migration_checkpoint",
@@ -381,9 +383,11 @@
           "drive_id": "1v5QKdtwFVmvl5QVhq1jaWSdKfXj1YidGxNzzpKVu-hU"
         }
       ],
-      "close_when": "Verify authoritative administrative evidence, repair page fields, re-QA output and obtain controlled Main readback/ACK.",
+      "close_when": "Independently decide whether to synchronize or retire legacy Google Docs v1.0, then preserve revisions and verify document readback. New release audit Google Doc is created per authorized LATEX iteration, not by replacing historical SEQ46 audit.",
       "researcher_id": "RSH-003",
-      "researcher_slug": "nabin-bista"
+      "researcher_slug": "nabin-bista",
+      "reconciled_npt": "2026-10-29",
+      "current_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93"
     },
     {
       "debt_id": "DEBT-KRISHNA-001",
@@ -608,6 +612,50 @@
         }
       ],
       "close_when": "Raw skeleton ZIP read/compared, canonical project IDs owner verified, each researcher carries out optional authorized physical changes, compiled PDFs undergo complete applicable PU QA, and A9 owner Local/Main registration/ACK independently verified where authorized."
+    },
+    {
+      "debt_id": "DEBT-NABIN-003",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista",
+      "category": "SOURCE_CUSTODY_REPAIR",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Provider-publish recovered SEQ049 source assets and verify fresh bibliography build",
+      "description": "Original corrected SEQ049 source ZIP 235 entries lacks two figure PDFs. Exact PDF bytes recovered from SEQ046 and added to local 237-entry archive with all original entries preserved. Repaired ZIP SHA256 a669bfbab87416c58743589e5abbf1b77787a34c24a763c813353414e16bdadf. Local XeLaTeX using preserved main.bbl produces 69 pages, but BibTeX is absent in local runtime; a clean bibliography rebuild and Drive upload/readback are not complete.",
+      "evidence": [
+        {
+          "role": "seq049_source_zip",
+          "drive_id": "1noTWs5mOFjn10-i3rVSBbWlex1C12CJB"
+        },
+        {
+          "role": "seq046_source_archive",
+          "drive_id": "1099gKcq9UGALMpOkfKIHFboaoKNsC4Bm"
+        },
+        {
+          "role": "current_pdf",
+          "drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93"
+        }
+      ],
+      "close_when": "Upload repaired ZIP to existing Drive archive, verify exact SHA/ID, run BibTeX-capable clean compile, preserve original ZIP and update Git pointer."
+    },
+    {
+      "debt_id": "DEBT-NABIN-004",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista",
+      "category": "LATEX_SHARED_TEMPLATE_PARITY",
+      "status": "HOLD",
+      "severity": "MEDIUM",
+      "title": "Port Nabin historical SEQ049 entrypoint to single shared LaTeX template",
+      "description": "Git contains an exact historical main_SEQ049_original.tex but not yet an approved production main.tex importing pumlsc-shared.sty. Do not silently change manuscript layout or assume the shared XeLaTeX/Biber default matches the original BibTeX pipeline.",
+      "evidence": [
+        {
+          "role": "current_pdf",
+          "drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93"
+        }
+      ],
+      "close_when": "Explicit shared-template port and independent 69-page baseline visual/bibliography comparison pass on next authorized release; historical source preserved."
     }
   ]
 }
