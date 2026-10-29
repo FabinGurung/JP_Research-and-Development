@@ -103,9 +103,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "LATEX_SEQ049 is still the sole CURRENT 69-page thesis (September 2026). Two October six-block source batches are preserved and inventoried in Nabin's private Drive. Submission02 adds member/spring tables and revised Block 5/6 3D visual variants; all 7 archived files and duplicate checks documented in the Discussion Doc. Science/complete figure inclusion remains HOLD. Build02 PDF is technical parity only; do not claim a LATEX_SEQ050 thesis release.",
+      "public_note": "Nabin's CURRENT academic thesis is still LATEX_SEQ049 (69 pages, September 2026). A separate 15-page two-batch source-admission preview was independently compiled and privately archived with all original October research sources and historical SEQ049 source. All 67 workbooks, 228 tabs, 36 chart objects and 24 modal block/support pairs inventoried. Seven Block5 spring cells remain masked; six-block identity and fragility science remain HOLD. This preview is NOT a revised academic thesis or LATEX_SEQ050 release.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "LATEX_SEQ049_BASELINE_PRESERVED__OCT29_SUBMISSIONS_01_02_INTAKE_VERIFIED__NEW_LATEX_SEQ050_SCIENCE_HOLD",
+      "git_source_status": "SEQ049_CURRENT_PRESERVED__15_PAGE_SOURCE_QA_ANNEX_DONE__SEQ050_SCIENTIFIC_HOLD",
       "next_handoff_prompt_path": "researchers/nabin-bista/latex/prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md",
       "open_task_issue_numbers": [
         51,
