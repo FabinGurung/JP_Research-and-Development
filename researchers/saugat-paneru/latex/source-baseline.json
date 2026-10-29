@@ -49,7 +49,7 @@
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
     "shared_template_status": "GLOBAL_CANONICAL__FULL_PU_RULE_PARITY_HOLD",
     "saugat_cp114_compiled_with_shared_template": false,
-    "status": "SCIENTIFIC_CP114_PRESERVED__GIT_V2_4_DISC_V024_S02_EDITORIAL_CURRENT_20261021",
+    "status": "SCIENTIFIC_CP114_PRESERVED__S03_M4_115P_PRINT_PROOF_CURRENT_20261030",
     "source_import_commit": "2ba8728cdf433899c6c10c108b9dae6740dc968a",
     "imported_text_files": 58,
     "shared_template_blob_sha": "f6d8b8fba284603604358d50eed285f722b0c3a0",
@@ -292,6 +292,34 @@
       "promotion": "NO",
       "release_tag": "NO",
       "change_register": "RD-LTX-CHG-113"
+    },
+    "previous_status_before_S03": "SCIENTIFIC_CP114_PRESERVED__GIT_V2_4_DISC_V024_S02_EDITORIAL_CURRENT_20261021",
+    "s03_m4_print_proof": {
+      "status": "USER_APPROVED__MERGED_PR45__PRINT_PROOF_CURRENT__UNSIGNED_CERTIFICATE",
+      "source_pre_sha": "29726a94b408b4093927bcc31c379b0069e56341",
+      "source_merged_sha": "7bff4c59eed4263a28e709bc77b5692d40f064b8",
+      "source_pr": 45,
+      "proof_pdf_drive_id": "1QLnRQrXQm9Y_gqrCLzcEjkht6MlXIkjk",
+      "proof_pdf_sha256": "ae62664f3bc3deac851e04d02c84f465a4d8ab0bd9b5cbb05c2fad5d3ec0340f",
+      "complete_source_drive_id": "1cZSTfvecU3Gv29SxHVNbOyWBQbELY6Wa",
+      "source_sha256": "d9e53c4fa487d14e8f224489b852330a1e09e15472230f3c96770a4fb1ffd71d",
+      "pdf_pages": 115,
+      "exact_TNR": true,
+      "original_143_scientific_binary_SHA_match": true,
+      "unchanged_science": "CP114",
+      "Drive_CURRENT_checkpoint_stable_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+      "Drive_PRE_snapshot_id": "1URK-XJaybMfayRdioJVUf4yMoFkLGztQ",
+      "certificate_source_folder_id": "1nvGqhVH2sz7TzZ7o56Qu99JfeWASVF4g",
+      "organization_unverified_removed": true,
+      "Er_prefix_from_shared_template_not_external_credential_proof": true,
+      "signatures_pending": true,
+      "remaining_issues": [
+        "34",
+        "35"
+      ],
+      "format_144_certified": false,
+      "git_change_id": "RD-LTX-CHG-114",
+      "m2_m3_preserved": true
     }
   },
   "debt": {
