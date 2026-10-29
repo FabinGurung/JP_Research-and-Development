@@ -1,0 +1,329 @@
+\chapter{RESULTS AND DISCUSSION}
+
+\section{General}
+This chapter compares the seismic response of the fixed-base, hard-soil, medium-soil, and soft-soil models. The discussion follows the same sequence as the analytical methodology: modal response, response-spectrum deformation and shear, foundation and member-force response, nonlinear static capacity, performance-point comparison, and preliminary fragility.
+
+\section{Modal Characteristics}
+The first-mode periods are 0.984, 1.001, 1.049, and 1.147 s for the fixed, hard, medium, and soft models, respectively (\mytab{tab:modal_current}). The 16.6 percent increase between the fixed and soft cases indicates progressive period lengthening as the soil--foundation system becomes more flexible.
+
+\begin{table}[htbp]
+\caption{Modal period and Mode 6 cumulative mass participation}
+\label{tab:modal_current}
+\centering
+\begin{tabular}{lccc}
+\hline\hline
+Model & $T_1$ (s) & Mode 6 SumUX & Mode 6 SumUY \\ \hline
+Fixed & 0.984 & 0.9265 & 0.9184 \\
+Hard & 1.001 & 0.9230 & 0.9145 \\
+Medium & 1.049 & 0.9357 & 0.9269 \\
+Soft & 1.147 & 0.9520 & 0.9437 \\ \hline\hline
+\end{tabular}
+\end{table}
+
+Cumulative participating mass exceeds 0.90 in both principal horizontal directions by Mode 6 for every model. The modal representation therefore satisfies the 90 percent mass-participation criterion in both directions while the fundamental period remains the first-mode property.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.78\textwidth]{figures/ch4/fig_4_01_fundamental_period.png}
+\caption{Fundamental period for the four support conditions (Source: ETABS modal analysis)}
+\label{fig:period_current}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.82\textwidth]{figures/ch4/fig_4_02_mode6_mass_participation.png}
+\caption{Mode 6 cumulative participating mass in the principal horizontal directions (Source: ETABS modal analysis)}
+\label{fig:mode6_mass}
+\end{figure}
+
+\section{Response-Spectrum Storey Displacement}
+Figures \ref{fig:rsx_disp_current} and \ref{fig:rsy_disp_current} present storey displacement as horizontal response profiles against elevation. This form makes both the increase with height and the separation among support conditions visible for the ULS and SLS response-spectrum cases.
+
+\begin{table}[htbp]
+\caption{Roof displacement from response-spectrum ULS and SLS cases}
+\label{tab:roof_disp_current}
+\centering
+\begin{tabular}{lrrrr}
+\hline\hline
+Model & RSx ULS (mm) & RSx SLS (mm) & RSy ULS (mm) & RSy SLS (mm) \\ \hline
+Fixed & 87.224 & 83.716 & 71.758 & 88.944 \\
+Hard & 97.121 & 93.215 & 80.080 & 98.352 \\
+Medium & 120.668 & 115.815 & 97.266 & 121.951 \\
+Soft & 162.756 & 156.210 & 120.531 & 170.330 \\ \hline\hline
+\end{tabular}
+\end{table}
+
+From fixed to soft support, roof displacement increases by approximately 86.6 percent in RSx ULS and 68.0 percent in RSy ULS. The SLS profiles show the same broad separation of support conditions. In the X direction, the divergence among the four models becomes more pronounced toward the upper storeys, indicating that foundation flexibility contributes increasingly to total lateral deformation over the building height.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.78\textwidth]{figures/ch4/fig_4_03_rsx_displacement_profile.png}
+\caption{RSx ULS and SLS storey displacement profiles (Source: ETABS response-spectrum analysis)}
+\label{fig:rsx_disp_current}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.78\textwidth]{figures/ch4/fig_4_04_rsy_displacement_profile.png}
+\caption{RSy ULS and SLS storey displacement profiles (Source: ETABS response-spectrum analysis)}
+\label{fig:rsy_disp_current}
+\end{figure}
+
+\section{Response-Spectrum Inter-Storey Drift}
+The maximum RSx ULS drift ratios are 0.009385, 0.009719, 0.010955, and 0.013882 for fixed, hard, medium, and soft support, respectively. The corresponding RSx SLS values are 0.009007, 0.009328, 0.010514, and 0.013324. In all four cases, the largest RSx demand occurs around the 7 m elevation.
+
+\begin{table}[htbp]
+\caption{Maximum response-spectrum inter-storey drift ratios}
+\label{tab:drift_current}
+\centering
+\begin{tabular}{lrrrr}
+\hline\hline
+Model & Max RSx ULS & Max RSx SLS & Max RSy ULS & Max RSy SLS \\ \hline
+Fixed & 0.009385 & 0.009007 & 0.004960 & 0.004761 \\
+Hard & 0.009719 & 0.009328 & 0.005267 & 0.005055 \\
+Medium & 0.010955 & 0.010514 & 0.005966 & 0.005726 \\
+Soft & 0.013882 & 0.013324 & 0.007677 & 0.007369 \\ \hline\hline
+\end{tabular}
+\end{table}
+
+The fixed-to-soft increase is approximately 47.9 percent for the maximum RSx ULS drift and 54.8 percent for the maximum RSy ULS drift. The SLS envelopes follow the same ordering. Compared with the modest period increase, the larger change in peak drift shows that the principal consequence of SSI in these models is not limited to period lengthening; it also appears as a significant redistribution of deformation demand.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.78\textwidth]{figures/ch4/fig_4_05_rsx_drift_profile.png}
+\caption{RSx ULS and SLS inter-storey drift profiles (Source: ETABS response-spectrum analysis)}
+\label{fig:rsx_drift_current}
+\end{figure}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.78\textwidth]{figures/ch4/fig_4_06_rsy_drift_profile.png}
+\caption{RSy ULS and SLS inter-storey drift profiles (Source: ETABS response-spectrum analysis)}
+\label{fig:rsy_drift_current}
+\end{figure}
+
+\section{Base Shear and Storey Shear}
+Response-spectrum base reactions are summarized in \mytab{tab:base_shear_current}. RSx ULS increases from 21,518.409 kN for the fixed-base model to 24,528.262 kN for the soft-soil model, an increase of approximately 14.0 percent. RSx SLS follows the same increasing trend, whereas the Y-direction values vary more modestly across the four support conditions.
+
+\begin{table}[htbp]
+\caption{Response-spectrum ULS and SLS base shear}
+\label{tab:base_shear_current}
+\centering
+\begin{tabular}{lrrrr}
+\hline\hline
+Model & RSx ULS (kN) & RSx SLS (kN) & RSy ULS (kN) & RSy SLS (kN) \\ \hline
+Fixed & 21,518.409 & 20,652.947 & 20,652.932 & 21,518.384 \\
+Hard & 21,941.730 & 21,059.243 & 20,810.417 & 21,682.468 \\
+Medium & 23,005.030 & 22,079.777 & 20,840.595 & 21,713.911 \\
+Soft & 24,528.262 & 23,541.745 & 20,515.975 & 21,375.687 \\ \hline\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.80\textwidth]{figures/ch4/fig_4_07_rs_base_shear.png}
+\caption{Response-spectrum ULS and SLS base shear comparison (Source: ETABS response-spectrum analysis)}
+\label{fig:base_shear_current}
+\end{figure}
+
+At 3.5 m elevation, RSx ULS storey shear increases from 22,710.731 kN for fixed support to 26,301.410 kN for soft support. The RSx SLS value at the same elevation increases from 20,652.947 kN to 23,534.713 kN. The larger separation near the lower storeys indicates that the effect of support flexibility on shear demand is concentrated toward the base of the structural system.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.78\textwidth]{figures/ch4/fig_4_08_rsx_story_shear_profile.png}
+\caption{RSx ULS and SLS storey shear profiles (Source: ETABS response-spectrum analysis)}
+\label{fig:story_shear_current}
+\end{figure}
+
+\section{Foundation Settlement and Vertical Reaction}
+The maximum absolute ETABS settlement values are 0.000, 0.519, 2.522, and 9.209 mm for fixed, hard, medium, and soft support, respectively.
+
+\begin{table}[htbp]
+\caption{ETABS foundation settlement results}
+\label{tab:settlement_current}
+\centering
+\begin{tabular}{lr}
+\hline\hline
+Model & ETABS max $|U_z|$ (mm) \\ \hline
+Fixed & 0.000 \\
+Hard & 0.519 \\
+Medium & 2.522 \\
+Soft & 9.209 \\ \hline\hline
+\end{tabular}
+\end{table}
+
+Settlement is negligible in the fixed-base reference and increases monotonically as the foundation representation becomes more flexible. The progression is consistent with the relative spring stiffnesses assigned to the hard-, medium-, and soft-soil models.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.80\textwidth]{figures/ch4/fig_4_09_foundation_settlement_comparison.png}
+\caption{Maximum ETABS foundation settlement for the four support conditions (Source: ETABS analysis)}
+\label{fig:settlement_current}
+\end{figure}
+
+The total vertical base reaction under the $1.2DL+1.5LL$ combination is 126,201.2 kN for all four support conditions. Therefore, the global vertical equilibrium remains unchanged even though the support idealization differs among the fixed-base and flexible-base models. This confirms that the gravity-load resultant is conserved, while local force redistribution may occur among individual supports and members.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.76\textwidth]{figures/ch4/fig_4_14_support_reaction_fz.png}
+\caption{Total vertical base reaction under $1.2DL+1.5LL$ for the four support conditions (Source: ETABS analysis)}
+\label{fig:support_current}
+\end{figure}
+
+\section{Beam and Column Force Envelopes}
+Beam demand increases noticeably as the support becomes more flexible. Maximum absolute beam V2 increases from 131.282 kN to 186.385 kN, while maximum absolute beam M3 increases from 121.276 kN-m to 236.835 kN-m between the fixed and soft models. The increase in beam M3 is approximately 95.3 percent.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.72\textwidth]{figures/ch4/fig_4_10_beam_v2.png}
+\caption{Maximum absolute beam shear V2 (Source: ETABS analysis)}
+\label{fig:beam_v2_current}
+\end{figure}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.72\textwidth]{figures/ch4/fig_4_11_beam_m3.png}
+\caption{Maximum absolute beam moment M3 (Source: ETABS analysis)}
+\label{fig:beam_m3_current}
+\end{figure}
+
+Maximum absolute column axial force changes only modestly, from 3,008.700 kN to 2,926.508 kN, whereas maximum absolute column M3 increases from 143.096 kN-m to 198.975 kN-m. The combined beam and column envelopes therefore do not support a simple assumption that foundation flexibility reduces all force demands. In these models, SSI primarily redistributes demand, with a marked increase in flexural response.
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.72\textwidth]{figures/ch4/fig_4_12_column_axial.png}
+\caption{Maximum absolute column axial force (Source: ETABS analysis)}
+\label{fig:column_p_current}
+\end{figure}
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.72\textwidth]{figures/ch4/fig_4_13_column_m3.png}
+\caption{Maximum absolute column moment M3 (Source: ETABS analysis)}
+\label{fig:column_m3_current}
+\end{figure}
+
+\subsection{Influence of SSI on Selected Response Parameters}
+The response quantities presented in Sections 4.2--4.7 were compared with the fixed-base model using \myeq{eq:ssi_sensitivity}. This comparison includes the linear, foundation, and member-response parameters presented before the nonlinear pushover and fragility analyses.
+
+\begin{table}[htbp]
+\caption{Variation of selected seismic response parameters relative to the fixed-base model}
+\label{tab:ssi_sensitivity_linear}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrr}
+\hline\hline
+Parameter & Hard & Medium & Soft & Most sensitive soil \\ \hline
+Fundamental period $T_1$ & +1.73\% & +6.61\% & +16.57\% & Soft\\
+RSx ULS roof displacement & +11.35\% & +38.34\% & +86.60\% & Soft\\
+RSx ULS maximum IDR & +3.56\% & +16.73\% & +47.92\% & Soft\\
+RSx ULS base shear & +1.97\% & +6.91\% & +13.99\% & Soft\\
+Maximum beam $|M3|$ & +0.54\% & +8.37\% & +95.29\% & Soft\\
+Maximum column $|M3|$ & +2.34\% & +11.28\% & +39.05\% & Soft\\
+Maximum settlement & +0.519 mm$^{*}$ & +2.522 mm$^{*}$ & +9.209 mm$^{*}$ & Soft \\ \hline\hline
+\end{tabular}}
+\par\smallskip
+\noindent\footnotesize $^{*}$Absolute increase from the fixed-base value of 0.000 mm; a percentage change is undefined because the denominator is zero.
+\end{table}
+
+For every selected response quantity, the magnitude of the change increases from hard to medium to soft support; therefore, the soft-soil model shows the largest influence of SSI among the three flexible-base cases. The largest relative changes occur in maximum beam $|M3|$ (95.29 percent) and RSx ULS roof displacement (86.60 percent), followed by RSx ULS maximum inter-storey drift (47.92 percent). The period and base-shear changes are smaller in percentage terms, while settlement rises from 0.000 mm for the fixed-base reference to 9.209 mm for soft support. These results show that sensitivity to SSI is response-dependent in magnitude, but the soil-condition ranking is consistently hard $<$ medium $<$ soft for the selected quantities.
+
+\section{Nonlinear Pushover Capacity}
+The nonlinear static capacity curves were obtained from the SAP2000 pushover analyses in the X and Y directions for the fixed, hard-soil, medium-soil, and soft-soil models. Figure~\ref{fig:pushover_4x1_latest} presents the four support conditions in vertically stacked panels with common axes and direction labels. Each curve is shown only over the displacement range reached in the corresponding analysis.
+
+At the final analysis step, the X-direction displacement/base-shear pairs are 0.8400~m/52,584.488~kN for fixed support, 0.680116~m/47,463.276~kN for hard soil, 0.668065~m/46,785.956~kN for medium soil, and 0.757605~m/50,017.283~kN for soft soil. The corresponding final Y-direction pairs are 0.839999~m/53,247.903~kN, 0.8400~m/53,172.046~kN, 0.8400~m/52,864.849~kN, and 0.8400~m/53,118.335~kN, respectively. Because the X-direction analyses end at different displacement levels, these final points should not be interpreted as directly comparable ultimate capacities.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/ch4/part04a/fig_part04a_pushover_4x1_latest.png}
+\caption{Pushover capacity curves for the fixed-base, hard-soil, medium-soil, and soft-soil models in the X and Y directions}
+\label{fig:pushover_4x1_latest}
+\end{figure}
+
+\section{FEMA 356 Performance-Point Comparison}
+The performance-point coordinates for the four support conditions are summarized in Table~\ref{tab:performance_points_researcher}. In this thesis, the performance point represents the base-shear and roof-displacement state used for comparison within the FEMA~356 target-displacement framework defined by Equation~\ref{eq:fema356_target_displacement}. The available analysis values are used directly because the intermediate target-displacement coefficient calculation sheet was unavailable for an independent recalculation.
+
+\begin{table}[htbp]
+\caption{FEMA 356 performance-point coordinates for the four support conditions}
+\label{tab:performance_points_researcher}
+\centering
+\begin{tabular}{lcrr}
+\hline\hline
+Support type & Direction & Base shear (kN) & Displacement (m) \\ \hline
+Fixed & X & 16,337.028 & 0.120 \\
+Hard & X & 14,116.155 & 0.120 \\
+Medium & X & 13,566.670 & 0.121 \\
+Soft & X & 11,566.670 & 0.121 \\
+Fixed & Y & 17,911.160 & 0.135 \\
+Hard & Y & 15,987.832 & 0.155 \\
+Medium & Y & 1,479.845 & 0.156 \\
+Soft & Y & 1,294.845 & 0.156 \\ \hline\hline
+\end{tabular}
+\end{table}
+
+The X-direction coordinates show a reduction in reported base shear from 16,337.028~kN for fixed support to 11,566.670~kN for soft-soil support, while the corresponding reported displacement remains close to 0.12~m. In the Y direction, the reported displacement increases from 0.135~m for fixed support to 0.156~m for the medium- and soft-soil cases. The reported Y-direction base shear also decreases markedly with increasing support flexibility. The performance-point values are presented separately from the capacity curves because the target displacement was not independently recalculated in this study.
+
+\section{Ground-Motion Records}
+Twelve ground-motion records are included in the comparison. Eleven accelerograms provide time in seconds and acceleration in units of $g$. For the 2015 Gorkha earthquake, the selected acceleration component has a sampling interval of $\Delta t=0.01$~s and a PGA of 0.0876~$g$. The same value is used in Table~\ref{tab:gm_verified_records}, Figure~\ref{fig:gm_verified_pga}, and the acceleration time history presented as Figure~\ref{fig:app_accel_12} in Appendix~\ref{app:verified_accelerograms} \cite{takai2016gorkha,shigefuji2022gorkha}.
+
+\begin{table}[htbp]
+\caption{Ground-motion records used in the seismic response assessment}
+\label{tab:gm_verified_records}
+\centering
+\small
+\begin{tabular}{lrrp{5.0cm}}
+\hline\hline
+Earthquake record & PGA ($g$) & $\Delta t$ (s) & Record information \\ \hline
+Chi-Chi & 0.3610 & 0.010 & Time and acceleration units available \\
+Friuli & 0.3513 & 0.010 & Time and acceleration units available \\
+Hollister & 0.1948 & 0.010 & Time and acceleration units available \\
+Imperial Valley & 0.3152 & 0.010 & Time and acceleration units available \\
+Kobe & 0.3447 & 0.010 & Time and acceleration units available \\
+Kocaeli & 0.3490 & 0.010 & Time and acceleration units available \\
+Landers & 0.7803 & 0.010 & Time and acceleration units available \\
+Loma Prieta & 0.3674 & 0.010 & Time and acceleration units available \\
+Northridge & 0.5683 & 0.010 & Time and acceleration units available \\
+San Fernando & 0.02576 & 0.005 & Time and acceleration units available \\
+Trinidad & 0.1936 & 0.010 & Time and acceleration units available \\
+Gorkha earthquake & 0.0876 & 0.010 & Selected component; time and acceleration units available \\ \hline\hline
+\end{tabular}
+\end{table}
+
+The San Fernando PGA used in this study is 0.02576~$g$, taken from the accelerogram adopted for the analysis. Figure~\ref{fig:gm_verified_pga} compares the PGA values of the twelve records listed in Table~\ref{tab:gm_verified_records}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/ch4/seq40_part1/ground_motion_12eq_pga_selected_gorkha_component.png}
+\caption{Peak ground acceleration of the twelve ground-motion records}
+\label{fig:gm_verified_pga}
+\end{figure}
+
+The acceleration time history of the selected 2015 Gorkha earthquake component is provided in \hyperref[app:verified_accelerograms]{Appendix~\ref*{app:verified_accelerograms}} as Figure~\ref{fig:app_accel_12}. The selected component has a PGA of 0.0876~$g$ and a sampling interval of 0.01~s.
+
+Figure~\ref{fig:gm_verified_psa} presents the five-percent-damped pseudo-spectral acceleration spectra for the eleven ground-motion records included in the spectral comparison. The selected Gorkha component is included in the PGA comparison, and its acceleration time history is presented in \hyperref[app:verified_accelerograms]{Appendix~\ref*{app:verified_accelerograms}}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{figures/ch4/part01/ground_motion_11eq_psa.png}
+\caption{Five-percent-damped pseudo-spectral acceleration spectra of the eleven ground-motion records}
+\label{fig:gm_verified_psa}
+\end{figure}
+
+\section{Seismic Fragility Assessment}
+The nonlinear time-history analysis includes twelve ground motions for each support condition and five adopted drift-based damage-state thresholds: Operational (OP) at 0.5 percent, Immediate Occupancy (IO) at 1.0 percent, Damage Control (DC) at 1.5 percent, Life Safety (LS) at 2.0 percent, and Collapse Prevention (CP) at 2.5 percent. The available nonlinear results do not specify whether the response corresponds to the X or Y direction; therefore, no directional label is assigned to the fragility curves.
+
+\begin{table}[htbp]
+\caption{Mean PGA values corresponding to the adopted damage-state thresholds}
+\label{tab:fragility_theta_current}
+\centering
+\small
+\begin{tabular}{lrrrrr}
+\hline\hline
+Model & OP ($g$) & IO ($g$) & DC ($g$) & LS ($g$) & CP ($g$) \\ \hline
+Fixed & 0.1416 & 0.2828 & 0.4241 & 0.5653 & 0.7066 \\
+Hard & 0.1343 & 0.2688 & 0.4034 & 0.5379 & 0.6724 \\
+Medium & 0.1104 & 0.2203 & 0.3301 & 0.4399 & 0.5497 \\
+Soft & 0.0880 & 0.1747 & 0.2614 & 0.3481 & 0.4348 \\ \hline\hline
+\end{tabular}
+\end{table}
+
+Mean threshold PGA decreases monotonically as the support condition becomes more flexible for all five adopted damage states. For IO, the mean threshold decreases from 0.2828~$g$ for fixed support to 0.1747~$g$ for soft support, a reduction of approximately 38.2 percent. The fixed-to-soft reduction is of similar magnitude for OP, DC, LS, and CP. For the considered ground motions, the soft-soil model therefore reaches the adopted drift thresholds at the lowest mean PGA.
+
+The calculated dispersion is combined with an additional 0.4 uncertainty term, giving final lognormal $\beta$ values close to 0.40 for all support conditions and damage states. Figure~\ref{fig:fragility_4x1_latest} uses the mean threshold and final $\beta$ values in the lognormal exceedance relation defined in Chapter~3. The vertical dashed line at 0.5~$g$ marks the upper limit of the analysed PGA range; curve portions beyond this range represent extrapolation.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/ch4/part04a/fig_part04a_fragility_4x1_12eq_direction_neutral.png}
+\caption{Seismic fragility curves for the fixed-base, hard-soil, medium-soil, and soft-soil models}
+\label{fig:fragility_4x1_latest}
+\end{figure}
+
+These results form the basis of the fragility curves shown in Figure~\ref{fig:fragility_4x1_latest}. Their interpretation remains preliminary because the available nonlinear results do not specify the response direction and the Barpark/Barpak-labelled record could not be independently verified.
+
+\section{Overall Discussion}
+Across the four support conditions, increasing foundation flexibility is associated with period lengthening, larger response-spectrum roof displacement, higher peak drift, increased lower-storey RSx shear, and generally larger beam and column flexural demand. Foundation settlement also becomes more pronounced as the support stiffness decreases. The linear sensitivity synthesis in \mytab{tab:ssi_sensitivity_linear} identifies the soft-soil model as the most sensitive flexible-base condition for every selected response measure, with the largest relative changes occurring in beam flexural demand and roof displacement. The results therefore show that SSI changes both deformation and force distribution rather than producing a uniform reduction in seismic demand.
+
+The preliminary twelve-ground-motion fragility results also show progressively lower mean damage-state threshold PGA as support flexibility increases. This correspondence is treated as provisional because the analysed response direction is not identified and the Barpark/Barpak-labelled record could not be independently verified. The fragility interpretation should therefore not be generalized beyond the stated analytical basis.

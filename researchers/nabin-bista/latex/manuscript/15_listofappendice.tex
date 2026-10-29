@@ -1,0 +1,37 @@
+% --- AUTOMATIC APPENDIX 14: LIST OF APPENDIX PAGE ---
+\begin{titlepage}
+    % PU Guidelines: Header section uses single line spacing (1 line)
+    \setstretch{1.0} 
+
+    \begin{center}
+        % List of Appendix Header (Times New Roman, 14 pts, Normal Bold)
+        {\fontsize{14}{18}\selectfont \textbf{List of Appendices}}
+    \end{center}
+
+    % 4 blank lines of 12 pts each
+    \vspace*{48pt} 
+
+    % Table Header Row (Times New Roman, 12 Pts, Normal Bold)
+    \noindent
+    {\fontsize{12}{14}\selectfont \textbf{Title}} \hfill {\fontsize{12}{14}\selectfont \textbf{Page}} \\[12pt] % 1 blank line of 12pt space
+
+    % --- AUTOMATIC LIST GENERATION ---
+    % Restoring body text style: Left-align, 12 pts, Normal, line spacing 1.5
+    \setstretch{1.5}
+    {\fontsize{12}{18}\selectfont
+    \makeatletter
+    % Overriding to ensure dot leaders match the style rules perfectly
+    \newcommand{\cftapplineleader}{\cftdotfill{\cftdotsep}}
+    \renewcommand{\@pnumwidth}{1.55em}
+    \renewcommand{\@tocrmarg}{2.55em}
+    
+    % Reading the custom .app (List of Appendices) file automatically
+    \@starttoc{app}
+    \makeatother
+    }
+
+\end{titlepage}
+
+% \begin{myappendix}{Population growth rate of Nepal}
+%     % Put your appendix tables, data sheets, maps, or charts right here
+% \end{myappendix}

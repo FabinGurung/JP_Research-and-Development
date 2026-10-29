@@ -83,7 +83,9 @@
         "latex_source_package_drive_id": "1c-cD9zNr_pOIE4U5bxlUryX5jj7PKuEw",
         "thesis_google_doc_id": "1v5QKdtwFVmvl5QVhq1jaWSdKfXj1YidGxNzzpKVu-hU",
         "presentation_google_slides_drive_id": "1mS98aVngfuFJMaW9z9EmhQT-3QspRKW7NhgRwF9T8F4",
-        "project_root_drive_id": "1qOn2pyJ4GFgQLf_wdJ7fEqB6MWBOAPp3"
+        "project_root_drive_id": "1qOn2pyJ4GFgQLf_wdJ7fEqB6MWBOAPp3",
+        "current_compiled_pdf_drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+        "current_latex_source_archive_drive_id": "1noTWs5mOFjn10-i3rVSBbWlex1C12CJB"
       },
       "lanes": {
         "discussion": {
@@ -99,7 +101,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Live fixed-ID Google Docs thesis v1.0 migrated from v13 scientific authority. Defense Google Slides CP01 and Discussion are separate. Examiner details, units and conversions, native list/page fields, and scientific provenance remain open; not final submission."
+      "public_note": "Live fixed-ID Google Docs thesis v1.0 migrated from v13 scientific authority. Defense Google Slides CP01 and Discussion are separate. Examiner details, units and conversions, native list/page fields, and scientific provenance remain open; not final submission.",
+      "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
+      "git_source_status": "LATEX_SEQ049_SOURCE_IMPORTED_ON_RESEARCHER_NAMED_BRANCH__PDF_BUILD_NOT_RUN_IN_ACTIONS"
     },
     {
       "researcher_id": "RSH-004",

@@ -161,8 +161,19 @@ def main():
           ("Live thesis Google Doc",drive.get("thesis_google_doc_id")),
           ("Live presentation Google Slides",drive.get("presentation_google_slides_drive_id")),
         ]
+        # Optional verified CURRENT links are additive; historical Drive rows remain intact.
+        if drive.get("current_compiled_pdf_drive_id"):
+            rows.insert(2, ("Latest CURRENT thesis PDF", drive["current_compiled_pdf_drive_id"]))
+        if drive.get("current_latex_source_archive_drive_id"):
+            rows.insert(3, ("Latest corrected LaTeX source ZIP (Drive)", drive["current_latex_source_archive_drive_id"]))
         links="".join(f'<div>{esc(label)}</div><div>{f"""<a href="{drive_url(fid)}">Open Drive file</a>""" if fid else """<span class="badge">ON HOLD</span>"""}</div>' for label,fid in rows)
         body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">{esc(status_label)}</span></p><div class="notice">{esc(notice_text)}</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>{esc(title_value)}</div><div>Short name</div><div>{esc(r.get("topic_short_name") or "ON HOLD")}</div></div></section><section class="section"><h2>Version control and source</h2><p>Git branches are full-repository commits; these researcher-named refs are compatibility/work lanes. Public-safe website and tool code is versioned in the common <a href="https://github.com/FabinGurung/JP_Research-and-Development/tree/main">GitHub main repository</a>. Original thesis source packages and compiled outputs remain in Google Drive until an explicit source-code admission/migration is approved.</p></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}{debt_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
+        # Scoped Git source link appears only when explicitly registered for a researcher.
+        if r.get("git_source_manifest_path"):
+            source_path = r["git_source_manifest_path"]
+            source_state = r.get("git_source_status", "Source imported; independent PDF QA pending")
+            git_source_url = REPO_URL + "/blob/main/" + source_path
+            body = body.replace("</main>", '<section class="section"><h2>Versioned thesis source</h2><p><a href="' + esc(git_source_url) + '">Open Nabin thesis source manifest in GitHub →</a></p><p class="muted">' + esc(source_state) + '</p></section></main>')
         if drive.get("project_root_drive_id"):
             folder_url="https://drive.google.com/drive/folders/"+drive["project_root_drive_id"]
             body=body.replace("</main>",'<section class="section"><h2>Canonical project folder</h2><p><a href="'+esc(folder_url)+'">Open complete Google Drive project cabinet →</a></p><p>GitHub contains public-safe source and pointers; the Drive folder contains original/compiled researcher documents subject to Drive permissions.</p></section></main>')

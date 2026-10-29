@@ -1,0 +1,47 @@
+% --- AUTOMATIC APPENDIX 12: LIST OF FIGURE PAGE ---
+\begin{titlepage}
+    % PU Guidelines: Header section uses single line spacing (1 line)
+    \setstretch{1.0} 
+
+    \begin{center}
+        % List of Figures Header (Times New Roman, 14 pts, Normal Bold)
+        {\fontsize{14}{18}\selectfont \textbf{List of Figures}}
+    \end{center}
+
+    % 4 blank lines of 12 pts each
+    \vspace*{48pt} 
+
+    % Table Header Row (Times New Roman, 12 Pts, Normal Bold)
+    \noindent
+    {\fontsize{12}{14}\selectfont \textbf{Title}} \hfill {\fontsize{12}{14}\selectfont \textbf{Page}} \\[12pt] % 1 blank line of 12pt space
+
+    % --- AUTOMATIC LIST GENERATION ---
+    % Restoring body text style: Left-align, 12 pts, Normal, line spacing 1.5
+    \setstretch{1.5}
+    {\fontsize{12}{18}\selectfont
+    \makeatletter
+    % Overriding to ensure dot leaders match the style rules perfectly
+    \renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}}
+    % Setting no indentation for the "Fig. X.X" label strings
+    \setlength{\cftfigindent}{0pt}
+    
+    \@starttoc{lof}
+    \makeatother
+    }
+
+\end{titlepage}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{image_name}
+%     \caption{Population growth rate of Nepal}
+%     \label{fig:pop_growth_fig}
+% \end{figure}
+
+% RIGHT WAY TO DO A FIGURE IN YOUR CHAPTERS:
+% \begin{figure}[htbp]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{your_actual_chart.png}
+%     \caption{Your Real Figure Description Here} % <--- ALWAYS BELOW
+%     \label{fig:my_chart}
+% \end{figure}

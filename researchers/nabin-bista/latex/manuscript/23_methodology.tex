@@ -1,0 +1,196 @@
+\chapter{METHODOLOGY}
+
+\section{General}
+The study used analytical structural modelling to compare four support conditions: fixed base, hard soil, medium soil, and soft soil. Modal and response-spectrum analyses in ETABS formed the principal linear-response basis. Nonlinear static pushover capacity was evaluated in SAP2000. A preliminary fragility assessment was carried out using nonlinear time-history results from twelve ground motions. Because the available results do not specify whether the response corresponds to the X or Y direction, the fragility results are presented without assigning a direction.
+
+\section{Research Design and Analytical Procedure}
+The research design was quantitative and computational. The analytical sequence comprised: (i) definition of the hospital prototype and loading; (ii) development of fixed-base and flexible-base models; (iii) modal and response-spectrum analysis in ETABS; (iv) evaluation of foundation settlement and force response; (v) nonlinear static pushover assessment in SAP2000 and comparison of performance points using the FEMA~356 target-displacement framework; (vi) fragility assessment using the twelve ground-motion nonlinear time-history results; and (vii) comparison of the resulting structural response and fragility trends.
+
+Only results corresponding to the defined analytical models, response directions, and selected load cases were included in the comparative assessment. This provided a consistent basis for comparing the fixed, hard-soil, medium-soil, and soft-soil conditions.
+
+The principal stages of the analytical procedure are summarized in \myfig{fig:research_workflow}. The flowchart distinguishes the linear ETABS response assessment, the SAP2000 nonlinear-static assessment, and the ground-motion/fragility processing before these evidence streams are combined in the comparative SSI interpretation.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/ch3/research_workflow_seq44.pdf}
+\caption{Research workflow adopted for the analytical assessment}
+\label{fig:research_workflow}
+\end{figure}
+
+\section{Prototype Hospital Building}
+The selected prototype is a G+5 reinforced-concrete mid-size general hospital building in Nepal with a regular plan and 3.5 m storey height. The structural system is modelled as a Special Moment Resisting Frame (SMRF), and NBC 105:2025 is adopted for seismic loading \cite{nbc1052025}. The analytical floor plan and the three-dimensional ETABS model used to represent the prototype are shown in \myfig{fig:hospital_plan_methodology} and \myfig{fig:hospital_3d_methodology}, respectively.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/ch3/hospital_2d_plan.pdf}
+\caption{Structural floor plan of the prototype hospital used for the analytical model}
+\label{fig:hospital_plan_methodology}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth]{figures/ch3/hospital_etabs_3d_model.jpeg}
+\caption{Three-dimensional ETABS representation of the prototype hospital building}
+\label{fig:hospital_3d_methodology}
+\end{figure}
+
+NBC 206:2024 classifies buildings by occupancy and by storey/height. Under Clause 1.2, Group D covers hospitals and clinics intended for medical or other treatment and care. The code separates this occupancy into D1 for hospitals with fewer than 25 beds and D2 for hospitals with more than 25 beds; the selected prototype is therefore classified as D2 on the basis of its stated bed capacity. Under Clause 1.2.2, an S2 mid-rise building has six to eight storeys or a height from 18 m to less than 25 m. Because G+5 corresponds to six storeys, the prototype falls within S2 by storey count \cite{nbc2062024}.
+
+The D2 classification also carries architectural-life-safety requirements that are relevant to hospital planning, including a design occupant-load basis of 14 m$^2$ per person, limits on travel distance to exits, minimum hospital doorway provisions, patient-lift dimensions, and Category 3 (fully accessible) accessibility provisions in NBC 206:2024 \cite{nbc2062024}. These provisions explain why a hospital is treated differently from an ordinary residential or office occupancy. They are cited here as the governing architectural classification and design context; the present structural-analysis model does not by itself constitute an independent compliance certification for every architectural clause.
+
+The principal structural dimensions used in the analytical model are summarized in \mytab{tab:member_dimensions_methodology}.
+\begin{table}[htbp]
+\caption{Principal structural member dimensions}
+\label{tab:member_dimensions_methodology}
+\centering
+\begin{tabular}{lc}
+\hline\hline
+Component & Dimension \\ \hline
+Beam type 1 & 350 mm $\times$ 550 mm \\
+Beam type 2 & 350 mm $\times$ 350 mm \\
+Column & 600 mm $\times$ 600 mm \\
+Slab thickness & 150 mm \\
+Wall thickness & 230 mm \\ \hline\hline
+\end{tabular}
+\end{table}
+
+The foundation system consists of isolated footings. Footing ties are not included in the analytical model.
+
+\section{Seismic Parameters and Gravity Loading}
+The hospital model is assigned an importance factor of 1.5, a damping ratio of 5 percent, and a Special Moment Resisting Frame (SMRF) structural-system designation. Seismic loading and site classification follow NBC 105:2025 \cite{nbc1052025}. The gravity inputs used in the analytical model are summarized in \mytab{tab:gravity_loads_methodology}. Ward, corridor, operation-theatre, and ICU areas are consistently assigned a live load of 4 kN/m$^2$.
+
+\begin{table}[htbp]
+\caption{Gravity load inputs used in the analytical model}
+\label{tab:gravity_loads_methodology}
+\centering
+\begin{tabular}{lcl}
+\hline\hline
+Load item & Value used & Application \\ \hline
+Floor finish & 2.5 kN/m$^2$ & Slab \\
+Wall load & 16.5 kN/m & Beam \\
+Ramp parapet wall & 5 kN/m & Ramp beam \\
+Water tank load & 3.6 kN/m$^2$ & Fifth-floor slab \\
+Ward floor live load & 4 kN/m$^2$ & Slab \\
+Corridor live load & 4 kN/m$^2$ & Slab \\
+Operation-theatre and ICU live load & 4 kN/m$^2$ & Slab \\
+Staircase and ramp floor live load & 5 kN/m$^2$ & Stair/ramp slab \\
+Roof live load & 0.75 kN/m$^2$ & Roof slab \\ \hline\hline
+\end{tabular}
+\end{table}
+
+Response-spectrum analysis provides the principal linear comparison reported in Chapter 4. Modal participating mass is checked against the NBC 105:2025 requirement that cumulative participating mass should reach at least 90 percent in the principal horizontal directions \cite{nbc1052025}.
+
+\section{Soil Parameters and SSI Idealization}
+Three flexible-base soil conditions are considered: hard, medium, and soft soil. The project soil properties and site-class inputs used for the comparative SSI models are summarized in \mytab{tab:soil_parameters_methodology}. These values are modelling inputs for the comparative study and do not replace a site-specific geotechnical investigation.
+
+\begin{table}[htbp]
+\caption{Soil parameters and site classifications used for SSI modelling}
+\label{tab:soil_parameters_methodology}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccccc}
+\hline\hline
+Soil case & NBC class & NBC $V_{s,30}$ range (m/s) & Project $V_{s,30}$ (m/s) & $E$ (MPa) & $\nu$ & $G$ (MPa) & SBC (kPa) \\ \hline
+Hard soil & B & $350 < V_{s,30} \leq 800$ & 575 & 1550 & 0.30 & 595 & 400 \\
+Medium soil & C & $150 < V_{s,30} \leq 350$ & 250 & 300 & 0.35 & 113 & 200 \\
+Soft soil & D & $V_{s,30} \leq 150$ & 125 & 80 & 0.40 & 28 & 100 \\ \hline\hline
+\end{tabular}}
+\end{table}
+
+The hard-soil case represents the stiffest flexible-base condition and the soft-soil case the most flexible condition. At the structural-model level, the soil--foundation flexibility is idealized by discrete springs, consistent with the Winkler concept that represents soil support by local springs. In its classical one-parameter vertical form, the relationship is
+\begin{equation}
+    p(x,y)=k_s w(x,y),
+    \label{eq:winkler_relation}
+\end{equation}
+where $p$ is the local foundation reaction per unit area, $w$ is the corresponding local displacement, and $k_s$ is the modulus of subgrade reaction \cite{krishnan2024}. For this thesis, however, a single value of $k_s$ is not used to generate all six foundation degrees of freedom. Instead, independent translational, rocking, and torsional point-spring stiffnesses are derived from the elastic-half-space impedance formulation of Gazetas \cite{gazetas1991}.
+
+The isolated footing used in the spring derivation is 3.0 m $\times$ 3.0 m. Following the notation of Gazetas for a rectangular surface foundation of dimensions $2L\times2B$, the present square footing has $L=B=1.5$ m, contact area $A_b=9$ m$^2$, $\chi=A_b/(4L^2)=1$, centroidal area moments $I_{bx}=I_{by}=6.75$ m$^4$, and polar area moment $J_b=I_{bx}+I_{by}=13.5$ m$^4$. For this square geometry, the static stiffness expressions used are
+\begin{align}
+K_z &= \frac{2GL}{1-\nu}\left(0.73+1.54\chi^{0.75}\right), \label{eq:gazetas_kz}\\
+K_x=K_y &= \frac{2GL}{2-\nu}\left(2+2.50\chi^{0.85}\right), \label{eq:gazetas_kxy}\\
+K_{\theta x} &= \frac{G}{1-\nu}I_{bx}^{0.75}\left(\frac{L}{B}\right)^{0.25}
+\left(2.4+0.5\frac{B}{L}\right), \label{eq:gazetas_krx}\\
+K_{\theta y} &= \frac{G}{1-\nu}I_{by}^{0.75}
+\left[3\left(\frac{L}{B}\right)^{0.15}\right], \label{eq:gazetas_kry}\\
+K_t &= GJ_b^{0.75}\left[4+11\left(1-\frac{B}{L}\right)^{10}\right]. \label{eq:gazetas_kt}
+\end{align}
+Here $G$ is the soil shear modulus and $\nu$ is Poisson's ratio. Substitution of the hard-, medium-, and soft-soil properties in \mytab{tab:soil_parameters_methodology} reproduces the ETABS spring values in \mytab{tab:spring_stiffness_methodology}; for example, the hard-soil case gives $K_x=K_y=4{,}725{,}000$ kN/m and $K_z=5{,}788{,}500$ kN/m. This numerical agreement provides an internal check that the implemented spring constants are consistent with the stated Gazetas formulation.
+
+The spring stiffnesses actually assigned in ETABS are listed in \mytab{tab:spring_stiffness_methodology}. Translational stiffnesses are expressed in kN/m, while rotational and torsional stiffnesses are expressed in kN-m/rad. The torsional term $K_t$ corresponds to rotation about the global Z-axis.
+
+\begin{table}[htbp]
+\caption{Foundation spring stiffness inputs used in ETABS}
+\label{tab:spring_stiffness_methodology}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\hline\hline
+Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \\ \hline
+Hard & 4,725,000 & 4,725,000 & 5,788,500 & 10,322,734 & 10,678,691 & 16,762,056 \\
+Medium & 924,545 & 924,545 & 1,183,892 & 2,111,256 & 2,184,058 & 3,183,382 \\
+Soft & 236,250 & 236,250 & 317,800 & 566,738 & 586,281 & 788,803 \\ \hline\hline
+\end{tabular}}
+\end{table}
+
+\section{Linear Response Quantities}
+ETABS results were evaluated for modal participating mass and period, response-spectrum storey displacement, inter-storey drift, base reaction, storey shear, support reaction, beam forces, column forces, and vertical reactions. Storey displacement and drift were presented as response profiles against elevation so that the variation of demand over the building height could be compared directly among the four support conditions. Both ULS and SLS response-spectrum cases were included in the displacement, drift, and shear comparisons.
+
+\subsection{Comparison with the Fixed-Base Model}
+To quantify the influence of foundation flexibility, each selected linear-response quantity for the flexible-base models is compared with the fixed-base reference as
+\begin{equation}
+S_{R,s}=\frac{R_s-R_{\mathrm{fixed}}}{R_{\mathrm{fixed}}}\times100\%,
+\label{eq:ssi_sensitivity}
+\end{equation}
+where $R_s$ is the response for hard, medium, or soft soil and $R_{\mathrm{fixed}}$ is the corresponding fixed-base response. The comparison is applied to fundamental period, RSx ULS roof displacement, RSx ULS maximum inter-storey drift, RSx ULS base shear, maximum absolute beam moment $M3$, and maximum absolute column moment $M3$. Settlement is reported as an absolute increase rather than a percentage because the fixed-base settlement is 0.000 mm, which makes a percentage relative to the fixed value undefined. This comparison is limited to the linear, foundation, and member-response results presented before the nonlinear pushover and fragility analyses.
+
+\section{Foundation Settlement Check}
+Foundation settlement was evaluated from ETABS vertical joint-displacement results for the four support conditions. Maximum absolute vertical displacement was used as the settlement measure reported in Chapter~4.
+
+\section{Nonlinear Static Pushover Analysis and FEMA 356 Performance Evaluation}
+Pushover capacity curves were evaluated in the X and Y directions using SAP2000, with capacity expressed as base shear versus roof displacement. Each curve is plotted only over the displacement range reached in the corresponding analysis and is not extended beyond the calculated results.
+
+The nonlinear static performance evaluation followed the target-displacement concept of FEMA~356 \cite{fema356}. In the nonlinear static procedure, the lateral load is increased until the displacement of the control node reaches or exceeds the target displacement. FEMA~356 expresses the target displacement as
+\begin{equation}
+\delta_t=C_0 C_1 C_2 C_3 S_a\left(\frac{T_e^2}{4\pi^2}\right)g,
+\label{eq:fema356_target_displacement}
+\end{equation}
+where $C_0$ relates equivalent single-degree-of-freedom spectral displacement to the control-node displacement of the multi-degree-of-freedom system, $C_1$ accounts for the relation between expected maximum inelastic and elastic displacement, $C_2$ accounts for hysteretic shape and cyclic degradation effects, $C_3$ accounts for increased displacement associated with second-order effects, $S_a$ is the response-spectrum acceleration at the effective fundamental period $T_e$, and $g$ is gravitational acceleration \cite{fema356}.
+
+Eight performance-point coordinate pairs were available for the fixed, hard-soil, medium-soil, and soft-soil models in the X and Y directions. The corresponding base shear and roof displacement values were used in the comparative assessment in Chapter~4. The intermediate coefficient calculation sheet needed to reproduce $C_0$, $C_1$, $C_2$, $C_3$, $S_a$, and $T_e$ was unavailable, so the performance points were not independently recalculated. They are therefore interpreted within the FEMA~356 target-displacement framework using the available analysis results.
+
+\section{Ground-Motion Record Selection and Verification}
+The ground-motion records were checked for time and acceleration units before analysis. Eleven accelerograms provide time in seconds and acceleration in units of $g$. For the 2015 Gorkha earthquake, the selected acceleration component provides time in seconds and acceleration in cm/s$^2$ at a 0.01~s interval, with a peak ground acceleration of 0.0876~$g$. This selected component was used for the Gorkha PGA value \cite{takai2016gorkha,shigefuji2022gorkha}. The acceleration time histories are presented in \hyperref[app:verified_accelerograms]{Appendix~\ref*{app:verified_accelerograms}}.
+
+Record selection was treated as a hazard-compatibility problem rather than an event-name checklist. The selection considerations included earthquake magnitude, source-to-site distance, faulting mechanism, site condition or $V_{s30}$ where available, spectral compatibility with the target hazard, amplitude characteristics, and relevance to the study region. Station, component, distance, and scaling information was reported only where it could be verified; unresolved attributes were not assigned by inference.
+
+\section{Nonlinear Time-History / IDA and Fragility Assessment}
+The nonlinear time-history analysis considered twelve ground motions for each of the fixed, hard-soil, medium-soil, and soft-soil models over PGA levels from 0.1 to 0.5~$g$. Drift thresholds of 0.5 percent for Operational (OP), 1.0 percent for Immediate Occupancy (IO), 1.5 percent for Damage Control (DC), 2.0 percent for Life Safety (LS), and 2.5 percent for Collapse Prevention (CP) were adopted. These numerical thresholds are study-specific and are not presented as verbatim FEMA~356 limits; FEMA~356 is used for the broader performance-level framework \cite{fema356}. For each support condition and damage state, the mean threshold PGA, standard deviation, and lognormal dispersion were evaluated, including the additional 0.4 uncertainty term used in the study. The available nonlinear results do not specify whether they correspond to the X or Y direction, so no directional label is assigned to the fragility curves. The Barpark/Barpak-labelled record could not be independently verified; consequently, the fragility assessment is treated as preliminary.
+
+The inter-storey-drift limits used to interpret the performance levels are summarized in Table~\ref{tab:legacy_isdr_performance_bands}. The FEMA performance-level terminology provides the general interpretation framework, while the numerical ISDR limits are those adopted for this study rather than direct FEMA~356 component acceptance criteria \cite{fema356}.
+
+\begin{table}[htbp]
+\caption{Inter-storey drift limits for the adopted performance levels}
+\label{tab:legacy_isdr_performance_bands}
+\centering
+\begin{tabular}{lc}
+\hline\hline
+Performance level & Maximum ISDR \\ \hline
+Operational (OP) & $<0.5\%$ \\
+Immediate Occupancy (IO) & $>0.5\%$ to $\leq 1.0\%$ \\
+Damage control (DS) & $>1.0\%$ to $\leq 2.0\%$ \\
+Life safety (LS) & $>2.0\%$ to $2.5\%$ \\
+Collapse Prevention (CP) & $>2.5\%$ \\ \hline\hline
+\end{tabular}
+\end{table}
+
+For each ground motion, threshold PGA values were combined to obtain a mean threshold and a lognormal exceedance relationship,
+\[
+P[DS\ge ds\mid PGA] = \Phi\left(\frac{\ln(PGA)-\ln(\theta_{ds})}{\beta_{ds}}\right),
+\]
+where $\theta_{ds}$ is the mean threshold PGA for the damage state and $\beta_{ds}$ is the adopted dispersion. The dispersion calculation included an additional 0.4 uncertainty term. Threshold PGA values above 0.5~$g$ are interpreted as extrapolated estimates beyond the directly analysed intensity range.
+
+\section{Verification of Analysis Results}
+Before preparing the tables and figures, the analysis results were checked for the correct model, load case, response direction, units, and consistency among the four support conditions. Results that could not be confirmed from the available analyses were not used to support the engineering conclusions. The same checking procedure was applied to the ETABS, SAP2000, and nonlinear time-history results.
+
+\section{Methodological Limitations}
+The study is limited to one hospital prototype and the four support conditions considered. The foundation spring idealization does not replace a site-specific geotechnical investigation. The available nonlinear time-history results do not specify the analysed response direction, and the Barpark/Barpak-labelled record could not be independently verified; the fragility results are therefore treated as preliminary. Some mean damage-state threshold PGAs exceed the directly analysed 0.1--0.5~$g$ range and are interpreted as extrapolated estimates. The FEMA~356 performance points were not independently recalculated because the intermediate target-displacement coefficient sheet was unavailable. For the 2015 Gorkha earthquake record, only the selected acceleration component with PGA 0.0876~$g$ and a 0.01~s interval was used for the PGA comparison and acceleration time history. The pushover curves are shown only over the displacement range reached in each analysis.
