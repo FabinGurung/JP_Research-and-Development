@@ -154,5 +154,46 @@
     "academic_validation": "NOT_INDEPENDENTLY_VERIFIED",
     "permanent_current_unchanged": true,
     "drive_source_readback": "ID_SIZE_PARENT_NAME_VERIFIED; RAW_PROVIDER_SHA_NOT_REHASHED"
-  }
+  },
+  "seq052_researcher_directed_release": {
+    "release": "LATEX_SEQ052",
+    "date_npt": "2026-10-29",
+    "status": "NEW_SEPARATE_FULL_95PAGE_MANUSCRIPT_PDF_ZIP_PROVIDER_READBACK_PASS",
+    "pdf_drive_id": "1_WDQgN8TT83XFCJ_rYFoYgCf_xYV3ztj",
+    "pdf_bytes": 14442953,
+    "pdf_sha256_local": "d976a99b3011be4a624c808cbd703134c31f6dffe9e3f20dbe95f74648c5b854",
+    "source_zip_drive_id": "1qn1m6Jk3O7p6qSkH0HzLSS9GZZi3xNJF",
+    "source_zip_bytes": 78261871,
+    "source_zip_entries": 259,
+    "source_zip_sha256_local": "599125d3608cc0be7435dc7860364dcad95263cad502639233ceb4c957679c4f",
+    "original_docx_file_ids": [
+      "1DgMwYfofroSV1taAFTyoO2mjI0rKomLj",
+      "1fCXrScKdv_eSNGXR9i3yM58jfy5RvLY6"
+    ],
+    "originals_folder_id": "1NrHJgibcEuUQgAj74OOlW9jtp2FSe9Xk",
+    "release_folder_id": "1F8AGHrVuVYyC5nyyDObiXUq_pB0dLX2d",
+    "original_seq051_preserved": true,
+    "gplus4_real_hospital": true,
+    "push_over_deleted_from_active_manuscript": true,
+    "source_modified_tex_files": 13,
+    "source_plots_retained": 32,
+    "complete_Block5_springs_from_small_DOCX": true,
+    "table35_four_isdr_study_bands": true,
+    "bibtex8_regenerated": true,
+    "technical_qa": {
+      "pages": 95,
+      "A4": true,
+      "blank_pages": 0,
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "overfull_boxes": 0,
+      "mentions_pushover": 0,
+      "mentions_Gplus5": 0
+    },
+    "scientific_caveat": "Physical ETABS/model provenance and recalculated four-level fragility probabilities not independently established.",
+    "original_stable_current_pdf_id_unchanged": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "audit_doc_id": "1l4tMJoOV8BSDTur5Ay27GQ7XNboHD9Yb2D2p1ibopXk",
+    "provider_readback": "PDF/ZIP ID_TITLE_SIZE_PARENT verified; exact upload byte hash not independently rehashed"
+  },
+  "latest_separately_compiled_manuscript": "LATEX_SEQ052"
 }

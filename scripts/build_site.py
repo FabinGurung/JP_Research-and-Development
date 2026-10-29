@@ -170,6 +170,10 @@ def main():
             rows.append(("Technical QA PDF — SEQ049 Build02 (NOT CURRENT)", drive["qa_build02_pdf_drive_id"]))
         if drive.get("qa_build02_source_zip_drive_id"):
             rows.append(("Technical QA source ZIP — Build02 (NOT NEW SCIENCE)", drive["qa_build02_source_zip_drive_id"]))
+        if drive.get("seq052_full_compiled_pdf_drive_id"):
+            rows.insert(0, ("NEWEST thesis PDF — LATEX_SEQ052 (95 pages, source-reported)", drive["seq052_full_compiled_pdf_drive_id"]))
+        if drive.get("seq052_complete_latex_zip_drive_id"):
+            rows.insert(1, ("LATEX_SEQ052 complete reproducible source ZIP", drive["seq052_complete_latex_zip_drive_id"]))
         links="".join(f'<div>{esc(label)}</div><div>{f"""<a href="{drive_url(fid)}">Open Drive file</a>""" if fid else """<span class="badge">ON HOLD</span>"""}</div>' for label,fid in rows)
         body=f'''<main class="wrap hero"><div class="eyebrow">{esc(r["researcher_id"])}</div><h1>{esc(r["display_name"])}</h1><p><span class="badge">{esc(status_label)}</span></p><div class="notice">{esc(notice_text)}</div><section class="section"><h2>Topic</h2><div class="kvs"><div>Title</div><div>{esc(title_value)}</div><div>Short name</div><div>{esc(r.get("topic_short_name") or "ON HOLD")}</div></div></section><section class="section"><h2>Version control and source</h2><p>Git branches are full-repository commits; these researcher-named refs are compatibility/work lanes. Public-safe website and tool code is versioned in the common <a href="https://github.com/FabinGurung/JP_Research-and-Development/tree/main">GitHub main repository</a>. Original thesis source packages and compiled outputs remain in Google Drive until an explicit source-code admission/migration is approved.</p></section><section class="section"><h2>Research lanes</h2><div class="lanes">{lane_html}</div></section>{website_section}{debt_section}<section class="section"><h2>Google Drive outputs</h2><div class="kvs">{links}</div></section></main>'''
         # Scoped Git source link appears only when explicitly registered for a researcher.
