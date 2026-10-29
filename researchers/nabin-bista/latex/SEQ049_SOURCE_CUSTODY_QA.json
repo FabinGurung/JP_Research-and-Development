@@ -1,0 +1,57 @@
+{
+  "audit_id": "NABIN-SEQ049-SOURCE-QA-20261029",
+  "researcher_id": "RSH-003",
+  "status": "OFFLINE_SOURCE_RECOVERY_PASS__DRIVE_UPLOAD_AND_CLEAN_BIBTEX_HOLD",
+  "verified_at_npt": "2026-10-29",
+  "current_pdf": {
+    "drive_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "sha256": "8f82830a97600cc6aa069e01405f1ba3f29b72a847bd8f719f87d46744dd02a6",
+    "physical_pages": 69
+  },
+  "existing_seq049_zip": {
+    "drive_id": "1noTWs5mOFjn10-i3rVSBbWlex1C12CJB",
+    "sha256": "99bed6893ddf0115cfc738ce7b5213794ba3f032b86750e0ca3537f36363e725",
+    "entries": 235
+  },
+  "seq046_source": {
+    "drive_id": "1099gKcq9UGALMpOkfKIHFboaoKNsC4Bm"
+  },
+  "recovered_assets": [
+    {
+      "path": "figures/ch3/hospital_2d_plan.pdf",
+      "sha256": "a4ec6bd8aa016418c8b07b4a509624081f12f36c6baccb26486b17f40d6b0fa1"
+    },
+    {
+      "path": "figures/ch3/research_workflow_seq44.pdf",
+      "sha256": "8f76e8736e9ac08cd7ddfe16c0d4dc0011cf0ee0cc651cf98973e0d786c93403"
+    }
+  ],
+  "repaired_archive": {
+    "local_filename": "NABIN_BISTA__LATEX_SEQ049__SOURCE_ASSET_REPAIR_ONLY__NO_MANUSCRIPT_CHANGE.zip",
+    "sha256": "a669bfbab87416c58743589e5abbf1b77787a34c24a763c813353414e16bdadf",
+    "entries": 237,
+    "original_entries_unchanged": true,
+    "google_drive_id": null,
+    "upload_status": "NOT_UPLOADED"
+  },
+  "offline_build": {
+    "xelatex_pages_with_existing_bbl": 69,
+    "bibliography_present": true,
+    "unresolved_citations": false,
+    "normalized_text_matching_pages": 66,
+    "out_of": 69,
+    "math_encoding_only_pages": [
+      33,
+      34,
+      36
+    ],
+    "original_bibtex_command_available": false,
+    "source_only_not_production_approval": true
+  },
+  "mutations": {
+    "manuscript_text_changed": false,
+    "live_current_pdf_changed": false,
+    "other_researcher_files_changed": false,
+    "shared_latex_tower_changed": false
+  }
+}

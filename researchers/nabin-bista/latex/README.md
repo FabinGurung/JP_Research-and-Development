@@ -14,3 +14,7 @@ Old Drive links and legacy researcher branches remain valid and preserved; see t
 ### Source-admission gate
 
 The corrected Drive archive's `main.tex` is copied exactly to `manuscript/main_SEQ049_original.tex` so Git can preserve the original academic source without treating the legacy file as a shared-style-admitted production entrypoint. The repository's universal source validator requires every **active `main.tex`** to import `pumlsc-shared`. A future authorized template conversion should create the active `main.tex` and validate the full 69-page layout; do not edit the historical original to make the source validator green. The Drive ZIP retains the exact original filename and its full external assets.
+
+## 2026-10-29 source custody and next-release gate
+
+The SEQ049 Drive ZIP omits two referenced PDF figures, now recovered by exact SHA from the preserved SEQ046 ZIP. An additive 237-entry source ZIP tested locally to 69 pages with the existing main.bbl; no Drive upload or new PDF release occurred. See SEQ049_SOURCE_CUSTODY_QA.json and NEXT_RELEASE_READ_FIRST.md. Historical source uses BibTeX (not the shared Biber default); fresh BibTeX compilation is still unverified in this runtime.
