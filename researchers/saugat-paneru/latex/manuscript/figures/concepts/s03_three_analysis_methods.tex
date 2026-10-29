@@ -1,0 +1,41 @@
+% S03 methods visual, 2026-10-29. Original vector concept—not ETABS case data.
+% Panels intentionally omit force/period/capacity numerical ordinates.
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,font=\scriptsize, every node/.style={inner sep=1.5pt}]
+  % three clean panels; use neutral thin strokes for journal/research print
+  \foreach \x in {0,5.0,10.0} {\draw[gray!55,rounded corners=3pt] (\x,0) rectangle ++(4.7,4.5);}
+  \node[font=\footnotesize\bfseries,align=center] at (2.35,4.10) {(a) Equivalent static};
+  \node[font=\footnotesize\bfseries,align=center] at (7.35,4.10) {(b) Response spectrum};
+  \node[font=\footnotesize\bfseries,align=center] at (12.35,4.10) {(c) Nonlinear pushover};
+  % A: three-level idealized frame, conventional equivalent lateral forces grow upwards
+  \draw[thick] (0.82,0.78)--(0.82,3.52) (1.77,0.78)--(1.77,3.52);
+  \foreach \y in {1.25,2.20,3.15} {\draw[thick] (.7,\y)--(1.9,\y);}
+  \draw[very thick] (.48,.75)--(2.08,.75);
+  \draw[->,thick] (1.85,1.25)--(2.58,1.25);
+  \draw[->,thick] (1.85,2.20)--(2.91,2.20);
+  \draw[->,thick] (1.85,3.15)--(3.30,3.15);
+  \node[anchor=west] at (3.05,2.20) {$F_i$};
+  \node[align=center] at (2.35,.34) {Static distribution\\of lateral forces};
+  % B: mode-shape overlay and idealized response spectrum curve, no numeric reading
+  \draw[thick] (5.48,.92)--(5.48,3.31);
+  \draw[gray,dashed] (5.48,1.38)--(5.48,2.75);
+  \draw[thick] (5.48,.92)..controls (5.73,1.7) and (6.15,2.50)..(6.2,3.31);
+  \foreach \y in {1.38,2.24,3.31} {\draw[thin] (5.32,\y)--(6.20,\y);}
+  \draw[->] (6.65,1.05)--(9.22,1.05) node[below left] {$T$};
+  \draw[->] (6.65,1.05)--(6.65,3.30) node[above] {$S_a$};
+  \draw[thick] (6.73,1.15)..controls (7.02,2.90) and (7.20,3.05)..(7.67,2.85)
+    --(8.04,2.85)..controls (8.50,2.40) and (8.75,1.65)..(9.13,1.30);
+  \node at (7.9,.40) {Modal demands combined};
+  % C: nonlinear lateral-force versus roof-displacement conceptual trace
+  \draw[->] (10.60,.97)--(14.30,.97) node[below left] {$\Delta$};
+  \draw[->] (10.60,.97)--(10.60,3.35) node[above] {$V$};
+  \draw[very thick] (10.67,1.05)--(11.80,2.29)..controls (12.45,2.95) and (12.75,3.05)..(13.05,2.94)
+    ..controls (13.52,2.72) and (13.84,2.43)..(14.16,2.24);
+  \fill (12.38,2.72) circle (1.5pt);
+  \node[align=center,anchor=west] at (12.48,3.28) {Illustrative\\capacity};
+  \node at (12.35,.40) {Incremental lateral loading};
+\end{tikzpicture}
+\caption{Conceptual distinction among the equivalent-static, response-spectrum and nonlinear static pushover approaches. The arrows, modal deformation and capacity curve are schematic teaching illustrations, not recorded ETABS response values or code-specific numerical spectra.}
+\label{fig:s03_analysis_methods}
+\end{figure}
