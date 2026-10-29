@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "RSH-003-DISCUSSION-20261029-SIXBLOCK-INTAKE-v001",
+  "researcher_id": "RSH-003",
+  "researcher_slug": "nabin-bista",
+  "record_type": "RESEARCHER_SOURCE_INTAKE_PUBLIC_SAFE_INDEX",
+  "current_state": "PROVIDER_UPLOAD_VERIFIED__DISCUSSION_DOCREV01_POST_VERIFIED__SCIENCE_ADMISSION_HOLD",
+  "date_npt": "2026-10-29",
+  "originals": [
+    {
+      "role": "result_workbooks_and_3D_images",
+      "storage": "RESEARCHER_PRIVATE_GOOGLE_DRIVE_ORIGINAL_SOURCES",
+      "sha256": "c32844ec525745fc03dace9bee87515b793761476c4f2d54cc74f1f865d729e2",
+      "bytes": 29784990
+    },
+    {
+      "role": "submitted_hospital_architectural_plan",
+      "storage": "RESEARCHER_PRIVATE_GOOGLE_DRIVE_ORIGINAL_SOURCES",
+      "sha256": "0a6b050f50dc05e895be0866216d29ac6aaa51aee2d92db6b6eff7038f0c1d5f",
+      "bytes": 495095
+    }
+  ],
+  "inventory": {
+    "non_directory_entries": 74,
+    "xlsx": 67,
+    "png": 6,
+    "txt": 1,
+    "blocks": 6,
+    "workbook_tabs": 228,
+    "workbook_embedded_charts": 36,
+    "zip_crc": "PASS",
+    "known_filename_or_sheet_label_conflicts": 14
+  },
+  "google_docs_version": {
+    "stable_document_id": "PRIVATE_IN_OWNING_DRIVE_AUDIT",
+    "chapter": "DISCUSSION CHAPTER 12",
+    "pre_post_copies": "CREATED_AND_PROVIDER_READ",
+    "revision_contract": "FIXED_CURRENT_ID_PLUS_DOCREV01_PRE_POST",
+    "private_audit": "NABIN_BISTA__20261029__RESULT_PLOTS_PLAN__SOURCE_INTAKE_MANIFEST_AUDIT_v1.0",
+    "native_document_updated_in_place": true,
+    "format_reference_tab_unmodified": true
+  },
+  "authority": {
+    "researcher": "RSH-003",
+    "github": "source_code_and_public_safe_manifest",
+    "google_drive": "originals_science_inputs_and_access_permissions",
+    "google_docs": "private_discussion_validation_ledger",
+    "github_actions": "source_only_ci_until_approved_build_pipeline",
+    "github_pages": "public_safe_status_only",
+    "a7": "memory_wall_platform_responsibilities_and_storage_only_architecture"
+  },
+  "scientific_status": {
+    "block_to_model_mapping": "HOLD",
+    "old_vs_new_thesis_scope": "HOLD",
+    "fragility_direction": "NOT_VERIFIED_BY_FILENAME",
+    "barpark_barpak_provenance": "HOLD",
+    "excel_labels": "14_FLAGS",
+    "numeric_admission": "NOT_GRANTED"
+  },
+  "release_boundary": {
+    "current_latex_release": "LATEX_SEQ049",
+    "candidate_next_release": "LATEX_SEQ050_CONDITIONAL",
+    "current_pdf_mutated": false,
+    "new_pdf_produced": false,
+    "manuscript_prose_modified": false,
+    "science_approval": false,
+    "missing_figures_repair_separate_from_new_intake": true
+  },
+  "next_handoff": "researchers/nabin-bista/latex/prompts/SEQ050_SIX_BLOCK_RESULTS_INTAKE_READ_FIRST.md",
+  "privacy": "PUBLIC_SAFE_METADATA_ONLY; exact original Drive IDs, granular workbook inventory and source imagery retained in private Google Docs/Drive"
+}
