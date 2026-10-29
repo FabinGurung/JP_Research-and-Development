@@ -195,7 +195,7 @@
     "audit_doc_id": "1l4tMJoOV8BSDTur5Ay27GQ7XNboHD9Yb2D2p1ibopXk",
     "provider_readback": "PDF/ZIP ID_TITLE_SIZE_PARENT verified; exact upload byte hash not independently rehashed"
   },
-  "latest_separately_compiled_manuscript": "LATEX_SEQ053",
+  "latest_separately_compiled_manuscript": "LATEX_SEQ054",
   "seq053_research_logic_release": {
     "release_id": "LATEX_SEQ053",
     "date_npt": "2026-10-29",
@@ -239,5 +239,57 @@
     "git_source_strategy": "Private binary research and complete LaTeX source in immutable SHA registered Drive ZIP; repository code/manifest tracks release logic and restoration links.",
     "provider_readback": "ID_NAME_SIZE_PARENT_VERIFIED__NOT_PROVIDER_BYTE_SHA",
     "scientific_scope": "SOURCE_WORKBOOK_STATISTICS_AND_PLOTS_ONLY; NO_CLAIM_OF_INDEPENDENT_ETABS_OR_AS_BUILT_CERTIFICATION"
+  },
+  "seq054_nine_results_sections_release": {
+    "release_id": "LATEX_SEQ054",
+    "date_npt": "2026-10-30",
+    "status": "FULL_77_PAGE_PDF_AND_COMPLETE_SOURCE_ZIP_UPLOADED_AND_PROVIDER_METADATA_VERIFIED",
+    "compiled_pdf_drive_id": "1_QXxxAezFiVKWa1KbFN84rpAqtC4d-DJ",
+    "compiled_pdf_provider_bytes": 9925196,
+    "compiled_pdf_original_local_bytes": 9830715,
+    "compiled_pdf_original_local_sha256": "87ca849e795cafe85f42b239e5c8455fd7805463372a4b305b1fb67dcfb6e2a6",
+    "complete_source_zip_drive_id": "1VVGmN6IaUS2Xws8neHWjxeCHxjZPqxev",
+    "source_zip_bytes": 78649821,
+    "source_zip_entries": 180,
+    "source_zip_local_sha256": "d4dce95555ba8f44064418dd98dd93d5c3006e0d94057e66e6cb86217950e2bb",
+    "original_results_zip_local_sha256": "c32844ec525745fc03dace9bee87515b793761476c4f2d54cc74f1f865d729e2",
+    "drive_folder_id": "14_3KwwfsojLaeWQHJ6oUFGt1NJY1nDbZ",
+    "source_qa_doc_id": "1GfgcclGu34sVc6pVJlfKao408kBCzslRz9PYZK1fMgs",
+    "discussion_doc_id": "1eLsGVmUxMyHx0QKeQv25SiR325c8jy3grfdXmkkz9xk",
+    "parent_audit_doc_id": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+    "chapter4_sections": [
+      "General",
+      "Modal Characteristics",
+      "Response-Spectrum Storey Displacement",
+      "Response-Spectrum Inter-Storey Drift",
+      "Base Shear and Storey Shear",
+      "Foundation Settlement and Vertical Reaction",
+      "Beam and Column Force Envelopes",
+      "Preliminary X-Direction Fragility Assessment",
+      "Overall Discussion"
+    ],
+    "extracted_block_support_response_records": 240,
+    "member_force_extrema_source_records": 144,
+    "response_spectrum_cases": "RS_x FX,RS_Y FY; X/Y story displacement and drift; RSM story shear",
+    "gravity_combination": "1.2DL + 1.5LL; joint Uz,base FZ, beam V2/M3,column P/V2/M2/M3",
+    "source_mismatches": "BLOCK3 soft RSM story header says BLOCK2; BLOCK4 four RSM headers say BLOCK1; BLOCK2 shear filename says B3; BLOCK3 medium/soft settlement sheets say B2",
+    "flagged_values": "BLOCK2 fixed settlement |Uz|0.552mm; BLOCK3 fixed FZ differs; BLOCK5 hard FZ source zero",
+    "fragility": "ORIGINAL_X_FILE_NAME_ONLY; 24 source block/support plots; 4 misfiled duplicates excluded; not refitted to new ISDR",
+    "qa": {
+      "pdf_pages": 77,
+      "a4_pages": 77,
+      "blank_pages": 0,
+      "clipped_text_blocks": 0,
+      "chapter4_section_count": 9,
+      "source_plot_png_files": 32,
+      "latex_fatal_errors": 0,
+      "undefined_citations_or_references": 0,
+      "overfull_hboxes": 0,
+      "source_zip_crc_pass": true
+    },
+    "scientific_boundary": "SOURCE_REPORTED_ONLY_NO_INDEPENDENT_ETABS_AS_BUILT_CERTIFICATION",
+    "older_seq053_pdf_preserved": "1rZuTXvyx6llElRg35yFou1gucl66POyI",
+    "historic_current_pdf_unchanged": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "provider_readback": "PARENT_ID_NAME_SIZE_VERIFIED; PROVIDER_DOWNLOAD_SHA_AND_RENDER_PARITY_NOT_YET_INDEPENDENTLY_VERIFIED"
   }
 }

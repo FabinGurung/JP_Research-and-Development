@@ -93,7 +93,9 @@
         "seq052_full_compiled_pdf_drive_id": "1_WDQgN8TT83XFCJ_rYFoYgCf_xYV3ztj",
         "seq052_complete_latex_zip_drive_id": "1qn1m6Jk3O7p6qSkH0HzLSS9GZZi3xNJF",
         "seq053_full_compiled_pdf_drive_id": "1rZuTXvyx6llElRg35yFou1gucl66POyI",
-        "seq053_complete_latex_zip_drive_id": "1xHZp-Oxk-sA6QjJLN0a7fApp3AKpqbSA"
+        "seq053_complete_latex_zip_drive_id": "1xHZp-Oxk-sA6QjJLN0a7fApp3AKpqbSA",
+        "seq054_full_compiled_pdf_drive_id": "1_QXxxAezFiVKWa1KbFN84rpAqtC4d-DJ",
+        "seq054_complete_latex_zip_drive_id": "1VVGmN6IaUS2Xws8neHWjxeCHxjZPqxev"
       },
       "lanes": {
         "discussion": {
@@ -109,9 +111,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Nabin's newest separately compiled academic manuscript is LATEX_SEQ053 (69 pages). A full logic QA rebuilt Chapter4 around the 24 comparable block/support modal periods, 24 both-horizontal-axis 90-percent modal mass checks, 32 distinct source charts, and the researcher-adopted 4-band ISDR classification. Former SEQ052 one-prototype results are intact in the private audit source archive and no longer misattributed to the six-block hospital. Historical CURRENT Drive ID unchanged; independent ETABS or as-built certification not claimed.",
+      "public_note": "Newest separately compiled full thesis LATEX_SEQ054: 77 pages, the nine researcher-specified Chapter 4 sections. From 67 source workbooks, 24 block/support cases have response-spectrum displacement/drift/base/storey shear summaries; gravity-combination foundation reactions and 144 member-force envelope values are separately labelled. The 32 existing plot figures are preserved and preliminary X-labelled fragility remains source-limited. Source block-label anomalies are documented without silently misassigning cases. No independent ETABS certification. Previous permanent CURRENT PDF slot remains preserved.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "LATEX_SEQ053_69_PAGE_EVIDENCE_ALIGNED_FULL_THESIS_COMPILED__SEQ052_AND_HISTORICAL_CURRENT_PRESERVED",
+      "git_source_status": "LATEX_SEQ054_77P_NINE_REQUIRED_RESULTS_SECTIONS_SOURCE_EXTRACTED__HISTORIC_CURRENT_PRESERVED",
       "next_handoff_prompt_path": "researchers/nabin-bista/latex/prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md",
       "open_task_issue_numbers": [
         51,
