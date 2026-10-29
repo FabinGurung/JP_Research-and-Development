@@ -18,3 +18,7 @@ The corrected Drive archive's `main.tex` is copied exactly to `manuscript/main_S
 ## 2026-10-29 source custody and next-release gate
 
 The SEQ049 Drive ZIP omits two referenced PDF figures, now recovered by exact SHA from the preserved SEQ046 ZIP. An additive 237-entry source ZIP tested locally to 69 pages with the existing main.bbl; no Drive upload or new PDF release occurred. See SEQ049_SOURCE_CUSTODY_QA.json and NEXT_RELEASE_READ_FIRST.md. Historical source uses BibTeX (not the shared Biber default); fresh BibTeX compilation is still unverified in this runtime.
+
+## 2026-10-29 Submission02: six-block dimensions, springs and updated model figures
+
+The new original DOCX + 7z are preserved in Nabin's Drive and indexed as a second October submission. The earlier 67-workbook plots ZIP and 495KB plan are NOT in the 69-page LATEX_SEQ049 manuscript, and the new 7z's Block 5/6 images are changed from their prior variants. Source custody, duplicates, and obscured Block5 spring cells are explicit HOLDs. [Read full two-batch admission and full-figure completeness prompt](prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md). Old source branches and links remain intact. The historical status sections above remain as event-time audit history; the latest Build02 upload and 69-page QA are documented in `audits/SEQ049_FULLQA_BUILD02_READ_FIRST.md`.

@@ -665,6 +665,45 @@
         }
       ],
       "close_when": "Explicit shared-template port and independent 69-page baseline visual/bibliography comparison pass on next authorized release; historical source preserved."
+    },
+    {
+      "debt_id": "DEBT-NABIN-005",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista",
+      "category": "BLOCK_MODEL_AND_SCOPED_SOURCE_ADMISSION",
+      "severity": "HIGH",
+      "status": "HOLD",
+      "title": "Reconcile six submitted hospital blocks with SEQ049 single G+5 prototype",
+      "description": "Establish architectural grids, six original ETABS model references, storeys, support/diaphragm/separation constraints, producing software and load cases. Preserve old Oct plots ZIP and plan; do not replace Table 3.1 or Chapter 3 before identity evidence.",
+      "close_when": "Six blocks mapped to verified ETABS files and old prototype; accepted scientific change map signed off with source-cell/model references.",
+      "opened_npt": "2026-10-29"
+    },
+    {
+      "debt_id": "DEBT-NABIN-006",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista",
+      "category": "SPRING_TABLE_COMPLETENESS",
+      "severity": "HIGH",
+      "status": "HOLD",
+      "title": "Resolve Block 5 masked KX/KY/KZ/rotational spring cells",
+      "description": "New DOCX Table 3.4 renders seven Block 5 values as literal #########. The other five blocks' spring vectors are readable but unit conventions, footing geometry, assignment paths and actual ETABS loads must be reconciled. Do not infer Block 5 missing values from similar Block 6 values.",
+      "close_when": "Obtain untruncated source model/table, trace all 18 block-soil cases and 6 DOF each to input records, check formula/unit and coordinate sign, and validate full row-level comparison.",
+      "opened_npt": "2026-10-29"
+    },
+    {
+      "debt_id": "DEBT-NABIN-007",
+      "scope": "RESEARCHER",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista",
+      "category": "SOURCE_TO_LATEX_TO_PDF_FIGURE_COMPLETENESS",
+      "severity": "HIGH",
+      "status": "HOLD",
+      "title": "Carry both October source batches into an approved new LaTeX/PDF without lost figures",
+      "description": "Earlier 67-workbook plots ZIP, 12 motion names, six old model images and plan are not in the released single-prototype SEQ049 thesis. New 7z contains the identical plan, four identical block views and revised Block 5/6 variants. Source ZIP Build02 contains only one old prototype diagram and one old 3D JPEG. Both batches must be inventoried in a staged candidate and each admitted output page/figure/table mapped before release.",
+      "close_when": "For every approved new item log original SHA, extraction/derived code, candidate path, exact LaTeX includegraphics/table call, caption/label, final PDF page, visual QA result, and PR/Drive evidence; fail production if any admitted asset is missing.",
+      "opened_npt": "2026-10-29"
     }
   ]
 }

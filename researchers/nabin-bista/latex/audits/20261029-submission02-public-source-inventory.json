@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "intake_date_npt": "2026-10-29",
+  "record_id": "NABIN-SUBMISSION02-PUBLIC-INTAKE-v001",
+  "status": "ORIGINALS_IN_DRIVE__DISCUSSION_REV03__SCIENTIFIC_ADMISSION_HOLD",
+  "scope": "PUBLIC_SAFE_METADATA_ONLY__NO_PRIVATE_DRIVE_FILE_IDS",
+  "originals": [
+    {
+      "file": "Update_nabin bista .docx",
+      "bytes": 24159,
+      "sha256": "a5e6eb305005ea0ba62ede763b3abe421a8169d045a2d1ed2c6fd2ef7ba1cac3",
+      "kind": "SOURCE_MEMBER_AND_SPRING_INPUT_TABLES"
+    },
+    {
+      "file": "2D PALN AND 3D IMAGE_nabin bista .7z",
+      "bytes": 5013432,
+      "sha256": "5a08ddd99b453fff4f4add010ab80f65b93bc4d6d4db934154eb4a898556f554",
+      "kind": "ARCHITECTURAL_PDF_AND_SIX_BLOCK_3D_IMAGES"
+    }
+  ],
+  "archive": {
+    "entries": 7,
+    "pdf": 1,
+    "png": 6,
+    "plan_same_sha_as_previous": true,
+    "image_blocks_1_to_4_identical_to_previous": true,
+    "image_blocks_5_and_6_changed": true,
+    "new_image_sha256": {
+      "block5": "88ce64a92ce7764cd825656c965ee46751e0ddd28fa9c93021376adee96fec2b",
+      "block6": "8b6c2902d738c77e1af375913855ddeb35a1d1d9d67f857adb0dc0d8184aacb9"
+    },
+    "plan_sha256": "0a6b050f50dc05e895be0866216d29ac6aaa51aee2d92db6b6eff7038f0c1d5f"
+  },
+  "docx": {
+    "member_dimension_blocks": 6,
+    "spring_blocks": 6,
+    "soil_conditions": [
+      "HARD",
+      "MEDIUM",
+      "SOFT"
+    ],
+    "spring_dof": [
+      "KX",
+      "KY",
+      "KZ",
+      "KthetaX",
+      "KthetaY",
+      "Kt"
+    ],
+    "block1_2_identical_spring_vectors": true,
+    "block3_4_identical_spring_vectors": true,
+    "block5_obscured_cells": 7,
+    "block6_full_readable": true
+  },
+  "prior_evidence": {
+    "result_workbooks": 67,
+    "tabs": 228,
+    "embedded_charts": 36,
+    "old_model_pngs": 6,
+    "prior_ground_motion_names": 12,
+    "fragility_label_conflicts": 14
+  },
+  "current_document": {
+    "release": "LATEX_SEQ049",
+    "pages": 69,
+    "old_prototype_plan_present": true,
+    "october_six_block_plan_present": false,
+    "all_six_october_model_views_present": false,
+    "october_six_block_results_present": false
+  },
+  "docs": {
+    "discussion_updated": "CHAPTER_14_DOCREV03",
+    "audit_updated": "v0.5",
+    "source_originals": "PRIVATE_DRIVE_ONLY",
+    "complete_private_manifest": "NABIN_BISTA__SUBMISSION02__PRIVATE_SOURCE_MANIFEST_20261029.json"
+  },
+  "hard_gates": [
+    "MODEL_IDENTITY",
+    "SPRING_BLOCK5_UNMASKED",
+    "DAMAGE_STATE_MAPPINGS",
+    "RECORDS_AND_DIRECTION",
+    "FIGURE_INCLUSION_MATRIX",
+    "BIBTEX_CITATION_POLICY",
+    "ALL_PAGE_RENDER_QA"
+  ],
+  "pending_seq": "LATEX_SEQ050_CANDIDATE_ONLY_AFTER_SCIENTIFIC_ADMISSION",
+  "changes_to_current_pdf": 0
+}

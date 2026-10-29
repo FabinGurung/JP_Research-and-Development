@@ -103,9 +103,9 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Current academic thesis remains LATEX_SEQ049 (69 pages, September 2026). Separately archived technical QA Build02 PDF matches all 69 CURRENT pages visually and textually; its source ZIP has 240 entries. BibTeX regeneration of the historical bibliography drops an uncited dongol2020 item and remains scholarly review HOLD. New six-block data not admitted and LATEX_SEQ050 not released.",
+      "public_note": "LATEX_SEQ049 is still the sole CURRENT 69-page thesis (September 2026). Two October six-block source batches are preserved and inventoried in Nabin's private Drive. Submission02 adds member/spring tables and revised Block 5/6 3D visual variants; all 7 archived files and duplicate checks documented in the Discussion Doc. Science/complete figure inclusion remains HOLD. Build02 PDF is technical parity only; do not claim a LATEX_SEQ050 thesis release.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "LATEX_SEQ049_CODE_ON_MAIN__QA_BUILD02_69_PAGE_PIXEL_PARITY_PASS__SCIENTIFIC_SEQ050_HOLD"
+      "git_source_status": "LATEX_SEQ049_BASELINE_PRESERVED__OCT29_SUBMISSIONS_01_02_INTAKE_VERIFIED__NEW_LATEX_SEQ050_SCIENCE_HOLD"
     },
     {
       "researcher_id": "RSH-004",
