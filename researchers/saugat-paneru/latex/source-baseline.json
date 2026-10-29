@@ -266,7 +266,33 @@
       "source_only_not_current": false,
       "no_new_science_no_m2_mutation": true
     },
-    "previous_production_status": "SCIENTIFIC_CP114_PRESERVED__PRODUCTION_FORMAT_GIT_V2_4_PROMOTED_20261020"
+    "previous_production_status": "SCIENTIFIC_CP114_PRESERVED__PRODUCTION_FORMAT_GIT_V2_4_PROMOTED_20261020",
+    "discussion_v025_s03_candidate": {
+      "status": "UNMERGED_QA_CANDIDATE__NOT_CURRENT",
+      "date": "2026-10-29",
+      "source_pre_main": "29726a94b408b4093927bcc31c379b0069e56341",
+      "branch": "saugat/disc-v025-s03-m4-source-candidate-20261029",
+      "discussion_version": "DISC-SEQ-025",
+      "source_doc_id": "1lqtdr9mpvWC8Frc1--iiMVKfFqVVzvX7",
+      "supervisor_7_item_ledger": "qa/DISC_V025_S03_SEVEN_ITEM_M4_ADMISSION_CANDIDATE_20261029.json",
+      "compiled_pdf_drive_id": "1gEoUHO50ZD3URRMJQpIR1F5MPPKP-2CJ",
+      "compiled_pdf_sha256": "e48c58788ea5047f782efba51b175b2b9f77a7e127b6c7c38bdea8ad82ad9088",
+      "compiled_pages": 116,
+      "full_source_drive_id": "1lHbTW2bGo0nfPSXgrcpouApBPfy_HdOy",
+      "full_source_sha256": "d37b39d519ff3481656527b2b8d02c066e7c6cc1449e3651a2667de313e133f8",
+      "provider_readback": "PASS_BOTH",
+      "science": "CP114_UNCHANGED",
+      "m3_current": "CP114-GIT-v2.4-DISC-V024-S02-20261021",
+      "original_research_assets_preserved": 143,
+      "original_image_placements_preserved": 81,
+      "shared_style_blob": "6fb77b6f09773e29bd1159a4dc4ec2d7f773aa06",
+      "co_supervisor_verification": "BLOCKED",
+      "researcher_voice_approval": "REQUIRES_HUMAN_REVIEW",
+      "format_144": "OPEN_NOT_CERTIFIED",
+      "promotion": "NO",
+      "release_tag": "NO",
+      "change_register": "RD-LTX-CHG-113"
+    }
   },
   "debt": {
     "scientific_provenance": "CP114_ADMITTED_AS_IS__NOT_A_SOURCE_MIGRATION_BLOCKER",
