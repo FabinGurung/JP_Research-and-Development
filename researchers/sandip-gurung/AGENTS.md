@@ -15,3 +15,10 @@ Inherit the repository root `AGENTS.md`, `docs/MEMORY_WALL.md`, `docs/RESEARCHER
 ## Evidence-first execution
 
 Follow `docs/RESEARCHER_ENGINE_READ_FIRST.md` for all owner-specific Discussion, LaTeX and Presentation work. Ground every new scientific claim in Sandip's verified own-source pages or code, keep provenance and limitations attached, and do not claim that storage or successful PDF compilation is scientific acceptance.
+
+## Live owner working records
+
+- Existing Discussion Google Doc (keep stable ID): https://docs.google.com/document/d/1wScw2xkYyQngfZ-Ji72ux9IA_iBem3LAg_dZtuOFQNE/edit
+- Existing internal scientific/format audit Google Doc (keep stable ID): https://docs.google.com/document/d/1eKFQTFW1h9aWhCUAtsWTvyh-MbGjcy4z8bKNxFn38fI/edit
+- DOCX/PDF byte custody verified 2026-10-30; findings and pre-LaTeX holds are append-only in that audit. See `researchers/sandip-gurung/artifacts.json`.
+- Do not replace a registered Drive file or change manuscript CURRENT merely because its raw SHA matches: scientific acceptance, exact-font shared-style compilation and every-page visual QA remain separate.
