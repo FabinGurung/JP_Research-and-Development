@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/20 v2.4 opt-in 3x cover logo and build-month metadata]
+\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.5 opt-in TOC, equation-index and figure-name helpers]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -112,3 +112,36 @@
 % the build clock; archival/final-approved submission dates may stay pinned.
 \newcommand{\PUCurrentMonthYear}{%
   \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi, \number\year}
+
+% RD-LTX-CHG-117: Opt-in, not forced on existing historical researchers.
+% The researcher must still verify institutional formatting/pagination after selecting these helpers.
+\makeatletter
+\newcommand{\PUApplyDotlessTOC}{%
+  \@ifpackageloaded{tocloft}{%
+    \renewcommand{\cftchapleader}{\hfill}%
+    \renewcommand{\cftsecleader}{\hfill}%
+    \renewcommand{\cftsubsecleader}{\hfill}%
+  }{\PackageError{pumlsc-shared}{Dotless TOC needs tocloft}{Load tocloft in the owner document first.}}}
+}
+\newcommand{\PUApplyFullFigureListLabels}{%
+  \@ifpackageloaded{tocloft}{%
+    \renewcommand{\cftfigpresnum}{Figure~}%
+    \setlength{\cftfignumwidth}{7em}%
+  }{\PackageError{pumlsc-shared}{Full Figure labels need tocloft}{Load tocloft.}}}
+}
+\newcommand{\PUApplyWordedEquationTags}{%
+  \@ifpackageloaded{amsmath}{%
+    \renewcommand{\tagform@}[1]{\maketag@@@{(Equation~##1)}}%
+  }{\PackageError{pumlsc-shared}{Worded equation labels need amsmath}{Load amsmath.}}}
+}
+\newcommand{\PUEnableEquationList}{%
+  \@ifpackageloaded{tocloft}{%
+    \newlistof{puequation}{loe}{List of Equations}%
+    \cftsetindents{puequation}{0pt}{7em}%
+    \renewcommand{\cftpuequationpresnum}{Equation~}%
+    \renewcommand{\cftpuequationleader}{\hfill}%
+  }{\PackageError{pumlsc-shared}{Equation list needs tocloft}{Load tocloft.}}}
+}
+\newcommand{\PURegisterEquationEntry}[1]{%
+  \addcontentsline{loe}{puequation}{\protect\numberline{\theequation}#1}}
+\makeatother
