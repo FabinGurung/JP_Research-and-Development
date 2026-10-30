@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "sequence": "LATEX_SEQ057",
+  "revision": "R1",
+  "status": "REVIEW_ONLY__PDF_SOURCE_IN_DRIVE__GOOGLE_DOC_PARITY_HOLD",
+  "pdf": {
+    "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "bytes": 12798546,
+    "pages": 95,
+    "local_sha256": "feb93573a2afe2c2ef36373da69f68c8603101180d93fc0712b7a82d66c7a1f9"
+  },
+  "zip": {
+    "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "bytes": 77709588,
+    "entries": 245,
+    "local_sha256": "ecb61ba5db32ae80cd3253a4ea41890efc2204240aa2603017fa23b9268a25e1"
+  },
+  "qa_drive_id": "1Xwfy2SZzsizJb3bPM84jGzMzwZIEp7Bf",
+  "native_doc": {
+    "drive_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+    "editable": true,
+    "all_figure_equation_table_page_parity": false
+  },
+  "shared_style": {
+    "repository": "FabinGurung/JP_Research-and-Development",
+    "path": "controls/latex/template/pumlsc-shared.sty",
+    "merged_sha": "d0a8c588d25edf11d1de104a07a21be1ab59ff7e",
+    "version": "2.5.0",
+    "consumption": "CONTROL_PINNED_ONLY__HISTORIC_MAIN_TEX_FULL_STYLE_PORT_NOT_DONE"
+  },
+  "font": {
+    "exact_tnr_in_pdf": true,
+    "private_drive_folder_id": "1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv",
+    "licensed_font_binaries_public": false
+  },
+  "changes": [
+    "Block 1/2 displacement and drift charts",
+    "Methodology flowchart",
+    "Earthquake PGA and response spectra",
+    "Section 4.8 heading changed",
+    "Numeric-only bold title-page registration",
+    "Dotless TOC",
+    "Worded equation numbers and equation list",
+    "Full Figure labels",
+    "Researcher-facing editorial refinements"
+  ],
+  "release_gates": {
+    "technical_build": "PASS_LOCAL",
+    "drive_metadata": "PASS",
+    "binary_remote_sha": "NOT_CHECKED",
+    "native_doc_parity": "HOLD",
+    "all_page_visual_qa": "NEXT_RUN",
+    "scientific_approval": "NOT_GIVEN",
+    "stable_current": "UNCHANGED"
+  }
+}
