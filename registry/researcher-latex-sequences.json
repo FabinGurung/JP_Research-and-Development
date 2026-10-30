@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "id": "RD-RESEARCHER-LATEX-SEQUENCE-REGISTER-001",
-  "status": "IMPLEMENTATION_CANDIDATE__NOT_YET_ACTIVE",
+  "status": "ACTIVE_POLICY__AUTOMATION_PENDING_LIVE_GITHUB_ACTION_VERIFICATION",
   "authority": "docs/MEMORY_WALL.md",
   "scope": "researcher-scoped latex version numbers only; not scientific CP or global RD-LTX-CHG",
   "branch_pattern": "thesis/<slug>/latex/seqNNN-<topic>",
