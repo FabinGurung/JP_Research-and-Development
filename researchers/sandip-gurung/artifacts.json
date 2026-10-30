@@ -20,5 +20,42 @@
       "pdf_bookmarks": 85,
       "scientific_status": "NOT_REVIEWED"
     }
-  ]
+  ],
+  "drive_raw_byte_readback": {
+    "date": "2026-10-30",
+    "status": "PASS_SHA256_DOCX_AND_PDF",
+    "source_docx_sha256": "2a690d55b921dbcabd05ce9059e9fba1808ca15750204f5de50bad067b601010",
+    "source_docx_bytes": 1048042,
+    "formatted_pdf_sha256": "e733749dbfe5ecc12caf37dd6151e8daade76249542f03faceac9b742fa1f9bf",
+    "formatted_pdf_bytes": 3828415,
+    "method": "Fetched complete raw bytes from registered Google Drive file IDs; computed local SHA-256 and compared with thread-uploaded source and pre-existing Git manifest hashes",
+    "scope": "BINARY_CUSTODY_ONLY__NOT_SCIENTIFIC_OR_FORMAT_CERTIFICATION",
+    "audit_google_doc_id": "1eKFQTFW1h9aWhCUAtsWTvyh-MbGjcy4z8bKNxFn38fI"
+  },
+  "owner_source_inventory": {
+    "docx_paragraphs": 1608,
+    "docx_tables": 26,
+    "docx_inline_shapes": 27,
+    "embedded_media_files": 9,
+    "embedded_chart_xml_objects": 19,
+    "references_listed": 39,
+    "tracked_changes_in_docx": 0,
+    "word_comments_in_docx": 0,
+    "independent_sap2000_model": "NOT_PRESENT_IN_THREAD_ARTIFACTS",
+    "independent_excel_calculation_workbook": "NOT_PRESENT_IN_THREAD_ARTIFACTS",
+    "reference_claim_admission": "NOT_VERIFIED"
+  },
+  "candidate_preflight": {
+    "document_mode": "DOCX_FIRST",
+    "shared_template_relative_path": "controls/latex/template/pumlsc-shared.sty",
+    "shared_template_blob_sha_at_preflight": "6fb77b6f09773e29bd1159a4dc4ec2d7f773aa06",
+    "shared_template_version_at_preflight": "2.4.0",
+    "template_pin_status": "REFERENCE_ONLY__NO_NUMBERED_LATEX_CANDIDATE_OR_RELEASE_PIN",
+    "latex_sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+    "owner_source_verification": "ORIGINAL_DOCX_HASH_VERIFIED__SCIENTIFIC_MODEL_AND_BIBLIOGRAPHY_OPEN",
+    "full_visual_qa": "NOT_EXECUTED",
+    "exact_font_shared_latex_compilation": "NOT_EXECUTED",
+    "scientific_approval": "NOT_ESTABLISHED",
+    "current_promotion": "NOT_PERFORMED"
+  }
 }
