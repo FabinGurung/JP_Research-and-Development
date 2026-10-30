@@ -1,4 +1,4 @@
-# THE SINGLE R&D LATEX CONTROL TOWER — 2.3.0
+# THE SINGLE R&D LATEX CONTROL TOWER — 2.4.0
 
 **There is one canonical operational owner:** [tower.json](tower.json) on R&D `main`. [pumlsc-shared.sty](template/pumlsc-shared.sty) is the one reusable template. Other JSON files in this directory are **subordinate modules of this single tower**, not separate authorities.
 
@@ -76,3 +76,7 @@ Q2: Previous Git main SHA is PRE; one nonforced commit creates POST. Use **annot
 Q3: Admitted manuscript `.tex`, bibliography `.bib` and accompanying machine-readable source belong in the public R&D researcher folder. Build normal scholarly content from verified evidence, without internal machine-control notes in student-facing PDF; no unsupported scientific facts or references.
 
 [**Complete inventory of 144 PU-FMT source rules and gap status**](pu-format-parity-audit.json): SOURCE INVENTORY audited 144/144, real format/font/whole-document production parity is NOT complete; PU-FMT-076 is absent in the Drive v1.13 original.
+
+## Approved Memory Wall & numbered researcher workstreams (2026-10-30)
+
+See [Memory Wall](../../docs/MEMORY_WALL.md) and [template inheritance/version protocol](../../docs/LATEX_TEMPLATE_INHERITANCE_VERSIONING.md). These point to this one tower; they do not create another one. New source branches inherit this exact shared template at their creation commit and pin its blob SHA in a researcher-only version manifest. Proposed global changes use a separate `template/latex/vX.Y.Z` PR, a `GLOBAL_CANDIDATE` amendment ID, source policy checks and independent visual regression before release. A new researcher sequence is NOT a global change-register ID or scientific CP checkpoint. The GitHub Actions reserve workflow defaults to no-write dry-run; unverified baselines fail closed.
