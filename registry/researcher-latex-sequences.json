@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0.0",
+  "id": "RD-RESEARCHER-LATEX-SEQUENCE-REGISTER-001",
+  "status": "IMPLEMENTATION_CANDIDATE__NOT_YET_ACTIVE",
+  "authority": "docs/MEMORY_WALL.md",
+  "scope": "researcher-scoped latex version numbers only; not scientific CP or global RD-LTX-CHG",
+  "branch_pattern": "thesis/<slug>/latex/seqNNN-<topic>",
+  "allocator": "scripts/latex/researcher_sequence.py",
+  "allocation_policy": "GitHub Contents API blob-SHA compare-and-swap against main; conflict requires re-read/retry; no force; zero guessing",
+  "researchers": [
+    {
+      "researcher_id": "RSH-001",
+      "slug": "fabin-gurung",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-002",
+      "slug": "saugat-paneru",
+      "baseline": {
+        "last_historical_sequence": 28,
+        "source_path": "researchers/saugat-paneru/latex/source-baseline.json",
+        "source_ref": "LATEX-SEQ-028",
+        "status": "VERIFIED_CURRENT_REPOSITORY"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-003",
+      "slug": "nabin-bista",
+      "baseline": {
+        "last_historical_sequence": 54,
+        "source_path": "researchers/nabin-bista/latex/releases/SEQ054_NINE_RESULTS_AND_DISCUSSION_SECTIONS_20261030.md",
+        "source_ref": "LATEX_SEQ054",
+        "status": "VERIFIED_CURRENT_REPOSITORY"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-004",
+      "slug": "safal-thapa",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-005",
+      "slug": "shisheer-kc",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-006",
+      "slug": "binay-karki",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-007",
+      "slug": "anil-neupane",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-008",
+      "slug": "rupesh-man-pradhan",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-009",
+      "slug": "krishna-kumar-gupta",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-010",
+      "slug": "safal-dawadi",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    },
+    {
+      "researcher_id": "RSH-011",
+      "slug": "sunil-rana",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
+    }
+  ]
+}
