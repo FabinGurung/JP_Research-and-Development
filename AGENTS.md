@@ -1,5 +1,7 @@
 # JP R&D — agent entrypoint
 
+**MANDATORY R&D READ FIRST:** [Memory Wall](docs/MEMORY_WALL.md) and [LaTeX template inheritance/versioning](docs/LATEX_TEMPLATE_INHERITANCE_VERSIONING.md). Read latest `main` and current researcher Drive source/manifest. For new thesis source versions, prefer the dry-run-first [per-researcher sequence reservation](.github/workflows/latex-reserve-researcher-sequence.yml), pin the exact central template SHA, and keep scientist source paths isolated. Never confuse Git revision, scientific CP, global `RD-LTX-CHG` IDs, or stable Drive PDFs. This governs only this R&D repository; A7 remains a read-only catalogue.
+
 Read the authoritative, public-safe cross-provider bootstrap from **A7** before multi-repository work:
 https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/main/A9_GIT_DRIVE_BOOTSTRAP.json
 
