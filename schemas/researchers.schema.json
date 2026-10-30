@@ -16,8 +16,8 @@
     },
     "researchers": {
       "type": "array",
-      "minItems": 11,
-      "maxItems": 11,
+      "minItems": 12,
+      "maxItems": 12,
       "items": {
         "type": "object",
         "required": [
@@ -33,5 +33,5 @@
       }
     }
   },
-  "description": "All 11 provider-verified researcher identities are registered separately. Safal Dawadi (RSH-010) and Safal Thapa (RSH-004) remain distinct; per-lane QA may remain held."
+  "description": "Twelve separately registered researcher identities, including Sandip Gurung RSH-012 (verified 2026-10-30); historical audit counts remain historical."
 }

@@ -168,6 +168,20 @@
       "drive_deletes": 0,
       "owner_local_registration": "NOT_ATTEMPTED",
       "main_ack": "NOT_ATTEMPTED"
+    },
+    {
+      "researcher_id": "RSH-012",
+      "slug": "sandip-gurung",
+      "root_drive_id": "1u-XXpRtjCYPHMEvHWlEXtrRsKpY9BsAp",
+      "prompt_path": "prompts/researchers/RSH-012__sandip-gurung.md",
+      "state": "AWAITING_OWNER_CHAT_TRIGGER",
+      "user_trigger_observed": false,
+      "drive_moves": 0,
+      "drive_renames": 0,
+      "drive_archives": 0,
+      "drive_deletes": 0,
+      "owner_local_registration": "NOT_ATTEMPTED",
+      "main_ack": "NOT_ATTEMPTED"
     }
   ]
 }

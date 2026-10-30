@@ -6,14 +6,14 @@
   "default_branch": "main",
   "site_url": "https://fabingurung.github.io/JP_Research-and-Development/",
   "source_archive_branch": "archive/pre-researcher-control-portal-v1-20261007",
-  "researcher_count": 11,
-  "lane_count": 33,
-  "researcher_content_status": "VERIFIED_RESEARCHER_RECORDS_11__UNADMITTED_ARTIFACTS_RETAINED_AS_DEBTS",
+  "researcher_count": 12,
+  "lane_count": 36,
+  "researcher_content_status": "12_RESEARCHERS_REGISTERED__RSH012_PDF_DOCX_IN_DRIVE__SCIENTIFIC_APPROVAL_NOT_INFERRED",
   "main_content_rule": "CODE_AND_ADMITTED_MANUSCRIPT_LATEX_BIB_PLUS_MACHINE_CONTROLS",
   "portal_deployment": "GITHUB_PAGES_MAIN_ONLY",
   "validation": "CURRENT_HEAD_REQUIRES_GITHUB_ACTIONS_RUN_READBACK__NEVER_INFER_PDF_CERTIFICATION",
   "branch_count": 106,
-  "researcher_lane_status": "33_ACTIVE_EMPTY_CORE_LANES__SIX_NEW_SAFAL_DAWADI_AND_SUNIL_RANA",
+  "researcher_lane_status": "36_REGISTERED_CORE_LANES__33_HISTORICAL_PLUS_RSH012_3_NEW",
   "website_module_count": 2,
   "website_module_status": "FABIN_AEC_AND_HYDROPOWER_PHD_OPTIONAL_LANES_REGISTERED__HYDROPOWER_PHD_CURRENT_DRIVE_RESEARCH_POINTERS_VERIFIED",
   "archive_ref_status": "ALL_ARCHIVED_REFS_PREFIXED_ARCHIVE_PROVIDER_READBACK_PASS",
@@ -223,7 +223,7 @@
   "researcher_owner_migration_control": "controls/researcher-migration-rules.json",
   "researcher_owner_migration_registry": "registry/researcher-migration-status.json",
   "researcher_owner_prompts": "prompts/researchers/",
-  "researcher_owner_prompts_count": 11,
+  "researcher_owner_prompts_count": 12,
   "researcher_owner_migration_state": "AWAITING_INDIVIDUAL_USER_PASTE__NO_CENTRAL_DRIVE_CHANGES",
   "theme": "LIVING_RESEARCH_LIBRARY_V2_SELF_CONTAINED_WINGED_BOOK",
   "theme_motion": "CSS_ANIMATION__REDUCED_MOTION__USER_PAUSE__VISIBILITY_IDLE",
@@ -257,5 +257,12 @@
   "owner_migration_state": "NOT_TRIGGERED_IN_CENTRAL_UPGRADE",
   "database_migrations": "DEFERRED_BY_USER",
   "drive_migrations": "DEFERRED_BY_USER",
-  "latest_verified_test_boundary": "ACTIONS_TO_BE_READ_BACK_AT_HEAD__CODE_QA_NOT_THESIS_CERTIFICATION"
+  "latest_verified_test_boundary": "ACTIONS_TO_BE_READ_BACK_AT_HEAD__CODE_QA_NOT_THESIS_CERTIFICATION",
+  "sandip_registration_20261030": {
+    "researcher_id": "RSH-012",
+    "project_root_drive_id": "1u-XXpRtjCYPHMEvHWlEXtrRsKpY9BsAp",
+    "working_pdf_drive_id": "1Z-CDLFoYfYQAVeuxhBGokfZyx66VsmBf",
+    "source_docx_drive_id": "1-3NvdWoA0VCyYlIGCQXRYmeUkAF-SM-Y",
+    "scientific_status": "UNREVIEWED"
+  }
 }
