@@ -38,4 +38,16 @@ All displaced source limitations and objective coverage are recorded in the **Go
 
 **Full source build:** 114 A4 pages; XeLaTeX/Biber/xdvipdfmx and Ghostscript `/prepress`; PDF SHA256 `b1d2f286afb1f6c36f0e0dd0f1d50a5121f6a184a20e208ef6b6ca30f7473b7f` (22,257,188 bytes). The original 58 PDF scientific assets in the source manifest match 58/58 byte hashes; all original figures, charts and model records were retained. No blank pages or out-of-page text blocks; no failed source references detected in text preflight. The available build used **Tinos fallback**, not licensed exact Times New Roman; therefore it is a **preview, not university-font-certified production**. Source ZIP SHA256 `f80e0d4649e6b74326e0a7b00e05ac7bf97aaa615fcd8a51812eabd0f467611e` (58,665,222 bytes), ZIP integrity check pass.
 
+
+### M4.2 final additional editorial cleanup and rebuilt preview (supersedes the preceding provisional file hashes)
+
+Further source review removed the redundant "governing available case" column and the internal force-scale-anomaly status note from the EQx storey shear summary (all seven numerical EQx shear values kept). The four-storey failure image paragraph was rewritten as a normal scope-bounded description. The source was rebuilt from the modified LaTeX with two additional stabilized XeLaTeX passes, full xdvipdfmx conversion, and full PDF text preflight. Ghostscript second-pass compression was not completed and must **not** be claimed for this final file.
+
+**Final current candidate downloads (external to Git):**
+- 114-page A4 XeLaTeX Tinos preview PDF, 55,056,416 bytes, SHA256 `81cebc8f0fffbaa6d7f76f21012b183353832297aa09e4be39c8fa4f6fb6eb67`
+- Complete edited LaTeX/source ZIP, 58,665,013 bytes, SHA256 `8e7427b961a5e021d166cb45fd4840b984379f1d45dc6c8ef6e0a550141d3d98`
+- Compared all **143/143** original scientific binary assets to the original Drive M4.1 source archive (58 PDF, 77 PNG, 7 XLSX, 1 JPG): each exact SHA256 byte match.
+- PDF: 114 A4 pages, nonempty selectable text throughout; absent-source whining/status phrases eliminated from chapter source, former Table 4.21 absent, former administrative Section 4.7.3 replaced by "Interpretation of the Comparative Findings".
+- Exact Times New Roman still unavailable in this preview environment; **NOT production-certified**; M4 remains CURRENT.
+
 **Version status:** unmerged review branch; not a new scientific CP, not a reserved `LATEX_SEQ029`, not a promotion of CURRENT, and no claim that 42/42 supervisor evidence gates have been fulfilled. Scientific approvals and exact-TNR production build remain distinct. Shared semantic-policy change is proposed in a **separate** governance branch, not mixed with the Saugat thesis branch.
