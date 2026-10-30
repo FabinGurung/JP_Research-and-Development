@@ -124,6 +124,17 @@ def remote_release_highwater(tree: dict, slug: str) -> int:
     return max(numbers)
 
 
+def verify_remote_releases_reconciled(tree: dict, row: dict) -> None:
+    remote_floor = remote_release_highwater(tree, row["slug"])
+    ledger_floor = max([row["baseline"]["last_historical_sequence"] or 0]
+                       + [x["sequence"] for x in row.get("observed_out_of_band_versions", [])]
+                       + [x["sequence"] for x in row["reservations"]])
+    if remote_floor > ledger_floor:
+        raise RuntimeError(
+            "UNREGISTERED_REMOTE_RELEASE_SEQ_{:03d}__RECONCILE_BEFORE_RESERVING".format(remote_floor)
+        )
+
+
 class Github:
     def __init__(self):
         self.repo = os.environ.get("GITHUB_REPOSITORY", "")
@@ -182,12 +193,7 @@ def reserve(slug: str, topic: str, make_pr: bool) -> None:
         tree, tree_status = gh.api("GET", "/git/trees/" + current_main + "?recursive=1")
         if tree_status != 200:
             raise RuntimeError("CANNOT_VERIFY_CURRENT_MAIN_RELEASE_TREE")
-        remote_floor = remote_release_highwater(tree, slug)
-        ledger_floor = max([row["baseline"]["last_historical_sequence"] or 0]
-                           + [x["sequence"] for x in row.get("observed_out_of_band_versions", [])]
-                           + [x["sequence"] for x in row["reservations"]])
-        if remote_floor > ledger_floor:
-            raise RuntimeError("UNREGISTERED_REMOTE_RELEASE_SEQ_{:03d}__RECONCILE_BEFORE_RESERVING".format(remote_floor))
+        verify_remote_releases_reconciled(tree, row)
         existing = next((x for x in row["reservations"] if x["request_key"] == key), None)
         if existing is not None:
             info = dict(existing)
@@ -293,7 +299,27 @@ def self_test() -> None:
         {"path": "researchers/nabin-bista/latex/releases/SEQ056_EXAMPLE.md", "type": "blob"},
         {"path": "researchers/saugat-paneru/latex/releases/SEQ999_OTHER_RESEARCHER.md", "type": "blob"}]}
     assert remote_release_highwater(mock_tree, "nabin-bista") == 56
+    verify_remote_releases_reconciled(mock_tree, nabin)
     assert remote_release_highwater(mock_tree, "saugat-paneru") == 999
+    stale = {"truncated": False, "tree": mock_tree["tree"] + [
+        {"path": "researchers/nabin-bista/latex/releases/SEQ057_UNREGISTERED.md", "type": "blob"}]}
+    try:
+        verify_remote_releases_reconciled(stale, nabin)
+    except RuntimeError as exc:
+        assert "UNREGISTERED_REMOTE_RELEASE_SEQ_057" in str(exc)
+    else:
+        raise AssertionError("Unregistered existing release must block reservation")
+    contaminated = json.loads(json.dumps(data))
+    bad_row = next(x for x in contaminated["researchers"] if x["slug"] == "nabin-bista")
+    bad_row["reservations"].append({
+        "sequence": 56, "status": "RESERVED", "branch": "thesis/nabin-bista/latex/seq056-illegal"
+    })
+    try:
+        validate(contaminated, registered)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Duplicate Nabin seq056 must fail validation")
     assert remote_release_highwater({"truncated": False, "tree": []}, "nabin-bista") == 0
     try:
         remote_release_highwater({"truncated": True, "tree": []}, "nabin-bista")
