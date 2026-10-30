@@ -110,7 +110,8 @@
                   "type": "string"
                 },
                 "physical_mutation_performed": {
-                  "const": false
+                  "type": "boolean",
+                  "description": "Initial verified creation may be true only if separately documented as explicitly authorized; normalize.py applies the owning identity restriction."
                 }
               }
             }

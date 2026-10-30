@@ -144,6 +144,17 @@
         "status": "BASELINE_VERIFICATION_REQUIRED"
       },
       "reservations": []
+    },
+    {
+      "researcher_id": "RSH-012",
+      "slug": "sandip-gurung",
+      "baseline": {
+        "last_historical_sequence": null,
+        "source_path": null,
+        "source_ref": null,
+        "status": "BASELINE_VERIFICATION_REQUIRED"
+      },
+      "reservations": []
     }
   ],
   "qa": {

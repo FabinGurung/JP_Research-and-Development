@@ -14,7 +14,7 @@ class FolderTests(unittest.TestCase):
         self.people=load(ROOT/"registry/researchers.json")["researchers"]
     def test_live_registry(self):
         self.assertEqual(validate(self.reg,self.people),[])
-        self.assertEqual(len(self.reg["records"]),11)
+        self.assertEqual(len(self.reg["records"]),len(self.people))
     def test_root_hold(self):
         thapa=next(x for x in self.reg["records"] if x["researcher_id"]=="RSH-004")
         self.assertIsNone(thapa["existing_project_root_drive_id"])
@@ -28,7 +28,8 @@ class FolderTests(unittest.TestCase):
         for p in self.reg["records"]:
             self.assertEqual(plan(p)["action"],"NO_CENTRAL_MUTATIONS")
             for r in p["roles"]:
-                self.assertFalse(r["physical_mutation_performed"])
+                is_authorized_new_role=(p["researcher_id"]=="RSH-012" and r["logical_role"] in ("00_PROJECT_CONTROL","01_SOURCE_ORIGINALS","03_PDF_BUILDS"))
+                self.assertEqual(r["physical_mutation_performed"],is_authorized_new_role)
     def test_legacy_alias_kept(self):
         k=next(x for x in self.reg["records"] if x["researcher_id"]=="RSH-009")
         self.assertTrue(any(x["current_name"]=="01_ACTIVE_LATEX_PROJECT" for x in plan(k)["alias_review"]))

@@ -85,7 +85,7 @@
       "slug": "nabin-bista",
       "display_name": "Nabin Bista",
       "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
-      "topic_title": "Seismic Fragility and Soil\u2013Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal",
+      "topic_title": "Seismic Fragility and Soil–Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal",
       "topic_short_name": null,
       "drive": {
         "discussion_google_doc_id": "1eLsGVmUxMyHx0QKeQv25SiR325c8jy3grfdXmkkz9xk",
@@ -127,7 +127,7 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "Latest separately compiled Nabin thesis LATEX_SEQ055 (81 A4 pages). Abstract heading restored; full researcher-style writing revised in Chapters1\u20135. 14 new analytical figures directly chart modal, response-spectrum displacement/drift/base/storey shear, gravity-combination settlement, reaction and beam/column envelopes, alongside 32 earlier source charts. Scientific outlier/source-label provenance remains in the Google Docs audit rather than operational prose inside the thesis. No physical as-built safety certification; old stable CURRENT PDF and prior releases remain preserved.",
+      "public_note": "Latest separately compiled Nabin thesis LATEX_SEQ055 (81 A4 pages). Abstract heading restored; full researcher-style writing revised in Chapters1–5. 14 new analytical figures directly chart modal, response-spectrum displacement/drift/base/storey shear, gravity-combination settlement, reaction and beam/column envelopes, alongside 32 earlier source charts. Scientific outlier/source-label provenance remains in the Google Docs audit rather than operational prose inside the thesis. No physical as-built safety certification; old stable CURRENT PDF and prior releases remain preserved.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
       "git_source_status": "LATEX_SEQ056_TABLE4_6_BLOCK1_BLOCK4_SOURCE_DOCX_CORRECTION_81P_OLD_CURRENT_PRESERVED",
       "next_handoff_prompt_path": "researchers/nabin-bista/latex/prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md",
@@ -209,7 +209,7 @@
           "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
         }
       },
-      "public_note": "CKPT14 is the frozen scientific/document baseline (non-production preview). CKPT15 cumulative corrections 1\u201312 are a human-QA-pending candidate and are NOT promoted. PPT-CP06 is a separate controlled preview; supervisor designation, co-supervisor and exact TNR production remain gated. HEC-RAS is literature only.",
+      "public_note": "CKPT14 is the frozen scientific/document baseline (non-production preview). CKPT15 cumulative corrections 1–12 are a human-QA-pending candidate and are NOT promoted. PPT-CP06 is a separate controlled preview; supervisor designation, co-supervisor and exact TNR production remain gated. HEC-RAS is literature only.",
       "governance": {
         "read_first": "researchers/shisheer-kc/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
@@ -458,6 +458,44 @@
       "public_note": "Scientific audit/researcher action phase. New user-supplied DOCX is a candidate and not promoted above the v0.1 active working DOCX. Novelty, NLTHA model/results, eight-model normalization, original ETABS evidence and final defense gates remain unresolved.",
       "governance": {
         "read_first": "researchers/sunil-rana/AGENTS.md",
+        "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+        "inheritance_registry": "registry/latex-inheritance.json",
+        "sequence_register": "registry/researcher-latex-sequences.json"
+      }
+    },
+    {
+      "researcher_id": "RSH-012",
+      "slug": "sandip-gurung",
+      "display_name": "Sandip Gurung",
+      "qa_status": "TITLE_VERIFIED_OTHER_POINTERS_HOLD",
+      "topic_title": "Optimization of Post-Tensioned I-Girder Utilizing Steel Fibre Reinforced Concrete",
+      "topic_short_name": "Post-Tensioned SFRC I-Girder Optimization",
+      "drive": {
+        "discussion_google_doc_id": null,
+        "working_pdf_drive_id": "1Z-CDLFoYfYQAVeuxhBGokfZyx66VsmBf",
+        "working_thesis_docx_drive_id": "1-3NvdWoA0VCyYlIGCQXRYmeUkAF-SM-Y",
+        "presentation_pdf_drive_id": null,
+        "presentation_pptx_drive_id": null,
+        "latex_source_package_drive_id": null,
+        "project_root_drive_id": "1u-XXpRtjCYPHMEvHWlEXtrRsKpY9BsAp"
+      },
+      "lanes": {
+        "discussion": {
+          "branch": "researcher/sandip-gurung/discussion",
+          "content_policy": "GOOGLE_DOC_ID_AND_MACHINE_POINTERS_ONLY"
+        },
+        "latex": {
+          "branch": "researcher/sandip-gurung/latex",
+          "content_policy": "LATEX_AND_BUILD_CODE_ONLY"
+        },
+        "presentation": {
+          "branch": "researcher/sandip-gurung/presentation",
+          "content_policy": "TYPESCRIPT_YAML_JSON_HTML_CSS_SVG_SOURCE_ONLY"
+        }
+      },
+      "public_note": "User-supplied thesis DOCX and formatted 135-page PDF are stored in this researcher's own Drive thesis workspace. Scientific and university approval, LaTeX source admission and submission remain unverified.",
+      "governance": {
+        "read_first": "researchers/sandip-gurung/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
         "sequence_register": "registry/researcher-latex-sequences.json"

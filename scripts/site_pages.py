@@ -21,7 +21,7 @@ def render_start_here(out):
     # Reader-friendly repo-only operating guide: no scientific or A9 claims.
     start_cards=[
        ("0. Search the research library","Find researchers, shared controls, public documentation and Git history.","../search/index.html"),
-       ("1. Explore the library","Browse eleven researcher identities, their public-safe source pointers and verified folders.","../researchers/index.html"),
+       ("1. Explore the library","Browse registered researcher identities, their public-safe source pointers and verified folders.","../researchers/index.html"),
        ("2. Read the shared control towers","Review thesis-wide PU formatting, versioning, scientific boundaries and repeatability requirements.","../controls/latex/index.html"),
        ("3. Copy an owner-specific handover","Pick a researcher prompt. Copying is inert; only pasting it into that owner's chat authorizes bounded work.","../owner-prompts/index.html"),
        ("4. Inspect the Git change history","Compare PRE and POST commits, known branch roles and archived ref identities.","../branches/index.html"),

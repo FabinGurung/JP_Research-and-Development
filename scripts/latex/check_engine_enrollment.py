@@ -74,4 +74,7 @@ if __name__ == '__main__':
         elif LEDGER in files:
             before = json.loads(subprocess.check_output(['git','show',base+':'+LEDGER],cwd=ROOT,text=True))
             after = load(LEDGER)
-            assert {r['slug']:r['reservations'] for r in before['researchers']} == {r['slug']:r['reservations'] for r in after['researchers']}, 'Reservation changes require a dedicated reservation PR'
+            previous={r['slug']:r['reservations'] for r in before['researchers']}
+            current={r['slug']:r['reservations'] for r in after['researchers']}
+            assert set(previous).issubset(current) and all(current[s]==v for s,v in previous.items()), 'Existing reservations require a dedicated reservation PR'
+            assert all(v==[] for s,v in current.items() if s not in previous), 'New researcher must have no reservation history'

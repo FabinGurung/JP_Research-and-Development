@@ -27,7 +27,7 @@ required += ["controls/projects/safal-dawadi.latex.json","docs/LATEX_CONTROL_OWN
 for p in required:
     if not (ROOT/p).is_file(): errors.append(f"missing {p}")
 rows=researchers.get("researchers",[])
-if len(rows)!=11: errors.append(f"expected 11 researchers, got {len(rows)}")
+if len(rows)!=12: errors.append(f"expected 12 researchers, got {len(rows)}")
 ids=set(); slugs=set(); lane_names=set()
 for r in rows:
     if r.get("researcher_id") in ids: errors.append("duplicate researcher_id")
@@ -70,7 +70,7 @@ if safal_policy.get("gates",{}).get("source_admission")=="VERIFIED" and not (ROO
     errors.append("Safal source verified without committed manuscript main.tex")
 if safal_policy.get("original_drive",{}).get("main_ack_reported")!=5:
     errors.append("Safal Main Library cursor not preserved")
-if len(lane_names)!=33: errors.append("expected 33 researcher lanes")
+if len(lane_names)!=len(rows)*3: errors.append("expected three lanes per researcher")
 reg={x.get("branch") for x in branches.get("active_researcher_lanes",[])}
 if reg!=lane_names: errors.append("branch registry active lanes != researcher registry")
 if len(branches.get("archived_legacy",[]))!=45: errors.append("expected 45 original non-main legacy refs")
@@ -270,7 +270,7 @@ owner=load("controls/researcher-migration-rules.json")
 status_registry=load("registry/researcher-migration-status.json")
 if owner.get("trigger")!="USER_PASTES_EXACT_RESEARCHER_PROMPT_IN_OWNING_RESEARCHER_CHAT":
     errors.append("Owner-only execution trigger was weakened")
-if len(status_registry.get("records",[]))!=11:
+if len(status_registry.get("records",[]))!=len(rows):
     errors.append("Missing one or more owner migration records")
 for record in status_registry.get("records",[]):
     if record.get("user_trigger_observed") or record.get("drive_deletes")!=0 or record.get("main_ack")!="NOT_ATTEMPTED":
@@ -280,7 +280,7 @@ for record in status_registry.get("records",[]):
         errors.append("Missing opt-in researcher prompt "+prompt)
 owner_check=subprocess.run([sys.executable,str(ROOT/"scripts/researchers/generate_prompts.py"),"--check"],cwd=ROOT,text=True,capture_output=True)
 if owner_check.returncode:
-    errors.append("11 generated researcher prompts are out of sync: "+(owner_check.stdout+owner_check.stderr)[-1800:])
+    errors.append("Generated researcher prompts are out of sync: "+(owner_check.stdout+owner_check.stderr)[-1800:])
 # Public prompt browser must remain a copy-only frontend, never an execution backend.
 if args.site:
     entry=ROOT/args.site/"owner-prompts/index.html"

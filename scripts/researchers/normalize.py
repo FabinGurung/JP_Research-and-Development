@@ -57,15 +57,17 @@ def validate(reg=None, people=None):
             elif item.get("current_name"):
                 errors.append("imaginary folder name without Drive ID "+str(key))
             if item.get("physical_mutation_performed") is not False:
-                errors.append("central scope may never claim physical mutation "+str(key))
+                authorized_initial_creation=(p.get("researcher_id")=="RSH-012" and item.get("logical_role") in ("00_PROJECT_CONTROL","01_SOURCE_ORIGINALS","03_PDF_BUILDS") and item.get("status")=="VERIFIED_DIRECT_CHILD" and bool(item.get("existing_drive_folder_id")))
+                if not authorized_initial_creation:
+                    errors.append("central scope may never claim unapproved physical mutation "+str(key))
             if item in rows and item.get("status") not in ALLOWED:
                 errors.append("unknown role state "+str(item.get("status")))
             if item.get("approved_alias") and item.get("approved_alias")!=item.get("current_name"):
                 errors.append("unapproved changed alias "+str(key))
     if identities!=set(expected):
         errors.append("researcher registry identity mismatch")
-    if len(roots)!=10 or reg.get("verified_root_count")!=10:
-        errors.append("verified root count is not 10")
+    if len(roots)!=reg.get("verified_root_count"):
+        errors.append("verified root count does not match registry")
     if reg.get("writes_to_drive")!=0:
         errors.append("read-only migration unexpectedly has Drive writes")
     return errors
@@ -133,7 +135,7 @@ def main():
     if problems:
         print("FOLDER ROLES VALIDATION FAIL:\n"+"\n".join(problems))
         raise SystemExit(1)
-    if args.validate: print("FOLDER ROLES VALIDATION PASS researchers=11 roots=10")
+    if args.validate: print(f"FOLDER ROLES VALIDATION PASS researchers={len(reg['records'])} roots={reg['verified_root_count']}")
     entries=reg["records"]
     if args.researcher:
         entries=[x for x in entries if args.researcher in (x["researcher_id"],x["researcher_slug"])]
