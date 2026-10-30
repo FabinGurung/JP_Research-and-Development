@@ -1,0 +1,55 @@
+% --- AUTOMATIC APPENDIX 11: LIST OF TABLE PAGE ---
+\begin{titlepage}
+\phantomsection\label{front:tables}
+    % PU Guidelines: Header section uses single line spacing (1 line)
+    \setstretch{1.0} 
+
+    \begin{center}
+        % List of Table Header (Times New Roman, 14 pts, Normal Bold)
+        {\fontsize{14}{18}\selectfont \textbf{List of Tables}}
+    \end{center}
+
+    % 4 blank lines of 12 pts each
+    \vspace*{48pt} 
+
+    % Table Header Row (Times New Roman, 12 Pts, Normal Bold)
+    \noindent
+    {\fontsize{12}{14}\selectfont \textbf{Title}} \hfill {\fontsize{12}{14}\selectfont \textbf{Page}} \\[12pt] % 1 blank line of 12pt space
+
+    % --- AUTOMATIC LIST GENERATION ---
+    % Restoring body text style: Left-align, 12 pts, Normal, line spacing 1.5
+    \setstretch{1.5}
+    {\fontsize{12}{18}\selectfont
+    \makeatletter
+    % Overriding to ensure dot leaders match the style rules perfectly
+    \renewcommand{\cfttableader}{\hfill}
+    % Setting no indentation for the "Table X.X" label strings
+    \setlength{\cfttabindent}{0pt}
+    
+    \@starttoc{lot}
+    \makeatother
+    }
+
+\end{titlepage}
+
+
+% \begin{table}[h]
+%     \caption{Population growth rate of Nepal}
+%     \label{tab:pop_growth}
+%     \centering
+%     \begin{tabular}{...}
+%        % table data here
+%     \end{tabular}
+% \end{table}
+
+% RIGHT WAY TO DO A TABLE IN YOUR CHAPTERS:
+% \begin{table}[htbp]
+%     \caption{Your Real Table Title Here} % <--- ALWAYS ABOVE
+%     \label{tab:my_data}
+%     \centering
+%     \begin{tabular}{lll} % <--- Notice: no vertical bars like |l|l|l|
+%         \hline
+%         Header 1 & Header 2 & Header 3 \\ \hline
+%         Data A   & Data B   & Data C   \\ \hline
+%     \end{tabular}
+% \end{table}
