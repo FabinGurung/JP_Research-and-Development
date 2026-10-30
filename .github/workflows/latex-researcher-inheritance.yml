@@ -1,7 +1,7 @@
 name: LaTeX researcher ownership and shared-template inheritance
 on:
   pull_request:
-    branches: [main]
+    branches: ['**']  # include stacked researcher PRs (for example M4.2 based on M4.1)
     paths:
       - 'researchers/**/latex/**'
       - 'controls/latex/**'
@@ -36,10 +36,11 @@ jobs:
         if: github.event_name == 'pull_request'
         env:
           PR_BRANCH: ${{ github.head_ref }}
+          PR_BASE: ${{ github.base_ref }}
         run: |
           set -euo pipefail
-          git fetch --no-tags origin main
-          python scripts/latex/check_researcher_change_scope.py --base origin/main --head HEAD --branch "$PR_BRANCH"
+          git fetch --no-tags origin "+refs/heads/$PR_BASE:refs/remotes/origin/$PR_BASE"
+          python scripts/latex/check_researcher_change_scope.py --base "origin/$PR_BASE" --head HEAD --branch "$PR_BRANCH"
       - name: Shared-format regression scope (source-level only; no licensed font shipping)
         if: github.event_name == 'pull_request'
         run: |
