@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "id": "RD-RESEARCHER-LATEX-SEQUENCE-REGISTER-001",
-  "status": "ACTIVE_POLICY__AUTOMATION_PENDING_LIVE_GITHUB_ACTION_VERIFICATION",
+  "status": "ACTIVE_POLICY__LIVE_NO_WRITE_SMOKE_PASS__WRITE_RESERVATION_UNTESTED",
   "authority": "docs/MEMORY_WALL.md",
   "scope": "researcher-scoped latex version numbers only; not scientific CP or global RD-LTX-CHG",
   "branch_pattern": "thesis/<slug>/latex/seqNNN-<topic>",
@@ -129,5 +129,15 @@
       },
       "reservations": []
     }
-  ]
+  ],
+  "qa": {
+    "merged_implementation_pr": 63,
+    "source_commit": "fb93443c38af582809df79e810df5084f9ef834b",
+    "smoke_run_id": 40989763289,
+    "smoke_run_url": "https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/40989763289",
+    "smoke_status": "SUCCESS__NO_WRITE",
+    "source_checks": "PASS",
+    "branch_creation_write_path": "NOT_YET_EXERCISED",
+    "github_branch_protection_read": "INTEGRATION_403_UNAVAILABLE"
+  }
 }
