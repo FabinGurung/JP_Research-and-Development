@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
@@ -117,7 +117,7 @@
     "mode": "ACTIVE_POLICY__ADVISORY_CHECKER__HUMAN_REVIEW",
     "applicable_researchers": 11,
     "scientific_authority": "RESEARCHER_AND_SUPERVISOR_ONLY",
-    "policy_version": "1.1.0",
+    "policy_version": "1.2.0",
     "submission_narrative_principle": "ACADEMIC_RESULTS_NOT_AUDIT_STATUS__SCIENTIFIC_LIMITATIONS_MUST_REMAIN_HONEST",
     "audit_destination": "Individual researcher governed Google Doc audit, not submitted LaTeX/PDF; do not migrate other researcher's data"
   },
@@ -161,5 +161,19 @@
     "permitted_use": "Private licensed build runtime only; never commit, embed in sources, or redistribute font files.",
     "production_gate": "Exact Times New Roman font resolution AND PDF font-inspection required; times.sty fallback Nimbus Roman fails production"
   },
-  "drive_first_rule": "controls/academic-writing/research-deliverables.json#drive_first_publication_gate"
+  "drive_first_rule": "controls/academic-writing/research-deliverables.json#drive_first_publication_gate",
+  "optional_academic_format_helpers": {
+    "change_id": "RD-LTX-CHG-117",
+    "template": "controls/latex/template/pumlsc-shared.sty",
+    "commands": [
+      "\\PUApplyDotlessTOC",
+      "\\PUApplyFullFigureListLabels",
+      "\\PUApplyWordedEquationTags",
+      "\\PUEnableEquationList",
+      "\\PURegisterEquationEntry"
+    ],
+    "rollout": "OPT_IN_BY_RESEARCHER__NO_AUTOMATIC_RETROACTIVE_FORMAT_REWRITE",
+    "science": "No author scientific content imported across researchers",
+    "qa": "Requires per-researcher build, full-page review, approved university format"
+  }
 }
