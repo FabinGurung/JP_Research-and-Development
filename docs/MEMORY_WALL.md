@@ -1,6 +1,6 @@
-# R&D Memory Wall — Operating Constitution (PROPOSED v0.1)
+# R&D Memory Wall — Operating Constitution (v1.0)
 
-> **Status: proposal on an unmerged Git branch, NOT an enacted control.** Date: 2026-10-30. Scope: `FabinGurung/JP_Research-and-Development`. This Memory Wall is a human/AI **navigation and principle document**, not a second LaTeX tower, a private evidence vault, or independent scientific approval.
+> **Status: USER-APPROVED GOVERNANCE; implementation in GitHub source control.** Adopted via PR #62 on 2026-10-30. Scope: `FabinGurung/JP_Research-and-Development`. This Memory Wall is a human/AI **navigation and principle document**, not a second LaTeX tower, a private evidence vault, or independent scientific approval.
 
 ## Table of contents
 
@@ -28,7 +28,7 @@ Read the actual machine owners; this document points to them, it never clones th
 - [Branch-history principles](BRANCH_VERSIONING_AND_INVENTORY.md), [agent entrypoint](../AGENTS.md)
 - [Detailed researcher/template protocol](LATEX_TEMPLATE_INHERITANCE_VERSIONING.md) (proposal attached to this Memory Wall)
 
-**Precedence:** official original scientific/citation/academic authority for facts; existing current R&D `main` machine contracts for operations; this proposal only becomes binding once reviewed, updated where necessary, validated and merged. Old historical manifests may be stale. Never use chat history to override provider evidence.
+**Precedence:** official original scientific/citation/academic authority for facts; existing current R&D `main` machine contracts for operations; this document is an approved policy; machine controls and successful GitHub checks govern which automated capabilities are operational. Old historical manifests may be stale. Never use chat history to override provider evidence.
 
 ## 2. Core operating principle
 
@@ -120,8 +120,16 @@ Any correction should receive its own scoped PR, preserving historical records a
 
 **ALREADY REAL:** single template path; 11 registered identities; extensions; central change register; Git PRE/POST; CI source checks; Drive release hashes on governed researcher releases.
 
-**THIS DRAFT PR:** explains how these pieces interact and proposes a standard sequence + inheritance lifecycle. It does **not** alter formatting code or scientific source.
+**PR #62 MERGED:** read-first principles adopted; no scientific source or shared formatting code changed.
 
-**NOT YET IMPLEMENTED:** atomic per-researcher `seqNNN` allocator, new-branch bootstrap command/action, mandatory style-pinning manifest fields for every researcher, cross-researcher production visual regression automation, CODEOWNERS/main branch protections where not provider-verified, mandatory CI path-owner enforcement.
+**IMPLEMENTATION PR:** [sequence allocator and path-scope CI](https://github.com/FabinGurung/JP_Research-and-Development/pulls) provide dry-run-first per-researcher reservation and template-pinning for newly created numbered branches. A successful live reservation and protected-main permissions are NOT yet provider-verified, and full cross-researcher production PDF regression remains evidence-gated. Historical branches are unchanged; no current scientific source or PDF is modified.
 
 Implement those deliberately in a separate PR after the proposal is accepted, checking actual GitHub permissions and existing workflows first. Never call them active until provider readback and CI prove they are.
+
+## Implementation entry points (approved 2026-10-30)
+
+- Number register: [researcher-latex-sequences.json](../registry/researcher-latex-sequences.json). Verified historical highwater Saugat 028 and Nabin 054; the other nine require prior sequence reconciliation.
+- CLI: [researcher_sequence.py](../scripts/latex/researcher_sequence.py) (`--check`, `--self-test`, `--dry-run`, `--reserve`). The write path uses GitHub Contents API compare-and-swap, creates a branch and pinned version manifest, and optionally opens a draft PR.
+- GitHub Actions: [Reserve numbered researcher LaTeX branch](../.github/workflows/latex-reserve-researcher-sequence.yml) — `workflow_dispatch`, **dry_run defaults true**. Do not bypass authorization or manual project selection.
+- [Researcher ownership and shared-template inheritance CI](../.github/workflows/latex-researcher-inheritance.yml), [scope verifier](../scripts/latex/check_researcher_change_scope.py). Source/format gates are not final PDF or university scientific certification.
+- Main/branch protection and `GITHUB_TOKEN` write entitlement could not be inspected with the current GitHub integration (HTTP 403 on branch protection read); do not claim protected-main writes or actual reservation are live-tested until successfully tested.

@@ -1,6 +1,6 @@
-# LaTeX inheritance and independent researcher sequencing — PROPOSED v0.1
+# LaTeX inheritance and independent researcher sequencing — approved v1.0
 
-This is the detailed procedure linked by [R&D Memory Wall](MEMORY_WALL.md). It is NOT yet implemented as an automatic allocator or source gate. Reuse existing [single LaTeX tower](../controls/latex/tower.json), [inheritance registry](../registry/latex-inheritance.json) and [change register](../controls/latex/change-register.json), instead of creating an alternate control.
+This is the detailed procedure linked by [R&D Memory Wall](MEMORY_WALL.md). A dry-run-first allocator and a source ownership gate have been implemented in an implementation PR, with live Action/permissions verification required before claiming fully operational reservation. Reuse existing [single LaTeX tower](../controls/latex/tower.json), [inheritance registry](../registry/latex-inheritance.json) and [change register](../controls/latex/change-register.json), instead of creating an alternate control.
 
 ## Core architecture
 
@@ -67,13 +67,13 @@ The repository working tree on that branch already contains the shared `controls
 
 ## Proposed sequence reservation (not yet automated)
 
-The next improvement should be a single append-only, per-researcher version register, e.g. `registry/researcher-latex-sequences.json` with explicit schema, entries and unique keys `(researcher_id, lane, sequence_number)`.
+The implementation uses an append-only per-researcher register, `registry/researcher-latex-sequences.json` with explicit schema, entries and unique keys `(researcher_id, lane, sequence_number)`.
 
 A reservation is an **atomic, serialized operation against latest main**:
 
 1. Read current accepted and reserved sequence numbers; do not reuse or silently renumber historical LATEX_SEQ and M4 checkpoint labels.
 2. Determine next genuinely free number in that researcher's own namespace. A visible GitHub issue/PR or task UUID owns the reservation; log parent Git SHA and original source/Drive CURRENT.
-3. Acquire a researcher-scoped serialization gate, e.g. GitHub Actions concurrency `latex-sequence-<slug>`; compare-and-swap the expected parent SHA. If changed, re-read/retry (never force push).
+3. GitHub Actions uses a shared reservation concurrency group and the allocator additionally compare-and-swaps the register's current blob SHA on `main`; if changed it re-reads and retries. This avoids relying solely on GitHub queue ordering. No force push.
 4. Append reservation with status `RESERVED` and link to exact work branch. Abandoned reservations become `ABANDONED` with an explanation, never reused. No fictitious commits.
 5. On accepted PR, set `MERGED` with actual Git POST SHA. On signed-off Drive deliverables, record `RELEASED` with Drive IDs, SHA and optional approved Git tag.
 6. Gate source PRs against registered scope, unallocated or duplicate seq, expected template SHA and unrelated researcher edits.
@@ -151,3 +151,14 @@ An intermediate state may be `HOLD`, `REJECTED`, `SUPERSEDED` or `ABANDONED` wit
 6. Verify branch protection and release tag permissions; then use actual GitHub tests before declaring automation active.
 
 **Keep it lightweight:** no duplicate tower, no 11 copies of the style, no new Drive version counters for Git source changes, no mandatory source rebuild for every unrelated commit.
+
+### Concrete use (implementation)
+
+1. GitHub **Actions → Reserve numbered researcher LaTeX branch → Run workflow**, choosing `main`, the registered `researcher_slug`, and a short topic.
+2. Keep **dry_run=true** to check the next possible number without consuming it. For Saugat 028 and Nabin 054 the verified historical anchors yield 029/055 *only if no newer reservation or branch exists at execution time*.
+3. For authorized work set **dry_run=false**; the Action atomically appends a reservation using file-SHA compare-and-swap, creates `thesis/<slug>/latex/seqNNN-topic`, pins the live `pumlsc-shared.sty` blob SHA and version in `researchers/<slug>/latex/versions/seqNNN.json`, and optionally opens a draft PR.
+4. **No automatic scientific approval:** researcher edits and scientific approval still occur in their own branch and controlled Drive records. Merge requires scope/QA gates and research-owner evidence.
+5. Unknown historical sequence baseline = HOLD. Existing older `researcher/<slug>/latex` branch remains; no history rewritten.
+6. For a global formatting change, create a dedicated `template/latex/vX.Y.Z` branch, amend the global change register with `GLOBAL_CANDIDATE`, bump the tower version, run inheritance and available researcher regression. Full Times New Roman renders for other researchers are still separate QA gates.
+
+**Permission boundary:** Branch protection could not be inspected by the connector. If the manual GitHub Action cannot write the sequence register to `main`, it must stop with a visible error, not bypass protection or reuse a number. Before enabling production reservations, an administrator should verify the appropriate limited repository Actions/token permissions and require CI checks.

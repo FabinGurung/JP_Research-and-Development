@@ -1,0 +1,97 @@
+name: Reserve numbered researcher LaTeX branch
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/latex-reserve-researcher-sequence.yml'
+      - 'scripts/latex/researcher_sequence.py'
+  workflow_dispatch:
+    inputs:
+      researcher_slug:
+        description: Registered researcher slug (e.g. saugat-paneru or nabin-bista)
+        type: string
+        required: true
+      topic:
+        description: Short source change topic; used in new branch name
+        type: string
+        required: true
+      dry_run:
+        description: Preview next candidate sequence without reserving or creating branch
+        type: boolean
+        default: true
+        required: true
+      create_draft_pr:
+        description: After reservation create a draft PR
+        type: boolean
+        default: true
+        required: true
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: researcher-latex-sequence-reservation
+  cancel-in-progress: false
+jobs:
+  bootstrap:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate enrolled researchers and historical sequence baselines
+        run: |
+          python scripts/latex/researcher_sequence.py --check
+          python scripts/latex/researcher_sequence.py --self-test
+          python scripts/latex/validate_shared.py
+          python scripts/latex/universal_preflight.py --policy-check
+      - name: Dry-run reservation (no write)
+        if: inputs.dry_run
+        env:
+          RESEARCHER: ${{ inputs.researcher_slug }}
+          TOPIC: ${{ inputs.topic }}
+        run: python scripts/latex/researcher_sequence.py --dry-run --slug "$RESEARCHER" --topic "$TOPIC"
+      - name: Reserve sequence atomically and create pinned-source branch
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESEARCHER: ${{ inputs.researcher_slug }}
+          TOPIC: ${{ inputs.topic }}
+          CREATE_PR: ${{ inputs.create_draft_pr }}
+        run: |
+          set -euo pipefail
+          extra=()
+          if [[ "$CREATE_PR" == "true" ]]; then extra=(--create-pr); fi
+          python scripts/latex/researcher_sequence.py --reserve --slug "$RESEARCHER" --topic "$TOPIC" "${extra[@]}"
+      - name: Important boundaries
+        run: |
+          echo 'This action writes only a sequence reservation on main and a separate researcher manifest branch when dry_run=false.'
+          echo 'It never changes thesis science, the shared style source, an approved CURRENT PDF, or Drive files.'
+  live-dry-run-smoke:
+    if: github.event_name == 'push'
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exercise allocator without creating any new research version
+        run: |
+          set -euo pipefail
+          python scripts/latex/researcher_sequence.py --check
+          python scripts/latex/researcher_sequence.py --self-test
+          python scripts/latex/researcher_sequence.py --dry-run --slug saugat-paneru --topic smoke-test-no-write
+          python scripts/latex/researcher_sequence.py --dry-run --slug nabin-bista --topic smoke-test-no-write
+          if python scripts/latex/researcher_sequence.py --dry-run --slug shisheer-kc --topic should-block; then
+            echo 'FAIL: unverified baseline got a sequence'
+            exit 1
+          fi
+          echo 'PASS: two known baselines previewed; unverified baseline held; zero writes'

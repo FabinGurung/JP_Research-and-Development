@@ -1,0 +1,47 @@
+name: LaTeX researcher ownership and shared-template inheritance
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'researchers/**/latex/**'
+      - 'controls/latex/**'
+      - 'registry/researcher-latex-sequences.json'
+      - 'registry/latex-inheritance.json'
+      - 'scripts/latex/**'
+      - '.github/workflows/latex-researcher-inheritance.yml'
+      - '.github/workflows/latex-reserve-researcher-sequence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scope-and-inheritance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate separate researcher sequences, no cloned template and actual inheritance
+        run: |
+          set -euo pipefail
+          python scripts/latex/researcher_sequence.py --check
+          python scripts/latex/researcher_sequence.py --self-test
+          python scripts/latex/check_researcher_change_scope.py --self-test
+          python scripts/latex/validate_shared.py
+          python scripts/latex/universal_preflight.py --policy-check
+      - name: Check changed-file ownership against pull request
+        if: github.event_name == 'pull_request'
+        env:
+          PR_BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          python scripts/latex/check_researcher_change_scope.py --base origin/main --head HEAD --branch "$PR_BRANCH"
+      - name: Shared-format regression scope (source-level only; no licensed font shipping)
+        if: github.event_name == 'pull_request'
+        run: |
+          echo 'One shared template; strict global template changes require amendment entry and tower version update.'
+          echo 'Source-policy and inheritance checks run for every researcher. Full 144 university formatting and independently renderable researchers require separate evidence-backed PDF QA.'
