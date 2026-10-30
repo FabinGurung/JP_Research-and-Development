@@ -95,3 +95,17 @@ advisory semantic scan, and retains `researcher-engine-source-qa` as a workflow
 artifact. Reproduce with `python scripts/latex/audit_researcher_engine.py`.
 [30 October source audit](audits/RESEARCHER_ENGINE_QA_20261030.md) records the
 repair and exact unresolved boundaries. A dated receipt is never live authority.
+
+## Artifact currency is a separate check
+
+Before calling a researcher's project up to date, inspect the actual owner LaTeX/DOCX,
+compiled PDF, discussion, audit and related artifact manifests. Engine enrollment
+and a passing governance scan do not migrate the artifact. Record the exact template
+blob and source identity, semantic review, compile/font/visual QA, provider byte
+readback and CURRENT release state separately. Reconcile candidate vs production
+and Git vs packaged-source divergence before writing. Follow the existing tower's
+admission/release gates; do not repair a missing baseline by inventing a sequence.
+
+The [30 October artifact audit](audits/RESEARCHER_ARTIFACT_SYNC_20261030.md)
+records executed Doc updates and discovered migration debt, without certifying all
+researcher artifacts. A dated receipt never overrides a fresh provider read.
