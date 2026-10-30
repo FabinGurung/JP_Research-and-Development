@@ -19,6 +19,8 @@ TEMPLATE = re.compile(r"^template/latex/v[0-9]+(?:[.-][0-9A-Za-z-]+)*$")
 STY = "controls/latex/template/pumlsc-shared.sty"
 REGISTRY = "registry/researcher-latex-sequences.json"
 TOWER = "controls/latex/tower.json"
+# Unambiguous historical namespaces; never infer 'safal/' ownership (two Safals).
+LEGACY_OWNER_ALIASES = {"saugat": "saugat-paneru", "nabin": "nabin-bista"}
 
 
 def out(args: list[str]) -> str:
@@ -39,6 +41,15 @@ def evaluate(branch: str, files: list[str], manifest: dict | None, style_sha: st
     owners = sources(files)
     if len(owners) > 1:
         errors.append("CROSS_RESEARCHER_LATEX_EDIT: " + ", ".join(sorted(owners)))
+    # Even a one-researcher PR must not silently include global LaTeX control edits.
+    if owners and any(f.startswith("controls/latex/") for f in files):
+        errors.append("SCIENTIFIC_AND_SHARED_CONTROL_MUTATION_REQUIRE_SEPARATE_PRS")
+    alias = LEGACY_OWNER_ALIASES.get(branch.split("/", 1)[0])
+    legacy_match = re.fullmatch(r"researcher/([a-z0-9-]+)/latex(?:/.*)?", branch)
+    if legacy_match:
+        alias = legacy_match.group(1)
+    if alias and owners and owners != {alias}:
+        errors.append("LEGACY_BRANCH_OWNER_MISMATCH: {} -> {}".format(branch, ", ".join(sorted(owners))))
     m = THESIS.fullmatch(branch)
     if m:
         slug, seq_text = m.groups()
@@ -98,6 +109,14 @@ def main():
         assert evaluate("template/latex/v2.5.0", [STY], None, None)
         assert not evaluate("template/latex/v2.5.0", [STY, TOWER, "controls/latex/change-register.json"], None, None)
         assert evaluate("feature/mixed", ["researchers/nabin-bista/latex/a.tex", "researchers/saugat-paneru/latex/b.tex"], None, None)
+        # A legacy researcher-named branch cannot change another person's source,
+        # even if it changes only one researcher's directory.
+        assert evaluate("saugat/editorial-m4", ["researchers/nabin-bista/latex/chapters/ch4.tex"], None, None)
+        assert evaluate("nabin/ch4", ["researchers/saugat-paneru/latex/manuscript/main.tex"], None, None)
+        assert evaluate("researcher/saugat-paneru/latex", ["researchers/nabin-bista/latex/chapters/ch4.tex"], None, None)
+        assert not evaluate("saugat/editorial-m4", ["researchers/saugat-paneru/latex/manuscript/main.tex"], None, None)
+        assert not evaluate("nabin/ch4", ["researchers/nabin-bista/latex/chapters/ch4.tex"], None, None)
+        assert evaluate("saugat/editorial-m4", ["researchers/saugat-paneru/latex/chapters/ch4.tex", "controls/latex/core-rules.json"], None, None)
         print("LATEX_OWNERSHIP_SELF_TEST_PASS")
         return
     files = changed(a.base, a.head)

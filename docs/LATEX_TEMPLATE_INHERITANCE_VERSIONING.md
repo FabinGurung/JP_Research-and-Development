@@ -65,7 +65,7 @@ The repository working tree on that branch already contains the shared `controls
 
 **Why not `researcher/<slug>/latex/seqNNN`?** Historical refs `researcher/<slug>/latex` already exist: Git cannot store both a leaf ref and child ref using the same prefix. The `thesis/` namespace avoids forcing deletion/rename of those historical branches.
 
-## Proposed sequence reservation (not yet automated)
+## Version-sequence reservation (source implementation merged; live write authorization unverified)
 
 The implementation uses an append-only per-researcher register, `registry/researcher-latex-sequences.json` with explicit schema, entries and unique keys `(researcher_id, lane, sequence_number)`.
 
@@ -78,7 +78,7 @@ A reservation is an **atomic, serialized operation against latest main**:
 5. On accepted PR, set `MERGED` with actual Git POST SHA. On signed-off Drive deliverables, record `RELEASED` with Drive IDs, SHA and optional approved Git tag.
 6. Gate source PRs against registered scope, unallocated or duplicate seq, expected template SHA and unrelated researcher edits.
 
-Until this allocator is actually implemented and tested, **the maintainer checks the live sequence evidence and reserves the next number explicitly**. Do not promise an automated `seq055` or invent an Saugat sequence solely because a new chat opened.
+The reservation source and no-write workflow have been implemented by PR #63 and a verified dry-run smoke, but the write-capable reservation path is **not yet exercised**. Do not assert a new reservation or permission from code alone. A new branch may be allocated only through the governed transaction after main provider-state review. Nabin's existing SEQ055 and SEQ056 release records were created outside this allocator; the repair register must treat them as already used, while preserving the originally verified 054 cutover floor. The next planned Nabin value is 057 **only as a dry-run suggestion**; it is not a reserved number.
 
 ## Proposed manifest fields for every new version
 
@@ -162,3 +162,12 @@ An intermediate state may be `HOLD`, `REJECTED`, `SUPERSEDED` or `ABANDONED` wit
 6. For a global formatting change, create a dedicated `template/latex/vX.Y.Z` branch, amend the global change register with `GLOBAL_CANDIDATE`, bump the tower version, run inheritance and available researcher regression. Full Times New Roman renders for other researchers are still separate QA gates.
 
 **Permission boundary:** Branch protection could not be inspected by the connector. If the manual GitHub Action cannot write the sequence register to `main`, it must stop with a visible error, not bypass protection or reuse a number. Before enabling production reservations, an administrator should verify the appropriate limited repository Actions/token permissions and require CI checks.
+
+## Source-only verification additions — 2026-10-30
+
+- [GitHub live no-write smoke](https://github.com/FabinGurung/JP_Research-and-Development/actions/runs/40989763289): verified successful, no branch or number allocated.
+- GitHub branch detail has `protected=false`; protection detail read returns HTTP 403 to this connector and no repository rulesets were returned. Admin-owned security change remains outstanding.
+- `registry/researcher-latex-sequences.json` now proposes `observed_out_of_band_versions` for Nabin 55/56 (real Git release records, **not fabricated reservations**); `--self-test` checks duplicate and remote-main future-release collision handling without write.
+- Source owner checks include explicitly named legacy branch owner mismatch and mixed researcher/shared-control changes; `.github/workflows/latex-researcher-inheritance.yml` checks stacked PRs relative to their actual base ref.
+- Bootstrap proof without allocation: the source-gate's mock manifest checks style SHA pinning, branch slug and sequence, and centralized path; the actual Git shared style blob on the infrastructure branch must remain the same as the pinned v2.4.0 main. Real branch creation/manifest publication awaits the write test and administrator protection.
+- Nine unresolved researchers remain held. Their A9 Local ledger numbering and thesis LaTeX source sequence numbers must not be conflated or inferred from filenames alone. Full cross-researcher scientific or PDF regression is not claimed.

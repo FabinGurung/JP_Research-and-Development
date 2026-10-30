@@ -39,7 +39,23 @@
         "source_ref": "LATEX_SEQ054",
         "status": "VERIFIED_CURRENT_REPOSITORY"
       },
-      "reservations": []
+      "reservations": [],
+      "observed_out_of_band_versions": [
+        {
+          "sequence": 55,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ055_ACADEMIC_ABSTRACT_AND_FULL_RESULT_FIGURES_20261030.md",
+          "scientific_admission": "NOT_INFERRED_FROM_VERSION_NUMBER",
+          "note": "Historical seq054 floor retained; release record already on main; no fabricated reservation or branch"
+        },
+        {
+          "sequence": 56,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ056_TABLE46_BLOCKS_1_AND_4_20261030.md",
+          "scientific_admission": "NOT_INFERRED_FROM_VERSION_NUMBER",
+          "note": "Live main shows existing SEQ056; do not issue seq055 or seq056 again"
+        }
+      ]
     },
     {
       "researcher_id": "RSH-004",
@@ -138,6 +154,8 @@
     "smoke_status": "SUCCESS__NO_WRITE",
     "source_checks": "PASS",
     "branch_creation_write_path": "NOT_YET_EXERCISED",
-    "github_branch_protection_read": "INTEGRATION_403_UNAVAILABLE"
+    "github_branch_protection_read": "INTEGRATION_403_UNAVAILABLE",
+    "nabin_out_of_band_reconciliation": "SEQ055_AND_SEQ056_EXISTS_ON_MAIN__FLOOR054_PRESERVED__NEXT_SAFE_DRY_RUN_057_PENDING_VALIDATION",
+    "remain_unreconciled": 9
   }
 }
