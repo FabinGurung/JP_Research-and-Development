@@ -15,7 +15,7 @@ def render(row,name,template):
     specials="\n".join("- "+x["logical_role"]+": "+x["current_name"]+" | Drive "+x["existing_drive_folder_id"]+" | https://drive.google.com/drive/folders/"+x["existing_drive_folder_id"] for x in row["researcher_specific_extensions"]) or "None recorded; preserve other live specializations."
     gaps=", ".join(x["logical_role"] for x in row["roles"] if x["existing_drive_folder_id"] is None) or "None observed."
     values={"ID":row["researcher_id"],"NAME":name,"SLUG":row["researcher_slug"],"ROOT":root or "HOLD — UNVERIFIED","ROOT_LINK":"https://drive.google.com/drive/folders/"+root if root else "HOLD — NO VERIFIED ROOT","ROLES":roles,"SPECIAL":specials,"GAPS":gaps,
-       "ROOT_NOTE":"CRITICAL ROOT HOLD: No verified project root for this researcher. DO NOT physically reorganize any location until owning A9 identifies an exact project and approves its root." if not root else "Root ID was verified in the earlier read-only Drive audit; read the provider afresh before all mutations."}
+       "ROOT_NOTE":"CRITICAL ROOT HOLD: No verified project root for this researcher. DO NOT physically reorganize any location until owning A9 identifies an exact project and approves its root." if not root else ("New Sandip researcher root was created under 02_Thesis by explicit user request on 2026-10-30; read the provider afresh before all mutations." if row["researcher_id"]=="RSH-012" else "Root ID was verified in the earlier read-only Drive audit; read the provider afresh before all mutations.")}
     for key,value in values.items():
         template=template.replace("@@"+key+"@@",value)
     if "@@" in template: raise ValueError("Unresolved token for "+row["researcher_id"])

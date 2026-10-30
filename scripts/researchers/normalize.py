@@ -57,7 +57,9 @@ def validate(reg=None, people=None):
             elif item.get("current_name"):
                 errors.append("imaginary folder name without Drive ID "+str(key))
             if item.get("physical_mutation_performed") is not False:
-                errors.append("central scope may never claim physical mutation "+str(key))
+                authorized_initial_creation=(p.get("researcher_id")=="RSH-012" and item.get("logical_role") in ("00_PROJECT_CONTROL","01_SOURCE_ORIGINALS","03_PDF_BUILDS") and item.get("status")=="VERIFIED_DIRECT_CHILD" and bool(item.get("existing_drive_folder_id")))
+                if not authorized_initial_creation:
+                    errors.append("central scope may never claim unapproved physical mutation "+str(key))
             if item in rows and item.get("status") not in ALLOWED:
                 errors.append("unknown role state "+str(item.get("status")))
             if item.get("approved_alias") and item.get("approved_alias")!=item.get("current_name"):

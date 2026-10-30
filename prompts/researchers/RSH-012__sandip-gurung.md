@@ -53,7 +53,7 @@ None recorded; preserve other live specializations.
 
 00_LOCAL_LIBRARY, 02_LATEX_WORKING, 04_PPTX, 05_DATA_FIGURES, 06_REVIEW_QA, 07_FINAL_DELIVERABLES, 90_LEGACY_ARCHIVE
 
-Root ID was verified in the earlier read-only Drive audit; read the provider afresh before all mutations.
+New Sandip researcher root was created under 02_Thesis by explicit user request on 2026-10-30; read the provider afresh before all mutations.
 
 ## Mandatory exact workflow
 
