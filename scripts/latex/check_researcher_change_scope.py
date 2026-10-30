@@ -122,6 +122,27 @@ def main():
         row = next((x for x in data["researchers"] if x["slug"] == m.group(1)), None)
         if row is not None and not any(x["sequence"] == int(m.group(2)) and x["branch"] == a.branch for x in row["reservations"]):
             problems.append("SEQ_NOT_RESERVED_IN_CANONICAL_LEDGER")
+    if TEMPLATE.fullmatch(a.branch) and STY in files:
+        def git_json(ref: str, name: str):
+            return json.loads(out(["show", ref + ":" + name]))
+        before = git_json(a.base, TOWER)
+        after = json.loads((ROOT / TOWER).read_text(encoding="utf-8"))
+        def vtuple(v: str):
+            m = re.fullmatch(r"(\d+)\.(\d+)\.(\d+)", v)
+            if not m:
+                raise ValueError("Invalid template semantic version: " + v)
+            return tuple(int(x) for x in m.groups())
+        if vtuple(after["version"]) <= vtuple(before["version"]):
+            problems.append("GLOBAL_TEMPLATE_SEMVER_NOT_INCREASED")
+        old_register = git_json(a.base, "controls/latex/change-register.json")
+        new_register = json.loads((ROOT / "controls/latex/change-register.json").read_text(encoding="utf-8"))
+        if len(new_register["entries"]) <= len(old_register["entries"]) or not any(
+            x.get("classification") == "GLOBAL_CANDIDATE"
+            for x in new_register["entries"][len(old_register["entries"]):]
+        ):
+            problems.append("NO_NEW_GLOBAL_CANDIDATE_CHANGE_RECORD")
+        # This is a source QA guard; actual A4/font/render parity must be
+        # evidenced separately for each buildable researcher before promotion.
     if problems:
         print("LATEX_SCOPE_GATE_FAIL:\n- " + "\n- ".join(problems), file=sys.stderr)
         raise SystemExit(1)
