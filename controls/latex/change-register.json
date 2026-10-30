@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 115,
+  "next_number": 116,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -379,6 +379,26 @@
         "34",
         "35"
       ]
+    },
+    {
+      "change_id": "RD-LTX-CHG-115",
+      "researcher_id": "RSH-002",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Promote a general semantic writing rule discovered during Saugat CP114 M4.2 prose editing: distinguish substantive academic results from internal audit/status tables; remove repetitive unavailable-data process narration from submission while retaining genuine material scientific limitations in meaningful scope sections and private Google Doc audit.",
+      "source_paths": [
+        "controls/latex/authorial-voice-policy.json",
+        "controls/latex/core-rules.json",
+        "controls/latex/tower.json"
+      ],
+      "before_after_qa_evidence": "Saugat manuscript branch saugat/m4-1-prose-and-audit-separation-review-20261030; 114-page A4 Tinos preview PDF SHA 81cebc8f0fffbaa6d7f76f21012b183353832297aa09e4be39c8fa4f6fb6eb67; final complete source ZIP SHA 8e7427b961a5e021d166cb45fd4840b984379f1d45dc6c8ef6e0a550141d3d98; 143/143 original research binary asset SHA matches; original M4 production remains unchanged; Google Doc audit ID 15IK5qfu4143tpVZpCXfFY-o2pQY5qkkyW9wzVH5n5To; scientific result comparison conserved. Global semantic-only policy candidate pending PR/checks; NO cross-researcher manuscript change.",
+      "pu_rule_references": [],
+      "disposition": "PROPOSED",
+      "target_shared_rule": "controls/latex/authorial-voice-policy.json",
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "SEMANTIC_RULE_ONLY_PENDING_REVIEW__NO_AUTO_REWRITE_OTHER_RESEARCHERS",
+      "regression_scope": "JSON_VALIDATION_ADVISORY_LINT__NO_GLOBAL_STY_CHANGE",
+      "scientific_boundary": "CP114_SCIENTIFIC_RESULTS_UNCHANGED__OTHER_RESEARCHER_CONTENT_ISOLATED",
+      "no_ai_concealment": "Applicable institutional assistance disclosures remain mandatory"
     }
   ],
   "required_fields": [
