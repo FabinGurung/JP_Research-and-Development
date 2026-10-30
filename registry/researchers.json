@@ -56,7 +56,10 @@
         "latex_source_package_drive_id": "1yL3G-EUGA32FDBhkdImXk9NManfW_vyA",
         "presentation_google_slides_drive_id": "1_baSODXqlT9JUZ4pRVB8kByDsjVw1NFvKsgCA2C8Q2Y",
         "thesis_google_doc_id": "1P_4MFr3WDjkhg_vJQ0YRbqYGMSoUtqSAex-yEaxGgTs",
-        "project_root_drive_id": "1woFRyE_oUwoKxKI815I1nRtWe1382LUT"
+        "project_root_drive_id": "1woFRyE_oUwoKxKI815I1nRtWe1382LUT",
+        "m4_2_candidate_pdf_drive_id": "1xMlRg5UmibEqUEv_wR1v1DYfdCp1rwmg",
+        "m4_2_candidate_source_zip_drive_id": "14z5qlGkgLL2Gkg94nrQ5mxaoPRYY8uA7",
+        "editorial_evidence_audit_google_doc_id": "15IK5qfu4143tpVZpCXfFY-o2pQY5qkkyW9wzVH5n5To"
       },
       "lanes": {
         "discussion": {
@@ -303,13 +306,14 @@
       "topic_title": "Seismic Vulnerability Assessment and Retrofitting of Non-Engineered Reinforced Concrete Buildings in Pokhara Metropolitan City",
       "topic_short_name": null,
       "drive": {
-        "discussion_google_doc_id": null,
+        "discussion_google_doc_id": "1oWC4YJfoNHCv6CT0GkCe_Ikt6D23FFS7E929g1N7gQ8",
         "working_pdf_drive_id": "1hXABmOiVGnWxz2oUUb18WGwKsx5j0YXf",
         "presentation_pdf_drive_id": null,
         "presentation_pptx_drive_id": null,
         "latex_source_drive_id": "19Y20hHTYbpEP811LHr3B4ngrXp9Vp_lE",
         "latex_source_package_drive_id": "1E5TnrNhQABHvURIRuQqHPWft3BTy2AUT",
-        "project_root_drive_id": "1DVDvW4kxENqMF-30XP17kG86xD-xkcZ7"
+        "project_root_drive_id": "1DVDvW4kxENqMF-30XP17kG86xD-xkcZ7",
+        "artifact_sync_audit_google_doc_id": "1jFqm-JJBQdyxO77V3TwVhcDdducj0rmuwHL0NsfRpg0"
       },
       "lanes": {
         "discussion": {
@@ -341,13 +345,14 @@
       "topic_title": "Comparative Structural Performance of Circular and Square Steel Tube Columns with Various Strengthening Techniques in a Three-Storey Building",
       "topic_short_name": null,
       "drive": {
-        "discussion_google_doc_id": null,
+        "discussion_google_doc_id": "1PvbvLLrgx6yUG4XHkICxq260TDuFN5USa-g_Oe9WWJI",
         "working_pdf_drive_id": "1zHKtBKkCIDG_fGQvFCLzmLHP7uzJ25x0",
         "presentation_pdf_drive_id": null,
         "presentation_pptx_drive_id": "1NrA8NNtic1JILnDp2jYkZbIcfbJB03B9",
         "latex_source_package_drive_id": "1CSWSIVbp9wWLTBX7LRO1-d029KF1lQYg",
         "word_review_derivative_drive_id": "10MywLOwq_2_X0khFvYyiYfePT9HdtE9_",
-        "project_root_drive_id": "1eUlnpvXTK6UiJlsj3bgKBPYTRdkkNkAn"
+        "project_root_drive_id": "1eUlnpvXTK6UiJlsj3bgKBPYTRdkkNkAn",
+        "artifact_sync_audit_google_doc_id": "1TKFJGcSFbDmoiQJYcftOopsT7oCXB8ApSkV9VbLjqLg"
       },
       "lanes": {
         "discussion": {
@@ -379,7 +384,7 @@
       "topic_title": "Assessment of Rework, Its Causes and Impacts in RCC Building Construction Projects of Pokhara Metropolitan City",
       "topic_short_name": null,
       "drive": {
-        "discussion_google_doc_id": null,
+        "discussion_google_doc_id": "1rDnYR9WelWIDCaIpmlZoKF6oTWNuySvUCqzfPp5sfVU",
         "working_pdf_drive_id": "1yh_2sFCV23j3QRGzLMTpqDYGwGHN0ATo",
         "latex_source_package_drive_id": "1zgV-LpHa8Jw82R6Cr2p28Dxth0QQXRdT",
         "presentation_pdf_drive_id": "12p7nBS0wj-ceEXCdux9PbKO0RsYEEsC_",
@@ -471,13 +476,14 @@
       "topic_title": "Optimization of Post-Tensioned I-Girder Utilizing Steel Fibre Reinforced Concrete",
       "topic_short_name": "Post-Tensioned SFRC I-Girder Optimization",
       "drive": {
-        "discussion_google_doc_id": null,
+        "discussion_google_doc_id": "1wScw2xkYyQngfZ-Ji72ux9IA_iBem3LAg_dZtuOFQNE",
         "working_pdf_drive_id": "1Z-CDLFoYfYQAVeuxhBGokfZyx66VsmBf",
         "working_thesis_docx_drive_id": "1-3NvdWoA0VCyYlIGCQXRYmeUkAF-SM-Y",
         "presentation_pdf_drive_id": null,
         "presentation_pptx_drive_id": null,
         "latex_source_package_drive_id": null,
-        "project_root_drive_id": "1u-XXpRtjCYPHMEvHWlEXtrRsKpY9BsAp"
+        "project_root_drive_id": "1u-XXpRtjCYPHMEvHWlEXtrRsKpY9BsAp",
+        "artifact_sync_audit_google_doc_id": "1eKFQTFW1h9aWhCUAtsWTvyh-MbGjcy4z8bKNxFn38fI"
       },
       "lanes": {
         "discussion": {

@@ -1,0 +1,419 @@
+{
+  "audited_main": "286a88e7372d75940820bfe9b1a406b8ebcc529f",
+  "date_npt": "2026-10-30",
+  "existing_doc_updates": [
+    {
+      "researcher_slug": "fabin-gurung",
+      "document_id": "1ZnSSqwoOE7wCIWNrUBlCw8w43cqMVL3YRS9Dp1ot-jI",
+      "pre_id": "1ds9BrNnf3ikztJDicpYuGqmjC_pzQcRdqwapypq5Jic",
+      "post_id": "1LWDDKvYOQj_pNzroBtylvQ3f7b8j9yGXxFQKR8OJYmA",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "saugat-paneru",
+      "document_id": "1lF5WKoido1Tzgk6D9ZFLbkVjV3TCwZinrNnLfVF7bA0",
+      "pre_id": "17ap-YEmnPti_WUfflyuYPePylB2PpYRIRS2Pfv8CVe4",
+      "post_id": "1a-tcd6Djy8qQQlh3HXzOmB-lRhbFXQlGUQOKSyxtrEo",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT",
+      "artifact_filing_pre_id": "1fl4S49OGhmWcN1PzZX35Ebxl8ATX8oeSvEtvLo8deaA",
+      "artifact_filing_post_id": "1mPJZavIHooh_hueuSFW-07ye9toAjRWcjCWRgPW86qI"
+    },
+    {
+      "researcher_slug": "nabin-bista",
+      "document_id": "1eLsGVmUxMyHx0QKeQv25SiR325c8jy3grfdXmkkz9xk",
+      "pre_id": "1PSA4TRDM44Lb500DdQ57gu3e0JBUfYM4Rbg_2q_ZQLk",
+      "post_id": "1HM9WobzcIRCJ1S1audT0Ihh5IyMfr_QYDDfd8UQMipI",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "binay-karki",
+      "document_id": "1wMU2eYikHZ8Bt4Qrvtqv8ITTtgiGUav4c-oMsVEMwX4",
+      "pre_id": "1T4PumafucUCQDi0fjwNhLWc080A0oyXKhoXt9c3Jkbo",
+      "post_id": "1Y2Ne2LtkQawzzUn9QMnF9oMhqmJdpp8z39I3u8cKYFg",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "binay-karki",
+      "document_id": "11EyRADuMW9ql_NhQTuFoop7BrPKFJmbBbJaMXFCt4Z0",
+      "pre_id": "1Pp02JpLa4I481fdUspb9NQR4KQkwc8ijT6pMuHhBQek",
+      "post_id": "1BpDCPfHhty8JRLZFLm3oHhW0-S4JgSho-HLpGSjxN7w",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "saugat-paneru",
+      "document_id": "15IK5qfu4143tpVZpCXfFY-o2pQY5qkkyW9wzVH5n5To",
+      "pre_id": "1mhTudXUXq9nTKBq9wN8B8SDETVrfdl4gHKlkgKP3yPg",
+      "post_id": "1OECdRaDYzd0PaDbSr0LwTiZ-lH-ezD5-BwiwVwjTFik",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT",
+      "artifact_filing_pre_id": "1ZQyWzPVoubJsyykASZNxh1dxjT4Rfa-uALR57C9kC94",
+      "artifact_filing_post_id": "1yoHyDi3H55UUH0GI3oHu5QJGb5XxWpDcnXYNweCcBjs"
+    },
+    {
+      "researcher_slug": "nabin-bista",
+      "document_id": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+      "pre_id": "1lcEm1XdIoH0Tod4-X4WYmch4wicjO7hZ6rSuM2wxjR8",
+      "post_id": "1MRS5Vx9CWlFL0AgNBlUhxdjCd3U0fXk-UoiDugqigCI",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "shisheer-kc",
+      "document_id": "1cVhIunKP_hxba_UUw8g4KchqbLw02OjlrJcZlA9-ObQ",
+      "pre_id": "15bwhMus9wRwAVbU6AEVJAjD_C3F6eILVRtOg8WJpMNs",
+      "post_id": "1NuvVQO8F76rs7cECXuDOK_UoJqaiXd2HsVnpd7eHDDw",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "anil-neupane",
+      "document_id": "1pB3sVI1xfthQGK9SFDx9YkkV7FgpWZPUD0gsx4dhvKI",
+      "pre_id": "1xcgjRQ8WdtyiBC3lkPk9BJhpTfIgImf4vise8DiZDZs",
+      "post_id": "1wRUGwkIxjWHFrAh9MKmfQRnlg85_G1DoSpX4Xlm_1_E",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "sunil-rana",
+      "document_id": "1yE2FNlDbDTCMfjG5fH13LBcUoVSAhW523JqT2a4uQpg",
+      "pre_id": "1zkCiKkWTmx0jdQndihqUg0xTYDAMXIvXrN0WETATlxQ",
+      "post_id": "1Qx0WL18bg7YcqzsWT_Gn6LuJQNtonTdxxModOgpoGBQ",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "safal-dawadi",
+      "document_id": "1rDnYR9WelWIDCaIpmlZoKF6oTWNuySvUCqzfPp5sfVU",
+      "pre_id": "1vj0BmCWvRzNq4B8P5vvU-dZxUcTryhodDDS_DZL3lww",
+      "post_id": "1DPgXCKwQWJYziil_xd079CaSpN38JY2z9a1I7xWmPzk",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "safal-dawadi",
+      "document_id": "1f0wvHqjWH659FyYgNnvvjvWj-nvFRgdxW0XrhkhPCyk",
+      "pre_id": "1b8DSnjH7oI60gVyvF6_G0AjDxtFQfYbQjikGBubhNO8",
+      "post_id": "1FiDODC6HqQMM8uCMp-zo2cg4BXofA38iS_KVSCi-1LE",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    },
+    {
+      "researcher_slug": "anil-neupane",
+      "document_id": "1VZG6kF-JPvNZEwAXr_AwKMt6mRdmZfJhScXyMHmdtfA",
+      "pre_id": "1vkQUAQCVl4Wae8bYhdEDnuVOXYjWAWV6B3E97lIUBl4",
+      "post_id": "1wexRyCPB1kRJ3UqS0Z0J72mDaoQfHGtBms3qr6dT7e4",
+      "readback": "ORIGINAL_TEXT_PRESERVED_AND_ADDENDUM_EXACT"
+    }
+  ],
+  "new_docs": [
+    {
+      "slug": "rupesh-man-pradhan",
+      "kind": "AUDIT",
+      "id": "1jFqm-JJBQdyxO77V3TwVhcDdducj0rmuwHL0NsfRpg0",
+      "post_id": "1RWRbBt6pZvoArLOzfrJW-VINjbvwaOqc0uHFfPmo4ks",
+      "readback": "CONTENT_VERIFIED_WITH_NATIVE_TRAILING_NEWLINE_AND_PARENT_VERIFIED"
+    },
+    {
+      "slug": "rupesh-man-pradhan",
+      "kind": "DISCUSSION",
+      "id": "1oWC4YJfoNHCv6CT0GkCe_Ikt6D23FFS7E929g1N7gQ8",
+      "post_id": "1LUnattJe3lC8bMf8mmaPw4tjak3P3Ym5bsNsgaLwSUg",
+      "readback": "CONTENT_VERIFIED_WITH_NATIVE_TRAILING_NEWLINE_AND_PARENT_VERIFIED"
+    },
+    {
+      "slug": "krishna-kumar-gupta",
+      "kind": "AUDIT",
+      "id": "1TKFJGcSFbDmoiQJYcftOopsT7oCXB8ApSkV9VbLjqLg",
+      "post_id": "15JnuZchMRn5hloe8yOVQTcJekxYvzntxmK_z7RoVI4Y",
+      "readback": "CONTENT_VERIFIED_WITH_NATIVE_TRAILING_NEWLINE_AND_PARENT_VERIFIED"
+    },
+    {
+      "slug": "krishna-kumar-gupta",
+      "kind": "DISCUSSION",
+      "id": "1PvbvLLrgx6yUG4XHkICxq260TDuFN5USa-g_Oe9WWJI",
+      "post_id": "1CXJYd0FeyAPvNCTpAVThxW2nhvJlz_dqgCmmWBBYiJo",
+      "readback": "CONTENT_VERIFIED_WITH_NATIVE_TRAILING_NEWLINE_AND_PARENT_VERIFIED"
+    },
+    {
+      "slug": "sandip-gurung",
+      "kind": "AUDIT",
+      "id": "1eKFQTFW1h9aWhCUAtsWTvyh-MbGjcy4z8bKNxFn38fI",
+      "post_id": "1m53dULx5frScU8DJJwgkqE2YGloCYxtB5o7v5zaGl74",
+      "readback": "CONTENT_VERIFIED_WITH_NATIVE_TRAILING_NEWLINE_AND_PARENT_VERIFIED"
+    },
+    {
+      "slug": "sandip-gurung",
+      "kind": "DISCUSSION",
+      "id": "1wScw2xkYyQngfZ-Ji72ux9IA_iBem3LAg_dZtuOFQNE",
+      "post_id": "1Omb-AAJEpdRSuwpWkTjOXrHZyR9uVq1anwafwrel3Jw",
+      "readback": "CONTENT_VERIFIED_WITH_NATIVE_TRAILING_NEWLINE_AND_PARENT_VERIFIED"
+    }
+  ],
+  "source_archives": [
+    {
+      "slug": "fabin-gurung",
+      "id": "1PlgWYREUuB3ph49rmHHudINz3kTrcxhZ"
+    },
+    {
+      "slug": "saugat-paneru",
+      "id": "1gPl9iC1PzJGWVC8CywPl1YwNfUR4wiWC"
+    },
+    {
+      "slug": "nabin-bista",
+      "id": "14kVarX0KLPKO4BqFbhJ-b9i82QFa39fd"
+    },
+    {
+      "slug": "shisheer-kc",
+      "id": "1QcmOIFRovqJT_D9EryKAfVC9Rru0h4mw"
+    },
+    {
+      "slug": "binay-karki",
+      "id": "1n2dhxKAHZoUvgck1aikPFs9_EG6ScArI"
+    },
+    {
+      "slug": "anil-neupane",
+      "id": "1woHpc0P8MuleKZP0F03ri5szo2WztVhB"
+    },
+    {
+      "slug": "rupesh-man-pradhan",
+      "id": "1E5TnrNhQABHvURIRuQqHPWft3BTy2AUT"
+    },
+    {
+      "slug": "krishna-kumar-gupta",
+      "id": "1CSWSIVbp9wWLTBX7LRO1-d029KF1lQYg"
+    },
+    {
+      "slug": "safal-dawadi",
+      "id": "1zgV-LpHa8Jw82R6Cr2p28Dxth0QQXRdT"
+    }
+  ],
+  "saugat_m42": {
+    "pdf_drive_id": "1xMlRg5UmibEqUEv_wR1v1DYfdCp1rwmg",
+    "source_zip_drive_id": "14z5qlGkgLL2Gkg94nrQ5mxaoPRYY8uA7",
+    "pdf_sha256": "81cebc8f0fffbaa6d7f76f21012b183353832297aa09e4be39c8fa4f6fb6eb67",
+    "source_zip_sha256": "8e7427b961a5e021d166cb45fd4840b984379f1d45dc6c8ef6e0a550141d3d98",
+    "provider_byte_readback": "PASS_BOTH_SHA256",
+    "compiled_this_run": false,
+    "production_promotion": false
+  },
+  "notes": {
+    "fabin-gurung": "Downloaded v0.9 WORKING source package and checked ZIP contents. It has local formatting and does not load the canonical shared style. It needs a separately validated template migration; existing PDF is not certified against the latest tower.",
+    "saugat-paneru": "Live stable CURRENT_CHECKPOINT readback identifies M4 S03, 115-page print proof, PDF 1QLnRQrXQm9Y_gqrCLzcEjkht6MlXIkjk; source ZIP 1cZSTfvecU3Gv29SxHVNbOyWBQbELY6Wa. Earlier M3-current statements below are historical. M4.1 and M4.2 remain separate draft PRs #61/#66. Recovered M4.2 source ZIP SHA256 8e7427b961a5e021d166cb45fd4840b984379f1d45dc6c8ef6e0a550141d3d98 and PDF SHA256 81cebc8f0fffbaa6d7f76f21012b183353832297aa09e4be39c8fa4f6fb6eb67 match the existing audit. M4.2 includes the exact live shared style bytes, but its 114-page PDF uses a fallback font and is not the production CURRENT.",
+    "nabin-bista": "Downloaded and opened LATEX_SEQ056 complete source ZIP, SHA256 0b858d405109dc3e5888578bcbe646ec99d0ecdf70a20430fcee07c7079a2fc5. Its main.tex has local formatting and does not load pumlsc-shared. SEQ056 is the latest separately compiled release recorded in Git, not a new promotion of the historical stable CURRENT. The 057 dry-run candidate is not allocated. Full template migration and candidate PDF regression are still required.",
+    "binay-karki": "R10.1 is the registered controlled working release; R10.2 is a separate preview, not an automatic CURRENT replacement. Source metadata and release locations were inspected. Exact shared-template inheritance and rendered compliance of these releases remain to be established from a complete verified package. Do not treat a metadata read or a GEE code change as executed science.",
+    "shisheer-kc": "Downloaded CKPT14 source ZIP, SHA256 3db3c57a313f43b64c0ac2a19959d41969730e1b48e70a2d3c46fb9bcc172b7f. It uses a project-local pu_fst_thesis style rather than the canonical shared style. CKPT15 phase 4 remains a separately registered candidate. Reconcile that candidate and current scope before migration. CKPT labels are not verified Git LaTeX sequence numbers.",
+    "anil-neupane": "Downloaded R2.3 source ZIP, SHA256 ae5c59ddbfc490c32c9db0701797296ffbd14414f3e8192c92111c89e3894458. It does not load the shared pumlsc-shared style. R2.3 remains a researcher review candidate; R2.1 QA is historical supporting evidence, not certification against today's controls. Formatting migration must preserve equations, numerical values, citations and scientific uncertainty.",
+    "sunil-rana": "The registered active source is DOCX-first v0.1, with a separately registered candidate DOCX and scientific audit/researcher-action PDFs. No admitted buildable LaTeX project or compiled LaTeX PDF was established. Apply current semantic rules to any new authoring, but do not claim a LaTeX migration or completed NLTHA results from enrollment.",
+    "safal-dawadi": "Downloaded v1.12 source ZIP, SHA256 b6330b91e12b5a4b0038a6caf9ad2020c4621d144cf47c0d8cec55d027a6b9bb. It loads the shared style but its packaged style bytes differ from current main. It also differs from the Git manuscript scan; zero flags in this ZIP does not erase the 49 advisory flags in the previously scanned Git source. Reconcile the owner-specific source baseline and private photos before rebuilding; scientific acceptance remains separate."
+  },
+  "scope": "Artifact inventory and operational Doc synchronization; NOT blanket template migration or PDF certification",
+  "template": {
+    "version": "2.4.0",
+    "git_blob_sha": "6fb77b6f09773e29bd1159a4dc4ec2d7f773aa06",
+    "sha256": "89f0db8fc67b2fb56081fd58bf23963711189bbcf8fe561bc0011ae396b4b226"
+  },
+  "policy_version": "1.1.0",
+  "archive_inspections": [
+    {
+      "slug": "anil-neupane",
+      "bytes": 20817701,
+      "sha256": "ae5c59ddbfc490c32c9db0701797296ffbd14414f3e8192c92111c89e3894458",
+      "files": 110,
+      "tex_files": 11,
+      "style_paths": [],
+      "style_matches_current": false,
+      "shared_style_importers": [],
+      "advisory_flags": [
+        {
+          "file": "chapters/body.tex",
+          "line": 1982,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not provided",
+          "level": "REVIEW"
+        }
+      ]
+    },
+    {
+      "slug": "binay-karki",
+      "bytes": 19467415,
+      "sha256": "07fdb5e17e0f6549fc925fc67bebd472f40282796c1a8d8ec07e45fcf935fa89",
+      "files": 303,
+      "tex_files": 27,
+      "style_paths": [],
+      "style_matches_current": false,
+      "shared_style_importers": [],
+      "advisory_flags": [
+        {
+          "file": "23_methodology.tex",
+          "line": 37,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "23_methodology.tex",
+          "line": 83,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "27_appendices.tex",
+          "line": 12,
+          "rule": "STUDENT_SELF_THIRD_PERSON_REVIEW",
+          "sample": "the researcher is",
+          "level": "REVIEW"
+        }
+      ]
+    },
+    {
+      "slug": "fabin-gurung",
+      "bytes": 4972773,
+      "sha256": "b62e3c1398634ea5bed21bbba26cc121b8e5692459d58bae3691d27f7621929a",
+      "files": 101,
+      "tex_files": 38,
+      "style_paths": [],
+      "style_matches_current": false,
+      "shared_style_importers": [],
+      "advisory_flags": []
+    },
+    {
+      "slug": "krishna-kumar-gupta",
+      "bytes": 24053701,
+      "sha256": "7447df3dd76d5ba26df5f83780215f931b6b480b3d2254a0284919796c341e18",
+      "files": 213,
+      "tex_files": 43,
+      "style_paths": [],
+      "style_matches_current": false,
+      "shared_style_importers": [],
+      "advisory_flags": []
+    },
+    {
+      "slug": "nabin-bista",
+      "bytes": 83536672,
+      "sha256": "0b858d405109dc3e5888578bcbe646ec99d0ecdf70a20430fcee07c7079a2fc5",
+      "files": 227,
+      "tex_files": 30,
+      "style_paths": [],
+      "style_matches_current": false,
+      "shared_style_importers": [],
+      "advisory_flags": []
+    },
+    {
+      "slug": "rupesh-man-pradhan",
+      "bytes": 4003801,
+      "sha256": "86c2084e2d5d47572e5b40c7165bf2e986b110dbeab0f8173ce9a04e10cb54f0",
+      "files": 24,
+      "tex_files": 1,
+      "style_paths": [],
+      "style_matches_current": false,
+      "shared_style_importers": [],
+      "advisory_flags": [
+        {
+          "file": "RUPESH_MAN_PRADHAN_THESIS__FINAL_CURRENT_v0.2.3.tex",
+          "line": 635,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        }
+      ]
+    },
+    {
+      "slug": "safal-dawadi",
+      "bytes": 2435644,
+      "sha256": "b6330b91e12b5a4b0038a6caf9ad2020c4621d144cf47c0d8cec55d027a6b9bb",
+      "files": 46,
+      "tex_files": 22,
+      "style_paths": [
+        "controls/latex/template/pumlsc-shared.sty"
+      ],
+      "style_matches_current": false,
+      "shared_style_importers": [
+        "manuscript/main.tex",
+        "manuscript/safal_dependencies.tex",
+        "extensions/safal-linebreak.tex"
+      ],
+      "advisory_flags": []
+    },
+    {
+      "slug": "saugat-paneru",
+      "bytes": 58666533,
+      "sha256": "8561e50e971146f36c021282084aadd6a29fda41abe4e72779ae3bb93b3c0172",
+      "files": 231,
+      "tex_files": 34,
+      "style_paths": [
+        "pumlsc-shared.sty"
+      ],
+      "style_matches_current": true,
+      "shared_style_importers": [
+        "main.tex"
+      ],
+      "advisory_flags": [
+        {
+          "file": "cp112_additions/ch4_pp_hinge.tex",
+          "line": 19,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "available analysis records",
+          "level": "REVIEW"
+        },
+        {
+          "file": "cp112_additions/ch4_pp_hinge.tex",
+          "line": 30,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "cp112_additions/ch3_pushover_detail.tex",
+          "line": 5,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "available analysis records",
+          "level": "REVIEW"
+        },
+        {
+          "file": "chapters/chapter2_literature_review.tex",
+          "line": 45,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "chapters/chapter5_conclusion.tex",
+          "line": 12,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "chapters/chapter4_results_discussion.tex",
+          "line": 248,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "chapters/chapter4_results_discussion.tex",
+          "line": 270,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        }
+      ]
+    },
+    {
+      "slug": "shisheer-kc",
+      "bytes": 8567298,
+      "sha256": "3db3c57a313f43b64c0ac2a19959d41969730e1b48e70a2d3c46fb9bcc172b7f",
+      "files": 235,
+      "tex_files": 50,
+      "style_paths": [],
+      "style_matches_current": false,
+      "shared_style_importers": [],
+      "advisory_flags": [
+        {
+          "file": "shisheer_ckpt12_work/internal_control/internal_control_notes.tex",
+          "line": 20,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        }
+      ]
+    }
+  ],
+  "all_researcher_manuscripts_and_pdfs_up_to_date": false,
+  "sequence_allocations": 0,
+  "production_promotions": 0
+}
