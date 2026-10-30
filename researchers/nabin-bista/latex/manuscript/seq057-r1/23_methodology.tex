@@ -1,0 +1,180 @@
+\chapter{METHODOLOGY}
+\section{Study Design}
+The assessment follows the sequence of model definition, support-spring representation, modal comparison, response-spectrum analysis, gravity-load response examination and fragility interpretation. This ordering relates each research question to its corresponding engineering demand parameter and preserves a consistent baseline for comparing the four support cases.
+
+The six structural blocks of the Infectious and Communicable Disease Hospital were analysed for fixed-base, hard-soil, medium-soil and soft-soil support conditions. Modal, response-spectrum and gravity-load results were compared to evaluate the influence of foundation flexibility on natural period, displacement, inter-storey drift, shear, settlement and member forces. Fragility relationships were considered as a complementary measure of seismic performance.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth,height=0.60\textheight,keepaspectratio]{figures/ch3/analysis_flowchart_seq057.pdf}
+\caption{Research methodology for evaluating soil--structure interaction and seismic fragility across the six hospital blocks}
+\label{fig:research_method_flowchart}
+\end{figure}
+\FloatBarrier
+
+\section{Hospital and Structural Configuration}
+The case study is the existing \textbf{Infectious and Communicable Disease Hospital} in Mohoriya, Lekhnath, Pokhara Metropolitan City--30, Kaski, Gandaki Province. The hospital is also known under its later institutional name, Provincial General and Communicable Disease Hospital. The submitted architectural plan identifies six structural blocks modelled as G+4 (ground plus four upper floors).\footnote{Provincial hospital institutional website and contact details: \url{https://icdh.gandaki.gov.np/} and \url{https://icdh.gandaki.gov.np/contact}.}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.90\textwidth,page=1]{seq050_assets/submitted_plan.pdf}
+\caption{Architectural plan of the G+4 hospital, showing the six submitted blocks}
+\label{fig:hospital_plan_methodology}
+\end{figure}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=0.74\textwidth]{seq050_assets/b1_new.png}
+\caption{Three-dimensional structural representation of Block 1; views for all six blocks appear in the appendix}
+\label{fig:hospital_3d_methodology}
+\end{figure}
+
+Each block was evaluated as a separate structural model, consistent with the building plan. The member dimensions entered for each block are summarized in Table~\ref{tab:member_dimensions_methodology}. The blocks were compared individually to account for differences in their structural configurations.
+
+\begingroup
+\normalsize
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{@{}p{1.15cm}p{3.15cm}>{\raggedright\arraybackslash}p{9.0cm}@{}}
+\caption{Principal structural member dimensions of the six hospital blocks}\label{tab:member_dimensions_methodology}\\
+\toprule
+Block & Member type & Dimensions (mm) \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\normalsize Table 3.1 continued}\\
+\toprule
+Block & Member type & Dimensions (mm) \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+1 & Columns & 700$\times$700, 750$\times$750 \\
+ & Beams & 350$\times$550; 400$\times$800; 350$\times$700; 300$\times$500; 350$\times$650; 250$\times$550; 250$\times$350 \\
+ & Wall thickness & 200 \\
+ & Slab thickness & 150 \\
+\addlinespace[0.35em]
+2 & Columns & 700$\times$700, 550$\times$550 \\
+ & Beams & 400$\times$700; 350$\times$650; 300$\times$500; 500$\times$800; 300$\times$450; 350$\times$500; 250$\times$350 \\
+ & Wall thickness & -- \\
+ & Slab thickness & 150 \\
+\addlinespace[0.35em]
+3 & Columns & 700$\times$700 \\
+ & Beams & 350$\times$600; 400$\times$800; 400$\times$750; 350$\times$550; 300$\times$500; 250$\times$500; 250$\times$350 \\
+ & Wall thickness & -- \\
+ & Slab thickness & 150 \\
+\addlinespace[0.35em]
+4 & Columns & 600$\times$600, 650$\times$650 \\
+ & Beams & 350$\times$600; 350$\times$650; 400$\times$750; 250$\times$450; 250$\times$350 \\
+ & Wall thickness & -- \\
+ & Slab thickness & 150 \\
+\addlinespace[0.35em]
+5 & Columns & 700$\times$700 \\
+ & Beams & 350$\times$550; 400$\times$750; 300$\times$500; 350$\times$650; 350$\times$500; 300$\times$450; 250$\times$350 \\
+ & Wall thickness & 200 \\
+ & Slab thickness & 150 \\
+\addlinespace[0.35em]
+6 & Columns & 700$\times$700, 550$\times$550 \\
+ & Beams & 350$\times$550; 400$\times$750; 300$\times$450; 250$\times$350; 350$\times$450 \\
+ & Wall thickness & 200 \\
+ & Slab thickness & 150 \\
+\addlinespace[0.35em]
+\end{longtable}
+\noindent\textit{Note:} ``--'' = wall not specified. The staircase slabs in Blocks 1 and 6 and the ramp slab in Block 2 are 175~mm thick.
+\endgroup
+
+
+
+\section{Numerical Model}
+The three-dimensional reinforced-concrete numerical models of the hospital blocks were developed using ETABS v22, a finite-element-based structural analysis program. The six blocks shown in the architectural plan were represented separately. Structural members include beams, columns and slabs, with shear-wall elements where indicated in the submitted structural dimensions. Member sections were assigned according to Table~\ref{tab:member_dimensions_methodology}; the foundation-support properties follow Table~\ref{tab:spring_stiffness_methodology}. Building geometry, imposed gravity loads and seismic loading definitions were taken from the corresponding researcher-supplied model schedules.
+
+For each block, the fixed-base idealization restrains foundation movement and provides the reference response. Flexible-base cases represent hard, medium and soft soil using directional translational and rotational foundation springs. In generalized coordinates, the foundation stiffness may be expressed as
+\begin{equation}
+\mathbf{K}_f=\operatorname{diag}(K_x,K_y,K_z,K_{\theta x},K_{\theta y},K_t),
+\label{eq:foundation_six_dof}
+\end{equation}
+\RegisterThesisEquation{Six-degree-of-freedom foundation spring matrix}
+where the first three terms represent translational restraint and the final three represent rocking and torsion about the relevant local axes. This diagonal description is the idealized uncoupled six-degree-of-freedom spring model; it should not be interpreted as a measured full impedance matrix for the as-built foundation.
+
+The Winkler idealization relates soil reaction locally to displacement, whereas the equivalent directional foundation impedances are informed by the Gazetas (1991) elastic-foundation framework \cite{wolf1985,gazetas1991}. The reported input schedules provide the actual six spring-stiffness components for each block and soil condition. The specified stiffness coefficients define the hard-, medium- and soft-soil analytical cases; these models idealize the supporting soil through linear elastic springs. Figure~\ref{fig:winkler_gazetas_schematic} illustrates the mechanical distinction.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/ch2/winkler_gazetas_schematic.pdf}
+\caption{Conceptual Winkler springs and six-component equivalent foundation restraint for flexible-base structural modelling (schematic; not to scale).}
+\label{fig:winkler_gazetas_schematic}
+\end{figure}
+
+\subsection{Analysis cases and response quantities}
+Modal analysis provides natural periods and cumulative participating mass ratios in the two horizontal directions. Response-spectrum analysis gives the horizontal displacement, inter-storey drift, base reaction and storey-shear response for the specified X and Y cases. The independent $1.2DL+1.5LL$ gravity combination provides base-joint settlement, vertical reaction and beam/column member-force components. Each set of results is tabulated against its own load-case definition to prevent the erroneous use of gravity results as earthquake results. The X-labelled fragility workbooks provide source curves for comparative interpretation; new probabilistic fits are not inferred from the response-spectrum maxima alone.
+
+\subsection{Verification boundaries}
+Numerical comparison proceeds in three stages: first, confirm the block and support-case identity of every result; second, preserve each component's physical unit, direction and loading-case definition; third, compare trends within a block rather than across unrelated geometries. Comparisons retain each block's original analytical identity and loading condition. The assessment is based on the defined analytical models rather than a direct measurement of the completed hospital.
+
+\section{Foundation-Support Representation}
+Soil--structure interaction is represented by springs describing translational, rocking and torsional foundation restraint. The fixed-base case provides the comparison reference; the flexible-base cases are categorized as hard, medium and soft soil. The discrete-spring concept is compatible with substructure SSI modelling \cite{wolf1985,gazetas1991}. The model incorporates the translational and rotational spring stiffnesses assigned to the foundation for each soil condition.
+
+The spring-stiffness matrix includes six components ($K_x$, $K_y$, $K_z$, $K_{\theta x}$, $K_{\theta y}$ and $K_t$) for each of three flexible-support conditions in every block. Table~\ref{tab:spring_stiffness_methodology} presents all 18 block/soil rows, for the six structural blocks.
+
+\begin{table}[p]
+\caption{Foundation spring input values by block and soil condition (Table 3.4)}
+\label{tab:spring_stiffness_methodology}\centering\tiny
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{clrrrrrr}
+\hline\hline
+Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \\ \hline
+1 & Hard & 3392594.941 & 3392594.941 & 6753250.000 & 16392119.903 & 16957365.417 & 38025034.110 \\
+1 & Medium & 663832.430 & 663832.430 & 1381207.692 & 3352596.469 & 3468203.244 & 7777065.800 \\
+1 & Soft & 169629.747 & 169629.747 & 370766.667 & 899959.524 & 930992.611 & 2087648.932 \\
+2 & Hard & 3392594.941 & 3392594.941 & 6753250.000 & 16392119.903 & 16957365.417 & 38025034.110 \\
+2 & Medium & 663832.430 & 663832.430 & 1381207.692 & 3352596.469 & 3468203.244 & 7777065.800 \\
+2 & Soft & 169629.747 & 169629.747 & 370766.667 & 899959.524 & 930992.611 & 2087648.932 \\
+3 & Hard & 4119579.600 & 4119579.600 & 9004333.333 & 28546821.100 & 29531194.200 & 66220467.570 \\
+3 & Medium & 758665.634 & 758665.634 & 1578523.077 & 5004458.869 & 5177026.416 & 11608914.547 \\
+3 & Soft & 193862.568 & 193862.568 & 423733.333 & 1343379.814 & 1389703.256 & 3116257.297 \\
+4 & Hard & 4119579.600 & 4119579.600 & 9004333.333 & 28546821.100 & 29531194.200 & 66220467.570 \\
+4 & Medium & 758665.634 & 758665.634 & 1578523.077 & 5004458.869 & 5177026.416 & 11608914.547 \\
+4 & Soft & 193862.568 & 193862.568 & 423733.333 & 1343379.814 & 1389703.256 & 3116257.297 \\
+5 & Hard & 2907938.521 & 2907938.521 & 5788500.000 & 10322734.400 & 10678690.758 & 23945794.075 \\
+5 & Medium & 568999.226 & 568999.226 & 1183892.308 & 2111256.085 & 2184058.019 & 4897510.824 \\
+5 & Soft & 145396.926 & 145396.926 & 317800.000 & 566738.359 & 586281.061 & 1314671.047 \\
+6 & Hard & 2907938.521 & 2907938.521 & 5788500.000 & 10322734.400 & 10678690.758 & 23945794.075 \\
+6 & Medium & 568999.226 & 568999.226 & 1183892.308 & 2111256.085 & 2184058.019 & 4897510.824 \\
+6 & Soft & 145396.926 & 145396.926 & 317800.000 & 566738.359 & 586281.061 & 1314671.047 \\
+\hline\hline
+\end{tabular}}
+\par\smallskip\footnotesize The numerical values represent the translational and rotational spring stiffnesses used in the foundation models.
+\end{table}
+
+
+\section{Modal Response Extraction and Comparison}
+Modal analysis results were evaluated separately for each block and foundation-support condition. The first-mode period $T_{1,b,s}$ is extracted using the row and column headings of the actual worksheet. For every case, the smallest modal number with both horizontal cumulative participating-mass ratios at or above 0.90 is recorded. 
+
+The percentage change in period from fixed to a flexible support case is computed within the same block as
+\begin{equation}
+\Delta T_{b,s}=100\frac{T_{1,b,s}-T_{1,b,\mathrm{fixed}}}{T_{1,b,\mathrm{fixed}}}\,\%,
+\label{eq:ssi_sensitivity}
+\end{equation}
+\RegisterThesisEquation{Percentage change in fundamental period}
+where $b$ identifies the block and $s$ denotes hard, medium or soft support. No percentage comparison is calculated between unrelated blocks or between physically different output quantities.
+
+\section{Response Charts and Drift Screening}
+Displacement, drift and fragility relationships were examined for the different foundation-support conditions. The displacement and drift responses were obtained from the corresponding directional analyses, while fragility relationships were examined separately for each structural block. The relevant results are presented graphically in Chapter~4 and the appendices.
+
+The adopted inter-storey drift ratio (ISDR) performance classification is shown in Table~\ref{tab:legacy_isdr_performance_bands}. Immediate Occupancy (IO), Life Safety (LS) and Collapse Prevention (CP) are standard performance concepts \cite{fema356}, whereas the numerical percentages below are the study's adopted ISDR screening intervals.
+
+\begin{table}[htbp]
+\caption{Study-adopted ISDR performance bands for fragility screening (Table 3.5)}
+\label{tab:legacy_isdr_performance_bands}\centering
+\begin{tabular}{lc}
+\hline\hline
+Performance level & Maximum ISDR \\ \hline
+Immediate Occupancy (IO) & $\leq 1.0\%$ \\
+Life Safety (LS) & $>1.0\%$ to $\leq 2.0\%$ \\
+Collapse Prevention (CP) & $>2.0\%$ to $\leq 4.0\%$ \\
+Collapse / Failure (beyond CP) & $>4.0\%$ \\ \hline\hline
+\end{tabular}
+\end{table}
+
+The ISDR bands are descriptive demand categories. The adopted screening limits are used to interpret drift demand; fragility probabilities are interpreted according to the damage-state definitions associated with their respective curves.
+
+\section{Interpretation Procedure}
+Results are organized by block number, support case, output quantity, and original load case. For the response-spectrum displacement results, the reported response at the greatest listed storey elevation is extracted separately from the RS-X X-component and RS-Y Y-component tables. For response-spectrum drift, the maximum absolute reported storey drift ratio is identified separately for the same response cases and converted to percent. Base shear is read from the response-spectrum maximum FX (RS-X) and FY (RS-Y) base-reaction rows; the largest absolute response-spectrum storey-shear value is selected from the corresponding storey rows without summation across floors.
+
+Foundation settlements are the largest absolute base-joint Uz displacement, vertical reactions are the FZ component, and beam and column force envelopes are maximum absolute member-force components at the source-recorded element stations, all under the independent \texttt{1.2DL + 1.5LL} combination. These gravity-combination outputs are not relabelled as response-spectrum results. The controlling member forces were evaluated for each block and support condition. Results from inconsistent model assignments were excluded from direct quantitative comparison.
