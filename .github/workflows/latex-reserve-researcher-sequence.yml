@@ -1,5 +1,10 @@
 name: Reserve numbered researcher LaTeX branch
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/latex-reserve-researcher-sequence.yml'
+      - 'scripts/latex/researcher_sequence.py'
   workflow_dispatch:
     inputs:
       researcher_slug:
@@ -28,7 +33,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   bootstrap:
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -66,3 +71,27 @@ jobs:
         run: |
           echo 'This action writes only a sequence reservation on main and a separate researcher manifest branch when dry_run=false.'
           echo 'It never changes thesis science, the shared style source, an approved CURRENT PDF, or Drive files.'
+  live-dry-run-smoke:
+    if: github.event_name == 'push'
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exercise allocator without creating any new research version
+        run: |
+          set -euo pipefail
+          python scripts/latex/researcher_sequence.py --check
+          python scripts/latex/researcher_sequence.py --self-test
+          python scripts/latex/researcher_sequence.py --dry-run --slug saugat-paneru --topic smoke-test-no-write
+          python scripts/latex/researcher_sequence.py --dry-run --slug nabin-bista --topic smoke-test-no-write
+          if python scripts/latex/researcher_sequence.py --dry-run --slug shisheer-kc --topic should-block; then
+            echo 'FAIL: unverified baseline got a sequence'
+            exit 1
+          fi
+          echo 'PASS: two known baselines previewed; unverified baseline held; zero writes'
