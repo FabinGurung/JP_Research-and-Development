@@ -1,0 +1,43 @@
+% --- AUTOMATIC APPENDIX 10: TABLE OF CONTENT PAGE ---
+\begin{titlepage}
+\phantomsection\label{front:contents}
+    \thispagestyle{plain} % Show roman page number on the first TOC page for print/binding
+    % PU Guidelines: Table of Contents section must use single line spacing (1 line)
+    \setstretch{1.0} 
+
+    \begin{center}
+        % Table of Contents Header (Times New Roman, 14 pts, Normal Bold)
+        {\fontsize{14}{18}\selectfont \textbf{Table of Contents}}
+    \end{center}
+
+    % 4 blank lines of 12 pts each
+    \vspace*{48pt} 
+
+    % Table Header Row (Times New Roman, 12 Pts, Normal Bold)
+    \noindent
+    {\fontsize{12}{14}\selectfont \textbf{Title}} \hfill {\fontsize{12}{14}\selectfont \textbf{Page}} \\[10pt]
+
+    % --- FRONT MATTER (Manual list since these pages do not have \chapter tags) ---
+    % Page numbers correspond to PU LATEX FORMAT CONTROL v1.0 pagination:
+    % title=i hidden; dedication=ii and not listed in TOC; continuous Roman numbering.
+    \noindent Declaration \hfill \pageref{front:declaration} \\
+    \noindent Recommendation \hfill \pageref{front:recommendation} \\
+    \noindent Certificate \hfill \pageref{front:certificate} \\
+    \noindent Acknowledgements \hfill \pageref{front:acknowledgements} \\
+    \noindent Abbreviations/Acronyms \hfill \pageref{front:abbreviations} \\
+    \noindent Abstract \hfill \pageref{front:abstract} \\
+    \noindent Table of contents \hfill \pageref{front:contents} \\
+    \noindent List of tables \hfill \pageref{front:tables} \\
+    \noindent List of figures \hfill \pageref{front:figures} \\
+    \noindent List of Equations \hfill \pageref{front:equations} \\
+    \noindent List of plates/pictures \hfill \pageref{front:plates} \\
+    \noindent List of Appendices \hfill \pageref{front:appendices} \\[12pt]
+
+    % --- AUTOMATIC MAIN BODY TEXT ---
+    % This command dynamically pulls all \chapter, \section, and \subsection 
+    % titles and live page numbers from 16_introduction.tex, etc.
+    \makeatletter
+    \@starttoc{toc}
+    \makeatother
+
+\end{titlepage}
