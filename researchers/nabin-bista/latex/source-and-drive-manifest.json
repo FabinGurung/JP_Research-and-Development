@@ -418,5 +418,30 @@
     },
     "preserved_historical_current_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
     "previous_pdf_id": "1k-YThec6zSPFeV_lcQc-dMw_uJ6Xz9Kk"
+  },
+  "seq057_review_candidate_20261031": {
+    "release_id": "LATEX_SEQ057",
+    "status": "REVIEW_ONLY__NOT_SUBMISSION_READY",
+    "parent": "LATEX_SEQ056",
+    "drive_parent_folder_id": "1vrT3n35mQJ3mEVKJRLmw_-4UW5rw7ucZ",
+    "pdf_drive_id": "1WEgcDK96ICCSxrTN8YwdRQ9vzg3YDukb",
+    "source_zip_drive_id": "16-eNIQkXEHcrOJJxeUVB2koPc3OddLB5",
+    "qa_report_drive_id": "1eS3rt3nNdC9yYnuRUdgpv8913eoWAtJt",
+    "crosscheck_csv_drive_id": "1GlROx1i3Wcg-Kme644q8SfVm1f8BV4pc",
+    "local_pdf_sha256": "9e3bff1effa47f93237e11b144b3d37ad876589bedbb62dc1dd89dba982552d2",
+    "local_source_zip_sha256": "eeb1fb578834c7463e3be5cc45a3c5b343de458869753be0cda70cb8c33fa5d0",
+    "local_qa_json_sha256": "c4f8781c4273f2e1abb45a5795160ae0a3ce39f178766d8ff2dcd477ebea9fc9",
+    "local_crosscheck_sha256": "87724b5c1d97845045f4c2df73e7dae272f412a4f4e54fad8021b2f25ef75900",
+    "provider_metadata_readback": "PASS_ID_NAME_SIZE_TYPE_PARENT",
+    "provider_download_byte_sha256": "NOT_VERIFIED",
+    "pdf_pages": 89,
+    "original_block3_researcher_correction": "Applied four Block3 RS-X/RS-Y rows from preserved DOCX",
+    "other_changes": "Wrap Table3.1; 24 smooth source-preserving fragility charts; additional literature, theory, methodology, Abstract; 360-entry numeric QA",
+    "exact_times_new_roman_status": "FAIL__NIMBUS_ROMAN_EMBEDDED_IN_REVIEW_PDF",
+    "native_submission_google_doc_status": "NOT_PARITY_CERTIFIED",
+    "scholarly_approval": "NOT_ESTABLISHED",
+    "historic_current_preserved": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "latest_accepted_release_unchanged": "LATEX_SEQ056",
+    "caution": "Private full scientific binaries and source remain in Drive, not public Git."
   }
 }
