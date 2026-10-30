@@ -28,7 +28,7 @@ def out(args: list[str]) -> str:
 
 
 def changed(base: str, head: str) -> list[str]:
-    return [s for s in out(["diff", "--name-only", "--diff-filter=ACMRT", base + "..." + head]).splitlines() if s]
+    return [s for s in out(["diff", "--name-only", "--diff-filter=ACMRTD", base + "..." + head]).splitlines() if s]
 
 
 def sources(files: list[str]) -> set[str]:

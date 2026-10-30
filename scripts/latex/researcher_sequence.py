@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """One-repository per-researcher LaTeX sequence reservation. No science/PDF mutation.
 
-Dry-run/check modes use only local files. --reserve uses GitHub's Contents API
-with the previous blob SHA, fails closed if the branch cannot be created, and
-never force-pushes or reuses an abandoned/reserved integer.
+Dry-run/check modes use only local files. --reserve opens a ledger-only PR.
+--finalize bootstraps only an accepted reservation from canonical main.
+Neither writes directly to main or force-pushes.
 """
 from __future__ import annotations
 import argparse
@@ -13,7 +13,6 @@ import json
 import os
 import re
 import sys
-import time
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import quote
@@ -173,63 +172,114 @@ class Github:
         return a["commit"]["sha"]
 
 
-def reserve(slug: str, topic: str, make_pr: bool) -> None:
+def require_action():
     if os.getenv("GITHUB_ACTIONS") != "true" or os.getenv("GITHUB_REF") != "refs/heads/main":
         raise RuntimeError("Reservation must run via authorized GitHub Actions from main")
-    key = "gha:" + os.environ["GITHUB_RUN_ID"]
-    gh = Github()
-    enrolled = load("registry/researchers.json")["researchers"]
-    info = None
-    for attempt in range(10):
-        current_main = gh.main_sha()
-        obj, original = gh.file(LEDGER, "main")
-        data = json.loads(original)
-        validate(data, enrolled)
-        row = next((x for x in data["researchers"] if x["slug"] == slug), None)
-        if row is None:
-            raise RuntimeError("Unregistered researcher")
-        # Fail closed if another process committed a researcher release or manifest
-        # to the remote main tree without reconciling the sequence register first.
-        tree, tree_status = gh.api("GET", "/git/trees/" + current_main + "?recursive=1")
-        if tree_status != 200:
-            raise RuntimeError("CANNOT_VERIFY_CURRENT_MAIN_RELEASE_TREE")
-        verify_remote_releases_reconciled(tree, row)
-        existing = next((x for x in row["reservations"] if x["request_key"] == key), None)
-        if existing is not None:
-            info = dict(existing)
-            print("IDEMPOTENT_EXISTING_RESERVATION " + json.dumps(info))
-            break
-        info = plan(data, slug, topic)
-        branchcheck, status = gh.api("GET", "/git/ref/heads/" + quote(info["branch"], safe="/"))
-        if status != 404:
-            raise RuntimeError("Branch already exists or cannot verify uniqueness: " + info["branch"])
-        item = dict(info)
-        item.update({"status": "RESERVED", "request_key": key, "created_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
-                     "main_sha_at_reservation": current_main, "template_sha": None,
-                     "note": "No researcher science, PDF or Drive CURRENT changed"})
-        row["reservations"].append(item)
-        validate(data, enrolled)
-        newer = json.dumps(data, indent=2, ensure_ascii=False) + "\n"
-        result, status = gh.api("PUT", "/contents/" + quote(LEDGER), {
-            "message": "reserve(latex): {} seq{:03d} {}".format(slug, info["sequence"], normalize_topic(topic)),
-            "content": base64.b64encode(newer.encode()).decode(),
-            "sha": obj["sha"], "branch": "main"
-        })
-        if status in (409, 422):
-            print("CAS_CONFLICT_RETRY attempt=" + str(attempt + 1))
-            time.sleep(min(attempt + 1, 4))
-            continue
-        if status not in (200, 201):
-            raise RuntimeError("Reservation write failed (no branch created): " + str(result))
-        print("RESERVED " + json.dumps(info))
-        break
-    else:
-        raise RuntimeError("CAS_CONFLICT_EXHAUSTED: no sequence reused")
 
+
+def reservation_delta(before: dict, after: dict, request_branch: str) -> None:
+    """Exactly one next-number append; all previous history and policy immutable."""
+    import copy
+    expected = copy.deepcopy(before)
+    additions = []
+    for old, new in zip(before["researchers"], after["researchers"]):
+        if len(new["reservations"]) == len(old["reservations"]) + 1:
+            item = new["reservations"][-1]
+            match = BRANCH_RE.fullmatch(item.get("branch", ""))
+            if match is None:
+                raise ValueError("Malformed reservation branch")
+            candidate = plan(before, old["slug"], match.group(3))
+            if any(item.get(k) != v for k, v in candidate.items()):
+                raise ValueError("Reservation is not the next canonical sequence")
+            if item.get("status") != "RESERVED" or not item.get("request_key"):
+                raise ValueError("New reservation must have RESERVED state and request key")
+            if request_branch != "reservation/latex/" + item["request_key"].replace(":", "-"):
+                raise ValueError("Reservation branch/request key mismatch")
+            expected["researchers"][before["researchers"].index(old)]["reservations"].append(item)
+            additions.append(item)
+    if len(additions) != 1 or after != expected:
+        raise ValueError("Reservation PR must append exactly one entry without changing history")
+
+
+def reserve(slug: str, topic: str, make_pr: bool) -> None:
+    require_action()
+    gh = Github()
+    key = "gha:" + os.environ["GITHUB_RUN_ID"]
+    request_branch = "reservation/latex/" + key.replace(":", "-")
+    current_main = gh.main_sha()
+    obj, original = gh.file(LEDGER, current_main)
+    data = json.loads(original)
+    _, enrolled_text = gh.file("registry/researchers.json", current_main)
+    enrolled = json.loads(enrolled_text)["researchers"]
+    validate(data, enrolled)
+    row = next((x for x in data["researchers"] if x["slug"] == slug), None)
+    if row is None:
+        raise RuntimeError("Unregistered researcher")
+    tree, code = gh.api("GET", "/git/trees/" + current_main + "?recursive=1")
+    if code != 200:
+        raise RuntimeError("CANNOT_VERIFY_CURRENT_MAIN_RELEASE_TREE")
+    verify_remote_releases_reconciled(tree, row)
+    info = plan(data, slug, topic)
+    _, status = gh.api("GET", "/git/ref/heads/" + quote(info["branch"], safe="/"))
+    if status != 404:
+        raise RuntimeError("Researcher branch collision or uniqueness unavailable")
+    template, _ = gh.file(STYLE, current_main)
+    item = {**info, "status": "RESERVED", "request_key": key,
+            "created_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "main_sha_at_reservation": current_main, "template_sha": template["sha"],
+            "note": "Reservation effective only after this PR merges; no science/PDF change"}
+    row["reservations"].append(item)
+    validate(data, enrolled)
+    reservation_delta(json.loads(original), data, request_branch)
+    branch, code = gh.api("GET", "/git/ref/heads/" + quote(request_branch, safe="/"))
+    if code == 404:
+        branch, code = gh.api("POST", "/git/refs", {"ref": "refs/heads/" + request_branch, "sha": current_main})
+        if code != 201:
+            raise RuntimeError("Cannot create reservation proposal branch")
+        result, code = gh.api("PUT", "/contents/" + quote(LEDGER), {
+            "message": "reserve(latex): propose " + info["branch"],
+            "content": base64.b64encode((json.dumps(data, indent=2) + "\n").encode()).decode(),
+            "sha": obj["sha"], "branch": request_branch})
+        if code not in (200, 201):
+            raise RuntimeError("Reservation proposal write failed; retry/reconcile branch: " + str(result))
+    elif code == 200:
+        _, existing_text = gh.file(LEDGER, request_branch)
+        existing_data = json.loads(existing_text)
+        reservation_delta(json.loads(original), existing_data, request_branch)
+        existing = next(x for x in existing_data["researchers"] if x["slug"] == slug)["reservations"][-1]
+        if existing["request_key"] != key or existing["branch"] != info["branch"]:
+            raise RuntimeError("Existing request differs; reconcile instead of overwriting")
+    else:
+        raise RuntimeError("Cannot verify proposal branch")
+    prs, code = gh.api("GET", "/pulls?state=open&head=" + quote(gh.repo.split('/')[0] + ':' + request_branch))
+    if code != 200:
+        raise RuntimeError("Cannot inspect existing reservation PR")
+    if prs:
+        print("RESERVATION_PR " + prs[0]["html_url"])
+        return
+    result, code = gh.api("POST", "/pulls", {
+        "title": "Reserve " + info["branch"], "head": request_branch, "base": "main",
+        "body": "Ledger-only reservation proposal. Merge only through required validate on current main. Then run finalize with request key `" + key + "`. This PR does not admit science, create a researcher branch or promote CURRENT."})
+    if code != 201:
+        raise RuntimeError("Reservation PR creation failed: " + str(result))
+    print("RESERVATION_PR " + result["html_url"] + " REQUEST_KEY=" + key)
+
+
+def finalize(slug: str, key: str, make_pr: bool) -> None:
+    require_action()
+    gh = Github()
+    starting_sha = gh.main_sha()
+    _, text = gh.file(LEDGER, starting_sha)
+    data = json.loads(text)
+    _, enrolled = gh.file("registry/researchers.json", starting_sha)
+    validate(data, json.loads(enrolled)["researchers"])
+    row = next((x for x in data["researchers"] if x["slug"] == slug), None)
+    info = next((x for x in (row or {}).get("reservations", []) if x["request_key"] == key), None)
+    if info is None or info["status"] != "RESERVED":
+        raise RuntimeError("No accepted RESERVED entry for this owner/request on canonical main")
     branch = info["branch"]
     branch_ref, bstatus = gh.api("GET", "/git/ref/heads/" + quote(branch, safe="/"))
     if bstatus == 404:
-        starting_sha = gh.main_sha()
         branch_ref, bstatus = gh.api("POST", "/git/refs", {"ref": "refs/heads/" + branch, "sha": starting_sha})
         if bstatus != 201:
             raise RuntimeError("Sequence reserved but branch creation failed; manual recovery required: " + str(branch_ref))
@@ -262,8 +312,10 @@ def reserve(slug: str, topic: str, make_pr: bool) -> None:
             raise RuntimeError("Reserved/branch created but manifest write failed: " + str(result))
     elif st == 200:
         _, old = gh.file(manifest_path, branch)
-        if json.loads(old)["request_key"] != key:
-            raise RuntimeError("Manifest collision")
+        existing_manifest = json.loads(old)
+        for field in ("request_key", "slug", "sequence", "branch", "style_blob_sha"):
+            if existing_manifest.get(field) != manifest[field]:
+                raise RuntimeError("Manifest collision or template drift: " + field)
     else:
         raise RuntimeError("Cannot check manifest")
     print("BRANCH_READY " + branch + " STYLE_PIN=" + template["sha"])
@@ -359,6 +411,8 @@ def main():
     g.add_argument("--self-test", action="store_true")
     g.add_argument("--dry-run", action="store_true")
     g.add_argument("--reserve", action="store_true")
+    g.add_argument("--finalize", action="store_true")
+    p.add_argument("--request-key")
     p.add_argument("--slug")
     p.add_argument("--topic")
     p.add_argument("--create-pr", action="store_true")
@@ -371,6 +425,10 @@ def main():
     elif a.dry_run:
         validate(load(LEDGER), load("registry/researchers.json")["researchers"])
         print(json.dumps(plan(load(LEDGER), a.slug or "", a.topic or "")))
+    elif a.finalize:
+        if not a.slug or not a.request_key:
+            p.error("--finalize requires --slug and --request-key")
+        finalize(a.slug, a.request_key, a.create_pr)
     else:
         if not a.slug or not a.topic:
             p.error("--reserve requires --slug and --topic")

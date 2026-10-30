@@ -16,7 +16,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/fabin-gurung/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-002",
@@ -31,7 +34,10 @@
         "RD-LTX-EXT-SAUGAT-002"
       ],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/saugat-paneru/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-003",
@@ -43,7 +49,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/nabin-bista/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-004",
@@ -55,7 +64,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/safal-thapa/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-005",
@@ -67,7 +79,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/shisheer-kc/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-006",
@@ -79,7 +94,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/binay-karki/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-007",
@@ -91,7 +109,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/anil-neupane/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-008",
@@ -103,7 +124,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/rupesh-man-pradhan/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-009",
@@ -115,7 +139,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/krishna-kumar-gupta/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-010",
@@ -129,7 +156,10 @@
         "RD-LTX-EXT-SAFAL-001"
       ],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/safal-dawadi/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     },
     {
       "researcher_id": "RSH-011",
@@ -141,7 +171,10 @@
       "no_local_base_copy": true,
       "unique_extension_ids": [],
       "semantic_policy": "controls/latex/authorial-voice-policy.json",
-      "semantic_checker": "scripts/latex/check_authorial_voice.py"
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/sunil-rana/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     }
   ],
   "semantic_policy": "controls/latex/authorial-voice-policy.json",

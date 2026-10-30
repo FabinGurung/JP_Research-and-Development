@@ -148,3 +148,14 @@ This later readback **supersedes only the historical implementation-status sente
 **Regression boundaries:** Unit tests and source CI demonstrate reference checking and simulated collision/ownership failures without allocating any real number. One single inherited template blob exists at `controls/latex/template/pumlsc-shared.sty`, currently v2.4.0; template SHA pinning is covered by source policy but not a live release of every researcher. Full university-font PDF regression, all 144 rules, actual write-backed reservation, and all nine unknown baselines are separate pending gates. Do not mislabel CI as code compliance or institution approval.
 
 **A9 closeout:** This Git source-only governance repair does not update legacy A9 Local/Main Drive sequence/ACK cursors and must not fabricate one. Preserve the authoritative scientific Drive files, stable file IDs and CURRENT pointers. Any corresponding Drive audit receipt records the actual PR, check conclusions and pending administrator work; it does not become a second version-control tower.
+
+
+## Protected-main and all-researcher rollout — 2026-10-30
+
+This addendum supersedes earlier direct-main reservation instructions and old
+protection observations. Branch API readback confirms main protected with required
+`validate` for everyone. See [current engine procedure](RESEARCHER_ENGINE_READ_FIRST.md).
+All 11 owner entrypoints inherit the live tower and semantic policy, without
+changing frozen pins, scientific source, CURRENT or unverified sequence histories.
+Reservations now use a ledger-only PR, latest-base validation, then post-merge
+bootstrap. Actual write execution remains unverified; default is no-write.
