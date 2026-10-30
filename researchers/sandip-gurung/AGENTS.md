@@ -11,3 +11,7 @@ Research title: **Optimization of Post-Tensioned I-Girder Utilizing Steel Fibre 
 
 ## Working rules
 Inherit the repository root `AGENTS.md`, `docs/MEMORY_WALL.md`, `docs/RESEARCHER_ENGINE_READ_FIRST.md` and shared `controls/latex/tower.json`. This is a DOCX-first manuscript; no LaTeX sources are verified or admitted. Scientific, institution and submission approvals remain separate and unverified. Do not copy scientific content or numerical results from other researchers. Only Git-managed source and references belong here; binary originals remain in Drive.
+
+## Evidence-first execution
+
+Follow `docs/RESEARCHER_ENGINE_READ_FIRST.md` for all owner-specific Discussion, LaTeX and Presentation work. Ground every new scientific claim in Sandip's verified own-source pages or code, keep provenance and limitations attached, and do not claim that storage or successful PDF compilation is scientific acceptance.
