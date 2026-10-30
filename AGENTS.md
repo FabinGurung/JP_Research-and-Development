@@ -8,7 +8,7 @@ https://github.com/FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph/blob/ma
 Then resolve this module's `A7_MODULE.json`, current `CURRENT.json` and only the exact researcher/project control needed. Git tracks entire repository source history. Researcher folders share the main website codebase; named researcher branches are optional work/compatibility refs, not isolated databases. Compiled PDFs/PPTX and research originals remain in Google Drive. Do not copy private A9 documents into public GitHub. Historical A9 constraints remain in force for not-yet-reconciled Drive workflows.
 
 ## Single LaTeX authority
-For ANY thesis LaTeX preparation read `controls/latex/tower.json` and load **only** `controls/latex/template/pumlsc-shared.sty` as shared template. `controls/latex.control.json` is a routing alias. All 11 researcher entries inherit one shared control via `registry/latex-inheritance.json`; any researcher-origin visual/template fix must enter `controls/latex/change-register.json` as an ID >=101, then either update shared source after QA or register a researcher-only delta in `controls/latex/extension-registry.json`. A7 has no LaTeX control tower. Do not publish private data or fonts.
+For ANY thesis LaTeX preparation read `controls/latex/tower.json` and load **only** `controls/latex/template/pumlsc-shared.sty` as shared template. `controls/latex.control.json` is a routing alias. All registered researcher entries inherit one shared control via `registry/latex-inheritance.json`; any researcher-origin visual/template fix must enter `controls/latex/change-register.json` as an ID >=101, then either update shared source after QA or register a researcher-only delta in `controls/latex/extension-registry.json`. A7 has no LaTeX control tower. Do not publish private data or fonts.
 
 ## Binding approved 2026-10-09 rules (Q1B Q2A Q3A)
 Git `main` PRE/POST is the release history; do not create routine branches for snapshots. Use **annotated tags** only for accepted major releases via a supported tag-capable interface. Historical 106 refs are immutable until separately audited. `controls/latex/pu-format-parity-audit.json` maps 144/144 PU v1.13 source rules; source mapping is not a rendered production PDF certificate. Safal latest is v1.9 Local seq15 (Q1 B), pending provider byte verification before manuscript admission, not the old v1.2 or first uploaded v1.9 bytes. Public R&D Git may contain verified academic source `.tex` and `.bib`; do not insert artificial workflow/control text into research prose or invent evidence.
@@ -31,3 +31,14 @@ All lanes must follow the evidence-first execution contract in
 metadata lookup or compilation with verified scientific findings or approval.
 The reproducible governance/source audit is `scripts/latex/audit_researcher_engine.py`;
 dated receipts under `docs/audits/` are historical evidence, not a replacement tower.
+
+## Three submission representations and supporting records
+
+Read `docs/RESEARCHER_DELIVERABLES_READ_FIRST.md` and the existing Academic Writing
+parent tower's `controls/academic-writing/research-deliverables.json` before
+artifact creation or migration. RD-LTX-CORE-017 requires one admitted revision
+represented by complete LaTeX, compiled PDF and a separately verified native
+submission Google Doc. Audit/discussion, Colab and intake Sheets remain separate.
+Follow A7 stable live-ID / subject-numbered PRE/POST / restore-in-place principles.
+Enrollment is not conversion or release approval; exact Doc/PDF parity requires
+actual exported-PDF and native-content checks. Never copy a base template.

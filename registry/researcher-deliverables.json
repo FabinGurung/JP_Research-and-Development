@@ -1,0 +1,732 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "controls/academic-writing/research-deliverables.json",
+  "scope": "All registered owners; discovery inventory only. No new provider file, manuscript sequence or conversion created. Real release receipts remain private.",
+  "researchers": [
+    {
+      "researcher_id": "RSH-001",
+      "slug": "fabin-gurung",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-001/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-001/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-001/drive/presentation_pptx_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-002",
+      "slug": "saugat-paneru",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-002/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-002/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-002/drive/thesis_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-002/drive/editorial_evidence_audit_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-002/drive/discussion_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-003",
+      "slug": "nabin-bista",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-003/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-003/drive/current_compiled_pdf_drive_id",
+            "registry/researchers.json#RSH-003/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-003/drive/thesis_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-003/drive/discussion_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-004",
+      "slug": "safal-thapa",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-005",
+      "slug": "shisheer-kc",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-005/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-005/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-005/drive/presentation_pptx_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-006",
+      "slug": "binay-karki",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-006/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-006/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-006/drive/presentation_pptx_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-006/drive/discussion_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-007",
+      "slug": "anil-neupane",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-007/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-007/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-007/drive/presentation_pptx_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-008",
+      "slug": "rupesh-man-pradhan",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-008/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-008/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-008/drive/artifact_sync_audit_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-008/drive/discussion_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-009",
+      "slug": "krishna-kumar-gupta",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-009/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-009/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-009/drive/presentation_pptx_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-009/drive/artifact_sync_audit_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-009/drive/discussion_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-010",
+      "slug": "safal-dawadi",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-010/drive/latex_source_package_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-010/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-010/drive/presentation_pptx_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-010/drive/discussion_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-011",
+      "slug": "sunil-rana",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    },
+    {
+      "researcher_id": "RSH-012",
+      "slug": "sandip-gurung",
+      "contract": "controls/academic-writing/research-deliverables.json",
+      "status": "CONTRACT_ENROLLED__ARTIFACT_MIGRATION_AND_RELEASE_NOT_CERTIFIED",
+      "roles": {
+        "submission_latex": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_pdf": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-012/drive/working_pdf_drive_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "submission_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_source": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "presentation_pptx": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "audit_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-012/drive/artifact_sync_audit_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "discussion_google_doc": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [
+            "registry/researchers.json#RSH-012/drive/discussion_google_doc_id"
+          ],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "analysis_notebook": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        },
+        "intake_google_sheet": {
+          "assessment": "UNVERIFIED",
+          "discovery_refs": [],
+          "meaning": "Pointer discovery only; resolve populated original and provider revision before use."
+        }
+      },
+      "release_receipt": null
+    }
+  ]
+}

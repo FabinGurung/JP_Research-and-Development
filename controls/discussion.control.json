@@ -30,5 +30,6 @@
     "provider readback",
     "update pointer JSON",
     "commit"
-  ]
+  ],
+  "deliverable_contract": "controls/academic-writing/research-deliverables.json"
 }

@@ -2,9 +2,9 @@
   "schema_version": "1.0.0",
   "id": "RD-LTX-CORE-REGISTRY-001",
   "authority": "controls/latex/tower.json",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "namespace": "RD-LTX-CORE-001..100",
-  "status": "16_CONCRETE_COMMON_RULES__FULL_100_NOT_CLAIMED",
+  "status": "17_CONCRETE_COMMON_RULES__FULL_100_NOT_CLAIMED",
   "rules": [
     {
       "id": "RD-LTX-CORE-001",
@@ -180,6 +180,17 @@
       "provenance": [
         "controls/latex/authorial-voice-policy.json",
         "controls/latex/change-register.json"
+      ]
+    },
+    {
+      "id": "RD-LTX-CORE-017",
+      "key": "THREE_SUBMISSION_REPRESENTATIONS_ONE_SCIENTIFIC_REVISION",
+      "summary": "Deliver owner LaTeX source, compiled PDF and native editable submission Google Doc from the same admitted revision. Require content, equation/table/figure, reference, exact-format and page-by-page pagination parity; keep working records separate and preserve live IDs with numbered PRE/POST and restoration history.",
+      "scope": "ALL_RESEARCHERS",
+      "implementation": "DELIVERABLE_CONTRACT_AND_RECEIPT_CONSISTENCY_GATE__PROJECT_CONVERSION_AND_RENDER_QA_SEPARATE",
+      "provenance": [
+        "controls/academic-writing/research-deliverables.json",
+        "docs/RESEARCHER_DELIVERABLES_READ_FIRST.md"
       ]
     }
   ],

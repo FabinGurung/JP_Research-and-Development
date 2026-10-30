@@ -343,6 +343,9 @@ source_check=subprocess.run([sys.executable,str(ROOT/"scripts/latex/safal_build.
 if source_check.returncode!=0 or not any(token in source_check.stdout for token in ("SOURCE_GATE=HOLD_NOT_ADMITTED","SOURCE_GATE=SOURCE_PRESENT")):
     errors.append("Safal build source-check not executable or missing explicit HOLD/PRESENT label: "+(source_check.stdout+source_check.stderr)[:500])
 shared_test=subprocess.run([sys.executable,str(ROOT/"scripts/latex/validate_shared.py")],cwd=ROOT,text=True,capture_output=True)
+deliverable_test=subprocess.run([sys.executable,str(ROOT/"scripts/researchers/validate_deliverables.py")],cwd=ROOT,text=True,capture_output=True)
+if deliverable_test.returncode:
+    errors.append("researcher deliverable contract failed: "+deliverable_test.stdout.strip()+deliverable_test.stderr.strip())
 if shared_test.returncode!=0:
     errors.append("shared template inheritance check failed: "+(shared_test.stdout+shared_test.stderr).strip()[:3000])
 # Portal reliability: run unit tests even without a generated site.

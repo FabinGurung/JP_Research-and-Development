@@ -38,7 +38,8 @@
         "read_first": "researchers/fabin-gurung/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -80,7 +81,8 @@
         "read_first": "researchers/saugat-paneru/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -143,7 +145,8 @@
         "read_first": "researchers/nabin-bista/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -177,7 +180,8 @@
         "read_first": "researchers/safal-thapa/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -217,7 +221,8 @@
         "read_first": "researchers/shisheer-kc/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -257,7 +262,8 @@
         "read_first": "researchers/binay-karki/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -295,7 +301,8 @@
         "read_first": "researchers/anil-neupane/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -334,7 +341,8 @@
         "read_first": "researchers/rupesh-man-pradhan/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -373,7 +381,8 @@
         "read_first": "researchers/krishna-kumar-gupta/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -427,7 +436,8 @@
         "read_first": "researchers/safal-dawadi/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -465,7 +475,8 @@
         "read_first": "researchers/sunil-rana/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     },
     {
@@ -504,7 +515,8 @@
         "read_first": "researchers/sandip-gurung/AGENTS.md",
         "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
         "inheritance_registry": "registry/latex-inheritance.json",
-        "sequence_register": "registry/researcher-latex-sequences.json"
+        "sequence_register": "registry/researcher-latex-sequences.json",
+        "deliverable_contract": "controls/academic-writing/research-deliverables.json"
       }
     }
   ]

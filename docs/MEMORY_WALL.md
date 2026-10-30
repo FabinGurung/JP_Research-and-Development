@@ -16,6 +16,7 @@
 7. Concurrency and no-collision guarantees
 8. Release/rollback and scientific signoff
 9. Implementation status and next gates
+10. [Three-format submission bundles and working records](#three-format-submission-bundles-and-working-records)
 
 ## 1. What is authoritative?
 
@@ -162,3 +163,16 @@ All 11 owner entrypoints inherit the live tower and semantic policy, without
 changing frozen pins, scientific source, CURRENT or unverified sequence histories.
 Reservations now use a ledger-only PR, latest-base validation, then post-merge
 bootstrap. Actual write execution remains unverified; default is no-write.
+
+## Three-format submission bundles and working records
+
+User-authorized 31 October 2026: [RD-LTX-CORE-017 deliverable contract](../controls/academic-writing/research-deliverables.json),
+owned by the existing Academic Writing tower, links the same admitted scientific
+revision to complete LaTeX, compiled PDF and a native submission Google Doc.
+The Doc needs independent exact content/format/pagination comparison with the PDF;
+audit/discussion Docs, Colab analysis notebook and human intake Sheet remain
+separate. Presentation source remains JSON/Python under its existing tower.
+Follow the [execution and versioning guide](RESEARCHER_DELIVERABLES_READ_FIRST.md)
+and [researcher resume command](../prompts/RESUME_RESEARCHER_DELIVERABLES.md).
+This inherits A7's permanent live-ID, enumerated PRE/POST, append-only history and
+restore-in-place policy without editing A7 or certifying existing artifacts.

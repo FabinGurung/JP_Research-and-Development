@@ -25,6 +25,8 @@ jobs:
           PR_BRANCH: ${{ github.head_ref }}
           PR_BASE: ${{ github.base_ref }}
         run: |
+          python scripts/researchers/validate_deliverables.py
+          python scripts/researchers/test_deliverables.py
           python scripts/latex/check_engine_enrollment.py
           python scripts/latex/test_engine_enrollment.py
           python scripts/latex/check_authorial_voice.py --self-test
