@@ -152,5 +152,14 @@
     "independent_researcher_render_certification": "NOT_ASSERTED",
     "all_144_university_rules_certification": "HOLD"
   },
-  "deliverable_contract": "controls/academic-writing/research-deliverables.json"
+  "deliverable_contract": "controls/academic-writing/research-deliverables.json",
+  "private_production_font_resource": {
+    "family": "Times New Roman",
+    "status": "OWNER_ONLY_CACHE_VERIFIED_METADATA__PER_BUILD_EMBEDDING_MUST_STILL_BE_CHECKED",
+    "cache_folder_url": "https://drive.google.com/drive/folders/1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv",
+    "manifest_doc_url": "https://docs.google.com/document/d/1tX7hBF1DN-8llL2dBA-C08Ig5hs2npnRvS38X9qQSqY/edit",
+    "permitted_use": "Private licensed build runtime only; never commit, embed in sources, or redistribute font files.",
+    "production_gate": "Exact Times New Roman font resolution AND PDF font-inspection required; times.sty fallback Nimbus Roman fails production"
+  },
+  "drive_first_rule": "controls/academic-writing/research-deliverables.json#drive_first_publication_gate"
 }
