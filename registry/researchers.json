@@ -97,7 +97,9 @@
         "seq054_full_compiled_pdf_drive_id": "1_QXxxAezFiVKWa1KbFN84rpAqtC4d-DJ",
         "seq054_complete_latex_zip_drive_id": "1VVGmN6IaUS2Xws8neHWjxeCHxjZPqxev",
         "seq055_full_compiled_pdf_drive_id": "1k-YThec6zSPFeV_lcQc-dMw_uJ6Xz9Kk",
-        "seq055_complete_latex_zip_drive_id": "1wV_of5RgPfA_M45iYcIHTjg1UDHsyqZl"
+        "seq055_complete_latex_zip_drive_id": "1wV_of5RgPfA_M45iYcIHTjg1UDHsyqZl",
+        "seq056_full_compiled_pdf_drive_id": "1FA9yi6LSHAMkJ0sAo8pykn9_YgSTfaTW",
+        "seq056_complete_latex_zip_drive_id": "14kVarX0KLPKO4BqFbhJ-b9i82QFa39fd"
       },
       "lanes": {
         "discussion": {
@@ -115,7 +117,7 @@
       },
       "public_note": "Latest separately compiled Nabin thesis LATEX_SEQ055 (81 A4 pages). Abstract heading restored; full researcher-style writing revised in Chapters1–5. 14 new analytical figures directly chart modal, response-spectrum displacement/drift/base/storey shear, gravity-combination settlement, reaction and beam/column envelopes, alongside 32 earlier source charts. Scientific outlier/source-label provenance remains in the Google Docs audit rather than operational prose inside the thesis. No physical as-built safety certification; old stable CURRENT PDF and prior releases remain preserved.",
       "git_source_manifest_path": "researchers/nabin-bista/latex/source-and-drive-manifest.json",
-      "git_source_status": "LATEX_SEQ055_81PAGE_FULL_THESIS_ACADEMIC_WRITING_AND_14_CHARTS_DRIVE_RELEASE__CURRENT_PRESERVED",
+      "git_source_status": "LATEX_SEQ056_TABLE4_6_BLOCK1_BLOCK4_SOURCE_DOCX_CORRECTION_81P_OLD_CURRENT_PRESERVED",
       "next_handoff_prompt_path": "researchers/nabin-bista/latex/prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md",
       "open_task_issue_numbers": [
         51,

@@ -195,7 +195,7 @@
     "audit_doc_id": "1l4tMJoOV8BSDTur5Ay27GQ7XNboHD9Yb2D2p1ibopXk",
     "provider_readback": "PDF/ZIP ID_TITLE_SIZE_PARENT verified; exact upload byte hash not independently rehashed"
   },
-  "latest_separately_compiled_manuscript": "LATEX_SEQ055",
+  "latest_separately_compiled_manuscript": "LATEX_SEQ056",
   "seq053_research_logic_release": {
     "release_id": "LATEX_SEQ053",
     "date_npt": "2026-10-29",
@@ -356,5 +356,67 @@
     "stable_historic_current_pdf_id_unchanged": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
     "scientific_scope": "REUSE_RESEARCHER_ANALYTICAL_RESULTS_ONLY; NO_NEW_ETABS_TIME_HISTORY_OR_FRAGILITY_FIT",
     "remote_integrity": "ID_NAME_SIZE_PARENT_VERIFIED; PDF PROVIDER_DOWNLOAD_RENDER_PARITY_NOT_YET_CHECKED"
+  },
+  "seq056_table46_researcher_correction": {
+    "release_id": "LATEX_SEQ056",
+    "date_npt": "2026-10-30",
+    "base": "LATEX_SEQ055",
+    "status": "COMPILED_81_PAGE_TABLE4_6_BLOCKS_1_4_ONLY_AND_CORRESPONDING_FIGURE_UPDATED",
+    "pdf_drive_id": "1FA9yi6LSHAMkJ0sAo8pykn9_YgSTfaTW",
+    "source_zip_drive_id": "14kVarX0KLPKO4BqFbhJ-b9i82QFa39fd",
+    "folder_id": "1mz8OJp_mREGe689LiYrm99VIaCovUydh",
+    "local_pdf_sha256": "f1a38804d3b31bf6c1da4e6c487aeea4210545c78b9f003f3ea8c52ce07fc1a7",
+    "local_zip_sha256": "0b858d405109dc3e5888578bcbe646ec99d0ecdf70a20430fcee07c7079a2fc5",
+    "source_docx": "SEQ056_TABLE_4_6_RESEARCHER_CORRECTION.docx",
+    "changed_block_rows": {
+      "1": {
+        "Fixed": [
+          5020.2,
+          5020.2
+        ],
+        "Hard": [
+          5037.2,
+          5036.1
+        ],
+        "Medium": [
+          5049.1,
+          5048.3
+        ],
+        "Soft": [
+          5095.5,
+          5094.6
+        ]
+      },
+      "4": {
+        "Fixed": [
+          1727.506,
+          1727.505
+        ],
+        "Hard": [
+          1732.1,
+          1732.082
+        ],
+        "Medium": [
+          1749.104,
+          1748.586
+        ],
+        "Soft": [
+          1795.269,
+          1791.967
+        ]
+      }
+    },
+    "unchanged": "All other numeric table values and all other manuscript text; only Table 4.6 data and matching Figure 4.8 X storey shear graph updated",
+    "qa": {
+      "pages": 81,
+      "unchanged_page_count": true,
+      "changed_text_pages": [
+        40
+      ],
+      "latex_pdflatex_and_bibtex_pass": true,
+      "zip_integrity_pass": true
+    },
+    "preserved_historical_current_id": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "previous_pdf_id": "1k-YThec6zSPFeV_lcQc-dMw_uJ6Xz9Kk"
   }
 }
