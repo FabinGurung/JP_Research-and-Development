@@ -1,5 +1,8 @@
 # R&D Memory Wall — Operating Constitution (v1.0)
 
+> **CURRENT PROCEDURE:** Read [Researcher engine — read first](RESEARCHER_ENGINE_READ_FIRST.md) before acting. Its protected-main PR procedure and evidence-first contract supersede historical direct-main commands and implementation-status notes below. Historical records remain preserved.
+
+
 > **Status: USER-APPROVED GOVERNANCE; implementation in GitHub source control.** Adopted via PR #62 on 2026-10-30. Scope: `FabinGurung/JP_Research-and-Development`. This Memory Wall is a human/AI **navigation and principle document**, not a second LaTeX tower, a private evidence vault, or independent scientific approval.
 
 ## Table of contents

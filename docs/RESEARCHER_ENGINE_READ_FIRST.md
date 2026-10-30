@@ -27,6 +27,38 @@ remains `controls/latex/tower.json`. No second control tower is created here.
 8. Source/PDF QA, Drive hash readback and authorized CURRENT promotion remain
    separate. Governance enrollment never certifies a manuscript or upgrades a PDF.
 
+## Evidence-first execution contract
+
+This operational contract applies to all registered researchers and all lanes,
+under the existing tower's evidence, isolation and disclosure rules.
+
+- Start each session with the live main SHA and exact owner identity. Read the
+  owner's current control, source manifest, pending PRs and scientific checkpoint.
+  Historical instructions below later superseding addenda are archival context.
+- Before changing a factual claim, open its exact owner source. Record the file
+  ID/revision or Git SHA, page/table or sheet/range, units and calculation lineage
+  in the existing private owner audit. Bibliographic existence and claim support
+  both need verification; never invent references or infer a test from an image.
+- Distinguish observed facts, derived calculations, interpretations and unknowns.
+  A null pointer, inaccessible source, source conflict or missing approval stays
+  unresolved. Hold the dependent claim/write; continue independent verified work.
+  Do not create empty audit files or folders merely to satisfy a checklist.
+- Never borrow another researcher's results, model assumptions, cases, citations
+  or approval. Safal Thapa and Safal Dawadi are separate identities.
+- Keep actual methods, supported findings, concise material limitations and
+  required assistance disclosures in the manuscript. Preserve displaced internal
+  status details in the same owner's existing versioned Google Doc audit first.
+- Preview, source lint, compilation, exact-font page QA, science review, Drive
+  byte readback and CURRENT promotion are independent states. Report a check as
+  passed only after executing it on the exact candidate. No enrollment or lint
+  result certifies scientific truth, building safety or university acceptance.
+- Fresh controls govern new work. Existing template pins and released PDFs remain
+  unchanged until an explicitly authorized migration/release passes its gates.
+  No direct main writes, force pushes, guessed sequence numbers or automatic CP.
+
+These safeguards reduce unsupported claims; automated checks cannot guarantee
+factual correctness or make another chat read GitHub automatically.
+
 ## Workflow token and operational status
 
 Dry runs need read access only. Request/finalize writes require the repository
@@ -55,3 +87,11 @@ All 11 registered identities receive entrypoints and shared-policy references.
 No scientific source, PDF, Drive CURRENT, shared style or old release is changed.
 `validate` includes enrollment, allocator and scope regression checks, making the
 already-required check cover governance without needing another settings change.
+
+## Ongoing QA
+
+Required `validate` checks all-owner routing and mutation regressions, runs the
+advisory semantic scan, and retains `researcher-engine-source-qa` as a workflow
+artifact. Reproduce with `python scripts/latex/audit_researcher_engine.py`.
+[30 October source audit](audits/RESEARCHER_ENGINE_QA_20261030.md) records the
+repair and exact unresolved boundaries. A dated receipt is never live authority.

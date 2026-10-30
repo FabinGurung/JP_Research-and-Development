@@ -1,5 +1,8 @@
 # LaTeX inheritance and independent researcher sequencing — approved v1.0
 
+> **CURRENT PROCEDURE:** Read [Researcher engine — read first](RESEARCHER_ENGINE_READ_FIRST.md) before acting. Its protected-main PR procedure and evidence-first contract supersede historical direct-main commands and implementation-status notes below. Historical records remain preserved.
+
+
 This is the detailed procedure linked by [R&D Memory Wall](MEMORY_WALL.md). A dry-run-first allocator and a source ownership gate have been implemented in an implementation PR, with live Action/permissions verification required before claiming fully operational reservation. Reuse existing [single LaTeX tower](../controls/latex/tower.json), [inheritance registry](../registry/latex-inheritance.json) and [change register](../controls/latex/change-register.json), instead of creating an alternate control.
 
 ## Core architecture

@@ -21,6 +21,9 @@ SELF_REFERENCE = re.compile(
 ADMIN_VOICE = re.compile(r"\b(?:researcher-reported|researcher-identified|practitioner-supplied)\b", re.I)
 PHOTO_ID = re.compile(r"\b[A-Z][A-Z0-9_-]*PHOTO-[A-Z0-9_-]{2,}\b")
 CASE_ID = re.compile(r"\b(?:W0[1-9]|CASE-[A-Z0-9-]{3,}|A9-[A-Z0-9-]{3,})\b")
+AUDIT_STATUS = re.compile(r"\b(?:not provided|not available|unavailable records|available analysis records|source.admission|REVIEW_REQUIRED|HOLD_BASELINE)\b", re.I)
+TRACEABILITY = re.compile(r"\b(?:objective.to.section|question.to.evidence|research.question mapping|internal traceability|audit checklist)\b", re.I)
+WORKFLOW_VOICE = re.compile(r"\b(?:ChatGPT|hallucinat\w*|control tower|RD-LTX-(?:CHG|SEM|CORE)-\d+|prompt ledger)\b", re.I)
 PRIVATE_ARG = re.compile(
     r"\\(?:includegraphics|input|label|ref|pageref|addbibresource|url)"
     r"(?:\[[^\]]*\])?\{[^{}]*\}"
@@ -44,6 +47,9 @@ def inspect_text(content: str, path: str = "<sample>") -> list[dict]:
         ("ADMINISTRATIVE_PROSE_REVIEW", ADMIN_VOICE),
         ("PRINTED_PHOTO_IDENTIFIER_REVIEW", PHOTO_ID),
         ("INTERNAL_CASE_CODE_REVIEW", CASE_ID),
+        ("AUDIT_STATUS_NARRATION_REVIEW", AUDIT_STATUS),
+        ("ADMINISTRATIVE_TRACEABILITY_REVIEW", TRACEABILITY),
+        ("WORKFLOW_SELF_NARRATION_REVIEW", WORKFLOW_VOICE),
     )
     for lineno, line in enumerate(content.splitlines(), 1):
         shown = visible_line(line)
@@ -68,12 +74,11 @@ def sources(root: Path, researcher: str | None) -> list[Path]:
     files = []
     for folder in folders:
         manuscript = folder / "latex/manuscript"
-        for section in ("chapters", "appendices"):
-            files.extend(sorted((manuscript / section).glob("*.tex")))
-        abstract = manuscript / "frontmatter/abstract.tex"
-        if abstract.is_file():
-            files.append(abstract)
-    return files
+        # Nabin's admitted manuscript uses flat numbered .tex files. Scan all
+        # manuscript prose, including nested folders, rather than silently
+        # returning zero for a valid non-chapters layout. Extensions stay out.
+        files.extend(manuscript.rglob("*.tex"))
+    return sorted(set(files))
 
 def self_test() -> None:
     samples = [
@@ -85,6 +90,12 @@ def self_test() -> None:
         ("I observed the wall during my visit.", "STUDENT_SELF_THIRD_PERSON_REVIEW", False),
         ("% The researcher observed; invisible TeX comment", "STUDENT_SELF_THIRD_PERSON_REVIEW", False),
         (r"\caption{Door-threshold waterproofing during repair}", "PRINTED_PHOTO_IDENTIFIER_REVIEW", False),
+        ("The available analysis records do not provide member details.", "AUDIT_STATUS_NARRATION_REVIEW", True),
+        ("Table X is an internal traceability audit checklist.", "ADMINISTRATIVE_TRACEABILITY_REVIEW", True),
+        ("ChatGPT reviewed RD-LTX-SEM-011.", "WORKFLOW_SELF_NARRATION_REVIEW", True),
+        (r"\url{https://example.org/ChatGPT}", "WORKFLOW_SELF_NARRATION_REVIEW", False),
+        ("% Not provided: invisible comment", "AUDIT_STATUS_NARRATION_REVIEW", False),
+        ("Only the final load step was analyzed; intermediate behavior is outside this study.", "AUDIT_STATUS_NARRATION_REVIEW", False),
     ]
     for text, rule, expected in samples:
         found = any(item["rule"] == rule for item in inspect_text(text))

@@ -7,6 +7,16 @@ VERIFIED ROOT: 1m_J-w1rSgQcmyHL-cbkPwKKejyJ0TbJP
 ROOT LINK: https://drive.google.com/drive/folders/1m_J-w1rSgQcmyHL-cbkPwKKejyJ0TbJP
 MODE: OWNER-CHAT EXECUTION ONLY · NO DELETE · NO SCIENTIFIC EDIT · LOW-RISK REORGANIZATION · A9 PRE/POST · NO AUTO MAIN ACK
 
+## Live engine first — supersedes historical engine instructions
+
+Before any lane work for `RSH-001 / fabin-gurung`, fetch live main and read
+`AGENTS.md`, `docs/RESEARCHER_ENGINE_READ_FIRST.md` and
+`researchers/fabin-gurung/AGENTS.md`. Follow the evidence-first execution contract.
+The folder mapping below is historical discovery, not fresh source verification.
+Use the current protected-main reservation PR procedure for new LaTeX revisions;
+never guess sequence numbers or inherit another researcher's science. Preserve
+CURRENT and frozen pins. This prompt alone does not approve a scientific release.
+
 ## Scope and trigger
 
 Pasting THIS exact handover into Fabin Gurung's own established researcher chat is explicit authorization for necessary, low-risk, reversible organization within THIS one verified project root only. This handover residing in GitHub does NOTHING automatically. Do not organize any other researcher, another project of this researcher, or a sibling folder.

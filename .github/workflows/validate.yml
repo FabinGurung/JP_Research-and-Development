@@ -26,6 +26,10 @@ jobs:
           PR_BASE: ${{ github.base_ref }}
         run: |
           python scripts/latex/check_engine_enrollment.py
+          python scripts/latex/test_engine_enrollment.py
+          python scripts/latex/check_authorial_voice.py --self-test
+          python scripts/latex/check_authorial_voice.py
+          python scripts/latex/audit_researcher_engine.py > researcher-engine-audit.json
           python scripts/latex/researcher_sequence.py --self-test
           python scripts/latex/test_protected_reservation.py
           python scripts/latex/check_researcher_change_scope.py --self-test
@@ -34,6 +38,11 @@ jobs:
             python scripts/latex/check_engine_enrollment.py "origin/$PR_BASE" HEAD "$PR_BRANCH"
             python scripts/latex/check_researcher_change_scope.py --base "origin/$PR_BASE" --head HEAD --branch "$PR_BRANCH"
           fi
+      - name: Preserve all-researcher source QA receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: researcher-engine-source-qa
+          path: researcher-engine-audit.json
       - run: python scripts/validate_repo.py
       - run: python scripts/validate_document_families.py
       - run: python scripts/ai_runtime/validate_job.py --self-test
