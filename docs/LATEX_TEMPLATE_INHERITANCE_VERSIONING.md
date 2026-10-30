@@ -171,3 +171,14 @@ An intermediate state may be `HOLD`, `REJECTED`, `SUPERSEDED` or `ABANDONED` wit
 - Source owner checks include explicitly named legacy branch owner mismatch and mixed researcher/shared-control changes; `.github/workflows/latex-researcher-inheritance.yml` checks stacked PRs relative to their actual base ref.
 - Bootstrap proof without allocation: the source-gate's mock manifest checks style SHA pinning, branch slug and sequence, and centralized path; the actual Git shared style blob on the infrastructure branch must remain the same as the pinned v2.4.0 main. Real branch creation/manifest publication awaits the write test and administrator protection.
 - Nine unresolved researchers remain held. Their A9 Local ledger numbering and thesis LaTeX source sequence numbers must not be conflated or inferred from filenames alone. Full cross-researcher scientific or PDF regression is not claimed.
+
+
+## Protected-main and all-researcher rollout — 2026-10-30
+
+This addendum supersedes earlier direct-main reservation instructions and old
+protection observations. Branch API readback confirms main protected with required
+`validate` for everyone. See [current engine procedure](RESEARCHER_ENGINE_READ_FIRST.md).
+All 11 owner entrypoints inherit the live tower and semantic policy, without
+changing frozen pins, scientific source, CURRENT or unverified sequence histories.
+Reservations now use a ledger-only PR, latest-base validation, then post-merge
+bootstrap. Actual write execution remains unverified; default is no-write.

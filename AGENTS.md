@@ -19,3 +19,9 @@ One enterprise tower: `controls/document-engineering/tower.json`; fourteen type 
 ## A7 is a READ-ONLY CATALOGUE for this repository
 
 Treat the A7 system registry as a read-only metadata directory and knowledge-graph pointer index for this module. **NEVER write A7 files, branches, PRs, website code, schema/policy templates, catalogue rows or histories during this repository's tasks.** A module task is not authorization for A7 work, even if its link appears stale. Create a local pending pointer-correction note and request a **separate explicit A7-specific instruction**. Actual execution logic, internal schemas, templates, publishing and version history belong in this repository and its declared owner providers. The historical A7-hosted AI-Aided Design guidance is not the CAD template authority; CAD's versioned canonical template lives at `FabinGurung/JP_Computer-Aided-Drawings/governance/aad/aad-domain-template.v0.1.json`. Do not modify CAD unless that separate domain is tasked. Preserve all existing governance, privacy and branch rules above.
+
+## All-researcher engine enrollment (2026-10-30)
+Every enrolled researcher has `researchers/<slug>/AGENTS.md`. Read
+`docs/RESEARCHER_ENGINE_READ_FIRST.md` on fresh main before resuming. Enrollment
+is governance routing only; it is not sequence-baseline verification, manuscript
+rewriting, a template-pin upgrade, or scientific/PDF approval.

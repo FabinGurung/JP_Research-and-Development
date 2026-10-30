@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0",
   "id": "RD-RESEARCHER-LATEX-SEQUENCE-REGISTER-001",
-  "status": "ACTIVE_POLICY__LIVE_NO_WRITE_SMOKE_PASS__WRITE_RESERVATION_UNTESTED",
+  "status": "ACTIVE_POLICY__PR_RESERVATION_IMPLEMENTED__LIVE_WRITE_UNTESTED",
   "authority": "docs/MEMORY_WALL.md",
   "scope": "researcher-scoped latex version numbers only; not scientific CP or global RD-LTX-CHG",
   "branch_pattern": "thesis/<slug>/latex/seqNNN-<topic>",
   "allocator": "scripts/latex/researcher_sequence.py",
-  "allocation_policy": "GitHub Contents API blob-SHA compare-and-swap against main; conflict requires re-read/retry; no force; zero guessing",
+  "allocation_policy": "Protected-main reservation PR; strict up-to-date validation of one append against base; bootstrap only after canonical merge; never write main directly",
   "researchers": [
     {
       "researcher_id": "RSH-001",

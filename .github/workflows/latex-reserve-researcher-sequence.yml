@@ -7,6 +7,15 @@ on:
       - 'scripts/latex/researcher_sequence.py'
   workflow_dispatch:
     inputs:
+      operation:
+        description: Request a reservation PR, or finalize an already merged reservation
+        type: choice
+        options: [request, finalize]
+        default: request
+      request_key:
+        description: Accepted request key (gha:RUN_ID), required for finalize
+        type: string
+        required: false
       researcher_slug:
         description: Registered researcher slug (e.g. saugat-paneru or nabin-bista)
         type: string
@@ -14,7 +23,7 @@ on:
       topic:
         description: Short source change topic; used in new branch name
         type: string
-        required: true
+        required: false
       dry_run:
         description: Preview next candidate sequence without reserving or creating branch
         type: boolean
@@ -55,21 +64,31 @@ jobs:
           RESEARCHER: ${{ inputs.researcher_slug }}
           TOPIC: ${{ inputs.topic }}
         run: python scripts/latex/researcher_sequence.py --dry-run --slug "$RESEARCHER" --topic "$TOPIC"
-      - name: Reserve sequence atomically and create pinned-source branch
+      - name: Propose reservation PR or finalize merged reservation
         if: ${{ !inputs.dry_run }}
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.RESEARCHER_ENGINE_TOKEN }}
           RESEARCHER: ${{ inputs.researcher_slug }}
           TOPIC: ${{ inputs.topic }}
           CREATE_PR: ${{ inputs.create_draft_pr }}
+          OPERATION: ${{ inputs.operation }}
+          REQUEST_KEY: ${{ inputs.request_key }}
         run: |
           set -euo pipefail
+          if [[ -z "$GH_TOKEN" ]]; then
+            echo 'Missing RESEARCHER_ENGINE_TOKEN: PR-capable credential required; no default-token fallback or main write.'
+            exit 1
+          fi
           extra=()
           if [[ "$CREATE_PR" == "true" ]]; then extra=(--create-pr); fi
-          python scripts/latex/researcher_sequence.py --reserve --slug "$RESEARCHER" --topic "$TOPIC" "${extra[@]}"
+          if [[ "$OPERATION" == "finalize" ]]; then
+            python scripts/latex/researcher_sequence.py --finalize --slug "$RESEARCHER" --request-key "$REQUEST_KEY" "${extra[@]}"
+          else
+            python scripts/latex/researcher_sequence.py --reserve --slug "$RESEARCHER" --topic "$TOPIC"
+          fi
       - name: Important boundaries
         run: |
-          echo 'This action writes only a sequence reservation on main and a separate researcher manifest branch when dry_run=false.'
+          echo 'This action proposes a ledger-only PR; finalize creates a researcher branch only after canonical merge. Never writes main directly.'
           echo 'It never changes thesis science, the shared style source, an approved CURRENT PDF, or Drive files.'
   live-dry-run-smoke:
     if: github.event_name == 'push'
