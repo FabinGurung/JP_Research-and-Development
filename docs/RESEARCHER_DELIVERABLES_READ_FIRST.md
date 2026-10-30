@@ -164,3 +164,13 @@ operations with separately inspectable evidence.
 
 Use the [general resume command](../prompts/RESUME_RESEARCHER_DELIVERABLES.md)
 in each existing researcher thread. Other chats do not automatically refresh.
+
+## Mandatory Drive-first thesis publication and private font cache (2026-10-31)
+
+**Release order is mandatory, not an optional suggestion.** For every researcher, publish the versioned complete LaTeX ZIP and compiled PDF to the researcher's canonical Google Drive storage **before** claiming a Git release. Read back actual provider file IDs, sizes, MIME types and parents; then record those exact immutable release references and local hash distinctions in Git, run PR/CI/Pages readback, and only then certify any release step. This rule is also recorded in `controls/academic-writing/research-deliverables.json#drive_first_publication_gate`. Missing Drive readback **blocks publication-complete status**. A review candidate may be registered after Drive upload but must remain REVIEW_ONLY.
+
+The native editable **submission** Google Doc is independently required. Its existence is not a parity certificate: compare its exported PDF to the exact compiled reference page-by-page, including text, figure/table/equation structures, pagination, margins, and font. If it cannot be made identical, keep the **submission Doc and bundle on HOLD**, without mislabeling it as approved. Git source checks alone never execute a native Docs conversion.
+
+**Production font locator:** owner-only [Times New Roman private build cache](https://drive.google.com/drive/folders/1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv), with provenance in [font resource manifest](https://docs.google.com/document/d/1tX7hBF1DN-8llL2dBA-C08Ig5hs2npnRvS38X9qQSqY/edit). Four faces are present. This is a restricted build dependency, **not a public distributable font asset**; do not copy font binaries into source ZIP, GitHub, public Pages or submissions. Exact Times New Roman must be resolved for the chosen TeX engine and verified from the produced PDF's font inventory. `\\usepackage{times}` and Nimbus Roman do **not** satisfy the exact-font gate.
+
+**Proven failure example:** Nabin LATEX_SEQ057 was first delivered as a local 89-page review PDF and ZIP without Drive/Git/Doc release. Those two files and QA were subsequently uploaded to Drive as REVIEW_ONLY. The PDF embeds Nimbus Roman, so exact production typography and native Google Doc parity remain unverified. This omission is a release orchestration failure, not a problem with user instructions.
