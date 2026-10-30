@@ -61,5 +61,15 @@
   "private_scientific_originals": "GOOGLE_DRIVE",
   "git_drive_policy": "controls/git-drive-authority.json",
   "legacy_a9_library_status": "HISTORICAL_FOR_GIT_VERSION_ONLY__NEVER_INCREMENT_IN_ROUTINE_BUILD",
-  "safal_legacy_index": "registry/legacy-a9-ledger-index.json"
+  "safal_legacy_index": "registry/legacy-a9-ledger-index.json",
+  "deliverable_contract": "controls/academic-writing/research-deliverables.json",
+  "machine_editable_source": {
+    "content": "UTF-8 JSON",
+    "theme": "JSON",
+    "implementation": "Python (.py)",
+    "pptx_renderer": "python-pptx",
+    "presentation_pdf_renderer": "ReportLab",
+    "rule": "EDIT_STRUCTURED_SOURCE_REGENERATE_NATIVE_EDITABLE_OBJECTS",
+    "binary_deliverable": "PPTX is a ZIP container of Office Open XML; JSON/Python are the AI-editable source, not a binary programming language."
+  }
 }

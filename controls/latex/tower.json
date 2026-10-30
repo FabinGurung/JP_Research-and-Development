@@ -151,5 +151,6 @@
     },
     "independent_researcher_render_certification": "NOT_ASSERTED",
     "all_144_university_rules_certification": "HOLD"
-  }
+  },
+  "deliverable_contract": "controls/academic-writing/research-deliverables.json"
 }

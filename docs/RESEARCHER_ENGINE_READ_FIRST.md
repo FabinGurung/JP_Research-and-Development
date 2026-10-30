@@ -13,7 +13,7 @@ remains `controls/latex/tower.json`. No second control tower is created here.
    latest approved main template; existing releases/branches retain tested pins
    until an explicit upgrade and regression QA.
 4. Preview the sequence with `researcher_sequence.py --dry-run --slug SLUG --topic TOPIC`.
-   Nine unknown baselines stay held; Saugat's floor is 028 and Nabin's observed
+   Unverified baselines stay held; Saugat's floor is 028 and Nabin's observed
    release highwater is 056. Preview numbers are not reservations.
 5. For authorized new work, run the reservation workflow in request mode. It opens
    a ledger-only PR. Merge through required validate, up-to-date and scope gates.
@@ -109,3 +109,15 @@ admission/release gates; do not repair a missing baseline by inventing a sequenc
 The [30 October artifact audit](audits/RESEARCHER_ARTIFACT_SYNC_20261030.md)
 records executed Doc updates and discovered migration debt, without certifying all
 researcher artifacts. A dated receipt never overrides a fresh provider read.
+
+## Three-format submission contract (31 October 2026)
+
+Read [Researcher deliverables](RESEARCHER_DELIVERABLES_READ_FIRST.md), inherited
+from the existing Academic Writing tower, before creating or updating artifacts.
+Rule RD-LTX-CORE-017 / RD-LTX-CHG-116 adds a separately verified native submission
+Google Doc matching the admitted LaTeX/PDF revision, while keeping audit,
+discussion, Colab notebook and human intake Sheet separate. Use A7 stable live
+identities, numbered subject PRE/POST archives and restore-in-place history.
+See the [updated general resume command](../prompts/RESUME_RESEARCHER_DELIVERABLES.md).
+The contract/receipt validator is active code; actual owner conversion, native
+render parity, provider execution and submission acceptance are separate gates.

@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0.0",
+  "control_id": "RD-ACADEMIC-DELIVERABLES-001",
+  "version": "1.0.0",
+  "authority": "controls/academic-writing/tower.json",
+  "status": "ACTIVE_CONTRACT_AND_RECEIPT_VALIDATOR__PROVIDER_CONVERSION_AND_PROJECT_RELEASE_QA_SEPARATE",
+  "principle": "ONE_ADMITTED_SCIENTIFIC_REVISION__THREE_SUBMISSION_REPRESENTATIONS__SEPARATE_WORKING_RECORDS",
+  "format_authority": "controls/latex/tower.json",
+  "semantic_authority": "controls/latex/authorial-voice-policy.json",
+  "presentation_authority": "controls/presentation/tower.json",
+  "git_drive_authority": "controls/git-drive-authority.json",
+  "enrollment": "registry/researcher-deliverables.json",
+  "receipt_schema": "schemas/researcher-deliverable-release.schema.json",
+  "validator": "scripts/researchers/validate_deliverables.py",
+  "read_first": "docs/RESEARCHER_DELIVERABLES_READ_FIRST.md",
+  "resume_prompt": "prompts/RESUME_RESEARCHER_DELIVERABLES.md",
+  "external_version_policy": {
+    "repository": "FabinGurung/JP_A7_System_Registry_and_Knowledge_Graph",
+    "commit_sha": "ae0d8481f7a514ce838af4eec456024d1674bcaa",
+    "path": "registry/curations/memory-live-version-control.v0.1.json",
+    "blob_sha": "f2031fb3802189f8d227ced18142532537ed6232",
+    "collection_id": "A7-MEM-LIVE-VERSION-009",
+    "mutate_a7": false,
+    "live_identity": "Reuse the original populated owner file ID or canonical Git path; never replace it for a routine version.",
+    "archive_cycle": [
+      "resolve_live",
+      "read_revision_and_hash",
+      "allocate_subject_snapshot_ordinal",
+      "copy_PRE",
+      "edit_same_live_identity",
+      "validate_and_provider_readback",
+      "copy_POST",
+      "append_manifest_and_history"
+    ],
+    "archive_filenames": "000001_PRE_<subject>.<ext> / 000001_POST_<subject>.<ext>; rename archive copies only",
+    "archive_location": "Each subject's dedicated central archive under its existing owner project; discover and reuse before creating.",
+    "restore": "Restore archived contents into the same original live ID/path using a new governed event; preserve archived versions and access controls.",
+    "history_fields": [
+      "subject",
+      "owner",
+      "live_id_or_path",
+      "provider_revision_or_commit",
+      "snapshot_ordinal",
+      "pre_ref",
+      "post_ref",
+      "what",
+      "why",
+      "source_evidence",
+      "validation",
+      "readback",
+      "restore_target",
+      "uncertainty"
+    ],
+    "separate_namespaces": [
+      "subject_snapshot_ordinal",
+      "provider_revision",
+      "scientific_checkpoint",
+      "researcher_latex_sequence",
+      "git_commit_or_tag",
+      "notebook_version",
+      "sheet_version",
+      "software_release"
+    ],
+    "git_exception": "Git commits/PRs preserve PRE/POST source history; do not duplicate every Git commit in Drive or force-push. Existing immutable release copies and candidate IDs remain historical artifacts, not replacement live authorities.",
+    "new_subject": "Create a populated native file only after discovery establishes absence; record initial creation and initial POST. Never invent a PRE for a nonexistent previous file."
+  },
+  "submission_bundle_roles": [
+    "submission_latex",
+    "submission_pdf",
+    "submission_google_doc"
+  ],
+  "presentation_roles": [
+    "presentation_source",
+    "presentation_pptx"
+  ],
+  "working_roles": [
+    "audit_google_doc",
+    "discussion_google_doc",
+    "analysis_notebook",
+    "intake_google_sheet"
+  ],
+  "roles": {
+    "submission_latex": {
+      "format": ".tex + .bib + manifest + build recipe + authorized assets; complete .zip for delivery",
+      "storage": "Approved editable code in owner Git scope; private complete project/assets in Drive",
+      "gates": [
+        "source_integrity",
+        "reproducible_build",
+        "numeric_asset_invariance",
+        "semantic_review",
+        "scientific_authorization"
+      ]
+    },
+    "submission_pdf": {
+      "format": "Compiled paginated PDF",
+      "storage": "Drive",
+      "gates": [
+        "source_integrity",
+        "numeric_asset_invariance",
+        "references",
+        "exact_font_and_format",
+        "full_page_visual_qa",
+        "scientific_authorization",
+        "provider_readback"
+      ]
+    },
+    "submission_google_doc": {
+      "format": "Native editable Google Doc; separate from discussion and audit",
+      "storage": "Drive",
+      "gates": [
+        "native_editability",
+        "content_parity",
+        "equation_table_figure_parity",
+        "references",
+        "exact_font_and_format",
+        "pagination_parity",
+        "full_page_visual_qa",
+        "scientific_authorization",
+        "provider_readback"
+      ]
+    },
+    "presentation_source": {
+      "format": "UTF-8 JSON content/theme/evidence references + shared Python .py generator",
+      "storage": "Approved source in owner Git scope; private evidence map/assets in Drive",
+      "gates": [
+        "source_integrity",
+        "semantic_review",
+        "numeric_asset_invariance"
+      ]
+    },
+    "presentation_pptx": {
+      "format": ".pptx, an Office Open XML ZIP package; native editable objects",
+      "storage": "Drive",
+      "gates": [
+        "source_integrity",
+        "semantic_review",
+        "native_editability",
+        "references",
+        "full_page_visual_qa",
+        "scientific_authorization",
+        "provider_readback"
+      ]
+    },
+    "audit_google_doc": {
+      "format": "Native Google Doc",
+      "purpose": "Evidence gaps, provenance, displaced internal status tables, QA, decisions and release receipts; never the submission manuscript",
+      "gates": [
+        "provider_readback"
+      ]
+    },
+    "discussion_google_doc": {
+      "format": "Native Google Doc",
+      "purpose": "Research dialogue, supervisor feedback, original messages/source links, questions, decisions and manuscript handoff; never the submission manuscript",
+      "gates": [
+        "provider_readback"
+      ]
+    },
+    "analysis_notebook": {
+      "format": ".ipynb (JSON with code/Markdown cells), Python default unless owner analysis requires another runtime",
+      "purpose": "Colab analysis and reproducible long sessions with durable checkpoints, input/output hashes, environment/seed/units and execution logs; no unrun output or guaranteed uninterrupted runtime",
+      "gates": [
+        "provider_readback"
+      ]
+    },
+    "intake_google_sheet": {
+      "format": "Native Google Sheets spreadsheet",
+      "purpose": "Human source intake with stable row IDs, units, provenance, validation and admission status; input, formulas and derived output ranges distinguished; no automatic promotion of new rows to manuscript findings",
+      "gates": [
+        "provider_readback"
+      ]
+    }
+  },
+  "thesis_parity": {
+    "source": "Exact owner-admitted LaTeX scientific revision, source-tree digest, commit and canonical shared-style blob; DOCX-first intake remains a precursor until a real LaTeX project is admitted.",
+    "synchronize": "Generate/reconcile the native submission Doc from the exact LaTeX revision and compiled PDF, never from an audit, discussion, incomplete text extraction or another researcher's thesis.",
+    "content_checks": [
+      "frontmatter_and_section_order",
+      "complete_paragraphs",
+      "numeric_values_and_units",
+      "equation_meaning_and_numbering",
+      "table_cell_values_and_structure",
+      "figures_asset_lineage_and_captions",
+      "citations_and_bibliography",
+      "cross_references",
+      "appendices",
+      "required_disclosures_and_material_limitations"
+    ],
+    "format_checks": [
+      "institutional_rule_mapping",
+      "page_size_and_margins",
+      "exact_fonts_sizes_spacing",
+      "heading_hierarchy",
+      "headers_footers",
+      "roman_and_arabic_page_numbers",
+      "page_and_section_breaks",
+      "TOC_LOT_LOF",
+      "equation_table_figure_layout",
+      "identical_page_count_and_corresponding_page_content"
+    ],
+    "render_gate": "Export the native Doc to PDF and compare every page with the exact compiled LaTeX PDF; pin both PDF hashes and the native revision. Define comparison criteria from the applicable institution/owner evidence, not an invented pixel threshold.",
+    "unsupported_native_feature": "HOLD exact parity/submission-ready status for the affected representation; document the precise mismatch in the private owner audit. No silent rasterized pages, flattened equations, reduced content or fallback fonts called exact.",
+    "editability": "Use native headings, paragraphs, editable tables, citations/links and usable equations where supported; a PDF embedded as page images is not the native manuscript.",
+    "reverse_edit": "Treat direct Doc edits as proposed source changes: reconcile into the owner LaTeX revision, rerun parity, and then update all representations. No last-writer-wins overwrite.",
+    "invalidates_receipts": [
+      "source_or_scientific_revision_change",
+      "template_pin_change",
+      "native_doc_revision_change",
+      "asset_or_bibliography_change",
+      "exported_pdf_change"
+    ],
+    "no_auto_promotion": "Individual readiness requires its own evidence; bundle readiness requires all three at the same source revision. Preserve accepted CURRENT until separate release authorization and provider readback. Technical readiness never claims actual institutional acceptance or submission."
+  },
+  "presentation_source_policy": {
+    "canonical_stack": [
+      "JSON",
+      "Python",
+      "python-pptx",
+      "ReportLab"
+    ],
+    "legacy_stack": "TypeScript/PptxGenJS is historical, not the active Safal shared generator.",
+    "editable_principle": "Edit structured JSON and shared Python code, regenerate native editable slides; keep one content/evidence source for deck and presentation PDF. Do not use a slide screenshot as an editable deck.",
+    "distinct_deliverable": "A defense deck is a separate presentation, not a fourth identical thesis manuscript. Its findings must trace to the same admitted owner science."
+  },
+  "privacy": "Do not publish private source content, notebook outputs, intake rows, provider permissions, credentials, licensed fonts or research binaries to public Git/Pages. Public enrollment declares unresolved roles without inventing provider IDs."
+}

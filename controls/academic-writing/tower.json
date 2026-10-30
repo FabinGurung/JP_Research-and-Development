@@ -31,6 +31,11 @@
       "id": "research_governance",
       "canonical_control": "controls/repository.control.json",
       "role": "Research branch and repository rules"
+    },
+    {
+      "id": "research_deliverables",
+      "canonical_control": "controls/academic-writing/research-deliverables.json",
+      "role": "Three-format manuscript parity, separate presentation/working records and A7 stable-ID lifecycle"
     }
   ],
   "disallowed_as_child": [
@@ -42,9 +47,12 @@
     "Never infer findings, author credentials, university approval or supervisor approval",
     "Thesis formatting and presentation production retain their existing separate specialized authorities",
     "Researcher source/evidence remains private and scoped to the registered researcher",
-    "Do not import contract clauses, company branding or enterprise payment logic into academic manuscript controls"
+    "Do not import contract clauses, company branding or enterprise payment logic into academic manuscript controls",
+    "A submission Google Doc is an independently verified native representation of the exact admitted LaTeX/PDF revision; audit and discussion remain separate. See RD-LTX-CORE-017."
   ],
   "unified_release_claim": "NO_AUTO_APPROVAL",
   "legacy_url_policy": "RETAIN_ALL_EXISTING_RESEARCH_URLS_UNCHANGED",
-  "versioning": "GIT_EXACT_COMMIT_AND_VERIFIED_DRIVE_REFS"
+  "versioning": "GIT_EXACT_COMMIT_AND_VERIFIED_DRIVE_REFS",
+  "version": "1.1.0",
+  "deliverable_contract": "controls/academic-writing/research-deliverables.json"
 }

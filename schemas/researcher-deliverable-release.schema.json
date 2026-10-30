@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Private owner deliverable receipt (not automatic scientific certification)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "researcher_id",
+    "slug",
+    "scientific_revision",
+    "source_tree_sha256",
+    "source_commit_sha",
+    "style_blob_sha",
+    "bundle_ready",
+    "artifacts",
+    "changed_roles",
+    "version_events"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "researcher_id": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "scientific_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_tree_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_commit_sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "style_blob_sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "bundle_ready": {
+      "type": "boolean"
+    },
+    "changed_roles": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      }
+    },
+    "version_events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    }
+  },
+  "$defs": {
+    "check": {
+      "type": "object",
+      "required": [
+        "status",
+        "evidence_ref",
+        "executed_at",
+        "subject_sha256",
+        "source_tree_sha256",
+        "style_blob_sha"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN"
+          ]
+        },
+        "evidence_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "executed_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_tree_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "style_blob_sha": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "role",
+        "researcher_id",
+        "state",
+        "checks"
+      ],
+      "properties": {
+        "role": {
+          "enum": [
+            "submission_latex",
+            "submission_pdf",
+            "submission_google_doc",
+            "presentation_source",
+            "presentation_pptx",
+            "audit_google_doc",
+            "discussion_google_doc",
+            "analysis_notebook",
+            "intake_google_sheet"
+          ]
+        },
+        "researcher_id": {
+          "type": "string"
+        },
+        "state": {
+          "enum": [
+            "NOT_DISCOVERED",
+            "IDENTIFIED",
+            "CANDIDATE",
+            "VERIFIED",
+            "SUBMISSION_READY"
+          ]
+        },
+        "artifact_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "provider_file_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provider_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "git_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scientific_revision": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_tree_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checks": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/check"
+          }
+        },
+        "style_blob_sha": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "native_digest_method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "export_pdf_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "reference_pdf_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "page_count": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "required": [
+        "kind",
+        "subject",
+        "researcher_id",
+        "live_id_before",
+        "live_id_after",
+        "restore_target",
+        "snapshot_ordinal",
+        "pre_ref",
+        "post_ref",
+        "history_ref",
+        "what",
+        "why",
+        "readback_ref"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "CREATE",
+            "MUTATE",
+            "RESTORE"
+          ]
+        },
+        "snapshot_ordinal": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    }
+  },
+  "description": "Conditional evidence, source parity, distinct native roles and stable-ID rules are checked by scripts/researchers/validate_deliverables.py. Store real populated receipts in authorized private custody, not as public fixtures."
+}
