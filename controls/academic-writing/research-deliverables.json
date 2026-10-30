@@ -221,5 +221,39 @@
     "editable_principle": "Edit structured JSON and shared Python code, regenerate native editable slides; keep one content/evidence source for deck and presentation PDF. Do not use a slide screenshot as an editable deck.",
     "distinct_deliverable": "A defense deck is a separate presentation, not a fourth identical thesis manuscript. Its findings must trace to the same admitted owner science."
   },
-  "privacy": "Do not publish private source content, notebook outputs, intake rows, provider permissions, credentials, licensed fonts or research binaries to public Git/Pages. Public enrollment declares unresolved roles without inventing provider IDs."
+  "privacy": "Do not publish private source content, notebook outputs, intake rows, provider permissions, credentials, licensed fonts or research binaries to public Git/Pages. Public enrollment declares unresolved roles without inventing provider IDs.",
+  "drive_first_publication_gate": {
+    "rule_id": "RD-ACADEMIC-DRIVE-FIRST-018",
+    "applies_to": "ALL_RESEARCHERS__NEW_OR_UPDATED_THESIS_RELEASES",
+    "required_order": [
+      "read_active_source_and_controls",
+      "build_and_local_qa",
+      "upload_complete_latex_zip_and_compiled_pdf_to_canonical_researcher_drive_storage",
+      "provider_readback_of_drive_ids_names_sizes_mime_and_parents",
+      "record_version_specific_drive_refs_and_hash_caveats",
+      "git_commit_and_pr_source_manifest_and_reproducible_code",
+      "verify_git_ci_and_pages",
+      "generate_or_reconcile_native_google_doc",
+      "export_doc_to_pdf_and_complete_all_page_parity_checks",
+      "publish_final_release_only_when_source_font_science_and_doc_gates_pass"
+    ],
+    "fail_closed": "NO_DRIVE_READBACK_MEANS_NO_GIT_RELEASE_COMPLETION_CLAIM__NO_NATIVE_DOC_PARITY_MEANS_NOT_SUBMISSION_READY",
+    "review_candidate_allowed": "PDF/ZIP may be saved in Drive and Git registered explicitly as REVIEW_ONLY; do not switch stable CURRENT until final gate and separate authorization.",
+    "evidence": "Actual connector/provider file IDs and metadata; a generated local sandbox path or a pasted URL is not proof of uploaded Drive bytes.",
+    "mandatory_status_report": "Each response must distinguish LOCAL_BUILD, DRIVE_UPLOADED, GIT_PR_OPEN, GIT_MERGED, POST_MERGE_CI, NATIVE_DOC_CREATED, DOC_PDF_PARITY, EXACT_FONT, SCIENTIFIC_APPROVAL, FINAL_SUBMISSION."
+  },
+  "exact_times_new_roman_resource": {
+    "visibility": "OWNER_ONLY_PROTECTED_DRIVE_FOLDER",
+    "cache_folder_url": "https://drive.google.com/drive/folders/1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv",
+    "cache_folder_id": "1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv",
+    "provenance_manifest_doc_id": "1tX7hBF1DN-8llL2dBA-C08Ig5hs2npnRvS38X9qQSqY",
+    "font_families": [
+      "Regular",
+      "Bold",
+      "Italic",
+      "Bold Italic"
+    ],
+    "rule": "Check cache availability and licensed usage before production TeX or PPTX render; verify actual embedded exact Times New Roman faces. A LaTeX times package or Nimbus Roman is not Times New Roman.",
+    "safety": "Do not copy licensed font binaries into public Git, source ZIP, deliverables, or share direct font binaries; owner must retain access control."
+  }
 }
