@@ -390,7 +390,7 @@
         "controls/latex/core-rules.json",
         "controls/latex/tower.json"
       ],
-      "before_after_qa_evidence": "Saugat manuscript branch saugat/m4-1-prose-and-audit-separation-review-20261030; 114-page A4 Tinos preview; PDF SHA b1d2f286afb1f6c36f0e0dd0f1d50a5121f6a184a20e208ef6b6ca30f7473b7f; original M4 production remains unchanged; Google Doc audit ID 15IK5qfu4143tpVZpCXfFY-o2pQY5qkkyW9wzVH5n5To; scientific result comparison conserved. Global semantic-only policy candidate pending PR/checks; NO cross-researcher manuscript change.",
+      "before_after_qa_evidence": "Saugat manuscript branch saugat/m4-1-prose-and-audit-separation-review-20261030; 114-page A4 Tinos preview PDF SHA 81cebc8f0fffbaa6d7f76f21012b183353832297aa09e4be39c8fa4f6fb6eb67; final complete source ZIP SHA 8e7427b961a5e021d166cb45fd4840b984379f1d45dc6c8ef6e0a550141d3d98; 143/143 original research binary asset SHA matches; original M4 production remains unchanged; Google Doc audit ID 15IK5qfu4143tpVZpCXfFY-o2pQY5qkkyW9wzVH5n5To; scientific result comparison conserved. Global semantic-only policy candidate pending PR/checks; NO cross-researcher manuscript change.",
       "pu_rule_references": [],
       "disposition": "PROPOSED",
       "target_shared_rule": "controls/latex/authorial-voice-policy.json",
