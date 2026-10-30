@@ -195,7 +195,7 @@
     "audit_doc_id": "1l4tMJoOV8BSDTur5Ay27GQ7XNboHD9Yb2D2p1ibopXk",
     "provider_readback": "PDF/ZIP ID_TITLE_SIZE_PARENT verified; exact upload byte hash not independently rehashed"
   },
-  "latest_separately_compiled_manuscript": "LATEX_SEQ054",
+  "latest_separately_compiled_manuscript": "LATEX_SEQ055",
   "seq053_research_logic_release": {
     "release_id": "LATEX_SEQ053",
     "date_npt": "2026-10-29",
@@ -291,5 +291,70 @@
     "older_seq053_pdf_preserved": "1rZuTXvyx6llElRg35yFou1gucl66POyI",
     "historic_current_pdf_unchanged": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
     "provider_readback": "PARENT_ID_NAME_SIZE_VERIFIED; PROVIDER_DOWNLOAD_SHA_AND_RENDER_PARITY_NOT_YET_INDEPENDENTLY_VERIFIED"
+  },
+  "seq055_academic_revision_release": {
+    "release_id": "LATEX_SEQ055",
+    "date_npt": "2026-10-30",
+    "status": "FULL_81_A4_PAGE_ACADEMIC_THESIS_COMPILED_AND_DRIVE_METADATA_VERIFIED",
+    "compiled_pdf_drive_id": "1k-YThec6zSPFeV_lcQc-dMw_uJ6Xz9Kk",
+    "compiled_pdf_local_sha256": "1a319abf99bc2de126087a86fdd8c66660d937d2061b18f04ae51455a45c4afb",
+    "compiled_pdf_local_bytes": 10017043,
+    "compiled_pdf_remote_bytes": 10142827,
+    "source_zip_drive_id": "1wV_of5RgPfA_M45iYcIHTjg1UDHsyqZl",
+    "source_zip_local_sha256": "2f4999f0936a578967d6feb389ace24531526e679275ec81e9ab2f4a4b2fc7a3",
+    "source_zip_remote_bytes": 79451092,
+    "source_zip_entries": 210,
+    "drive_folder_id": "1FbseGlyBaMW3r07qoHESXbS0rcfd0EQ6",
+    "release_audit_doc_id": "10CqR1SbDgeWDLnywvuRgRYftpNpwPGZ57ZM_QHoHYYM",
+    "source_baseline": "LATEX_SEQ054",
+    "changes": [
+      "RESTORE_ABSTRACT_TITLE_VIA_EXISTING_TEMPLATE",
+      "REWRITE_ACADEMIC_ABSTRACT_AND_CHAPTER4_PROSE",
+      "RECONCILE_RESEARCH_QUESTIONS_AND_CONCLUSIONS",
+      "REMOVE_ADMINISTRATIVE_AI_SOURCE_LABELS_FROM_MANUSCRIPT",
+      "GENERATE_14_ADDITIONAL_SOURCE_DATA_RESULT_GRAPHS"
+    ],
+    "charts_added_14": [
+      "fundamental_period",
+      "modal_mass_90",
+      "roof_disp_x",
+      "roof_disp_y",
+      "max_drift_x",
+      "max_drift_y",
+      "base_shear_x",
+      "story_shear_x",
+      "foundation_settlement",
+      "foundation_reaction",
+      "beam_shear_envelope",
+      "beam_moment_envelope",
+      "column_axial_envelope",
+      "column_moment_envelope"
+    ],
+    "source_basis": {
+      "response_records": 240,
+      "member_force_records": 144,
+      "preserved_original_charts": 32,
+      "original_results_zip_preserved": true,
+      "block_header_conflicts_excluded_in_storey_shear_chart": true,
+      "anomalous_reactions_excluded_in_reaction_chart": true
+    },
+    "qa": {
+      "pages": 81,
+      "A4": true,
+      "nonblank": 81,
+      "abstract_heading": true,
+      "nine_chapter4_sections": true,
+      "added_figure_labels": 14,
+      "original_chart_pngs": 32,
+      "no_undefined_references": true,
+      "no_undefined_citations": true,
+      "no_overfull_boxes": true,
+      "no_horizontal_text_clipping": true,
+      "source_zip_crc_pass": true
+    },
+    "preserved_old_seq054_pdf_id": "1_QXxxAezFiVKWa1KbFN84rpAqtC4d-DJ",
+    "stable_historic_current_pdf_id_unchanged": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
+    "scientific_scope": "REUSE_RESEARCHER_ANALYTICAL_RESULTS_ONLY; NO_NEW_ETABS_TIME_HISTORY_OR_FRAGILITY_FIT",
+    "remote_integrity": "ID_NAME_SIZE_PARENT_VERIFIED; PDF PROVIDER_DOWNLOAD_RENDER_PARITY_NOT_YET_CHECKED"
   }
 }
