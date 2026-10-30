@@ -57,10 +57,28 @@ def validate(data: dict, enrolled: list[dict]) -> None:
             raise ValueError("Unknown baseline must be held")
         if floor is not None and (base["status"] != "VERIFIED_CURRENT_REPOSITORY" or not base["source_path"]):
             raise ValueError("Verified baseline must cite source")
-        used, maxval = set(), floor or 0
+        # Existing release records produced outside the allocator are not reservations.
+        # They still consume their sequence numbers; preserve the original historical floor.
+        observed = row.get("observed_out_of_band_versions", [])
+        if not isinstance(observed, list):
+            raise ValueError("Malformed out-of-band version register for " + row["slug"])
+        observed_nums = set()
+        for recorded in observed:
+            number = recorded.get("sequence")
+            path = recorded.get("source_path", "")
+            prefix = "researchers/{}/latex/releases/SEQ{:03d}".format(row["slug"], number) if type(number) is int and number > 0 else ""
+            if (type(number) is not int or number <= (floor or 0)
+                    or number in observed_nums or not path.startswith(prefix)
+                    or recorded.get("status") != "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED"
+                    or not (ROOT / path).is_file()):
+                raise ValueError("Invalid or unsupported observed release for " + row["slug"])
+            observed_nums.add(number)
+        if observed != sorted(observed, key=lambda x: x["sequence"]):
+            raise ValueError("Observed releases must be in ascending sequence")
+        used, maxval = set(), max([floor or 0, *observed_nums])
         for entry in row["reservations"]:
             seq = entry["sequence"]
-            if type(seq) is not int or seq <= (floor or 0) or seq in used:
+            if type(seq) is not int or seq <= (floor or 0) or seq in used or seq in observed_nums:
                 raise ValueError("Duplicate/invalid reserved sequence for " + row["slug"])
             used.add(seq)
             maxval = max(maxval, seq)
@@ -83,9 +101,27 @@ def plan(data: dict, slug: str, topic: str) -> dict:
     if floor is None:
         raise ValueError("HOLD_BASELINE_VERIFICATION_REQUIRED for " + slug)
     used = [x["sequence"] for x in row["reservations"]]
-    number = max([floor] + used) + 1
+    observed = [x["sequence"] for x in row.get("observed_out_of_band_versions", [])]
+    number = max([floor] + used + observed) + 1
     branch = "thesis/{}/latex/seq{:03d}-{}".format(slug, number, normalize_topic(topic))
     return {"researcher_id": row["researcher_id"], "slug": slug, "sequence": number, "branch": branch}
+
+
+def remote_release_highwater(tree: dict, slug: str) -> int:
+    """Inspect a real Git tree without inventing sequence allocations."""
+    if tree.get("truncated") or not isinstance(tree.get("tree"), list):
+        raise RuntimeError("REMOTE_TREE_INCOMPLETE__NO_SEQUENCE_RESERVATION")
+    prefix = "researchers/{}/latex/".format(slug)
+    numbers = [0]
+    for entry in tree["tree"]:
+        path = entry.get("path", "")
+        if not path.startswith(prefix) or entry.get("type") != "blob":
+            continue
+        tail = path[len(prefix):]
+        match = re.match(r"(?:releases/SEQ|versions/seq)([0-9]{3,})(?:[^0-9].*)?$", tail)
+        if match:
+            numbers.append(int(match.group(1)))
+    return max(numbers)
 
 
 class Github:
@@ -141,6 +177,17 @@ def reserve(slug: str, topic: str, make_pr: bool) -> None:
         row = next((x for x in data["researchers"] if x["slug"] == slug), None)
         if row is None:
             raise RuntimeError("Unregistered researcher")
+        # Fail closed if another process committed a researcher release or manifest
+        # to the remote main tree without reconciling the sequence register first.
+        tree, tree_status = gh.api("GET", "/git/trees/" + current_main + "?recursive=1")
+        if tree_status != 200:
+            raise RuntimeError("CANNOT_VERIFY_CURRENT_MAIN_RELEASE_TREE")
+        remote_floor = remote_release_highwater(tree, slug)
+        ledger_floor = max([row["baseline"]["last_historical_sequence"] or 0]
+                           + [x["sequence"] for x in row.get("observed_out_of_band_versions", [])]
+                           + [x["sequence"] for x in row["reservations"]])
+        if remote_floor > ledger_floor:
+            raise RuntimeError("UNREGISTERED_REMOTE_RELEASE_SEQ_{:03d}__RECONCILE_BEFORE_RESERVING".format(remote_floor))
         existing = next((x for x in row["reservations"] if x["request_key"] == key), None)
         if existing is not None:
             info = dict(existing)
@@ -235,8 +282,25 @@ def self_test() -> None:
     for slug in ("saugat-paneru", "nabin-bista"):
         row = next(x for x in data["researchers"] if x["slug"] == slug)
         highest = max([row["baseline"]["last_historical_sequence"]] +
-                      [v["sequence"] for v in row["reservations"]])
+                      [v["sequence"] for v in row["reservations"]] +
+                      [v["sequence"] for v in row.get("observed_out_of_band_versions", [])])
         assert plan(data, slug, "unit test")["sequence"] == highest + 1
+    nabin = next(x for x in data["researchers"] if x["slug"] == "nabin-bista")
+    assert [x["sequence"] for x in nabin.get("observed_out_of_band_versions", [])] == [55, 56]
+    assert plan(data, "nabin-bista", "safe preview")["sequence"] == 57
+    mock_tree = {"truncated": False, "tree": [
+        {"path": "researchers/nabin-bista/latex/releases/SEQ055_EXAMPLE.md", "type": "blob"},
+        {"path": "researchers/nabin-bista/latex/releases/SEQ056_EXAMPLE.md", "type": "blob"},
+        {"path": "researchers/saugat-paneru/latex/releases/SEQ999_OTHER_RESEARCHER.md", "type": "blob"}]}
+    assert remote_release_highwater(mock_tree, "nabin-bista") == 56
+    assert remote_release_highwater(mock_tree, "saugat-paneru") == 999
+    assert remote_release_highwater({"truncated": False, "tree": []}, "nabin-bista") == 0
+    try:
+        remote_release_highwater({"truncated": True, "tree": []}, "nabin-bista")
+    except RuntimeError:
+        pass
+    else:
+        raise AssertionError("Truncated Git tree must block allocation")
     unknowns = [r["slug"] for r in data["researchers"]
                 if r["baseline"]["last_historical_sequence"] is None]
     if unknowns:
