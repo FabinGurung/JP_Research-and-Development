@@ -116,7 +116,10 @@
     "checker": "scripts/latex/check_authorial_voice.py",
     "mode": "ACTIVE_POLICY__ADVISORY_CHECKER__HUMAN_REVIEW",
     "applicable_researchers": 11,
-    "scientific_authority": "RESEARCHER_AND_SUPERVISOR_ONLY"
+    "scientific_authority": "RESEARCHER_AND_SUPERVISOR_ONLY",
+    "policy_version": "1.1.0",
+    "submission_narrative_principle": "ACADEMIC_RESULTS_NOT_AUDIT_STATUS__SCIENTIFIC_LIMITATIONS_MUST_REMAIN_HONEST",
+    "audit_destination": "Individual researcher governed Google Doc audit, not submitted LaTeX/PDF; do not migrate other researcher's data"
   },
   "cover_spacing_helper": {
     "command": "\\PUCoverLogoAuthorSpace[<length>]",
