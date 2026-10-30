@@ -25,3 +25,9 @@ Every enrolled researcher has `researchers/<slug>/AGENTS.md`. Read
 `docs/RESEARCHER_ENGINE_READ_FIRST.md` on fresh main before resuming. Enrollment
 is governance routing only; it is not sequence-baseline verification, manuscript
 rewriting, a template-pin upgrade, or scientific/PDF approval.
+
+All lanes must follow the evidence-first execution contract in
+`docs/RESEARCHER_ENGINE_READ_FIRST.md`. Never equate enrollment, source lint,
+metadata lookup or compilation with verified scientific findings or approval.
+The reproducible governance/source audit is `scripts/latex/audit_researcher_engine.py`;
+dated receipts under `docs/audits/` are historical evidence, not a replacement tower.

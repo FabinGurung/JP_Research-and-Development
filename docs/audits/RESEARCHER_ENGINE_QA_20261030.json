@@ -1,0 +1,928 @@
+{
+  "base_commit": "52da220b67bcc4b8c4420910f671f185dda2ff84",
+  "scope": "Public Git governance routing and advisory source lint only; no private scientific data or PDF audit",
+  "shared_style_blob": "6fb77b6f09773e29bd1159a4dc4ec2d7f773aa06",
+  "policy_version": "1.1.0",
+  "researchers": [
+    {
+      "researcher_id": "RSH-001",
+      "slug": "fabin-gurung",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/fabin-gurung/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-002",
+      "slug": "saugat-paneru",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/saugat-paneru/AGENTS.md",
+      "sequence_baseline": "VERIFIED_CURRENT_REPOSITORY",
+      "sequence_highwater": 28,
+      "reservations": 0,
+      "source_files_scanned": 34,
+      "source_inventory": [
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/appendices/appendix1_hinge.tex",
+          "sha256": "fe6522b69f37e5376e400e93f993547d735189c016fb30b9cbbb9a8e38753751"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/chapters/chapter1_introduction.tex",
+          "sha256": "c8e8d981f54f26fe11c970ddbb4ced85d9b5f4312d7b48883ad50921588e1b4d"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/chapters/chapter2_literature_review.tex",
+          "sha256": "94c01ad146cf66f3abc85b27b175344e04caf1358da52d4d531e100fc982bd63"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/chapters/chapter3_methodology.tex",
+          "sha256": "b9cdb3cf2d82abfabe93114f3c1909ab28cfd43b1c3726148e11927aba140541"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "sha256": "f0c51b03d1b418c70d89cb9944458c95b516bbd7222b20fd62f277870d3b70e9"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/chapters/chapter5_conclusion.tex",
+          "sha256": "c2156f9a0d9f25f777e3ef5ebec2d541b80e0ac405735f91ca60d662e46c9c9a"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch1_context_figures.tex",
+          "sha256": "9006655584b07903e470b18fd1a3968c291dbf77ec5d5436a1b22f512785c4b2"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch1_contribution.tex",
+          "sha256": "cabcc424fff5b4d7f609cdc9524f94454b2ec43390fb9029afd97685464f795e"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch2_concepts.tex",
+          "sha256": "eadc4baba3c15fd3680a905c4c1cd9a499a8cd47047bbe24c72551d9c15903e8"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch3_model_geometry.tex",
+          "sha256": "807a3c73f6d6f350749306740d5506b743e6bac12aa39d5216622d1e678f3fd1"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch3_properties_spectrum_modal.tex",
+          "sha256": "0691917239f16f386ae8e88c46edfab673c773e6893cf0d4acef1acee4a0165f"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch3_pushover_detail.tex",
+          "sha256": "7b3450430b7f5ddb8eade21e8ee2d4b29bc62b957752b523b2a5ef67bdba65ef"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_gii_summary_traceability.tex",
+          "sha256": "1e08c6d848099b9733606f4acb56d4061bae991aee4e32e563a69d1b70ff0ca6"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_modal_results.tex",
+          "sha256": "b633a430d320aff9ea06c5160dcb1b699e796c206e6d9c280f26f7ebd61fc7ee"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_pp_hinge.tex",
+          "sha256": "3d4fb3037bcd53e58a81bb02ae3e047aa1949d5a2ada83e989352a8d2602653f"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_profiles_comparisons.tex",
+          "sha256": "fc9ad02a1f763d3da9f5f2688fedf8cc891334fb768a6edbd6c26f2b2123de8c"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_pushover_summary.tex",
+          "sha256": "bdcf82a950774fc9277fdc9022e9b93347ddfd133c12e7695805b95478d71487"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_storey_shear_summary.tex",
+          "sha256": "bce0ceb183b14f712da4c935f4ee61ef317a280ab842402cf903aaf730c278f7"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/cp113_additions/ch2_vulnerability_figure.tex",
+          "sha256": "e8989d4ecfcf37162af573422af5f39a2e0e2bde7b449f0ec85c63bd4da67101"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/figures/concepts/s03_three_analysis_methods.tex",
+          "sha256": "e213b3753f74ac4b4b292f1f9a68e893a844522b284c3dc13cd86284fa685e3d"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/abbreviations.tex",
+          "sha256": "f49603a5202191248253c3fd1d2a51e6f3362217cca610173b3095f1e990636b"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/abstract.tex",
+          "sha256": "9e542d03fbd44cac859eaf10692c1fe60c3a6c0541ce63ad9785255721eadbf0"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/acknowledgements.tex",
+          "sha256": "50f2be8e301794f48b71c0b6ec5f9cd11c418283ec92bac98c0d38f1efdd7a62"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/certificate.tex",
+          "sha256": "fc3b6a7d540d1a3b190e11e2fc263a0b0c416582145344c67599333fa3c819ea"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/declaration.tex",
+          "sha256": "081e967d25e2c901295035f7c71077cef4852667d2ff27820ce7eb5e90eda9b9"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/dedication.tex",
+          "sha256": "4133d96c233d3c5e0714061d9137abab161327856f1908a2b683bcec4601c608"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/keywords.tex",
+          "sha256": "bb24a1742b3a8a088e3a6fabe776895caae06947bca3b79f47d5b0f1088a820d"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/recommendation.tex",
+          "sha256": "3c92484440054751a50df347eabbddad8965f0515324137acb0a709077f95f53"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/frontmatter/units.tex",
+          "sha256": "9a24e1f88ec8a1e7797629a0acbfafb3849d7da0f1029312552404e083ae9e51"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/generated/tables/modal_cumulative_mass_z040_type_c.tex",
+          "sha256": "9cfef9a5a095595eda2d8528e16d33030be19efe91817e67710ae2dbee41460b"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/generated/tables/modal_extraction_fields.tex",
+          "sha256": "db7149f649837f27608ae2db4b47e4e4001b49dbda3758f18a06ce1d32cfa5f0"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/generated/tables/modal_period_mass_z040_type_c.tex",
+          "sha256": "22b2ce0db965e8e05de5f659bce31ed959e6e7acb2a29a7094da81a5d3194295"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/main.tex",
+          "sha256": "6b92f5998696e71d6d60f3b38167588702a1da88cf78d33a3f378d7e14d0b635"
+        },
+        {
+          "path": "researchers/saugat-paneru/latex/manuscript/project_config.tex",
+          "sha256": "a51b4989bf0d27c1cf6c064157a15a861ffea7a03086497ce04a8a4c3b644479"
+        }
+      ],
+      "semantic_status": "ADVISORY_SCAN_ONLY",
+      "advisory_counts": {
+        "AUDIT_STATUS_NARRATION_REVIEW": 7
+      },
+      "advisory_findings": [
+        {
+          "file": "researchers/saugat-paneru/latex/manuscript/chapters/chapter2_literature_review.tex",
+          "line": 45,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/saugat-paneru/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 248,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/saugat-paneru/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 270,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/saugat-paneru/latex/manuscript/chapters/chapter5_conclusion.tex",
+          "line": 12,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch3_pushover_detail.tex",
+          "line": 5,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "available analysis records",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_pp_hinge.tex",
+          "line": 19,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "available analysis records",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/saugat-paneru/latex/manuscript/cp112_additions/ch4_pp_hinge.tex",
+          "line": 30,
+          "rule": "AUDIT_STATUS_NARRATION_REVIEW",
+          "sample": "not available",
+          "level": "REVIEW"
+        }
+      ],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-003",
+      "slug": "nabin-bista",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/nabin-bista/AGENTS.md",
+      "sequence_baseline": "VERIFIED_CURRENT_REPOSITORY",
+      "sequence_highwater": 56,
+      "reservations": 0,
+      "source_files_scanned": 28,
+      "source_inventory": [
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/01_coverpage.tex",
+          "sha256": "18c86713ae7ea946ef060f8fb2ce9341dc3100109622dbae85c0e3bf1e6cbac5"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/02_titlepage.tex",
+          "sha256": "56a840b2eb2f7bbc2719774d1d2d856f99964d6e5a6d167b00da711dc581013a"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/03_dedication.tex",
+          "sha256": "3c535b6807ff72337d07760ff181fecc86c30da4894ab939dfabb0e7938785dc"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/04_declaration.tex",
+          "sha256": "4758d90f31e58a84776dba11900c10a3a1994cb14c9f18177bbd7b07b1f0adf8"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/05_recommendation.tex",
+          "sha256": "f39ca5df7be45d20113cf71ec5fa8391fdfd2d6498dfc199f3635b3ae7276c63"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/06_certificate.tex",
+          "sha256": "9f0988affe126236a8cf207bb939641c54e70fc74af98ad878a50d9b5a3adf5c"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/07_acknowlegement.tex",
+          "sha256": "1a3bf58bad9a4dd2bd045d96841b3325128c14babdcecfd8cd1981c225e3f139"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/08_abbreviation.tex",
+          "sha256": "98b4eebdc4db0137da4d0ee8d71262854a089d144e7397d37fbccfcd9640152f"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/09_unitandconversion.tex",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/10_abstract.tex",
+          "sha256": "30561e221412e73a791a0a0336fb3a1ba18db50fc569eaa46a8df0454cd497a4"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/11_tableofcontent.tex",
+          "sha256": "ed0a6332c54c2be8841b25553bdb6db7ecb37c2b734152a6c6b6c07946d290e0"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/12_listoftable.tex",
+          "sha256": "ea5b9255d4794fd062b7540088fbc4d35ad197e182e892a7df8f867d5cbcc6a6"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/13_listoffigure.tex",
+          "sha256": "b4dfe43919c5f407df25b623c7345a4f95c4d46af9d6975d8bdcd20ffa1c6abc"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/14_listofplate.tex",
+          "sha256": "4632537ab79d052162d467b646330beb98287ee6a39a600cbefa5865fe4b3500"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/15_listofappendice.tex",
+          "sha256": "195f1dc98a7a8412f8d3c478e42c351b9846c5922104a774a1004eeb27167497"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/16_introduction.tex",
+          "sha256": "33da484d93b0d0d1cc0353752a8a23aff9e0e78738284b342c004052a3f5f203"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/17_background.tex",
+          "sha256": "7e702612e2eee196b36760c97cb8d01af545f58bb6f13ff8bd9f4634ce35ecf6"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/18_statementoftheproblem.tex",
+          "sha256": "dd92edcdc7de9637b8e2003ba10a5623bf628b69828fea639b929aaff59e53f6"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/19_researchquestion.tex",
+          "sha256": "875be4dc08ea1fa7987e8c80d3b5a9f9bde4f269f41f5a4def6a3e8e41195036"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/20_researchobjective.tex",
+          "sha256": "240dbc3a579c8c1fc597fa855e136425d48c16447c911e47cbb17bb7dbad6482"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/21_significanceofthestudy.tex",
+          "sha256": "368968ff9d22dbcbfef02937e39ac26ce020ca65bdd4e3487b964ed3ca94df8d"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/22_literaturereview.tex",
+          "sha256": "487b42dc519d4d362ec42753a3b032b6466302cc95cdec6535be0be07ddf9c41"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/23_methodology.tex",
+          "sha256": "3800388422683274dfff6403f949894643b54c8bd9f96cabf0b593816598dd8f"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/24_resultanddiscussion.tex",
+          "sha256": "0cea898fd4a0df2275b38bd2c9afcdc2b733282e3a1f25b42124e8523cd5474d"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/25_conclusionandrecommendation.tex",
+          "sha256": "19ca2d7a21f768d40a3e5c4f08cee6d850d93e0d4ca1d1ef8e261b270ddde46a"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/26_reference.tex",
+          "sha256": "309c997f3a3655abc6cf026f8f1ac58f3101ff24e13b2b1fb3a5c41e24422279"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/28_appendices.tex",
+          "sha256": "8be845d68793c1b31d228aef42b63b81cffbf4a757ec89d9250254f791f5fca7"
+        },
+        {
+          "path": "researchers/nabin-bista/latex/manuscript/main_SEQ049_original.tex",
+          "sha256": "68e91ecdc7d7434f62bc2b305bbe358d16db6939621779e255c5177cf34fc99a"
+        }
+      ],
+      "semantic_status": "ADVISORY_SCAN_ONLY",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-004",
+      "slug": "safal-thapa",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/safal-thapa/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "HOLD_NO_VERIFIED_ROOT",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-005",
+      "slug": "shisheer-kc",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/shisheer-kc/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-006",
+      "slug": "binay-karki",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/binay-karki/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-007",
+      "slug": "anil-neupane",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/anil-neupane/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-008",
+      "slug": "rupesh-man-pradhan",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/rupesh-man-pradhan/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-009",
+      "slug": "krishna-kumar-gupta",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/krishna-kumar-gupta/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-010",
+      "slug": "safal-dawadi",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/safal-dawadi/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 19,
+      "source_inventory": [
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_evidence_register.tex",
+          "sha256": "778b6caa57cb1083c75ef3c6697a23d99c2f85723704c3bf8fcd8912eb4c782a"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "sha256": "5a0f90efd0bfb9dcb2dc444e16c2b09e773d9e938ab274cb52e739604ae6d9c5"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "sha256": "92e5bc340fe7c46e1f692b592a0bfaa98b0106c6c514c6c34d1d378e0125620c"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/chapters/chapter1_introduction.tex",
+          "sha256": "1db7bac6937a21f20a60eaa113c1f2f9493935c26a3320773cfcfb9f19d787ae"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/chapters/chapter2_literature_review.tex",
+          "sha256": "4ee4f8c68c57eca7b5ef09792470e023b2dde827b8f940cd2d11412073657842"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "sha256": "5c85a2e3cf6b308c504de3051710e40bfbbd3d8ad13568ebcd4740ebbb5b8419"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "sha256": "84ac039dc6f0f8e565bf35a47ee57796213f6c13783bb8e9de6d93d36e2e4569"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/chapters/chapter5_conclusion_recommendation.tex",
+          "sha256": "5609482c315d359434ca65f336f5b6e7c7e31a890f5cdf696cbfde92ccb06154"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/frontmatter/abbreviations.tex",
+          "sha256": "72538cd24cbc56558329cab25afdde879763f7d9c904068b4659cf7c425652dd"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/frontmatter/abstract.tex",
+          "sha256": "77baa0ae077a9fe774eab8d43c7becf818f5b411ebfa1227c48f0d3be07437b3"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/frontmatter/acknowledgements.tex",
+          "sha256": "2771c84b0f7b329481e13a9c2c3af9f45363d556d5bfb40aefe5e991fef9025e"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/frontmatter/certificate.tex",
+          "sha256": "05c085124a09287b40bcdad824eef682849f1fa90833cfb6013d08cdb766d1d1"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/frontmatter/declaration.tex",
+          "sha256": "889dc5fea0bedd11f4761e5fb7d450109f1469c1c8eda22f604cf8ed73ec1337"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/frontmatter/recommendation.tex",
+          "sha256": "b9cc4c492d75a309f4eadbbd4945f3c2651f14bc7cc9d00ccd5abf8eb477eb1c"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/frontmatter/units.tex",
+          "sha256": "92549d6b59953b6e74cb90d85cb3e98a69a027e7ad81c6bf6a1021329fdd1a4b"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/main.tex",
+          "sha256": "950928c9e618d9c98a825e4f2e321071e4641aa9a23afb319ad3caebb8edae68"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/project_config.tex",
+          "sha256": "490681f9c97a1e7ce9a0dc3391ddd8da21551e29345b088d8759959031e88934"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/safal_dependencies.tex",
+          "sha256": "95b60dbb4bd612057bb8b0cd462d47575d84af30f761eb4b4ec39e540cf4d4ce"
+        },
+        {
+          "path": "researchers/safal-dawadi/latex/manuscript/safal_pages.tex",
+          "sha256": "d1efa28e7404a1a8bfc717f770ffd52e3dc4694d6220e878d9df1e71889a41c4"
+        }
+      ],
+      "semantic_status": "ADVISORY_SCAN_ONLY",
+      "advisory_counts": {
+        "INTERNAL_CASE_CODE_REVIEW": 48,
+        "ADMINISTRATIVE_PROSE_REVIEW": 1
+      },
+      "advisory_findings": [
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_evidence_register.tex",
+          "line": 9,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_evidence_register.tex",
+          "line": 10,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_evidence_register.tex",
+          "line": 11,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "line": 4,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "line": 4,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "line": 4,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "line": 10,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "line": 11,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "line": 11,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_observation_form.tex",
+          "line": 11,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 10,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 11,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 12,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 13,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 14,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 15,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 16,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/appendices/appendix_practitioner_matrix.tex",
+          "line": 17,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter1_introduction.tex",
+          "line": 43,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter1_introduction.tex",
+          "line": 44,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter1_introduction.tex",
+          "line": 45,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 10,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 10,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 10,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 13,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 13,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 13,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 22,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 22,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter3_methodology.tex",
+          "line": 22,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 5,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 30,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 45,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 66,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 67,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 68,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 74,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 74,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 74,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 77,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 77,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter4_results_discussion.tex",
+          "line": 77,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter5_conclusion_recommendation.tex",
+          "line": 3,
+          "rule": "ADMINISTRATIVE_PROSE_REVIEW",
+          "sample": "practitioner-supplied",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter5_conclusion_recommendation.tex",
+          "line": 10,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter5_conclusion_recommendation.tex",
+          "line": 13,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/chapters/chapter5_conclusion_recommendation.tex",
+          "line": 16,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/frontmatter/abbreviations.tex",
+          "line": 12,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W01",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/frontmatter/abbreviations.tex",
+          "line": 13,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W02",
+          "level": "REVIEW"
+        },
+        {
+          "file": "researchers/safal-dawadi/latex/manuscript/frontmatter/abbreviations.tex",
+          "line": 14,
+          "rule": "INTERNAL_CASE_CODE_REVIEW",
+          "sample": "W03",
+          "level": "REVIEW"
+        }
+      ],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    },
+    {
+      "researcher_id": "RSH-011",
+      "slug": "sunil-rana",
+      "governance": "PASS_SOURCE_ROUTING_ONLY",
+      "entrypoint": "researchers/sunil-rana/AGENTS.md",
+      "sequence_baseline": "BASELINE_VERIFICATION_REQUIRED",
+      "sequence_highwater": null,
+      "reservations": 0,
+      "source_files_scanned": 0,
+      "source_inventory": [],
+      "semantic_status": "NO_LOCAL_MANUSCRIPT__NOT_TESTED",
+      "advisory_counts": {},
+      "advisory_findings": [],
+      "drive_root_pointer": "REGISTERED_REQUIRES_PROVIDER_READ",
+      "scientific_truth": "NOT_CERTIFIED",
+      "production_pdf": "NOT_TESTED_OR_CHANGED"
+    }
+  ],
+  "limitations": [
+    "Source lint does not establish scientific truth.",
+    "Zero local source files means not tested, never a pass.",
+    "Drive metadata is not byte/content readback.",
+    "No live reservation write test or real sequence allocation.",
+    "No automatic update to other chat threads."
+  ]
+}
