@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "policy_id": "RD-LTX-SEMANTIC-001",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "ACTIVE_SHARED_POLICY__SCIENTIFIC_ACCEPTANCE_ALWAYS_RESEARCHER_SPECIFIC",
   "canonical_owner": "controls/latex/tower.json",
   "scope": "All registered researchers using the single R&D LaTeX control tower; applies to student-facing source and PDF review, irrespective of document genre or whether first-person writing is allowed",
@@ -66,7 +66,7 @@
     {
       "id": "RD-LTX-SEM-011",
       "key": "SUBMISSION_RESULTS_NOT_AUDIT_NARRATION",
-      "requirement": "Submission-facing academic prose presents performed methods, admitted numerical/observational findings, and defensible interpretations. Do not place administrative evidence inventories, unavailable-record status matrices, source-admission flags, supervisor audit checklists, model-setup collection requests, AI-assisted work-process commentary, or repeatedly apologetic 'data were not provided' prose in results/discussion as if they were findings. Move those details to the owning researcher's governed Google Doc audit/QA records. Preserve an appropriately concise methodological limitation wherever its removal would mislead readers, mask a materially incomplete method, or imply missing analyses were performed."
+      "requirement": "Submission-facing academic prose presents performed methods, admitted numerical/observational findings, and defensible interpretations. Do not place administrative evidence inventories, unavailable-record status matrices, source-admission flags, supervisor audit checklists, model-setup collection requests, AI-assisted work-process commentary, or repeatedly apologetic 'data were not provided' prose in results/discussion as if they were findings. Move those details to the owning researcher's governed Google Doc audit/QA records. Preserve an appropriately concise methodological limitation wherever its removal would mislead readers, mask a materially incomplete method, or imply missing analyses were performed. Explicitly avoid editor-facing phrases such as 'source workbook cached', 'data were unavailable', 'a file could not be verified', or 'not an independently regenerated model' in place of actual research findings; use technical descriptions of model assumptions and results. Preserve material scientific uncertainties and limitations in concise accurate scientific form instead of removing essential disclosures."
     },
     {
       "id": "RD-LTX-SEM-012",
@@ -98,6 +98,7 @@
     "derived_from": "RSH-010 v1.11 author-voice correction and v1.12 source/figure/cover-spacing work",
     "semantic_promotion": "GENERAL_RULES_ONLY",
     "copy_research_content": false,
-    "generalized_from": "Saugat Paneru CP114 M4.2 editorial audit separation, 2026-10-30; no scientific content inherited across researchers"
+    "generalized_from": "Saugat Paneru CP114 M4.2 editorial audit separation, 2026-10-30; no scientific content inherited across researchers",
+    "latest_proposal": "RD-LTX-CHG-117__NABIN_GENERALIZED_PROSE_ONLY__NO_OTHER_RESEARCHER_CONTENT"
   }
 }
