@@ -232,20 +232,26 @@ def self_test() -> None:
     registered = load("registry/researchers.json")["researchers"]
     data = load(LEDGER)
     validate(data, registered)
-    assert plan(data, "saugat-paneru", "S03 QA")["sequence"] == 29
-    assert plan(data, "nabin-bista", "Results update")["sequence"] == 55
-    try:
-        plan(data, "shisheer-kc", "new")
-    except ValueError as e:
-        assert "HOLD_BASELINE_VERIFICATION_REQUIRED" in str(e)
-    else:
-        raise AssertionError("Unverified researcher must be held")
+    for slug in ("saugat-paneru", "nabin-bista"):
+        row = next(x for x in data["researchers"] if x["slug"] == slug)
+        highest = max([row["baseline"]["last_historical_sequence"]] +
+                      [v["sequence"] for v in row["reservations"]])
+        assert plan(data, slug, "unit test")["sequence"] == highest + 1
+    unknowns = [r["slug"] for r in data["researchers"]
+                if r["baseline"]["last_historical_sequence"] is None]
+    if unknowns:
+        try:
+            plan(data, unknowns[0], "new")
+        except ValueError as e:
+            assert "HOLD_BASELINE_VERIFICATION_REQUIRED" in str(e)
+        else:
+            raise AssertionError("Unverified researcher must be held")
     clone = json.loads(json.dumps(data))
     r = next(x for x in clone["researchers"] if x["slug"] == "nabin-bista")
     example = plan(clone, "nabin-bista", "Test")
     r["reservations"].append({**example, "status": "RESERVED", "request_key": "unit-test"})
     validate(clone, registered)
-    assert plan(clone, "nabin-bista", "Next")["sequence"] == 56
+    assert plan(clone, "nabin-bista", "Next")["sequence"] == example["sequence"] + 1
     r["reservations"].append({**example, "status": "RESERVED", "request_key": "duplicate"})
     try:
         validate(clone, registered)
