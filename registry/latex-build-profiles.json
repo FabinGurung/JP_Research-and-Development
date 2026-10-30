@@ -184,6 +184,23 @@
       "special_modes": [
         "DOCX_FIRST_NOT_AUTOMATIC_LATEX_CONVERSION"
       ]
+    },
+    {
+      "researcher_id": "RSH-012",
+      "researcher_slug": "sandip-gurung",
+      "source_root": "researchers/sandip-gurung/latex/manuscript",
+      "entrypoint": "researchers/sandip-gurung/latex/manuscript/main.tex",
+      "project_manifest": null,
+      "document_stage": "OWNING_PROJECT_AUTHORITY_REQUIRED",
+      "citation_style": "OWNING_PROJECT_AUTHORITY_REQUIRED",
+      "source_admission": "HOLD_UNLESS_INDIVIDUAL_GOVERNED_CONTROL_VERIFIES",
+      "compile_on_push": false,
+      "runner_provisioned": false,
+      "scientific_approval": "NOT_INFERRED",
+      "production_permission": "NOT_GRANTED",
+      "special_modes": [
+        "DOCX_FIRST_NOT_AUTOMATIC_LATEX_CONVERSION"
+      ]
     }
   ]
 }

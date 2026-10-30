@@ -18,8 +18,8 @@ class CatalogueTests(unittest.TestCase):
         cls.data=build_index(researchers,branches,websites)
     def test_all_researchers_and_handovers(self):
         e=self.data["entries"]
-        self.assertEqual(sum(x["category"]=="Researchers" for x in e),11)
-        self.assertEqual(sum(x["category"]=="Handovers" for x in e),11)
+        self.assertEqual(sum(x["category"]=="Researchers" for x in e),12)
+        self.assertEqual(sum(x["category"]=="Handovers" for x in e),12)
     def test_branch_history_from_snapshot(self):
         e=self.data["entries"]
         self.assertGreaterEqual(sum(x["category"]=="Git branches" for x in e),100)

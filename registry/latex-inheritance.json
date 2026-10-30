@@ -175,6 +175,21 @@
       "engine_entrypoint": "researchers/sunil-rana/AGENTS.md",
       "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
       "semantic_policy_version": "1.1.0"
+    },
+    {
+      "researcher_id": "RSH-012",
+      "slug": "sandip-gurung",
+      "tower": "controls/latex/tower.json",
+      "template": "controls/latex/template/pumlsc-shared.sty",
+      "local_configuration": null,
+      "configuration_status": "INHERITED_SHARED_DEFAULT__PROJECT_METADATA_UNVERIFIED",
+      "no_local_base_copy": true,
+      "unique_extension_ids": [],
+      "semantic_policy": "controls/latex/authorial-voice-policy.json",
+      "semantic_checker": "scripts/latex/check_authorial_voice.py",
+      "engine_entrypoint": "researchers/sandip-gurung/AGENTS.md",
+      "engine_protocol": "docs/RESEARCHER_ENGINE_READ_FIRST.md",
+      "semantic_policy_version": "1.1.0"
     }
   ],
   "semantic_policy": "controls/latex/authorial-voice-policy.json",

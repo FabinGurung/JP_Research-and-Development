@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-012",
+  "researcher_slug": "sandip-gurung",
+  "source_policy": "DRIVE_BINARY_ORIGINALS_GITHUB_POINTERS",
+  "artifacts": [
+    {
+      "kind": "SOURCE_DOCX",
+      "drive_id": "1-3NvdWoA0VCyYlIGCQXRYmeUkAF-SM-Y",
+      "filename": "Sandip_Gurung_Thesis_Source.docx",
+      "sha256": "2a690d55b921dbcabd05ce9059e9fba1808ca15750204f5de50bad067b601010",
+      "scientific_status": "NOT_REVIEWED"
+    },
+    {
+      "kind": "FORMATTED_PDF",
+      "drive_id": "1Z-CDLFoYfYQAVeuxhBGokfZyx66VsmBf",
+      "filename": "Sandip_Gurung_Thesis_Formatted.pdf",
+      "sha256": "e733749dbfe5ecc12caf37dd6151e8daade76249542f03faceac9b742fa1f9bf",
+      "pages": 135,
+      "pdf_bookmarks": 85,
+      "scientific_status": "NOT_REVIEWED"
+    }
+  ]
+}

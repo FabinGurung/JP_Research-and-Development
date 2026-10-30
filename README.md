@@ -27,7 +27,7 @@ This repository stores **code, machine-readable controls, version history, and G
 - **GitHub Pages:** human-facing researcher/control workspace.
 - **GitHub Actions:** validates the repository policy and deploys `main` only.
 
-Researcher metadata is admitted incrementally through live Drive evidence and human QA. The current registry contains **11 distinct researcher identities** and **33 core researcher lanes**. Safal Dawadi (RSH-010; MSc Construction Management) and Safal Thapa (RSH-004) are separate people and must never be conflated. Sunil Rana is RSH-011. Some manuscripts, Discussion/Presentation outputs, scientific source admissions, and final approvals remain on explicitly registered holds. The direct-child `02_Thesis` Drive audit covers all 18 currently observed folders; the folder audit is not itself scientific submission approval. Existing optional website modules remain separate.
+Researcher metadata is admitted incrementally through live Drive evidence and human QA. The current registry contains **12 distinct researcher identities** and **36 core researcher lanes**. Safal Dawadi (RSH-010; MSc Construction Management) and Safal Thapa (RSH-004) are separate people and must never be conflated. Sunil Rana is RSH-011. Some manuscripts, Discussion/Presentation outputs, scientific source admissions, and final approvals remain on explicitly registered holds. The direct-child `02_Thesis` Drive audit covers all 18 currently observed folders; the folder audit is not itself scientific submission approval. Existing optional website modules remain separate.
 
 ## Live site
 
@@ -102,7 +102,7 @@ The [public control page](https://fabingurung.github.io/JP_Research-and-Developm
 
 ## Thesis-wide normalized folder and document infrastructure (2026-10-09)
 
-- **[Human navigation: researcher folder roles](https://fabingurung.github.io/JP_Research-and-Development/thesis-infrastructure/)** — 11 registered, ten verified roots; RSH-004 HOLD; immutable Drive identities and alias proposals.
+- **[Human navigation: researcher folder roles](https://fabingurung.github.io/JP_Research-and-Development/thesis-infrastructure/)** — 12 registered, eleven verified roots; RSH-004 HOLD; immutable Drive identities and alias proposals.
 - [Machine-readable existing folder registry](registry/researcher-folder-roles.json), [canonical logical folder contract](controls/researcher-folder-contract.json), [schema](schemas/researcher-folder-contract.schema.json), [gap matrix](docs/THESIS_FOLDER_NORMALIZATION_GAP_MATRIX_20261009.md).
 - [Read-only folder planner and handover generator](scripts/researchers/normalize.py) and [11 individualized handovers](docs/researcher-normalization/). No centralized Drive mass migration.
 - [Universal LaTeX source preflight](scripts/latex/universal_preflight.py), [PDF technical inspector](scripts/latex/pdf_technical_qa.py), [11 non-autonomous project profiles](registry/latex-build-profiles.json), [144-rule route ledger](controls/latex/pu-rule-enforcement-matrix.json).
@@ -115,7 +115,7 @@ The [public control page](https://fabingurung.github.io/JP_Research-and-Developm
 
 The [illustrated homepage](https://fabingurung.github.io/JP_Research-and-Development/) now has a self-contained, CSS-animated winged book, parchment/forest day theme, optional dark reading room, pause/reduced-motion support. It requires **no Three.js dependency**, remote images, or licensed fonts. Older standalone demos remain unchanged.
 
-The [11 fully resolved researcher prompts](prompts/researchers/) are inert in GitHub: **only pasting the correct one into its owner's original researcher chat activates that owner's bounded, non-destructive migration**. All prompts inherit [central zero-delete migration rules](controls/researcher-migration-rules.json) and reproduce from [one master](prompts/researcher_owner_execution_master.md) using [the generation checker](scripts/researchers/generate_prompts.py). The [initial migration-status registry](registry/researcher-migration-status.json) has no started owner runs. RSH-004 has no verified Drive root and remains READ-ONLY HOLD. No automatic A9 Main ACK.
+The [12 researcher prompts](prompts/researchers/) are inert in GitHub: **only pasting the correct one into its owner's original researcher chat activates that owner's bounded, non-destructive migration**. All prompts inherit [central zero-delete migration rules](controls/researcher-migration-rules.json) and reproduce from [one master](prompts/researcher_owner_execution_master.md) using [the generation checker](scripts/researchers/generate_prompts.py). The [initial migration-status registry](registry/researcher-migration-status.json) has no started owner runs. RSH-004 has no verified Drive root and remains READ-ONLY HOLD. No automatic A9 Main ACK.
 
 ### Copy individual handovers directly from the website
 

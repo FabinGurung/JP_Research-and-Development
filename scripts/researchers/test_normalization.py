@@ -14,7 +14,7 @@ class FolderTests(unittest.TestCase):
         self.people=load(ROOT/"registry/researchers.json")["researchers"]
     def test_live_registry(self):
         self.assertEqual(validate(self.reg,self.people),[])
-        self.assertEqual(len(self.reg["records"]),11)
+        self.assertEqual(len(self.reg["records"]),len(self.people))
     def test_root_hold(self):
         thapa=next(x for x in self.reg["records"] if x["researcher_id"]=="RSH-004")
         self.assertIsNone(thapa["existing_project_root_drive_id"])
