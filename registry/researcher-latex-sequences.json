@@ -28,7 +28,20 @@
         "source_ref": "LATEX-SEQ-028",
         "status": "VERIFIED_CURRENT_REPOSITORY"
       },
-      "reservations": []
+      "reservations": [
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 29,
+          "branch": "thesis/saugat-paneru/latex/seq029-supervisor-methodology",
+          "status": "RESERVED",
+          "request_key": "manual:20261031-saugat-full-methodology",
+          "created_at_utc": "2026-10-31T07:15:26.208Z",
+          "main_sha_at_reservation": "6680fb992ef5bd5524740861dd7517475ea45123",
+          "template_sha": "a8f1b332cfe90027f52ed180b81cda5553c21936",
+          "note": "MANUAL CONNECTED-GITHUB proposal; effective only after successful protected-main PR merge; no submitted scientific release implied"
+        }
+      ]
     },
     {
       "researcher_id": "RSH-003",
