@@ -469,14 +469,14 @@
       "change_id": "RD-LTX-CHG-119",
       "researcher_id": "RSH-002",
       "classification": "GLOBAL_CANDIDATE",
-      "summary": "Syntax-only repair of four extra closing braces in inherited v2.6 shared dotless TOC, full Figure, worded equation and List of Equations helper definitions; restore XeLaTeX parseability for all owners without modifying scientific content or format semantics.",
+      "summary": "Syntax-only repair of four extra closing braces in inherited v2.6 shared dotless TOC, full Figure, worded equation and List of Equations helper definitions; restore XeLaTeX parseability for all owners without modifying scientific content or format semantics. Correct tocloft's singular list command and provide a plural alias so existing researcher main.tex can print an actual List of Equations.",
       "source_paths": [
         "controls/latex/template/pumlsc-shared.sty",
         "controls/latex/tower.json",
         "controls/latex/change-register.json",
         "scripts/latex/validate_shared.py"
       ],
-      "before_after_qa_evidence": "Live v2.6 style blob a089035304ecbb5f08dfb86f7f3dfa939efd3625 failed local XeLaTeX at pumlsc-shared.sty:125 'Too many }'s'; correcting four helper endings made the same Saugat source pass XeLaTeX first pass in Tinos preview mode. Whole-document v2.6.1 preview and exact Times New Roman cross-owner regression require independent execution; source CI not PDF certification.",
+      "before_after_qa_evidence": "Live v2.6 style blob a089035304ecbb5f08dfb86f7f3dfa939efd3625 failed local XeLaTeX at pumlsc-shared.sty:125 'Too many }'s'; correcting four helper endings made the same Saugat source pass XeLaTeX first pass in Tinos preview mode. Whole-document v2.6.1 preview and exact Times New Roman cross-owner regression require independent execution; source CI not PDF certification. Minimal XeLaTeX probe reported undefined listofpuequations under v2.6.0; repaired v2.6.1 alias test returned LOE-IS-DEFINED and wrote check_loe.loe.",
       "pu_rule_references": [],
       "disposition": "PROPOSED",
       "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
