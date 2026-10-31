@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6.1 syntax-repaired academic formatting for all owner submissions]
+\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6.2 dotless navigation audited academic formatting for all owner submissions]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -160,4 +160,26 @@
   \@ifpackageloaded{amsmath}{\PUApplyWordedEquationTags}{\PackageError{pumlsc-shared}{amsmath required in all thesis submissions}{Load amsmath before begin document.}}%
   \renewcommand{\figurename}{Figure}%
 }
+\makeatother
+ 
+
+% RD-LTX-CHG-120: enforce zero dotted leaders in ALL thesis navigational lists.
+% Runs at begin-document after owner preamble settings; no content/scientific change.
+\makeatletter
+\newcommand{\PUEnforceDotlessNavigation}{%
+  \def\@dotsep{10000}% suppress standard LaTeX \@dottedtocline leaders
+  \@ifpackageloaded{tocloft}{%
+    \@ifundefined{cftchapleader}{}{\renewcommand{\cftchapleader}{\hfill}}%
+    \@ifundefined{cftsecleader}{}{\renewcommand{\cftsecleader}{\hfill}}%
+    \@ifundefined{cftsubsecleader}{}{\renewcommand{\cftsubsecleader}{\hfill}}%
+    \@ifundefined{cftsubsubsecleader}{}{\renewcommand{\cftsubsubsecleader}{\hfill}}%
+    \@ifundefined{cftfigleader}{}{\renewcommand{\cftfigleader}{\hfill}}%
+    \@ifundefined{cfttableader}{}{\renewcommand{\cfttableader}{\hfill}}%
+    \@ifundefined{cfteqindexleader}{}{\renewcommand{\cfteqindexleader}{\hfill}}%
+    \@ifundefined{cftpuequationleader}{}{\renewcommand{\cftpuequationleader}{\hfill}}%
+    \@ifundefined{cftappxleader}{}{\renewcommand{\cftappxleader}{\hfill}}%
+    \@ifundefined{cftplateleader}{}{\renewcommand{\cftplateleader}{\hfill}}%
+  }{}%
+}
+\AtBeginDocument{\PUEnforceDotlessNavigation}
 \makeatother

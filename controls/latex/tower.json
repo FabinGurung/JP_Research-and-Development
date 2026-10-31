@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.6.1",
+  "version": "2.6.2",
   "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
@@ -198,5 +198,13 @@
     "effect": "NO_SCIENTIFIC_CONTENT_CHANGE__NO_NEW_TEMPLATE_REQUIREMENT",
     "qa": "LOCAL_XELATEX_SINGLE_PASS_AND_MINIMAL_LOE_TEST_PASS__FULL_EXACT_FONT_AND_CROSS_OWNER_REGRESSION_PENDING",
     "historical_releases": "PRESERVED"
+  },
+  "dotless_navigation_gate": {
+    "id": "RD-LTX-CHG-120",
+    "applies_to": "ALL_RESEARCHER_NEW_BUILDS",
+    "scope": "TABLE_OF_CONTENTS__LIST_OF_FIGURES__LIST_OF_TABLES__LIST_OF_EQUATIONS__LIST_OF_APPENDICES",
+    "method": "ENFORCE_AT_BEGIN_DOCUMENT_AFTER_OWNER_PREAMBLE",
+    "scientific_content": "UNCHANGED",
+    "visual_qa": "PER_OWNER_RENDER"
   }
 }
