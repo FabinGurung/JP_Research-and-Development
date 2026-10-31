@@ -4,7 +4,7 @@
   "slug": "saugat-paneru",
   "lane": "latex",
   "sequence": 31,
-  "status": "QA_CANDIDATE",
+  "status": "CURRENT_USER_DESIGNATED__ACADEMIC_RELEASE_GATES_OPEN",
   "source_base": "SEQ030_R2",
   "source_base_zip_sha256": "50ac91095c6b259ca500de9ce41a6e42c251242bef84094157719a0e940f57b2",
   "scientific_checkpoint": "CP114",
@@ -32,9 +32,9 @@
     "preserved": 1
   },
   "data_integrity": "12 CSV/XLSX inputs byte-identical to SEQ030_R2; selected values spot-checked; full ETABS source verification pending",
-  "approved_m4_current": "UNCHANGED",
+  "approved_m4_current": "SUPERSEDED_AS_OPERATIONAL_CURRENT__PRESERVED_PRE_SNAPSHOT",
   "native_google_doc": "PERMANENT_LIVE_UNCHANGED__FULL_PARITY_PENDING",
-  "publication_status": "CANDIDATE_ONLY__NOT_CURRENT",
+  "publication_status": "CURRENT_USER_DIRECTED__NOT_UNIVERSITY_APPROVED",
   "scientific_hold": [
     "No teacher-approved abstract/conclusion replacement supplied",
     "Exact torsional raw values and full original capacity coordinate curves unavailable",
@@ -43,7 +43,7 @@
   ],
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "editorial_r2": {
-    "status": "TECHNICAL_AND_SEMANTIC_QA_PASS__NOT_PRODUCTION_CURRENT",
+    "status": "CURRENT_USER_DIRECTED__NOT_INSTITUTIONALLY_CERTIFIED",
     "pdf_drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
     "pdf_sha256": "c6942c597635c4e16ac27b717c8b1b592fd5021cff2df8636beb946be9b8894b",
     "pdf_pages": 120,
@@ -55,10 +55,14 @@
     "exact_font": "Times New Roman embedded",
     "shared_style_blob_sha": "491538d53f83023af0b485dc0251728688ec4e2a",
     "scientific_claims_changed": false,
-    "native_doc_parity": "PENDING",
-    "university_144_rule_certification": "PENDING",
-    "supervisor_signoff": "PENDING",
+    "native_doc_parity": "OPEN__OLDER_DOC",
+    "university_144_rule_certification": "UNVERIFIED",
+    "supervisor_signoff": "NOT_CONFIRMED",
     "current_m4": "PRESERVED",
-    "source_patch_files": 8
+    "source_patch_files": 8,
+    "current_working": true,
+    "current_pointer_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "current_pointer_readback": "PENDING_STABLE_ID_UPDATE",
+    "original_M4_preserved": true
   }
 }
