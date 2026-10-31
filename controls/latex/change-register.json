@@ -506,7 +506,7 @@
     },
     {
       "change_id": "RD-LTX-CHG-121",
-      "classification": "GLOBAL_GOVERNANCE_RECONCILIATION",
+      "classification": "GLOBAL_CANDIDATE",
       "researcher_id": "RSH-002",
       "summary": "Register university-source vs user-directed dotless TOC, full Figure and Equation display conflicts without rewriting approved PU v1.13 source or falsely claiming institutional acceptance.",
       "source_paths": [
@@ -524,7 +524,8 @@
       "disposition": "SOURCE_VS_USER_DISPLAY_CONFLICT_RECORDED__INSTITUTIONAL_ACCEPTANCE_PENDING",
       "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
       "global_propagation": "NO_CODE_CHANGE__SHARED_STY_REMAINS_V262",
-      "scientific_boundary": "NO_SCIENCE_OR_COVER_APPROVAL_IMPLIED"
+      "scientific_boundary": "NO_SCIENCE_OR_COVER_APPROVAL_IMPLIED",
+      "classification_detail": "GOVERNANCE_ONLY_SOURCE_VS_USER_FORMAT_DISCREPANCY__NO_STYLE_CODE_CHANGE"
     }
   ],
   "required_fields": [
