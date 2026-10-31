@@ -40,6 +40,18 @@
           "main_sha_at_reservation": "6680fb992ef5bd5524740861dd7517475ea45123",
           "template_sha": "a8f1b332cfe90027f52ed180b81cda5553c21936",
           "note": "MANUAL CONNECTED-GITHUB proposal; effective only after successful protected-main PR merge; no submitted scientific release implied"
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 30,
+          "branch": "thesis/saugat-paneru/latex/seq030-dotless-navigation-format-qa",
+          "status": "RESERVED",
+          "request_key": "manual:20261031-saugat-dotless-navigation-v262",
+          "created_at_utc": "2026-10-31T09:15:13.286Z",
+          "main_sha_at_reservation": "9b8261b1d402c437d8c38af8adeddfd412dc4e42",
+          "template_sha": "491538d53f83023af0b485dc0251728688ec4e2a",
+          "note": "Manual connector generated guarded reservation PR. Exact global v2.6.2 dotless navigation and formatting review only; M4 CURRENT and scientific CP114 unchanged. Effective only after protected-main PR merge."
         }
       ]
     },
