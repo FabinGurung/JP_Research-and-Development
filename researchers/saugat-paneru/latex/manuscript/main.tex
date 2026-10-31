@@ -24,6 +24,11 @@
   \end{center}
 }
 
+\makeatletter
+\renewcommand{\cftchappresnum}{CHAPTER~}
+\setlength{\cftchapnumwidth}{7em}
+\makeatother
+
 \begin{document}
 \PUCoverPage
 \clearpage
@@ -52,6 +57,7 @@
 \ifPUIncludePlates\PUListOfPlates\fi
 \ifPUIncludeAppendices\PUListOfAppendices\fi
 
+\addtocontents{toc}{\protect\cftpagenumbersoff{chapter}}
 \clearpage\pagenumbering{arabic}\setcounter{page}{1}
 \input{chapters/chapter1_introduction.tex}
 \input{chapters/chapter2_literature_review.tex}
