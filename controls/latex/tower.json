@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
@@ -163,7 +163,7 @@
   },
   "drive_first_rule": "controls/academic-writing/research-deliverables.json#drive_first_publication_gate",
   "optional_academic_format_helpers": {
-    "change_id": "RD-LTX-CHG-117",
+    "change_id": "RD-LTX-CHG-118",
     "template": "controls/latex/template/pumlsc-shared.sty",
     "commands": [
       "\\PUApplyDotlessTOC",
@@ -172,8 +172,23 @@
       "\\PUEnableEquationList",
       "\\PURegisterEquationEntry"
     ],
-    "rollout": "OPT_IN_BY_RESEARCHER__NO_AUTOMATIC_RETROACTIVE_FORMAT_REWRITE",
+    "rollout": "COMPULSORY_ALL_12_OWNERS_ON_EVERY_FUTURE_REBUILD__HISTORICAL_ARCHIVES_IMMUTABLE",
     "science": "No author scientific content imported across researchers",
     "qa": "Requires per-researcher build, full-page review, approved university format"
+  },
+  "mandatory_submitted_format_v26": {
+    "effective": "2026-10-31",
+    "applies_to": "ALL_12_RESEARCHERS__EXISTING_AND_NEW__ON_NEXT_BUILD",
+    "requirements": [
+      "No dotted TOC leaders",
+      "Full Figure designations",
+      "Equation-labelled display tags",
+      "List of Equations with actual entries",
+      "Times New Roman in production",
+      "No AI, QA, version or candidate status wording inside submitted content"
+    ],
+    "implementation": "Global shared style applies default macros at begin-document; historical local preambles not using shared style must be migrated and explicitly verified rather than silently assumed compliant.",
+    "scientific_data_policy": "Scoped source edits; preserve unrelated content, tables, charts, appendices and original source bytes.",
+    "cannot_retroactively_alter": "Previously accepted archived PDFs and earlier immutable release source bundles."
   }
 }
