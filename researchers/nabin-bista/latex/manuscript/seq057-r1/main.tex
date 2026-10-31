@@ -1,29 +1,13 @@
 \documentclass[12pt,a4paper]{report}
 
-% ==========================================
-% 1. PAGE SPECIFICATIONS & MARGINS
-% ==========================================
-% PU Guidelines: Left: 3cm (1.2"), Right/Top/Bottom: 2.5cm (1")
-\usepackage[
-    a4paper, 
-    left=3cm, 
-    right=2.5cm, 
-    top=2.5cm, 
-    bottom=2.5cm
-]{geometry}
+% Canonical R&D XeLaTeX style: PU margins, exact Times New Roman and layout.
+% See controls/latex/template/pumlsc-shared.sty pinned in this release manifest.
+% Build with the exact global pumlsc-shared.sty on TEXINPUTS (no local fork).
+\usepackage{pumlsc-shared}
 
-% ==========================================
-% 2. FONT, LANGUAGE, SPACING & TOC CONFIGURATION
-% ==========================================
-% RD-LTX exact production typography (shared tower v2.4).
-% XeLaTeX must resolve the owner's licensed Times New Roman installation.
-% Licensed font files are NOT part of the public repository/source package.
-\usepackage{fontspec}
-\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\PackageError{nabin-thesis}{Exact Times New Roman required}{Install the governed owner-only font cache before compilation.}}
 % fontspec supplies Unicode font encoding for XeLaTeX
 \usepackage[american]{babel}   % Required: Language consistency
-\usepackage{setspace}          
-\onehalfspacing                 % Required: 1.5 line spacing
+% Shared canonical style owns setspace and 1.5 line spacing.                 % Required: 1.5 line spacing
 \usepackage[none]{hyphenat}    % Required: No breaking words across lines
 \sloppy
 \hbadness=10000
@@ -64,8 +48,8 @@
 \sisetup{inter-unit-product = \cdot}
 
 % Required: Left-aligned captions for Figures and Tables
-\usepackage[justification=raggedright,singlelinecheck=false]{caption}
-\usepackage[hidelinks]{hyperref} % Internal thesis cross-references and appendix links
+\captionsetup{justification=raggedright,singlelinecheck=false}
+\hypersetup{hidelinks} % Internal thesis cross-references and appendix links
 
 % ==========================================
 % 4. PU CUSTOM COMMANDS & SUB-FILE EXAMPLES
