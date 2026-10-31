@@ -42,11 +42,32 @@
   "native_doc_qa": {
     "latex_pages": 98,
     "google_doc_export_pages": 82,
-    "exact_page_parity": "FAIL"
+    "exact_page_parity": "FAIL",
+    "inline_images": 87,
+    "editable_tables": 2,
+    "populated_native_table_cells": 62,
+    "placeholder_check": "PASS"
   },
-  "remote_pdf_zip_bytes_r2": "NOT_UPDATED_IN_DRIVE",
-  "status_note": "Previous live PDF and ZIP still reflect R1 bytes; do not mark the new R2 compiled files as uploaded, or the three-format bundle as parity certified.",
+  "remote_pdf_zip_bytes_r2": "PROVIDER_LIVE_ID_NAME_SIZE_MIME_PARENT_READBACK_PASS__DOWNLOADED_SHA_NOT_INDEPENDENTLY_VERIFIED",
+  "status_note": "R2 PDF and source ZIP updated in place under their original live Drive IDs; prior exact states preserved in PRE. Google Doc edited under the same native ID and corresponding PRE/POST snapshots preserved. Exact exported-PDF parity remains FAIL (82 native Doc pages versus 98 LaTeX PDF pages). Historical accepted CURRENT preserved.",
   "accepted_current": "HISTORICAL_CURRENT_UNCHANGED",
   "general_controls": "Shared v2.6 and semantic v1.3 must be adopted in next formal canonical-template build; manuscript R2 rebuild retains historical local preamble.",
-  "release_authorization": "NOT_COMPLETED"
+  "release_authorization": "NOT_COMPLETED",
+  "post_archives": {
+    "pdf": "1Xf2ciaKY_p60BooLbZsmrZRkOAh41gQr",
+    "zip": "1ZH_IJ7AA4AZN5rQxhnQPIFVTpjMnuDDg",
+    "native_doc": "1EDPW10KCbE4mSpeZ4NJscpKhLO7BXQFYzwOxfWLMlL4"
+  },
+  "provider_readback_r2": {
+    "pdf": {
+      "id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+      "bytes": 12975733,
+      "parent_id": "1vrT3n35mQJ3mEVKJRLmw_-4UW5rw7ucZ"
+    },
+    "source_zip": {
+      "id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+      "bytes": 77814660,
+      "parent_id": "1vrT3n35mQJ3mEVKJRLmw_-4UW5rw7ucZ"
+    }
+  }
 }
