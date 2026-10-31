@@ -52,6 +52,18 @@
           "main_sha_at_reservation": "9b8261b1d402c437d8c38af8adeddfd412dc4e42",
           "template_sha": "491538d53f83023af0b485dc0251728688ec4e2a",
           "note": "Manual connector generated guarded reservation PR. Exact global v2.6.2 dotless navigation and formatting review only; M4 CURRENT and scientific CP114 unchanged. Effective only after protected-main PR merge."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 31,
+          "branch": "thesis/saugat-paneru/latex/seq031-own-comments-surgical",
+          "status": "RESERVED",
+          "request_key": "manual:20261101-saugat-own-comments-22",
+          "created_at_utc": "2026-11-01T03:21:00+05:45",
+          "main_sha_at_reservation": "8e5ff6184599fb83c482f60ddca766ace45cac84",
+          "template_sha": "491538d53f83023af0b485dc0251728688ec4e2a",
+          "note": "Based on exact complete SEQ030 R2 local source, reviewer DOCX 22 scoped comments, university/scientific and parity gates independent. Manual protected-main PR; no accepted current alteration."
         }
       ]
     },
