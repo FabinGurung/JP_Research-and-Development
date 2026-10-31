@@ -1,7 +1,17 @@
-# THE SINGLE R&D LATEX CONTROL TOWER — 2.4.0
+# THE SINGLE R&D LATEX CONTROL TOWER — 2.6.2
 
 **There is one canonical operational owner:** [tower.json](tower.json) on R&D `main`. [pumlsc-shared.sty](template/pumlsc-shared.sty) is the one reusable template. Other JSON files in this directory are **subordinate modules of this single tower**, not separate authorities.
 
+
+
+## Current common inheritance and navigation rules (v2.6.2, 31 October 2026)
+
+- The ONE canonical shared style is `controls/latex/template/pumlsc-shared.sty`, currently **2.6.2** at Git blob `491538d53f83023af0b485dc0251728688ec4e2a`. Researcher versions pin the exact blob and must not maintain an independent template fork. Version history and global amendment `RD-LTX-CHG-120` are authoritative in `change-register.json`.
+- The **dotless navigation** requirement now executes globally at begin-document through `\\PUEnforceDotlessNavigation`: no dotted leader trails in the table of contents, list of tables, list of figures, list of equations or list of appendices. Apply to newly built versions, not by rewriting previously accepted PDF archives. Confirm from the rendered output, not solely from macro source.
+- Standard numbered section headings, for example `1.1 Background`, result from the researcher's `\\chapter{Introduction}` then `\\section{Background}` and the shared numbered-section formatting. The global style controls numbering, font and spacing. **Do not copy Saugat's Background text or require every researcher to use identical chapter text or headings** unless their own university/research outline requires it.
+- Submission narrative follows semantic policy **v1.3.0** (`RD-LTX-SEM-001..013`): actual methods/results, meaningful tables, no internal audit-status prose disguised as research. Legitimate scientific limitations and mandatory assistance disclosures remain required. Source-specific scientific corrections stay owned by the researcher.
+- Full PU formatting certification is **NOT complete**. The existing 144-rule source audit maps 144 requirements but records incomplete/unverified implementation, and any final PDF needs independent page-level format, typographic, equations, citations, permissions, approval and Google Docs parity checks. A successful static source CI run does not close those gates.
+- Saugat's SEQ029 was built with shared v2.6.1; SEQ030 migrates it to v2.6.2 and conducts a new exact-font navigation and semantic comparison while keeping the accepted M4 CURRENT stable until scientific and three-format release acceptance. These examples are evidence of a shared rule, not a universal assertion that all researcher PDFs have been rebuilt.
 
 ## Three connected controls; still ONE tower
 
@@ -41,7 +51,7 @@ The semantic checker is intentionally **advisory**; use \`--fail-on-warning\` on
 
 ## One template for every researcher
 
-[registry/latex-inheritance.json](../../registry/latex-inheritance.json) enumerates all 11 registered researchers and points each to the **same exact template path**. Project metadata may change (name, stage, bibliography style, current source manifest, approved project-only extension), but formatting source may not fork.
+[registry/latex-inheritance.json](../../registry/latex-inheritance.json) enumerates all 12 registered researchers and points each to the **same exact template path**. Project metadata may change (name, stage, bibliography style, current source manifest, approved project-only extension), but formatting source may not fork.
 
 The historical `controls/latex.control.json` file is an **alias only** and `controls/projects/safal-dawadi.latex.json` retains Safal's historic evidence/QA pointers for compatibility, **not an additional template**. R&D shares source; A7 only routes globally and owns no LaTeX tower. Drive remains the authoritative academic-original source until full parity, not a second executable tower in Git.
 
