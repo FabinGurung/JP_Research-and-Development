@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "control_owner": "controls/latex/tower.json",
+  "created_at_npt": "2026-10-31",
+  "authority_source": "PU/FST MSc format v1.13 indexed under controls/latex/pu-format-parity-audit.json",
+  "status": "SOURCE_TEXT_PRESERVED__USER_PREFS_IMPLEMENTED__UNIVERSITY_APPROVAL_NOT_ASSUMED",
+  "rationale": "The original PU v1.13 rule map records dotted TOC and Fig. references. The user's subsequent mandatory presentation instructions explicitly request NO dotted leaders and full Figure/Equation designations. Shared code already uses dotless v2.6.2. Record the conflict and preserve the university-source wording and institutional-approval hold rather than silently rewriting either.",
+  "conflicts": [
+    {
+      "id": "PU-FMT-024",
+      "source_requirement": "Official-source audit describes dot leaders in TOC/LOT/LOF.",
+      "user_requested_display": "No dotted leader trails in TOC, tables, figures, equations or appendices navigation lists.",
+      "implementation": "RD-LTX-CHG-120; shared pumlsc-shared.sty v2.6.2 PUEnforceDotlessNavigation.",
+      "code_status": "IMPLEMENTED_AND_RENDERED_IN_SAUGAT_SEQ030",
+      "university_acceptance": "NOT_ESTABLISHED__USER_DECISION_MAY_REQUIRE_SUPERVISOR_UNIVERSITY_CONFIRMATION"
+    },
+    {
+      "id": "PU-FMT-035",
+      "source_requirement": "Original-source audit specifies Fig. <chapter.number> references.",
+      "user_requested_display": "Full Figure designation where shared institutional style is requested.",
+      "implementation": "RD-LTX-CHG-118; shared pumlsc-shared.sty v2.6.x figure label helper.",
+      "code_status": "SOURCE_IMPLEMENTED__RENDERED_PARTIAL_QA",
+      "university_acceptance": "NOT_ESTABLISHED__VERIFY_EXACT_INSTITUTIONAL_REQUIREMENT"
+    },
+    {
+      "id": "PU-FMT-041",
+      "source_requirement": "Original-source audit specifies Eq. citation convention and sequential equation numbers.",
+      "user_requested_display": "Consistent displayed Equation labels and proper List of Equations.",
+      "implementation": "RD-LTX-CHG-118 shared equation tag helper and LOE.",
+      "code_status": "SOURCE_IMPLEMENTED__RENDERED_PARTIAL_QA",
+      "university_acceptance": "NOT_ESTABLISHED__VERIFY_EXACT_INSTITUTIONAL_REQUIREMENT"
+    }
+  ],
+  "publication_rules": [
+    "Never edit or reinterpret PU v1.13 original-source wording; this is a separate override/authority-conflict ledger.",
+    "User-directed output presentation alone is not university approval.",
+    "A dotless PDF QA pass does not imply the entire 144-rule university checklist passes.",
+    "A full 144-rule signoff requires independent evidence and authoritative human review.",
+    "Keep shared formatting in one canonical .sty, researcher scientific prose in researcher's own source; no cross-researcher prose copy."
+  ]
+}
