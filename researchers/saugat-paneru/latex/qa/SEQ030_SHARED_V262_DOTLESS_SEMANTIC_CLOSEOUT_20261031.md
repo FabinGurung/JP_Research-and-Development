@@ -23,3 +23,13 @@
 - PR source checks, protected-main merge, Drive proof and current release promotion are separately verifiable events. No shared `.sty` was edited in this researcher PR. No historical Git refs or approved M4 artifacts deleted/repointed.
 
 **Restoration:** Previous seq029 manifest SHA, original M4 production pointers and current LIVE Docs ID preserved. Any future accepted revision must take enumerated PRE/POST snapshots, validate provider file bytes and update the same IDs only after parity and approval.
+
+## Superseding final provider readback (31 October 2026)
+
+**The earlier file-library container-session upload error above was resolved** by uploading explicit runtime file references to the same new governed Saugat candidate Drive folder. This addendum supersedes that intermediate transport HOLD; no source content or scientific data were changed by filing:
+
+- Folder: [SEQ030 Drive candidate](https://drive.google.com/drive/folders/1fK6NHNAohnv28jCoLGThADitb4ZPAAjy) (provider readback same parent for both files).
+- Exact TNR 120-page PDF: [Drive PDF](https://drive.google.com/file/d/1eHhrUWgCsUyBVrArykpjKHHSw3aq2tuP/view), 22,382,335 bytes, SHA256 `2a35732e7d1899d3857458a43465d1e3b6374ea83ffa6fa0b2f9b6c4601e576d`. Raw Drive download was **byte-identical** to locally verified original.
+- Complete source ZIP: [Drive source](https://drive.google.com/file/d/19Ke3uOeXg1s_vR4AmL35Rry5XtgVhi2-/view), 58,668,313 bytes, SHA256 `104dd62e4535bd5f33a73248bb1a2b2cd6eda4c1bba434b7dcebbce2d44842a4`. Raw Drive download was **byte-identical** to locally verified ZIP, CRC checked, original 143/143 binary research assets unchanged. No redistributed font binaries.
+- Source owner PR [#102](https://github.com/FabinGurung/JP_Research-and-Development/pull/102) merged through required 4/4 CI checks to `8f2ffcbc18c522a4d0668ad53591ccc2625a0323`. Global-template documentary correction PR [#103](https://github.com/FabinGurung/JP_Research-and-Development/pull/103) merged to `fc29ac759c5f7ca4e714492e2aee7222bcda26bb`, **documentation-only**, no new .sty source or scientific changes.
+- Still **HOLD**: independent 144-rule PU production certification, native Google Doc-to-LaTeX scientific/text/page parity, student/supervisor acceptance, and any promotion of M4 CURRENT.
