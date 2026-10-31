@@ -1,0 +1,73 @@
+{
+  "researcher": "Nabin Bista",
+  "version": "LATEX_SEQ057",
+  "revision": "R2",
+  "parent": "LATEX_SEQ057_R1",
+  "source_edit_mode": "EXISTING_SOURCE_FILES_MINIMAL_DELTA",
+  "source_entries_original": 245,
+  "source_entries_current": 246,
+  "unchanged_entries_byte_identical": 243,
+  "edited_source_paths": [
+    "researchers/nabin-bista/latex/manuscript/seq057-r1/23_methodology.tex",
+    "researchers/nabin-bista/latex/manuscript/seq057-r1/24_resultanddiscussion.tex"
+  ],
+  "added_generator": "researchers/nabin-bista/latex/manuscript/seq057-r1/tools/generate_story_shear_y.py",
+  "preserved": "No existing manuscript entry, data file, graph, appendix, citation or model workbook removed.",
+  "changes": [
+    "Restore 3.4 seismic parameters/gravity load inputs and Table 3.2",
+    "Restore 3.5 soil inputs/SSI idealization and Table 3.3",
+    "Add source-derived RS-Y maximum storey-shear chart while preserving original RS-X chart",
+    "Remove QA-like subheading and use researcher-facing comparative assessment prose",
+    "Replace internal QA-like foundation reaction caption with accurate research-facing figure caption."
+  ],
+  "local_compile": {
+    "pages": 98,
+    "engine": "XeLaTeX",
+    "bibliography": "bibtex8",
+    "pdf_sha256": "571055cc7bc9221a95947773329a8c52b43c145ae59a0aedc6042d31baa20cca",
+    "source_zip_sha256": "e038aa1f4952ff88949995127c771123a3c6a03bdd32164faca9ed43d17f6d04",
+    "exact_times_new_roman": "PASS"
+  },
+  "previous_live_ids": {
+    "pdf": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_zip": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "native_google_doc": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg"
+  },
+  "pre_archives": {
+    "pdf": "1VxA4We-Y-sVzLEWAz3lUjoLQtCuMms3u",
+    "zip": "1G3MW8eP6nbeKQv0EQxuBehbjpF8E2LuL",
+    "native_doc": "1p_udu0sf7Zm1w0uSajF9zftD0yXK0oNN4GeIjobUQLA"
+  },
+  "native_doc_changes": "Same live Google Doc ID edited: restore two sections with 62 native table cells, insert 36 appendix images + 40 original figure images + cover logo and new RS-Y graphic; remove internal text markers.",
+  "native_doc_qa": {
+    "latex_pages": 98,
+    "google_doc_export_pages": 82,
+    "exact_page_parity": "FAIL",
+    "inline_images": 87,
+    "editable_tables": 2,
+    "populated_native_table_cells": 62,
+    "placeholder_check": "PASS"
+  },
+  "remote_pdf_zip_bytes_r2": "PROVIDER_LIVE_ID_NAME_SIZE_MIME_PARENT_READBACK_PASS__DOWNLOADED_SHA_NOT_INDEPENDENTLY_VERIFIED",
+  "status_note": "R2 PDF and source ZIP updated in place under their original live Drive IDs; prior exact states preserved in PRE. Google Doc edited under the same native ID and corresponding PRE/POST snapshots preserved. Exact exported-PDF parity remains FAIL (82 native Doc pages versus 98 LaTeX PDF pages). Historical accepted CURRENT preserved.",
+  "accepted_current": "HISTORICAL_CURRENT_UNCHANGED",
+  "general_controls": "Shared v2.6 and semantic v1.3 must be adopted in next formal canonical-template build; manuscript R2 rebuild retains historical local preamble.",
+  "release_authorization": "NOT_COMPLETED",
+  "post_archives": {
+    "pdf": "1Xf2ciaKY_p60BooLbZsmrZRkOAh41gQr",
+    "zip": "1ZH_IJ7AA4AZN5rQxhnQPIFVTpjMnuDDg",
+    "native_doc": "1EDPW10KCbE4mSpeZ4NJscpKhLO7BXQFYzwOxfWLMlL4"
+  },
+  "provider_readback_r2": {
+    "pdf": {
+      "id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+      "bytes": 12975733,
+      "parent_id": "1vrT3n35mQJ3mEVKJRLmw_-4UW5rw7ucZ"
+    },
+    "source_zip": {
+      "id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+      "bytes": 77814660,
+      "parent_id": "1vrT3n35mQJ3mEVKJRLmw_-4UW5rw7ucZ"
+    }
+  }
+}
