@@ -67,6 +67,13 @@
           "source_path": "researchers/nabin-bista/latex/releases/SEQ056_TABLE46_BLOCKS_1_AND_4_20261030.md",
           "scientific_admission": "NOT_INFERRED_FROM_VERSION_NUMBER",
           "note": "Live main shows existing SEQ056; do not issue seq055 or seq056 again"
+        },
+        {
+          "sequence": 57,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ057_R3_DELTA_RECEIPT_20261031.md",
+          "scientific_admission": "RELEASE_RECEIPT_R3__NO_SUPERVISOR_APPROVAL_INFERRED",
+          "note": "SEQ057 R3 source/correction recorded in merged PR #86; preserve previous releases; ledger reconciliation for requested SEQ058"
         }
       ]
     },
