@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0.0",
+  "researcher": "Rupesh Man Pradhan",
+  "edition": "RMP_GIS_V03.0",
+  "version": "0.3.0",
+  "status": "STATIC_GIS_CARTOGRAPHIC_EDITION__SCIENTIFIC_LIMITS_CARRIED_FORWARD",
+  "parent_version": "0.2.7",
+  "git_source": "researchers/rupesh-man-pradhan/gis/RMP_GIS_V03_0_ALL_WARDS_COLOR_MAP.py",
+  "git_source_blob_sha": "051fcdf60b79d5817d7a6c5218c9491ae9e78c87",
+  "source_sha256": "a48c1dd89d0e5d554f1d77e2b7c4acaf3738fe8bbbfebabbb585736056c2fbaa",
+  "drive_figure": {
+    "id": "1aSgMWi4af-pxR5EYFXXxwf2qMi_grdpR",
+    "file_name": "RMP_POKHARA_ALL_WARDS_COLORED_BUILDINGS_OK_ONLY_v0.3.0.png",
+    "size_bytes": 1167832,
+    "sha256": "79bfbb70e22c164314d8b7788ca829c2f2589682da7b31515a38dd70562ac60f",
+    "folder_id": "1iAP-wSc4nSqjNW8odXaFg-ymQNNb46zj",
+    "size_px": [
+      4962,
+      3507
+    ],
+    "dpi": 300
+  },
+  "parent_figure": {
+    "drive_id": "1GZBgLjStrMe7sbyxp5WGcQh3GUdOr9oU",
+    "source_sha256": "dab753939cb181931a2159de199b8745b922f213c3df01e4662ae1967688d642",
+    "png_sha256": "7f8d8552d2cdb38e1bf2e16195feac5a4f0b5cf16576401cfbcb7e41ea45c810",
+    "baseline_exact_rerun": true
+  },
+  "source_inputs_sha256": {
+    "GOOGLE CO ORDINATE.xlsx": "19982a5a718a81fe71d65c30935714ea6dae88db0a7670a2927b61de60ec88c7",
+    "RMP_coordinates_all_266_QA_v0.1.2.csv": "b652af118cb82a8a3de1fa08199575dabd5d9d3e61114f84c733bcc14e8af4e8",
+    "RMP_WARD_SPATIAL_JOIN_QA_v0.2.0.csv": "642c8fd18f7d2e2e53af3104e598e278f586b93fbf27425f9964749bf7be634e",
+    "local_unit.shp": "a9e439a54a7c84aa799aa674a81c46d584912060f2f951d0fcb4b38f0a554c97",
+    "RMP_WARD_DISPLAY_GEOMETRY_CACHE_v0.2.1.json": "8c9dfe446c5b307443cc0013ddaf4d34e978f27f7aeab126cbb75a34441b8b8c"
+  },
+  "invariants": {
+    "categorical_ward_fills": 33,
+    "distinct_fill_colors": 33,
+    "prior_ok_colors_preserved": true,
+    "ok_wards": [
+      11,
+      21,
+      24,
+      25,
+      26,
+      27,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "non_ok_building_markers": 0,
+    "original_records": 266,
+    "eligible_points": 104,
+    "rendered_points": 95,
+    "rendered_engineered": 50,
+    "rendered_non_engineered": 45,
+    "held_display_boundary": 9,
+    "map_crs": "EPSG:32645",
+    "fixed_square_extent_side_m": 44216.67209703749,
+    "geometry_changed": false,
+    "points_changed": false,
+    "filter_changed": false,
+    "extent_changed": false,
+    "graticule_changed": false,
+    "scale_bar_changed": false,
+    "locator_changed": false
+  },
+  "qa": {
+    "image_visual_readback": "PASS",
+    "baseline_reproduction_png_sha256_exact": true,
+    "new_image_header_locator_scale_crops_match_baseline": true,
+    "held_point_policy": "same as V02.7",
+    "administrative_layer_authority": "generalized historical KLL/OSM ward polygon registered to local-unit municipal shapefile; not independently official-current",
+    "scientific_approval": "NOT_CLAIMED"
+  },
+  "governance": {
+    "code_authority": "GitHub",
+    "figure_authority": "Google Drive",
+    "raw_coordinates_in_public_git": false,
+    "no_routine_a9_seq_increment": true,
+    "prior_versions_immutable": true
+  }
+}
