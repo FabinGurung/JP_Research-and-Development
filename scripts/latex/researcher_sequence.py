@@ -345,7 +345,7 @@ def self_test() -> None:
         assert plan(data, slug, "unit test")["sequence"] == highest + 1
     nabin = next(x for x in data["researchers"] if x["slug"] == "nabin-bista")
     assert [x["sequence"] for x in nabin.get("observed_out_of_band_versions", [])] == [55, 56, 57]
-    assert plan(data, "nabin-bista", "safe preview")["sequence"] == 58
+    assert plan(data, "nabin-bista", "safe preview")["sequence"] == (max([57] + [r["sequence"] for r in nabin["reservations"]]) + 1)
     mock_tree = {"truncated": False, "tree": [
         {"path": "researchers/nabin-bista/latex/releases/SEQ055_EXAMPLE.md", "type": "blob"},
         {"path": "researchers/nabin-bista/latex/releases/SEQ056_EXAMPLE.md", "type": "blob"},
@@ -354,12 +354,13 @@ def self_test() -> None:
     assert remote_release_highwater(mock_tree, "nabin-bista") == 57
     verify_remote_releases_reconciled(mock_tree, nabin)
     assert remote_release_highwater(mock_tree, "saugat-paneru") == 999
+    unregistered_seq = max([57] + [r["sequence"] for r in nabin["reservations"]]) + 1
     stale = {"truncated": False, "tree": mock_tree["tree"] + [
-        {"path": "researchers/nabin-bista/latex/releases/SEQ058_UNREGISTERED.md", "type": "blob"}]}
+        {"path": "researchers/nabin-bista/latex/releases/SEQ{:03d}_UNREGISTERED.md".format(unregistered_seq), "type": "blob"}]}
     try:
         verify_remote_releases_reconciled(stale, nabin)
     except RuntimeError as exc:
-        assert "UNREGISTERED_REMOTE_RELEASE_SEQ_058" in str(exc)
+        assert "UNREGISTERED_REMOTE_RELEASE_SEQ_{:03d}".format(unregistered_seq) in str(exc)
     else:
         raise AssertionError("Unregistered existing release must block reservation")
     contaminated = json.loads(json.dumps(data))
