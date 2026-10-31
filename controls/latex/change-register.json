@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 119,
+  "next_number": 120,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -464,6 +464,26 @@
       "global_propagation": "REQUIRED_ON_NEXT_OWNER_BUILD__NO_REWRITING_HISTORICAL_ARCHIVES",
       "regression_scope": "Shared style source checks and all-owner inheritance; individual exact-font full document render QA",
       "scientific_boundary": "No Nabin research results introduced into other researchers."
+    },
+    {
+      "change_id": "RD-LTX-CHG-119",
+      "researcher_id": "RSH-002",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Syntax-only repair of four extra closing braces in inherited v2.6 shared dotless TOC, full Figure, worded equation and List of Equations helper definitions; restore XeLaTeX parseability for all owners without modifying scientific content or format semantics.",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "controls/latex/tower.json",
+        "controls/latex/change-register.json",
+        "scripts/latex/validate_shared.py"
+      ],
+      "before_after_qa_evidence": "Live v2.6 style blob a089035304ecbb5f08dfb86f7f3dfa939efd3625 failed local XeLaTeX at pumlsc-shared.sty:125 'Too many }'s'; correcting four helper endings made the same Saugat source pass XeLaTeX first pass in Tinos preview mode. Whole-document v2.6.1 preview and exact Times New Roman cross-owner regression require independent execution; source CI not PDF certification.",
+      "pu_rule_references": [],
+      "disposition": "PROPOSED",
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "GLOBAL_SYNTAX_CORRECTION_AFTER_APPROVED_PR__HISTORICAL_REFERENCES_UNCHANGED",
+      "regression_scope": "Shared style parse and 12 registered researcher source-contract tests; exact-font PDF QA per researcher separately",
+      "scientific_boundary": "NO_SCIENTIFIC_DATA_OR_RESEARCHER_MANUSCRIPT_MUTATION__NO_M4_CURRENT_PROMOTION"
     }
   ],
   "required_fields": [
