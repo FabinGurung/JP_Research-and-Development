@@ -61,7 +61,33 @@
   "scientific_approval": null,
   "current_promotion": "FORBIDDEN_PENDING_PARITY_AND_APPROVAL",
   "candidate_folder_drive_id": "1fK6NHNAohnv28jCoLGThADitb4ZPAAjy",
-  "release_disposition": "SEQ030_RESEARCHER_QA_CANDIDATE__NOT_CURRENT__PRODUCTION_M4_PRESERVED",
+  "release_disposition": "SEQ030_R1_DRIVE_QA_CANDIDATE__R2_LOCAL_HYPHENATION_REPAIR_COMPILED__DRIVE_R2_UNVERIFIED__NATIVE_DOC_AND_144_RULE_HOLDS__M4_CURRENT_PRESERVED",
   "pdf_download_url": "https://drive.google.com/file/d/1eHhrUWgCsUyBVrArykpjKHHSw3aq2tuP/view",
-  "source_zip_url": "https://drive.google.com/file/d/19Ke3uOeXg1s_vR4AmL35Rry5XtgVhi2-/view"
+  "source_zip_url": "https://drive.google.com/file/d/19Ke3uOeXg1s_vR4AmL35Rry5XtgVhi2-/view",
+  "qa_revisions": [
+    {
+      "revision": "R1",
+      "status": "DRIVE_FILED__QA_CANDIDATE",
+      "pdf_drive_id": "1eHhrUWgCsUyBVrArykpjKHHSw3aq2tuP",
+      "pdf_sha256": "2a35732e7d1899d3857458a43465d1e3b6374ea83ffa6fa0b2f9b6c4601e576d",
+      "source_zip_drive_id": "19Ke3uOeXg1s_vR4AmL35Rry5XtgVhi2-",
+      "source_zip_sha256": "104dd62e4535bd5f33a73248bb1a2b2cd6eda4c1bba434b7dcebbce2d44842a4",
+      "notes": "Preserved PRE: 168 mid-word hyphenated PDF line breaks verified in source-derived R1"
+    },
+    {
+      "revision": "R2",
+      "status": "LOCAL_COMPILED__DRIVE_UPLOAD_HOLD",
+      "pdf_drive_id": null,
+      "pdf_sha256": "02686254cd923f5fe5f2eb214fdf72565a617b725254744b61bf8ad90780dc83",
+      "pdf_bytes": 22386726,
+      "pdf_pages": 120,
+      "source_zip_drive_id": null,
+      "source_zip_sha256": "50ac91095c6b259ca500de9ce41a6e42c251242bef84094157719a0e940f57b2",
+      "source_zip_bytes": 58669188,
+      "source_change": "extensions/saugat_project_adapter.sty restored no-discretionary-hyphen policy: 168 → 4 legitimate compound-hyphen wraps",
+      "scientific_data_changed": false,
+      "shared_template_changed": false,
+      "approval": null
+    }
+  ]
 }
