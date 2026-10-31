@@ -22,3 +22,8 @@ The SEQ049 Drive ZIP omits two referenced PDF figures, now recovered by exact SH
 ## 2026-10-29 Submission02: six-block dimensions, springs and updated model figures
 
 The new original DOCX + 7z are preserved in Nabin's Drive and indexed as a second October submission. The earlier 67-workbook plots ZIP and 495KB plan are NOT in the 69-page LATEX_SEQ049 manuscript, and the new 7z's Block 5/6 images are changed from their prior variants. Source custody, duplicates, and obscured Block5 spring cells are explicit HOLDs. [Read full two-batch admission and full-figure completeness prompt](prompts/SEQ050_ALL_OCTOBER_SUBMISSIONS_SOURCE_TO_PDF_READ_FIRST.md). Old source branches and links remain intact. The historical status sections above remain as event-time audit history; the latest Build02 upload and 69-page QA are documented in `audits/SEQ049_FULLQA_BUILD02_READ_FIRST.md`.
+
+
+## Current working LaTeX release (version-control correction, 2026-11-01)
+
+The already completed six-2D-figure and cover-logo manuscript state is **LATEX_SEQ059**, not SEQ058. PRE remains SEQ058; POST is SEQ059; live Google Drive IDs are unchanged. See [version pointer](versions/CURRENT.json) and [immutable SEQ059 version record](versions/seq059.json). Prior history above is preserved as historical evidence; source quality/approval gates remain separate.

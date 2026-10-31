@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "lane": "latex",
+  "sequence": 59,
+  "release_id": "LATEX_SEQ059",
+  "parent_release_id": "LATEX_SEQ058",
+  "status": "QA_CANDIDATE",
+  "publication_status": "COMPILED_PDF_AND_SOURCE_ZIP_IN_PLACE__NATIVE_DOC_PARITY_HOLD",
+  "semantic_version_rule": "Every meaningful manuscript mutation increments sequence; Drive live IDs are stable; enumerated PRE stores preceding seq058 state, POST stores seq059 state",
+  "change_event": "2026-11-01 six Nabin-only 2D hospital building plans and cover university-logo presentation, previous approved B1/B2 plot correction carried forward",
+  "numbering_correction": "The preceding patch was incorrectly described as SEQ058; corrected to SEQ059 without changing compiled PDF bytes",
+  "manuscript_content_changed_during_renumber": false,
+  "parent_archive_sha256": "5d91b19935e8fd56802db42b39a35a2a2e64a57229f6834d4ce5a4b5173c28bb",
+  "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+  "pdf_pages": 105,
+  "pdf_sha256": "46d01ae51751ccf7778158441c84f0feb5416c5555af1e1cf8f775133fdee663",
+  "source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+  "source_zip_sha256": "92243daff7fd411a27fec9ac4bcf4558c9e30cbc72c41496d550578875ae3767",
+  "source_zip_entries": 298,
+  "source_entries_verified_byte_identical": 296,
+  "native_google_doc_permanent_live_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+  "native_doc_parity": "NOT_CERTIFIED_88_NATIVE_EXPORT_PAGES_VS_105_LATEX_PAGES",
+  "pre": {
+    "sequence": 58,
+    "pdf_id": "18fsc_W8l70jpe7Qyde896JwyRj29q83C",
+    "source_zip_id": "1jdOL-07tZYT3Zeaa1OjDWUIcXfs4KrlB",
+    "google_doc_id": "1ra0IdDttxr4S65m-aNWg52mr40n_rkDJgTDShRJrYs4"
+  },
+  "post": {
+    "sequence": 59,
+    "pdf_id": "1NBnU4F350O8ggaLll5W4WLLLhZZ99xJF",
+    "source_zip_id": "1A3iJknC_Qkng4Sxc7MEpy5VlrkdsXpwd",
+    "google_doc_id": "1RJ_qeM6bEXwR0fenDqN-3Pcs7-LYnpPujG_1j3L_D6A"
+  },
+  "repackaging_pre_id": "1_zriRcXMtxCCL6n0ImdMyuzy7sbwnaHh",
+  "scope": "SEQ058_2D_LOGO_MICRO2_PROMOTED_TO_SEQ059__NO_ADDITIONAL_MANUSCRIPT_MUTATION",
+  "scientific_content_admission": "NO_NEW_RESULTS_NO_NEW_ETABS_ANALYSIS",
+  "approval": null,
+  "separate_version_axes": {
+    "snapshot_counter": "000004 for original PRE/POST set; 000005 independent repackaging PRE",
+    "manuscript_sequence": "059",
+    "google_doc_file_id": "permanent unchanged",
+    "git": "commit/PR history independently tracked"
+  }
+}
