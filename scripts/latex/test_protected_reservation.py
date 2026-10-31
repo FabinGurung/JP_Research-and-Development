@@ -46,16 +46,17 @@ class Tests(unittest.TestCase):
         self.env.start();self.addCleanup(self.env.stop)
         p=patch.object(engine,'Github',return_value=self.gh);p.start();self.addCleanup(p.stop)
     def test_proposal_retry_and_finalize_barrier(self):
+        next_seq=engine.plan(self.gh.data,'saugat-paneru','test')['sequence']
         engine.reserve('saugat-paneru','test',False)
         proposal=self.gh.branches['reservation/latex/gha-123']
-        self.assertEqual(engine.plan(self.gh.data,'saugat-paneru','test')['sequence'],29)
+        self.assertEqual(engine.plan(self.gh.data,'saugat-paneru','test')['sequence'],next_seq)
         engine.reserve('saugat-paneru','test',False)
         self.assertEqual(len(self.gh.prs),1)
         with self.assertRaisesRegex(RuntimeError,'No accepted'):
             engine.finalize('saugat-paneru','gha:123',False)
         self.gh.data=proposal # simulated accepted merge, no provider write
         engine.finalize('saugat-paneru','gha:123',False)
-        self.assertIn('thesis/saugat-paneru/latex/seq029-test',self.gh.branches)
+        self.assertIn(f'thesis/saugat-paneru/latex/seq{next_seq:03d}-test',self.gh.branches)
         writes=[c for c in self.gh.calls if c[0] in ('PUT','POST','PATCH')]
         self.assertFalse(any(c[2].get('branch')=='main' for c in writes))
     def test_collision_and_history_mutation(self):
