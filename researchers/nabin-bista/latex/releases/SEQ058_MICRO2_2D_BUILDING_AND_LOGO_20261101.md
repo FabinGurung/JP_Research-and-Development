@@ -25,3 +25,7 @@
 
 ## Restoration
 Restore the original permanent Drive IDs using the above numbered PRE copies if rollback is required. Retain POST as the new complete state.
+
+## Later enumeration correction (2026-11-01)
+
+**This original event-time note was incorrectly numbered SEQ058.** The completed six-2D-figure/cover-logo manuscript state is **LATEX_SEQ059**. The PRE copies hold LATEX_SEQ058; POST copies hold LATEX_SEQ059. Live Drive file IDs are unchanged. See [SEQ059 version record](../versions/seq059.json) and [SEQ059 release reconciliation](SEQ059_VERSION_ENUMERATION_2D_LOGO_20261101.md). Keep this earlier note for audit provenance; do not treat it as the current release number.
