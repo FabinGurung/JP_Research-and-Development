@@ -104,8 +104,66 @@ The Winkler idealization relates soil reaction locally to displacement, whereas 
 \subsection{Analysis cases and response quantities}
 Modal analysis provides natural periods and cumulative participating mass ratios in the two horizontal directions. Response-spectrum analysis gives the horizontal displacement, inter-storey drift, base reaction and storey-shear response for the specified X and Y cases. The independent $1.2DL+1.5LL$ gravity combination provides base-joint settlement, vertical reaction and beam/column member-force components. Each set of results is tabulated against its own load-case definition to prevent the erroneous use of gravity results as earthquake results. The X-labelled fragility workbooks provide source curves for comparative interpretation; new probabilistic fits are not inferred from the response-spectrum maxima alone.
 
-\subsection{Verification boundaries}
-Numerical comparison proceeds in three stages: first, confirm the block and support-case identity of every result; second, preserve each component's physical unit, direction and loading-case definition; third, compare trends within a block rather than across unrelated geometries. Comparisons retain each block's original analytical identity and loading condition. The assessment is based on the defined analytical models rather than a direct measurement of the completed hospital.
+\subsection{Comparative assessment procedure}
+The response quantities are evaluated separately for each structural block and its prescribed foundation-support condition. Trends are examined using the corresponding load cases, units, component directions and modal or seismic response definitions. Comparing the flexible-support cases with the fixed-base case identifies the variation associated with the adopted foundation stiffness within each block.
+
+
+\section{Seismic Parameters and Gravity Loading}
+The structural models adopt an importance factor of 1.5, a damping ratio of 5 percent, and a Special Moment Resisting Frame (SMRF) structural-system designation. Seismic loading and site classification follow NBC 105:2025 \cite{nbc1052025}. The gravity-load assignments for the model are summarized in Table~\ref{tab:gravity_load_inputs}. The imposed floor loading differs according to the functional use of the spaces and the relevant structural element.
+
+\begin{table}[htbp]
+\centering
+\caption{Gravity load inputs assigned in the structural analysis}
+\label{tab:gravity_load_inputs}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}p{5.5cm}p{3cm}p{3.3cm}@{}}
+\toprule
+Load item & Assigned load & Application \\
+\midrule
+Floor finish & $2.5\ \mathrm{kN/m^{2}}$ & Slab \\
+Wall load & $16.5\ \mathrm{kN/m}$ & Beam \\
+Ramp parapet wall & $5\ \mathrm{kN/m}$ & Ramp beam \\
+Water tank load & $3.6\ \mathrm{kN/m^{2}}$ & Fifth-floor slab \\
+Ward floor live load & $4\ \mathrm{kN/m^{2}}$ & Slab \\
+Corridor live load & $4\ \mathrm{kN/m^{2}}$ & Slab \\
+Operation theatre and ICU live load & $4\ \mathrm{kN/m^{2}}$ & Slab \\
+Staircase and ramp floor live load & $5\ \mathrm{kN/m^{2}}$ & Stair/ramp slab \\
+Roof live load & $0.75\ \mathrm{kN/m^{2}}$ & Roof slab \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+Response-spectrum analysis provides the linear seismic demand comparison for the fixed- and flexible-support models. Modal participating mass is examined in the two principal horizontal directions, with the NBC 105:2025 cumulative participating-mass criterion of at least 90 percent used for assessment \cite{nbc1052025}. Gravity-load combinations and spectral-response cases are interpreted independently when comparing foundation and superstructure demand.
+
+\section{Soil Parameters and SSI Idealization}
+The study considers three flexible-base soil conditions, designated hard, medium, and soft. Their site-class categories and material parameters used for the analytical comparison are summarized in Table~\ref{tab:soil_property_inputs}. The hard-soil support corresponds to the greatest subgrade stiffness and the soft-soil case to the smallest; these properties establish the comparative foundation spring idealizations.
+
+\begin{table}[htbp]
+\centering
+\caption{Soil parameters and site classifications used in SSI modelling}
+\label{tab:soil_property_inputs}
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lccrrrrr@{}}
+\toprule
+Soil case & NBC class & NBC $V_{s,30}$ (m/s) & Project $V_{s,30}$ (m/s) & $E$ (MPa) & $\nu$ & $G$ (MPa) & SBC (kPa) \\
+\midrule
+Hard & B & $350<V_{s,30}\leq800$ & 575 & 1550 & 0.30 & 595 & 400 \\
+Medium & C & $150<V_{s,30}\leq350$ & 250 & 300 & 0.35 & 113 & 200 \\
+Soft & D & $V_{s,30}\leq150$ & 125 & 80 & 0.40 & 28 & 100 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+Within the Winkler idealization, the contact pressure at a foundation point is related to local vertical soil deformation through a modulus of subgrade reaction. Its one-parameter vertical form is
+\begin{equation}
+p(x,y)=k_s\,w(x,y),
+\label{eq:winkler_soil_reaction}
+\end{equation}
+\RegisterThesisEquation{Local vertical soil reaction in the Winkler idealization}
+where $p(x,y)$ is the foundation reaction per unit area, $w(x,y)$ denotes the local foundation displacement, and $k_s$ is the modulus of subgrade reaction. The six-component foundation-spring representation extends beyond this scalar vertical relationship to independent horizontal, vertical, rocking, and torsional restraints. The equivalent static stiffness components are formulated using elastic half-space foundation relations as discussed by Gazetas \cite{gazetas1991}. For the square isolated footing adopted in the spring derivation, the plan dimensions are $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$, with $L=B=1.5\,\mathrm{m}$ in the $2L\times2B$ notation. The resulting foundation area is $9\,\mathrm{m^2}$ and the geometric properties are $I_{bx}=I_{by}=6.75\,\mathrm{m^4}$ and $J_b=13.5\,\mathrm{m^4}$.
 
 \section{Foundation-Support Representation}
 Soil--structure interaction is represented by springs describing translational, rocking and torsional foundation restraint. The fixed-base case provides the comparison reference; the flexible-base cases are categorized as hard, medium and soft soil. The discrete-spring concept is compatible with substructure SSI modelling \cite{wolf1985,gazetas1991}. The model incorporates the translational and rotational spring stiffnesses assigned to the foundation for each soil condition.
