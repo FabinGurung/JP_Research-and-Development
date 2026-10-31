@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
@@ -190,5 +190,13 @@
     "implementation": "Global shared style applies default macros at begin-document; historical local preambles not using shared style must be migrated and explicitly verified rather than silently assumed compliant.",
     "scientific_data_policy": "Scoped source edits; preserve unrelated content, tables, charts, appendices and original source bytes.",
     "cannot_retroactively_alter": "Previously accepted archived PDFs and earlier immutable release source bundles."
+  },
+  "syntax_repair": {
+    "change_id": "RD-LTX-CHG-119",
+    "origin": "Saugat source-only methodology next-build smoke test",
+    "kind": "SHARED_STY_FOUR_EXTRA_BRACES_SYNTAX_FIX",
+    "effect": "NO_SCIENTIFIC_CONTENT_CHANGE__NO_NEW_TEMPLATE_REQUIREMENT",
+    "qa": "LOCAL_XELATEX_SINGLE_PASS_RECOVERED_AFTER_FIX__FULL_EXACT_FONT_AND_CROSS_OWNER_REGRESSION_PENDING",
+    "historical_releases": "PRESERVED"
   }
 }
