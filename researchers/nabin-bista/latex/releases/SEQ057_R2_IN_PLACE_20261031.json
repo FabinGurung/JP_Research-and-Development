@@ -1,0 +1,51 @@
+{
+  "researcher": "Nabin Bista",
+  "version": "LATEX_SEQ057",
+  "revision": "R2",
+  "parent": "LATEX_SEQ057_R1",
+  "source_edit_mode": "EXISTING_SOURCE_FILES_MINIMAL_DELTA",
+  "source_entries_original": 245,
+  "source_entries_current": 246,
+  "unchanged_entries_byte_identical": 243,
+  "edited_source_paths": [
+    "researchers/nabin-bista/latex/manuscript/seq057-r1/23_methodology.tex",
+    "researchers/nabin-bista/latex/manuscript/seq057-r1/24_resultanddiscussion.tex"
+  ],
+  "added_generator": "researchers/nabin-bista/latex/manuscript/seq057-r1/tools/generate_story_shear_y.py",
+  "preserved": "No existing manuscript entry, data file, graph, appendix, citation or model workbook removed.",
+  "changes": [
+    "Restore 3.4 seismic parameters/gravity load inputs and Table 3.2",
+    "Restore 3.5 soil inputs/SSI idealization and Table 3.3",
+    "Add source-derived RS-Y maximum storey-shear chart while preserving original RS-X chart",
+    "Remove QA-like subheading and use researcher-facing comparative assessment prose"
+  ],
+  "local_compile": {
+    "pages": 98,
+    "engine": "XeLaTeX",
+    "bibliography": "bibtex8",
+    "pdf_sha256": "3403d8bd780a52003145a6c65a16662aea782cd6beaa769aab894e7919d57bfd",
+    "source_zip_sha256": "e8cf2fc9463b0e2c1ed6f15fca050162326bebe0c470284bf9dba01d0f019210",
+    "exact_times_new_roman": "PASS"
+  },
+  "previous_live_ids": {
+    "pdf": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_zip": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "native_google_doc": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg"
+  },
+  "pre_archives": {
+    "pdf": "1VxA4We-Y-sVzLEWAz3lUjoLQtCuMms3u",
+    "zip": "1G3MW8eP6nbeKQv0EQxuBehbjpF8E2LuL",
+    "native_doc": "1p_udu0sf7Zm1w0uSajF9zftD0yXK0oNN4GeIjobUQLA"
+  },
+  "native_doc_changes": "Same live Google Doc ID edited: restore two sections with 62 native table cells, insert 36 appendix images + 40 original figure images + cover logo and new RS-Y graphic; remove internal text markers.",
+  "native_doc_qa": {
+    "latex_pages": 98,
+    "google_doc_export_pages": 82,
+    "exact_page_parity": "FAIL"
+  },
+  "remote_pdf_zip_bytes_r2": "NOT_UPDATED_IN_DRIVE",
+  "status_note": "Previous live PDF and ZIP still reflect R1 bytes; do not mark the new R2 compiled files as uploaded, or the three-format bundle as parity certified.",
+  "accepted_current": "HISTORICAL_CURRENT_UNCHANGED",
+  "general_controls": "Shared v2.6 and semantic v1.3 must be adopted in next formal canonical-template build; manuscript R2 rebuild retains historical local preamble.",
+  "release_authorization": "NOT_COMPLETED"
+}
