@@ -1,160 +1,9 @@
 \chapter{Results and Discussion}
 
-\section{Introduction}
+
 This chapter follows the four-phase workflow established in Chapter 3. Phase I reports the available concrete design-\allowbreak{}check evidence for the representative Draft Final NBC 205:2012 regular building. Phase II establishes the NBC 205:2024 Regular model as the performance-based reference. Phase III evaluates the NBC 205:2024 plan-irregular buildings and distinguishes them from the separate four-storey height-extension model. Phase IV synthesizes the response parameters to determine practical RUD applicability limits.
 
 The results presented in this chapter include NBC 105:2025 storey shear, storey drift, CM--CR separation, pushover response, performance points, hinge observations, concrete design-check observations for the representative NBC 205:2012 building, and the separate four-storey extension. All seven models in the main regular/plan-irregular comparison have three full storeys plus a stair cover. Only the separate height-extension model has four full storeys plus a stair cover, and it is not included in the seven-model performance-point tables.
-
-\input{cp112_additions/ch4_modal_results.tex}
-
-\section{NBC 105:2025 Seven-Model Response}
-This section presents the NBC 105:2025 response results used in the main comparison. The seven-model comparison includes the NBC 205:2024 regular, irregular (L, L1, L2, T, U), and non-parallel configurations, all modelled as three full storeys plus a stair cover. The separate four-storey height-extension model is not merged into these seven-model comparison tables. Detailed numerical files are retained separately as supporting electronic records and are not reproduced as raw-data appendices in the printed thesis.
-
-Table~\ref{tab:ch4_governing} summarizes the controlling response quantities used in the comparison. The largest storey shear is obtained by the Regular building at Story 1 under Soil Type C and $Z=0.40$. The largest first-peak pushover capacity is obtained by the U-shaped building in the Y direction under the same soil and zone condition, while the largest performance-\allowbreak{}point base shear is obtained by the Regular building in the X direction. The largest performance-\allowbreak{}point roof displacement is obtained by the U-shaped building in the X direction. These quantities are kept separate because storey shear, peak pushover resistance, and performance-\allowbreak{}point demand describe different aspects of structural response.
-
-\begin{table}[!htbp]
-\caption{Selected governing response quantities for the seven-model comparison.}
-\label{tab:ch4_governing}
-\centering
-\begin{tabularx}{\textwidth}{@{}p{0.25\textwidth} p{0.18\textwidth} X@{}}
-\toprule
-\textbf{Response quantity} & \textbf{Governing value} & \textbf{Governing model and condition}\\
-\midrule
-Storey shear & 532.489 kN & Regular, Story 1, Soil C, $Z=0.40$\\
-Peak pushover base shear & 1882.070 kN & U-shaped, Y direction, Soil C, $Z=0.40$; displacement=174.697 mm\\
-Performance-point base shear & 456.253 kN & Regular, X direction, Soil C, $Z=0.40$\\
-Performance-point roof displacement & 27.072 mm & U-shaped, X direction, Soil C, $Z=0.40$\\
-ULS drift ratio & 0.004954 & U-shaped, X direction, Soil C, $Z=0.40$, Story 2\\
-SLS drift ratio & 0.004744 & U-shaped, X direction, Soil C, $Z=0.40$, Story 2; 79.067\% of the 0.006 SLS limit\\
-Main-storey CM--CR separation & 1.237 m & Non-Parallel, Soil C, $Z=0.25$, Story 2\\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\begin{table}[!htbp]
-\caption{Maximum pushover capacity for the seven building configurations.}
-\label{tab:ch4_peak_capacity}
-\centering
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}l c c c r r@{}}
-\toprule
-\textbf{Model} & \textbf{Soil} & \textbf{Z} & \textbf{Dir.} & \shortstack{\textbf{Peak base shear}\\\textbf{(kN)}} & \shortstack{\textbf{Displacement at peak}\\\textbf{(mm)}}\\
-\midrule
-Regular & C & 0.40 & X & 1836.338 & 198.040\\
-L-shaped & C & 0.40 & Y & 1800.120 & 187.539\\
-L1-shaped & C & 0.40 & X & 1606.250 & 212.287\\
-L2-shaped & C & 0.35 & Y & 1804.152 & 172.789\\
-T-shaped & C & 0.40 & Y & 1640.715 & 223.937\\
-U-shaped & C & 0.40 & Y & 1882.070 & 174.697\\
-Non-Parallel & C & 0.40 & Y & 1827.694 & 154.530\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Figure~\ref{fig:nbc105_2025_capacity_soil_C_Z_0p4_x} and Figure~\ref{fig:nbc105_2025_capacity_soil_C_Z_0p4_y} show the Soil Type C, $Z=0.40$ capacity curves in the X and Y directions through the first peak. Performance points are discussed separately.
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_1_CP97_CP66_exact_clip.pdf}
-\caption{Capacity curves in the X direction.}
-\label{fig:nbc105_2025_capacity_soil_C_Z_0p4_x}
-\end{figure}
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_2_CP97_CP66_exact_clip.pdf}
-\caption{Capacity curves in the Y direction.}
-\label{fig:nbc105_2025_capacity_soil_C_Z_0p4_y}
-\end{figure}
-
-\begin{table}[!htbp]
-\caption{Maximum performance-\allowbreak{}point base shear and roof displacement for the seven-model comparison.}
-\label{tab:ch4_pp_summary_revised}
-\centering
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}l r c c c r c c c@{}}
-\toprule
-\textbf{Model} & \shortstack{\textbf{Max. PP base}\\\textbf{shear (kN)}} & \textbf{Soil} & \textbf{Z} & \textbf{Dir.} & \shortstack{\textbf{Max. PP roof}\\\textbf{disp. (mm)}} & \textbf{Soil} & \textbf{Z} & \textbf{Dir.}\\
-\midrule
-Regular & 456.253 & C & 0.40 & X & 26.053 & C & 0.40 & X\\
-L-shaped & 407.295 & C & 0.40 & X & 25.900 & C & 0.40 & X\\
-L1-shaped & 340.753 & C & 0.40 & X & 24.592 & C & 0.40 & X\\
-L2-shaped & 370.935 & C & 0.40 & X & 21.171 & C & 0.40 & X\\
-T-shaped & 343.488 & C & 0.40 & X & 24.802 & C & 0.40 & X\\
-U-shaped & 435.084 & C & 0.40 & X & 27.072 & C & 0.40 & X\\
-Non-Parallel & 399.636 & C & 0.40 & X & 21.328 & C & 0.40 & X\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Figure~\ref{fig:nbc105_2025_storey_shear_soil_C_Z_0p4}, Figure~\ref{fig:nbc105_2025_drift_soil_C_Z_0p4}, and Figure~\ref{fig:nbc105_2025_cmcr_main_story} summarize the storey-shear, ULS drift, and main-storey CM--CR separation results. The maximum ULS drift ratio remains below the NBC 105:2025 ULS drift limit. CM--CR separation is interpreted descriptively and is not used as a formal torsional-irregularity classification.
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_3_CP110_exact.pdf}
-\caption{Storey shear profiles.}
-\label{fig:nbc105_2025_storey_shear_soil_C_Z_0p4}
-\end{figure}
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_4_CP110_exact.pdf}
-\caption{Governing ULS drift ratios.}
-\label{fig:nbc105_2025_drift_soil_C_Z_0p4}
-\end{figure}
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_5_CP110_exact.pdf}
-\caption{Maximum CM--CR separation.}
-\label{fig:nbc105_2025_cmcr_main_story}
-\end{figure}
-
-\begin{table}[!htbp]
-\caption{Maximum governing ULS drift ratios for Soil Type C, $Z=0.40$.}
-\label{tab:ch4_drift_summary}
-\centering
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}l c c c c c c@{}}
-\toprule
-\textbf{Model} & \textbf{Soil} & \textbf{Z} & \textbf{Direction} & \shortstack{\textbf{Governing}\\\textbf{Story}} & \shortstack{\textbf{Max ULS}\\\textbf{Drift Ratio}} & \textbf{Utilization}\\
-\midrule
-Regular & C & 0.400 & X & Story2 & 0.004784 & 0.191\\
-L & C & 0.400 & X & Story2 & 0.004758 & 0.190\\
-L1 & C & 0.400 & X & Story2 & 0.004570 & 0.183\\
-L2 & C & 0.400 & X & Story2 & 0.004025 & 0.161\\
-T & C & 0.400 & Y & Story2 & 0.004618 & 0.185\\
-U & C & 0.400 & X & Story2 & 0.004954 & 0.198\\
-Non-Parallel & C & 0.400 & X & Story2 & 0.004041 & 0.162\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-\caption{Maximum resultant CM--CR separation across main Stories 1--3.}
-\label{tab:ch4_cmcr_summary}
-\centering
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}l c c c r@{}}
-\toprule
-\textbf{Model} & \textbf{Soil} & \textbf{Z} & \shortstack{\textbf{Storey at}\\\textbf{maximum}} & \shortstack{\textbf{Maximum resultant}\\\textbf{separation (m)}}\\
-\midrule
-Regular & D & 0.350 & Story2 & 0.398\\
-L & C & 0.250 & Story1 & 0.581\\
-L1 & C & 0.250 & Story1 & 0.640\\
-L2 & C & 0.250 & Story1 & 1.186\\
-T & C & 0.300 & Story2 & 0.475\\
-U & C & 0.250 & Story2 & 0.424\\
-NP & C & 0.250 & Story2 & 1.237\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\input{cp112_additions/ch4_profiles_comparisons.tex}
 
 \section{Phase I: Review of the Representative NBC 205:2012 Building}
 \subsection{Evaluation of the 2012 Reference Building}
@@ -162,7 +11,7 @@ The representative building originally designed using Draft Final NBC 205:2012 w
 
 \subsection{Concrete Design-Check Observations}
 \begin{table}[!htbp]
-\caption{Concrete frame design-check failures observed for the representative NBC 205:2012 building.}
+\caption[Concrete design-check failures for the 2012 reference]{Concrete frame design-check failures observed for the representative NBC 205:2012 building.}
 \label{tab:ch4_2012_failures}
 \centering
 \begin{tabular}{@{}ccc@{}}
@@ -188,6 +37,9 @@ The NBC 205:2024 Regular building is the reference model for the performance-bas
 The Regular model therefore provides the comparison basis for the L, L1, L2, T, U, and Non-Parallel configurations. Performance-point base shear is interpreted as a demand--capacity intersection and is kept distinct from peak pushover capacity.
 
 \section{Phase III: Performance Evaluation of Irregular NBC 205:2024 Buildings}
+
+\input{cp112_additions/ch4_modal_results.tex}
+
 \subsection{Building Configurations Considered in the Study}
 The building configurations used in the analysis were introduced in Chapter 3 and are illustrated in Figures~\ref{fig:method_regular_model} to~\ref{fig:method_np_model}. The Regular building was used as the reference model, while the L-shaped, L1-shaped, L2-shaped, T-shaped, and U-shaped buildings represent common re-entrant plan irregularities. The Non-Parallel building represents a non-orthogonal framing arrangement with skewed load paths.
 
@@ -317,98 +169,98 @@ The comparison among the seven models and five soil/seismic cases shows that pla
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_15_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_15_CP97_CP66_exact_clip.pdf}
 \caption{Regular building capacity curve: X direction.}
 \label{fig:cap_regular_x}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_16_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_16_CP97_CP66_exact_clip.pdf}
 \caption{Regular building capacity curve: Y direction.}
 \label{fig:cap_regular_y}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_17_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_17_CP97_CP66_exact_clip.pdf}
 \caption{L-shaped building capacity curve: X direction.}
 \label{fig:cap_l_x}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_18_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_18_CP97_CP66_exact_clip.pdf}
 \caption{L-shaped building capacity curve: Y direction.}
 \label{fig:cap_l_y}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_19_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_19_CP97_CP66_exact_clip.pdf}
 \caption{L1-shaped building capacity curve: X direction.}
 \label{fig:cap_l1_x}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_20_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_20_CP97_CP66_exact_clip.pdf}
 \caption{L1-shaped building capacity curve: Y direction.}
 \label{fig:cap_l1_y}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_21_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_21_CP97_CP66_exact_clip.pdf}
 \caption{L2-shaped building capacity curve: X direction.}
 \label{fig:cap_l2_x}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_22_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_22_CP97_CP66_exact_clip.pdf}
 \caption{L2-shaped building capacity curve: Y direction.}
 \label{fig:cap_l2_y}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_23_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_23_CP97_CP66_exact_clip.pdf}
 \caption{T-shaped building capacity curve: X direction.}
 \label{fig:cap_t_x}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_24_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_24_CP97_CP66_exact_clip.pdf}
 \caption{T-shaped building capacity curve: Y direction.}
 \label{fig:cap_t_y}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_25_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_25_CP97_CP66_exact_clip.pdf}
 \caption{U-shaped building capacity curve: X direction.}
 \label{fig:cap_u_x}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_26_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_26_CP97_CP66_exact_clip.pdf}
 \caption{U-shaped building capacity curve: Y direction.}
 \label{fig:cap_u_y}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_27_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_27_CP97_CP66_exact_clip.pdf}
 \caption{Non-Parallel building capacity curve: X direction.}
 \label{fig:cap_np_x}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_28_CP97_CP66_exact_clip.pdf}
+\includegraphics[width=0.90\textwidth,trim=0 0 0 24bp,clip]{figures/ch4/authority_exact/fig_4_28_CP97_CP66_exact_clip.pdf}
 \caption{Non-Parallel building capacity curve: Y direction.}
 \label{fig:cap_np_y}
 \end{figure}
@@ -484,20 +336,20 @@ The representative existing building designed using Draft Final NBC 205:2012 was
 
 \begin{figure}[!htbp]
 \centering
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-018_C025.png}\subcaption{Soil C, $Z=0.25$}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-014_C030.png}\subcaption{Soil C, $Z=0.30$}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-015_C035.png}\subcaption{Soil C, $Z=0.35$}
 \end{subfigure}
 \par\vspace{0.6em}
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-016_C040.png}\subcaption{Soil C, $Z=0.40$}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-017_D035.png}\subcaption{Soil D, $Z=0.35$}
 \end{subfigure}
 \caption{NBC 205:2012 design-check observations.}
@@ -512,20 +364,20 @@ The separate four-storey Regular extension was examined under the same five soil
 
 \begin{figure}[!htbp]
 \centering
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-009_C025.png}\subcaption{Soil C, $Z=0.25$}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-010_C030.png}\subcaption{Soil C, $Z=0.30$}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-011_C035.png}\subcaption{Soil C, $Z=0.35$}
 \end{subfigure}
 \par\vspace{0.6em}
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-012_C040.png}\subcaption{Soil C, $Z=0.40$}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.31\textwidth}\centering
+\begin{subfigure}[t]{0.32\textwidth}\centering
 \includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-013_D035.png}\subcaption{Soil D, $Z=0.35$}
 \end{subfigure}
 \caption{Four-storey extension design-check observations.}
@@ -535,6 +387,156 @@ The separate four-storey Regular extension was examined under the same five soil
 Figure~\ref{fig:failure_fourstorey_final_final} presents the four-storey extension design-check results under Soil Type C with $Z=0.25$, $0.30$, $0.35$ and $0.40$, and Soil Type D with $Z=0.35$. The observations describe the investigated extension and do not establish a general height-limit rule.
 
 The combined failure evidence therefore supports two different conclusions. First, the existing NBC 205:2012-designed building exhibits deficient frame members when rechecked under the selected NBC 105:2025 demand cases. Second, within the current NBC 205:2024 the separate four-storey Regular extension shows design-\allowbreak{}check failures. The four-storey case highlights the importance of project-specific engineered checking beyond the scope of prescriptive RUD detailing.
+
+\subsection{Seven-Model Response Under NBC 105:2025}
+This section presents the NBC 105:2025 response results used in the main comparison. The seven-model comparison includes the NBC 205:2024 regular, irregular (L, L1, L2, T, U), and non-parallel configurations, all modelled as three full storeys plus a stair cover. The separate four-storey height-extension model is not merged into these seven-model comparison tables. Detailed numerical files are retained separately as supporting electronic records and are not reproduced as raw-data appendices in the printed thesis.
+
+Table~\ref{tab:ch4_governing} summarizes the controlling response quantities used in the comparison. The largest storey shear is obtained by the Regular building at Story 1 under Soil Type C and $Z=0.40$. The largest first-peak pushover capacity is obtained by the U-shaped building in the Y direction under the same soil and zone condition, while the largest performance-\allowbreak{}point base shear is obtained by the Regular building in the X direction. The largest performance-\allowbreak{}point roof displacement is obtained by the U-shaped building in the X direction. These quantities are kept separate because storey shear, peak pushover resistance, and performance-\allowbreak{}point demand describe different aspects of structural response.
+
+\begin{table}[!htbp]
+\caption[Governing response quantities for seven models]{Selected governing response quantities for the seven-model comparison.}
+\label{tab:ch4_governing}
+\centering
+\begin{tabularx}{\textwidth}{@{}p{0.25\textwidth} p{0.18\textwidth} X@{}}
+\toprule
+\textbf{Response quantity} & \textbf{Governing value} & \textbf{Governing model and condition}\\
+\midrule
+Storey shear & 532.489 kN & Regular, Story 1, Soil C, $Z=0.40$\\
+Peak pushover base shear & 1882.070 kN & U-shaped, Y direction, Soil C, $Z=0.40$; displacement=174.697 mm\\
+Performance-point base shear & 456.253 kN & Regular, X direction, Soil C, $Z=0.40$\\
+Performance-point roof displacement & 27.072 mm & U-shaped, X direction, Soil C, $Z=0.40$\\
+ULS drift ratio & 0.004954 & U-shaped, X direction, Soil C, $Z=0.40$, Story 2\\
+SLS drift ratio & 0.004744 & U-shaped, X direction, Soil C, $Z=0.40$, Story 2; 79.067\% of the 0.006 SLS limit\\
+Main-storey CM--CR separation & 1.237 m & Non-Parallel, Soil C, $Z=0.25$, Story 2\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Maximum pushover capacity for the seven building configurations.}
+\label{tab:ch4_peak_capacity}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l c c c r r@{}}
+\toprule
+\textbf{Model} & \textbf{Soil} & \textbf{Z} & \textbf{Dir.} & \shortstack{\textbf{Peak base shear}\\\textbf{(kN)}} & \shortstack{\textbf{Displacement at peak}\\\textbf{(mm)}}\\
+\midrule
+Regular & C & 0.40 & X & 1836.338 & 198.040\\
+L-shaped & C & 0.40 & Y & 1800.120 & 187.539\\
+L1-shaped & C & 0.40 & X & 1606.250 & 212.287\\
+L2-shaped & C & 0.35 & Y & 1804.152 & 172.789\\
+T-shaped & C & 0.40 & Y & 1640.715 & 223.937\\
+U-shaped & C & 0.40 & Y & 1882.070 & 174.697\\
+Non-Parallel & C & 0.40 & Y & 1827.694 & 154.530\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:nbc105_2025_capacity_soil_C_Z_0p4_x} and Figure~\ref{fig:nbc105_2025_capacity_soil_C_Z_0p4_y} show the Soil Type C, $Z=0.40$ capacity curves in the X and Y directions through the first peak. Performance points are discussed separately.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_1_CP97_CP66_exact_clip.pdf}
+\caption{Capacity curves in the X direction.}
+\label{fig:nbc105_2025_capacity_soil_C_Z_0p4_x}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_2_CP97_CP66_exact_clip.pdf}
+\caption{Capacity curves in the Y direction.}
+\label{fig:nbc105_2025_capacity_soil_C_Z_0p4_y}
+\end{figure}
+
+\begin{table}[!htbp]
+\caption[Maximum performance-point shear and displacement (seven models)]{Maximum performance-\allowbreak{}point base shear and roof displacement for the seven-model comparison.}
+\label{tab:ch4_pp_summary_revised}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l r c c c r c c c@{}}
+\toprule
+\textbf{Model} & \shortstack{\textbf{Max. PP base}\\\textbf{shear (kN)}} & \textbf{Soil} & \textbf{Z} & \textbf{Dir.} & \shortstack{\textbf{Max. PP roof}\\\textbf{disp. (mm)}} & \textbf{Soil} & \textbf{Z} & \textbf{Dir.}\\
+\midrule
+Regular & 456.253 & C & 0.40 & X & 26.053 & C & 0.40 & X\\
+L-shaped & 407.295 & C & 0.40 & X & 25.900 & C & 0.40 & X\\
+L1-shaped & 340.753 & C & 0.40 & X & 24.592 & C & 0.40 & X\\
+L2-shaped & 370.935 & C & 0.40 & X & 21.171 & C & 0.40 & X\\
+T-shaped & 343.488 & C & 0.40 & X & 24.802 & C & 0.40 & X\\
+U-shaped & 435.084 & C & 0.40 & X & 27.072 & C & 0.40 & X\\
+Non-Parallel & 399.636 & C & 0.40 & X & 21.328 & C & 0.40 & X\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:nbc105_2025_storey_shear_soil_C_Z_0p4}, Figure~\ref{fig:nbc105_2025_drift_soil_C_Z_0p4}, and Figure~\ref{fig:nbc105_2025_cmcr_main_story} summarize the storey-shear, ULS drift, and main-storey CM--CR separation results. The maximum ULS drift ratio remains below the NBC 105:2025 ULS drift limit. CM--CR separation is interpreted descriptively and is not used as a formal torsional-irregularity classification.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.96\textwidth]{figures/ch4/comment31/story_shear_levels_source_backed.pdf}
+\caption{Storey shear profiles for Soil Type C, $Z=0.40$; recorded EQx values by elevation.}
+\label{fig:nbc105_2025_storey_shear_soil_C_Z_0p4}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.96\textwidth]{figures/ch4/comment31/uls_drift_profile_X_source_backed.pdf}
+\caption{ULS drift profiles in the X direction for Soil Type C, $Z=0.40$.}
+\label{fig:nbc105_2025_drift_soil_C_Z_0p4}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_5_CP110_exact.pdf}
+\caption{Maximum CM--CR separation.}
+\label{fig:nbc105_2025_cmcr_main_story}
+\end{figure}
+
+\begin{table}[!htbp]
+\caption{Maximum governing ULS drift ratios for Soil Type C, $Z=0.40$.}
+\label{tab:ch4_drift_summary}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l c c c c c c@{}}
+\toprule
+\textbf{Model} & \textbf{Soil} & \textbf{Z} & \textbf{Direction} & \shortstack{\textbf{Governing}\\\textbf{Story}} & \shortstack{\textbf{Max ULS}\\\textbf{Drift Ratio}} & \textbf{Utilization}\\
+\midrule
+Regular & C & 0.400 & X & Story2 & 0.004784 & 0.191\\
+L & C & 0.400 & X & Story2 & 0.004758 & 0.190\\
+L1 & C & 0.400 & X & Story2 & 0.004570 & 0.183\\
+L2 & C & 0.400 & X & Story2 & 0.004025 & 0.161\\
+T & C & 0.400 & Y & Story2 & 0.004618 & 0.185\\
+U & C & 0.400 & X & Story2 & 0.004954 & 0.198\\
+Non-Parallel & C & 0.400 & X & Story2 & 0.004041 & 0.162\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\caption{Maximum resultant CM--CR separation across main Stories 1--3.}
+\label{tab:ch4_cmcr_summary}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}l c c c r@{}}
+\toprule
+\textbf{Model} & \textbf{Soil} & \textbf{Z} & \shortstack{\textbf{Storey at}\\\textbf{maximum}} & \shortstack{\textbf{Maximum resultant}\\\textbf{separation (m)}}\\
+\midrule
+Regular & D & 0.350 & Story2 & 0.398\\
+L & C & 0.250 & Story1 & 0.581\\
+L1 & C & 0.250 & Story1 & 0.640\\
+L2 & C & 0.250 & Story1 & 1.186\\
+T & C & 0.300 & Story2 & 0.475\\
+U & C & 0.250 & Story2 & 0.424\\
+NP & C & 0.250 & Story2 & 1.237\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\input{cp112_additions/ch4_profiles_comparisons.tex}
+
 
 \section{Phase IV: Determination of NBC 205 RUD Applicability Limits}
 \subsection{Overall Comparative Seismic Performance}
@@ -553,7 +555,7 @@ The Geometric Irregularity Index (GII) was examined to assess whether plan-area 
 
 \begin{table}[!htbp]
 \centering
-\caption{Geometric Irregularity Index (GII) and response summary for all seven configurations.}
+\caption[GII and seismic-response summary for seven configurations]{Geometric Irregularity Index (GII) and response summary for all seven configurations.}
 \label{tab:gii_response_summary}
 \small
 \resizebox{\textwidth}{!}{%
@@ -579,14 +581,14 @@ $T_1$ is the Mode-1 period for Soil Type C, $Z=0.40$. Peak base shear is the max
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.60\textwidth]{figures/ch4/authority_exact/gii_pp_base_shear.pdf}
+\includegraphics[width=0.94\textwidth]{figures/ch4/comment31/gii_pp_base_shear_distinct_markers.pdf}
 \caption{Geometric Irregularity Index (GII) and performance-point base shear.}
 \label{fig:gii_pp_base_shear}
 \end{figure}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.60\textwidth]{figures/ch4/authority_exact/gii_pp_roof_displacement.pdf}
+\includegraphics[width=0.94\textwidth]{figures/ch4/comment31/gii_pp_roof_displacement_distinct_markers.pdf}
 \caption{Geometric Irregularity Index (GII) and performance-point roof displacement.}
 \label{fig:gii_pp_roof_disp}
 \end{figure}

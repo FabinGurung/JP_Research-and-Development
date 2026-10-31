@@ -28,22 +28,57 @@ Cimellaro et al. \cite{cimellaro2014bidirectional} studied bidirectional pushove
 \section{Equivalent Static Method}
 The Equivalent Static Method is one of the simplest methods for seismic analysis of buildings. In this method, earthquake effects are represented by equivalent lateral forces applied along the height of the structure. The method involves determining seismic weight, calculating design base shear, distributing lateral forces vertically, and analysing the resulting displacement, drift, and storey shear. It is commonly used for regular and low-rise buildings where higher mode effects are not dominant.
 In the context of the present study, equivalent static analysis is useful for obtaining initial estimates of lateral force demand and for comparing the response of regular and irregular buildings under different seismic zone factors and soil conditions. It also provides a reference for comparing dynamic response spectrum results. However, for irregular buildings, equivalent static analysis alone may not fully capture torsional effects and modal behaviour. Therefore, it is supplemented by response spectrum analysis and nonlinear pushover analysis.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.77\textwidth]{figures/ch2/comment31/equivalent_static.pdf}
+\caption{Conceptual distribution of equivalent lateral forces over the frame height.}
+\label{fig:comment31_equivalent_static}
+\end{figure}
 \section{Response Spectrum Analysis}
 Response Spectrum Analysis is a linear dynamic method widely used to evaluate the seismic response of buildings. It considers the contribution of different vibration modes and combines modal responses to estimate structural demand. This method is more suitable than the equivalent static method for buildings where dynamic characteristics, modal participation, or irregularity influence the response.
 In seismic design, response spectrum analysis is commonly used to obtain natural time periods, frequencies, mode shapes, modal mass participation ratios, base shear, storey displacement, and inter-storey drift. In the present study, response spectrum functions based on NBC provisions are used for different soil types and seismic zone factors. The results obtained from response spectrum analysis help evaluate the influence of plan irregularity on dynamic characteristics and elastic seismic response.
 NBC 105:2025 provides the seismic design basis for Nepal, including response spectrum parameters, seismic zone factors, importance factor, and soil classification \cite{nbc105_2025}. Since the present study considers Soil Type C, Soil Type D, and different seismic zone factors, response spectrum analysis is an essential part of the methodology.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.77\textwidth]{figures/ch2/comment31/response_spectrum.pdf}
+\caption{Illustration of spectral demand as a function of structural period.}
+\label{fig:comment31_response_spectrum}
+\end{figure}
 \section{Nonlinear Static Pushover Analysis}
 Nonlinear static pushover analysis is widely used for performance-based seismic evaluation of buildings. In pushover analysis, the structure is subjected to gradually increasing lateral loads until a target displacement or failure condition is reached. The resulting relationship between base shear and roof displacement is known as the capacity curve. This curve provides insight into the strength, stiffness, ductility, and deformation capacity of the structure.
 ATC-40 \cite{atc1996atc40}, FEMA 356 \cite{fema2000fema356}, FEMA 440 \cite{fema2005fema440}, and ASCE 41-17 \cite{asce2017asce41} provide guidelines for nonlinear static evaluation and performance-based assessment. These documents define procedures for estimating performance points, evaluating deformation demand, and classifying structural performance levels. Performance levels such as Immediate Occupancy, Life Safety, and Collapse Prevention are commonly used to interpret the expected damage state of a structure.
 Poudel et al. \cite{poudel2025seismic} used nonlinear pushover analysis to evaluate low-rise RC buildings designed according to NBC 205:2024. Their work demonstrated the usefulness of pushover analysis for studying capacity curves, performance points, storey drift, and hinge formation. Similarly, Chaulagain et al. \cite{chaulagain2013seismic} used nonlinear static and dynamic analyses to evaluate the seismic response of different RC building design practices in Nepal. These studies support the use of pushover analysis in the present research.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.77\textwidth]{figures/ch2/comment31/nonlinear_pushover.pdf}
+\caption{Conceptual capacity curve used to explain nonlinear static analysis.}
+\label{fig:comment31_nonlinear_pushover}
+\end{figure}
 \section{Performance Point and Capacity Curve}
 The performance point represents the estimated seismic demand on the structure and is commonly obtained by comparing the structural capacity spectrum with the seismic demand spectrum. It gives the roof displacement and base shear at which the structure is expected to perform under a given earthquake demand. The performance point is useful for comparing different building configurations because it reflects both demand and capacity.
 The capacity curve, plotted as base shear versus roof displacement, shows the progressive nonlinear response of the structure. Initially, the curve is approximately linear, representing elastic behaviour. After yielding begins, stiffness reduces and plastic hinges form in beams or columns. The shape of the capacity curve indicates the strength reserve, deformation capacity, and ductility of the structure. In performance-based evaluation, comparison of capacity curves among different building models helps identify which configuration has higher strength, stiffness, or displacement capacity.
 In the present study, capacity curves and performance points are used to compare regular and plan-irregular NBC 205:2024 RC buildings. The comparison helps evaluate whether plan irregularity changes seismic capacity and performance-point response.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.77\textwidth]{figures/ch2/comment31/performance_point.pdf}
+\caption{Illustrative performance point at the intersection of capacity and demand curves.}
+\label{fig:comment31_performance_point}
+\end{figure}
 \section{Plastic Hinge Formation and Performance Levels}
 Plastic hinge formation is an important indicator of nonlinear structural behaviour. During pushover analysis, plastic hinges form when structural members exceed their elastic capacity. The location and sequence of hinge formation help identify the probable damage pattern and failure mechanism. A desirable seismic mechanism is generally associated with hinge formation in beams before columns, which supports the strong-column weak-beam concept.
 ASCE 41-17 \cite{asce2017asce41} provides acceptance criteria for nonlinear modelling and performance evaluation of structural members. Beam hinges are commonly modelled as moment hinges, while column hinges are commonly modelled using axial force and biaxial moment interaction. In the present study, final-step hinge patterns are discussed using the Immediate Occupancy, Life Safety, and Collapse Prevention labels at the recorded analysis stages. These observations are considered separately from performance-point response.
 Paulay and Priestley \cite{paulay1992seismic} provided important concepts related to seismic design of reinforced concrete structures, ductility, and plastic hinge behaviour. Mander et al. \cite{mander1988confined} developed a stress-strain model for confined concrete, which is widely used in nonlinear modelling of RC members. Menegotto and Pinto \cite{menegotto1973cyclic} proposed a model for cyclic behaviour of steel reinforcement. These references form the theoretical basis for nonlinear material behaviour and hinge modelling.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.77\textwidth]{figures/ch2/comment31/plastic_hinge.pdf}
+\caption{Illustrative locations where hinge response may be examined in a frame.}
+\label{fig:comment31_plastic_hinge}
+\end{figure}
 \section{Inter-Storey Drift and Damage Assessment}
 Inter-storey drift is one of the most important parameters in seismic performance evaluation. It measures the relative lateral displacement between two consecutive storeys and is closely related to structural and non-structural damage. Excessive drift can cause cracking, member yielding, damage to infill walls, and possible instability. Therefore, drift is commonly used as a performance indicator in seismic design guidelines.
 ATC-40 and FEMA 356 provide drift-based performance limits for different damage states \cite{atc1996atc40,fema2000fema356}. Chaulagain et al. \cite{chaulagain2013seismic} compared inter-storey drift demands of different Nepalese RC building types and used drift limits to assess seismic safety. Their study showed that poorly detailed and current construction practice buildings may experience higher drift demands. This supports the use of drift as a key response parameter in the present research.
@@ -104,7 +139,7 @@ Jadhav and Shelar\newline \cite{jadhav2025study}
 \setlength{\LTpre}{6pt}
 \setlength{\LTpost}{6pt}
 \begin{longtable}{@{}p{3.25cm}p{3.30cm}p{3.35cm}p{2.90cm}@{}}
-\caption{Summary of codes, standards, and seismic evaluation guidelines reviewed}\label{tab:literature_codes_guidelines}\\
+\caption[Codes, standards and seismic evaluation guidelines reviewed]{Summary of codes, standards, and seismic evaluation guidelines reviewed}\label{tab:literature_codes_guidelines}\\
 \hline\hline
 \textbf{Reference} & \textbf{Main Content} & \textbf{Application in Seismic Evaluation} & \textbf{Relevance to Present Study} \\ \hline
 \endfirsthead
