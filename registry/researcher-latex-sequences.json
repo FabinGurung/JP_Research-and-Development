@@ -59,7 +59,7 @@
           "sequence": 58,
           "branch": "thesis/nabin-bista/latex/seq058-figure-parity",
           "status": "RESERVED",
-          "request_key": "manual:20261031-nabin-seq058-figure-parity",
+          "request_key": "manual:20261031-nabin-seq058-v2",
           "created_at_utc": "2026-10-31T08:31:51Z",
           "main_sha_at_reservation": "80ab188968bc971408c91e7230430cd79c93c788",
           "template_sha": "491538d53f83023af0b485dc0251728688ec4e2a",
