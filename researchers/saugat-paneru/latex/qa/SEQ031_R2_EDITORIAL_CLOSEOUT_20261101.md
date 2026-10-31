@@ -1,0 +1,13 @@
+# Saugat SEQ031/R2 — academic-voice cleanup and release hold
+
+This is **internal QA only**, not thesis prose. The user explicitly requests making the polished manuscript CURRENT after full QA. Source authority: prior accepted SEQ031 with full 248-entry ZIP; no new ETABS values.
+
+- [Cleaned candidate PDF](https://drive.google.com/file/d/1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm/view): 120 A4 pages, SHA-256 `c6942c597635c4e16ac27b717c8b1b592fd5021cff2df8636beb946be9b8894b`, Times New Roman embedded in the principal body, compiled with XeLaTeX/Biber, no errors/overfull boxes, cover November 2026, 120/120 nonblank.
+- [Source ZIP](https://drive.google.com/file/d/1putkQYpDff50kxycZJ33iPq98lb8I5mh/view): SHA-256 `7d44bc10d6c23d351c9c83a5aab20f68192fcca72534d0c016b74ad660663a90`, 249 files; all original PDF/PNG/CSV/XLSX research assets SHA-identical to preceding SEQ031. Licensed fonts excluded.
+- [Machine-readable QA](https://drive.google.com/file/d/1cfwh24HwC5ReSCoOPRidvNbvDnAtgO5I/view); [candidate folder](https://drive.google.com/drive/folders/1ZT2uxSMo6jbfezsXLT9twwDnadDqsvlw).
+
+Removed internal descriptions of source workbooks, file hashes, normalized data custody, unreported settings and self-referential reconstruction caveats. Retained science-critical limitations (CM--CR versus torsional-irregularity ratio, final-step hinge versus performance-point state, case-limited interpretations). Revised modal parameter table/captions, cover month and a formerly orphaned table float. All source changes restricted to eight Saugat manuscript/configuration files; universal LaTeX .sty unchanged and its Git blob SHA verified as `491538d53f83023af0b485dc0251728688ec4e2a`.
+
+**Release decision: HOLD accepted CURRENT**, notwithstanding user's conditional authorization. Reason: full PU 144-rule university formatting certification **not completed**; existing permanent live Google Doc still older and parity with 120-page revision **not certified**; human scientific/supervisor final acceptance not recorded; complete 120-page manual zoom visual inspection not claimed. The original M4 CURRENT pointer, 115-page PDF and source ZIP remain in place. Never misstate technical success as institutional acceptance. A separate review-working designation can reference R2 without altering accepted CURRENT.
+
+Restoration: previous source at protected main commit `a3a5ea168efc8b232af81a93706195f6dc34e8eb`; original candidate PDF/ZIP Drive IDs `1V2Y_IhWPeWtuF0k1pKzWwk_aYjHjHWQb` and `1zAfkcOBYawfiWuR9Zzhjw5-xErdGJSST`; production M4 CURRENT pointer `1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN`. No file deleted or overwritten.

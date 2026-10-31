@@ -1,0 +1,42 @@
+{
+  "researcher": "Saugat Paneru",
+  "scientific_cp": "CP114_UNCHANGED",
+  "manuscript_version": "SEQ031_R2_EDITORIAL_REVIEW",
+  "status": "QA_CANDIDATE_NOT_ACCEPTED_CURRENT",
+  "original_seq031_zip_sha256": "be801f96469af6cb34ef7b11c255e0f793f8eb02c02e244e0e7c3749a01a953c",
+  "new_pdf_sha256": "c6942c597635c4e16ac27b717c8b1b592fd5021cff2df8636beb946be9b8894b",
+  "new_pdf_bytes": 22570798,
+  "new_pdf_pages": 120,
+  "new_zip_sha256": "7d44bc10d6c23d351c9c83a5aab20f68192fcca72534d0c016b74ad660663a90",
+  "new_zip_bytes": 58877970,
+  "zip_entries": 249,
+  "private_fonts_in_source_zip": false,
+  "source_research_asset_differences": {},
+  "source_asset_invariant": true,
+  "pdf_detected_fonts": [
+    "XLMFLP+TimesNewRomanPS-BoldMT",
+    "AQACQN+TimesNewRomanPSMT",
+    "KAFBUF+TimesNewRomanPSMT",
+    "TAHFDZ+TimesNewRomanPSMT",
+    "GHYSPL+TimesNewRomanPSMT",
+    "MJRIMZ+TimesNewRomanPSMT",
+    "RFGGMX+TimesNewRomanPSMT",
+    "JKUKTW+TimesNewRomanPS-ItalicMT",
+    "NPVOQQ+TimesNewRomanPSMT",
+    "NPVOQQ+TimesNewRomanPSMT"
+  ],
+  "pdf_A4": true,
+  "no_blank_page_automated": true,
+  "latex_log_errors": [],
+  "pdf_issues": [],
+  "changes": {
+    "academically_reworded_phrases": 16,
+    "file_count": 7,
+    "scope": "modal analysis, material/load descriptions, method notes, result custody sentence, final hinge wording, cover month, float placement"
+  },
+  "human_visual_QA": "frontmatter/plots/model figure/results table/sample appendices inspected; not all 120 pages manually zoomed individually",
+  "full_institution_144_rule_check": "NOT_COMPLETE",
+  "native_doc_pdf_parity": "NOT_COMPLETE (prior mismatch)",
+  "scientific_supervisor_approval": "NOT_CONFIRMED",
+  "accepted_current_pointer": "PRESERVE_PREVIOUS_M4_UNTIL_INDEPENDENT_GATES"
+}
