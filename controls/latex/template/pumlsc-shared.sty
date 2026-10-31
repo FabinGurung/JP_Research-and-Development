@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6 required academic formatting for all owner submissions]
+\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6.1 syntax-repaired academic formatting for all owner submissions]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -121,18 +121,18 @@
     \renewcommand{\cftchapleader}{\hfill}%
     \renewcommand{\cftsecleader}{\hfill}%
     \renewcommand{\cftsubsecleader}{\hfill}%
-  }{\PackageError{pumlsc-shared}{Dotless TOC needs tocloft}{Load tocloft in the owner document first.}}}
+  }{\PackageError{pumlsc-shared}{Dotless TOC needs tocloft}{Load tocloft in the owner document first.}}
 }
 \newcommand{\PUApplyFullFigureListLabels}{%
   \@ifpackageloaded{tocloft}{%
     \renewcommand{\cftfigpresnum}{Figure~}%
     \setlength{\cftfignumwidth}{7em}%
-  }{\PackageError{pumlsc-shared}{Full Figure labels need tocloft}{Load tocloft.}}}
+  }{\PackageError{pumlsc-shared}{Full Figure labels need tocloft}{Load tocloft.}}
 }
 \newcommand{\PUApplyWordedEquationTags}{%
   \@ifpackageloaded{amsmath}{%
     \renewcommand{\tagform@}[1]{\maketag@@@{(Equation~##1)}}%
-  }{\PackageError{pumlsc-shared}{Worded equation labels need amsmath}{Load amsmath.}}}
+  }{\PackageError{pumlsc-shared}{Worded equation labels need amsmath}{Load amsmath.}}
 }
 \newcommand{\PUEnableEquationList}{%
   \@ifpackageloaded{tocloft}{%
@@ -140,10 +140,11 @@
     \cftsetindents{puequation}{0pt}{7em}%
     \renewcommand{\cftpuequationpresnum}{Equation~}%
     \renewcommand{\cftpuequationleader}{\hfill}%
-  }{\PackageError{pumlsc-shared}{Equation list needs tocloft}{Load tocloft.}}}
+  }{\PackageError{pumlsc-shared}{Equation list needs tocloft}{Load tocloft.}}
 }
 \newcommand{\PURegisterEquationEntry}[1]{%
   \addcontentsline{loe}{puequation}{\protect\numberline{\theequation}#1}}
+\newcommand{\listofpuequations}{\listofpuequation}
 \makeatother
 
 % RD-LTX-CHG-118: global required defaults for every newly built thesis.
@@ -154,7 +155,7 @@
   \@ifpackageloaded{tocloft}{%
     \PUApplyDotlessTOC
     \PUApplyFullFigureListLabels
-    \@ifundefined{listofpuequations}{\PUEnableEquationList}{}%
+    \@ifundefined{listofpuequation}{\PUEnableEquationList}{}%
   }{\PackageError{pumlsc-shared}{tocloft required in all thesis submissions}{Load tocloft before begin document.}}%
   \@ifpackageloaded{amsmath}{\PUApplyWordedEquationTags}{\PackageError{pumlsc-shared}{amsmath required in all thesis submissions}{Load amsmath before begin document.}}%
   \renewcommand{\figurename}{Figure}%
