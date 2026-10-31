@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 118,
+  "next_number": 119,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -444,6 +444,26 @@
       "global_propagation": "OPT_IN_HELPERS_ONLY__NO_AUTOMATIC_MANUSCRIPT_REWRITE",
       "regression_scope": "Shared template source tests + 12 owner inheritance; per-researcher visual QA on adoption",
       "scientific_boundary": "STUDENT-SPECIFIC NUMBERS AND FRAGILITY LABELS REMAIN RESEARCHER-OWNED"
+    },
+    {
+      "change_id": "RD-LTX-CHG-118",
+      "researcher_id": "RSH-003",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Promote prior opt-in TOC, Figure, equation and equation-list helpers to required defaults for all 12 researchers' next compiled submissions; strengthen authorial and in-place version continuity semantics.",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "controls/latex/tower.json",
+        "controls/latex/authorial-voice-policy.json",
+        "registry/latex-inheritance.json"
+      ],
+      "before_after_qa_evidence": "Nabin SEQ057 R2 source preserves previous full source; new 3.4 and 3.5 restored, Y storey-shear plot added. Every owner must build and visually verify on next release.",
+      "pu_rule_references": [],
+      "disposition": "PROPOSED",
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "REQUIRED_ON_NEXT_OWNER_BUILD__NO_REWRITING_HISTORICAL_ARCHIVES",
+      "regression_scope": "Shared style source checks and all-owner inheritance; individual exact-font full document render QA",
+      "scientific_boundary": "No Nabin research results introduced into other researchers."
     }
   ],
   "required_fields": [
