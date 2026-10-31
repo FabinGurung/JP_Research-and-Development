@@ -23,7 +23,8 @@
     "qa": "controls/latex/qa-contract.json",
     "parity_audit": "controls/latex/pu-format-parity-audit.json",
     "semantic": "controls/latex/authorial-voice-policy.json",
-    "validation": "scripts/latex/check_authorial_voice.py"
+    "validation": "scripts/latex/check_authorial_voice.py",
+    "authority_conflicts": "controls/latex/academic-format-conflict-register.json"
   },
   "inheritance_registry": "registry/latex-inheritance.json",
   "amendment_register": "controls/latex/change-register.json",
