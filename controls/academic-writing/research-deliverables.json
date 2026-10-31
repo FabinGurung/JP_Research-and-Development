@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-ACADEMIC-DELIVERABLES-001",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authority": "controls/academic-writing/tower.json",
   "status": "ACTIVE_CONTRACT_AND_RECEIPT_VALIDATOR__PROVIDER_CONVERSION_AND_PROJECT_RELEASE_QA_SEPARATE",
   "principle": "ONE_ADMITTED_SCIENTIFIC_REVISION__THREE_SUBMISSION_REPRESENTATIONS__SEPARATE_WORKING_RECORDS",
@@ -255,5 +255,17 @@
     ],
     "rule": "Check cache availability and licensed usage before production TeX or PPTX render; verify actual embedded exact Times New Roman faces. A LaTeX times package or Nimbus Roman is not Times New Roman.",
     "safety": "Do not copy licensed font binaries into public Git, source ZIP, deliverables, or share direct font binaries; owner must retain access control."
+  },
+  "submission_surface_policy": {
+    "binding": "ALL_12_REGISTERED_OWNERS__ALL_EXISTING_THESIS_REVISIONS_ON_NEXT_BUILD",
+    "manuscript_only": "All LaTeX/PDF/native Google Docs outputs are complete thesis representations written in the researcher's academic voice; they must not contain internal review, draft, AI, workflow, conversion, missing-file, processing or release-status statements.",
+    "internal_status_exclusively": "Audit Google Doc and provider/Git release receipts; never thesis content, captions, cover, TOC, appendices or page footers.",
+    "placeholders": "Fail if [image], [], TABLE_SLOT or a temporary figure/table placeholder remains in a submitted document.",
+    "canonical_source": "Preserve the complete existing LaTeX source tree, edit only changed files, retain all original figures, data, references, tables, appendices and objective-linked analyses. Do not construct a reduced manuscript merely because one chapter was updated.",
+    "identities": "Resolve and reuse populated live Google Doc ID and canonical manuscript source paths; for mutable live PDF/ZIP artifacts use the registered stable Drive IDs after PRE archiving, while retaining immutable version-specific releases. Do not overwrite historically accepted CURRENT without its separate approval gate.",
+    "pre_post": "Use the next ordinal in the same researcher's archive; PRE before mutation, provider readback, POST after; append a what/why/hash/source-IDs/recovery receipt.",
+    "release_gate": "Completeness/parity are internal evidence gates, never headings or narration in submitted documents.",
+    "shared_format": "controls/latex/tower.json mandatory v2.6 and shared semantic policy v1.3 required on future rebuilds; historical immutable artifacts preserved.",
+    "safety": "Institution-required scholarly and assistance disclosures remain separate from AI process narration and cannot be fabricated."
   }
 }

@@ -174,3 +174,32 @@ The native editable **submission** Google Doc is independently required. Its exi
 **Production font locator:** owner-only [Times New Roman private build cache](https://drive.google.com/drive/folders/1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv), with provenance in [font resource manifest](https://docs.google.com/document/d/1tX7hBF1DN-8llL2dBA-C08Ig5hs2npnRvS38X9qQSqY/edit). Four faces are present. This is a restricted build dependency, **not a public distributable font asset**; do not copy font binaries into source ZIP, GitHub, public Pages or submissions. Exact Times New Roman must be resolved for the chosen TeX engine and verified from the produced PDF's font inventory. `\\usepackage{times}` and Nimbus Roman do **not** satisfy the exact-font gate.
 
 **Proven failure example:** Nabin LATEX_SEQ057 was first delivered as a local 89-page review PDF and ZIP without Drive/Git/Doc release. Those two files and QA were subsequently uploaded to Drive as REVIEW_ONLY. The PDF embeds Nimbus Roman, so exact production typography and native Google Doc parity remain unverified. This omission is a release orchestration failure, not a problem with user instructions.
+
+## Compulsory current format and no internal prose on submitted pages
+
+From shared LaTeX v2.6 and semantic v1.3, all 12 researchers must adopt
+dotless TOC, complete Figure labels, worded equation tags and an actual
+List of Equations on their next compilation, including existing thesis projects.
+They are no longer opt-in. Old immutable PDFs/archives are historical records,
+not to be rewritten in place to falsify their earlier status.
+
+Every new LaTeX/PDF/native Google Doc must be created as a complete academic
+submission document, never an editorial status report. Keep words such as
+draft, review, pending, source-cached, AI-process, or missing-file commentary
+out of the academic content. Incomplete releases must remain withheld by
+**internal** audit/receipt gates, not by printing the status on the title page.
+
+Maintain one populated live owner Google Doc ID and the established source
+file paths. To edit theory, tables, figures, equations or captions, patch the
+minimum existing source files. Archive numbered PRE before touching live
+content, validate, save numbered POST, and record an append-only edit/recovery
+manifest. Existing source ZIPs and accepted releases remain available.
+Provider-linked complete binary PDFs/ZIPs keep their stable live IDs where
+registered; archive an exact copy before replacing bytes.
+
+Native Google Doc image/equation/layout QA is a provider-render task, not
+a claim from static Git checks. Use
+`scripts/latex/native_google_doc_pdf_parity.py` on the actual compiled
+LaTeX PDF and a **fresh Google Docs export PDF**, record both SHA256 values,
+page counts, per-page text/visual comparisons and any failed page. Passing
+source lint or conversion alone does not certify parity.
