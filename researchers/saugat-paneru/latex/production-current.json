@@ -28,7 +28,8 @@
     "native_google_doc_drive_id": "1P_4MFr3WDjkhg_vJQ0YRbqYGMSoUtqSAex-yEaxGgTs",
     "native_google_doc_parity": "OPEN__OLDER_AUGUST_2026_TITLE_AND_CONTENT",
     "full_pu_144_format_certification": "OPEN",
-    "supervisor_signatures_and_science_approval": "NOT_CONFIRMED"
+    "supervisor_signatures_and_science_approval": "NOT_CONFIRMED",
+    "pointer_provider_readback": "CURRENT_SEQ031_R2_TEXT_EXACT_EQUALS_POST_ARCHIVE"
   },
   "format_changes": {
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
@@ -84,20 +85,27 @@
     "promotion_change_id": "USER_DIRECTED_LATEST_CURRENT_20261101",
     "tag": "NOT_CREATED",
     "m2_immutable_tag": "saugat-cp114-m2.0.0-source-qa-20261020",
-    "m3_immutable_tag": "saugat-cp114-m3.0.0-editorial-production-20261021"
+    "m3_immutable_tag": "saugat-cp114-m3.0.0-editorial-production-20261021",
+    "promotion_pr": 113,
+    "promotion_merge_sha": "3c4f0c653f69665524a571b9994c2b6704325288",
+    "live_pointer_readback": "PASS"
   },
   "checkpoint_resolution": {
-    "status": "PRE_SNAPSHOT_CREATED__CURRENT_POINTER_UPDATE_PENDING",
+    "status": "CURRENT_STABLE_ID_UPDATED__PROVIDER_TEXT_READBACK_MATCHED",
     "folder_id": "1vZr5559DA-e8fb0TDn46sVvT9JfRyVWV",
     "current_checkpoint_name": "CURRENT_CHECKPOINT",
     "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
     "before_copy": "109WQ8GunCuMRAOM_fM2ODinDWXcowrsg",
     "before_copy_verified_content_exact": true,
-    "after_pointer_provider_readback_exact": false,
+    "after_pointer_provider_readback_exact": true,
     "after_pointer_pdf_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
     "after_pointer_zip_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
     "method": "PROTECTED_GIT_PROMOTION_PR_THEN_STABLE_DRIVE_POINTER_UPDATE",
-    "historic_cp114_baseline_id": "1138hLUcRPPzXay5p-cniLV5R8nk3oedJ"
+    "historic_cp114_baseline_id": "1138hLUcRPPzXay5p-cniLV5R8nk3oedJ",
+    "same_stable_id_preserved": true,
+    "post_archive_file_id": "1_NfvNwtemL-glMtZyvgneJoiJHbzvpOA",
+    "text_equals_post_archive": true,
+    "pointer_modified_without_deletion": true
   },
   "previous_formatted_production": {
     "release_id": "SAUGAT_CP114_GIT_V2_4_FORMAT_PRODUCTION_20261020",
