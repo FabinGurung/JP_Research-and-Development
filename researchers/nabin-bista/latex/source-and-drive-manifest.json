@@ -445,13 +445,13 @@
     "caution": "Private full scientific binaries and source remain in Drive, not public Git."
   },
   "latest_latex_working_release": {
-    "release": "LATEX_SEQ059",
-    "release_register": "researchers/nabin-bista/latex/versions/seq059.json",
-    "previous": "LATEX_SEQ058",
-    "status": "COMPILED_WORKING__NOT_SCHOLARLY_APPROVED__NATIVE_DOC_PARITY_HOLD",
+    "release": "LATEX_SEQ060",
+    "release_register": "researchers/nabin-bista/latex/versions/seq060.json",
+    "previous": "LATEX_SEQ059",
+    "status": "COMPILED_PDF_AND_ZIP_LIVE__NOT_SCHOLARLY_APPROVED__NATIVE_DOC_AND_REMAINING_FIGURES_HOLD",
     "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
     "source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
     "native_doc_drive_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
-    "note": "Historical manuscript_release, earlier release snapshot pointers and approval statuses above retained as event-time provenance; this property is latest enumerated working, not retroactive scientific certification."
+    "note": "No change to native Doc yet. Six 2D hospital drawings retained; only B1/B2 appendix profile labels, figures and captions revised. B3–B6 in-image wording remains, recorded as hold. Version archive numbering 000006, parent SEQ059."
   }
 }

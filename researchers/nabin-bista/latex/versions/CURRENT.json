@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0.0",
   "researcher_id": "RSH-003",
-  "latex_current_working_release": "LATEX_SEQ059",
-  "sequence": 59,
-  "latest_release_record": "seq059.json",
-  "parent": "LATEX_SEQ058",
-  "type": "COMPILED_WORKING_PDF_AND_SOURCE__NATIVE_GOOGLE_DOC_PARITY_HOLD",
+  "latex_current_working_release": "LATEX_SEQ060",
+  "sequence": 60,
+  "latest_release_record": "seq060.json",
+  "parent": "LATEX_SEQ059",
+  "type": "COMPILED_WORKING_PDF_AND_SOURCE__NATIVE_GOOGLE_DOC_NOT_UPDATED_TO_SEQ060",
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "permanent_native_google_doc_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
-  "archive_premark_sequence": 58,
-  "archive_postmark_sequence": 59,
+  "archive_premark_sequence": 59,
+  "archive_postmark_sequence": 60,
   "scholarly_approval": null,
-  "release_disposition": "NOT_SUBMISSION_CERTIFIED"
+  "release_disposition": "PDF_AND_SOURCE_VERIFIED_IN_DRIVE__FIGURES_B3_B6_UNCLEANED__NATIVE_DOC_PARITY_HOLD"
 }

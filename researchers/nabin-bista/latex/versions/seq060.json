@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "lane": "latex",
+  "sequence": 60,
+  "release_id": "LATEX_SEQ060",
+  "parent_release_id": "LATEX_SEQ059",
+  "status": "WORKING_PDF_AND_SOURCE_PUBLISHED",
+  "scholarly_approval": null,
+  "submission_certified": false,
+  "date_local": "2026-11-01",
+  "scope": "RESEARCHER_APPENDIX_FIGURES_5_8_TO_5_11_AND_FOUR_CAPTIONS_ONLY",
+  "scientific_content_admission": "NO_NEW_ETABS_ANALYSIS__SOURCE_BACKED_EXISTING_BLOCK1_AND_BLOCK2_WORKBOOKS",
+  "preservation": {
+    "parent_sequence": 59,
+    "archive_sequence_number": 6,
+    "root_live_ids_unchanged": true,
+    "prior_zip_entries_missing": 0,
+    "old_source_files_with_modified_content": [
+      "30_results_from_plot_zip_seq051.tex",
+      "figures/appendix/B1_disp_seq057_table_derived.png",
+      "figures/appendix/B1_drift_seq057_table_derived.png",
+      "figures/appendix/B2_disp_seq057_table_derived.png",
+      "figures/appendix/B2_drift_seq057_table_derived.png"
+    ],
+    "six_chapter3_2d_plans_retained": true
+  },
+  "inputs": [
+    "BLOCK 1/STORY DISPLACEMENT-1.xlsx",
+    "BLOCK 1/STORY DRIFT-1.xlsx",
+    "BLOCK 2/STORY DISPLACEMENT B2.xlsx",
+    "BLOCK 2/STORY DRIFT B2.xlsx"
+  ],
+  "updates": [
+    "Figure 5.8 Block 1 displacement",
+    "Figure 5.9 Block 1 drift",
+    "Figure 5.10 Block 2 displacement",
+    "Figure 5.11 Block 2 drift"
+  ],
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "pages": 105,
+    "size_bytes": 13499182,
+    "local_sha256": "5ee63bf5b3dbcc9b999e30d73caddcbd21dede08056f2fdf263635313e982465",
+    "last_checked": "2026-11-01",
+    "qa": "COMPILED_105_PAGES_A4__FIGURES_5_8_TO_5_11_VISUALLY_CHECKED"
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "entries": 340,
+    "size_bytes": 94139350,
+    "local_sha256": "1e86f8ee31448589e74fc507b93d845c5866a6bf09e27820869f2a95a0b6b0ad",
+    "zip_integrity": "PASS",
+    "parent_entries_missing": 0
+  },
+  "native_doc": {
+    "permanent_drive_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+    "revision_label_on_drive": "LATEX_SEQ059",
+    "seq060_charts_updated": false,
+    "exact_parity": "NOT_VERIFIED",
+    "comment": "Do not relabel native Doc to SEQ060 until the four corrected figure images and content parity are applied."
+  },
+  "pre": {
+    "sequence": 59,
+    "pdf_drive_id": "1UgGm4Aucto1WFg5ha0HyF8MyFdtZImv-",
+    "source_zip_drive_id": "18i0XsUl92mBbqV5it5crzT6YPANfR4ma",
+    "native_doc_drive_id": "13oZdI8ZrKENDsJ92HT9r0ub7S2BWWsFXCXBNtAdaXis"
+  },
+  "post": {
+    "sequence": 60,
+    "pdf_drive_id": "1sdlmojikBs0aI_8tzAErSWNRA2DhAPdO",
+    "source_zip_drive_id": "1FABqVcd7FxMMRIksYDDSpzDXUFSXym2M",
+    "internal_qa_drive_id": "1S7YSKb-XzhNgCZ1_IP5t_3ye53IhB8Z8"
+  },
+  "remaining_quality_issues": [
+    "Blocks 3–6 appendix plot raster images still contain generic 'source series' and 'source workbook' wording. Source workbooks not verified in current runtime; do not change their plotted curves without source reconciliation.",
+    "Native Google Doc has not been revised to SEQ060 and exact PDF/Doc parity is unverified.",
+    "Figure set 5.8–5.11 is source-backed, but broader scientific approval has not been established."
+  ],
+  "pdf_full_submission_certification": "HOLD"
+}
