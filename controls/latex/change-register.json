@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 120,
+  "next_number": 121,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -484,6 +484,25 @@
       "global_propagation": "GLOBAL_SYNTAX_CORRECTION_AFTER_APPROVED_PR__HISTORICAL_REFERENCES_UNCHANGED",
       "regression_scope": "Shared style parse and 12 registered researcher source-contract tests; exact-font PDF QA per researcher separately",
       "scientific_boundary": "NO_SCIENTIFIC_DATA_OR_RESEARCHER_MANUSCRIPT_MUTATION__NO_M4_CURRENT_PROMOTION"
+    },
+    {
+      "change_id": "RD-LTX-CHG-120",
+      "researcher_id": "RSH-003",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Enforce dotless TOC and associated lists across all projects using one canonical v2.6.2 LaTeX template; source case Nabin SEQ058, no scientific content changed.",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "controls/latex/tower.json",
+        "controls/latex/change-register.json"
+      ],
+      "before_after_qa_evidence": "Nabin SEQ058 XeLaTeX 99-page local rendering with exact Times New Roman; Table of Contents page manually inspected with no dotted leader marks",
+      "pu_rule_references": [],
+      "disposition": "PROPOSED",
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "MANDATORY_ON_NEXT_RESEARCHER_BUILD",
+      "regression_scope": "Git CI shared ownership gates and individual PDF visual QA",
+      "scientific_boundary": "Visual/typographic only; never copy Nabin data"
     }
   ],
   "required_fields": [
