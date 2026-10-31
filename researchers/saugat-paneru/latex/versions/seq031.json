@@ -40,5 +40,6 @@
     "Exact torsional raw values and full original capacity coordinate curves unavailable",
     "No independent complete ETABS re-run",
     "University 144-rule and native Google Doc parity not certified"
-  ]
+  ],
+  "style_path": "controls/latex/template/pumlsc-shared.sty"
 }
