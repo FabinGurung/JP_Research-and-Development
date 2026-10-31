@@ -4,7 +4,7 @@
 
 
 
-## Current common inheritance and navigation rules (v2.6.2, 31 October 2026)
+## University-source conflicts versus later user presentation directions\n\nThe original PU v1.13 format audit [PU rule map](pu-format-parity-audit.json) preserves the university-source wording as received, including dotted leaders in PU-FMT-024 and abbreviated Figure/Equation references in PU-FMT-035/041. The user's subsequently requested shared v2.6.2 presentation instead uses **dotless navigation** and full **Figure/Equation** designations. These are documented as separate user-directed display choices in the [authority conflict register](academic-format-conflict-register.json), not falsely certified as a university-endorsed change. The shared implementation is unchanged. Full 144-rule institutional acceptance remains a separate signoff.\n\n## Current common inheritance and navigation rules (v2.6.2, 31 October 2026)
 
 - The ONE canonical shared style is `controls/latex/template/pumlsc-shared.sty`, currently **2.6.2** at Git blob `491538d53f83023af0b485dc0251728688ec4e2a`. Researcher versions pin the exact blob and must not maintain an independent template fork. Version history and global amendment `RD-LTX-CHG-120` are authoritative in `change-register.json`.
 - The **dotless navigation** requirement now executes globally at begin-document through `\\PUEnforceDotlessNavigation`: no dotted leader trails in the table of contents, list of tables, list of figures, list of equations or list of appendices. Apply to newly built versions, not by rewriting previously accepted PDF archives. Confirm from the rendered output, not solely from macro source.
