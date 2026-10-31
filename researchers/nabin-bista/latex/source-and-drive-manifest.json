@@ -443,5 +443,15 @@
     "historic_current_preserved": "199DQW3Qan-jOpkO2PL3v-uKI_qJ6lu93",
     "latest_accepted_release_unchanged": "LATEX_SEQ056",
     "caution": "Private full scientific binaries and source remain in Drive, not public Git."
+  },
+  "latest_latex_working_release": {
+    "release": "LATEX_SEQ059",
+    "release_register": "researchers/nabin-bista/latex/versions/seq059.json",
+    "previous": "LATEX_SEQ058",
+    "status": "COMPILED_WORKING__NOT_SCHOLARLY_APPROVED__NATIVE_DOC_PARITY_HOLD",
+    "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "native_doc_drive_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+    "note": "Historical manuscript_release, earlier release snapshot pointers and approval statuses above retained as event-time provenance; this property is latest enumerated working, not retroactive scientific certification."
   }
 }
