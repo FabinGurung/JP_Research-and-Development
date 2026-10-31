@@ -1,0 +1,253 @@
+\documentclass[12pt,a4paper]{report}
+
+% Canonical R&D XeLaTeX style: PU margins, exact Times New Roman and layout.
+% See controls/latex/template/pumlsc-shared.sty pinned in this release manifest.
+% Build with the exact global pumlsc-shared.sty on TEXINPUTS (no local fork).
+\usepackage{pumlsc-shared}
+
+% fontspec supplies Unicode font encoding for XeLaTeX
+\usepackage[american]{babel}   % Required: Language consistency
+% Shared canonical style owns setspace and 1.5 line spacing.                 % Required: 1.5 line spacing
+\usepackage[none]{hyphenat}    % Required: No breaking words across lines
+\sloppy
+\hbadness=10000
+\hfuzz=25pt
+
+% --- Table of Contents & Lists Customization (PU Guidelines) ---
+\usepackage{tocloft}           % Called exactly ONCE here to prevent package clashes
+
+% Researcher-approved TOC: no dotted leaders at any outline level.
+\renewcommand{\cftchapleader}{\hfill}
+\renewcommand{\cftsecleader}{\hfill}
+\renewcommand{\cftsubsecleader}{\hfill}
+
+% Adjust formatting to match 12pt Normal Bold for chapters, regular for sections
+\renewcommand{\cftchapfont}{\fontsize{12}{14}\selectfont\bfseries}
+\renewcommand{\cftsecfont}{\fontsize{12}{14}\selectfont}
+\renewcommand{\cftsubsecfont}{\fontsize{12}{14}\selectfont}
+
+% Fix page number fonts to match text style
+\renewcommand{\cftchappagefont}{\fontsize{12}{14}\selectfont\bfseries}
+\renewcommand{\cftsecpagefont}{\fontsize{12}{14}\selectfont}
+\renewcommand{\cftsubsecpagefont}{\fontsize{12}{14}\selectfont}
+
+% Adjust indentation spacing rules
+\setlength{\cftsecindent}{0pt}       % Sections aligned with left margin
+\setlength{\cftsubsecindent}{3ex}    % Sub-sections indented exactly 3 spaces
+\setlength{\cftbeforechapskip}{12pt} % Spacing before a new chapter line
+
+% ==========================================
+% 3. MATH, SI UNITS & GRAPHICS
+% ==========================================
+\usepackage{amsmath, amssymb}  % Advanced math
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{booktabs,longtable,array}          % Images
+\graphicspath{{./}{figures/ch3/}{figures/ch4/}{figures/appendix/ground_motion_time_histories/}}
+\usepackage{siunitx}           % Required: SI Units
+\sisetup{inter-unit-product = \cdot}
+
+% Required: Left-aligned captions for Figures and Tables
+\captionsetup{justification=raggedright,singlelinecheck=false}
+\hypersetup{hidelinks} % Internal thesis cross-references and appendix links
+
+% ==========================================
+% 4. PU CUSTOM COMMANDS & SUB-FILE EXAMPLES
+% ==========================================
+
+% --- EQUATIONS: Cited as Eq. (n) ---
+\newcommand{\myeq}[1]{Eq. (\ref{#1})} 
+
+% Explicit equation labels displayed after mathematics and a linked equation index.
+\makeatletter
+\renewcommand{\tagform@}[1]{\maketag@@@{(Equation~#1)}}
+\makeatother
+\newlistof{eqindex}{loe}{List of Equations}
+\cftsetindents{eqindex}{0pt}{7em}
+\renewcommand{\cfteqindexpresnum}{Equation~}
+\renewcommand{\cfteqindexleader}{\hfill}
+\newcommand{\RegisterThesisEquation}[1]{%
+  \addcontentsline{loe}{eqindex}{\protect\numberline{\theequation}#1}}
+
+% --- FIGURES: Cited as Fig. X.X (PU style matching Appendix 17) ---
+\newcommand{\myfig}[1]{Figure~\ref{#1}} % REMOVED parentheses to match "Fig. 1.1" text standard
+% Usage Example for Sub-files:
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{image_name}
+%     \caption{Description of figure (Source: Author, 2026)} % CAPTION BELOW
+%     \label{fig:site_map}
+% \end{figure}
+
+% --- TABLES: Cited as Table X.X ---
+\newcommand{\mytab}[1]{Table~\ref{#1}} 
+% Usage Example for Sub-files (FIXED: Removed vertical bars to match Appendix 16):
+% \begin{table}[h]
+%     \caption{Material properties of RC sections} % CAPTION ABOVE
+%     \label{tab:materials}
+%     \centering
+%     \begin{tabular}{lcc} % <--- COMPLIANT: No vertical lines (|) used here
+%         \hline\hline
+%         Grade & Strength (MPa) & Modulus (GPa) \\ \hline
+%         M25   & 25             & 25            \\ \hline
+%     \end{tabular}
+% \end{table}
+
+% --- NON-ENGLISH WORDS: Italicize per guidelines ---
+\newcommand{\local}[1]{\textit{#1}}
+
+% --- ABSTRACT PAGE TEMPLATE ---
+% Usage in 10_abstract.tex:
+% \begin{thesisabstract}
+%     \abstractparagraph{First paragraph text...}
+%     \abstractparagraph{Second paragraph text...}
+%     \abstractparagraph{Third paragraph text...}
+%     \abstractkeywords{Keyword 1, Keyword 2, Keyword 3.}
+% \end{thesisabstract}
+\newenvironment{thesisabstract}{%
+    \begin{titlepage}
+    \setstretch{1.5}
+    \vspace*{28pt}
+    \vspace{10pt}
+    \begin{center}
+        {\fontsize{14}{18}\selectfont \textbf{ABSTRACT}}
+    \end{center}
+    \vspace{14pt}
+    \vspace{10pt}
+    \begingroup\fontsize{12}{18}\selectfont
+}{%
+    \endgroup
+    % Front-matter TOC entry is listed manually in 11_tableofcontent.tex.
+    \end{titlepage}
+}
+\newcommand{\abstractparagraph}[1]{%
+    \noindent\hspace*{4ex}#1\par
+    \vspace{14pt}
+}
+\newcommand{\abstractkeywords}[1]{%
+    \noindent\textbf{Keywords:} #1
+}
+
+% --- PLATES/PICTURES: Custom configuration for List of Plates ---
+\newcommand{\listplateTitle}{List of plates/pictures}
+\newlistentry{plate}{lop}{0}
+\cftsetindents{plate}{0pt}{4.5em}      % Snaps label to left margin, allows space for "Plate X.X"
+\renewcommand{\cftplateaftersnum}{.}  % Adds a period after the number sequence
+
+\newenvironment{plate}[1][htbp]{%
+    \begin{figure}[#1]%
+    \renewcommand{\figurename}{Plate}% Force caption to label as "Plate"
+}{%
+    \end{figure}%
+}
+
+% --- APPENDICES: Custom configuration for List of Appendix ---
+\newcommand{\listappendixTitle}{List of Appendices}
+\newlistentry{appx}{app}{0}
+\newcounter{appdepth}
+\setcounter{appdepth}{1}
+\cftsetindents{appx}{0pt}{6.0em}      % Snaps label flush to left margin, gives room for "Appendix X."
+\renewcommand{\cftappxaftersnum}{.}  % Adds a period after the appendix number sequence
+
+\newenvironment{myappendix}[1]{%
+    \refstepcounter{appx}%
+    \setcounter{figure}{0}%
+    \renewcommand{\thefigure}{\theappx.\arabic{figure}}%
+    \addcontentsline{app}{appx}{\protect\numberline{Appendix~\theappx}#1}%
+    \clearpage
+    \begin{center}
+        {\fontsize{14}{18}\selectfont \textbf{Appendix~\theappx: #1}}
+    \end{center}
+    \par\vspace{24pt}
+}{%
+    \clearpage
+}
+
+% ==========================================
+% 5. DOCUMENT STRUCTURE (ALL 27 FILES)
+% ==========================================
+
+% ==========================================
+% 5. DOCUMENT STRUCTURE (ALL 27 FILES)
+% ==========================================
+
+% =========================================================================
+% METADATA CONFIGURATION VARIABLES (Automates 02_titlepage.tex)
+% =========================================================================
+\newcommand{\myThesisTitle}{Seismic Fragility and Soil--Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal}
+\newcommand{\myStudentName}{Nabin Bista}
+\newcommand{\myRegistrationNumber}{2024-1-71-0023} % Replace with your actual registration number
+\newcommand{\mySupervisorOneName}{Er. Prakash Bahadur Adhikari}
+\newcommand{\mySupervisorOneDesignation}{Assoc. Professor}
+\newcommand{\mySupervisorTwoName}{Er. Rajendra Aryal}
+\newcommand{\mySupervisorTwoDesignation}{Assistant Professor}
+\newcommand{\mySupervisorName}{\mySupervisorOneName{} and \mySupervisorTwoName}
+\newcommand{\mySubmissionDate}{September, 2026}
+% =========================================================================
+
+
+
+\begin{document}
+
+    \color{black} % Required: Font color black
+
+    % --- FRONT MATTER ---
+    % Front-matter pagination control:
+    % Cover is unnumbered/un-counted; Title is Roman i with numeral hidden;
+    % Dedication begins Roman ii and numbering then continues continuously.
+    \pagenumbering{gobble}
+    \include{01_coverpage}
+
+    \clearpage
+    \pagenumbering{roman}
+    \setcounter{page}{1}
+    \include{02_titlepage} % counted as i; standard titlepage hides the numeral
+
+    % From Dedication onward, preserve continuous Roman page counters and
+    % show the page number. This redefinition changes pagination behavior only.
+    \clearpage
+    \setcounter{page}{2}
+    \renewenvironment{titlepage}{%
+        \clearpage
+        \thispagestyle{plain}%
+    }{%
+        \clearpage
+    }
+    \pagestyle{plain}
+    \include{03_dedication}
+    \include{04_declaration}
+    \include{05_recommendation}
+    \include{06_certificate}
+    \include{07_acknowlegement}
+    \include{08_abbreviation}
+    \include{09_unitandconversion}
+    \include{10_abstract}
+    \include{11_tableofcontent}
+    \include{12_listoftable}
+    \include{13_listoffigure}
+    \include{13a_listofequations}
+    \include{14_listofplate}
+    \include{15_listofappendice}
+
+    % --- MAIN CONTENT ---
+    \clearpage
+    \pagenumbering{arabic}
+    \setcounter{page}{1}
+    \input{16_introduction}
+    \input{17_background}
+    \input{18_statementoftheproblem}
+    \input{19_researchquestion}
+    \input{20_researchobjective}
+    \input{21_significanceofthestudy}
+    \input{22_literaturereview}
+    \input{23_methodology}
+    \input{24_resultanddiscussion}
+    \input{25_conclusionandrecommendation}
+
+    % --- BACK MATTER ---
+    \input{26_reference}
+    \input{28_appendices}
+    \input{29_additional_researcher_data_seq050}
+    \input{30_results_from_plot_zip_seq051}
+
+\end{document}
