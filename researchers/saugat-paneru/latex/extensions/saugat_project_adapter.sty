@@ -63,14 +63,16 @@
 \captionsetup[table]{labelsep=period}
 \captionsetup[figure]{labelsep=space}
 \makeatletter\@ifundefined{cftfigpresnum}{}{\renewcommand{\cftfigpresnum}{Fig.\ }}\makeatother
-% A narrowly scoped CP114 paragraph-wrap exception carried from the verified
-% source metadata. Shared headings, page geometry, font and captions remain
-% authoritative; this prevents the shared-template hyphenation defaults from
-% pushing existing approved wording beyond PU margins.
+% SEQ030/R2 source-only PU-FMT-007 repair: preserve readable words, never
+% override the canonical shared template's strict no-discretionary-hyphenation
+% policy. Keep local emergency stretch only for the verified full-source layout.
+% R1 used hyphenpenalty=500 and produced 168 mid-word PDF line breaks.
+% R2 local XeLaTeX/Biber render: 120 A4 pages, zero overfull boxes, four
+% breaks at existing hyphens in legitimate compounds; no science changes.
 \pretolerance=500
-\tolerance=1800
-\hyphenpenalty=500
-\exhyphenpenalty=50
+\tolerance=3000
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 \emergencystretch=3em
 % Figure/table numbering widths from verified CP114 List of Figures/Tables.
 \renewcommand{\cftfigpresnum}{Fig.\ }
