@@ -4,7 +4,7 @@
   "slug": "saugat-paneru",
   "lane": "latex",
   "sequence": 29,
-  "status": "EDITING_SOURCE_ONLY",
+  "status": "EDITING",
   "scientific_checkpoint": "CP114",
   "scientific_admission": "PENDING_OWNER_SUPERVISOR_REVIEW__NO_NEW_CP",
   "branch": "thesis/saugat-paneru/latex/seq029-supervisor-methodology",
@@ -20,5 +20,5 @@
   "source_zip_sha256": null,
   "approval": null,
   "request_key": "manual:20261031-saugat-full-methodology",
-  "qa_note": "Review candidate contains only four Saugat `.tex` changes sourced identically from PR #87; 143 research assets unchanged, Ch4-5 unchanged. Exact Times New Roman build under private QA, native Google Doc parity and Drive publication evaluated separately."
+  "qa_note": "Review candidate contains only four Saugat `.tex` changes sourced identically from PR #87; 143 research assets unchanged, Ch4-5 unchanged. Exact Times New Roman build under private QA, native Google Doc parity and Drive publication evaluated separately. Explicit status EDITING conforms to the canonical ownership gate; native Google Doc parity and supervisor acceptance remain held."
 }
