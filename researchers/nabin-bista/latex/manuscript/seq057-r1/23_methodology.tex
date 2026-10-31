@@ -168,9 +168,32 @@ where $p(x,y)$ is the foundation reaction per unit area, $w(x,y)$ denotes the lo
 \section{Foundation-Support Representation}
 Soil--structure interaction is represented by springs describing translational, rocking and torsional foundation restraint. The fixed-base case provides the comparison reference; the flexible-base cases are categorized as hard, medium and soft soil. The discrete-spring concept is compatible with substructure SSI modelling \cite{wolf1985,gazetas1991}. The model incorporates the translational and rotational spring stiffnesses assigned to the foundation for each soil condition.
 
+The equivalent static foundation-stiffness expressions used for comparison follow the elastic-half-space formulation of Gazetas (1991) \cite{gazetas1991}. For the present square footing with plan dimensions $2L\times2B$ and $L=B$, define $\chi=A_b/(4L^2)=B/L=1$. The vertical, horizontal, rocking and torsional expressions are
+\begin{equation}
+K_z = \frac{2GL}{1-\nu}\left(0.73+1.54\chi^{0.75}\right)\label{eq:gazetas_kz}
+\end{equation}
+\RegisterThesisEquation{Gazetas vertical foundation stiffness}
+\begin{equation}
+K_x=K_y = \frac{2GL}{2-\nu}\left(2+2.50\chi^{0.85}\right)\label{eq:gazetas_kxy}
+\end{equation}
+\RegisterThesisEquation{Gazetas horizontal foundation stiffness}
+\begin{equation}
+K_{\theta x} = \frac{G}{1-\nu}I_{bx}^{0.75}\left(\frac{L}{B}\right)^{0.25}\left(2.4+0.5\frac{B}{L}\right)\label{eq:gazetas_krx}
+\end{equation}
+\RegisterThesisEquation{Gazetas rocking stiffness about the x-axis}
+\begin{equation}
+K_{\theta y} = \frac{G}{1-\nu}I_{by}^{0.75}\left[3\left(\frac{L}{B}\right)^{0.15}\right]\label{eq:gazetas_kry}
+\end{equation}
+\RegisterThesisEquation{Gazetas rocking stiffness about the y-axis}
+\begin{equation}
+K_t = GJ_b^{0.75}\left[4+11\left(1-\frac{B}{L}\right)^{0.75}\right]\label{eq:gazetas_kt}
+\end{equation}
+\RegisterThesisEquation{Gazetas torsional foundation stiffness}
+Here, $G$ denotes the soil shear modulus, $\nu$ is Poisson's ratio, $I_{bx}$ and $I_{by}$ are the second moments of the foundation contact area, and $J_b=I_{bx}+I_{by}$ is its polar area moment. For the square $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$ footing, $L=B=1.5\,\mathrm{m}$, $A_b=9\,\mathrm{m^2}$, $I_{bx}=I_{by}=6.75\,\mathrm{m^4}$ and $J_b=13.5\,\mathrm{m^4}$. The tabulated values remain the original foundation-spring inputs assigned in ETABS; the equations describe the analytical stiffness relationships without replacing the recorded model inputs.
+
 The spring-stiffness matrix includes six components ($K_x$, $K_y$, $K_z$, $K_{\theta x}$, $K_{\theta y}$ and $K_t$) for each of three flexible-support conditions in every block. Table~\ref{tab:spring_stiffness_methodology} presents all 18 block/soil rows, for the six structural blocks.
 
-\begin{table}[p]
+\begin{table}[!htbp]
 \caption{Foundation spring input values by block and soil condition (Table 3.4)}
 \label{tab:spring_stiffness_methodology}\centering\tiny
 \resizebox{\textwidth}{!}{%
@@ -199,7 +222,7 @@ Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \
 \end{tabular}}
 \par\smallskip\footnotesize The numerical values represent the translational and rotational spring stiffnesses used in the foundation models.
 \end{table}
-
+\FloatBarrier
 
 \section{Modal Response Extraction and Comparison}
 Modal analysis results were evaluated separately for each block and foundation-support condition. The first-mode period $T_{1,b,s}$ is extracted using the row and column headings of the actual worksheet. For every case, the smallest modal number with both horizontal cumulative participating-mass ratios at or above 0.90 is recorded. 
