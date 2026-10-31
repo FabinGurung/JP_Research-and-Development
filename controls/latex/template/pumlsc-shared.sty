@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.5 opt-in TOC, equation-index and figure-name helpers]
+\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6 required academic formatting for all owner submissions]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -144,4 +144,19 @@
 }
 \newcommand{\PURegisterEquationEntry}[1]{%
   \addcontentsline{loe}{puequation}{\protect\numberline{\theequation}#1}}
+\makeatother
+
+% RD-LTX-CHG-118: global required defaults for every newly built thesis.
+% Historical accepted archives remain immutable; owners must migrate when reopened.
+% All reader-facing documents use these defaults, never status language.
+\makeatletter
+\AtBeginDocument{%
+  \@ifpackageloaded{tocloft}{%
+    \PUApplyDotlessTOC
+    \PUApplyFullFigureListLabels
+    \@ifundefined{listofpuequations}{\PUEnableEquationList}{}%
+  }{\PackageError{pumlsc-shared}{tocloft required in all thesis submissions}{Load tocloft before begin document.}}%
+  \@ifpackageloaded{amsmath}{\PUApplyWordedEquationTags}{\PackageError{pumlsc-shared}{amsmath required in all thesis submissions}{Load amsmath before begin document.}}%
+  \renewcommand{\figurename}{Figure}%
+}
 \makeatother

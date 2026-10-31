@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "policy_id": "RD-LTX-SEMANTIC-001",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "status": "ACTIVE_SHARED_POLICY__SCIENTIFIC_ACCEPTANCE_ALWAYS_RESEARCHER_SPECIFIC",
   "canonical_owner": "controls/latex/tower.json",
   "scope": "All registered researchers using the single R&D LaTeX control tower; applies to student-facing source and PDF review, irrespective of document genre or whether first-person writing is allowed",
@@ -77,6 +77,21 @@
       "id": "RD-LTX-SEM-013",
       "key": "NO_AI_OR_QA_SELF_REFERENTIAL_LANGUAGE",
       "requirement": "Do not insert ChatGPT, AI authorship diagnostics, hallucination warnings, unsupported-source complaints, dataset custody mechanisms, prompt/ledger/PR identifiers, automation summaries, or self-evaluation of the writing into a submitted thesis. Keep those in internal audit/control records. This is a manuscript relevance and clarity rule, not permission to conceal AI assistance where institutional disclosure is required; existing assistance-disclosure rule remains controlling."
+    },
+    {
+      "id": "RD-LTX-SEM-014",
+      "key": "SUBMISSION_VOICE_AND_NO_WORKFLOW_MARKERS",
+      "requirement": "All submitted representations are the researcher's complete thesis with formal academic prose. Never place ChatGPT/AI pipeline narration, conversion commentary, processing summaries, draft/review/candidate markers, file-availability complaints, evidence-custody or internal status prose in title pages, chapters, captions, footers, appendices, TOC, or native Google Doc. Hold internal checklists and status in owner-only audit and release records, not manuscript content. Proper institutional assistance disclosures are governed by actual university rules."
+    },
+    {
+      "id": "RD-LTX-SEM-015",
+      "key": "SOURCE_CONTINUITY_LIVE_ID_AND_DELTA_EDIT",
+      "requirement": "Keep each populated Google Workspace live ID and canonical Git source path. First archive next numbered PRE; edit only necessary manuscript source paragraphs/assets; compile PDF from preserved source tree; provider-readback and archive POST. Preserve previous figures, tables, analytical results, citations, theory and appendix material. Never rebuild a reduced manuscript or replace a stable Google Doc merely for a formatting correction. Derived PDF or ZIP may be versioned immutable snapshots while preserving a separately registered live artifact ID."
+    },
+    {
+      "id": "RD-LTX-SEM-016",
+      "key": "CANDIDATE_STATUS_OFF_SUBMISSION_PAGES",
+      "requirement": "Working review/QC statuses may exist only as internal metadata and the audit Google Doc. Every created thesis representation must have actual full intended thesis content and academic-facing title/figures, without visible pending, review, draft, parity-hold, automation or machine process language. Missing elements fail internal release gates; never conceal scientific results or claim nonexistent analyses."
     }
   ],
   "linter": {
@@ -100,5 +115,12 @@
     "copy_research_content": false,
     "generalized_from": "Saugat Paneru CP114 M4.2 editorial audit separation, 2026-10-30; no scientific content inherited across researchers",
     "latest_proposal": "RD-LTX-CHG-117__NABIN_GENERALIZED_PROSE_ONLY__NO_OTHER_RESEARCHER_CONTENT"
+  },
+  "release_semantic_gate": {
+    "mandatory": true,
+    "scope": "PDF/TEX/NATIVE_DOC_ALL_12",
+    "status_language": "BLOCK_PUBLISHED_BODY_NOT_AUDIT",
+    "source_continuity": "REUSE_LIVE_ID_AND_DELTA_EDITS",
+    "university_science_and_assistance_rules": "PRESERVE_WHEN_ACTUALLY_REQUIRED"
   }
 }
