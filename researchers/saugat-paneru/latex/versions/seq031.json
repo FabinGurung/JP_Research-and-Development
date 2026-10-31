@@ -41,5 +41,24 @@
     "No independent complete ETABS re-run",
     "University 144-rule and native Google Doc parity not certified"
   ],
-  "style_path": "controls/latex/template/pumlsc-shared.sty"
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "editorial_r2": {
+    "status": "TECHNICAL_AND_SEMANTIC_QA_PASS__NOT_PRODUCTION_CURRENT",
+    "pdf_drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "pdf_sha256": "c6942c597635c4e16ac27b717c8b1b592fd5021cff2df8636beb946be9b8894b",
+    "pdf_pages": 120,
+    "source_zip_drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "source_zip_sha256": "7d44bc10d6c23d351c9c83a5aab20f68192fcca72534d0c016b74ad660663a90",
+    "qa_drive_id": "1cfwh24HwC5ReSCoOPRidvNbvDnAtgO5I",
+    "folder_drive_id": "1ZT2uxSMo6jbfezsXLT9twwDnadDqsvlw",
+    "main_pre": "a3a5ea168efc8b232af81a93706195f6dc34e8eb",
+    "exact_font": "Times New Roman embedded",
+    "shared_style_blob_sha": "491538d53f83023af0b485dc0251728688ec4e2a",
+    "scientific_claims_changed": false,
+    "native_doc_parity": "PENDING",
+    "university_144_rule_certification": "PENDING",
+    "supervisor_signoff": "PENDING",
+    "current_m4": "PRESERVED",
+    "source_patch_files": 8
+  }
 }

@@ -1,6 +1,6 @@
 
 \subsection{Material, Section and Loading Inputs}
-The seven ETABS model definitions examined at $Z=0.35$ record a common M20 concrete material, HYSD415/HYSD500 reinforcement definitions, 125~mm floor slabs, and the load-pattern family summarized below. The tables summarize model inputs used in the analyses rather than introducing a new design calculation.
+The seven ETABS models use M20 concrete, HYSD415/HYSD500 reinforcement, 125~mm floor slabs and the loading patterns presented below. Material properties, section dimensions and gravity and seismic actions are summarized in Tables~\ref{tab:material_properties}--\ref{tab:load_patterns}.
 
 \begin{table}[!htbp]
 \centering
@@ -10,7 +10,7 @@ The seven ETABS model definitions examined at $Z=0.35$ record a common M20 concr
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-Material & $f_c$/$f_y$ (MPa) & $E$ (MPa) & $\nu$ & Use in source model \\
+Material & $f_c$/$f_y$ (MPa) & $E$ (MPa) & $\nu$ & Structural application \\
 \midrule
 M20 concrete & $f_c=20$ & 22360.68 & 0.20 & RC beams, columns and slabs \\
 HYSD415 rebar & $f_y=415$ & 200000 & -- & Longitudinal/confining reinforcement definitions \\
@@ -28,7 +28,7 @@ HYSD500 rebar & $f_y=500$ & 200000 & -- & Longitudinal/confining reinforcement d
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}lll@{}}
 \toprule
-Element & Source section family & Nominal size \\
+Element & Section type & Nominal size \\
 \midrule
 Beam & M20 rectangular beam & 250$\times$355 mm and 250$\times$380 mm \\
 Column & M20 rectangular column & 350$\times$350 mm; selected stair columns 400$\times$400 mm \\
@@ -45,7 +45,7 @@ Floor slab & M20 shell/slab & 125 mm \\
 \small
 \begin{tabular}{@{}lp{8.5cm}@{}}
 \toprule
-Group & Recorded source definitions \\
+Group & Model loading \\
 \midrule
 Gravity & Dead (self-weight), Floor Live, Roof Live, Staircase, Floor Finish \\
 Wall & Peripheral Wall, Internal Wall, Parapet Wall \\
@@ -69,9 +69,9 @@ Figure~\ref{fig:nbc105_mrsm_spectrum} shows the code spectral-shape basis used f
 \FloatBarrier
 
 \subsection{Modal Analysis and Mass-Participation Extraction}
-The modal-analysis dataset is retained as seven model-specific workbooks, one for each Regular, L, L1, L2, T, U, and Non-Parallel configuration. Each workbook contains the worksheet \texttt{Modal Participating Mass Ratios} with twelve modes for each retained demand block. The extracted fields include modal period, frequency, per-mode translational participation (UX and UY), and cumulative translational participation (SumUX and SumUY). The seven source workbooks are preserved with the LaTeX reproducibility project and were normalized into a 420-row dataset used to generate the modal tables. The workbook-to-table source mapping and file hashes are retained with the electronic project records.
+Modal analysis was evaluated for the Regular, L, L1, L2, T, U and Non-Parallel building configurations. Twelve modes were considered for each seismic demand case. The main response measures are natural period, frequency, translational modal participation in the X and Y directions (UX and UY), and cumulative mass participation (SumUX and SumUY). These parameters indicate the relative contributions of the vibration modes to the building response.
 
-For the printed seven-model comparison, the Soil Type C, $Z=0.40$ block is used so that the modal summary is on the same matched basis as the principal response comparison in Chapter~4. The remaining source blocks are retained in the normalized electronic dataset and are not discarded.
+The modal comparison in Chapter~4 uses Soil Type C at $Z=0.40$ to maintain a consistent demand case across the seven building configurations. The analyses also consider the remaining soil and seismic-zone combinations described in the Seismic Parameters section.
 
 \input{generated/tables/modal_extraction_fields.tex}
 \FloatBarrier
