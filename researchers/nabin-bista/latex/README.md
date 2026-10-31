@@ -27,3 +27,8 @@ The new original DOCX + 7z are preserved in Nabin's Drive and indexed as a secon
 ## Current working LaTeX release (version-control correction, 2026-11-01)
 
 The already completed six-2D-figure and cover-logo manuscript state is **LATEX_SEQ059**, not SEQ058. PRE remains SEQ058; POST is SEQ059; live Google Drive IDs are unchanged. See [version pointer](versions/CURRENT.json) and [immutable SEQ059 version record](versions/seq059.json). Prior history above is preserved as historical evidence; source quality/approval gates remain separate.
+
+
+## Working thesis release — LATEX_SEQ060 (2026-11-01)
+
+The latest working **compiled PDF and complete source ZIP** are registered as [LATEX_SEQ060](versions/seq060.json), child of SEQ059, with numbered PRE/POST restoration. The [CURRENT pointer](versions/CURRENT.json) preserves stable live Drive IDs. Scope: four Nabin Block 1–2 appendix displacement/drift plots and corresponding captions; no other scientific changes. The native Google Doc is still at SEQ059 and Blocks 3–6 raster plot labels remain on hold; consult the [internal release audit](releases/SEQ060_BLOCK1_BLOCK2_PROFILE_CLEANUP_20261101.md). Previously accepted scientific versions remain separately governed.
