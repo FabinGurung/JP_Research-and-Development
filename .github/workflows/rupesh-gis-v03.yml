@@ -1,0 +1,21 @@
+name: Rupesh GIS V03.0 source version QA
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'researchers/rupesh-man-pradhan/gis/RMP_GIS_V03_0_ALL_WARDS_COLOR_MAP.py'
+      - 'researchers/rupesh-man-pradhan/gis/all-wards-colored.v0.3.0.json'
+      - 'researchers/rupesh-man-pradhan/gis/validate_v03.py'
+      - '.github/workflows/rupesh-gis-v03.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check V03 source and manifest
+        run: python researchers/rupesh-man-pradhan/gis/validate_v03.py
