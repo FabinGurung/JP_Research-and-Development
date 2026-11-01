@@ -16,7 +16,7 @@
   "source_zip_drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
   "source_current_checkpoint_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
   "scientific_baseline": "CP114_UNCHANGED__NO_NEW_ETABS_RUN",
-  "source_git_state": "SOURCE_EDITED__FULL_PRIVATE_ASSET_TINOS_PREVIEW_COMPILED_115_PAGES__NOT_PRODUCTION",
+  "source_git_state": "FULL_254_FILE_SOURCE_COMPILATION_EXISTS__DRIVE_SAME_ID_ZIP_PROVIDER_READBACK_PASS",
   "registered_pdf": {
     "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
     "name": "Saugat_SEQ032_115p_CURRENT_SELF_QA.pdf",
@@ -33,19 +33,21 @@
   },
   "registered_source_zip": {
     "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
-    "provider_content": "OLD_SEQ031_R2_BASE_PLUS_VERIFIED_SEQ032_SOURCE_OVERLAY",
-    "local_full_seq032_sha256": "f81156482ce221efa862f084ca462dd23e404d89f2d11124aee6bac55b3d68eb",
-    "local_full_seq032_entries": 254,
-    "notes": "Complete SEQ032 source prepared locally but cannot currently feed large generated ZIP as provider file_uri; DO NOT falsely mark synced.",
-    "source_overlay_drive_id": "1ky4iHsDnaygfxiXZC2fItYzaICK3Nx5C",
-    "source_overlay_reconstruction": "PASS_EXACT_254_FILES"
+    "provider_content": "FULL_SEQ032_SOURCE_ALL_254_FILES",
+    "bytes": 59128026,
+    "sha256": "f81156482ce221efa862f084ca462dd23e404d89f2d11124aee6bac55b3d68eb",
+    "provider_readback": "PASS_DIRECT_RAW_DOWNLOAD_SHA256_AND_ZIP_TESTZIP",
+    "post_archive_drive_id": "179oiMs5A973CBju1yWdNanKYwWoPzYL0",
+    "replaced_at_same_id": "2026-11-01",
+    "superseded_overlay_drive_id": "1ky4iHsDnaygfxiXZC2fItYzaICK3Nx5C",
+    "overlay_status": "ARCHIVED_NOT_CURRENT"
   },
   "pre_archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V",
   "pre_archive_pdf_copy_id": "1G651gWwgzSnZNJbdxr3YK-S142MtqqoV",
   "pre_archive_zip_copy_id": "1AdltwXf6cim3SjNvaoO0rpf1zNoCrTy2",
   "pre_archive_checkpoint_copy_id": "1MOBED8KZtRIl6Z92lK2d8rpVWUtyuQOc",
   "source_qa": "researchers/saugat-paneru/latex/qa/SEQ032_OWN_COMMENT_22_ITEM_CURRENT_SELF_QA_20261101.md",
-  "publication_status": "CURRENT_PDF_SAME_ID_PROVIDER_UPDATED__ZIP_SAME_ID_STILL_SEQ031__FULL_032_ZIP_LOCAL_AND_GIT__DO_NOT_CLAIM_COMPLETE_PROVIDER_SYNCHRONIZATION",
+  "publication_status": "CURRENT_PDF_AND_COMPLETE_SEQ032_SOURCE_ZIP_BOTH_ORIGINAL_IDS_SYNCED__SELF_QA_OPEN",
   "academic_status": "SELF_QA_OPEN_9_DONE_11_PARTIAL_2_BLOCKED__PU144_NOT_CERTIFIED__NATIVE_DOC_PARITY_OPEN__EXACT_TNR_NOT_AVAILABLE__SCIENTIFIC_ETABS_REPLAY_OPEN",
   "version_control": {
     "sequence_reservation": "MERGED_PROTECTED_MAIN_PR_119",
@@ -75,5 +77,10 @@
   "current_qa_checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
   "post_pdf_archive_drive_id": "1CUMxfzAVj2xaWMGHzkTvTWEfEtVbMNyB",
   "user_current_working_status": "CURRENT_USER_DESIGNATED__SELF_QA_OPEN__PDF_SAME_ID_YES__SOURCE_OVERLAY_YES__STANDALONE_ZIP_SAME_ID_SYNC_NO",
-  "post_checkpoint_archive_drive_id": "1GclztwuBhAgBCU8z-1QSJWs7bwkEFxYF"
+  "post_checkpoint_archive_drive_id": "1GclztwuBhAgBCU8z-1QSJWs7bwkEFxYF",
+  "drive_candidate_folder": null,
+  "post_source_zip_archive_id": "179oiMs5A973CBju1yWdNanKYwWoPzYL0",
+  "checkpoint_pre_sync_archive_id": "1f5f-yEc_H9t2-3Z4_KM2I3B_hqvmJIkl",
+  "checkpoint_post_sync_archive_id": "1sbOfYp3WHi3nz0TQoVLKq0wbXBvvHAQN",
+  "manuscript_qa_hold": "22_COMMENT_SELF_QA_9_DONE_11_PARTIAL_2_BLOCKED__ACADEMIC_GATES_OPEN"
 }
