@@ -36,8 +36,8 @@
     "pre_checklist_archive_id": "1E324QroS-rEHsvpFuV9DIZwSFwxMZeHr",
     "post_pdf_archive_id": "1resKIPPFS9hUA-c6oVRnm1KZiJYYwsZ4",
     "post_zip_archive_id": "1sLVNBTpcoBdcYUH_xRWC_lKy-POM2M2P",
-    "post_checkpoint_archive_id": "1Tw24vntCaJ_YurWiaO0hUbXItsASkJNM",
-    "post_checklist_archive_id": "1lnYQy2B5UGqf9JpMmOx3geRgB6w5r-Ky",
+    "post_checkpoint_archive_id": "1WhHBoM63Y1mJPozR4V3aWT6ILrD-GRdA",
+    "post_checklist_archive_id": "1XP1Yj7JLWyQmz21irJyJklAvLdo3PdrW",
     "source_scientific_inputs": "20_OF_20_PREEXISTING_CSV_XLSX_UNCHANGED",
     "researcher_22_comments": "UNCHANGED_FROM_SEQ037__13_SOURCE_DONE__7_PARTIAL__2_SCIENCE_BLOCKED__SEE_LIVE_CHECKLIST",
     "full_pu_144_format_certification": "NOT_CERTIFIED",
@@ -107,16 +107,14 @@
     "source_merged_sha": "231e486ffcb8f1fa29c5fb9648d9d754bc870692"
   },
   "checkpoint_resolution": {
-    "status": "CURRENT_STABLE_IDS_UPDATED__PROVIDER_RAW_BYTES_SHA256_PASS__SEQ036",
+    "status": "CURRENT_STABLE_IDS_UPDATED__A7_PRE_POST_COMPLETE__SEQ038",
     "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
     "current_checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
-    "before_copy": "1NLttN1Qh1UdxhTm9Q965oA1n3xrahaDX",
-    "same_stable_id_preserved": true,
-    "after_pointer_pdf_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
-    "after_pointer_zip_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
-    "post_checkpoint_archive_id": "16oOAbSuJZVZ52dImFteZEGC4i9rkNBBA",
-    "post_checklist_archive_id": "1m3ChFIuFk5pH-DOg7ytdOxGDq24Z-SK1",
-    "method": "SAME_ID_DRIVE_REPLACEMENTS__EXACT_PDF_AND_SOURCE_RAW_DOWNLOAD_HASH_QA__A7_PRE_POST"
+    "pre_checkpoint_archive_id": "1TAu97_pXAP-rPMR1gFE0XPhsrCvGNMvn",
+    "pre_checklist_archive_id": "1E324QroS-rEHsvpFuV9DIZwSFwxMZeHr",
+    "post_checkpoint_archive_id": "1WhHBoM63Y1mJPozR4V3aWT6ILrD-GRdA",
+    "post_checklist_archive_id": "1XP1Yj7JLWyQmz21irJyJklAvLdo3PdrW",
+    "same_stable_ids_preserved": true
   },
   "previous_formatted_production": {
     "release_id": "SAUGAT_CP114_GIT_V2_4_FORMAT_PRODUCTION_20261020",
@@ -586,6 +584,10 @@
     "source_pr": 142,
     "source_merge_sha": "231e486ffcb8f1fa29c5fb9648d9d754bc870692",
     "academic_approval": "INDEPENDENT_OPEN",
-    "native_google_doc": "NO_ACTION_USER_OPT_IN_ONLY"
+    "native_google_doc": "NO_ACTION_USER_OPT_IN_ONLY",
+    "post_checkpoint_id": "1WhHBoM63Y1mJPozR4V3aWT6ILrD-GRdA",
+    "post_checklist_id": "1XP1Yj7JLWyQmz21irJyJklAvLdo3PdrW",
+    "original_checkpoint_checklist_ids_preserved": true,
+    "checkpoint_checklist_post_readback": "PASS"
   }
 }
