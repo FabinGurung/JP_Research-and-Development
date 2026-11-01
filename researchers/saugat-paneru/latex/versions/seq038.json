@@ -6,7 +6,7 @@
   "sequence": 38,
   "parent_sequence": 37,
   "branch": "thesis/saugat-paneru/latex/seq038-user-supplied-capacity-plots",
-  "status": "EDITING",
+  "status": "RELEASED",
   "request_key": "saugat:seq038-20261102",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -37,7 +37,7 @@
     "fig_4_29_ladder_changed": false
   },
   "offline_build": {
-    "status": "PASS__DRIVE_PUBLICATION_PENDING",
+    "status": "PASS__SAME_ORIGINAL_DRIVE_IDS_PUBLISHED_RAW_FETCH_SIZE_SHA_VERIFIED",
     "pages": 129,
     "paper": "A4",
     "pdf_sha256": "d7a35a73e9871d76eeed4840cb91fbe05c8606374a5911770e22cfb84cf6170d",
@@ -49,12 +49,20 @@
     "exact_times_new_roman_main_text": true
   },
   "publication": {
-    "drive_current": "SEQ037_UNCHANGED",
-    "release": "SEQ038_READY_NOT_CURRENT",
-    "pdf_and_zip_same_id_upload": "BLOCKED_CONNECTOR_REJECTED_NEW_LOCAL_FILE_REFERENCE",
-    "a7_post": "NOT_CREATED",
-    "checkpoint_update": "NOT_DONE",
-    "scientific_certification": "NOT_CLAIMED"
+    "drive_current": "SEQ038_USER_DESIGNATED_CURRENT",
+    "release": "SEQ038_CURRENT_SAME_PERMANENT_IDS",
+    "pdf_and_zip_same_id_upload": "SUCCESS_FILES_UPDATE__UNCHANGED_PARENT_ID",
+    "a7_pre": "000016_PRE__FOUR_OBJECTS_IN_EXISTING_ARCHIVE",
+    "a7_post": "000016_POST__PDF_ZIP_CHECKPOINT_CHECKLIST_ALL_PROVIDER_VERIFIED",
+    "post_pdf_drive_id": "1resKIPPFS9hUA-c6oVRnm1KZiJYYwsZ4",
+    "post_zip_drive_id": "1sLVNBTpcoBdcYUH_xRWC_lKy-POM2M2P",
+    "checkpoint_update": "PASS__SAME_ORIGINAL_ID__TEXT_READBACK",
+    "scientific_certification": "NOT_CLAIMED",
+    "source_pr": 142,
+    "source_merge_sha": "231e486ffcb8f1fa29c5fb9648d9d754bc870692",
+    "checklist_update": "PASS__SAME_ORIGINAL_ID__TEXT_READBACK",
+    "post_checkpoint_drive_id": "1WhHBoM63Y1mJPozR4V3aWT6ILrD-GRdA",
+    "post_checklist_drive_id": "1XP1Yj7JLWyQmz21irJyJklAvLdo3PdrW"
   },
   "native_google_doc": "NOT_REQUESTED_NO_ACTION"
 }
