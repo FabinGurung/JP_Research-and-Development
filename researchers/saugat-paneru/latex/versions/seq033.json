@@ -6,7 +6,7 @@
   "sequence": 33,
   "parent_sequence": 32,
   "branch": "thesis/saugat-paneru/latex/seq033-current-review-closeout",
-  "status": "RELEASED_USER_DESIGNATED_CURRENT__ACADEMIC_QA_OPEN",
+  "status": "RELEASED",
   "request_key": "saugat:seq033-20261101",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
