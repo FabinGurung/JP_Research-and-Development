@@ -84,7 +84,7 @@
 % presentation. The shared PU engine continues to own geometry, font, body,
 % chapter headings, and general format defaults. Ref: CP114 official 115p.
 \renewcommand{\cftdotsep}{1.5}
-\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+% Dotless chapter leaders are provided by the governing shared PU style.
 \renewcommand{\cftchapfont}{\normalfont\fontsize{12}{14.4}\selectfont}
 \renewcommand{\cftchappagefont}{\normalfont\fontsize{12}{14.4}\selectfont}
 \renewcommand{\cftsecfont}{\normalfont\fontsize{12}{14.4}\selectfont}
@@ -100,7 +100,9 @@
 \newcommand{\SaugatCPListTitle}[1]{\begin{center}\bfseries\fontsize{14}{18}\selectfont #1\end{center}\vspace{12pt}}
 \makeatletter
 \newcommand{\l@saugatappendix}{\@dottedtocline{0}{0em}{7em}}
-\renewcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{chapter}{Table of contents}\SaugatCPListTitle{Table of contents}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{toc}\endgroup}
+% SEQ032: defer chapter-heading line breaks and spacing to the shared
+% PU template, keeping the legacy same-ID list/section registrations.
+\renewcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{chapter}{Table of contents}\PUPrintContents}
 \renewcommand{\PUListOfTables}{\clearpage\addcontentsline{toc}{chapter}{List of tables}\SaugatCPListTitle{List of tables}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lot}\endgroup}
 \renewcommand{\PUListOfFigures}{\clearpage\addcontentsline{toc}{chapter}{List of figures}\SaugatCPListTitle{List of figures}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lof}\endgroup}
 \renewcommand{\PUListOfAppendices}{\clearpage\addcontentsline{toc}{chapter}{List of appendices}\SaugatCPListTitle{List of appendices}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{loa}\endgroup}
