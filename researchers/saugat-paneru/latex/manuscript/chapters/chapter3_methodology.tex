@@ -97,16 +97,14 @@ The plan drawings and three-dimensional model views document the placement and o
 
 \input{cp112_additions/ch3_model_geometry.tex}
 
-% SEQ032: consistently sized two-column model views, with each model
-% retaining its own numbered Figure caption and stable reference label.
-% Original 8 PNG assets and their geometry are not transformed.
+% SEQ032: paired, uniformly sized model images with original source files.
 \newcommand{\saugatMethodPanel}[4]{%
 \begin{minipage}[t]{0.485\textwidth}\centering
 \begin{minipage}[c][0.19\textheight][c]{\linewidth}\centering
 \includegraphics[width=\linewidth,height=0.18\textheight,keepaspectratio]{#1}
 \end{minipage}
 \caption{#2 building model.}\label{#3}
-{\small\raggedright\vspace{2pt}#4\par}
+{\small\raggedright #4\par}
 \end{minipage}}
 
 \begin{figure}[p]\centering
@@ -133,10 +131,10 @@ The plan drawings and three-dimensional model views document the placement and o
 \FloatBarrier
 
 \subsection{NBC 205:2012 Detailing Reference}
-The NBC~205:2012 dimensional illustration is reproduced in Appendix~\ref{appx:reviewer_nbc205_illustration}, explicitly distinguished from the actual material, member-section and loading assumptions tabulated for the ETABS comparison. It is not substituted for verified NBC~205:2024 detailing requirements or for original model reinforcement screenshots, for which model-specific documentation is considered separately.
+The NBC~205:2012 dimensional illustration is reproduced in Appendix~\ref{appx:reviewer_nbc205_illustration}, explicitly distinguished from the actual material, member-section and loading assumptions tabulated for the ETABS comparison. The code illustrations and the model input parameters are examined separately to distinguish published detailing provisions from the numerical assumptions used in the structural analysis.
 
 \subsection{Model Geometry and Section Checks}
-The following model screenshots document geometry restrictions and member-section selection used during the setup of the structural comparisons. They supplement, but do not replace, quantitative section assignments and design-check results.
+The following model screenshots document the geometry restrictions and member-section selection used during the setup of the structural comparisons. They supplement, but do not replace, the quantitative section assignments and design-check results.
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC 205_2012 Building Restrictions .jpg}
@@ -188,13 +186,14 @@ Storey shear and inter-storey drift are evaluated for the seven principal config
 
 \section{CM--CR Separation}
 The centre-of-mass and centre-of-rigidity coordinates are used to calculate the resultant CM--CR separation at the available floor levels. The principal quantities considered are the centre-of-mass coordinates, centre-of-rigidity coordinates, and resultant separation. CM--CR separation is used as a descriptive indicator of mass--stiffness eccentricity and is interpreted together with the other response measures.
+
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.82\textwidth,height=0.34\textheight,keepaspectratio]{figures/ch3/seq035/typical_eccentric_cm_cr.jpg}
 \caption{Typical single eccentric system showing center of mass (CM) and eccentric center of rigidity (CR).}
 \label{fig:typical_eccentric_cm_cr}
 \end{figure}
-The schematic illustrates how an offset between the centre of mass and the centre of rigidity introduces eccentricity in a structural plan. It is a conceptual representation rather than a measured displacement from any of the seven models.
+The schematic illustrates how an offset between the centre of mass and the centre of rigidity introduces eccentricity in a structural plan. It is a conceptual representation rather than a plan or measured displacement from any of the seven models.
 
 
 \section{Nonlinear Static Pushover Analysis}
