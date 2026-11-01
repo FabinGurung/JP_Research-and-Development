@@ -136,6 +136,18 @@
           "main_sha_at_reservation": "e029df6f929965785d669da7b625b3775e168867",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000015_PRE archived SEQ036 PDF source ZIP checkpoint checklist. User opted out native Google Doc parity unless explicitly requested. Source-only capacity figure correction 14 charts, shared 0..250 mm and 0..2000 kN axes, lower-right legends, exact TNR; 70/70 original case directions discovered including historical L1 Y D0.35 false missing flag. Abstract 1-page non-deletion attempt. Unchanged scientific CSV XLSX. Same live Drive IDs and CURRENT/ARCHIVE only."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 38,
+          "branch": "thesis/saugat-paneru/latex/seq038-user-supplied-capacity-plots",
+          "status": "RESERVED",
+          "request_key": "saugat:seq038-20261102",
+          "created_at_utc": "2026-11-02T00:00:00Z",
+          "main_sha_at_reservation": "66ceec953b17f911d0c23c90212b075dd6437276",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "Exact user-supplied 16 PNG capacity plots replace only matching active 14 model and 2 Soil-C Z=.40 comparison figures in Chapter 4. Preserve original data, captions, labels, Times New Roman main text, and figures outside scope. A7 000016_PRE archived PDF, ZIP, checkpoint, checklist; same original live Drive IDs, CURRENT/ARCHIVE only, Google Doc not requested."
         }
       ]
     },
