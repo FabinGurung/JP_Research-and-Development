@@ -445,13 +445,13 @@
     "caution": "Private full scientific binaries and source remain in Drive, not public Git."
   },
   "latest_latex_working_release": {
-    "release": "LATEX_SEQ062",
-    "release_register": "researchers/nabin-bista/latex/versions/seq062.json",
-    "previous": "LATEX_SEQ061",
-    "status": "PDF_SOURCE_DRIVE_READBACK__NATIVE_GOOGLE_DOC_PARITY_HOLD",
+    "release": "LATEX_SEQ063",
+    "release_register": "researchers/nabin-bista/latex/versions/seq063.json",
+    "previous": "LATEX_SEQ062",
+    "status": "COMPILED_PDF_SOURCE_PUBLISHED__NATIVE_DOC_HISTORICAL",
     "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
     "source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
     "native_doc_drive_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
-    "note": "PRE 000008 holds SEQ061; POST 000008 holds SEQ062; scientific files preserved. Native Google Doc remains older."
+    "note": "Two surgical corrections only: Chapter 5.3 removed; dot leaders from List of Appendices removed. PRE 000009 from SEQ062, POST 000009 SEQ063. Native Doc not edited."
   }
 }
