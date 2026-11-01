@@ -1,16 +1,17 @@
 {
   "schema_version": "1.0.0",
   "researcher_id": "RSH-003",
-  "latex_current_working_release": "LATEX_SEQ064",
-  "sequence": 64,
-  "latest_release_record": "seq064.json",
-  "parent": "LATEX_SEQ063",
-  "type": "COMPILED_WORKING_PDF_SOURCE__GOOGLE_DOC_NOT_SYNCHRONIZED",
+  "latex_current_working_release": "LATEX_SEQ065",
+  "sequence": 65,
+  "latest_release_record": "seq065.json",
+  "parent": "LATEX_SEQ064",
+  "type": "COMPILED_WORKING_PDF_SOURCE__GOOGLE_DOC_OPTIONAL_NOT_UPDATED",
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "permanent_native_google_doc_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
-  "archive_premark_sequence": 63,
-  "archive_postmark_sequence": 64,
+  "archive_premark_sequence": 64,
+  "archive_postmark_sequence": 65,
   "scholarly_approval": null,
-  "release_disposition": "PDF_ZIP_PUBLISHED_IN_PLACE__SUPERVISOR_REVIEW_SCIENCE_HOLDS__NATIVE_DOC_NOT_CURRENT"
+  "release_disposition": "PDF_SOURCE_LIVE_SAME_IDS__32_PREEXISTING_FIGURES_REUSED_IN_LATEX__A7_000011_ARCHIVED__SCIENTIFIC_HOLDS_REMAIN",
+  "google_doc_policy": "OPTIONAL_SEPARATE_REQUEST_ONLY"
 }

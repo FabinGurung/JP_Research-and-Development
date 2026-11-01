@@ -47,3 +47,8 @@ The latest working **compiled PDF and complete source ZIP** are registered as [L
 ## Current working thesis: LATEX_SEQ064 (supervisor-feedback revision)
 
 The complete [SEQ064 version record](versions/seq064.json) and [PRE/POST restoration note](releases/SEQ064_SUPERVISOR_CORRECTION_GOVERNED_20261101.md) describe the same-live-ID PDF and source ZIP updates, six-block fragility layout and source-backed editorial corrections. Scientific engineering verification and updated native Google Doc parity remain open; this working revision must not be treated as final scientific approval.
+
+
+## Working thesis LATEX_SEQ065 — reused corrected charts (2026-11-01)
+
+[SEQ065 version](versions/seq065.json) and [A7 000011 release/restoration record](releases/SEQ065_REUSE_32_CLEANED_FIGURES_A7_000011_20261101.md) document copying 32 previously prepared chart PNGs into the existing source paths, preserving all TeX image references and scientific content, and rebuilding the complete 107-page PDF. Permanent Drive PDF/ZIP IDs are unchanged, PRE/POST snapshots archived, and native Google Docs are optional. This is a working revision only; inherited scientific review holds remain. This branch builds upon the as-yet unmerged SEQ064 PR #129; no main-branch synchronization is claimed.
