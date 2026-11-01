@@ -153,7 +153,7 @@
 \newenvironment{myappendix}[1]{%
     \refstepcounter{appx}%
     \setcounter{figure}{0}%
-    \renewcommand{\thefigure}{\theappx.\arabic{figure}}%
+    \renewcommand{\thefigure}{A\theappx.\arabic{figure}}%
     \addcontentsline{app}{appx}{\protect\numberline{Appendix~\theappx}#1}%
     \clearpage
     \begin{center}
@@ -175,7 +175,7 @@
 % =========================================================================
 % METADATA CONFIGURATION VARIABLES (Automates 02_titlepage.tex)
 % =========================================================================
-\newcommand{\myThesisTitle}{Seismic Fragility and Soil--Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal}
+\newcommand{\myThesisTitle}{Seismic Performance and Fragility Assessment of a Representative Mid-size Hospital Building Considering Soil--Structure Interaction}
 \newcommand{\myStudentName}{Nabin Bista}
 \newcommand{\myRegistrationNumber}{2024-1-71-0023} % Replace with your actual registration number
 \newcommand{\mySupervisorOneName}{Er. Prakash Bahadur Adhikari}
@@ -249,6 +249,7 @@
     \input{26_reference}
     \input{28_appendices}
     \input{29_additional_researcher_data_seq050}
+    \input{31_fragility_original_figures_seq064}
     % Original appendix plot source preserved for historical recovery; 36 figures now in 24_resultanddiscussion.tex.
 
 \end{document}
