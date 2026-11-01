@@ -73,5 +73,8 @@
   },
   "source_git_pr": 139,
   "academic_status": "INDEPENDENT_INSTITUTIONAL_AND_SCIENTIFIC_APPROVAL_OPEN",
-  "qa_report": "researchers/saugat-paneru/latex/qa/SEQ037_22_POINT_AND_A7_QA_20261101.md"
+  "qa_report": "researchers/saugat-paneru/latex/qa/SEQ037_22_POINT_AND_A7_QA_20261101.md",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4"
 }
