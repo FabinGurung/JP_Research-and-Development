@@ -445,13 +445,13 @@
     "caution": "Private full scientific binaries and source remain in Drive, not public Git."
   },
   "latest_latex_working_release": {
-    "release": "LATEX_SEQ061",
-    "release_register": "researchers/nabin-bista/latex/versions/seq061.json",
-    "previous": "LATEX_SEQ060",
-    "status": "COMPILED_PDF_SOURCE_PUBLISHED__NOT_SCHOLARLY_APPROVED__NATIVE_DOC_PARITY_HOLD",
+    "release": "LATEX_SEQ062",
+    "release_register": "researchers/nabin-bista/latex/versions/seq062.json",
+    "previous": "LATEX_SEQ061",
+    "status": "PDF_SOURCE_DRIVE_READBACK__NATIVE_GOOGLE_DOC_PARITY_HOLD",
     "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
     "source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
     "native_doc_drive_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
-    "note": "Reused existing live IDs, 000007 PRE SEQ060 and POST SEQ061; shorter abstract; six block layouts two across; 36 figures under Chapter 4. Existing native Doc not updated."
+    "note": "PRE 000008 holds SEQ061; POST 000008 holds SEQ062; scientific files preserved. Native Google Doc remains older."
   }
 }

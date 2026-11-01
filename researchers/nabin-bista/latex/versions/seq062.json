@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "lane": "latex",
+  "sequence": 62,
+  "release_id": "LATEX_SEQ062",
+  "parent_release_id": "LATEX_SEQ061",
+  "status": "QA_CANDIDATE",
+  "scientific_approval": null,
+  "submission_certified": false,
+  "date_local": "2026-11-01",
+  "shared_template": {
+    "version": "2.6.3",
+    "commit": "e931bf19d1c646bd6b125f1adfed24995ac57a1d",
+    "global_rule": "RD-LTX-CHG-122",
+    "source_path": "controls/latex/template/pumlsc-shared.sty",
+    "note": "GitHub researcher source inherits the exact global .sty. Compiled local ZIP was built using source-compatible TOC macro mirroring the global change; full clean Git source rebuild under central .sty not independently certified."
+  },
+  "change_scope": [
+    "Appendix 2 Figure 2.1 enlarged and rotated on its own page with unchanged original vector plan",
+    "List of plates/pictures omitted from rendered thesis/TOC; original source file retained",
+    "Researcher six-block results compared cautiously with DOI 10.1007/s41024-023-00280-8 and DOI 10.1016/j.rineng.2024.102161, without claiming experimental/numeric validation",
+    "Abstract one page and covers modal periods and mass, displacement, drift, base shear, foundation settlement, twelve earthquake motions and fragility intensity comparison",
+    "General objective unchanged; four specific objectives rewritten as three with all original substantive areas retained"
+  ],
+  "figure_relocation": {
+    "displacement_4_3": 6,
+    "drift_4_4": 6,
+    "fragility_4_8": 24
+  },
+  "file_edits": [
+    "10_abstract.tex",
+    "11_tableofcontent.tex",
+    "20_researchobjective.tex",
+    "24_resultanddiscussion.tex",
+    "27_reference.bib",
+    "29_additional_researcher_data_seq050.tex",
+    "main.tex"
+  ],
+  "file_continuity": {
+    "parent_files_removed": 0,
+    "previous_total_entries": 343,
+    "original_entry_bytes_unchanged": 325,
+    "original_raw_data_or_figure_assets_changed": 0
+  },
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "pages": 94,
+    "sha256": "83ad742ae2a863ec7796e3186810a8ef764fea06113730639aa85a2b8bf3e957",
+    "file_size_bytes": 13124304,
+    "qa": "XELATEX_BIBTEX_THREE_PASSES__TIMES_NEW_ROMAN_EMBEDDED__ABSTRACT_ONE_PAGE__DOI_REFERENCES_RESOLVED"
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "6749b2cb310c3763c2724ed43644516d8d07f23e0056582692e463eb4d33e84d",
+    "file_size_bytes": 93791925,
+    "entries": 344,
+    "zip_crc": "PASS",
+    "previous_entries_missing": 0
+  },
+  "native_google_doc": {
+    "permanent_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+    "latest_content": "OLDER_VERSION__NOT_SYNCHRONIZED_TO_SEQ062",
+    "exact_parity": "NOT_CERTIFIED"
+  },
+  "pre": {
+    "sequence": 61,
+    "pdf_id": "1OQkw9UeHt82f9Tr3_dZHY7wp-NvQEmu1",
+    "source_zip_id": "137_b4-d3T_vAT3bkRj4k9ecxpMsQm3uN",
+    "native_doc_id": "1wLKCdfjVsUpLxZMS4jdZtAfkY7DZRrW26L1T2-vHzAE"
+  },
+  "post": {
+    "sequence": 62,
+    "pdf_id": "1SIWhmBzyEpjkKxp-9dRZhs25w8VyjWtQ",
+    "source_zip_id": "1wvQB8Op1qvMiCtt6TbEB8FvtMW3HEOoU",
+    "qa_json_id": "14MV0Pzw1ZXYHueIA47EFczA__6xPy0MR"
+  },
+  "notes": [
+    "Figure 2.1 enlarged/rotated to fill more of one page without cropping drawing",
+    "Abstract threshold values from source 12EQ table are aggregate; direction_status is NOT_IDENTIFIED_IN_SOURCE_WORKBOOK and not attributed to specific block",
+    "DOI paper comparison is trend/contextual agreement only, not a numerical model validation",
+    "Existing B3-B6 in-image source labels remain out of scope",
+    "A7 Memory Wall has same-live-ID PRE/POST rule already; no duplicate rule needed.",
+    "Native Google Doc not yet synchronized"
+  ],
+  "branch": "researcher/nabin-bista/latex-seq062-literature-abstract-objectives",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "release_pr_branch": "researcher/nabin-bista/latex-seq062-literature-abstract-objectives",
+  "branch_reconciliation": "Replacement for PR #116 because thesis/ branch sequence allocator requires a separate canonical ledger reservation; this owner-scoped branch preserves identical manuscript source and evidence without cross-researcher edits."
+}
