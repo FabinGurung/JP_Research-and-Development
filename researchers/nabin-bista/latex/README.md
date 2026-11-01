@@ -37,3 +37,8 @@ The latest working **compiled PDF and complete source ZIP** are registered as [L
 ## New working manuscript LATEX_SEQ061 (2026-11-01)
 
 [Version 061](versions/seq061.json) is the latest working PDF/LaTeX, reusing all permanent Drive IDs and preserving sequence 060 under numbered 000007 PRE snapshots. Four source files were edited in place: single-page Abstract, removal of duplicate Chapter 3 plan, six 2D blocks paired two per page, and 36 response/fragility plots rehomed under Chapter 4. Global shared format v2.6.3 applies two-line chapter headings without chapter page numbers in TOC. [Release and recovery](releases/SEQ061_CHAPTER_TOC_AND_FIGURE_PLACEMENT_20261101.md). Native Google Doc exact parity remains pending. No new numerical scientific values were introduced.
+
+
+## Latest working LaTeX thesis: LATEX_SEQ062 (2026-11-01)
+
+[SEQ062 release register](versions/seq062.json) preserves the same live Drive PDF/ZIP IDs, archived SEQ061 PRE 000008 and SEQ062 POST 000008. The scoped revision enlarges Appendix 2 Figure 2.1, removes the empty plates list, consolidates the specific objectives to three, makes the abstract one page, and compares the six-block findings carefully against two DOI studies. No original image/data source was modified. Native Google Doc still requires synchronization and visual parity. [Release/QA notes](releases/SEQ062_CONCISE_ABSTRACT_OBJECTIVES_AND_DOI_COMPARISON_20261101.md).
