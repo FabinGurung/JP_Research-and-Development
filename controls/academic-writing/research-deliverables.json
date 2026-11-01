@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-ACADEMIC-DELIVERABLES-001",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "authority": "controls/academic-writing/tower.json",
   "status": "ACTIVE_CONTRACT_AND_RECEIPT_VALIDATOR__PROVIDER_CONVERSION_AND_PROJECT_RELEASE_QA_SEPARATE",
   "principle": "ONE_ADMITTED_SCIENTIFIC_REVISION__THREE_SUBMISSION_REPRESENTATIONS__SEPARATE_WORKING_RECORDS",
@@ -66,8 +66,7 @@
   },
   "submission_bundle_roles": [
     "submission_latex",
-    "submission_pdf",
-    "submission_google_doc"
+    "submission_pdf"
   ],
   "presentation_roles": [
     "presentation_source",
@@ -117,7 +116,8 @@
         "full_page_visual_qa",
         "scientific_authorization",
         "provider_readback"
-      ]
+      ],
+      "request_mode": "OPTIONAL__EXPLICIT_SEPARATE_USER_PROMPT_ONLY"
     },
     "presentation_source": {
       "format": "UTF-8 JSON content/theme/evidence references + shared Python .py generator",
@@ -172,7 +172,7 @@
   },
   "thesis_parity": {
     "source": "Exact owner-admitted LaTeX scientific revision, source-tree digest, commit and canonical shared-style blob; DOCX-first intake remains a precursor until a real LaTeX project is admitted.",
-    "synchronize": "Generate/reconcile the native submission Doc from the exact LaTeX revision and compiled PDF, never from an audit, discussion, incomplete text extraction or another researcher's thesis.",
+    "synchronize": "OPTIONAL, ONLY ON EXPLICIT USER REQUEST: if a native Google Doc representation is requested, derive or reconcile it from the exact owner-admitted LaTeX revision and compiled PDF, not from audits or incomplete text extracts.",
     "content_checks": [
       "frontmatter_and_section_order",
       "complete_paragraphs",
@@ -197,7 +197,7 @@
       "equation_table_figure_layout",
       "identical_page_count_and_corresponding_page_content"
     ],
-    "render_gate": "Export the native Doc to PDF and compare every page with the exact compiled LaTeX PDF; pin both PDF hashes and the native revision. Define comparison criteria from the applicable institution/owner evidence, not an invented pixel threshold.",
+    "render_gate": "APPLIES ONLY WHEN NATIVE GOOGLE DOC IS EXPLICITLY REQUESTED: export the Doc to PDF and compare with the corresponding LaTeX PDF. Record genuine differences; Doc parity is NOT a prerequisite for a LaTeX/PDF release.",
     "unsupported_native_feature": "HOLD exact parity/submission-ready status for the affected representation; document the precise mismatch in the private owner audit. No silent rasterized pages, flattened equations, reduced content or fallback fonts called exact.",
     "editability": "Use native headings, paragraphs, editable tables, citations/links and usable equations where supported; a PDF embedded as page images is not the native manuscript.",
     "reverse_edit": "Treat direct Doc edits as proposed source changes: reconcile into the owner LaTeX revision, rerun parity, and then update all representations. No last-writer-wins overwrite.",
@@ -208,7 +208,8 @@
       "asset_or_bibliography_change",
       "exported_pdf_change"
     ],
-    "no_auto_promotion": "Individual readiness requires its own evidence; bundle readiness requires all three at the same source revision. Preserve accepted CURRENT until separate release authorization and provider readback. Technical readiness never claims actual institutional acceptance or submission."
+    "no_auto_promotion": "LaTeX/PDF release readiness is independent of any Google Doc. If expressly commissioned, assess Google Doc content, editability, and parity separately. Do not infer institutional approval from technical checks.",
+    "opt_in_only": true
   },
   "presentation_source_policy": {
     "canonical_stack": [
@@ -233,14 +234,12 @@
       "record_version_specific_drive_refs_and_hash_caveats",
       "git_commit_and_pr_source_manifest_and_reproducible_code",
       "verify_git_ci_and_pages",
-      "generate_or_reconcile_native_google_doc",
-      "export_doc_to_pdf_and_complete_all_page_parity_checks",
-      "publish_final_release_only_when_source_font_science_and_doc_gates_pass"
+      "publish_final_release_only_when_source_font_science_and_owner_approval_gates_pass"
     ],
-    "fail_closed": "NO_DRIVE_READBACK_MEANS_NO_GIT_RELEASE_COMPLETION_CLAIM__NO_NATIVE_DOC_PARITY_MEANS_NOT_SUBMISSION_READY",
+    "fail_closed": "NO_DRIVE_READBACK_MEANS_NO_GIT_RELEASE_COMPLETION_CLAIM__NO_GOOGLE_DOC_REQUIREMENT_UNLESS_EXPLICITLY_REQUESTED",
     "review_candidate_allowed": "PDF/ZIP may be saved in Drive and Git registered explicitly as REVIEW_ONLY; do not switch stable CURRENT until final gate and separate authorization.",
     "evidence": "Actual connector/provider file IDs and metadata; a generated local sandbox path or a pasted URL is not proof of uploaded Drive bytes.",
-    "mandatory_status_report": "Each response must distinguish LOCAL_BUILD, DRIVE_UPLOADED, GIT_PR_OPEN, GIT_MERGED, POST_MERGE_CI, NATIVE_DOC_CREATED, DOC_PDF_PARITY, EXACT_FONT, SCIENTIFIC_APPROVAL, FINAL_SUBMISSION."
+    "mandatory_status_report": "Each response must distinguish LOCAL_BUILD, DRIVE_UPLOADED, GIT_PR_OPEN, GIT_MERGED, POST_MERGE_CI, EXACT_FONT, SCIENTIFIC_APPROVAL, FINAL_SUBMISSION; report NATIVE_DOC_CREATED and DOC_PDF_PARITY only if independently requested."
   },
   "exact_times_new_roman_resource": {
     "visibility": "OWNER_ONLY_PROTECTED_DRIVE_FOLDER",
@@ -262,10 +261,13 @@
     "internal_status_exclusively": "Audit Google Doc and provider/Git release receipts; never thesis content, captions, cover, TOC, appendices or page footers.",
     "placeholders": "Fail if [image], [], TABLE_SLOT or a temporary figure/table placeholder remains in a submitted document.",
     "canonical_source": "Preserve the complete existing LaTeX source tree, edit only changed files, retain all original figures, data, references, tables, appendices and objective-linked analyses. Do not construct a reduced manuscript merely because one chapter was updated.",
-    "identities": "Resolve and reuse populated live Google Doc ID and canonical manuscript source paths; for mutable live PDF/ZIP artifacts use the registered stable Drive IDs after PRE archiving, while retaining immutable version-specific releases. Do not overwrite historically accepted CURRENT without its separate approval gate.",
+    "identities": "For LaTeX and PDF revisions, preserve the registered stable live source and compiled-PDF Drive IDs after numbered PRE archiving, while retaining immutable version-specific releases. If a native Google Doc is separately requested, preserve/reuse its own stable ID; do NOT create or synchronize it automatically.",
     "pre_post": "Use the next ordinal in the same researcher's archive; PRE before mutation, provider readback, POST after; append a what/why/hash/source-IDs/recovery receipt.",
     "release_gate": "Completeness/parity are internal evidence gates, never headings or narration in submitted documents.",
     "shared_format": "controls/latex/tower.json mandatory v2.6 and shared semantic policy v1.3 required on future rebuilds; historical immutable artifacts preserved.",
     "safety": "Institution-required scholarly and assistance disclosures remain separate from AI process narration and cannot be fabricated."
-  }
+  },
+  "optional_submission_roles": [
+    "submission_google_doc"
+  ]
 }
