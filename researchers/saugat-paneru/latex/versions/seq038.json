@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 38,
+  "parent_sequence": 37,
+  "branch": "thesis/saugat-paneru/latex/seq038-user-supplied-capacity-plots",
+  "status": "EDITING",
+  "request_key": "saugat:seq038-20261102",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "drive_stable_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU"
+  },
+  "a7_pre": {
+    "ordinal": 16,
+    "pdf_id": "16yHn1aswN-3RaZPI_XQNS6VbMI-oUB0x",
+    "zip_id": "1cw2VR_TUDOYkGum9egj-e5AZegz052wF",
+    "checkpoint_id": "1TAu97_pXAP-rPMR1gFE0XPhsrCvGNMvn",
+    "checklist_id": "1E324QroS-rEHsvpFuV9DIZwSFwxMZeHr",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
+  },
+  "source_user_submitted_zip_archive_id": "1nif4DJMurcqJka7A4O6Qfzs_JQdwkf8R",
+  "source_changes": {
+    "existing_tex_files_modified": 1,
+    "chapter4_old_figure_paths_updated": 16,
+    "new_supplied_png_files": 16,
+    "original_figure_assets_preserved": true,
+    "unchanged_csv_xlsx": 20,
+    "caption_and_figure_labels_changed": false,
+    "fig_4_29_ladder_changed": false
+  },
+  "offline_build": {
+    "status": "PASS__DRIVE_PUBLICATION_PENDING",
+    "pages": 129,
+    "paper": "A4",
+    "pdf_sha256": "d7a35a73e9871d76eeed4840cb91fbe05c8606374a5911770e22cfb84cf6170d",
+    "pdf_bytes": 59273222,
+    "source_zip_sha256": "2cf24c51be864255831b21d85e7d5e262b9f8d0d1ee4f96faf06d2ddab8805d3",
+    "source_zip_bytes": 66458029,
+    "source_entries": 367,
+    "zip_crc": "PASS",
+    "exact_times_new_roman_main_text": true
+  },
+  "publication": {
+    "drive_current": "SEQ037_UNCHANGED",
+    "release": "SEQ038_READY_NOT_CURRENT",
+    "pdf_and_zip_same_id_upload": "BLOCKED_CONNECTOR_REJECTED_NEW_LOCAL_FILE_REFERENCE",
+    "a7_post": "NOT_CREATED",
+    "checkpoint_update": "NOT_DONE",
+    "scientific_certification": "NOT_CLAIMED"
+  },
+  "native_google_doc": "NOT_REQUESTED_NO_ACTION"
+}
