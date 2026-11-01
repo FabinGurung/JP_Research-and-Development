@@ -16,6 +16,41 @@ The ETABS model inputs comprise plan geometry and storey heights, beam, column a
 The seismic response is evaluated through storey shear, inter-storey drift, centre-of-mass to centre-of-rigidity (CM--CR) separation, modal periods, pushover capacity and performance points. The 2012 reference is assessed through its concrete design checks; the nonlinear comparison concerns the NBC 205:2024 models.
 
 
+
+\subsection{Loading and Mass-Source Definition}
+The gravity loads adopted in the model setup are summarised in Table~\ref{tab:seq035_load_inputs}. The mass-source expression uses the full dead load and 30\% of the live load. The staircase line loads are presented separately because their application differs from floor-area loads.
+\begin{table}[!htbp]\centering
+\caption{Gravity-load definitions and nonlinear hinge assignments used in the structural modelling.}\label{tab:seq035_load_inputs}
+\normalsize
+\begin{tabular}{@{}p{0.49\textwidth}p{0.36\textwidth}@{}}\toprule
+Input or assignment & Adopted definition \\\midrule
+Floor live load & 2.0 kN/m$^2$ \\
+Roof live load & 1.5 kN/m$^2$ \\
+Floor finish & 1.25 kN/m$^2$ \\
+Peripheral walls & 11.67 kN/m \\
+Internal walls & 5.83 kN/m \\
+Parapet & 2.20 kN/m \\
+Staircase dead line load & 10.48 kN/m \\
+Staircase live line load & 6.30 kN/m \\
+Seismic mass source & $1.0D+0.30L$ \\
+Beam nonlinear hinges & Uncoupled $M_3$ at $0.05L$ and $0.95L$ \\
+Column nonlinear hinges & Axial--biaxial interaction ($P$--$M_2$--$M_3$) at $0.05L$ and $0.95L$ \\
+\bottomrule\end{tabular}
+\end{table}
+\subsection{Member Sections and Diaphragm Assumptions}
+The 2012 reference and 2024 model groups use the section definitions in Table~\ref{tab:seq035_geometry}. The comparison table describes the adopted model inputs and does not imply that all building geometries are interchangeable.
+\begin{table}[!htbp]\centering
+\caption{Material, section, slab and diaphragm assignments for the analysed model groups.}\label{tab:seq035_geometry}
+\small\begin{tabular}{@{}p{0.22\textwidth}p{0.31\textwidth}p{0.34\textwidth}@{}}\toprule
+Parameter & NBC 205:2012 reference & NBC 205:2024 models \\\midrule
+Beams & 230 $\times$ 355 mm (Fe415) & 250 $\times$ 355 mm / 250 $\times$ 380 mm (Fe500) \\
+Columns & 300 $\times$ 300 mm (Fe500) & 350 $\times$ 350 mm (Fe500) \\
+Concrete & M20 & M20 \\
+Floor slabs & 125 mm & 125 mm \\
+Diaphragm & Rigid & Rigid \\
+\bottomrule\end{tabular}
+\end{table}
+
 \subsection{Sequence of Modelling and Evaluation}
 The work proceeded from the selected plan configurations to the structural-model inputs and then to the response evaluation. First, the plan dimensions and re-entrant layouts were represented in the drawings. Second, beams, columns, slabs, materials and cross-sections were assigned to the ETABS structural models. Third, the documented load patterns, mass-source definition and adopted NBC 105:2025 soil/zone cases were applied. Fourth, the equivalent-static and modal response-spectrum results were examined for force, drift and modal behaviour. Fifth, the available nonlinear static pushover results were compared in terms of capacity, performance point and final recorded hinge evidence. The recorded NBC 205:2012 concrete design checks were evaluated separately from the seven-model 2024 comparison. These phases organize the modelling inputs, analytical outputs and comparative interpretation used throughout the study.
 
@@ -71,7 +106,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \includegraphics[width=\linewidth,height=0.18\textheight,keepaspectratio]{#1}
 \end{minipage}
 \caption{#2 building model.}\label{#3}
-{\small\raggedright #4\par}
+{\small\raggedright\vspace{2pt}#4\par}
 \end{minipage}}
 
 \begin{figure}[p]\centering
@@ -97,6 +132,40 @@ The plan drawings and three-dimensional model views document the placement and o
 \end{figure}
 \FloatBarrier
 
+\subsection{Model Geometry and Section Checks}
+The following model screenshots document geometry restrictions and member-section selection used during the setup of the structural comparisons. They supplement, but do not replace, quantitative section assignments and design-check results.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC 205_2012 Building Restrictions .jpg}
+\caption{Building-configuration restrictions associated with NBC 205:2012.}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC 205_2024 Building Restrictions .jpg}
+\caption{Building-configuration restrictions associated with NBC 205:2024.}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC205_2012_Beam Section Choose Part 1.jpg}
+\caption{Beam section selection for the 2012 reference.}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC205_2024_Beam Section Choose Part 1.jpg}
+\caption{Beam section selection for the 2024 models.}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/Column Section_NBC205_2012.jpg}
+\caption{Column section selection for the 2012 reference.}
+\end{figure}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/Column Section_NBC205_2024 part 1.jpg}
+\caption{Column section selection for the 2024 models.}
+\end{figure}
+\FloatBarrier
+
 \subsection{Structural Model Comparison Framework}
 The Phase I model follows Draft Final NBC 205:2012 and is evaluated using the available concrete design-check results. The Phase II Regular model follows NBC 205:2024 and provides the reference for the performance-based assessment \cite{nbc205_2012,nbc205_2024}. Five NBC 105:2025 demand cases are considered for the 2024 models: Soil Type C with $Z=0.25$, $0.30$, $0.35$, and $0.40$, and Soil Type D with $Z=0.35$ \cite{nbc105_2025}.
 
@@ -110,6 +179,14 @@ Storey shear and inter-storey drift are evaluated for the seven principal config
 
 \section{CM--CR Separation}
 The centre-of-mass and centre-of-rigidity coordinates are used to calculate the resultant CM--CR separation at the available floor levels. The principal quantities considered are the centre-of-mass coordinates, centre-of-rigidity coordinates, and resultant separation. CM--CR separation is used as a descriptive indicator of mass--stiffness eccentricity and is interpreted together with the other response measures.
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.82\textwidth,height=0.34\textheight,keepaspectratio]{figures/ch3/seq035/typical_eccentric_cm_cr.jpg}
+\caption{Typical single eccentric system showing center of mass (CM) and eccentric center of rigidity (CR).}
+\label{fig:typical_eccentric_cm_cr}
+\end{figure}
+The schematic illustrates how an offset between the centre of mass and the centre of rigidity introduces eccentricity in a structural plan. It is a conceptual representation rather than a measured displacement from any of the seven models.
+
 
 \section{Nonlinear Static Pushover Analysis}
 Nonlinear static pushover analysis is used to compare lateral capacity and demand-state response. Capacity curves are considered up to the first global peak for consistent presentation. Performance-point base shear and roof displacement are interpreted separately from the first-peak pushover capacity. Final-step hinge observations are also reported separately and are not assumed to represent the hinge state at the performance point unless such a state is directly available from the analysis output \cite{atc1996atc40,fema2005fema440,asce2017asce41}.
