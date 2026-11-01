@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 35,
+  "parent_sequence": 34,
+  "request_key": "saugat:seq035-20261101",
+  "status": "RELEASED",
+  "branch": "thesis/saugat-paneru/latex/seq035-source-correction",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "scientific_baseline": "CP114_UNCHANGED__NO_NEW_ETABS_RUN",
+  "permanent_live_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "reviewer_checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
+    "native_doc_outdated": "1P_4MFr3WDjkhg_vJQ0YRbqYGMSoUtqSAex-yEaxGgTs"
+  },
+  "pdf": {
+    "name": "Saugat_SEQ035_128p_TimesNewRoman_CURRENT.pdf",
+    "bytes": 52098321,
+    "sha256": "cdac6444af0646e235eeaa8ac3d6bc99c47ad3a849313f8585ee22698c183094",
+    "pages": 128,
+    "paper": "A4",
+    "font": "LICENSED_TNR_EMBEDDED",
+    "provider": "SAME_ID_TITLE_BYTES_PARENT_READBACK_PASS"
+  },
+  "source_zip": {
+    "name": "Saugat_SEQ035_COMPLETE_LATEX_CURRENT.zip",
+    "bytes": 63944473,
+    "sha256": "ce1880733d13b8d0da051091baa7b8bc3f20635e29e0118d65d55f9b81656468",
+    "entries": 330,
+    "zip_integrity": "PASS",
+    "private_fonts_included": false,
+    "provider": "SAME_ID_TITLE_BYTES_PARENT_READBACK_PASS"
+  },
+  "archive": {
+    "folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V",
+    "ordinal": 13,
+    "pre_pdf_id": "1zf3EO-6T93X5DAKhgo11DSqRF8NUg7Ug",
+    "pre_zip_id": "1vtjLi1ZWWM1FiAv9AeW7LaGaRl1vUy8_",
+    "pre_checkpoint_id": "1nAmRtj3S66x_7BliFv0g_9tbBITtaOrq",
+    "pre_checklist_id": "1gCDJrNixAOtzYZs3Gueo8DQhraEy_M6G",
+    "post_pdf_id": "1uBuXnNlkkY_AyEihu7NzKmH6uq4SxIxX",
+    "post_zip_id": "1ozujgP4PZf5foRFBHUW-ULRX102zpkCA",
+    "post_checkpoint_id": "1nsVkzVDYWdHKFFy1yawyAXaRBSbFb5vP",
+    "post_checklist_id": "1iOTvpM40egOkWlmI9Za4Hq12v-sNZFSp"
+  },
+  "changes": [
+    "User new abstract and keywords",
+    "Figure 4.29 storey shear visual ladder using same CSV",
+    "Figure 4.36 seven shared marker symbols consistent with 4.35",
+    "Existing figure explanation blocks retained and new schematic explained",
+    "Methodology loading/mass, member section and hinge summary tables",
+    "Fourteen original member-section validation photographs archived in ZIP, six embedded in methodology",
+    "Fourteen capacity plots regenerated from seven supplied ETABS Excel sheets with lower-right legend; source L1 Y D Z0.35 absent and not interpolated",
+    "Machine/audit wording scrubbed from the manuscript body",
+    "Section 3.7 added exact caption and user CM-CR eccentricity schematic"
+  ],
+  "scientific_controls": {
+    "legacy_csv_xlsx_unchanged": "13/13 byte-identical",
+    "original_capacity_excel_files": 7,
+    "curve_graphs": 14,
+    "recorded_case_direction_series": 69,
+    "missing_source_series": "L1 Y Soil D Z0.35",
+    "original_etabs_replay": "NOT_PERFORMED",
+    "torsion_code_ratio": "MISSING_DIAPHRAGM_EDGE_DISPLACEMENT",
+    "native_google_doc_parity": "OPEN",
+    "institutional_format": "144_RULES_NOT_INDEPENDENTLY_CERTIFIED",
+    "supervisor_signoffs": "NOT_VERIFIED"
+  },
+  "version_control": {
+    "reservation_pr": 130,
+    "source_pr": "TO_BE_RECORDED",
+    "rollback": "COPY_000013_PRE_BYTES_BACK_INTO_ORIGINAL_LIVE_PROVIDER_IDS_NOT_ARCHIVE_IDS"
+  },
+  "academic_status": "INDEPENDENT_RESEARCHER_SELF_QA_OPEN"
+}
