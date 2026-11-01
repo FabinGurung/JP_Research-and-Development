@@ -21,8 +21,8 @@
     \setstretch{1.5}
     {\fontsize{12}{18}\selectfont
     \makeatletter
-    % Overriding to ensure dot leaders match the style rules perfectly
-    \newcommand{\cftapplineleader}{\hfill}
+    % List of Appendices: suppress dotted leaders, retaining right-aligned page numbers
+    \renewcommand{\cftappxleader}{\hfill}
     \renewcommand{\@pnumwidth}{1.55em}
     \renewcommand{\@tocrmarg}{2.55em}
     
