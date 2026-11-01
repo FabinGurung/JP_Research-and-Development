@@ -6,21 +6,20 @@ owns the [deliverable contract](../controls/academic-writing/research-deliverabl
 This is a coordinating module, not another manuscript style or a duplicate evidence vault.
 All registered owners inherit it through [enrollment](../registry/researcher-deliverables.json).
 
-## The three manuscript deliverables
+## Required LaTeX/PDF deliverables and optional native Google Doc
 
 | Role | Deliverable | Release requirement |
 |---|---|---|
 | `submission_latex` | Complete editable LaTeX project, bibliography, build recipe, manifest and authorized assets; ZIP for delivery | Reproducible exact source, owner scientific revision, shared-template blob and asset checks |
 | `submission_pdf` | Compiled thesis PDF | Exact required font/format, complete references, full-page rendered QA, owner authorization and provider byte readback |
-| `submission_google_doc` | Native editable submission Google Doc | The same scientific content and exact format/pagination as the matching LaTeX/PDF, independently verified through a Doc PDF export |
+| `submission_google_doc` (optional) | Native editable submission Google Doc **only when separately requested** | When requested, verify its scientific content and formatting against the relevant LaTeX/PDF; never block a LaTeX/PDF release because no Google Doc was requested |
 
-These are three representations of **one admitted scientific revision**, not three
-independent writing histories. Keep scientific checkpoint, source-tree SHA256,
+The LaTeX source and compiled PDF are the required representations of one admitted scientific revision. A native submission Google Doc is optional, independently commissioned and independently versioned; it is never automatically created or synchronized as part of LaTeX/PDF publication. Keep scientific checkpoint, source-tree SHA256,
 Git commit, template blob/version, provider IDs/revisions and output hashes linked
 in the owner's private release receipt. DOCX-first work is a precursor; do not
 pretend an uncreated LaTeX project exists.
 
-The submission Doc must not be the audit or discussion Doc. A PDF embedded as
+If separately requested, a submission Doc must not be the audit or discussion Doc. A PDF embedded as
 page screenshots does not satisfy native editability. Its title, front matter,
 section order, paragraphs, values/units, equations, tables/cells, figures/captions,
 citations, bibliography, cross-references, appendices, limitations and required
@@ -44,9 +43,8 @@ does not claim that a universal lossless LaTeX-to-Google-Docs converter exists.
 If a human changes the submission Doc, reconcile the proposed edit into the
 owner LaTeX source and repeat the affected checks. No silent last-writer-wins
 overwrite. Any source, template, native revision, bibliography, asset or exported
-PDF change invalidates the corresponding parity evidence. Each representation
-has its own readiness; mark the bundle ready only when all three pass at the
-same revision. Preserve accepted CURRENT until the separate release gate passes.
+PDF change invalidates the corresponding parity evidence. Each commissioned representation
+has its own readiness; LaTeX/PDF bundle readiness does not require or await any Google Doc. Preserve accepted CURRENT until the separate release gate passes.
 Technical readiness is neither actual institutional acceptance nor proof of submission.
 
 ## Presentation source and deliverable
@@ -169,7 +167,7 @@ in each existing researcher thread. Other chats do not automatically refresh.
 
 **Release order is mandatory, not an optional suggestion.** For every researcher, publish the versioned complete LaTeX ZIP and compiled PDF to the researcher's canonical Google Drive storage **before** claiming a Git release. Read back actual provider file IDs, sizes, MIME types and parents; then record those exact immutable release references and local hash distinctions in Git, run PR/CI/Pages readback, and only then certify any release step. This rule is also recorded in `controls/academic-writing/research-deliverables.json#drive_first_publication_gate`. Missing Drive readback **blocks publication-complete status**. A review candidate may be registered after Drive upload but must remain REVIEW_ONLY.
 
-The native editable **submission** Google Doc is independently required. Its existence is not a parity certificate: compare its exported PDF to the exact compiled reference page-by-page, including text, figure/table/equation structures, pagination, margins, and font. If it cannot be made identical, keep the **submission Doc and bundle on HOLD**, without mislabeling it as approved. Git source checks alone never execute a native Docs conversion.
+A native editable **submission** Google Doc is **OPTIONAL** and must be created or synchronized **only after a separate explicit request**. If requested, compare its exported PDF with the corresponding compiled LaTeX PDF and record any differences in the Doc-specific QA; a failed Doc parity check must NOT block a separately authorized LaTeX/PDF release. Do not perform a Docs conversion solely because the LaTeX manuscript changed.
 
 **Production font locator:** owner-only [Times New Roman private build cache](https://drive.google.com/drive/folders/1nf_nRgYbEXdA4xK7bhuA3tdgha8khvyv), with provenance in [font resource manifest](https://docs.google.com/document/d/1tX7hBF1DN-8llL2dBA-C08Ig5hs2npnRvS38X9qQSqY/edit). Four faces are present. This is a restricted build dependency, **not a public distributable font asset**; do not copy font binaries into source ZIP, GitHub, public Pages or submissions. Exact Times New Roman must be resolved for the chosen TeX engine and verified from the produced PDF's font inventory. `\\usepackage{times}` and Nimbus Roman do **not** satisfy the exact-font gate.
 
@@ -189,15 +187,15 @@ draft, review, pending, source-cached, AI-process, or missing-file commentary
 out of the academic content. Incomplete releases must remain withheld by
 **internal** audit/receipt gates, not by printing the status on the title page.
 
-Maintain one populated live owner Google Doc ID and the established source
-file paths. To edit theory, tables, figures, equations or captions, patch the
+Maintain stable LaTeX/PDF source IDs and the established source
+file paths. Preserve an existing Google Doc ID only if a separate Docs task is explicitly commissioned. To edit theory, tables, figures, equations or captions, patch the
 minimum existing source files. Archive numbered PRE before touching live
 content, validate, save numbered POST, and record an append-only edit/recovery
 manifest. Existing source ZIPs and accepted releases remain available.
 Provider-linked complete binary PDFs/ZIPs keep their stable live IDs where
 registered; archive an exact copy before replacing bytes.
 
-Native Google Doc image/equation/layout QA is a provider-render task, not
+When a native Google Doc is separately requested, its image/equation/layout QA is a provider-render task, not
 a claim from static Git checks. Use
 `scripts/latex/native_google_doc_pdf_parity.py` on the actual compiled
 LaTeX PDF and a **fresh Google Docs export PDF**, record both SHA256 values,
