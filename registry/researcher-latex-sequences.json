@@ -76,6 +76,18 @@
           "main_sha_at_reservation": "fb64d7c7bebc755c30a4f560bf1447bd15272453",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Explicit user-directed Saugat SEQ032 source QA, images+TOC+table, PRE archives in Drive; no scientific approval; PDF rebuild/POST required before CURRENT."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 33,
+          "branch": "thesis/saugat-paneru/latex/seq033-current-review-closeout",
+          "status": "RESERVED",
+          "request_key": "manual:20261101-saugat-22-review-same-id-no-candidate",
+          "created_at_utc": "2026-11-01T08:20:00Z",
+          "main_sha_at_reservation": "3a507c9075da2a90c5399438fec3081ec22e769b",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "Sequential next version after CURRENT 032; historic 030 never overwritten. Same permanent Drive IDs, PRE 000011 saved. User-designated CURRENT despite independently tracked academic holds; no candidate folders; only archive and CURRENT."
         }
       ]
     },
