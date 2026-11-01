@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "lane": "latex",
+  "sequence": 63,
+  "release_id": "LATEX_SEQ063",
+  "parent_release_id": "LATEX_SEQ062",
+  "status": "QA_CANDIDATE",
+  "scientific_approval": null,
+  "submission_certified": false,
+  "date_local": "2026-11-01",
+  "shared_template": {
+    "version": "2.6.3",
+    "commit": "e931bf19d1c646bd6b125f1adfed24995ac57a1d",
+    "global_rule": "RD-LTX-CHG-122",
+    "source_path": "controls/latex/template/pumlsc-shared.sty",
+    "note": "GitHub researcher source inherits the exact global .sty. Compiled local ZIP was built using source-compatible TOC macro mirroring the global change; full clean Git source rebuild under central .sty not independently certified."
+  },
+  "change_scope": [
+    "Delete only Chapter 5 Section 5.3 Scope of the Study, preserving Sections 5.1 and 5.2 verbatim",
+    "Replace ineffective dotted-leader command in 15_listofappendice.tex with correct \\cftappxleader override, retaining appendix entries and page numbers"
+  ],
+  "figure_relocation": {
+    "displacement_4_3": 6,
+    "drift_4_4": 6,
+    "fragility_4_8": 24
+  },
+  "file_edits": [
+    "25_conclusionandrecommendation.tex",
+    "15_listofappendice.tex"
+  ],
+  "file_continuity": {
+    "parent_files_removed": 0,
+    "previous_total_entries": 344,
+    "source_files_changed": [
+      "25_conclusionandrecommendation.tex",
+      "15_listofappendice.tex"
+    ],
+    "scientific_data_or_figure_assets_changed": 0
+  },
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "pages": 94,
+    "sha256": "35599a4809490d249dcb153613d34f52e1b915fb1006111f71850568ab355ee9",
+    "file_size_bytes": 13123966,
+    "qa": "XE_LATEX_THIRD_CLEAN_PASS__TIMES_NEW_ROMAN_EMBEDDED__5_3_ABSENT__APPENDIX_LEADERS_ABSENT"
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "36b2118bf489a8af71ea879de632cfa3fe918967de15e513910cfbeefbecbf8f",
+    "file_size_bytes": 99940929,
+    "entries": 345,
+    "zip_crc": "PASS",
+    "previous_entries_missing": 0
+  },
+  "native_google_doc": {
+    "permanent_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+    "latest_content": "OLDER_VERSION_SEQ059_UNMODIFIED",
+    "exact_parity": "NOT_CERTIFIED"
+  },
+  "pre": {
+    "sequence": 62,
+    "pdf_id": "17mlDDX7BoRAMT6ETu7EUblhyIpZFNQhG",
+    "source_zip_id": "1AsamapKSASfOcyH5y_ByIU8oj7IOHhVF",
+    "native_doc_id": "18m-myq9aP4iMTceJc5QJrGAd8W3wh5_0fXkOp68SW4c"
+  },
+  "post": {
+    "sequence": 63,
+    "pdf_id": "1JVp7FcthdXmTCoMhmCvTy_hOCw69TKrm",
+    "source_zip_id": "16LGk_bX9mkmx0Q3rMXKVwRSlCC4xOr-Z",
+    "qa_json_id": "1etGCeXfELxE-QIstBWoNcmHq3yjqummL"
+  },
+  "notes": [
+    "No manuscript changes beyond requested two corrections.",
+    "Existing native Google Doc unchanged, older version; PDF/Doc parity not certified.",
+    "The ZIP is stored with no additional deflate compression; it passes ZIP integrity, and contains original scientific data unchanged."
+  ],
+  "branch": "researcher/nabin-bista/latex-seq063-conclusion-appendix-leaders",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "release_pr_branch": "researcher/nabin-bista/latex-seq063-conclusion-appendix-leaders",
+  "branch_reconciliation": "Replacement for PR #116 because thesis/ branch sequence allocator requires a separate canonical ledger reservation; this owner-scoped branch preserves identical manuscript source and evidence without cross-researcher edits."
+}
