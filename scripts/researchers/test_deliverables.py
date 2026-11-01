@@ -14,7 +14,7 @@ def fixture():
              source_commit_sha="b"*40, style_blob_sha="c"*40, bundle_ready=True,
              artifacts=[], changed_roles=[], version_events=[])
     for i, role in enumerate(C["roles"]):
-        ready = role in C["submission_bundle_roles"]
+        ready = role in C["submission_bundle_roles"] or role == "submission_google_doc"
         a = dict(role=role, researcher_id=m["researcher_id"], state="SUBMISSION_READY" if ready else "IDENTIFIED",
                  artifact_sha256=f"{i+1:064x}", scientific_revision=m["scientific_revision"],
                  source_tree_sha256=m["source_tree_sha256"], provider_file_id="FIXTURE-ONLY-"+role,
@@ -95,7 +95,12 @@ class DeliverableTests(unittest.TestCase):
         self.artifact("discussion_google_doc")["state"] = "SUBMISSION_READY"; self.reject()
 
     def test_partial_bundle_not_ready(self):
-        self.artifact("submission_google_doc")["state"] = "CANDIDATE"; self.reject()
+        self.artifact("submission_pdf")["state"] = "CANDIDATE"; self.reject()
+
+    def test_optional_google_doc_does_not_block_pdf_source_bundle(self):
+        doc = self.artifact("submission_google_doc")
+        doc.update(state="NOT_DISCOVERED", provider_file_id=None, checks={})
+        self.assertTrue(validate_receipt(self.m, C, OWNERS))
 
     def test_missing_prepost(self):
         self.m["changed_roles"] = ["submission_google_doc"]; self.reject()

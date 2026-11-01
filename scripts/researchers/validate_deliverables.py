@@ -88,7 +88,7 @@ def validate_receipt(m, contract, owners):
             require(path or provider, "identified artifact needs an actual pointer")
         if a["state"] in {"CANDIDATE", "VERIFIED", "SUBMISSION_READY"}:
             require(isinstance(a.get("artifact_sha256"), str) and HASH64.fullmatch(a["artifact_sha256"]), "missing candidate artifact digest")
-            if role in contract["submission_bundle_roles"] + contract["presentation_roles"]:
+            if role in contract["submission_bundle_roles"] + contract.get("optional_submission_roles", []) + contract["presentation_roles"]:
                 require(a.get("scientific_revision") == m["scientific_revision"] and a.get("source_tree_sha256") == m["source_tree_sha256"], "stale thesis source binding")
                 require(a.get("style_blob_sha") == m["style_blob_sha"], "stale artifact template pin")
         ready = a["state"] == "SUBMISSION_READY"
@@ -119,7 +119,7 @@ def validate_receipt(m, contract, owners):
                 require(type(a.get("page_count")) is int and a["page_count"] > 0 and a["page_count"] == indexed["submission_pdf"].get("page_count"), "pagination mismatch")
     require(len(native_ids) == len(set(native_ids)), "submission, audit, discussion and other roles must not alias the same provider file")
     if m["bundle_ready"]:
-        require(all(indexed[r]["state"] == "SUBMISSION_READY" for r in contract["submission_bundle_roles"]), "incomplete three-format bundle")
+        require(all(indexed[r]["state"] == "SUBMISSION_READY" for r in contract["submission_bundle_roles"]), "incomplete required LaTeX/PDF bundle")
     events = m.get("version_events")
     require(isinstance(events, list), "version_events must be an array")
     changed = m.get("changed_roles")

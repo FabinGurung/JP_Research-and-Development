@@ -35,7 +35,7 @@
     {
       "id": "research_deliverables",
       "canonical_control": "controls/academic-writing/research-deliverables.json",
-      "role": "Three-format manuscript parity, separate presentation/working records and A7 stable-ID lifecycle"
+      "role": "LaTeX/PDF submission artifacts, optional separately requested native Docs, research records and A7 stable-ID lifecycle"
     }
   ],
   "disallowed_as_child": [
@@ -48,11 +48,11 @@
     "Thesis formatting and presentation production retain their existing separate specialized authorities",
     "Researcher source/evidence remains private and scoped to the registered researcher",
     "Do not import contract clauses, company branding or enterprise payment logic into academic manuscript controls",
-    "A submission Google Doc is an independently verified native representation of the exact admitted LaTeX/PDF revision; audit and discussion remain separate. See RD-LTX-CORE-017."
+    "A native submission Google Doc is OPTIONAL and generated only when the researcher explicitly requests it separately. If requested, verify it against its admitted LaTeX/PDF source; independent discussion and audit records remain separate."
   ],
   "unified_release_claim": "NO_AUTO_APPROVAL",
   "legacy_url_policy": "RETAIN_ALL_EXISTING_RESEARCH_URLS_UNCHANGED",
   "versioning": "GIT_EXACT_COMMIT_AND_VERIFIED_DRIVE_REFS",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "deliverable_contract": "controls/academic-writing/research-deliverables.json"
 }
