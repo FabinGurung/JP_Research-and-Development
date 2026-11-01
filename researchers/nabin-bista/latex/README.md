@@ -42,3 +42,8 @@ The latest working **compiled PDF and complete source ZIP** are registered as [L
 ## Latest working LaTeX thesis: LATEX_SEQ062 (2026-11-01)
 
 [SEQ062 release register](versions/seq062.json) preserves the same live Drive PDF/ZIP IDs, archived SEQ061 PRE 000008 and SEQ062 POST 000008. The scoped revision enlarges Appendix 2 Figure 2.1, removes the empty plates list, consolidates the specific objectives to three, makes the abstract one page, and compares the six-block findings carefully against two DOI studies. No original image/data source was modified. Native Google Doc still requires synchronization and visual parity. [Release/QA notes](releases/SEQ062_CONCISE_ABSTRACT_OBJECTIVES_AND_DOI_COMPARISON_20261101.md).
+
+
+## Current working thesis: LATEX_SEQ064 (supervisor-feedback revision)
+
+The complete [SEQ064 version record](versions/seq064.json) and [PRE/POST restoration note](releases/SEQ064_SUPERVISOR_CORRECTION_GOVERNED_20261101.md) describe the same-live-ID PDF and source ZIP updates, six-block fragility layout and source-backed editorial corrections. Scientific engineering verification and updated native Google Doc parity remain open; this working revision must not be treated as final scientific approval.

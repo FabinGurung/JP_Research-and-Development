@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "lane": "latex",
+  "sequence": 64,
+  "release_id": "LATEX_SEQ064",
+  "parent_release_id": "LATEX_SEQ063",
+  "status": "WORKING_SOURCE_PDF_PUBLISHED__SUPERVISOR_REVIEW_PARTIALLY_RESOLVED",
+  "submission_certified": false,
+  "scientific_approval": null,
+  "date_local": "2026-11-01",
+  "branch": "researcher/nabin-bista/latex-seq064-supervisor-review-corrections",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "shared_template_version": "2.6.3",
+  "scope": [
+    "Front matter unified to supervisor-amended single hospital title; questions/objectives narrowed to case study",
+    "One-page abstract revised from existing modal, displacement, drift, shear, settlement and 12-ground-motion records",
+    "Worked vertical footing spring check; units and parametric support assumptions; original spring inputs preserved",
+    "Table 4.7 anomalous three model-specific value groups omitted from quantitative results without inventing numbers; original raw source retained",
+    "Six combined four-support fragility panels under Chapter 4; all 24 original figures retained in Appendix 3",
+    "Appendix figures use A1.x, A2.x and A3.x numbering; result text, conclusions, terminology, captions improved",
+    "Private review response records 3 complete, 12 partial, 6 blocked by unavailable scientific verification"
+  ],
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "pages": 107,
+    "size_bytes": 15900044,
+    "sha256": "df414ac54fead1ec7843e8633032afe5408c65f604327e0b323b6f577e85ff8b",
+    "qa": "XELATEX_BIBTEX_RERUN__TIMES_NEW_ROMAN_EMBEDDED__NO_UNDEFINED_REFERENCES__A4__ABSTRACT_ONE_PAGE"
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "entries": 348,
+    "size_bytes": 96172776,
+    "sha256": "21bcfb71418b7094fc67c3fdfab2e35d101b40853910c6a234dc8a2a0432d672",
+    "zip_crc": "PASS",
+    "prior_entries_missing": 0,
+    "original_data_and_figure_files_changed": 0
+  },
+  "native_doc": {
+    "permanent_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+    "current_content": "HISTORICAL_SEQ059__NOT_UPDATED",
+    "pdf_parity": "NOT_CERTIFIED"
+  },
+  "pre": {
+    "ordinal": "000010",
+    "sequence": 63,
+    "pdf_id": "1mX8VSypj-YFSKMsS_fGvsrRZUUtQIQOF",
+    "source_zip_id": "1hqfOMQfo-d0jxZ6FV0Xo8XhcvlUVEnGP",
+    "native_doc_id": "1zOaxTt-jQtc-a7539JOwouxM-po9M1K-9iGW7ZZwUv4"
+  },
+  "post": {
+    "ordinal": "000010",
+    "sequence": 64,
+    "pdf_id": "1oHbk2wdrbeWqtGyo0qYZkiRdx5-mua5e",
+    "source_zip_id": "1VP0XTXR2zG459sp8cPDHL5ne20GpWC6n",
+    "private_qa_id": "1zDelqNvWFNfWdwUh7EcbTvjEzwpsdEe8",
+    "private_supervisor_response_id": "1WNoNWlGdAoEmBdUPYLrwAdudL8zN6YXp"
+  },
+  "scientific_holds": [
+    "Table 4.7 ETABS re-export and base reaction reconciliation",
+    "Block-specific footing dimensions and complete Gazetas impedance check",
+    "Soil bearing compliance and reduced shear modulus",
+    "Seismic spectrum/design parameters and drift amplification to code",
+    "Base/storey shear consistency",
+    "24 block-specific lognormal fits with ground motion trace and threshold semantics",
+    "Seismic member envelopes, dynamic checks, performance verification and spring sensitivity"
+  ],
+  "source_reproducibility_note": "Compiled PDF from the populated Drive source ZIP. The GitHub owner main.tex retains the canonical shared style package whereas the local compiled package uses a source-compatible legacy preamble; clean identical render from the GitHub checkout has not been separately certified.",
+  "private_review_pdf_not_committed_to_public_repo": true
+}

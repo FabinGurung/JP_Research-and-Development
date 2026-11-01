@@ -22,7 +22,7 @@ The case study is the existing \textbf{Infectious and Communicable Disease Hospi
 \end{figure}
 
 \FloatBarrier
-% Six original vector structural drawings, two per landscape-oriented grid row.
+% Six retained block plans: two vector figures per page, side-by-side.
 \begin{figure}[p]
 \centering
 \begin{minipage}[t]{0.48\textwidth}
@@ -130,7 +130,7 @@ Block & Member type & Dimensions (mm) \\
 
 
 \section{Numerical Model}
-The three-dimensional reinforced-concrete numerical models of the hospital blocks were developed using ETABS v22, a finite-element-based structural analysis program. The six blocks shown in the architectural plan were represented separately. Structural members include beams, columns and slabs, with shear-wall elements where indicated in the submitted structural dimensions. Member sections were assigned according to Table~\ref{tab:member_dimensions_methodology}; the foundation-support properties follow Table~\ref{tab:spring_stiffness_methodology}. Building geometry, imposed gravity loads and seismic loading definitions were taken from the corresponding researcher-supplied model schedules.
+The three-dimensional reinforced-concrete numerical models of the hospital blocks were developed using ETABS v22, a finite-element-based structural analysis program. The six blocks shown in the architectural plan were represented separately. Structural members include beams, columns and slabs, with shear-wall elements where indicated in the submitted structural dimensions. Member sections were assigned according to Table~\ref{tab:member_dimensions_methodology}; the foundation-support properties follow Table~\ref{tab:spring_stiffness_methodology}. Building geometry, imposed gravity loads and seismic loading definitions were taken from the model input schedules.
 
 For each block, the fixed-base idealization restrains foundation movement and provides the reference response. Flexible-base cases represent hard, medium and soft soil using directional translational and rotational foundation springs. In generalized coordinates, the foundation stiffness may be expressed as
 \begin{equation}
@@ -150,10 +150,10 @@ The Winkler idealization relates soil reaction locally to displacement, whereas 
 \end{figure}
 
 \subsection{Analysis cases and response quantities}
-Modal analysis provides natural periods and cumulative participating mass ratios in the two horizontal directions. Response-spectrum analysis gives the horizontal displacement, inter-storey drift, base reaction and storey-shear response for the specified X and Y cases. The independent $1.2DL+1.5LL$ gravity combination provides base-joint settlement, vertical reaction and beam/column member-force components. Each set of results is tabulated against its own load-case definition to prevent the erroneous use of gravity results as earthquake results. The X-labelled fragility workbooks provide source curves for comparative interpretation; new probabilistic fits are not inferred from the response-spectrum maxima alone.
+Modal analysis provides natural periods and cumulative participating mass ratios in the two horizontal directions. Response-spectrum analysis gives the horizontal displacement, inter-storey drift, base reaction and storey-shear response for the specified X and Y cases. The independent $1.2DL+1.5LL$ gravity combination provides base-joint settlement, vertical reaction and beam/column member-force components. Each set of results is tabulated against its own load-case definition to prevent the erroneous use of gravity results as earthquake results. The X-direction fragility relationships are examined separately from the elastic response-spectrum maxima.
 
-\subsection{Comparative assessment procedure}
-The response quantities are evaluated separately for each structural block and its prescribed foundation-support condition. Trends are examined using the corresponding load cases, units, component directions and modal or seismic response definitions. Comparing the flexible-support cases with the fixed-base case identifies the variation associated with the adopted foundation stiffness within each block.
+\subsection{Consistency checks}
+Numerical comparison proceeds in three stages: first, confirm the block and support-case identity of every result; second, preserve each component's physical unit, direction and loading-case definition; third, compare trends within a block rather than across unrelated geometries. Comparisons retain each block's original analytical identity and loading condition. The assessment is based on the defined analytical models rather than a direct measurement of the completed hospital.
 
 
 \section{Seismic Parameters and Gravity Loading}
@@ -211,12 +211,12 @@ p(x,y)=k_s\,w(x,y),
 \label{eq:winkler_soil_reaction}
 \end{equation}
 \RegisterThesisEquation{Local vertical soil reaction in the Winkler idealization}
-where $p(x,y)$ is the foundation reaction per unit area, $w(x,y)$ denotes the local foundation displacement, and $k_s$ is the modulus of subgrade reaction. The six-component foundation-spring representation extends beyond this scalar vertical relationship to independent horizontal, vertical, rocking, and torsional restraints. The equivalent static stiffness components are formulated using elastic half-space foundation relations as discussed by Gazetas \cite{gazetas1991}. For the square isolated footing adopted in the spring derivation, the plan dimensions are $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$, with $L=B=1.5\,\mathrm{m}$ in the $2L\times2B$ notation. The resulting foundation area is $9\,\mathrm{m^2}$ and the geometric properties are $I_{bx}=I_{by}=6.75\,\mathrm{m^4}$ and $J_b=13.5\,\mathrm{m^4}$.
+where $p(x,y)$ is the foundation reaction per unit area, $w(x,y)$ denotes the local foundation displacement, and $k_s$ is the modulus of subgrade reaction. The six-component foundation-spring representation extends beyond this scalar vertical relationship to independent horizontal, vertical, rocking, and torsional restraints. The equivalent static stiffness components are formulated using elastic half-space foundation relations as discussed by Gazetas \cite{gazetas1991}. For an illustrative square footing of $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$, $L=B=1.5\,\mathrm{m}$ in the $2L\times2B$ notation, the foundation area is $9\,\mathrm{m^2}$. The footing geometry used to generate every block-specific spring input must be checked separately.
 
 \section{Foundation-Support Representation}
 Soil--structure interaction is represented by springs describing translational, rocking and torsional foundation restraint. The fixed-base case provides the comparison reference; the flexible-base cases are categorized as hard, medium and soft soil. The discrete-spring concept is compatible with substructure SSI modelling \cite{wolf1985,gazetas1991}. The model incorporates the translational and rotational spring stiffnesses assigned to the foundation for each soil condition.
 
-The equivalent static foundation-stiffness expressions used for comparison follow the elastic-half-space formulation of Gazetas (1991) \cite{gazetas1991}. For the present square footing with plan dimensions $2L\times2B$ and $L=B$, define $\chi=A_b/(4L^2)=B/L=1$. The vertical, horizontal, rocking and torsional expressions are
+The equivalent static foundation-stiffness expressions used for comparison follow the elastic-half-space formulation of Gazetas (1991) \cite{gazetas1991}. For the illustrative square footing with plan dimensions $2L\times2B$ and $L=B$, $\chi=A_b/(4L^2)=B/L=1$. The vertical, horizontal, rocking and torsional expressions are
 \begin{equation}
 K_z = \frac{2GL}{1-\nu}\left(0.73+1.54\chi^{0.75}\right)\label{eq:gazetas_kz}
 \end{equation}
@@ -237,12 +237,12 @@ K_{\theta y} = \frac{G}{1-\nu}I_{by}^{0.75}\left[3\left(\frac{L}{B}\right)^{0.15
 K_t = GJ_b^{0.75}\left[4+11\left(1-\frac{B}{L}\right)^{0.75}\right]\label{eq:gazetas_kt}
 \end{equation}
 \RegisterThesisEquation{Gazetas torsional foundation stiffness}
-Here, $G$ denotes the soil shear modulus, $\nu$ is Poisson's ratio, $I_{bx}$ and $I_{by}$ are the second moments of the foundation contact area, and $J_b=I_{bx}+I_{by}$ is its polar area moment. For the square $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$ footing, $L=B=1.5\,\mathrm{m}$, $A_b=9\,\mathrm{m^2}$, $I_{bx}=I_{by}=6.75\,\mathrm{m^4}$ and $J_b=13.5\,\mathrm{m^4}$. The tabulated values remain the original foundation-spring inputs assigned in ETABS; the equations describe the analytical stiffness relationships without replacing the recorded model inputs.
+Here, $G$ denotes the soil shear modulus, $\nu$ is Poisson's ratio, $I_{bx}$ and $I_{by}$ are the second moments of the foundation contact area, and $J_b=I_{bx}+I_{by}$ is its polar area moment. For this illustrative $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$ footing, $L=B=1.5\,\mathrm{m}$, $A_b=9\,\mathrm{m^2}$, $I_{bx}=I_{by}=6.75\,\mathrm{m^4}$ and $J_b=13.5\,\mathrm{m^4}$. The tabulated values remain the original foundation-spring inputs assigned in ETABS; the equations describe the analytical stiffness relationships without replacing the recorded model inputs.
 
 The spring-stiffness matrix includes six components ($K_x$, $K_y$, $K_z$, $K_{\theta x}$, $K_{\theta y}$ and $K_t$) for each of three flexible-support conditions in every block. Table~\ref{tab:spring_stiffness_methodology} presents all 18 block/soil rows, for the six structural blocks.
 
 \begin{table}[!htbp]
-\caption{Foundation spring input values by block and soil condition (Table 3.4)}
+\caption{Foundation spring inputs by structural block and support condition}
 \label{tab:spring_stiffness_methodology}\centering\tiny
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{clrrrrrr}
@@ -272,6 +272,19 @@ Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \
 \end{table}
 \FloatBarrier
 
+
+\subsection{Assessment assumptions and analysis scope}
+The four support cases represent a parametric comparison of foundation restraint rather than four independently designed foundations at the hospital site. The flexible-base idealizations use linear translational and rotational springs; soil material nonlinearity, kinematic interaction, foundation embedment and radiation damping are not explicitly included in these spring coefficients. The shear moduli in Table~\ref{tab:soil_property_inputs} represent the material parameters adopted in the analyses and are not independently calibrated strain-compatible moduli. The separate gravity-load and earthquake-response analyses are therefore interpreted according to their respective load cases.
+
+For a soil with an allowable bearing pressure of 100~kPa, a 3.0~m by 3.0~m footing has an indicative pressure capacity of $9\times100=900$~kN under the same pressure basis. This calculation is illustrative only: allowable bearing pressure must be compared with compatible service-load actions and an actual footing design, not directly with the factored maximum column forces of Table~\ref{tab:seq54_force}. The analysis consequently does not demonstrate bearing-capacity compliance for the hard-, medium- or soft-support assumptions.
+
+\subsection{Spring-stiffness calculation check}
+For the hard-soil parameters $G=595$~MPa and $\nu=0.30$, and a square footing with $L=B=1.50$~m, Equation~\ref{eq:gazetas_kz} gives
+\[
+K_z=\frac{2(595000)(1.50)}{1-0.30}(0.73+1.54)=5{,}788{,}500\ \mathrm{kN/m}.
+\]
+This agrees with the listed hard-soil vertical coefficient for Blocks~5 and~6. Inverting the same square-footing relation for the hard-soil $K_z$ values of Blocks~1--2 and~3--4 gives equivalent square sides of approximately 3.50~m and 4.67~m, respectively. These are back-calculated *equivalent* dimensions, not confirmed construction footing sizes. The horizontal and torsional coefficients do not all reproduce the stated $\chi=1$ equation assumptions, so the full six-component spring matrix requires reconciliation with the original foundation sizes and ETABS assignments before quantitative validation.
+
 \section{Modal Response Extraction and Comparison}
 Modal analysis results were evaluated separately for each block and foundation-support condition. The first-mode period $T_{1,b,s}$ is extracted using the row and column headings of the actual worksheet. For every case, the smallest modal number with both horizontal cumulative participating-mass ratios at or above 0.90 is recorded. 
 
@@ -289,7 +302,7 @@ Displacement, drift and fragility relationships were examined for the different 
 The adopted inter-storey drift ratio (ISDR) performance classification is shown in Table~\ref{tab:legacy_isdr_performance_bands}. Immediate Occupancy (IO), Life Safety (LS) and Collapse Prevention (CP) are standard performance concepts \cite{fema356}, whereas the numerical percentages below are the study's adopted ISDR screening intervals.
 
 \begin{table}[htbp]
-\caption{Study-adopted ISDR performance bands for fragility screening (Table 3.5)}
+\caption{Inter-storey drift screening intervals for seismic performance levels}
 \label{tab:legacy_isdr_performance_bands}\centering
 \begin{tabular}{lc}
 \hline\hline
@@ -306,4 +319,4 @@ The ISDR bands are descriptive demand categories. The adopted screening limits a
 \section{Interpretation Procedure}
 Results are organized by block number, support case, output quantity, and original load case. For the response-spectrum displacement results, the reported response at the greatest listed storey elevation is extracted separately from the RS-X X-component and RS-Y Y-component tables. For response-spectrum drift, the maximum absolute reported storey drift ratio is identified separately for the same response cases and converted to percent. Base shear is read from the response-spectrum maximum FX (RS-X) and FY (RS-Y) base-reaction rows; the largest absolute response-spectrum storey-shear value is selected from the corresponding storey rows without summation across floors.
 
-Foundation settlements are the largest absolute base-joint Uz displacement, vertical reactions are the FZ component, and beam and column force envelopes are maximum absolute member-force components at the source-recorded element stations, all under the independent \texttt{1.2DL + 1.5LL} combination. These gravity-combination outputs are not relabelled as response-spectrum results. The controlling member forces were evaluated for each block and support condition. Results from inconsistent model assignments were excluded from direct quantitative comparison.
+Foundation settlements are the largest absolute base-joint Uz displacement, vertical reactions are the FZ component, and beam and column force envelopes are maximum absolute member-force components at the source-recorded element stations, all under the independent \texttt{1.2DL + 1.5LL} combination. These gravity-combination outputs are not relabelled as response-spectrum results. The controlling member forces were evaluated for each block and support condition. Vertical reactions and displacements are compared only where the support-case identity and load combination are consistent.
