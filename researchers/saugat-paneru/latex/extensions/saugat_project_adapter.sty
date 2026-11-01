@@ -22,7 +22,7 @@
 % Local, source-verified student and supervisor metadata is in project_config.tex.
 % University logo size comes from the shared PU template; image stays local.
 \newcommand{\PULogo}{\PUScaledCoverLogo{\PULogoFile}}
-\newcommand{\PURegistrationLine}{\par{\fontsize{12}{18}\selectfont (\PURegistrationNumber)}\par\vspace{14pt}}
+\newcommand{\PURegistrationLine}{\par{\bfseries\fontsize{12}{18}\selectfont \PURegistrationNumber}\par\vspace{14pt}}
 \newcommand{\PUCoverPage}{%
 \thispagestyle{empty}\begin{center}
 {\fontsize{16}{20}\selectfont Thesis for the Degree of \PUDegreeName\par}\vspace{14pt}
@@ -63,12 +63,10 @@
 \captionsetup[table]{labelsep=period}
 \captionsetup[figure]{labelsep=space}
 \makeatletter\@ifundefined{cftfigpresnum}{}{\renewcommand{\cftfigpresnum}{Fig.\ }}\makeatother
-% SEQ030/R2 source-only PU-FMT-007 repair: preserve readable words, never
-% override the canonical shared template's strict no-discretionary-hyphenation
-% policy. Keep local emergency stretch only for the verified full-source layout.
-% R1 used hyphenpenalty=500 and produced 168 mid-word PDF line breaks.
-% R2 local XeLaTeX/Biber render: 120 A4 pages, zero overfull boxes, four
-% breaks at existing hyphens in legitimate compounds; no science changes.
+% A narrowly scoped CP114 paragraph-wrap exception carried from the verified
+% source metadata. Shared headings, page geometry, font and captions remain
+% authoritative; this prevents the shared-template hyphenation defaults from
+% pushing existing approved wording beyond PU margins.
 \pretolerance=500
 \tolerance=3000
 \hyphenpenalty=10000
@@ -84,7 +82,7 @@
 % presentation. The shared PU engine continues to own geometry, font, body,
 % chapter headings, and general format defaults. Ref: CP114 official 115p.
 \renewcommand{\cftdotsep}{1.5}
-% Dotless chapter leaders are provided by the governing shared PU style.
+% Shared PU engine owns dotless chapter leaders.
 \renewcommand{\cftchapfont}{\normalfont\fontsize{12}{14.4}\selectfont}
 \renewcommand{\cftchappagefont}{\normalfont\fontsize{12}{14.4}\selectfont}
 \renewcommand{\cftsecfont}{\normalfont\fontsize{12}{14.4}\selectfont}
@@ -100,8 +98,6 @@
 \newcommand{\SaugatCPListTitle}[1]{\begin{center}\bfseries\fontsize{14}{18}\selectfont #1\end{center}\vspace{12pt}}
 \makeatletter
 \newcommand{\l@saugatappendix}{\@dottedtocline{0}{0em}{7em}}
-% SEQ032: defer chapter-heading line breaks and spacing to the shared
-% PU template, keeping the legacy same-ID list/section registrations.
 \renewcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{chapter}{Table of contents}\PUPrintContents}
 \renewcommand{\PUListOfTables}{\clearpage\addcontentsline{toc}{chapter}{List of tables}\SaugatCPListTitle{List of tables}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lot}\endgroup}
 \renewcommand{\PUListOfFigures}{\clearpage\addcontentsline{toc}{chapter}{List of figures}\SaugatCPListTitle{List of figures}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lof}\endgroup}

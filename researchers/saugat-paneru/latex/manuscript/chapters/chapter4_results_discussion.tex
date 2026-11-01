@@ -36,6 +36,9 @@ The NBC 205:2024 Regular building is the reference model for the performance-bas
 
 The Regular model therefore provides the comparison basis for the L, L1, L2, T, U, and Non-Parallel configurations. Performance-point base shear is interpreted as a demand--capacity intersection and is kept distinct from peak pushover capacity.
 
+\subsection{Regular Reference: Individual Result}
+For the matched Soil Type C, $Z=0.40$ case, the Regular model exhibits a recorded Story-1 EQx storey shear of 532.489~kN and a governing ULS inter-storey drift ratio of 0.004784. The maximum reported CM--CR separation for this model is approximately 0.398~m (the governing case is identified separately from the matched shear case). The maximum performance-point base shear is 456.253~kN, and the corresponding roof displacement is 26.053~mm. The first-peak pushover capacity and the performance-point quantities are different response definitions and are not combined into a single strength measure. These source-backed reference quantities are used for the model-by-model comparisons that follow.
+
 \section{Phase III: Performance Evaluation of Irregular NBC 205:2024 Buildings}
 
 \input{cp112_additions/ch4_modal_results.tex}
@@ -46,6 +49,29 @@ The building configurations used in the analysis were introduced in Chapter 3 an
 The comparison among these seven models is important because NBC 205 ready-to-use provisions are primarily intended for ordinary low-rise buildings, whereas practical residential layouts often depart from regular rectangular plans. Plan irregularity can alter stiffness distribution, mass distribution, centre of rigidity location, and lateral force transfer. These effects may not be fully understood from strength checks alone; therefore, the following sections compare force demand, drift, descriptive CM--CR separation, capacity, performance-point characteristics, and observed hinge/failure evidence together.
 
 The seven building configurations have three full storeys plus a stair cover, allowing their responses to be compared at the same building height. The separate four-storey extension is discussed through its own design-check results.
+
+\subsection{Results by Plan Configuration}
+The six irregular models are discussed individually before the response-wise figures and aggregate percentage tables. The percentages stated below are the already tabulated differences from the Regular reference under the selection bases of Table~\ref{tab:percent_change_regular_cp112}; the governing CM--CR result for each model may come from a different soil case or storey than the matched EQx storey-shear comparison.
+
+\subsubsection{L-shaped model}
+The L configuration has a 10.6\% lower matched EQx Story-1 shear and a 0.5\% lower maximum ULS drift than the Regular model. Its governing CM--CR separation is approximately 0.581~m, corresponding to a 46.0\% increase relative to the Regular model's reported governing separation. The measures therefore do not change by the same proportion.
+
+\subsubsection{L1-shaped model}
+The L1 configuration has a 24.2\% lower matched EQx Story-1 shear and 4.5\% lower maximum ULS drift than the Regular reference. Its governing CM--CR separation is approximately 0.640~m, about 60.8\% higher than the Regular governing value. These values are descriptive model outputs rather than a design-approval determination.
+
+\subsubsection{L2-shaped model}
+The L2 model has a 14.2\% lower matched EQx Story-1 shear and a 15.9\% lower maximum ULS drift. In contrast, its governing CM--CR separation is approximately 1.186~m, about 198.0\% above the Regular maximum. This difference illustrates why a smaller drift ratio alone is insufficient to describe plan-dependent mass--stiffness eccentricity.
+
+\subsubsection{T-shaped model}
+The T-shaped model has a 23.5\% lower matched EQx Story-1 shear and a 3.5\% lower maximum ULS drift than the Regular model. Its governing CM--CR separation is approximately 0.475~m, around 19.3\% above the Regular model's maximum. The separate X- and Y-direction drift profiles remain necessary to interpret the response of this layout.
+
+\subsubsection{U-shaped model}
+The U-shaped model shows a matched EQx Story-1 shear 5.3\% below the Regular reference, but the maximum ULS drift is 3.6\% higher. It also governs the reported first-peak pushover base shear (1882.070~kN in the Y direction) and maximum performance-point roof displacement (27.072~mm in the X direction). The distinct quantities must not be treated as one common load or displacement case.
+
+\subsubsection{Non-Parallel model}
+The Non-Parallel model has an 8.6\% lower matched EQx Story-1 shear and 15.5\% lower maximum ULS drift relative to the Regular model. Its governing CM--CR separation is the largest reported among the seven configurations, approximately 1.237~m, about 210.8\% above the Regular model's governing separation. The skewed framing angle is a separate geometric descriptor, and formal code torsional-irregularity classification still requires diaphragm-edge displacement evidence.
+
+The following response-wise figures retain the underlying original plotted observations and demand cases, allowing the individual observations to be compared on common axes rather than using the percentages as independent scientific measurements.
 
 \subsection{Storey Shear Behaviour}
 Storey shear is a primary indicator of lateral seismic force demand. Figures~\ref{fig:story_shear_group1} and~\ref{fig:story_shear_group2} show the storey-shear response of the seven building configurations over the investigated demand cases.
@@ -117,37 +143,32 @@ The largest main-storey resultant CM--CR separation occurs in the Non-Parallel b
 The magnitude and governing demand case vary by plan configuration. CM--CR separation describes mass--stiffness eccentricity; it is not the diaphragm-edge displacement ratio used for code-based torsional-irregularity classification. It is therefore interpreted alongside storey shear, drift, pushover capacity, performance-point response and hinge-formation patterns.
 
 \subsection{Torsional Behaviour}
-Torsional response is important in plan-irregular buildings because eccentricity between mass and stiffness and non-orthogonal framing can induce floor rotation. Figures~\ref{fig:torsion_c025} to~\ref{fig:torsion_d035} present the torsional rotation comparisons retained from the approved analysis.
+Torsional response is important in plan-irregular buildings because eccentricity between mass and stiffness and non-orthogonal framing can induce floor rotation. Figures~\ref{fig:torsion_c025} to~\ref{fig:torsion_d035} present the original reported maximum rotation-angle values in a consistent line-and-marker layout inspired by the supplied comparison example. The x-axis denotes building-model categories, not storey number. These angle values (degrees) are not the storey-wise torsional-irregularity ratios shown in the sample paper; such ratios would require original diaphragm-edge displacement outputs. The archived radar figures and the numeric labels used for this transcription are retained in the editable source package.
 
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_10_CP110_exact_clip.pdf}
-\caption{Torsional rotation: Soil C, $Z=0.25$.}
-\label{fig:torsion_c025}
+\begin{figure}[p]\centering
+\begin{minipage}[t]{0.485\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/seq034_torsion/fig_4_5_max_rotation.pdf}
+\captionof{figure}{Maximum torsional rotation angle by building model: Soil C, $Z=0.25$.}\label{fig:torsion_c025}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/seq034_torsion/fig_4_6_max_rotation.pdf}
+\captionof{figure}{Maximum torsional rotation angle by building model: Soil C, $Z=0.30$.}\label{fig:torsion_c030}
+\end{minipage}
+\medskip
+\begin{minipage}[t]{0.485\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/seq034_torsion/fig_4_7_max_rotation.pdf}
+\captionof{figure}{Maximum torsional rotation angle by building model: Soil C, $Z=0.35$.}\label{fig:torsion_c035}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.485\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/seq034_torsion/fig_4_8_max_rotation.pdf}
+\captionof{figure}{Maximum torsional rotation angle by building model: Soil C, $Z=0.40$.}\label{fig:torsion_c040}
+\end{minipage}
 \end{figure}
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_11_CP110_exact_clip.pdf}
-\caption{Torsional rotation: Soil C, $Z=0.30$.}
-\label{fig:torsion_c030}
-\end{figure}
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_12_CP110_exact_clip.pdf}
-\caption{Torsional rotation: Soil C, $Z=0.35$.}
-\label{fig:torsion_c035}
-\end{figure}
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_13_CP110_exact_clip.pdf}
-\caption{Torsional rotation: Soil C, $Z=0.40$.}
-\label{fig:torsion_c040}
-\end{figure}
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.90\textwidth]{figures/ch4/authority_exact/fig_4_14_CP110_exact_clip.pdf}
-\caption{Torsional rotation: Soil D, $Z=0.35$.}
-\label{fig:torsion_d035}
+\begin{figure}[!htbp]\centering
+\begin{minipage}[t]{0.485\textwidth}\centering
+\includegraphics[width=\linewidth]{figures/ch4/seq034_torsion/fig_4_9_max_rotation.pdf}
+\captionof{figure}{Maximum torsional rotation angle by building model: Soil D, $Z=0.35$.}\label{fig:torsion_d035}
+\end{minipage}
 \end{figure}
 \FloatBarrier
 
@@ -538,8 +559,8 @@ NP & C & 0.250 & Story2 & 1.237\\
 \input{cp112_additions/ch4_profiles_comparisons.tex}
 
 
-\section{Phase IV: Determination of NBC 205 RUD Applicability Limits}
-\subsection{Overall Comparative Seismic Performance}
+\section{Phase IV: Discussion of NBC 205 RUD Applicability Limits}
+\subsection{Discussion of the Comparative Findings}
 The results show that different building configurations become critical for different response parameters. In the storey-shear results, the Regular building governs the maximum lower-storey shear. The U-shaped building governs the first-peak pushover base shear and the largest performance-\allowbreak{}point roof displacement, while the Regular building governs the highest performance-\allowbreak{}point base shear. The Non-Parallel building governs the main-storey CM--CR separation comparison.
 
 This distribution of critical responses demonstrates that the controlling model depends on the response quantity being examined. The Regular model governs the storey-shear demand and performance-\allowbreak{}point base shear, whereas the U-shaped model governs the first-peak pushover capacity and performance-\allowbreak{}point displacement. The irregular configurations must therefore be interpreted from their full response patterns rather than from a single ranking.
