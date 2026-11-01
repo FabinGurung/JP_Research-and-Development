@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "control_id": "RD-CONTROL-LATEX-001",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "status": "SINGLE_CANONICAL__PU_V113_PRELIMINARY_IMPLEMENTATION_PASS_SAFAL__FULL_144_PARITY_HOLD",
   "name": "R&D SINGLE LaTeX MANUSCRIPT TOWER",
   "repo": "FabinGurung/JP_Research-and-Development",
@@ -209,12 +209,15 @@
     "visual_qa": "PER_OWNER_RENDER"
   },
   "chapter_toc_presentation": {
-    "rule": "RD-LTX-CHG-122",
+    "rule": "RD-LTX-CHG-123",
     "format": "CHAPTER <number> then a distinct line with uppercase chapter title",
     "chapter_page_numbers": "SUPPRESSED",
     "section_page_numbers": "RETAINED",
     "section_and_subsection_toc": "DOTLESS",
     "applies": "ALL_OWNERS_NEXT_BUILD",
-    "note": "Visual reconciliation with institution must remain under owner rendering QA; no unrelated science changes."
+    "note": "Visual reconciliation with institution must remain under owner rendering QA; no unrelated science changes.",
+    "chapter_to_first_section_gap": "0.75em after each two-line CHAPTER + TITLE entry",
+    "source_scope": "SHARED_STYLE_ONLY__NO_RESEARCHER_MANUSCRIPT_CHANGES",
+    "qa": "SOURCE_REVIEW_PENDING_OWNER_PDF_RENDER"
   }
 }

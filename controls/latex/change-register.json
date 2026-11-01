@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 123,
+  "next_number": 124,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -543,6 +543,27 @@
       "git_commit_sha_after_merge": null,
       "qa_evidence": "Standalone XeLaTeX TOC two-pass test succeeded, chapter 1 and 2 appear split with no page number; owner integrated build pending.",
       "before_after_qa_evidence": "Two-pass XeLaTeX reproduction of the shared chapter-list formatting with hyperlinks and tocloft: CHAPTER 1 on one line, INTRODUCTION on the next, no chapter page; section entries retain page. Owner Nabin SEQ061 full build and Saugat visual parity separately to follow. PRE SEQ060 central Drive archive created before changes."
+    },
+    {
+      "change_id": "RD-LTX-CHG-123",
+      "researcher_id": "RSH-002",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Add explicit vertical separation after each required two-line CHAPTER n / TITLE TOC entry before the following 1.1-style section, leaving geometry, body 1.5 line spacing, page numbering and other researcher scientific content unchanged.",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "controls/latex/tower.json",
+        "controls/latex/change-register.json"
+      ],
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "before_after_qa_evidence": "Source diff: style v2.6.3 two-line chapter TOC minipage already present; v2.6.4 adds 0.75em below the minipage. Independent research-owner PDF render/TOC visual parity is not yet executed or certified. PRE is protected GitHub main v2.6.3; no historical branch rewriting.",
+      "pu_rule_references": [
+        "PU-FMT-024"
+      ],
+      "disposition": "PROPOSED__RENDER_QA_PENDING",
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "SHARED_ON_NEXT_RESEARCHER_BUILD__RENDER_PARITY_REQUIRED",
+      "regression_scope": "Repository inherited style/source gates and next full-font owner PDF QA",
+      "scientific_boundary": "NO_SCIENTIFIC_DATA_CHANGE__ONLY_GENERIC_TOC_SPACING"
     }
   ],
   "required_fields": [
