@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 37,
+  "parent_sequence": 36,
+  "request_key": "saugat:seq037-20261101",
+  "status": "RELEASED",
+  "branch": "thesis/saugat-paneru/latex/seq037-capacity-axes-abstract",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "drive_current_expected_sequence": 37,
+  "drive_stable_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU"
+  },
+  "a7_pre": {
+    "pdf": "17gcpjq2OEihy1052wAb6D0z7bvlQe1Yo",
+    "zip": "1z5Jy8UK8wHrnmFPd0GT2hp2zYu1VcHN4",
+    "checkpoint": "1rqGwt0n0l3ZfcbYCUq-SZ2hglknG0E9L",
+    "checklist": "1_o7LheSxBNUQ6vEcJVBxsFIy48QCRVcl"
+  },
+  "a7_post": {
+    "pdf": "1BDGnMwH_1iHXkK180Onz7N_l9mm-6eZ0",
+    "zip": "1K3myHgsOuXMv3TSXZ4diVTQ1FMtMN9ds",
+    "checkpoint": "1Tw24vntCaJ_YurWiaO0hUbXItsASkJNM",
+    "checklist": "1lnYQy2B5UGqf9JpMmOx3geRgB6w5r-Ky"
+  },
+  "pdf": {
+    "pages": 129,
+    "bytes": 52127211,
+    "sha256": "3ced81b1874b559d768f26b4b666f120e8bba0f7c02ab98224834a872c945635",
+    "format": "A4",
+    "source_words_deleted": 0,
+    "abstract_keywords_same_page": true
+  },
+  "source_zip": {
+    "entries": 350,
+    "bytes": 64458077,
+    "sha256": "c745e5c9004a8ed75396b84010f22eda0fac20cc50b021c5425d0b22da567ab2",
+    "zip_integrity": "PASS"
+  },
+  "science": {
+    "existing_csv_xlsx_changed": 0,
+    "total_original_numeric_files": 20,
+    "etabs_independent_replay": false,
+    "code_torsion_ratio_confirmed": false,
+    "capacity_original_case_series": 70,
+    "interpolated_cases": 0
+  },
+  "figures": {
+    "capacity_figures": 14,
+    "axes_x_mm": [
+      0,
+      250
+    ],
+    "axes_y_kn": [
+      0,
+      2000
+    ],
+    "origin_overlap_removed": true,
+    "legends": "BOTTOM_RIGHT",
+    "exact_tnr_vector": true,
+    "approved_ladder_4_29_byte_identical": true
+  },
+  "a7_researcher_controls": {
+    "native_google_doc_sync": "DISABLED_UNLESS_USER_EXPLICITLY_ASKS",
+    "candidate_folders": "NONE",
+    "source_template_shared_modified": false,
+    "source_current_drive_and_full_working_zip_verified": true
+  },
+  "source_git_pr": 139,
+  "academic_status": "INDEPENDENT_INSTITUTIONAL_AND_SCIENTIFIC_APPROVAL_OPEN",
+  "qa_report": "researchers/saugat-paneru/latex/qa/SEQ037_22_POINT_AND_A7_QA_20261101.md",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4"
+}
