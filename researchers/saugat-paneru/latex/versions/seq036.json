@@ -6,7 +6,7 @@
   "sequence": 36,
   "parent_sequence": 35,
   "request_key": "saugat:seq036-20261101",
-  "status": "SOURCE_QA_COMPLETE__DRIVE_RAW_SYNC_BLOCKED",
+  "status": "EDITING",
   "branch": "thesis/saugat-paneru/latex/seq036-comprehensive-qa",
   "scientific_baseline": "CP114_UNCHANGED__NO_ETABS_REPLAY",
   "drive_current_expected_sequence": 35,
@@ -50,5 +50,9 @@
     "academic_signoffs": "OPEN"
   },
   "a7_discipline": "PRE_RECORDED_NO_POST_UNTIL_PROVIDER_WRITE_READBACK",
-  "qa_report": "researchers/saugat-paneru/latex/qa/SEQ036_A7_FULL_QA_AND_DEBT_20261101.md"
+  "qa_report": "researchers/saugat-paneru/latex/qa/SEQ036_A7_FULL_QA_AND_DEBT_20261101.md",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "publication_status": "LOCAL_QA_COMPLETE__LIVE_DRIVE_SEQ035_UNTIL_SAME_ID_UPLOAD_VERIFIED"
 }
