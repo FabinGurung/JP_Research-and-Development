@@ -62,21 +62,40 @@ The plan drawings and three-dimensional model views document the placement and o
 
 \input{cp112_additions/ch3_model_geometry.tex}
 
-\newcommand{\methodmodel}[3]{%
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.82\textwidth,height=0.43\textheight,keepaspectratio]{#1}
-\caption{#2 building model.}
-\label{#3}
-\end{figure}}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-001_Regular_Building.png}{Regular}{fig:method_regular_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-002_L_Building.png}{L-type}{fig:method_l_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-003_L1_Building.png}{L1-type}{fig:method_lone_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-004_L2_Building.png}{L2-type}{fig:method_ltwo_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-005_T_Building.png}{T-type}{fig:method_t_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-006_U_Building.png}{U-type}{fig:method_u_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-007_Non_Parallel_Building.png}{Non-Parallel}{fig:method_np_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-008_4_Storey_Regular_Building.png}{separate four-storey Regular extension}{fig:method_fourstorey_model}
+% SEQ032: consistently sized two-column model views, with each model
+% retaining its own numbered Figure caption and stable reference label.
+% Original 8 PNG assets and their geometry are not transformed.
+\newcommand{\saugatMethodPanel}[4]{%
+\begin{minipage}[t]{0.485\textwidth}\centering
+\begin{minipage}[c][0.19\textheight][c]{\linewidth}\centering
+\includegraphics[width=\linewidth,height=0.18\textheight,keepaspectratio]{#1}
+\end{minipage}
+\caption{#2 building model.}\label{#3}
+{\small\raggedright #4\par}
+\end{minipage}}
+
+\begin{figure}[p]\centering
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-001_Regular_Building.png}{Regular}{fig:method_regular_model}{The regular model provides the reference configuration for the plan-comparison series.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-002_L_Building.png}{L-type}{fig:method_l_model}{The L-shaped arrangement introduces one re-entrant corner.}
+
+\medskip
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-003_L1_Building.png}{L1-type}{fig:method_lone_model}{L1 represents a deeper re-entrant configuration than the first L-shaped case.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-004_L2_Building.png}{L2-type}{fig:method_ltwo_model}{The stepped L2 plan retains its separate re-entrant topology.}
+\end{figure}
+
+\begin{figure}[p]\centering
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-005_T_Building.png}{T-type}{fig:method_t_model}{The T-shaped layout contains re-entrant corners on opposing sides of the plan.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-006_U_Building.png}{U-type}{fig:method_u_model}{The U-shaped configuration includes a central notch and two re-entrant corners.}
+
+\medskip
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-007_Non_Parallel_Building.png}{Non-Parallel}{fig:method_np_model}{The non-parallel framing arrangement is evaluated separately from the re-entrant plans.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-008_4_Storey_Regular_Building.png}{separate four-storey Regular extension}{fig:method_fourstorey_model}{The four-storey height extension is not part of the seven-model performance-point series.}
+\end{figure}
+\FloatBarrier
 
 \subsection{Basis for Comparing the Structural Models}
 The Phase I model follows Draft Final NBC 205:2012 and is evaluated using the available concrete design-check results. The Phase II Regular model follows NBC 205:2024 and provides the reference for the performance-based assessment \cite{nbc205_2012,nbc205_2024}. Five NBC 105:2025 demand cases are considered for the 2024 models: Soil Type C with $Z=0.25$, $0.30$, $0.35$, and $0.40$, and Soil Type D with $Z=0.35$ \cite{nbc105_2025}.
