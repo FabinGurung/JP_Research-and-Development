@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 34,
+  "parent_sequence": 33,
+  "source_baseline": "LATEX_SEQ033_USER_DESIGNATED_CURRENT",
+  "branch": "thesis/saugat-paneru/latex/seq034-torsion-tnr-nbc-roll",
+  "status": "RELEASED_USER_DESIGNATED_CURRENT_WITH_OPEN_ACADEMIC_REVIEW",
+  "request_key": "saugat:seq034-20261101",
+  "template": {
+    "path": "controls/latex/template/pumlsc-shared.sty",
+    "blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+    "version": "2.6.4"
+  },
+  "permanent_live_provider_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "reviewer_checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
+    "native_google_doc_older_parity_open": "1P_4MFr3WDjkhg_vJQ0YRbqYGMSoUtqSAex-yEaxGgTs"
+  },
+  "production_pdf": {
+    "bytes": 51423611,
+    "sha256": "55751cba7fc53241573964732506599b2c74107e1afc99e2c3379bf9f9dfc59a",
+    "pages": 121,
+    "paper": "A4",
+    "font": "EMBEDDED_TIMES_NEW_ROMAN_REGULAR_BOLD",
+    "readback": "VERIFIED_SAME_ID_TITLE_BYTES_PARENT_RAW_SHA256"
+  },
+  "complete_source_zip": {
+    "bytes": 61222024,
+    "sha256": "d76e1a2ad5cdabc41ed0f6ec93c003339abc5279e2a98be5a5466d0bd6f36d0f",
+    "files": 285,
+    "zip_test": "PASS",
+    "readback": "VERIFIED_SAME_ID_TITLE_BYTES_PARENT_RAW_SHA256"
+  },
+  "archive": {
+    "folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V",
+    "ordinal": 12,
+    "pre_pdf_id": "15MIGQM3RxopkvhOgeJVHyoatOIlSjd0h",
+    "pre_zip_id": "1nuIm6zf_jZB8a9N5ECXuCmb6VPGJmsc2",
+    "pre_checkpoint_id": "13IrfLDNjqFw5WygehiBZS34oA-dgGdqc",
+    "post_pdf_id": "1rg0AeKzvDQdzFg4U4Vxzge_ob-mWfFjj",
+    "post_zip_id": "1FUFaRGX5eZBgt-QEmTnqX6YVxaBXlhn6",
+    "post_checkpoint_id": "1qg154vpTxoKalEgXKU5cTK4F_Qj3Jv7e",
+    "post_checklist_id": "16IYaTg0yLeubXA4pVqG1Je01Tdyw8PeK"
+  },
+  "changes": [
+    "Registration number visually bold Times New Roman and parentheses removed, unchanged numerical value",
+    "Original max torsional rotation degrees redrawn as five uniform line+marker plots, figures 4.5-4.9 (not invented code ratios)",
+    "Appendix 2 five direct extracts from archival Draft Final NBC 205:2012 original pages 15,16,23,31,35"
+  ],
+  "scientific_controls": {
+    "original_csv_xlsx_byte_identical_count": 12,
+    "scientific_baseline": "CP114_UNCHANGED",
+    "original_ETABS_replay": "NOT_PERFORMED",
+    "torsional_ratio": "BLOCKED_MISSING_STORY_WISE_DIAPHRAGM_EDGE_DISPLACEMENTS",
+    "native_google_doc_parity": "OPEN",
+    "institutional_144_rule_qa": "NOT_CERTIFIED",
+    "university_supervisor_approval": "NOT_VERIFIED",
+    "reviewer_checklist": "10_DONE_10_PARTIAL_2_BLOCKED"
+  },
+  "source_refs": {
+    "nbc_205_2012_drive_id": "16G3jhEkxGIiKr07ArMDJQvmb0ilBpNgT",
+    "font_original_folder": "PRIVATE_GDRIVE_RESOURCE_NOT_INCLUDED_OR_DISTRIBUTED",
+    "version_control": "A7_MEM_LIVE_VERSION_009",
+    "github_reservation_pr": 127,
+    "github_source_pr": "TO_BE_CREATED"
+  },
+  "restoration": "Restore archived PRE bytes into original permanent Drive PDF ZIP and checkpoint IDs, never replace live provider IDs with archive copy IDs."
+}
