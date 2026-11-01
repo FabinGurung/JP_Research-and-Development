@@ -88,7 +88,7 @@ def validate_receipt(m, contract, owners):
             require(path or provider, "identified artifact needs an actual pointer")
         if a["state"] in {"CANDIDATE", "VERIFIED", "SUBMISSION_READY"}:
             require(isinstance(a.get("artifact_sha256"), str) and HASH64.fullmatch(a["artifact_sha256"]), "missing candidate artifact digest")
-            if role in contract["submission_bundle_roles"] + contract["presentation_roles"]:
+            if role in contract["submission_bundle_roles"] + contract.get("optional_submission_roles", []) + contract["presentation_roles"]:
                 require(a.get("scientific_revision") == m["scientific_revision"] and a.get("source_tree_sha256") == m["source_tree_sha256"], "stale thesis source binding")
                 require(a.get("style_blob_sha") == m["style_blob_sha"], "stale artifact template pin")
         ready = a["state"] == "SUBMISSION_READY"
