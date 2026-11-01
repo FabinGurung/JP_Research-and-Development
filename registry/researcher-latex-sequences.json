@@ -88,6 +88,18 @@
           "main_sha_at_reservation": "3a507c9075da2a90c5399438fec3081ec22e769b",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Sequential next version after CURRENT 032; historic 030 never overwritten. Same permanent Drive IDs, PRE 000011 saved. User-designated CURRENT despite independently tracked academic holds; no candidate folders; only archive and CURRENT."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 34,
+          "branch": "thesis/saugat-paneru/latex/seq034-torsion-tnr-nbc-roll",
+          "status": "RESERVED",
+          "request_key": "saugat:seq034-20261101",
+          "created_at_utc": "2026-11-01T11:50:00Z",
+          "main_sha_at_reservation": "6682dd70757a9481ee2428c414c853b49a693868",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000012_PRE original live PDF, source and checkpoint archived before surgical SEQ034; only cover registration, Fig. 4.5-4.9 presentation and Appendix 2 source extracts changed; full original PDF/ZIP IDs retained; user-designated latest CURRENT with technical academic holds disclosed."
         }
       ]
     },
