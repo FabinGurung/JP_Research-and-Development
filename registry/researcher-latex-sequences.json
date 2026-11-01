@@ -124,6 +124,18 @@
           "main_sha_at_reservation": "8491123da83e97eb24630cc1c5443c1826932ab2",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "User-requested A7 full-format/source guards and remaining SEQ035 debt closeout; PRE 000014 original PDF/ZIP/checkpoint/checklist archived with stable live IDs, no candidate folders; independent ETABS and native Doc parity must not be falsely certified."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 37,
+          "branch": "thesis/saugat-paneru/latex/seq037-capacity-axes-abstract",
+          "status": "RESERVED",
+          "request_key": "saugat:seq037-20261101",
+          "created_at_utc": "2026-11-01T17:50:00Z",
+          "main_sha_at_reservation": "e029df6f929965785d669da7b625b3775e168867",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000015_PRE archived SEQ036 PDF source ZIP checkpoint checklist. User opted out native Google Doc parity unless explicitly requested. Source-only capacity figure correction 14 charts, shared 0..250 mm and 0..2000 kN axes, lower-right legends, exact TNR; 70/70 original case directions discovered including historical L1 Y D0.35 false missing flag. Abstract 1-page non-deletion attempt. Unchanged scientific CSV XLSX. Same live Drive IDs and CURRENT/ARCHIVE only."
         }
       ]
     },
