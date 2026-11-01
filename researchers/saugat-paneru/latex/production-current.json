@@ -93,7 +93,7 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "7bff4c59eed4263a28e709bc77b5692d40f064b8",
     "source_branch": "thesis/saugat-paneru/latex/seq037-capacity-axes-abstract",
-    "source_pr": null,
+    "source_pr": 139,
     "source_merged_commit": "a72f14ddbfe83b626db5d3ac17c9d6d854b398b9",
     "source_main": "main",
     "promotion_branch": "saugat/seq036-a7-live-post-verified-20261101",
@@ -103,7 +103,7 @@
     "m3_immutable_tag": "saugat-cp114-m3.0.0-editorial-production-20261021",
     "promotion_pr": 127,
     "promotion_merge_sha": "3c4f0c653f69665524a571b9994c2b6704325288",
-    "live_pointer_readback": "PENDING_GITHUB_MERGE__DRIVE_RELEASE_ALREADY_VERIFIED",
+    "live_pointer_readback": "PASS_DRIVE_SEQ037_SAME_ORIGINAL_IDS_AND_000015_POST__GITHUB_PR139_SOURCE_POINTER_PENDING_MERGE",
     "source_merged_sha": "d81dd8896182b4779578d6af6bf127565af95669"
   },
   "checkpoint_resolution": {
