@@ -1,4 +1,4 @@
-\chapter{Methodology}
+\chapter[METHODOLOGY]{Methodology}
 
 \section{General}
 The study follows four linked phases. Phase I reviews a representative Draft Final NBC 205:2012 building using the available concrete design-check results. Phase II evaluates the NBC 205:2024 Regular building as the reference model. Phase III extends the comparison to six plan-irregular NBC 205:2024 configurations and considers a separate four-storey height-extension model. Phase IV synthesizes the response measures to interpret the practical applicability limits of NBC 205 RUD provisions.
@@ -20,7 +20,7 @@ The seismic response is evaluated through storey shear, inter-storey drift, cent
 The work proceeded from the selected plan configurations to the structural-model inputs and then to the response evaluation. First, the plan dimensions and re-entrant layouts were represented in the drawings. Second, beams, columns, slabs, materials and cross-sections were assigned to the ETABS structural models. Third, the documented load patterns, mass-source definition and adopted NBC 105:2025 soil/zone cases were applied. Fourth, the equivalent-static and modal response-spectrum results were examined for force, drift and modal behaviour. Fifth, the available nonlinear static pushover results were compared in terms of capacity, performance point and final recorded hinge evidence. The recorded NBC 205:2012 concrete design checks were evaluated separately from the seven-model 2024 comparison. These phases organize the modelling inputs, analytical outputs and comparative interpretation used throughout the study.
 
 \input{figures/concepts/s03_three_analysis_methods.tex}
-Figure~\ref{fig:s03_analysis_methods} compares the equivalent-static force distribution, modal response-spectrum concept and nonlinear pushover capacity response.
+The schematic presented in Figure~\ref{fig:s03_analysis_methods} compares the equivalent-static force distribution, modal response-spectrum concept and nonlinear pushover capacity response.
 
 \section{Research Framework}
 \begin{figure}[htbp]
@@ -36,7 +36,7 @@ Figure~\ref{fig:s03_analysis_methods} compares the equivalent-static force distr
 \label{fig:research_workflow}
 \end{figure}
 
-Figure~\ref{fig:research_workflow} organizes the study from the historical NBC 205:2012 reference through the NBC 205:2024 regular benchmark and irregular-model comparison to the final applicability assessment. This sequence keeps the historical review, regular reference and irregular extensions analytically distinct before their results are synthesized.
+The research framework presented in Figure~\ref{fig:research_workflow} organizes the study from the historical NBC 205:2012 reference through the NBC 205:2024 regular benchmark and irregular-model comparison to the final applicability assessment. This sequence keeps the historical review, regular reference and irregular extensions analytically distinct before their results are synthesized.
 
 
 \section{Development of Structural Models}
@@ -62,23 +62,42 @@ The plan drawings and three-dimensional model views document the placement and o
 
 \input{cp112_additions/ch3_model_geometry.tex}
 
-\newcommand{\methodmodel}[3]{%
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.82\textwidth,height=0.43\textheight,keepaspectratio]{#1}
-\caption{#2 building model.}
-\label{#3}
-\end{figure}}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-001_Regular_Building.png}{Regular}{fig:method_regular_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-002_L_Building.png}{L-type}{fig:method_l_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-003_L1_Building.png}{L1-type}{fig:method_lone_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-004_L2_Building.png}{L2-type}{fig:method_ltwo_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-005_T_Building.png}{T-type}{fig:method_t_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-006_U_Building.png}{U-type}{fig:method_u_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-007_Non_Parallel_Building.png}{Non-Parallel}{fig:method_np_model}
-\methodmodel{figures/ch4/final_final_original/models/SRC-FF-IMG-008_4_Storey_Regular_Building.png}{separate four-storey Regular extension}{fig:method_fourstorey_model}
+% SEQ032: consistently sized two-column model views, with each model
+% retaining its own numbered Figure caption and stable reference label.
+% Original 8 PNG assets and their geometry are not transformed.
+\newcommand{\saugatMethodPanel}[4]{%
+\begin{minipage}[t]{0.485\textwidth}\centering
+\begin{minipage}[c][0.19\textheight][c]{\linewidth}\centering
+\includegraphics[width=\linewidth,height=0.18\textheight,keepaspectratio]{#1}
+\end{minipage}
+\caption{#2 building model.}\label{#3}
+{\small\raggedright #4\par}
+\end{minipage}}
 
-\subsection{Basis for Comparing the Structural Models}
+\begin{figure}[p]\centering
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-001_Regular_Building.png}{Regular}{fig:method_regular_model}{The regular model provides the reference configuration for the plan-comparison series.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-002_L_Building.png}{L-type}{fig:method_l_model}{The L-shaped arrangement introduces one re-entrant corner.}
+
+\medskip
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-003_L1_Building.png}{L1-type}{fig:method_lone_model}{L1 represents a deeper re-entrant configuration than the first L-shaped case.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-004_L2_Building.png}{L2-type}{fig:method_ltwo_model}{The stepped L2 plan retains its separate re-entrant topology.}
+\end{figure}
+
+\begin{figure}[p]\centering
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-005_T_Building.png}{T-type}{fig:method_t_model}{The T-shaped layout contains re-entrant corners on opposing sides of the plan.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-006_U_Building.png}{U-type}{fig:method_u_model}{The U-shaped configuration includes a central notch and two re-entrant corners.}
+
+\medskip
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-007_Non_Parallel_Building.png}{Non-Parallel}{fig:method_np_model}{The non-parallel framing arrangement is evaluated separately from the re-entrant plans.}
+\hfill
+\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-008_4_Storey_Regular_Building.png}{separate four-storey Regular extension}{fig:method_fourstorey_model}{The four-storey height extension is not part of the seven-model performance-point series.}
+\end{figure}
+\FloatBarrier
+
+\subsection{Structural Model Comparison Framework}
 The Phase I model follows Draft Final NBC 205:2012 and is evaluated using the available concrete design-check results. The Phase II Regular model follows NBC 205:2024 and provides the reference for the performance-based assessment \cite{nbc205_2012,nbc205_2024}. Five NBC 105:2025 demand cases are considered for the 2024 models: Soil Type C with $Z=0.25$, $0.30$, $0.35$, and $0.40$, and Soil Type D with $Z=0.35$ \cite{nbc105_2025}.
 
 \section{Seismic Parameters}

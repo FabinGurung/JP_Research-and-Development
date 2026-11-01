@@ -13,7 +13,8 @@ ROOT=Path(__file__).resolve().parents[1]
 for face in ('times.ttf','timesbd.ttf','timesi.ttf','timesbi.ttf'):
     q=Path('/mnt/data')/face
     if q.exists(): fm.fontManager.addfont(str(q))
-plt.rcParams.update({'font.family':'Times New Roman','font.size':11,'axes.titlesize':11,'axes.labelsize':11,'xtick.labelsize':10,'ytick.labelsize':10,'legend.fontsize':10,'savefig.bbox':'tight','pdf.fonttype':42,'ps.fonttype':42})
+font_choice = 'Times New Roman' if any('Times New Roman' in f.name for f in fm.fontManager.ttflist) else 'Tinos'
+plt.rcParams.update({'font.family':font_choice,'font.size':11,'axes.titlesize':11,'axes.labelsize':11,'xtick.labelsize':10,'ytick.labelsize':10,'legend.fontsize':10,'savefig.bbox':'tight','pdf.fonttype':42,'ps.fonttype':42})
 # 6: repeat existing documented mechanism, but remove redundant top title and eliminate collisions.
 out=ROOT/'figures/ch2/seismic_vulnerability_rc_building.png'
 fig,ax=plt.subplots(figsize=(11.1,5.0)); ax.set_xlim(0,15.5);ax.set_ylim(0,6.6);ax.axis('off')

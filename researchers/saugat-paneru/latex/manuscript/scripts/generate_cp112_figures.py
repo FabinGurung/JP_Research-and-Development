@@ -32,12 +32,12 @@ drift_profiles = {
 
 for model,(x,y) in drift_profiles.items():
     fig, ax = plt.subplots(figsize=(5.0,3.1))
-    stories = [1,2,3,4]
-    ax.plot(x, stories, marker='o', label='X')
-    ax.plot(y, stories, marker='s', linestyle='--', label='Y')
+    stories = [0,1,2,3,4] # display-only ground zero reference, not measured drift
+    ax.plot([0]+list(x), stories, marker='o', label='X')
+    ax.plot([0]+list(y), stories, marker='s', linestyle='--', label='Y')
     ax.set_xlim(0,0.006)
     ax.set_xticks([0,0.002,0.004,0.006])
-    ax.set_yticks(stories, ['Story 1','Story 2','Story 3','Story 4'])
+    ax.set_yticks(stories, ['Base','Story 1','Story 2','Story 3','Stair cover'])
     ax.set_xlabel('ULS drift ratio')
     ax.set_title(model)
     ax.grid(True)
