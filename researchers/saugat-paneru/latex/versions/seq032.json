@@ -16,10 +16,10 @@
   "source_zip_drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
   "source_current_checkpoint_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
   "scientific_baseline": "CP114_UNCHANGED__NO_NEW_ETABS_RUN",
-  "source_git_state": "SOURCE_EDITED__PDF_NOT_COMPILED",
+  "source_git_state": "SOURCE_EDITED__FULL_PRIVATE_ASSET_TINOS_PREVIEW_COMPILED_115_PAGES__NOT_PRODUCTION",
   "registered_pdf": null,
   "registered_source_zip": null,
-  "drive_candidate_folder": null,
+  "drive_candidate_folder": "1ZYI2jzrv7jN6OClu93mXFvIqSvHsbVnO",
   "pre_archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V",
   "pre_archive_pdf_copy_id": "1G651gWwgzSnZNJbdxr3YK-S142MtqqoV",
   "pre_archive_zip_copy_id": "1AdltwXf6cim3SjNvaoO0rpf1zNoCrTy2",
@@ -28,9 +28,25 @@
   "publication_status": "NOT_CURRENT__SEQ031_R2_STILL_USER_DESIGNATED_CURRENT",
   "academic_status": "FORMAT_144_GATE_OPEN__DOC_PARITY_OPEN__SCIENTIFIC_PROVENANCE_OPEN__SUPERVISOR_SIGNATURES_NOT_CONFIRMED",
   "version_control": {
-    "sequence_reservation": "PENDING_PROTECTED_MAIN_RESERVATION_PR",
+    "sequence_reservation": "MERGED_PROTECTED_MAIN_PR_119",
     "template_pr": 118,
-    "manuscript_pr": "NOT_CREATED",
+    "manuscript_pr": 120,
     "rollback": "RESTORE_SEPARATELY_ARCHIVED_SEQ031_R2_AND_ORIGINAL_LIVE_DRIVE_IDS"
+  },
+  "preview_qa": {
+    "pdf_pages": 115,
+    "paper": "A4",
+    "font": "TINOS_PREVIEW_ONLY_NOT_REQUIRED_TIMES_NEW_ROMAN",
+    "pdf_sha256": "6245589cecb2298c467fa931341904ee8927a1939b5b791065dd7b6aeadeff43",
+    "source_zip_sha256": "d7acc3b1e37f4442cb8587a7f04a7eee954edb7f5df6c27f797a012ff319881a",
+    "source_files": 251,
+    "number_input_files_byte_identical": 12,
+    "figure_3_3_pdf_page": 46,
+    "figure_3_4_pdf_page": 47,
+    "figure_3_5_pdf_page": 48,
+    "table_4_4_pdf_page": 60,
+    "all_fullpage_tnr_qa": "NOT_PERFORMED",
+    "private_github_shared_template_parity": "LOCAL_EQUIVALENT_PREVIEW_ONLY_NOT_EXACT_BYTES",
+    "drive_upload": "NOT_VERIFIED"
   }
 }
