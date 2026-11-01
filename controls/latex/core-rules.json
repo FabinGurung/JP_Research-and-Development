@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LTX-CORE-REGISTRY-001",
   "authority": "controls/latex/tower.json",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "namespace": "RD-LTX-CORE-001..100",
   "status": "17_CONCRETE_COMMON_RULES__FULL_100_NOT_CLAIMED",
   "rules": [
@@ -184,10 +184,10 @@
     },
     {
       "id": "RD-LTX-CORE-017",
-      "key": "THREE_SUBMISSION_REPRESENTATIONS_ONE_SCIENTIFIC_REVISION",
-      "summary": "Deliver owner LaTeX source, compiled PDF and native editable submission Google Doc from the same admitted revision. Require content, equation/table/figure, reference, exact-format and page-by-page pagination parity; keep working records separate and preserve live IDs with numbered PRE/POST and restoration history.",
+      "key": "LATEX_PDF_REQUIRED_NATIVE_GOOGLE_DOC_OPT_IN",
+      "summary": "Deliver owner LaTeX source and compiled PDF from the same admitted scientific revision. A native editable submission Google Doc is strictly OPTIONAL and may only be created or linked by a separate explicit user request; when separately commissioned, its own content, format, equations, figures and page parity must be verified independently. Preserve live IDs, numbered PRE/POST and restoration history for artifacts actually changed.",
       "scope": "ALL_RESEARCHERS",
-      "implementation": "DELIVERABLE_CONTRACT_AND_RECEIPT_CONSISTENCY_GATE__PROJECT_CONVERSION_AND_RENDER_QA_SEPARATE",
+      "implementation": "REQUIRED_LATEX_AND_PDF_WITH_OPTIONAL_REQUEST_ONLY_GOOGLE_DOC__PROVIDER_READBACK_AND_RESEARCHER_RECEIPTS",
       "provenance": [
         "controls/academic-writing/research-deliverables.json",
         "docs/RESEARCHER_DELIVERABLES_READ_FIRST.md"
