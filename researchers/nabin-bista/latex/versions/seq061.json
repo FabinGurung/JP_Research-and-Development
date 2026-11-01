@@ -80,7 +80,9 @@
     "Existing Block 3–6 raster images may retain old in-image source-workbook labels; image content was not altered.",
     "The existing native Google Doc remains behind the LaTeX/PDF sequence."
   ],
-  "branch": "thesis/nabin-bista/latex/seq061-layout-consolidation",
+  "branch": "researcher/nabin-bista/latex-seq061-layout",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
-  "style_blob_sha": "9e525392d5959d808a1545cc792adc0a777190e3"
+  "style_blob_sha": "9e525392d5959d808a1545cc792adc0a777190e3",
+  "release_pr_branch": "researcher/nabin-bista/latex-seq061-layout",
+  "branch_reconciliation": "Replacement for PR #116 because thesis/ branch sequence allocator requires a separate canonical ledger reservation; this owner-scoped branch preserves identical manuscript source and evidence without cross-researcher edits."
 }
