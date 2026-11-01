@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "lane": "latex",
+  "sequence": 61,
+  "release_id": "LATEX_SEQ061",
+  "parent_release_id": "LATEX_SEQ060",
+  "status": "WORKING_PDF_AND_SOURCE_PUBLISHED",
+  "scientific_approval": null,
+  "submission_certified": false,
+  "date_local": "2026-11-01",
+  "shared_template": {
+    "version": "2.6.3",
+    "commit": "e931bf19d1c646bd6b125f1adfed24995ac57a1d",
+    "global_rule": "RD-LTX-CHG-122",
+    "source_path": "controls/latex/template/pumlsc-shared.sty",
+    "note": "GitHub researcher source inherits the exact global .sty. Compiled local ZIP was built using source-compatible TOC macro mirroring the global change; full clean Git source rebuild under central .sty not independently certified."
+  },
+  "change_scope": [
+    "Abstract shortened to one printed page; source-backed numbers and claims retained",
+    "Duplicate architectural plan removed from Chapter 3; original plan remains in Appendix 2 Figure 2.1",
+    "Six original Block 1–6 2D figure PDFs set as three side-by-side pairs, no scientific image assets modified",
+    "36 existing displacement, drift, and fragility figure references relocated to corresponding Chapter 4 sections; all 36 original source assets and labels preserved",
+    "Table of Contents chapters rendered on separate CHAPTER n and title lines, no chapter page numbers; section page numbers retained"
+  ],
+  "figure_relocation": {
+    "displacement_4_3": 6,
+    "drift_4_4": 6,
+    "fragility_4_8": 24
+  },
+  "file_edits": [
+    "10_abstract.tex",
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex",
+    "main.tex"
+  ],
+  "file_continuity": {
+    "parent_files_removed": 0,
+    "previous_total_entries": 340,
+    "previous_entries_with_unchanged_bytes": 320,
+    "old_appendix_source_retained": "30_results_from_plot_zip_seq051.tex",
+    "content_study_values_changed": 0
+  },
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "pages": 93,
+    "sha256": "512119fe61de7da0cb3cb75318632560d1a5b328e32cffff94a0bf771e9a1fb5",
+    "file_size_bytes": 13121476,
+    "qa": "XELATEX_BIBTEX_3_PASSES__TIMES_NEW_ROMAN_EMBEDDED__ABSTRACT_ONE_PAGE__NO_UNDEFINED_REFERENCES"
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "ffb4701dc5861c4c742b3d96e9d2505ccf779e81b93d1328b54b3696f7281e2d",
+    "file_size_bytes": 93476931,
+    "entries": 343,
+    "zip_crc": "PASS",
+    "original_entries_missing": 0
+  },
+  "native_google_doc": {
+    "permanent_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
+    "latest_content": "OLDER_VERSION__NOT_SYNCHRONIZED_TO_SEQ061",
+    "exact_parity": "NOT_CERTIFIED"
+  },
+  "pre": {
+    "sequence": 60,
+    "pdf_id": "1kpVL-aB0UxXW3NWwQe38MKf_yWYFmBh5",
+    "source_zip_id": "1E5K6CrSlv5wqF6XcPVfEjhh7tFzLhoji",
+    "native_doc_id": "1ulicYKGJ8tSLNA_tRrKtAbyjCX7an_JtEFTXkqn782I"
+  },
+  "post": {
+    "sequence": 61,
+    "pdf_id": "1R5UVQtr5ChGsGLvk1kMi9no8DH_lwN_3",
+    "source_zip_id": "1wf9NLBFKJtHHc4vlkZdhCEF4wP3tPt3V",
+    "qa_json_id": "1KurgLdzUSFC3CX8nWH2SoH_3cVEWhlf3"
+  },
+  "notes": [
+    "Figure numbering is automatically regenerated in Chapter 3 and Chapter 4 after relocating figures; archived historical Figure 5.8–5.43 numbers are not retained as current numbers.",
+    "The Figure 3.2 duplicate plan is removed; following images naturally re-enumerate (3D Block 1 is current Figure 3.2).",
+    "Existing Block 3–6 raster images may retain old in-image source-workbook labels; image content was not altered.",
+    "The existing native Google Doc remains behind the LaTeX/PDF sequence."
+  ]
+}
