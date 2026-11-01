@@ -119,7 +119,7 @@ def validate_receipt(m, contract, owners):
                 require(type(a.get("page_count")) is int and a["page_count"] > 0 and a["page_count"] == indexed["submission_pdf"].get("page_count"), "pagination mismatch")
     require(len(native_ids) == len(set(native_ids)), "submission, audit, discussion and other roles must not alias the same provider file")
     if m["bundle_ready"]:
-        require(all(indexed[r]["state"] == "SUBMISSION_READY" for r in contract["submission_bundle_roles"]), "incomplete three-format bundle")
+        require(all(indexed[r]["state"] == "SUBMISSION_READY" for r in contract["submission_bundle_roles"]), "incomplete required LaTeX/PDF bundle")
     events = m.get("version_events")
     require(isinstance(events, list), "version_events must be an array")
     changed = m.get("changed_roles")
