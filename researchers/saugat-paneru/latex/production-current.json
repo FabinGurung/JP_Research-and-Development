@@ -2,10 +2,10 @@
   "schema_version": "1.0.0",
   "researcher_id": "RSH-002",
   "researcher": "Saugat Paneru",
-  "production_release_id": "SAUGAT_LATEX_SEQ032_USER_DESIGNATED_CURRENT_20261101__SOURCE_OVERLAY_BRIDGE",
+  "production_release_id": "SAUGAT_LATEX_SEQ032_USER_DESIGNATED_CURRENT_20261101__FULL_SOURCE_SAME_ID_SYNC_VERIFIED",
   "release_version": "LATEX_SEQ032",
   "promoted_date_npt": "2026-11-01",
-  "status": "CURRENT_USER_DESIGNATED__FULL_032_PDF_UPDATED_SAME_ID__SOURCE_OVERLAY_IN_CURRENT__ZIP_SAME_ID_REBUILD_HOLD__ACADEMIC_SELF_QA_OPEN",
+  "status": "CURRENT_USER_DESIGNATED__SEQ032_PDF_AND_FULL_SOURCE_ZIP_SAME_ORIGINAL_IDS_SYNCED__ACADEMIC_SELF_QA_OPEN",
   "scientific_checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
   "scientific_content_status": "CP114_UNCHANGED__NO_NEW_ETABS_RESULTS__ACADEMIC_APPROVAL_NOT_INFERRED",
   "new_production": {
@@ -18,12 +18,12 @@
     "font": "Tinos 180dpi-optimized self-QA; exact Times New Roman not yet available",
     "pdf_provider_readback": "PASS_ID_SIZE_NAME_PARENT",
     "source_zip_drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
-    "source_zip_current_bytes": "STILL_OLD_SEQ031_R2__OVERLAY_REQUIRED__NOT_STANDALONE_SEQ032",
+    "source_zip_current_bytes": "SEQ032_254_FILE_STANDALONE_ARCHIVE__FULL_SAME_ORIGINAL_ID_SYNC_VERIFIED",
     "source_overlay_drive_id": "1ky4iHsDnaygfxiXZC2fItYzaICK3Nx5C",
     "source_overlay_sha256": null,
     "overlay_reconstruction": "PASS_254_OF_254_FILES__47_CHANGED__7_REMOVED_OLD_PLAN_PDFS",
     "standalone_seq032_source_sha256": "f81156482ce221efa862f084ca462dd23e404d89f2d11124aee6bac55b3d68eb",
-    "standalone_seq032_source_zip_drive_sync": "NOT_DONE",
+    "standalone_seq032_source_zip_drive_sync": "COMPLETE_VERIFIED",
     "source_zip_entries": 254,
     "old_source_zip_base_sha256": "7d44bc10d6c23d351c9c83a5aab20f68192fcca72534d0c016b74ad660663a90",
     "release_folder_id": "1ZT2uxSMo6jbfezsXLT9twwDnadDqsvlw",
@@ -32,7 +32,7 @@
     "source_photo_archive_id": "1WHBJ0avEWxRFTMwfaQkRL9B_8ZDJXR7s",
     "review_docx_archive_id": "1AGyv2p_JjblW0R35K-CtJcvi8ocHO5i7",
     "post_pdf_archive_id": "1CUMxfzAVj2xaWMGHzkTvTWEfEtVbMNyB",
-    "post_checkpoint_archive_id": "1GclztwuBhAgBCU8z-1QSJWs7bwkEFxYF",
+    "post_checkpoint_archive_id": "1sbOfYp3WHi3nz0TQoVLKq0wbXBvvHAQN",
     "old_seq031_r2_pre_archive_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V",
     "native_google_doc_drive_id": "1P_4MFr3WDjkhg_vJQ0YRbqYGMSoUtqSAex-yEaxGgTs",
     "native_google_doc_parity": "OLDER_CONTENT_NOT_SEQ032",
@@ -43,7 +43,14 @@
     "figure_3_3_pdf_page": 46,
     "figure_3_4_pdf_page": 47,
     "figure_3_5_pdf_page": 48,
-    "table_4_4_pdf_page": 60
+    "table_4_4_pdf_page": 60,
+    "source_zip_name": "Saugat_SEQ032_COMPLETE_LATEX_CURRENT.zip",
+    "source_zip_bytes": 59128026,
+    "source_zip_sha256": "f81156482ce221efa862f084ca462dd23e404d89f2d11124aee6bac55b3d68eb",
+    "source_zip_provider_readback": "PASS_ORIGINAL_ID_NAME_BYTES_PARENT_FULL_RAW_DOWNLOAD_SHA256_254_VALID_ZIP_ENTRIES",
+    "post_source_zip_archive_id": "179oiMs5A973CBju1yWdNanKYwWoPzYL0",
+    "source_overlay_status": "SUPERSEDED_MOVED_TO_ARCHIVE_WITH_SAME_ID",
+    "source_overlay_archive_parent_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
   },
   "format_changes": {
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
@@ -55,7 +62,7 @@
   "accepted_authorization": {
     "source": "USER_DIRECT_CHAT_2026_11_01",
     "decision": "LATEST_LATEX_SEQ032_MUST_BE_WORKING_CURRENT_AUTOMATICALLY__RESEARCHER_SELF_QA",
-    "scope": "PDF_SAME_ID_CURRENT_WITH_SOURCE_OVERLAY_AND_EXPLICIT_STANDALONE_ZIP_SYNC_HOLD",
+    "scope": "SEQ032_FULL_PDF_AND_SOURCE_ZIP_SAME_ID_CURRENT__ACADEMIC_HOLDS_OPEN",
     "scientific_model_certification": false,
     "university_certificate_signed": false,
     "full_144_rule_format_certification": false,
@@ -195,7 +202,7 @@
     "complete_ETABS_replay": "NOT_PERFORMED",
     "whole_pdf_manual_visual_zoom": "SAMPLE_ONLY",
     "meaning": "These are academic release holds, not vetoes on user-directed operational CURRENT designation",
-    "source_zip_original_id_sync": "OPEN__OVERLAY_VERIFIED_COMPLETE_RECONSTRUCTION",
+    "source_zip_original_id_sync": "CLOSED_20261101__EXACT_254_FILE_SEQ032_SOURCE_POST_AND_RAW_READBACK",
     "exact_times_new_roman": "OPEN",
     "manuscript_own_22_comments": "9_COMPLETE_11_PARTIAL_2_BLOCKED"
   },
@@ -221,5 +228,9 @@
     "full_pu_144_format_certification": "OPEN",
     "supervisor_signatures_and_science_approval": "NOT_CONFIRMED",
     "pointer_provider_readback": "CURRENT_SEQ031_R2_TEXT_EXACT_EQUALS_POST_ARCHIVE"
-  }
+  },
+  "archive_post_source_zip_id": "179oiMs5A973CBju1yWdNanKYwWoPzYL0",
+  "archive_pre_checkpoint_seq032_sync_id": "1f5f-yEc_H9t2-3Z4_KM2I3B_hqvmJIkl",
+  "archive_post_checkpoint_seq032_sync_id": "1sbOfYp3WHi3nz0TQoVLKq0wbXBvvHAQN",
+  "publication_note": "Operational CURRENT self-QA; exact Times New Roman, native Doc parity, PU 144 and independent ETABS still open. PDF optimized preview font Tinos."
 }
