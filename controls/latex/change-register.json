@@ -541,7 +541,8 @@
       "scientific_boundary": "No researcher scientific content changed",
       "disposition": "PROPOSED",
       "git_commit_sha_after_merge": null,
-      "qa_evidence": "Standalone XeLaTeX TOC two-pass test succeeded, chapter 1 and 2 appear split with no page number; owner integrated build pending."
+      "qa_evidence": "Standalone XeLaTeX TOC two-pass test succeeded, chapter 1 and 2 appear split with no page number; owner integrated build pending.",
+      "before_after_qa_evidence": "Two-pass XeLaTeX reproduction of the shared chapter-list formatting with hyperlinks and tocloft: CHAPTER 1 on one line, INTRODUCTION on the next, no chapter page; section entries retain page. Owner Nabin SEQ061 full build and Saugat visual parity separately to follow. PRE SEQ060 central Drive archive created before changes."
     }
   ],
   "required_fields": [
