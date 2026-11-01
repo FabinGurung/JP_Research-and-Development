@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6.2 dotless navigation audited academic formatting for all owner submissions]
+\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6.3 two-line chapter headings and dotless navigation audited academic formatting for all owner submissions]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -182,4 +182,22 @@
   }{}%
 }
 \AtBeginDocument{\PUEnforceDotlessNavigation}
+\makeatother
+
+
+% RD-LTX-CHG-122: chapter entries in the TOC show CHAPTER n on one line,
+% chapter title on the next, and no chapter page number. Section and subsection
+% entries continue to show their actual page numbers. Generalized across owners.
+\makeatletter
+\newcommand{\PUApplyTwoLineChapterTOC}{%
+  \renewcommand*{\l@chapter}[2]{%
+    \par\addvspace{0.8em}%
+    \noindent\begin{minipage}{\linewidth}%
+    \raggedright\bfseries\fontsize{12}{14}\selectfont
+    \begingroup\def\numberline####1{CHAPTER~####1\\}%
+    ##1\endgroup\par
+    \end{minipage}\par
+  }%
+}
+\AtBeginDocument{\PUApplyTwoLineChapterTOC}
 \makeatother
