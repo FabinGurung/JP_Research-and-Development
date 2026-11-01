@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 36,
+  "parent_sequence": 35,
+  "request_key": "saugat:seq036-20261101",
+  "status": "EDITING",
+  "branch": "thesis/saugat-paneru/latex/seq036-comprehensive-qa",
+  "scientific_baseline": "CP114_UNCHANGED__NO_ETABS_REPLAY",
+  "drive_current_expected_sequence": 35,
+  "drive_stable_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU"
+  },
+  "a7_pre": {
+    "ordinal": 14,
+    "pdf_id": "1WLXayULnCQrKJkbNIISArpdTzU-HFd0d",
+    "zip_id": "19Ra9TM382aAlcSdSKsIsR9pYY-teRxr7",
+    "checkpoint_id": "1NLttN1Qh1UdxhTm9Q965oA1n3xrahaDX",
+    "checklist_id": "1hQmEDPAQs4xk44FZSMWPKRaSQZUMo2Rc",
+    "folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
+  },
+  "pdf": {
+    "pages": 129,
+    "format": "A4",
+    "size": 52127476,
+    "sha256": "a149b89f5912406861347bcee2ef7c5a86373ef1aa2667a206c74e99b8ab3993",
+    "status": "LOCAL_QA_PASS__NOT_DRIVE_CURRENT"
+  },
+  "source_zip": {
+    "entries": 332,
+    "size": 63969835,
+    "sha256": "6c66202dabc6b7c336430d7709f70b81f346da7bc3538b66e774a0edc0af9009",
+    "zip_integrity": "PASS",
+    "status": "LOCAL_QA_PASS__NOT_DRIVE_CURRENT"
+  },
+  "scientific_inputs": {
+    "legacy_csv_xlsx_unchanged": 20,
+    "missing_capacity": "L1_Y_SOIL_D_Z0.35",
+    "etabs_replay": "NOT_DONE",
+    "torsional_ratio": "SOURCE_BLOCKED"
+  },
+  "gates": {
+    "native_docs_parity": "OPEN",
+    "pu144_manual": "OPEN",
+    "academic_signoffs": "OPEN"
+  },
+  "a7_discipline": "PRE_RECORDED_NO_POST_UNTIL_PROVIDER_WRITE_READBACK",
+  "qa_report": "researchers/saugat-paneru/latex/qa/SEQ036_A7_FULL_QA_AND_DEBT_20261101.md",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "publication_status": "LOCAL_QA_COMPLETE__LIVE_DRIVE_SEQ035_UNTIL_SAME_ID_UPLOAD_VERIFIED"
+}
