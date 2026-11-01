@@ -6,7 +6,7 @@
   "sequence": 61,
   "release_id": "LATEX_SEQ061",
   "parent_release_id": "LATEX_SEQ060",
-  "status": "WORKING_PDF_AND_SOURCE_PUBLISHED",
+  "status": "QA_CANDIDATE",
   "scientific_approval": null,
   "submission_certified": false,
   "date_local": "2026-11-01",
@@ -79,5 +79,8 @@
     "The Figure 3.2 duplicate plan is removed; following images naturally re-enumerate (3D Block 1 is current Figure 3.2).",
     "Existing Block 3–6 raster images may retain old in-image source-workbook labels; image content was not altered.",
     "The existing native Google Doc remains behind the LaTeX/PDF sequence."
-  ]
+  ],
+  "branch": "thesis/nabin-bista/latex/seq061-layout-consolidation",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "9e525392d5959d808a1545cc792adc0a777190e3"
 }
