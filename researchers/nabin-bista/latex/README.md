@@ -32,3 +32,8 @@ The already completed six-2D-figure and cover-logo manuscript state is **LATEX_S
 ## Working thesis release — LATEX_SEQ060 (2026-11-01)
 
 The latest working **compiled PDF and complete source ZIP** are registered as [LATEX_SEQ060](versions/seq060.json), child of SEQ059, with numbered PRE/POST restoration. The [CURRENT pointer](versions/CURRENT.json) preserves stable live Drive IDs. Scope: four Nabin Block 1–2 appendix displacement/drift plots and corresponding captions; no other scientific changes. The native Google Doc is still at SEQ059 and Blocks 3–6 raster plot labels remain on hold; consult the [internal release audit](releases/SEQ060_BLOCK1_BLOCK2_PROFILE_CLEANUP_20261101.md). Previously accepted scientific versions remain separately governed.
+
+
+## New working manuscript LATEX_SEQ061 (2026-11-01)
+
+[Version 061](versions/seq061.json) is the latest working PDF/LaTeX, reusing all permanent Drive IDs and preserving sequence 060 under numbered 000007 PRE snapshots. Four source files were edited in place: single-page Abstract, removal of duplicate Chapter 3 plan, six 2D blocks paired two per page, and 36 response/fragility plots rehomed under Chapter 4. Global shared format v2.6.3 applies two-line chapter headings without chapter page numbers in TOC. [Release and recovery](releases/SEQ061_CHAPTER_TOC_AND_FIGURE_PLACEMENT_20261101.md). Native Google Doc exact parity remains pending. No new numerical scientific values were introduced.
