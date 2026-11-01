@@ -112,6 +112,18 @@
           "main_sha_at_reservation": "f1d1588b31ed9af4b0ebfea3ab4e8d147730748b",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "User-directed SEQ035 surgical scope; 000013_PRE PDF/ZIP/checkpoint/checklist safely archived in Drive; same permanent IDs and CURRENT/ARCHIVE only; supplied abstract, capacity Excel, validation photos, chart consistency, original science values preserved."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 36,
+          "branch": "thesis/saugat-paneru/latex/seq036-comprehensive-qa",
+          "status": "RESERVED",
+          "request_key": "saugat:seq036-20261101",
+          "created_at_utc": "2026-11-01T15:00:00Z",
+          "main_sha_at_reservation": "8491123da83e97eb24630cc1c5443c1826932ab2",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "User-requested A7 full-format/source guards and remaining SEQ035 debt closeout; PRE 000014 original PDF/ZIP/checkpoint/checklist archived with stable live IDs, no candidate folders; independent ETABS and native Doc parity must not be falsely certified."
         }
       ]
     },
