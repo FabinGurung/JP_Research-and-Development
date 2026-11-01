@@ -7,7 +7,7 @@
   "parent_sequence": 33,
   "source_baseline": "LATEX_SEQ033_USER_DESIGNATED_CURRENT",
   "branch": "thesis/saugat-paneru/latex/seq034-torsion-tnr-nbc-roll",
-  "status": "RELEASED_USER_DESIGNATED_CURRENT_WITH_OPEN_ACADEMIC_REVIEW",
+  "status": "RELEASED",
   "request_key": "saugat:seq034-20261101",
   "template": {
     "path": "controls/latex/template/pumlsc-shared.sty",
@@ -69,5 +69,8 @@
     "github_reservation_pr": 127,
     "github_source_pr": "TO_BE_CREATED"
   },
-  "restoration": "Restore archived PRE bytes into original permanent Drive PDF ZIP and checkpoint IDs, never replace live provider IDs with archive copy IDs."
+  "restoration": "Restore archived PRE bytes into original permanent Drive PDF ZIP and checkpoint IDs, never replace live provider IDs with archive copy IDs.",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4"
 }
