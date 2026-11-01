@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 122,
+  "next_number": 123,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -526,6 +526,23 @@
       "global_propagation": "NO_CODE_CHANGE__SHARED_STY_REMAINS_V262",
       "scientific_boundary": "NO_SCIENCE_OR_COVER_APPROVAL_IMPLIED",
       "classification_detail": "GOVERNANCE_ONLY_SOURCE_VS_USER_FORMAT_DISCREPANCY__NO_STYLE_CODE_CHANGE"
+    },
+    {
+      "change_id": "RD-LTX-CHG-122",
+      "researcher_id": "RSH-003",
+      "classification": "GLOBAL_CANDIDATE",
+      "summary": "Require chapter TOC entries on two lines (CHAPTER n, then title) without chapter page number, retaining dotless section/subsection entries and their page numbers. Source case: Nabin SEQ061, visual reference Saugat Paneru.",
+      "source_paths": [
+        "controls/latex/template/pumlsc-shared.sty",
+        "controls/latex/tower.json"
+      ],
+      "target_shared_rule": "controls/latex/template/pumlsc-shared.sty",
+      "regression_scope": "Global shared template; owner exact-font PDF render verification",
+      "scientific_boundary": "No researcher scientific content changed",
+      "disposition": "PROPOSED",
+      "git_commit_sha_after_merge": null,
+      "qa_evidence": "Standalone XeLaTeX TOC two-pass test succeeded, chapter 1 and 2 appear split with no page number; owner integrated build pending.",
+      "before_after_qa_evidence": "Two-pass XeLaTeX reproduction of the shared chapter-list formatting with hyperlinks and tocloft: CHAPTER 1 on one line, INTRODUCTION on the next, no chapter page; section entries retain page. Owner Nabin SEQ061 full build and Saugat visual parity separately to follow. PRE SEQ060 central Drive archive created before changes."
     }
   ],
   "required_fields": [
