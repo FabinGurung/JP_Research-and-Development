@@ -60,3 +60,21 @@ Date: 2026-11-01 NPT | RSH-002 | parent LATEX_SEQ035.
 A7 POST snapshot and same-ID CURRENT promotion may occur only after the actual validated SEQ036 PDF and ZIP are successfully written to the existing Drive IDs, then retrieved and verified with source ZIP integrity/hash, PDF size/hash and checkpoint readback. No GitHub source merge alone authorizes claiming Drive release. Preserve original live SEQ035 until completed.
 
 Restoration: move chosen PRE bytes into original live IDs without swapping their permanent Drive identities. No deletes, history rewrite, cross-researcher source changes or silent number fabrication.
+
+
+## 2026-11-01 — Post-publication A7 same-ID reconciliation (supersedes pre-publication paragraphs)
+
+The earlier statements in this report that SEQ036 was *not yet live* accurately described the state before publication; they are **historical**, no longer the latest status.
+
+- **CURRENT PDF**: original ID `1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm`, 52,127,476 bytes, SHA-256 `a149b89f5912406861347bcee2ef7c5a86373ef1aa2667a206c74e99b8ab3993`; 129 A4 pages, Times New Roman body.
+- **CURRENT complete ZIP**: original ID `1putkQYpDff50kxycZJ33iPq98lb8I5mh`, 63,969,835 bytes, SHA-256 `6c66202dabc6b7c336430d7709f70b81f346da7bc3538b66e774a0edc0af9009`, 332 entries; integrity verified.
+- **Raw download verification**: both current Drive files were downloaded after successful files.update replacements. Local SHA-256 matches the original compiled PDF and ZIP. ZIP CRC pass. Original parent folder and stable file identities unchanged.
+- **CURRENT checkpoint**: same-ID `1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN`, replaced in place from the verified Markdown receipt; parent remained WORK_CHECKPOINTS/CURRENT.
+- **CURRENT checklist**: same-ID `1EBUKdLVqCplr-InQEj9disYv7eAd3BYU`, replaced in place from the verified markdown; parent remained production CURRENT.
+- **000014_PRE**: already archived the original SEQ035 PDF, ZIP, checkpoint and checklist before mutation.
+- **000014_POST** (archive ID `1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V`):
+  PDF `1DVjVgT5WOYz7rIdRD0f0Ax8bmxbeVzlW`, ZIP `1xV2FSICBsf7hiIGP0JGlRj7L4xQ-UZzM`, checkpoint `16oOAbSuJZVZ52dImFteZEGC4i9rkNBBA`, checklist `1m3ChFIuFk5pH-DOg7ytdOxGDq24Z-SK1`.
+- **Corrected hash caveat**: a previously generated local QA JSON showed `8e408239...` for the ZIP, but Drive raw re-download proves the correct hash is `6c66202d...`. The release manifest and CURRENT pointer use only the verified latter value.
+- **GitHub**: SEQ036 reservation PR #133 and researcher-source PR #134 merged. This post-publication receipt reconciles the production-current pointer and version manifest on protected main.
+
+No independent ETABS replay, native Google Doc content/figure parity, institutional 144-rule signoff, or missing L1/Y Soil D Z0.35 series was invented or certified. These are separate OPEN scientific/academic review gates.

@@ -6,10 +6,10 @@
   "sequence": 36,
   "parent_sequence": 35,
   "request_key": "saugat:seq036-20261101",
-  "status": "EDITING",
+  "status": "RELEASED",
   "branch": "thesis/saugat-paneru/latex/seq036-comprehensive-qa",
   "scientific_baseline": "CP114_UNCHANGED__NO_ETABS_REPLAY",
-  "drive_current_expected_sequence": 35,
+  "drive_current_expected_sequence": 36,
   "drive_stable_ids": {
     "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
     "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
@@ -29,14 +29,14 @@
     "format": "A4",
     "size": 52127476,
     "sha256": "a149b89f5912406861347bcee2ef7c5a86373ef1aa2667a206c74e99b8ab3993",
-    "status": "LOCAL_QA_PASS__NOT_DRIVE_CURRENT"
+    "status": "CURRENT_SAME_ORIGINAL_DRIVE_ID__RAW_SHA256_VERIFIED"
   },
   "source_zip": {
     "entries": 332,
     "size": 63969835,
     "sha256": "6c66202dabc6b7c336430d7709f70b81f346da7bc3538b66e774a0edc0af9009",
     "zip_integrity": "PASS",
-    "status": "LOCAL_QA_PASS__NOT_DRIVE_CURRENT"
+    "status": "CURRENT_SAME_ORIGINAL_DRIVE_ID__RAW_SHA256_ZIP_CRC_VERIFIED"
   },
   "scientific_inputs": {
     "legacy_csv_xlsx_unchanged": 20,
@@ -49,10 +49,23 @@
     "pu144_manual": "OPEN",
     "academic_signoffs": "OPEN"
   },
-  "a7_discipline": "PRE_RECORDED_NO_POST_UNTIL_PROVIDER_WRITE_READBACK",
+  "a7_discipline": "000014_PRE_AND_POST_ARCHIVED__ORIGINAL_PDF_ZIP_CHECKPOINT_CHECKLIST_LIVE_IDS_PRESERVED__NO_CANDIDATE_FOLDER",
   "qa_report": "researchers/saugat-paneru/latex/qa/SEQ036_A7_FULL_QA_AND_DEBT_20261101.md",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
   "style_version": "2.6.4",
-  "publication_status": "LOCAL_QA_COMPLETE__LIVE_DRIVE_SEQ035_UNTIL_SAME_ID_UPLOAD_VERIFIED"
+  "publication_status": "CURRENT__SAME_ORIGINAL_DRIVE_IDS_PDF_ZIP_CHECKPOINT_CHECKLIST_PROVIDER_READBACK",
+  "a7_post": {
+    "ordinal": 14,
+    "folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V",
+    "pdf_id": "1DVjVgT5WOYz7rIdRD0f0Ax8bmxbeVzlW",
+    "zip_id": "1xV2FSICBsf7hiIGP0JGlRj7L4xQ-UZzM",
+    "checkpoint_id": "16oOAbSuJZVZ52dImFteZEGC4i9rkNBBA",
+    "checklist_id": "1m3ChFIuFk5pH-DOg7ytdOxGDq24Z-SK1",
+    "source_pdf_zip_raw_hash_verified": true,
+    "source_zip_entry_crc_pass": true
+  },
+  "source_git_pr": 134,
+  "academic_status": "INDEPENDENT_RESEARCHER_SELF_QA_OPEN__NOT_CERTIFIED",
+  "qa_hash_reconciliation_note": "Old QA JSON sha 8e4082... was stale; raw Drive re-download confirms ZIP sha 6c66202dabc6b7c336430d7709f70b81f346da7bc3538b66e774a0edc0af9009"
 }
