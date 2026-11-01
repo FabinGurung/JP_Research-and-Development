@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6.3 two-line chapter headings and dotless navigation audited academic formatting for all owner submissions]
+\ProvidesPackage{pumlsc-shared}[2026/10/31 v2.6.4 two-line chapter TOC with explicit section separation and dotless navigation]
 % One reusable source shared by all researchers; NEVER fork into individual manuscripts.
 % PU source v1.13, full 144-rule source audit: controls/latex/pu-format-parity-audit.json.
 % Format parity/production still require exact-font PDF compilation and every-page render QA.
@@ -196,7 +196,7 @@
     \raggedright\bfseries\fontsize{12}{14}\selectfont
     \begingroup\def\numberline####1{CHAPTER~####1\\}%
     ##1\endgroup\par
-    \end{minipage}\par
+    \end{minipage}\par\addvspace{0.75em}% separation before the first 1.1-type entry
   }%
 }
 \AtBeginDocument{\PUApplyTwoLineChapterTOC}
