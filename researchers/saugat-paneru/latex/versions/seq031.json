@@ -62,7 +62,11 @@
     "source_patch_files": 8,
     "current_working": true,
     "current_pointer_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
-    "current_pointer_readback": "PENDING_STABLE_ID_UPDATE",
-    "original_M4_preserved": true
+    "current_pointer_readback": "LIVE_CONTENT_EQUALS_POST_ARCHIVE__PRIOR_M4_PRE_SNAPSHOT_VERIFIED",
+    "original_M4_preserved": true,
+    "promotion_pr": 113,
+    "promotion_merge_sha": "3c4f0c653f69665524a571b9994c2b6704325288",
+    "prior_current_pre_snapshot_id": "109WQ8GunCuMRAOM_fM2ODinDWXcowrsg",
+    "current_pointer_post_content_archive_id": "1_NfvNwtemL-glMtZyvgneJoiJHbzvpOA"
   }
 }
