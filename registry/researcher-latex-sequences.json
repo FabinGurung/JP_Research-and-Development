@@ -83,7 +83,7 @@
           "sequence": 33,
           "branch": "thesis/saugat-paneru/latex/seq033-current-review-closeout",
           "status": "RESERVED",
-          "request_key": "manual:20261101-saugat-22-review-same-id-no-candidate",
+          "request_key": "saugat:seq033-20261101",
           "created_at_utc": "2026-11-01T08:20:00Z",
           "main_sha_at_reservation": "3a507c9075da2a90c5399438fec3081ec22e769b",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
