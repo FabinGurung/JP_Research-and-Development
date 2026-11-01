@@ -74,8 +74,9 @@
   },
   "version_control": {
     "reservation_pr": 130,
-    "source_pr": "TO_BE_RECORDED",
-    "rollback": "COPY_000013_PRE_BYTES_BACK_INTO_ORIGINAL_LIVE_PROVIDER_IDS_NOT_ARCHIVE_IDS"
+    "source_pr": 131,
+    "rollback": "COPY_000013_PRE_BYTES_BACK_INTO_ORIGINAL_LIVE_PROVIDER_IDS_NOT_ARCHIVE_IDS",
+    "source_merged_sha": "d81dd8896182b4779578d6af6bf127565af95669"
   },
   "academic_status": "INDEPENDENT_RESEARCHER_SELF_QA_OPEN"
 }
