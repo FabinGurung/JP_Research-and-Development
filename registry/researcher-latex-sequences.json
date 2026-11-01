@@ -100,6 +100,18 @@
           "main_sha_at_reservation": "6682dd70757a9481ee2428c414c853b49a693868",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000012_PRE original live PDF, source and checkpoint archived before surgical SEQ034; only cover registration, Fig. 4.5-4.9 presentation and Appendix 2 source extracts changed; full original PDF/ZIP IDs retained; user-designated latest CURRENT with technical academic holds disclosed."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 35,
+          "branch": "thesis/saugat-paneru/latex/seq035-source-correction",
+          "status": "RESERVED",
+          "request_key": "saugat:seq035-20261101",
+          "created_at_utc": "2026-11-01T14:55:00Z",
+          "main_sha_at_reservation": "f1d1588b31ed9af4b0ebfea3ab4e8d147730748b",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "User-directed SEQ035 surgical scope; 000013_PRE PDF/ZIP/checkpoint/checklist safely archived in Drive; same permanent IDs and CURRENT/ARCHIVE only; supplied abstract, capacity Excel, validation photos, chart consistency, original science values preserved."
         }
       ]
     },
