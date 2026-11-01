@@ -6,7 +6,7 @@
   "sequence": 35,
   "parent_sequence": 34,
   "request_key": "saugat:seq035-20261101",
-  "status": "RELEASED_USER_CURRENT__ACADEMIC_REVIEW_OPEN",
+  "status": "RELEASED",
   "branch": "thesis/saugat-paneru/latex/seq035-source-correction",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -76,5 +76,6 @@
     "reservation_pr": 130,
     "source_pr": "TO_BE_RECORDED",
     "rollback": "COPY_000013_PRE_BYTES_BACK_INTO_ORIGINAL_LIVE_PROVIDER_IDS_NOT_ARCHIVE_IDS"
-  }
+  },
+  "academic_status": "INDEPENDENT_RESEARCHER_SELF_QA_OPEN"
 }
