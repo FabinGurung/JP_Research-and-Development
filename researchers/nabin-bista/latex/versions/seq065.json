@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "lane": "latex",
+  "sequence": 65,
+  "release_id": "LATEX_SEQ065",
+  "parent_release_id": "LATEX_SEQ064",
+  "date_local": "2026-11-01",
+  "status": "WORKING_SOURCE_PDF_PUBLISHED__FIGURE_ONLY__SCIENTIFIC_HOLDS_OPEN",
+  "submission_certified": false,
+  "scientific_approval": null,
+  "branch": "researcher/nabin-bista/latex-seq065-figure-reuse-20261101",
+  "scope": [
+    "Reuse 32 previously corrected 11-pt Times New Roman PNG assets from the governed single Drive folder; do not regenerate chart series",
+    "Replace 56 active asset-path copies (24 fragility images in two locations, eight displacement/drift in one) inside the full populated LaTeX project ZIP",
+    "Leave all .tex/.bib and other scientific source data unchanged; existing \\includegraphics paths resolve same filenames",
+    "XeLaTeX three passes and BibTeX8, 107 A4 pages, zero extracted text differences vs 107-page SEQ064"
+  ],
+  "asset_folder_url": "https://drive.google.com/drive/folders/1NzpW0tis24hvh83Q7TaYXSdhqFxzl0Mu",
+  "affected_original_png_count": 32,
+  "physical_referenced_copies_replaced": 56,
+  "images_replotted_in_this_run": false,
+  "tex_modified_files": [],
+  "scientific_source_data_modified_files": [],
+  "image_titles_captions_embedded": false,
+  "chart_text_font": "Times New Roman",
+  "chart_text_point_size": 11,
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "size_bytes": 13612103,
+    "sha256": "78d09ed81bd38ef134cc81a4a98a177c3ddf15eb38eadabca2be2f0dbe5f810b",
+    "pages": 107,
+    "qa": "A4_EXACT_TNR_EMBEDDED__BIBTEX8__NO_UNDEFINED_REFERENCES__ALL_107_EXTRACTED_PAGES_SAME_TEXT_AS_SEQ064__RENDERED_SAMPLES_REVIEWED"
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "size_bytes": 93072807,
+    "sha256": "2077bee376555aef5c00242ecefd54003b084590f4d9a43d92b195569b35d65d",
+    "entries": 349,
+    "zip_crc": "PASS",
+    "tex_files_modified": 0,
+    "additional_audit_filename": "SEQ065_FIGURE_REUSE_AND_BUILD_QA.json",
+    "source_reproducibility": "ORIGINAL_LATEX_SOURCE_TREE_PLUS_REPLACED_FIGURE_PNG_ASSETS; NO PRIVATE_FONT_FILE_IN_ZIP"
+  },
+  "pre": {
+    "ordinal": "000011",
+    "sequence": 64,
+    "pdf_id": "1ZDQa858hcr1vrR2E0-VlCSio7jkhTFkk",
+    "source_zip_id": "1_zLumXmkExY3sLKxpMElvBvuHW4ffPRx"
+  },
+  "post": {
+    "ordinal": "000011",
+    "sequence": 65,
+    "pdf_id": "1Af2ogkjRtMwMn25DIUna5-MzRj4wG9Zc",
+    "source_zip_id": "1guvQc_c-_-oAwphGa2LOKNsp2W_LEbrn",
+    "private_qa_id": "1oQ8HoBioIXgKiiPvFlqUKWajGcJ8bZey"
+  },
+  "native_doc": {
+    "policy": "OPTIONAL_ONLY_ON_SEPARATE_USER_REQUEST",
+    "updated": false
+  },
+  "scientific_holds_inherited_from_seq064": true,
+  "original_research_approval": "NOT_CLAIMED",
+  "git_status_note": "STACKED_PR_ON_SEQ064_UNMERGED_BRANCH__MAIN_STILL_SEQ063_UNTIL_REQUIRED_PROTECTED_MERGES",
+  "rollback": "Copy numbered 000011 PRE PDF and ZIP bytes back to two permanent live Drive IDs; append restored event; no deletion or history rewrite."
+}
