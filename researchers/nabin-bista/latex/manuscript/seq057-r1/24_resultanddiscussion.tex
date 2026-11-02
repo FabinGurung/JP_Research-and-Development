@@ -604,6 +604,32 @@ Beam and column force envelopes vary with the foundation-support condition. Bloc
 \label{fig:fragility_input_spectra}
 \end{figure}
 \FloatBarrier
+
+\begin{table}[htbp]
+\centering
+\caption{Ground-motion peak acceleration and sampling interval preserved from the SEQ049 twelve-record schedule}
+\label{tab:seq068_legacy_ground_motion_records}
+\renewcommand{\arraystretch}{1.07}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Earthquake record & PGA ($g$) & $\Delta t$ (s) \\
+\midrule
+Chi-Chi & 0.3610 & 0.010 \\
+Friuli & 0.3513 & 0.010 \\
+Hollister & 0.1948 & 0.010 \\
+Imperial Valley & 0.3152 & 0.010 \\
+Kobe & 0.3447 & 0.010 \\
+Kocaeli & 0.3490 & 0.010 \\
+Landers & 0.7803 & 0.010 \\
+Loma Prieta & 0.3674 & 0.010 \\
+Northridge & 0.5683 & 0.010 \\
+San Fernando & 0.02576 & 0.005 \\
+Trinidad & 0.1936 & 0.010 \\
+Gorkha earthquake & 0.0876 & 0.010 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\noindent The PGA entries and sampling intervals are transcribed from the SEQ049 record schedule, preserving the San Fernando value of 0.02576 $g$ and Gorkha value of 0.0876 $g$. Event names and unit labels are supplied by that historical record; independent ground-motion waveform identity, component orientation and scale-factor reconciliation remain outstanding.\par\FloatBarrier
 The selected earthquake motions are described by their peak ground acceleration in Figure~\ref{fig:fragility_input_pga}. The response spectra of the eleven comparison accelerograms are shown separately in Figure~\ref{fig:fragility_input_spectra}. The Gorkha component is included in the twelve-record PGA comparison and is presented separately as an acceleration time history in the appendix.
 
 
@@ -672,8 +698,8 @@ The fragility illustrations retain the evaluated intensity and exceedance-probab
 {\fontsize{12}{14}\selectfont Fixed support\par}
 \end{minipage}
 \par\vspace{0.5em}
-\includegraphics[width=\textwidth]{figures/seq067/fragility_damage_state_key.pdf}
-\caption{X-direction fragility response illustrations for hospital Block 2 under fixed, hard-, medium- and soft-support conditions.}
+\includegraphics[width=\textwidth]{figures/seq068/B2_fragility_all_supports.pdf}
+\caption{X-direction fragility response illustrations for hospital Block 2 under fixed, hard-, medium- and soft-support conditions; the fifth panel overlays all sixteen existing curves using colour for damage state and line style for support condition.}
 \label{fig:seq064_composite_fragility_block2}
 \end{figure}
 \FloatBarrier
@@ -704,8 +730,8 @@ The fragility illustrations retain the evaluated intensity and exceedance-probab
 {\fontsize{12}{14}\selectfont Fixed support\par}
 \end{minipage}
 \par\vspace{0.5em}
-\includegraphics[width=\textwidth]{figures/seq067/fragility_damage_state_key.pdf}
-\caption{X-direction fragility response illustrations for hospital Block 3 under fixed, hard-, medium- and soft-support conditions.}
+\includegraphics[width=\textwidth]{figures/seq068/B3_fragility_all_supports.pdf}
+\caption{X-direction fragility response illustrations for hospital Block 3 under fixed, hard-, medium- and soft-support conditions; the fifth panel overlays all sixteen existing curves using colour for damage state and line style for support condition.}
 \label{fig:seq064_composite_fragility_block3}
 \end{figure}
 \FloatBarrier
@@ -736,8 +762,8 @@ The fragility illustrations retain the evaluated intensity and exceedance-probab
 {\fontsize{12}{14}\selectfont Fixed support\par}
 \end{minipage}
 \par\vspace{0.5em}
-\includegraphics[width=\textwidth]{figures/seq067/fragility_damage_state_key.pdf}
-\caption{X-direction fragility response illustrations for hospital Block 4 under fixed, hard-, medium- and soft-support conditions.}
+\includegraphics[width=\textwidth]{figures/seq068/B4_fragility_all_supports.pdf}
+\caption{X-direction fragility response illustrations for hospital Block 4 under fixed, hard-, medium- and soft-support conditions; the fifth panel overlays all sixteen existing curves using colour for damage state and line style for support condition.}
 \label{fig:seq064_composite_fragility_block4}
 \end{figure}
 \FloatBarrier
@@ -768,8 +794,8 @@ The fragility illustrations retain the evaluated intensity and exceedance-probab
 {\fontsize{12}{14}\selectfont Fixed support\par}
 \end{minipage}
 \par\vspace{0.5em}
-\includegraphics[width=\textwidth]{figures/seq067/fragility_damage_state_key.pdf}
-\caption{X-direction fragility response illustrations for hospital Block 5 under fixed, hard-, medium- and soft-support conditions.}
+\includegraphics[width=\textwidth]{figures/seq068/B5_fragility_all_supports.pdf}
+\caption{X-direction fragility response illustrations for hospital Block 5 under fixed, hard-, medium- and soft-support conditions; the fifth panel overlays all sixteen existing curves using colour for damage state and line style for support condition.}
 \label{fig:seq064_composite_fragility_block5}
 \end{figure}
 \FloatBarrier
@@ -800,11 +826,22 @@ The fragility illustrations retain the evaluated intensity and exceedance-probab
 {\fontsize{12}{14}\selectfont Fixed support\par}
 \end{minipage}
 \par\vspace{0.5em}
-\includegraphics[width=\textwidth]{figures/seq067/fragility_damage_state_key.pdf}
-\caption{X-direction fragility response illustrations for hospital Block 6 under fixed, hard-, medium- and soft-support conditions.}
+\includegraphics[width=\textwidth]{figures/seq068/B6_fragility_all_supports.pdf}
+\caption{X-direction fragility response illustrations for hospital Block 6 under fixed, hard-, medium- and soft-support conditions; the fifth panel overlays all sixteen existing curves using colour for damage state and line style for support condition.}
 \label{fig:seq064_composite_fragility_block6}
 \end{figure}
 \FloatBarrier
+\FloatBarrier
+
+
+\subsection*{Historical prototype pushover-capacity comparison}
+The original SEQ049 capacity curves are retained below from the separate earlier prototype pushover workbook. These X- and Y-direction curves show reported roof displacement against base shear for the four foundation-support cases, but their prototype identity is not established as equivalent to any of the six separately modelled hospital blocks. They are therefore presented as historical source-derived capacity results and are not combined with the six-block demand and fragility estimates.
+\begin{figure}[p]
+\centering
+\includegraphics[width=\textwidth,height=0.79\textheight,keepaspectratio]{figures/seq068/SEQ049_prototype_pushover_XY_recovered.pdf}
+\caption{Original-prototype pushover capacity curves in the X and Y directions for fixed-, hard-, medium- and soft-support conditions, reconstructed from the preserved SEQ049 spreadsheet}
+\label{fig:seq068_legacy_pushover_capacity}
+\end{figure}
 \FloatBarrier
 
 \paragraph{Fixed-to-soft response changes.} For Block~1, X-direction uppermost-storey displacement increases from 59.39 to 110.92~mm (86.8\%). Block~2 Y-direction displacement increases from 43.41 to 70.97~mm (63.5\%), while Block~6 Y-direction maximum storey shear increases from 3,465.8 to 3,855.6~kN (11.2\%). These quantities do not respond by a common scaling factor, and the gravity-load member forces belong to a different load combination.
@@ -910,6 +947,25 @@ Soft & 0.088 & 0.401 \\
 \end{table}
 The dispersion values include the 0.4 model-uncertainty term used in the twelve-record calculation. They are not fitted logarithmic dispersions derived independently for the six individual block models.
 
+\begin{table}[htbp]
+\centering
+\caption{Five original SEQ049 mean PGA thresholds for the legacy twelve-record calculation, kept separate from the four-state block comparisons}
+\label{tab:seq068_legacy_five_state_thresholds}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Support & OP ($g$) & IO ($g$) & DC ($g$) & LS ($g$) & CP ($g$) \\
+\midrule
+Fixed & 0.1416 & 0.2828 & 0.4241 & 0.5653 & 0.7066 \\
+Hard & 0.1343 & 0.2688 & 0.4034 & 0.5379 & 0.6724 \\
+Medium & 0.1104 & 0.2203 & 0.3301 & 0.4399 & 0.5497 \\
+Soft & 0.0880 & 0.1747 & 0.2614 & 0.3481 & 0.4348 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\noindent The original SEQ049 five-level categories were OP, IO, DC, LS and CP, whereas the present block-specific workbook curves use IO, LS, CP and C with different threshold definitions. These tables describe different calculation records, not equivalent damage-state classifications. Values above the original studied PGA range are not newly verified nonlinear extrapolations.\par\FloatBarrier
+
+
 \section{Comparison with Published Soil--Structure Interaction Studies}
 
 Dhakal and Chaulagain \cite{dhakal2023} examined regular and plan-irregular reinforced-concrete buildings supported on hard, medium and soft soils using response-spectrum analysis and a linear Winkler foundation representation. They reported longer fundamental periods and greater storey displacement and drift when soil flexibility was included, together with a reduction in base shear in their studied configurations. The present six-block hospital assessment shows the same overall period-lengthening and displacement trends. However, the base-shear results do not show a consistent reduction in every block. This difference is important: the force response depends on the structural configuration, support idealization and particular response measure, not on period lengthening alone.
@@ -941,8 +997,7 @@ Block & $u_X$ & $u_Y$ & Drift X & Drift Y & Shear X & Shear Y & Beam $V_2$ \\
 2 & +30.8 & +63.5 & +23.8 & +39.8 & +1.8 & +9.0 & +22.5 \\
 3 & +7.5 & +9.3 & +6.5 & +7.8 & +1.4 & +2.4 & +0.4 \\
 4 & +17.0 & +18.7 & +19.1 & +23.9 & +3.9 & +3.7 & -1.8 \\
-5 & +22.4 & +47.9 & +21.5 & +47.4 & +10.1 & +7.1 & +6.0 \\
-6 & +16.8 & +23.4 & +24.2 & +19.8 & +3.5 & +11.2 & -4.5 \\
+5 & +22.4 & +47.9 & +21.5 & +47.4 & +10.1 & +7.1 & +6.0 \\6 & +16.8 & +23.4 & +24.2 & +19.8 & +3.5 & +11.2 & -4.5 \\
 \end{longtable}
 
 Displacement, drift and storey shear refer to response-spectrum quantities; beam shear refers to $1.2DL+1.5LL$. Full precision was used before rounding the displayed changes to one decimal place. An increase in uppermost-storey displacement need not produce an increase in maximum inter-storey drift, because drift depends on relative displacement between adjacent levels. For Block~1, Y drift falls from 0.467\% to 0.446\% at medium support while uppermost-storey Y displacement increases; a change in deformation profile is consistent with this combination, but its modal mechanism requires storey-by-storey verification. The gravity beam-shear envelope falls by 1.8\% in Block~4 and 4.5\% in Block~6 from fixed to soft support. Foundation flexibility can redistribute gravity actions and change the governing member; without tracking the member stations, these decreases cannot be interpreted as a general seismic benefit.
