@@ -382,6 +382,31 @@ For applicability assessment, the performance-point comparison shows that irregu
 
 \input{cp112_additions/ch4_pp_hinge.tex}
 
+\par\medskip
+\noindent The T-, U- and Non-Parallel plan models are assessed individually before the seven-model synthesis. Under Soil Type C at $Z=0.40$, the largest ULS drift occurs at Story~2. The U-shaped model attains 0.004954 in the X direction, compared with 0.004041 for the Non-Parallel case; the T-shaped model is controlled by the Y direction at 0.004618. The full profiles preserve the heightwise response and direction-specific behaviour that are not represented by a single maximum drift value.
+
+\clearpage
+\begin{figure}[!htbp]
+\centering
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/seq033_drift/drift_t.png}\subcaption{T-shaped}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/seq033_drift/drift_u.png}\subcaption{U-shaped}
+\end{subfigure}
+
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/seq033_drift/drift_non_parallel.png}\subcaption{Non-Parallel}
+\end{subfigure}
+\caption{ULS drift profiles: T, U and Non-Parallel.}
+\label{fig:drift_profiles_cp112b}
+\end{figure}
+
+
+The second profile comparison in Figure~\ref{fig:drift_profiles_cp112b} confirms Story~2 as the governing level for the T, U and Non-Parallel configurations. The U-shaped model has the largest governing drift in the seven-model comparison, while the Non-Parallel model remains lower under the same matched demand case.
+
+\FloatBarrier
+\clearpage
 \subsection{Observed Failures}
 The observed-failure evidence is separated into two distinct comparisons so that the historical NBC 205:2012 building is not mixed with the NBC 205:2024 height-\allowbreak{}extension study.
 
@@ -389,27 +414,37 @@ The observed-failure evidence is separated into two distinct comparisons so that
 
 The representative existing building designed using Draft Final NBC 205:2012 was checked under the five NBC 105:2025 demand cases used in Phase I. Table~\ref{tab:ch4_2012_failures} summarizes the identified failing frame counts, while Figure~\ref{fig:failure_2012_final_final} presents the corresponding design-check evidence. The observed counts were 1, 15, 21, 21, and 18 for Soil C/$Z=0.25$, C/$Z=0.30$, C/$Z=0.35$, C/$Z=0.40$, and Soil D/$Z=0.35$, respectively.
 
-\begin{figure}[!htbp]
+\begin{figure}[!t]
 \centering
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-018_C025.png}\subcaption{Soil C, $Z=0.25$}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-014_C030.png}\subcaption{Soil C, $Z=0.30$}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-015_C035.png}\subcaption{Soil C, $Z=0.35$}
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-018_C025.png}
+\subcaption{Soil C, $Z=0.25$}
 \end{subfigure}
-\par\vspace{0.6em}
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-016_C040.png}\subcaption{Soil C, $Z=0.40$}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-017_D035.png}\subcaption{Soil D, $Z=0.35$}
+\hfill
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-014_C030.png}
+\subcaption{Soil C, $Z=0.30$}
+\end{subfigure}
+\par\smallskip
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-015_C035.png}
+\subcaption{Soil C, $Z=0.35$}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-016_C040.png}
+\subcaption{Soil C, $Z=0.40$}
 \end{subfigure}
 \caption{NBC 205:2012 design-check observations.}
 \label{fig:failure_2012_final_final}
 \end{figure}
+\begin{figure}[!t]
+\ContinuedFloat
+\centering
+\includegraphics[width=0.88\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_2012/SRC-FF-IMG-017_D035.png}
+\caption[]{NBC 205:2012 design-check observations (continued: Soil D, $Z=0.35$).}
+\end{figure}
+\FloatBarrier
 
 This comparison represents an older NBC 205:2012 design practice being rechecked using the current NBC 105:2025 seismic-demand framework. It therefore provides a practical historical comparison with the current NBC 205:2024 Regular benchmark at the completed design-\allowbreak{}check level. Direct 2012-versus-2024 pushover comparison is outside the present completed scope.
 
@@ -417,32 +452,46 @@ This comparison represents an older NBC 205:2012 design practice being rechecked
 
 The separate four-storey Regular extension was examined under the same five soil and seismic zone-factor combinations used in the three-storey model comparisons. Its design-check observations are discussed independently of the seven-model response comparisons.
 
-\begin{figure}[!htbp]
+\begin{figure}[!t]
 \centering
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-009_C025.png}\subcaption{Soil C, $Z=0.25$}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-010_C030.png}\subcaption{Soil C, $Z=0.30$}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-011_C035.png}\subcaption{Soil C, $Z=0.35$}
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-009_C025.png}
+\subcaption{Soil C, $Z=0.25$}
 \end{subfigure}
-\par\vspace{0.6em}
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-012_C040.png}\subcaption{Soil C, $Z=0.40$}
-\end{subfigure}\hfill
-\begin{subfigure}[t]{0.32\textwidth}\centering
-\includegraphics[width=\linewidth]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-013_D035.png}\subcaption{Soil D, $Z=0.35$}
+\hfill
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-010_C030.png}
+\subcaption{Soil C, $Z=0.30$}
+\end{subfigure}
+\par\smallskip
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-011_C035.png}
+\subcaption{Soil C, $Z=0.35$}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.49\textwidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-012_C040.png}
+\subcaption{Soil C, $Z=0.40$}
 \end{subfigure}
 \caption{Four-storey extension design-check observations.}
 \label{fig:failure_fourstorey_final_final}
 \end{figure}
+\clearpage
+\begin{figure}[!t]
+\ContinuedFloat
+\centering
+\includegraphics[width=0.88\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/failures_four_storey/SRC-FF-IMG-013_D035.png}
+\caption[]{Four-storey extension design-check observations (continued: Soil D, $Z=0.35$).}
+\end{figure}
+\FloatBarrier
 
 The design-check comparison presented in Figure~\ref{fig:failure_fourstorey_final_final} covers the four-storey extension design-check results under Soil Type C with $Z=0.25$, $0.30$, $0.35$ and $0.40$, and Soil Type D with $Z=0.35$. The observations describe the investigated extension and do not establish a general height-limit rule.
 
 The combined failure evidence therefore supports two different conclusions. First, the existing NBC 205:2012-designed building exhibits deficient frame members when rechecked under the selected NBC 105:2025 demand cases. Second, within the current NBC 205:2024 the separate four-storey Regular extension shows design-\allowbreak{}check failures. The four-storey case highlights the importance of project-specific engineered checking beyond the scope of prescriptive RUD detailing.
 
+
+
+\clearpage
 \subsection{Seven-Model Response Under NBC 105:2025}
 This section presents the NBC 105:2025 response results used in the main comparison. The seven-model comparison includes the NBC 205:2024 regular, irregular (L, L1, L2, T, U), and non-parallel configurations, all modelled as three full storeys plus a stair cover. The separate four-storey height-extension model is not merged into these seven-model comparison tables. The following comparison examines the governing force, deformation and nonlinear response measures for the seven configurations.
 
