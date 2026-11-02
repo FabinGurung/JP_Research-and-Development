@@ -196,6 +196,18 @@
           "main_sha_at_reservation": "8e024e154cffe9e4c464ed7fffa61f1977e761a2",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "SEQ041 000019_PRE PDF, full source, checkpoint and checklist archived; five scoped LaTeX files altered, all 20 scientific inputs untouched. Figure 3.3-3.5 enlarged; p-only floats top-aligned; five-image Fig4.25/4.26 spread into 2x2 plus continuation (max4/page); Fig4.33 moved to page66, combined comparison begins p70; 11 preliminary TOC entries receive dynamic Roman numbers. 131p exact Times New Roman PDF and 422-member ZIP built/QA. Same permanent Drive IDs, CURRENT/ARCHIVE only, no native Doc work; original embedded raster fonts separately unverified."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 43,
+          "branch": "thesis/saugat-paneru/latex/seq043-figure-pages-explanations",
+          "status": "RESERVED",
+          "request_key": "saugat:seq043-20261102-user-layout",
+          "created_at_utc": "2026-11-02T11:47:00Z",
+          "main_sha_at_reservation": "01b1e78ae505a6a0976c5339fb46fbbf6077212e",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "User-directed scoped page descriptions and figure placement, original SEQ042 protected by 000021_PRE before edit. Full exact Times New Roman 131p PDF and 422-file ZIP already verified and promoted to same Drive IDs; six .tex changed, 416 bytes-identical members including scientific inputs. Git source reconciliation and PR to follow; no independent ETABS run."
         }
       ]
     },
