@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 43,
+  "branch": "thesis/saugat-paneru/latex/seq043-figure-pages-explanations",
+  "status": "QA_CANDIDATE",
+  "source_parent_sequence": 42,
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "base_main_sha": "824a2b345ceaaec825499e69495919185236bdbc",
+  "source_text_files_modified": 6,
+  "source_zip_member_count": 422,
+  "source_unchanged_member_count": 416,
+  "scientific_inputs_status": "UNMODIFIED_VS_SEQ042_NO_ETABS_REPLAY",
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "b612f30a5b411dce56fd1cddc14a2441d9c419013c340450034a262e402dc803",
+    "bytes": 48474775,
+    "pages": 131,
+    "page_format": "A4",
+    "font": "Exact embedded Times New Roman for main thesis"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "552dc0e62fd0a984e7191c4c197134a658dbe8fdeb76903b2bf5e00a452f2764",
+    "bytes": 75315669,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "1ZVT6tEKs2AdPUagAJzlUUxzysMjNfiWp",
+    "source_zip": "1K1Ss1IFWdFntbs_A6jAQw8kg8krxWe1i",
+    "checkpoint": "1HxAJRCBJ5htRTvAfcVdiDDGSyPZPVP74",
+    "checklist": "1T8sscdIyzVSHjcIRbtQ6jPsl1kzaWcZG"
+  },
+  "archive_post": {
+    "pdf": "1LnFYGLhw0yEd6nSY0_6g5cDoUYthoF_U",
+    "source_zip": "1soLJZS0ZuFcad8b9TNuEBPP3au4NZDDu",
+    "checkpoint": "179fbx3_To6AkPXfg0z6It1kPWwW_ZSR9",
+    "checklist": "1kiC1GtT3h-L_Q8TJNM98kFW8GTHyaetl"
+  },
+  "approved_user_scope": "Scoped figure pages and explanatory prose only, no independent scientific validation",
+  "academic_approval": "NOT_ASSERTED",
+  "manuscript_facts": "NO_NEW_NUMERICAL_SCIENTIFIC_RESULTS",
+  "github_merger": "PENDING"
+}
