@@ -172,6 +172,18 @@
           "main_sha_at_reservation": "56e802944ab36694f5e2cbf6e034da79ea3233fa",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000018 PRE PDF, full LaTeX ZIP, checkpoint and reviewer checklist stored before edits. Five user-only modifications: remove plotting note, 12pt Times New Roman for editable graph text, Fig4.37 uses Fig4.36 model symbol/color mapping, 8 supplied storey-shear and 16 supplied capacity figures. All 20 numeric inputs untouched. Same four live Drive IDs, no candidate folders, native Doc not requested. 128 A4 pages, 419 ZIP files."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 41,
+          "branch": "thesis/saugat-paneru/latex/seq041-scoped-figure-pagination",
+          "status": "RESERVED",
+          "request_key": "saugat:seq041-20261102",
+          "created_at_utc": "2026-11-02T06:15:00Z",
+          "main_sha_at_reservation": "865eb6544c0689a3045bef0ce9c280f69bb1a8be",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000019_PRE four original SEQ040 live artifacts archived; figure 3.3–3.5 enlarged; 3.4 max 2x2 and continued fifth panel; enlarge selected methodology panels; chapter3 spectrum best-fit; reduce gaps around tables 4.12–4.13 and Fig4.24 and crop duplicate graphic titles; improve descriptions only near affected figures; relocate existing Figure 4.33 ahead of comparative results preserving model data and number, subject to print pagination QA. Six scoped LaTeX files only; no numeric CSV/XLSX edits; native Doc opt-in untouched. Same original Drive IDs, archive PRE/POST."
         }
       ]
     },
