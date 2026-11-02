@@ -13,6 +13,8 @@ Local ground conditions add another source of uncertainty. Deep alluvial deposit
 \section{Hospital Buildings as Critical Facilities}
 The importance of hospital seismic performance in Nepal has been recognized for more than two decades. Guragain and Dixit's assessment of Nepalese hospitals showed that many facilities required significant improvement to achieve acceptable earthquake performance \cite{guragain2004}. More recent work by Subedi compared seismic demand in an RC hospital building using IS 1893:2016 and NBC 105:2020, illustrating how design provisions can influence calculated response \cite{subedi2022}.
 
+The present assessment adopts NBC 105:2025 as its stated Nepalese seismic-analysis reference, whereas Subedi's published comparison used NBC 105:2020. The editions are kept distinct: Subedi is used as hospital-assessment context, rather than as evidence that the two editions give equivalent design demand. A numerical code-to-code comparison would require the same building, spectrum definitions and scaling settings.
+
 These studies are especially relevant because the acceptable outcome for a hospital is not simply avoidance of collapse. The building must retain sufficient structural and functional capacity to support emergency services after an earthquake. This requirement makes deformation-sensitive measures, foundation response, and the distribution of structural demand important alongside conventional force-based checks \cite{guragain2004,subedi2022}.
 
 \section{Soil--Structure Interaction Theory}
@@ -25,6 +27,10 @@ Kinematic interaction arises when the presence and geometry of a foundation modi
 
 \subsection*{Period lengthening and redistribution of structural demand}
 The period of an equivalent single-degree-of-freedom system varies approximately with the square root of the ratio of participating mass to lateral stiffness. This conceptual relationship explains why adding foundation compliance commonly increases the vibration period. In a multi-degree-of-freedom building, however, the response depends on the distribution of masses, stiffnesses, modes and excitation. Response-spectrum force and displacement changes must therefore be evaluated independently rather than inferred from the sign of period change \cite{wolf1985,timilsina2023,poudel2024}.
+
+Veletsos and Meek \cite{veletsos1974} analysed linear building--foundation systems and established a basis for interpreting period lengthening through foundation compliance. Stewart et al. \cite{stewart1999} compared fixed- and flexible-base vibration parameters using recorded building responses, finding a strong dependence on the structure-to-soil stiffness ratio. These results support a mechanism-based interpretation of period changes, while requiring care when the dominant modal direction changes between support cases.
+
+Mylonakis and Gazetas \cite{mylonakis2000} show that a longer period does not invariably reduce seismic demand: the outcome depends on the spectrum and the interacting system. The NIST guidance by Stewart et al. \cite{nist2012ssi} and FEMA P-2091 \cite{fema2091} explain practical SSI modelling, foundation impedances and period-lengthening effects. They provide methodological context for the present spring idealization; they do not validate this hospital's model assignments or replace the Nepalese design code.
 
 \section{Foundation Spring and Flexible-Base Modelling}
 SSI may be represented either through direct modelling of the soil domain or through a substructure approach in which foundation impedances are introduced into the structural model \cite{wolf1985,gajan2008}. The substructure approach is attractive for building analysis because translational and rotational stiffnesses can be defined at the foundation level while the superstructure remains within a conventional structural-analysis program.

@@ -268,7 +268,7 @@ Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \
 6 & Soft & 145396.926 & 145396.926 & 317800.000 & 566738.359 & 586281.061 & 1314671.047 \\
 \hline\hline
 \end{tabular}}
-\par\smallskip\footnotesize The numerical values represent the translational and rotational spring stiffnesses used in the foundation models.
+\par\smallskip\footnotesize Translational coefficients $K_x$, $K_y$ and $K_z$ are in kN/m; rocking and torsional coefficients $K_{\theta x}$, $K_{\theta y}$ and $K_t$ are in kN\,m/rad. The values are the assigned model inputs, not independently validated footing designs.
 \end{table}
 \FloatBarrier
 
@@ -283,7 +283,39 @@ For the hard-soil parameters $G=595$~MPa and $\nu=0.30$, and a square footing wi
 \[
 K_z=\frac{2(595000)(1.50)}{1-0.30}(0.73+1.54)=5{,}788{,}500\ \mathrm{kN/m}.
 \]
-This agrees with the listed hard-soil vertical coefficient for Blocks~5 and~6. Inverting the same square-footing relation for the hard-soil $K_z$ values of Blocks~1--2 and~3--4 gives equivalent square sides of approximately 3.50~m and 4.67~m, respectively. These are back-calculated *equivalent* dimensions, not confirmed construction footing sizes. The horizontal and torsional coefficients do not all reproduce the stated $\chi=1$ equation assumptions, so the full six-component spring matrix requires reconciliation with the original foundation sizes and ETABS assignments before quantitative validation.
+This agrees with the listed hard-soil vertical coefficient for Blocks~5 and~6. Inverting the same square-footing relation for the hard-soil $K_z$ values of Blocks~1--2 and~3--4 gives equivalent square sides of approximately 3.50~m and 4.67~m, respectively. These are back-calculated \textit{equivalent} dimensions, not confirmed construction footing sizes. The horizontal and torsional coefficients do not all reproduce the stated $\chi=1$ equation assumptions, so the full six-component spring matrix requires reconciliation with the original foundation sizes and ETABS assignments before quantitative validation.
+
+
+For the same Blocks~5--6 hard-soil example, the stated equations give $K_x=K_y=4{,}725{,}000$~kN/m, $K_{\theta x}=10{,}322{,}734$~kN\,m/rad, $K_{\theta y}=10{,}678{,}691$~kN\,m/rad and $K_t=16{,}762{,}056$~kN\,m/rad. The assigned horizontal coefficients are about 0.615 times these square-footing values and are reproduced by inserting $\chi=0.25$ into the horizontal expression. The assigned torsional coefficient is about 1.429 times the stated equation result, corresponding to an extra $1/(1-\nu)$ factor. Matching individual coefficients by different geometry assumptions would not establish a consistent six-component footing model.
+
+Table~\ref{tab:seq066_spring_check} checks every distinct block-pair/soil input row. The square side is obtained from $K_z$ alone; all other coefficients are then evaluated with that same side. Each block pair has identical assigned coefficients, so the nine rows cover all eighteen block/soil combinations. Ratios of one indicate arithmetic agreement under this diagnostic geometry, not confirmation of actual footing dimensions.
+\begin{longtable}{llrrrrr}
+\caption{Arithmetic check of assigned springs using a square side inferred from the vertical coefficient}\label{tab:seq066_spring_check}\\
+\toprule
+Blocks & Soil & Side (m) & $K_x/K_x^*$ & $K_{\theta x}/K_{\theta x}^*$ & $K_{\theta y}/K_{\theta y}^*$ & $K_t/K_t^*$ \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\small Table continued}\\
+\toprule
+Blocks & Soil & Side (m) & $K_x/K_x^*$ & $K_{\theta x}/K_{\theta x}^*$ & $K_{\theta y}/K_{\theta y}^*$ & $K_t/K_t^*$ \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1--2 & Hard & 3.500 & 0.615 & 1.000 & 1.000 & 1.429 \\
+1--2 & Medium & 3.500 & 0.615 & 1.000 & 1.000 & 1.538 \\
+1--2 & Soft & 3.500 & 0.615 & 1.000 & 1.000 & 1.667 \\
+3--4 & Hard & 4.667 & 0.560 & 0.735 & 0.735 & 1.050 \\
+3--4 & Medium & 4.000 & 0.615 & 1.000 & 1.000 & 1.538 \\
+3--4 & Soft & 4.000 & 0.615 & 1.000 & 1.000 & 1.667 \\
+5--6 & Hard & 3.000 & 0.615 & 1.000 & 1.000 & 1.429 \\
+5--6 & Medium & 3.000 & 0.615 & 1.000 & 1.000 & 1.538 \\
+5--6 & Soft & 3.000 & 0.615 & 1.000 & 1.000 & 1.667 \\
+\end{longtable}
+
+Here the starred quantities are calculated from the printed equations at the inferred square geometry. The inferred sides vary between soil rows within some blocks. A single actual footing size per block therefore cannot be recovered consistently from these coefficients. Footing drawings and the spring-assignment calculation are required before the matrix can be treated as a validated physical foundation representation.
+
+The isotropic relation $G=E/[2(1+\nu)]$ gives 596.2, 111.1 and 28.6~MPa for the hard, medium and soft parameters, respectively. The assigned values of 595, 113 and 28~MPa are retained as model inputs to avoid implying that the analyses were rerun with corrected stiffnesses. In particular, the medium-soil value is 1.7\% above the modulus implied by its listed $E$ and $\nu$.
 
 \section{Modal Response Extraction and Comparison}
 Modal analysis results were evaluated separately for each block and foundation-support condition. The first-mode period $T_{1,b,s}$ is extracted using the row and column headings of the actual worksheet. For every case, the smallest modal number with both horizontal cumulative participating-mass ratios at or above 0.90 is recorded. 
@@ -299,7 +331,7 @@ where $b$ identifies the block and $s$ denotes hard, medium or soft support. No 
 \section{Response Charts and Drift Screening}
 Displacement, drift and fragility relationships were examined for the different foundation-support conditions. The displacement and drift responses were obtained from the corresponding directional analyses, while fragility relationships were examined separately for each structural block. The relevant results are presented graphically in Chapter~4 and the appendices.
 
-The adopted inter-storey drift ratio (ISDR) performance classification is shown in Table~\ref{tab:legacy_isdr_performance_bands}. Immediate Occupancy (IO), Life Safety (LS) and Collapse Prevention (CP) are standard performance concepts \cite{fema356}, whereas the numerical percentages below are the study's adopted ISDR screening intervals.
+The adopted inter-storey drift ratio (ISDR) performance classification is shown in Table~\ref{tab:legacy_isdr_performance_bands}. The 1\%, 2\% and 4\% transient-drift values correspond to the illustrative concrete-frame descriptions for Immediate Occupancy (IO), Life Safety (LS) and Collapse Prevention (CP) in FEMA 356, Table C1-3 \cite{fema356}. The intervals below use those reference values for screening. FEMA 356 explicitly distinguishes these typical global-response descriptions from mandatory component acceptance limits; they are not a hospital operational-performance certificate.
 
 \begin{table}[htbp]
 \caption{Inter-storey drift screening intervals for seismic performance levels}
@@ -314,7 +346,20 @@ Collapse / Failure (beyond CP) & $>4.0\%$ \\ \hline\hline
 \end{tabular}
 \end{table}
 
-The ISDR bands are descriptive demand categories. The adopted screening limits are used to interpret drift demand; fragility probabilities are interpreted according to the damage-state definitions associated with their respective curves.
+The ISDR bands are descriptive demand categories. They do not replace NBC design-drift checks or component deformation limits. The response-spectrum values must first be established as elastic or code-amplified quantities before comparison with a performance objective. The fragility workbooks use different thresholds of 0.5\%, 1\%, 2\% and 4\%; their labels and numerical assumptions are documented separately and are not silently replaced by this screening table.
+
+\subsection{Reconstruction of the existing fragility calculation}
+The six block-specific X-direction workbooks each contain four support worksheets, twelve ground-motion response columns and PGA levels from 0 to 0.5~$g$ at 0.1~$g$ increments. Their response columns are labelled displacement and percent ISDR; the displacement normalization and the underlying nonlinear model assignments are not independently established. The record list identifies twelve named events, but does not establish verified NGA record identifiers, magnitude, distance, $V_{s,30}$, component orientation or record-specific scale factors. The analysis is consequently limited to reconstruction of the workbook calculation, rather than reproduction of nonlinear incremental dynamic analysis.
+
+For each record, the spreadsheet uses a least-squares linear forecast of PGA against percent ISDR to estimate threshold intensity at 0.5\%, 1\%, 2\% and 4\%. Some threshold intensities exceed the largest analysed level of 0.5~$g$ and are extrapolations. Let $x_j$ be the twelve estimated threshold intensities, $m$ their arithmetic mean and $s$ their population standard deviation. The workbook calculates
+\[
+\beta_r=\sqrt{\ln[1+(s/m)^2]},\qquad
+\beta_w=\sqrt{\beta_r^2+0.4^2},\qquad
+P_w(IM=x)=\Phi\!\left(\frac{\ln(x/m)}{\beta_w}\right).
+\]
+The arithmetic mean $m$ is used directly as the curve's 50\% intensity $\theta_w$; this is the implemented workbook convention, not a maximum-likelihood estimate of the median of the twelve thresholds. For a moment-matched lognormal distribution the median would instead be $m\exp(-\beta_r^2/2)$. The added 0.4 term is an assumed model-uncertainty contribution, not a dispersion established by nonlinear model validation.
+
+No nonlinear hinges, yielding sequence or post-yield damage evolution are established by these spreadsheet formulas. Extrapolating an elastic trend to a drift threshold cannot demonstrate that the structure sustains that response. The X-only workbooks do not justify equivalent performance in Y. Chapter~4 reports the reconstructed parameters while retaining these methodological limits.
 
 \section{Interpretation Procedure}
 Results are organized by block number, support case, output quantity, and original load case. For the response-spectrum displacement results, the reported response at the greatest listed storey elevation is extracted separately from the RS-X X-component and RS-Y Y-component tables. For response-spectrum drift, the maximum absolute reported storey drift ratio is identified separately for the same response cases and converted to percent. Base shear is read from the response-spectrum maximum FX (RS-X) and FY (RS-Y) base-reaction rows; the largest absolute response-spectrum storey-shear value is selected from the corresponding storey rows without summation across floors.
