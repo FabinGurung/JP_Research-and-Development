@@ -4,7 +4,7 @@
   "slug": "saugat-paneru",
   "sequence": 44,
   "branch": "thesis/saugat-paneru/latex/seq044-fullsize-figures-conclusion",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "source_parent_sequence": 43,
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -44,5 +44,6 @@
   },
   "layout_exception": "Figure3.4 a-e spread printed pages 30-32; Figure3.5 printed page 33 to maintain enlargement",
   "scientific_approval": "NOT_ASSERTED",
-  "github_merger": "PENDING"
+  "github_merger": "bbd9386cb31f010b98d94fbc0bb2d11546e085da",
+  "github_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/162"
 }
