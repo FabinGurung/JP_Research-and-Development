@@ -208,6 +208,18 @@
           "main_sha_at_reservation": "01b1e78ae505a6a0976c5339fb46fbbf6077212e",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "User-directed scoped page descriptions and figure placement, original SEQ042 protected by 000021_PRE before edit. Full exact Times New Roman 131p PDF and 422-file ZIP already verified and promoted to same Drive IDs; six .tex changed, 416 bytes-identical members including scientific inputs. Git source reconciliation and PR to follow; no independent ETABS run."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 44,
+          "branch": "thesis/saugat-paneru/latex/seq044-fullsize-figures-conclusion",
+          "status": "RESERVED",
+          "request_key": "saugat:seq044-20261102",
+          "created_at_utc": "2026-11-02T17:25:00Z",
+          "main_sha_at_reservation": "cefb7a07672dd12e4fc3032c60d40f6a6f2cafe7",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "User-directed SEQ044 using Drive SEQ043 exact source: A7 000023 PRE four immutable copies, 152p exact Times New Roman PDF, 422-file ZIP, seven .tex edited, 415 members unchanged including numerical data, Recommendations byte-identical; same permanent Drive IDs, independent ETABS rerun not performed. Source GitHub sync to follow separate PR."
         }
       ]
     },
