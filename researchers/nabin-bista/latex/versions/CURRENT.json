@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0.0",
   "researcher_id": "RSH-003",
-  "latex_current_working_release": "LATEX_SEQ067",
-  "sequence": 67,
-  "parent": "LATEX_SEQ066",
-  "latest_release_record": "seq067.json",
+  "latex_current_working_release": "LATEX_SEQ068",
+  "sequence": 68,
+  "parent": "LATEX_SEQ067",
+  "latest_release_record": "seq068.json",
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+  "numbered_archive": "000014",
   "scholarly_approval": null,
-  "release_disposition": "DRIVE_WORKING_SAME_ID_PUBLISHED__CHART_TNR12_QA_PASS__SEVEN_CAD_FONT_EXCEPTIONS__GIT_INHERITANCE_FAIL__SCIENTIFIC_HOLDS_OPEN",
+  "release_disposition": "DRIVE_WORKING_PUBLISHED__SCOPED_FIGURES_TABLES__GIT_PR_UNMERGED__SCIENTIFIC_HOLDS",
   "git_main_current": "LATEX_SEQ063",
-  "native_doc_policy": "OPTIONAL_SEPARATE_REQUEST_ONLY",
-  "universal_figure_font_compliance": false,
-  "cad_font_exception_count": 7
+  "git_release_merged": false,
+  "native_doc_policy": "OPTIONAL_SEPARATE_REQUEST_ONLY"
 }
