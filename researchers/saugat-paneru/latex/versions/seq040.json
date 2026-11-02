@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 40,
+  "parent_sequence": 39,
+  "branch": "thesis/saugat-paneru/latex/seq040-5-scoped-figure-edits",
+  "status": "EDITING",
+  "request_key": "saugat:seq040-20261102",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "drive_stable_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU"
+  },
+  "a7_pre": {
+    "ordinal": 18,
+    "pdf_id": "1QBNBw_sS4vwzSUg114XEH1V7SX6Nfofq",
+    "zip_id": "1YQ9IO3T_o_yEhHaWI2OmQB-nxFikR7kA",
+    "checkpoint_id": "19qDH-JV0vOVtkXPf7ZOzRl6YzeBCKUpX",
+    "checklist_id": "17zLApqi5X47jaT-hWmgdtPWkyIC6Wc0E",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
+  },
+  "source_changes": {
+    "tasks": [
+      "remove Figure 4.30 plotting-reference note",
+      "use 12pt Times New Roman in regenerable GII/drift graphics",
+      "apply Figure 4.36 seven-category symbol/color mapping to Figure 4.37",
+      "substitute 8 exact user-supplied storey-shear PNGs",
+      "substitute 16 exact user-supplied capacity-curve PNGs"
+    ],
+    "existing_tex_paths_modified": [
+      "chapters/chapter4_results_discussion.tex",
+      "cp112_additions/ch4_gii_summary_traceability.tex"
+    ],
+    "legacy_script_note_removed": true,
+    "source_generator_added": "scripts/seq040_plot_typography.py",
+    "source_assets_only_in_restricted_drive_zip": true,
+    "unchanged_scientific_csv_xlsx": 20,
+    "original_source_plots_preserved": true
+  },
+  "offline_build": {
+    "status": "PASS__SOURCE_PDF_REBUILT",
+    "pages": 128,
+    "paper": "A4",
+    "pdf_sha256": "8fec1d42472c5d11f4b3908a8e049f5dda1f8c94b398e00422431e98852e3b41",
+    "pdf_bytes": 48485652,
+    "source_zip_sha256": "a101cc97cf242b1cf22fc7770f856fb377e9b8f3a104dc59274bde3cb32ab319",
+    "source_zip_bytes": 75184704,
+    "source_entries": 419,
+    "zip_crc": "PASS",
+    "times_new_roman_in_editable_new_pdf_charts": true,
+    "new_user_raster_plot_internal_glyphs_exact_12pt": "NOT_CERTIFIED_RASTER_SOURCE",
+    "scientific_values": "20_EXISTING_INPUTS_BYTE_IDENTICAL"
+  },
+  "publication": {
+    "drive_current": "SEQ039_UNTIL_ACTUAL_PROVIDER_READBACK",
+    "a7_post": "PENDING",
+    "source_pr": "TO_CREATE",
+    "academic_certification": "NOT_CLAIMED"
+  },
+  "native_google_doc": "NOT_REQUESTED_NO_ACTION"
+}
