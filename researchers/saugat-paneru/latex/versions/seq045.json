@@ -4,7 +4,7 @@
   "slug": "saugat-paneru",
   "sequence": 45,
   "branch": "thesis/saugat-paneru/latex/seq045-pagination-tighten",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "source_parent_sequence": 44,
   "shared_template": "controls/latex/template/pumlsc-shared.sty",
   "modified_scoped_paths": [
@@ -55,8 +55,9 @@
   },
   "a7_version_event": "000026",
   "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
-  "source_release_pr": "PENDING",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/167",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
-  "style_regression": "RESEARCHER_ONLY_ADAPTER_CHANGE__LOCAL_XELATEX_AND_148P_VISUAL_QA__SHARED_STYLE_UNMODIFIED"
+  "style_regression": "RESEARCHER_ONLY_ADAPTER_CHANGE__LOCAL_XELATEX_AND_148P_VISUAL_QA__SHARED_STYLE_UNMODIFIED",
+  "source_merge_sha": "fb2407aa0e44319b7631b13b1511ab1bc8a561ce"
 }
