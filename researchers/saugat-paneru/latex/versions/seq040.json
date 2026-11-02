@@ -6,7 +6,7 @@
   "sequence": 40,
   "parent_sequence": 39,
   "branch": "thesis/saugat-paneru/latex/seq040-5-scoped-figure-edits",
-  "status": "EDITING",
+  "status": "MERGED",
   "request_key": "saugat:seq040-20261102",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -59,10 +59,18 @@
     "scientific_values": "20_EXISTING_INPUTS_BYTE_IDENTICAL"
   },
   "publication": {
-    "drive_current": "SEQ039_UNTIL_ACTUAL_PROVIDER_READBACK",
-    "a7_post": "PENDING",
-    "source_pr": "TO_CREATE",
-    "academic_certification": "NOT_CLAIMED"
+    "drive_current": "SEQ039__UNCHANGED_LIVE_IDS__SEQ040_PREPARED_NOT_PUBLISHED",
+    "a7_post": "NOT_CREATED__NO_LIVE_SEQ040_BYTES_TO_SNAPSHOT",
+    "source_pr": 149,
+    "academic_certification": "NOT_CLAIMED",
+    "pdf_and_zip_same_id_update": "BLOCKED__GENERATED_LOCAL_FILES_NOT_ACCEPTED_AS_CONNECTOR_FILE_URI",
+    "source_pr_merged": true,
+    "source_pr_merge_commit": "0026731edc9cdf312d840a501d5e4fd5c33ff78a",
+    "input_zip_archive_refs": {
+      "storey_shear": "1l0Xe2faQEj3RsoWR0GyfvIEqlhQjcAqw",
+      "capacity": "1pYMB1UaI71qvFi6ocU0rgaBCgZ0BwkZa"
+    },
+    "next_action": "Use authenticated connector-compatible generated PDF/ZIP file references; then update original PDF/ZIP IDs, raw readback, POST snapshot, checkpoint/checklist, and production-current.json"
   },
   "native_google_doc": "NOT_REQUESTED_NO_ACTION"
 }
