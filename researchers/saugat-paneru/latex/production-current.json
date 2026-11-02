@@ -5,7 +5,7 @@
   "production_release_id": "SAUGAT_LATEX_SEQ045_A7_000026_POST_20261103",
   "release_version": "LATEX_SEQ045",
   "promoted_date_npt": "2026-11-03",
-  "status": "CURRENT_USER_DESIGNATED__SEQ045_148P_TIMES_NEW_ROMAN__422_SOURCE__A7_000026_PRE_POST__GITHUB_SOURCE_PR_PENDING__NO_ETABS_REPLAY",
+  "status": "CURRENT_USER_DESIGNATED__SEQ045_148P_TIMES_NEW_ROMAN__422_SOURCE__A7_000026_PRE_POST__GITHUB_SOURCE_PR167_MERGED__NO_ETABS_REPLAY",
   "scientific_checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
   "scientific_content_status": "UNMODIFIED_VS_SEQ044__NO_ETABS_REPLAY",
   "new_production": {
@@ -99,8 +99,8 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "99f989921791f146c265b6e43b67bc94cd55bd87",
     "source_branch": "thesis/saugat-paneru/latex/seq045-pagination-tighten",
-    "source_pr": null,
-    "source_merged_commit": null,
+    "source_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/167",
+    "source_merged_commit": "fb2407aa0e44319b7631b13b1511ab1bc8a561ce",
     "source_main": "main",
     "promotion_branch": "thesis/saugat-paneru/latex/seq045-pagination-tighten",
     "promotion_change_id": "SEQ045_A7_000026_POST_SAME_IDS_20261103",
@@ -109,11 +109,11 @@
     "m3_immutable_tag": "saugat-cp114-m3.0.0-editorial-production-20261021",
     "promotion_pr": null,
     "promotion_merge_sha": "bbd9386cb31f010b98d94fbc0bb2d11546e085da",
-    "live_pointer_readback": "PASS_DRIVE_SAME_ID_HASH_AND_GIT_PR162_MERGED",
-    "source_merged_sha": null
+    "live_pointer_readback": "PASS_VERIFIED_DRIVE_SAME_ID_AND_GIT_PR167_MERGED",
+    "source_merged_sha": "fb2407aa0e44319b7631b13b1511ab1bc8a561ce"
   },
   "checkpoint_resolution": {
-    "status": "SEQ045_A7_000026_PRE_POST_COMPLETE__GIT_SOURCE_PR_PENDING",
+    "status": "SEQ045_A7_000026_PRE_POST_COMPLETE__GIT_SOURCE_PR167_MERGED",
     "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
     "current_checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
     "pre_checkpoint_archive_id": "1BxNp732WErnm9KReHA2Mj8nrTQl7Pgms",
