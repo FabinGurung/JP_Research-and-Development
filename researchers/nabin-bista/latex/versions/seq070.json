@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release": "LATEX_SEQ070",
+  "sequence": 70,
+  "parent": "LATEX_SEQ069",
+  "archive_ordinal": "000016",
+  "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+  "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+  "pre_pdf_drive_id": "1yQJJZI2JD8AfHER__JEPXpc8vD60dJ7y",
+  "pre_source_drive_id": "1F1dFO3XrIahGNsC5ltXl48e1_izgF3sp",
+  "post_pdf_drive_id": "1KjnzJ4vvuXzFBsIE2I9q5i2aZ2MbmDoK",
+  "post_source_drive_id": "1D4169tox8175YAwF2lovFhiqEUn0f0pE",
+  "qa_drive_id": "12qPgxJcbyENM1TZmMCz5HP62qYTfK6c5",
+  "pdf_sha256": "1d5fbfdb9200ad0cc95ed60aa4389725fe43b3e9ea59c4e5220121aeb84dbd8b",
+  "zip_sha256": "2abebc80a92019fb291517dd8c156957379c41751d1bbff3f970be84f43f1258",
+  "pages": 122,
+  "source_zip_entries": 573,
+  "source_zip_note": "Redundant compiled main.pdf not embedded: same PDF is the separate stable Drive artifact and A7 POST; all scientific input binaries and text sources are retained.",
+  "changed_tex": [
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex",
+    "25_conclusionandrecommendation.tex"
+  ],
+  "validation": "LOCAL_XELATEX_3_PASS__A4__EXACT_TNR_EMBEDDED__SHA256_DRIVE_READBACK__SOURCE_INTEGRITY_PASS",
+  "model_assessment": "WORKING_SCIENTIFIC_HOLDS_REMAIN",
+  "scientific_holds": [
+    "Block3 fixed FZ screenshot 52026.4 kN conflicts with joint sum 39534.4 kN; checked sum retained",
+    "Block2 fixed Uz screenshot zero conflicts with original extract; retained unresolved",
+    "Total FZ vs max individual FZ distinction retained",
+    "Hospital design criteria and exact ETABS zoning remain unverified",
+    "Nonlinear fragility not independently fitted"
+  ],
+  "git_status": "STACKED_PR_PENDING__PARENT_SEQ069_PR160_UNMERGED"
+}
