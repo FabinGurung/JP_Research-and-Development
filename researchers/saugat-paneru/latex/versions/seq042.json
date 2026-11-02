@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 42,
+  "parent_sequence": 41,
+  "branch": "thesis/saugat-paneru/latex/seq042-figure-placements-roman-toc",
+  "status": "RELEASED",
+  "request_key": "saugat:seq042-20261102",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "drive_stable_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU"
+  },
+  "a7_pre": {
+    "ordinal": 19,
+    "pdf_id": "18w9c-naCgf1kjC0X7ZjQWVPey4oJRW-R",
+    "zip_id": "1YAKkCmqNvMz-lcTLnOhIecJm64Mfw9u-",
+    "checkpoint_id": "1KtxtqDqkfoXPCpWC4hU39VAw0LWn0rGA",
+    "checklist_id": "1p_pFaKCTtY3tpmI8lATz0kQzqe5kucaE",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
+  },
+  "a7_post": {
+    "ordinal": 19,
+    "pdf_id": "1AUWrFVQDvruHIkotkH5BCWwaCZ7FxEmP",
+    "zip_id": "1gfcxkPAwOtc_OSSdf5S4nSbrQmuUNF3Z",
+    "checkpoint_id": "PENDING_POST_SNAPSHOT",
+    "checklist_id": "PENDING_POST_SNAPSHOT",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
+  },
+  "source_changes": {
+    "modified_existing_tex": [
+      "main.tex",
+      "saugat_project_adapter.sty",
+      "cp112_additions/ch3_model_geometry.tex",
+      "chapters/chapter3_methodology.tex",
+      "chapters/chapter4_results_discussion.tex"
+    ],
+    "new_derived_images": [],
+    "original_non_tex_assets_modified": 0,
+    "original_scientific_numeric_csv_xlsx_unchanged": 20,
+    "scope": [
+      "Top-align figure-only float pages with margin",
+      "Larger floor plans 3.3–3.5 and selected model panels",
+      "Split 4.25 and 4.26 to 2x2 and fifth continuation",
+      "Move 4.33 to printed page 66 ahead of synthesis 70",
+      "Roman numbers on 11 preliminary TOC entries"
+    ],
+    "native_google_doc": "NO_ACTION_USER_OPT_IN_ONLY"
+  },
+  "offline_build": {
+    "status": "PASS__XELATEX_131_A4__REMOTE_RAW_SHA256_MATCH",
+    "pages": 131,
+    "paper": "A4",
+    "font_body": "Embedded Times New Roman 12pt",
+    "pdf_sha256": "1b5088960fb5e6bb375b63b3221cded606a78a121dcdfb0298b9f88f56df1f4c",
+    "pdf_bytes": 57592212,
+    "source_zip_sha256": "071a007542484d3a7e3fd757e30cb59d1aa4b81ea8c18fd06cf1038182a28278",
+    "source_zip_bytes": 75313467,
+    "source_entries": 422,
+    "zip_crc": "PASS",
+    "numeric_inputs_unchanged": 20,
+    "overfull_vbox_warning_pt": 8.52267
+  },
+  "publication": {
+    "drive_current": "SEQ042_USER_DESIGNATED_CURRENT",
+    "pdf_and_zip_same_id_update": "PASS__ORIGINAL_IDS_AND_PARENTS_PRESERVED",
+    "a7_pre": "000019_PRE_COMPLETE_FOUR_ARTIFACTS",
+    "a7_post": "000019_POST_PDF_ZIP_VERIFIED_CHECKPOINT_CHECKLIST_IN_PROGRESS",
+    "checkpoint_readback": "PENDING_POST_SNAPSHOT",
+    "checklist_readback": "PENDING_POST_SNAPSHOT",
+    "pdf_sha256_provider_readback": "MATCH",
+    "zip_sha256_provider_readback": "MATCH",
+    "reservation_pr": 155,
+    "academic_certification": "NOT_CLAIMED"
+  },
+  "open_layout_qa": {
+    "figure_3_21_requested_p38": "CARRIED_OVER_FROM_SEQ041_PRINT_P39",
+    "max_four_images_per_page": "PASS_FOR_REWORKED_FIG4_25_4_26",
+    "all_raster_11_12pt_TNR": "NOT_CERTIFIED__SOURCE_BITMAP_TEXT",
+    "figure_4_33_before_comparative": "PASS_P66_BEFORE_P70",
+    "roman_toc_entries": "11_OF_11_PASS",
+    "one_overfull_vbox": "8.52pt_warning",
+    "full_pu_144_rules": "NOT_CERTIFIED"
+  },
+  "independent_scientific_holds": {
+    "review_22": "13_SOURCE_DONE_7_PARTIAL_2_SCIENTIFIC_HOLDS_CARRIED_FORWARD",
+    "torsional_edge_ratio": "NOT_REPLAYED",
+    "original_ETABS_replay": "NOT_PERFORMED",
+    "full_PU_144_rules": "NOT_CERTIFIED",
+    "supervisor_approval": "NOT_CONFIRMED"
+  }
+}
