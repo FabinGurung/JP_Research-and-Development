@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 41,
+  "parent_sequence": 40,
+  "branch": "thesis/saugat-paneru/latex/seq041-scoped-figure-pagination",
+  "status": "RELEASED",
+  "request_key": "saugat:seq041-20261102",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "drive_stable_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU"
+  },
+  "a7_pre": {
+    "ordinal": 19,
+    "pdf_id": "18w9c-naCgf1kjC0X7ZjQWVPey4oJRW-R",
+    "zip_id": "1YAKkCmqNvMz-lcTLnOhIecJm64Mfw9u-",
+    "checkpoint_id": "1KtxtqDqkfoXPCpWC4hU39VAw0LWn0rGA",
+    "checklist_id": "1p_pFaKCTtY3tpmI8lATz0kQzqe5kucaE",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
+  },
+  "a7_post": {
+    "ordinal": 19,
+    "pdf_id": "1QnEDohUuCL9xYG_I4N2_bbkYv354R-rY",
+    "zip_id": "1FdwVfPEqZDh2u9SrmZG7XVaBSNH33qXf",
+    "checkpoint_id": "1Dg5K7i2CoNoH4wYHhQdfYICyGHhteB64",
+    "checklist_id": "1EJj1LTnbfGZKsud73moRO1zGgNKsbIBx",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V",
+    "live_versus_post_checkpoint_text_equal": true,
+    "live_versus_post_checklist_text_equal": true
+  },
+  "source_changes": {
+    "modified_existing_tex": [
+      "chapters/chapter3_methodology.tex",
+      "chapters/chapter4_results_discussion.tex",
+      "cp112_additions/ch3_model_geometry.tex",
+      "cp112_additions/ch3_properties_spectrum_modal.tex",
+      "cp112_additions/ch4_pp_hinge.tex",
+      "cp112_additions/ch4_profiles_comparisons.tex"
+    ],
+    "new_derived_images": [
+      "figures/ch4/seq041_cropped_figure_4_24/pp_base_shear_no_duplicate_title.png",
+      "figures/ch4/seq041_cropped_figure_4_24/pp_displacement_no_duplicate_title.png"
+    ],
+    "original_non_tex_assets_modified": 0,
+    "original_scientific_numeric_csv_xlsx_unchanged": 20,
+    "scoped_figure_changes": [
+      "enlarged Figure 3.3 Regular plan",
+      "enlarged Figure 3.4 four 2x2 plus continued fifth panel",
+      "enlarged Figure 3.5 Non-Parallel plan",
+      "slightly enlarged 3.7–3.14 methods panels",
+      "Figure 3.21 kept within its methodology context, on printed p39",
+      "Figure 4.24 duplicate baked-in titles removed without changing curve values",
+      "Figure 4.24 narrative placed with the float",
+      "Figure 4.33 T/U/Non-Parallel drift moved to printed p66 before comparative p67 preserving number and data"
+    ],
+    "native_google_doc": "NO_ACTION_USER_OPT_IN_ONLY"
+  },
+  "offline_build": {
+    "status": "PASS__XELATEX_128_A4__REMOTE_RAW_SHA256_MATCH",
+    "pages": 128,
+    "paper": "A4",
+    "font_body": "12pt Times New Roman embedded",
+    "pdf_sha256": "2935122fb2a110b79202c81f40e24e9296ede9623b5a76128ce9de2e299c351c",
+    "pdf_bytes": 57590947,
+    "source_zip_sha256": "69e27446643c10bdd14982abb4c7023036a1baee63138e0396db771c01ad20c3",
+    "source_zip_bytes": 75329269,
+    "source_entries": 422,
+    "zip_crc": "PASS",
+    "numeric_inputs_unchanged": 20
+  },
+  "publication": {
+    "drive_current": "SEQ041_USER_DESIGNATED_CURRENT",
+    "pdf_and_zip_same_id_update": "PASS__ORIGINAL_IDS_AND_PARENTS_PRESERVED",
+    "a7_pre": "000019_PRE_COMPLETE_FOUR_ARTIFACTS",
+    "a7_post": "000019_POST_COMPLETE_FOUR_ARTIFACTS",
+    "checkpoint_readback": "PASS_LIVE_EQUALS_POST",
+    "checklist_readback": "PASS_LIVE_EQUALS_POST",
+    "pdf_sha256_provider_readback": "MATCH",
+    "zip_sha256_provider_readback": "MATCH",
+    "reservation_pr": 153,
+    "academic_certification": "NOT_CLAIMED"
+  },
+  "open_layout_qa": {
+    "figure_3_21_requested_p38": "PARTIAL_CURRENT_P39_METHODOLOGY_TABLES_OCCUPY_P38",
+    "max_four_images_per_page": "APPLIED_FIGURE_3_4_NOT_CERTIFIED_GLOBALLY__OLD_FIG4_25_AND_4_26_HAVE_FIVE",
+    "raster_all_figures_11to12pt_TNR": "NOT_CERTIFIED__BUNDLED_RASTER_TEXT_NOT_EDITABLE",
+    "all_legacy_charts_have_no_titles": "NOT_GLOBALLY_AUDITED_FIG4_24_ONLY"
+  },
+  "independent_scientific_holds": {
+    "review_22": "13_SOURCE_DONE_7_PARTIAL_2_SCIENTIFIC_HOLDS_CARRIED_FORWARD",
+    "torsional_edge_ratio": "NOT_REPLAYED",
+    "original_ETABS_replay": "NOT_PERFORMED",
+    "full_PU_144_rules": "NOT_CERTIFIED",
+    "supervisor_approval": "NOT_CONFIRMED"
+  }
+}
