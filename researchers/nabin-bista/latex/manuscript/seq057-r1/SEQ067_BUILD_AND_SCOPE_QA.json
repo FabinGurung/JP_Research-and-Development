@@ -1,0 +1,91 @@
+{
+  "release": "LATEX_SEQ067",
+  "parent": "LATEX_SEQ066",
+  "a7_archive_ordinal": "000013",
+  "date": "2026-11-02",
+  "timezone": "Asia/Kathmandu",
+  "permanent_source_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+  "permanent_pdf_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+  "pre_source_id": "1ik62d9d28EtiK93LLzK7UPzlv6Ref2Hy",
+  "pre_pdf_id": "1dgflS_W2ycIMhgXzXFGflhMQbZSWjghq",
+  "archive_folder_id": "1yb6ejHj-D2IhJAk2qh2WePYKNfmA8mz9",
+  "figure_folder_id": "1QUkWgGXmIARsJ5LQywObfgYANUFUtfZc",
+  "pdf_pages": 120,
+  "a4_pages": 120,
+  "numbered_figures": 88,
+  "redrawn_existing_numeric_plot_assets": 65,
+  "redrawn_explanatory_diagrams": 2,
+  "new_block1_overlay_curves": 16,
+  "new_numbered_figures": 0,
+  "generated_pdf_assets_including_panel_versions_and_shared_key": 93,
+  "standalone_png_deliverables": 68,
+  "chart_font_scan": {
+    "fonts": [
+      "TimesNewRomanPSMT"
+    ],
+    "min_size": 12.0,
+    "max_size": 12.0,
+    "errors": []
+  },
+  "scope_check": {
+    "changed_tex_bib": [
+      "22_literaturereview.tex",
+      "23_methodology.tex",
+      "24_resultanddiscussion.tex",
+      "28_appendices.tex",
+      "31_fragility_original_figures_seq064.tex"
+    ],
+    "all_original_binary_assets_unchanged": true,
+    "original_binary_asset_count": 222,
+    "all_original_workbooks_docx_zip_unchanged": true
+  },
+  "scientific_model_changes": false,
+  "new_nonlinear_fits": false,
+  "native_google_doc_created": false,
+  "cad_annotation_exceptions": {
+    "count": 7,
+    "figures": [
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7",
+      "3.8",
+      "A2.1"
+    ],
+    "reason": "Six block-plan PDFs contain outlined CAD glyphs, and the submitted whole-hospital plan has 840 dense annotation spans. Geometry and dimension records were preserved. These seven source drawings do not pass the requested universal 12 pt Times New Roman annotation standard.",
+    "next_action": "Faithful technical-drawing redraw from editable CAD or a verified annotation schedule; retain original geometry/dimensions."
+  },
+  "highlighted_figures": {
+    "4.3": {
+      "seq066_pdf_page": 55,
+      "seq067_pdf_page": 56
+    },
+    "4.4": {
+      "seq066_pdf_page": 55,
+      "seq067_pdf_page": 57
+    },
+    "4.26": {
+      "seq066_pdf_page": 70,
+      "seq067_pdf_page": 74
+    },
+    "4.27": {
+      "seq066_pdf_page": 70,
+      "seq067_pdf_page": 75
+    },
+    "4.30": {
+      "seq066_pdf_page": 73,
+      "seq067_pdf_page": 79
+    }
+  },
+  "scientific_review_counts_unchanged": {
+    "complete": 7,
+    "partial": 12,
+    "pending": 2
+  },
+  "build": "XeLaTeX + BibTeX8 -8 + two XeLaTeX reruns; no LaTeX warnings, undefined refs/citations, overfull boxes or oversized floats",
+  "git_status": "Stacked source revision to be recorded above SEQ066; inherited shared-style CI blocker not bypassed",
+  "release_status": "WORKING_FIGURE_REVISION_CHART_QA_PASS_SEVEN_SOURCE_DRAWING_FONT_EXCEPTIONS_OPEN",
+  "font_binaries_distributed": false,
+  "pdf_sha256": "10e34ebc2d224ac38f678d6e95a5b043f75b9f7fe2e1f77ecbdf46adc4be0202"
+}
