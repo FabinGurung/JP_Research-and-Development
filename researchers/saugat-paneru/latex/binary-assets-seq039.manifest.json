@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "sequence": 39,
+  "parent_sequence": 38,
+  "scientific_baseline": "CP114_UNCHANGED",
+  "custody": "DRIVE_ZIP_ORIGINAL_SOURCE__NO_BINARIES_COMMITTED_TO_PUBLIC_GITHUB",
+  "full_source_zip_drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+  "full_source_zip_sha256": "2a5fcf986fb7afed4717ece9fa29914cdcd22b62accb1149068a963512d9d30e",
+  "new_binary_assets": [
+    {
+      "path": "appendices/nbc205_2012_seq039_crops/NBC205_2012_reference_p15_enlarged.png",
+      "bytes": 273088,
+      "sha256": "6de090bad213a3f86a18d47b04dabeb2736069158f2ffa35271cb29e36559d5a"
+    },
+    {
+      "path": "appendices/nbc205_2012_seq039_crops/NBC205_2012_reference_p16_enlarged.png",
+      "bytes": 215603,
+      "sha256": "d559232688b4de5edd2df1beb4abc81369f3d661b0dc298a8440d28335398556"
+    },
+    {
+      "path": "appendices/nbc205_2012_seq039_crops/NBC205_2012_reference_p23_enlarged.png",
+      "bytes": 110617,
+      "sha256": "7f30fe84e587cab6685540d495775841d65d071203a2ea80d410347a9acef698"
+    },
+    {
+      "path": "appendices/nbc205_2012_seq039_crops/NBC205_2012_reference_p31_enlarged.png",
+      "bytes": 179239,
+      "sha256": "fc0239d49dd7375daaa1679200f3ff8ccf27d3f1fe1c9eda60b6fc1a6892801c"
+    },
+    {
+      "path": "appendices/nbc205_2012_seq039_crops/NBC205_2012_reference_p35_enlarged.png",
+      "bytes": 192504,
+      "sha256": "af9fcc309f9dbccf528c653a7344cbb432846d3589351a439f58ca50f0ae3277"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/cmcr_soil_c_panel_a.png",
+      "bytes": 127973,
+      "sha256": "254de9b68b251b799da6e989f08d08dfb7d6262b7d976e9ba52dc200fbf50739"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/cmcr_soil_c_panel_b.png",
+      "bytes": 126508,
+      "sha256": "ff5e2392a137a0044fd3a02daf1cee43f53fa0cb22dab566c758acd428958653"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/cmcr_soil_c_panel_c.png",
+      "bytes": 126466,
+      "sha256": "d6c3f23cce14ee73c28c9aea7fb5175e426fcb8579dc725ac79a2c102bc57e8c"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/cmcr_soil_c_panel_d.png",
+      "bytes": 125860,
+      "sha256": "ddb1d2439fee787bbf5b301c347eb2f682352e1a34d6e2efca60f4be514e16c8"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/storey_shear_l1_no_title.pdf",
+      "bytes": 710666,
+      "sha256": "380cfa737dedb120019e4c0292cf8ac3dfda4ce8442107acd610fef6c49f3011"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/storey_shear_l2_no_title.pdf",
+      "bytes": 710671,
+      "sha256": "522712fe9fb70ff09cce1a6f3ddaef73715a228352a1a3063401fe7410da66cd"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/storey_shear_l_no_title.pdf",
+      "bytes": 710676,
+      "sha256": "fb92944313e367d35a6fa2a731a3efe7991d81d1c33f1af8b262d53117a5f74b"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/storey_shear_np_no_title.pdf",
+      "bytes": 713148,
+      "sha256": "d3c37f81ca59ee98f4195b2ef5b914f200425bd34bd11800ae7e3d57d1d8b8a2"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/storey_shear_regular_no_title.pdf",
+      "bytes": 710671,
+      "sha256": "68b1910874e83db80b56b99e0d605f2b58109385eb0bc2e6804e879625d92d90"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/storey_shear_t_no_title.pdf",
+      "bytes": 713148,
+      "sha256": "16df829886508fba8ea21a84ad7a8c365418f2fb021743f65769655802007422"
+    },
+    {
+      "path": "figures/ch4/seq039_clean/storey_shear_u_no_title.pdf",
+      "bytes": 713153,
+      "sha256": "6edb83f3f58949595b7c53e3375bd182e3957e166588a03ffcb1e5a9bea209a9"
+    }
+  ],
+  "original_binary_assets_preserved": true
+}

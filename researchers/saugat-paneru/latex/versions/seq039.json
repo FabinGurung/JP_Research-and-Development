@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "lane": "latex",
+  "sequence": 39,
+  "parent_sequence": 38,
+  "status": "EDITING",
+  "branch": "thesis/saugat-paneru/latex/seq039-scoped-page-layout",
+  "request_key": "saugat:seq039-20261102",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_version": "2.6.4",
+  "scientific_baseline": "CP114_UNCHANGED",
+  "drive_stable_ids": {
+    "pdf": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "source_zip": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "checkpoint": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+    "checklist": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU"
+  },
+  "a7_pre": {
+    "ordinal": 17,
+    "pdf_id": "1sqA40xWVYkO7Nf-SUxoXIrsMf9QmThpu",
+    "zip_id": "1tGjlPP_vNOqv3rpciUmjUNQnbEb0m6pc",
+    "checkpoint_id": "1Wqh4eCez4WnKyGRvUEFJDKVMqnfnZF46",
+    "checklist_id": "1q9eV-G8wYJwJPHYgyqGcZwvz7FkWYQXD",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
+  },
+  "a7_post": {
+    "pdf_id": "1f9_RUfSIcjtDxcThX3IdMD0RZPYreriW",
+    "zip_id": "1b1LumkSulo8mvGHGWbmTIKFduK-oVtBy",
+    "checkpoint_id": "PENDING",
+    "checklist_id": "PENDING"
+  },
+  "source_changes": {
+    "existing_tex_files_modified": 3,
+    "existing_source_members_unchanged": 364,
+    "unchanged_scientific_csv_xlsx": 20,
+    "new_binary_assets": 16,
+    "deleted_existing_files": 0,
+    "fig4_3_panels_reordered": true,
+    "fig4_5_4_6_print_page": 51,
+    "fig4_34_print_page": 75,
+    "fig4_35_print_page": 76
+  },
+  "offline_build": {
+    "status": "PASS__PDF_ZIP_SAME_ID_PUBLISHED",
+    "pages": 127,
+    "paper": "A4",
+    "pdf_sha256": "1d51cbebe3c547bd25459ad8eb5112469765c5b75a37805ffbcd58a6298647f9",
+    "pdf_bytes": 52680759,
+    "source_zip_sha256": "2a5fcf986fb7afed4717ece9fa29914cdcd22b62accb1149068a963512d9d30e",
+    "source_zip_bytes": 72493096,
+    "source_entries": 384,
+    "zip_crc": "PASS",
+    "exact_TNR_body": true
+  },
+  "scope_holds": [
+    "Figure 4.3 panel a/b on printed page 50, not 49, because printed page 49 has insufficient usable area at readable size without moving other text",
+    "Raster code/graph text cannot be certified 11pt Times New Roman from source scans; no graphical data invented"
+  ],
+  "native_google_doc": "NOT_REQUESTED_NO_ACTION"
+}
