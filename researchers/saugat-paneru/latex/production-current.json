@@ -5,7 +5,7 @@
   "production_release_id": "SAUGAT_LATEX_SEQ043_USER_DESIGNATED_CURRENT_20261102__A7_000021_POST",
   "release_version": "LATEX_SEQ043",
   "promoted_date_npt": "2026-11-02",
-  "status": "CURRENT_USER_DESIGNATED__SEQ043_131P_EXACT_TNR__422_FILE_SOURCE__SAME_ORIGINAL_DRIVE_IDS__000021_PRE_POST_VERIFIED__GIT_SOURCE_PR_PROCESSING__SCIENTIFIC_VALIDATION_OUT_OF_SCOPE",
+  "status": "CURRENT_USER_DESIGNATED__SEQ043_131P_EXACT_TNR__422_FILE_SOURCE__A7_000021_PRE_POST_VERIFIED__GIT_SOURCE_PR158_MERGED__SCIENTIFIC_VALIDATION_NOT_IN_SCOPE",
   "scientific_checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
   "scientific_content_status": "CP114_UNCHANGED__ALL_NON_TEX_ASSETS_IDENTICAL_TO_SEQ042__NO_ETABS_REPLAY",
   "new_production": {
@@ -99,8 +99,8 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "824a2b345ceaaec825499e69495919185236bdbc",
     "source_branch": "thesis/saugat-paneru/latex/seq043-figure-pages-explanations",
-    "source_pr": null,
-    "source_merged_commit": null,
+    "source_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/158",
+    "source_merged_commit": "4b329737887dba37b1b497f1f8e5edb98b9b5e4c",
     "source_main": "main",
     "promotion_branch": "thesis/saugat-paneru/latex/seq043-figure-pages-explanations",
     "promotion_change_id": "SEQ043_A7_000021_POST_SAME_IDS_20261102",
@@ -108,9 +108,9 @@
     "m2_immutable_tag": "saugat-cp114-m2.0.0-source-qa-20261020",
     "m3_immutable_tag": "saugat-cp114-m3.0.0-editorial-production-20261021",
     "promotion_pr": null,
-    "promotion_merge_sha": null,
-    "live_pointer_readback": "PASS_SAME_PERMANENT_DRIVE_IDS_20261102",
-    "source_merged_sha": "0026731edc9cdf312d840a501d5e4fd5c33ff78a"
+    "promotion_merge_sha": "4b329737887dba37b1b497f1f8e5edb98b9b5e4c",
+    "live_pointer_readback": "PASS_SAME_PERMANENT_DRIVE_IDS_20261102__GIT_PR158_MERGED",
+    "source_merged_sha": "4b329737887dba37b1b497f1f8e5edb98b9b5e4c"
   },
   "checkpoint_resolution": {
     "status": "CURRENT_STABLE_IDS_UPDATED__A7_000021_PRE_POST_COMPLETE__SEQ043",
