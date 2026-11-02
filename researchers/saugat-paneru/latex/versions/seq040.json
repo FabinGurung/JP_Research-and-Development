@@ -70,17 +70,18 @@
       "storey_shear": "1l0Xe2faQEj3RsoWR0GyfvIEqlhQjcAqw",
       "capacity": "1pYMB1UaI71qvFi6ocU0rgaBCgZ0BwkZa"
     },
-    "next_action": "Confirm archived current/checklist texts, merge guarded production pointer, validate main release hash matches Drive.",
+    "next_action": "After PR #151 checks pass, merge and read GitHub main production-current.json plus seq040.json.",
     "pdf_provider_readback": "PASS__RAW_DOWNLOAD_SHA256_8fec1d42472c5d11f4b3908a8e049f5dda1f8c94b398e00422431e98852e3b41",
     "source_zip_provider_readback": "PASS__RAW_DOWNLOAD_SHA256_a101cc97cf242b1cf22fc7770f856fb377e9b8f3a104dc59274bde3cb32ab319__419_ENTRIES_CRC_PASS",
     "post_pdf_archive_id": "1_LfOjJmLoUq-rgBOGsohu4T_mnPS1aoU",
     "post_zip_archive_id": "1TshzPnE49r9T0X7OzRcgC9aJFwZL2PLl",
     "post_checkpoint_archive_id": "1DPnBYwiZdZNOnSug5weL3C6M9l7U729C",
     "post_checklist_archive_id": "1IeT8mxnSotTJVBnzGN09ekFvW9h5qYcl",
-    "checkpoint_update": "PASS__SAME_PERMANENT_ID__LIVE_TEXT_READBACK_PENDING_POST_WRITE",
-    "checklist_update": "PASS__SAME_PERMANENT_ID__LIVE_TEXT_READBACK_PENDING_POST_WRITE",
+    "checkpoint_update": "PASS__SAME_PERMANENT_ID__SEQ040_CONTENT_PROVIDER_READBACK",
+    "checklist_update": "PASS__SAME_PERMANENT_ID__SEQ040_CONTENT_PROVIDER_READBACK",
     "historical_blocked_receipt_pr": 150,
-    "promotion_status": "GITHUB_PRODUCTION_POINTER_PR_IN_PROGRESS"
+    "promotion_status": "PR_151_CI_IN_PROGRESS__MAIN_READBACK_AFTER_MERGE",
+    "promotion_pr": 151
   },
   "native_google_doc": "NOT_REQUESTED_NO_ACTION"
 }
