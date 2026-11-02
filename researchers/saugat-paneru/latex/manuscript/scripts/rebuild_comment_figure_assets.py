@@ -86,7 +86,7 @@ for i,(model,(x,y)) in enumerate(vals['drift_profiles'].items()):
 ax.set_xlabel('ULS inter-storey drift ratio, X direction');ax.set_ylabel('Elevation (m)')
 ax.set_xlim(0,.006);ax.set_ylim(0,12.8);ax.set_yticks([0,3,6,9,12],['Base','Story 1','Story 2','Story 3','Stair cover'])
 ax.grid(True,ls=':',alpha=.4);ax.legend(loc='upper right',fontsize=10,ncol=2,frameon=False)
-fig.text(.08,.03,'Base at (0, 0) is a plotting reference, not a measured base-storey drift.',fontsize=9)
+# SEQ040: omit the historical plotting-reference note from published drift figures.
 fig.savefig(outdir/'uls_drift_profile_X_source_backed.pdf');plt.close(fig)
 # 12: chart plots authentic Storey force values, with complete box/upper frame line, no invented return-to-zero.
 records=list(csv.DictReader((ROOT/'figures/ch4/final_final_generated/ff_storey_shear_C040_data.csv').open()))
