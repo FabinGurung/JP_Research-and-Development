@@ -148,6 +148,18 @@
           "main_sha_at_reservation": "66ceec953b17f911d0c23c90212b075dd6437276",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Exact user-supplied 16 PNG capacity plots replace only matching active 14 model and 2 Soil-C Z=.40 comparison figures in Chapter 4. Preserve original data, captions, labels, Times New Roman main text, and figures outside scope. A7 000016_PRE archived PDF, ZIP, checkpoint, checklist; same original live Drive IDs, CURRENT/ARCHIVE only, Google Doc not requested."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 39,
+          "branch": "thesis/saugat-paneru/latex/seq039-scoped-page-layout",
+          "status": "RESERVED",
+          "request_key": "saugat:seq039-20261102",
+          "created_at_utc": "2026-11-02T01:45:00Z",
+          "main_sha_at_reservation": "7cb2e5072084d5359e09ee7ae18ea07e5ec182e1",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000017_PRE original four live identities archived. User-authorized only page35/36 model figures, p47 story shear panels, p49/50 CMCR, p51/52 torsion 4.5-4.9, pp56-59 capacity descriptions, p75 GII fig4.34 position/description, and appendix2 captions/crop p105. No numerical input changes; no native Docs work; original permanent Drive IDs."
         }
       ]
     },
