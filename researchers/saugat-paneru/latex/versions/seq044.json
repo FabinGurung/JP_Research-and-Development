@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 44,
+  "branch": "thesis/saugat-paneru/latex/seq044-fullsize-figures-conclusion",
+  "status": "QA_CANDIDATE",
+  "source_parent_sequence": 43,
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "base_main_sha": "99f989921791f146c265b6e43b67bc94cd55bd87",
+  "source_text_files_modified": 7,
+  "source_zip_member_count": 422,
+  "source_unchanged_member_count": 415,
+  "scientific_inputs_status": "ORIGINAL_SCIENTIFIC_CSV_XLSX_IDENTICAL_VS_SEQ043__NO_ETABS_REPLAY",
+  "recommendations": "BYTE_IDENTICAL_TO_SEQ043",
+  "user_conclusion": "EXACT_USER_PROVIDED_TEXT_EXCEPT_TEX_DASH_NORMALIZATION",
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "2b0e2e346bdc06cfc9f77948a34f93377b6ad1f752bb93737f84e66446c357e1",
+    "bytes": 48484401,
+    "pages": 152,
+    "format": "A4",
+    "font": "Embedded exact Times New Roman for thesis main text"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "b9c54e18ba84d5aaef6e4cc80c3a30819f76789feee3aca983354ee4c85cb9b0",
+    "bytes": 75316180,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "1HO_CiLyH_RuyK6PYLaqPwZTNz_tE0EwW",
+    "source_zip": "1CqIGhyrF6rY3puwsL54Ng7v4tpyg5F_M",
+    "checkpoint": "18GPy2cKcziUZ3uYIQ2StuMxNSH5PPHNf",
+    "checklist": "1PRT5fVF68S-PeJrkzlrL82WbboyFmujh"
+  },
+  "archive_post": {
+    "pdf": "1TnVWe0zV6oSl9wEWsvTELQzPLZeeEgPP",
+    "source_zip": "1f_BlscGGjM1pwhOKSexO9RklluCwdQ2o",
+    "checkpoint": "1bHo7flFBRsMuNWGqJOMyVtMyUyvtpTQG",
+    "checklist": "1O6Kcglpi0S4Cu8kkJo4Dyz-3Cstu_v12"
+  },
+  "layout_exception": "Figure3.4 a-e spread printed pages 30-32; Figure3.5 printed page 33 to maintain enlargement",
+  "scientific_approval": "NOT_ASSERTED",
+  "github_merger": "PENDING"
+}
