@@ -13,7 +13,38 @@ The six structural blocks of the Infectious and Communicable Disease Hospital we
 \FloatBarrier
 
 \section{Hospital and Structural Configuration}
-The case study is the existing \textbf{Infectious and Communicable Disease Hospital} in Mohoriya, Lekhnath, Pokhara Metropolitan City--30, Kaski, Gandaki Province. The hospital is also known under its later institutional name, Provincial General and Communicable Disease Hospital. The submitted architectural plan identifies six structural blocks modelled as G+4 (ground plus four upper floors).\footnote{Provincial hospital institutional website and contact details: \url{https://icdh.gandaki.gov.np/} and \url{https://icdh.gandaki.gov.np/contact}.}
+The case study is the existing \textbf{Infectious and Communicable Disease Hospital} in Mohoriya, Lekhnath, Pokhara Metropolitan City--30, Kaski, Gandaki Province. The hospital is also known under its later institutional name, Provincial General and Communicable Disease Hospital. The submitted architectural plan identifies six structural blocks modelled as G+4 (ground plus four upper floors).
+
+\noindent The case study represents a mid-sized hospital building in Pokhara.\\
+Six structural blocks are evaluated separately.\\
+The submitted drawings identify a G+4 arrangement.\\
+Bed count and several architectural dimensions remain unverified.
+
+\begin{table}[htbp]
+\centering
+\caption{Functional and architectural code provisions and evidence status for the representative hospital configuration}
+\label{tab:seq068_arch_compliance}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.14}
+\begin{tabular}{@{}p{3.15cm}p{5.05cm}p{5.0cm}@{}}
+\toprule
+Requirement & NBC 206:2024 provision & Proposed model / evidence status \\
+\midrule
+Hospital classification & D2 for more than 25 beds & Six G+4 blocks; 100-bed statement in reference image not independently verified \\
+Building height & Medium rise: 6--8 storeys or 18--25 m & G+4 in submitted plans; 18.75 m unverified \\
+Room height & At least 3.2 m (hills/mountains) & 3.9 m in reference image; room schedule not verified \\
+Accessibility & D2 hospital: Category 3 accessibility & Compliance drawings / dimensions not verified \\
+Patient lift & Car at least $1.2\,\mathrm{m}\times2.4\,\mathrm{m}$ & $2.3\times3.285$ m in reference image; not measured from approved lift schedule \\
+Emergency egress & Exit travel, doors, corridors and stairs per NBC 206 clauses 2.2--2.4 & Locations and travel distances require measured plan check \\
+Natural ventilation & Opening area at least $1/6$ of room area where applicable & Opening schedule not verified \\
+Hospital services & Applicable MoHP service / functional requirements & Functional-space schedule not verified \\
+\bottomrule
+\end{tabular}
+\end{table}
+\noindent\textit{Evidence qualification:} The code column summarizes NBC 206:2024 \cite{nbc2062024}; the model column separates the submitted G+4 block information from unverified values reproduced from the supplied comparison reference. No architectural compliance certificate, 100-bed approval, G+5 identity or measured 18.75 m height is inferred. The two storey-count descriptions refer to different records and are not interchangeable.
+\FloatBarrier
+\footnote{Provincial hospital institutional website and contact details: \url{https://icdh.gandaki.gov.np/} and \url{https://icdh.gandaki.gov.np/contact}.}
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.74\textwidth]{seq050_assets/b1_new.png}
@@ -157,7 +188,25 @@ Numerical comparison proceeds in three stages: first, confirm the block and supp
 
 
 \section{Seismic Parameters and Gravity Loading}
-The structural models adopt an importance factor of 1.5, a damping ratio of 5 percent, and a Special Moment Resisting Frame (SMRF) structural-system designation. Seismic loading and site classification follow NBC 105:2025 \cite{nbc1052025}. The gravity-load assignments for the model are summarized in Table~\ref{tab:gravity_load_inputs}. The imposed floor loading differs according to the functional use of the spaces and the relevant structural element.
+The structural models adopt an importance factor of 1.5, a damping ratio of 5 percent, and a Special Moment Resisting Frame (SMRF) structural-system designation. Seismic loading and site classification follow NBC 105:2025 \cite{nbc1052025}.
+
+\begin{table}[htbp]
+\centering
+\caption{General seismic parameters and verification status of the adopted structural models}
+\label{tab:seq068_general_seismic}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{@{}p{6.4cm}p{6.3cm}@{}}
+\toprule
+Parameter & Detail / verification status \\
+\midrule
+Importance factor, $I$ & 1.5 (reported adopted model parameter; hospital importance class) \\
+Seismic zoning factor, $Z$ & 0.35 in supplied reference; application to original ETABS files unverified \\
+Damping ratio & 5\% (reported adopted model parameter; ETABS case audit pending) \\
+\bottomrule
+\end{tabular}
+\end{table}
+\noindent The above values distinguish the previously reported analysis assumptions from unverified ETABS file settings; NBC 105:2025 \cite{nbc1052025} is the cited seismic design basis. In particular, the supplied $Z=0.35$ is not represented as a verified numerical input to the six existing models.\par\FloatBarrier
+ The gravity-load assignments for the model are summarized in Table~\ref{tab:gravity_load_inputs}. The imposed floor loading differs according to the functional use of the spaces and the relevant structural element.
 
 \begin{table}[htbp]
 \centering
