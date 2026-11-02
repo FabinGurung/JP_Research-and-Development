@@ -97,43 +97,81 @@ The plan drawings and three-dimensional model views document the placement and o
 
 \input{cp112_additions/ch3_model_geometry.tex}
 
-% SEQ032: paired, uniformly sized model images with original source files.
-\newcommand{\saugatMethodPanel}[4]{%
-\begin{minipage}[t]{0.485\textwidth}\centering
-\begin{minipage}[c][0.245\textheight][c]{\linewidth}\centering
-\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{#1}
-\end{minipage}
-\caption{#2 building model.}\label{#3}
-{\small\raggedright #4\par}
-\end{minipage}}
-
-\begin{figure}[p]\centering
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-001_Regular_Building.png}{Regular}{fig:method_regular_model}{The regular model provides the reference configuration for the plan-comparison series.}
-\hfill
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-002_L_Building.png}{L-type}{fig:method_l_model}{The L-shaped arrangement introduces one re-entrant corner.}
-
-\medskip
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-003_L1_Building.png}{L1-type}{fig:method_lone_model}{L1 represents a deeper re-entrant configuration than the first L-shaped case.}
-\hfill
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-004_L2_Building.png}{L2-type}{fig:method_ltwo_model}{The stepped L2 plan retains its separate re-entrant topology.}
-\par\vspace{8pt}\begin{minipage}{0.96\textwidth}\normalsize\raggedright
-Figures~\ref{fig:method_regular_model}--\ref{fig:method_ltwo_model} show the corresponding three-dimensional frame configurations for the Regular and L-type models. The Regular frame has a continuous orthogonal footprint; the L and L1 frames introduce a single re-entrant portion, and L2 uses a stepped plan. Although these frame views share the same three-full-storey and stair-cover modelling basis, the location of their frame lines and re-entrant corners differs. The structural-response comparison therefore retains each configuration as a distinct case rather than reducing the geometry to plan area alone. The screenshots describe the model arrangement, not independently calculated performance quantities.\par
-\end{minipage}
+% SEQ044: full-width one-per-row comparative model illustrations, same maximum size as Fig. 3.3.
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-001_Regular_Building.png}
+\caption{Regular building model.}
+\label{fig:method_regular_model}
+\par\smallskip
+{\small\raggedright The regular model provides the reference configuration for the plan-comparison series.\par}
 \end{figure}
 
-\begin{figure}[p]\centering
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-005_T_Building.png}{T-type}{fig:method_t_model}{The T-shaped layout contains re-entrant corners on opposing sides of the plan.}
-\hfill
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-006_U_Building.png}{U-type}{fig:method_u_model}{The U-shaped configuration includes a central notch and two re-entrant corners.}
-
-\medskip
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-007_Non_Parallel_Building.png}{Non-Parallel}{fig:method_np_model}{The non-parallel framing arrangement is evaluated separately from the re-entrant plans.}
-\hfill
-\saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-008_4_Storey_Regular_Building.png}{separate four-storey Regular extension}{fig:method_fourstorey_model}{The four-storey height extension is not part of the seven-model performance-point series.}
-\par\vspace{8pt}\begin{minipage}{0.96\textwidth}\normalsize\raggedright
-The T and U model views identify the different positions of their two re-entrant corners, whereas the Non-Parallel model shows the skewed orientation of the framing lines. The four-storey view illustrates a different type of comparison: an extra full storey plus the stair cover, rather than a change of plan among the seven three-storey configurations. Accordingly, the height-extension design checks are discussed separately from the common-height performance-point series. These views are intended to document model configuration and should be interpreted together with the section and loading inputs recorded in Tables~\ref{tab:seq035_geometry} and~\ref{tab:seq035_load_inputs}.\par
-\end{minipage}
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-002_L_Building.png}
+\caption{L-type building model.}
+\label{fig:method_l_model}
+\par\smallskip
+{\small\raggedright The L-shaped arrangement introduces one re-entrant corner.\par}
 \end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-003_L1_Building.png}
+\caption{L1-type building model.}
+\label{fig:method_lone_model}
+\par\smallskip
+{\small\raggedright L1 represents a deeper re-entrant configuration than the first L-shaped case.\par}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-004_L2_Building.png}
+\caption{L2-type building model.}
+\label{fig:method_ltwo_model}
+\par\smallskip
+{\small\raggedright The stepped L2 plan retains its separate re-entrant topology.\par}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-005_T_Building.png}
+\caption{T-type building model.}
+\label{fig:method_t_model}
+\par\smallskip
+{\small\raggedright The T-shaped layout contains re-entrant corners on opposing sides of the plan.\par}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-006_U_Building.png}
+\caption{U-type building model.}
+\label{fig:method_u_model}
+\par\smallskip
+{\small\raggedright The U-shaped configuration includes a central notch and two re-entrant corners.\par}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-007_Non_Parallel_Building.png}
+\caption{Non-Parallel building model.}
+\label{fig:method_np_model}
+\par\smallskip
+{\small\raggedright The non-parallel framing arrangement is evaluated separately from the re-entrant plans.\par}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch4/final_final_original/models/SRC-FF-IMG-008_4_Storey_Regular_Building.png}
+\caption{separate four-storey Regular extension building model.}
+\label{fig:method_fourstorey_model}
+\par\smallskip
+{\small\raggedright The four-storey height extension is not part of the seven-model performance-point series.\par}
+\end{figure}
+
+\noindent Figures~\ref{fig:method_regular_model}--\ref{fig:method_fourstorey_model} compare the documented model geometries. The seven common-height models are used for plan-response comparisons; the four-storey extension is assessed separately. The screenshots document framing arrangements and not independently verified performance capacities.
+
 \FloatBarrier
 
 \subsection{NBC 205:2012 Detailing Reference}
@@ -155,7 +193,7 @@ The following model screenshots document the geometry restrictions and member-se
 \end{figure}
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.95\textwidth,height=0.32\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC205_2012_Beam Section Choose Part 1.jpg}
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC205_2012_Beam Section Choose Part 1.jpg}
 \caption{Beam section selection for the 2012 reference.}
 \par\vspace{3pt}{\small\raggedright The beam arrangement records the member sizes specified for the 2012 reference frame. Its concrete design-check results are discussed separately in Chapter~4. The screenshot serves as a traceable depiction of the reference section selection. In interpreting it, the section definition, material grade and gravity-load assignment should remain separate from the resulting member-design check. The 2012 reference uses beam sections of 230~mm by 355~mm in the study input schedule; the 2024 model group uses the separate section family shown in Table~\ref{tab:seq035_geometry}. This comparison identifies differing adopted inputs and does not constitute a direct member-capacity comparison.\par}
 \end{figure}
@@ -173,7 +211,7 @@ The following model screenshots document the geometry restrictions and member-se
 \end{figure}
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/Column Section_NBC205_2024 part 1.jpg}
+\includegraphics[width=0.94\textwidth,height=0.54\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/Column Section_NBC205_2024 part 1.jpg}
 \caption{Column section selection for the 2024 models.}
 \par\vspace{3pt}{\small\raggedright The column section view documents the model geometry considered for the newer configurations; verification of reinforcement demands requires the corresponding design results.\par}
 \end{figure}
