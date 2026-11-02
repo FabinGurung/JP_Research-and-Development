@@ -184,6 +184,18 @@
           "main_sha_at_reservation": "865eb6544c0689a3045bef0ce9c280f69bb1a8be",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000019_PRE four original SEQ040 live artifacts archived; figure 3.3–3.5 enlarged; 3.4 max 2x2 and continued fifth panel; enlarge selected methodology panels; chapter3 spectrum best-fit; reduce gaps around tables 4.12–4.13 and Fig4.24 and crop duplicate graphic titles; improve descriptions only near affected figures; relocate existing Figure 4.33 ahead of comparative results preserving model data and number, subject to print pagination QA. Six scoped LaTeX files only; no numeric CSV/XLSX edits; native Doc opt-in untouched. Same original Drive IDs, archive PRE/POST."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 42,
+          "branch": "thesis/saugat-paneru/latex/seq042-figure-placements-roman-toc",
+          "status": "RESERVED",
+          "request_key": "saugat:seq042-20261102",
+          "created_at_utc": "2026-11-02T09:45:00Z",
+          "main_sha_at_reservation": "8e024e154cffe9e4c464ed7fffa61f1977e761a2",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "SEQ041 000019_PRE PDF, full source, checkpoint and checklist archived; five scoped LaTeX files altered, all 20 scientific inputs untouched. Figure 3.3-3.5 enlarged; p-only floats top-aligned; five-image Fig4.25/4.26 spread into 2x2 plus continuation (max4/page); Fig4.33 moved to page66, combined comparison begins p70; 11 preliminary TOC entries receive dynamic Roman numbers. 131p exact Times New Roman PDF and 422-member ZIP built/QA. Same permanent Drive IDs, CURRENT/ARCHIVE only, no native Doc work; original embedded raster fonts separately unverified."
         }
       ]
     },
