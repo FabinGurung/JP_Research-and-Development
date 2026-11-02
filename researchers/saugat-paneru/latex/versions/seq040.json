@@ -6,7 +6,7 @@
   "sequence": 40,
   "parent_sequence": 39,
   "branch": "thesis/saugat-paneru/latex/seq040-5-scoped-figure-edits",
-  "status": "SOURCE_QA_PASSED__A7_POST_PENDING",
+  "status": "EDITING",
   "request_key": "saugat:seq040-20261102",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -59,7 +59,7 @@
     "scientific_values": "20_EXISTING_INPUTS_BYTE_IDENTICAL"
   },
   "publication": {
-    "drive_current": "LATEX_SEQ039_UNTIL_VERIFIED_SAME_ID_PROVIDER_UPDATE",
+    "drive_current": "SEQ039_UNTIL_ACTUAL_PROVIDER_READBACK",
     "a7_post": "PENDING",
     "source_pr": "TO_CREATE",
     "academic_certification": "NOT_CLAIMED"
