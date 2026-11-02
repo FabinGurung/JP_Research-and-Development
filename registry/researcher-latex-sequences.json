@@ -220,6 +220,18 @@
           "main_sha_at_reservation": "cefb7a07672dd12e4fc3032c60d40f6a6f2cafe7",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "User-directed SEQ044 using Drive SEQ043 exact source: A7 000023 PRE four immutable copies, 152p exact Times New Roman PDF, 422-file ZIP, seven .tex edited, 415 members unchanged including numerical data, Recommendations byte-identical; same permanent Drive IDs, independent ETABS rerun not performed. Source GitHub sync to follow separate PR."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 45,
+          "branch": "thesis/saugat-paneru/latex/seq045-pagination-tighten",
+          "status": "RESERVED",
+          "request_key": "saugat:seq045-20261103",
+          "created_at_utc": "2026-11-03T00:05:00Z",
+          "main_sha_at_reservation": "22950c617859454a0ae4f275b8769b5cb6fcce14",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "SEQ044 exact source, A7 000026 PRE complete four-file archive. Scoped LOF/LOT left alignment, Fig3.21 size, requested page float/paragraph placement, no scientific/prose edits and no shared-template modifications. QA then same-ID Drive, independent ETABS replay not requested."
         }
       ]
     },
