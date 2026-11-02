@@ -5,7 +5,7 @@
   "production_release_id": "SAUGAT_LATEX_SEQ044_USER_DESIGNATED_CURRENT_20261102__A7_000023_POST",
   "release_version": "LATEX_SEQ044",
   "promoted_date_npt": "2026-11-02",
-  "status": "CURRENT_USER_DESIGNATED__SEQ044_152P_EXACT_TNR__422FILE_SOURCE__A7_000023_PRE_POST__GIT_PR_PENDING__NO_ETABS_REPLAY",
+  "status": "CURRENT_USER_DESIGNATED__SEQ044_152P_EXACT_TNR__422FILE_SOURCE__A7_000023_PRE_POST__GIT_SOURCE_PR162_MERGED__NO_ETABS_REPLAY",
   "scientific_checkpoint": "CP-20261007__CP114_V022_TITLE_PLAN_SUBFIGURE_HUMANIZATION_TNR_RELEASE",
   "scientific_content_status": "NO_NEW_ETABS_REPLAY__ORIGINAL_415_NON_TEX_AND_OTHER_UNCHANGED_ITEMS__USER_SUPPLIED_CONCLUSION",
   "new_production": {
@@ -99,8 +99,8 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "99f989921791f146c265b6e43b67bc94cd55bd87",
     "source_branch": "thesis/saugat-paneru/latex/seq044-fullsize-figures-conclusion",
-    "source_pr": null,
-    "source_merged_commit": null,
+    "source_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/162",
+    "source_merged_commit": "bbd9386cb31f010b98d94fbc0bb2d11546e085da",
     "source_main": "main",
     "promotion_branch": "thesis/saugat-paneru/latex/seq044-fullsize-figures-conclusion",
     "promotion_change_id": "SEQ044_A7_000023_POST_SAME_IDS_20261102",
@@ -108,9 +108,9 @@
     "m2_immutable_tag": "saugat-cp114-m2.0.0-source-qa-20261020",
     "m3_immutable_tag": "saugat-cp114-m3.0.0-editorial-production-20261021",
     "promotion_pr": null,
-    "promotion_merge_sha": "4b329737887dba37b1b497f1f8e5edb98b9b5e4c",
-    "live_pointer_readback": "PASS_SAME_PERMANENT_DRIVE_IDS_AND_SHA256_20261102",
-    "source_merged_sha": null
+    "promotion_merge_sha": "bbd9386cb31f010b98d94fbc0bb2d11546e085da",
+    "live_pointer_readback": "PASS_DRIVE_SAME_ID_HASH_AND_GIT_PR162_MERGED",
+    "source_merged_sha": "bbd9386cb31f010b98d94fbc0bb2d11546e085da"
   },
   "checkpoint_resolution": {
     "status": "CURRENT_STABLE_IDS_UPDATED__A7_000023_PRE_POST_COMPLETE__SEQ044",
