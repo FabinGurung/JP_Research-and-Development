@@ -4,7 +4,7 @@
   "slug": "saugat-paneru",
   "sequence": 43,
   "branch": "thesis/saugat-paneru/latex/seq043-figure-pages-explanations",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "source_parent_sequence": 42,
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -42,5 +42,7 @@
   "approved_user_scope": "Scoped figure pages and explanatory prose only, no independent scientific validation",
   "academic_approval": "NOT_ASSERTED",
   "manuscript_facts": "NO_NEW_NUMERICAL_SCIENTIFIC_RESULTS",
-  "github_merger": "PENDING"
+  "github_merger": "4b329737887dba37b1b497f1f8e5edb98b9b5e4c",
+  "github_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/158",
+  "scientific_approval": "NOT_ASSERTED"
 }
