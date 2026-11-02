@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "sequence": 66,
+  "release_id": "LATEX_SEQ066",
+  "parent_release": "LATEX_SEQ065",
+  "status": "DRIVE_WORKING_SOURCE_PDF_PUBLISHED__LOCAL_QA_PASS__GIT_INHERITANCE_FAIL__SCIENTIFIC_HOLDS_OPEN",
+  "date_local": "2026-11-02",
+  "timezone": "Asia/Kathmandu",
+  "pdf": {
+    "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "sha256": "f15841c886d3d18b5750a532d1f4b32477d3deee6b606cd0efccae5506dcd552",
+    "size": 11259157,
+    "pages": 114
+  },
+  "source": {
+    "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "8afc1dae599c23264f974498d20825f2d06c9c5a8dfa8553e355e72488024fcc",
+    "size": 90858314,
+    "entries": 364
+  },
+  "numbered_archive": "000012",
+  "pre": {
+    "pdf": "1zX0PiYztAIKUNmWJmBtU9U-qdqldcn8h",
+    "source": "1LB9GAptt0hFwTMAra76JYMA4XG4Nu1nQ"
+  },
+  "post": {
+    "pdf": "12ufqWs6NesiiJEprNgnrWYPTxb00VQPu",
+    "source": "10RakUlAQqxUPo07Ldgu4H7sth4goaBZl",
+    "qa": "1HypXJsuYqvjyjhEPlZHUnm6BR6XxD3Wd",
+    "response": "1gowT9DFiyi_lbhRZ638xEMWM8mYtFIA-"
+  },
+  "supervisor_review": {
+    "complete": 7,
+    "partial": 12,
+    "pending": 2
+  },
+  "preserved_cleaned_pngs": 32,
+  "preserved_png_copies": 56,
+  "figures": 88,
+  "ETABS_rerun": false,
+  "nonlinear_fit": false,
+  "submission_certified": false,
+  "native_doc_requested": false,
+  "git": {
+    "source_commit": "81debf9de218a2691e7fedbbaa8fd7026875716a",
+    "pr": 147,
+    "merged": false,
+    "central_allocator_reserved": false,
+    "base_branch": "researcher/nabin-bista/latex-seq065-figure-reuse-20261101",
+    "checks": "FAIL: admitted manuscript missing central style import in main.tex. Drive-populated legacy formatting retained for user-authorized scoped revision; shared-style migration and ancestor PR reconciliation remain separate open gates."
+  },
+  "restore": "Restore 000012 PRE bytes into the SAME two permanent Drive IDs; append restoration event; preserve PRE/POST archives."
+}
