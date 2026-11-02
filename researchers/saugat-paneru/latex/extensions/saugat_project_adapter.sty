@@ -6,6 +6,13 @@
 \RequirePackage{array,tabularx,longtable}
 \RequirePackage{amsmath,amssymb}
 \RequirePackage{tocloft}
+% SEQ042: preliminary entries retain Roman page numbers while chapter header rows remain dotless.
+\makeatletter
+\newcommand*{\l@puprelim}[2]{%
+  \addpenalty{-\@highpenalty}\vskip\cftbeforechapskip
+  \noindent\parbox{\linewidth}{\normalfont\fontsize{12}{14.4}\selectfont #1\hfill\normalfont\fontsize{12}{14.4}\selectfont #2}\par
+}
+\makeatother
 \RequirePackage{etoolbox}
 \RequirePackage{ragged2e}
 \RequirePackage{needspace}
@@ -35,25 +42,25 @@
 \end{center}}
 % The approved CP114 title-page override lives in main.tex, sourced unchanged.
 \providecommand{\PUTitlePage}{}
-\newcommand{\PUDeclarationPage}{\clearpage\addcontentsline{toc}{chapter}{Declaration}\PUNarrativePrelimHeading{Declaration}\input{frontmatter/declaration.tex}}
-\newcommand{\PURecommendationPage}{\clearpage\addcontentsline{toc}{chapter}{Recommendation}\PUNarrativePrelimHeading{Recommendation}\input{frontmatter/recommendation.tex}}
-\newcommand{\PUCertificatePage}{\clearpage\addcontentsline{toc}{chapter}{Certificate}\PUNarrativePrelimHeading{Certificate}\input{frontmatter/certificate.tex}}
-\newcommand{\PUAcknowledgementsPage}{\clearpage\addcontentsline{toc}{chapter}{Acknowledgements}\PUNarrativePrelimHeading{Acknowledgements}\input{frontmatter/acknowledgements.tex}}
+\newcommand{\PUDeclarationPage}{\clearpage\addcontentsline{toc}{puprelim}{Declaration}\PUNarrativePrelimHeading{Declaration}\input{frontmatter/declaration.tex}}
+\newcommand{\PURecommendationPage}{\clearpage\addcontentsline{toc}{puprelim}{Recommendation}\PUNarrativePrelimHeading{Recommendation}\input{frontmatter/recommendation.tex}}
+\newcommand{\PUCertificatePage}{\clearpage\addcontentsline{toc}{puprelim}{Certificate}\PUNarrativePrelimHeading{Certificate}\input{frontmatter/certificate.tex}}
+\newcommand{\PUAcknowledgementsPage}{\clearpage\addcontentsline{toc}{puprelim}{Acknowledgements}\PUNarrativePrelimHeading{Acknowledgements}\input{frontmatter/acknowledgements.tex}}
 \newlength{\PUAbstractIndent}
 \settowidth{\PUAbstractIndent}{\space\space\space\space}
 \newcommand{\PUAbstractParagraph}[1]{\noindent\hspace*{\PUAbstractIndent}#1\par}
-\newcommand{\PUAbstractPage}{\clearpage\addcontentsline{toc}{chapter}{Abstract}\PUNarrativePrelimHeading{ABSTRACT}\begingroup\justifying\input{frontmatter/abstract.tex}\vspace{\baselineskip}\noindent\textbf{Keywords:} \input{frontmatter/keywords.tex}\endgroup}
-\newcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{chapter}{Table of contents}\PUPrintContents}
-\newcommand{\PUListOfTables}{\clearpage\addcontentsline{toc}{chapter}{List of tables}\PUPrintTables}
-\newcommand{\PUListOfFigures}{\clearpage\addcontentsline{toc}{chapter}{List of figures}\PUPrintFigures}
+\newcommand{\PUAbstractPage}{\clearpage\addcontentsline{toc}{puprelim}{Abstract}\PUNarrativePrelimHeading{ABSTRACT}\enlargethispage{2\baselineskip}\begingroup\begin{spacing}{1.10}\justifying\input{frontmatter/abstract.tex}\vspace{0.2\baselineskip}\noindent\textbf{Keywords:} \input{frontmatter/keywords.tex}\end{spacing}\endgroup}
+\newcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{puprelim}{Table of contents}\PUPrintContents}
+\newcommand{\PUListOfTables}{\clearpage\addcontentsline{toc}{puprelim}{List of tables}\PUPrintTables}
+\newcommand{\PUListOfFigures}{\clearpage\addcontentsline{toc}{puprelim}{List of figures}\PUPrintFigures}
 \makeatletter
 \newcommand{\PUListOfPlates}{\clearpage\addcontentsline{toc}{chapter}{List of plates/pictures}\begingroup\singlespacing\PUNarrativePrelimHeading{List of plates/pictures}\@starttoc{lop}\endgroup}
 \makeatother
 \newcounter{puappendix}
 \renewcommand{\thepuappendix}{\arabic{puappendix}}
 \newcommand{\PUAppendix}[1]{\clearpage\stepcounter{puappendix}\addcontentsline{loa}{saugatappendix}{Appendix \thepuappendix. #1}\addcontentsline{toc}{chapter}{Appendix \thepuappendix: #1}\begin{center}\bfseries\fontsize{14}{18}\selectfont Appendix \thepuappendix: #1\end{center}\vspace{24pt}}
-\newenvironment{PUAbbreviations}{\clearpage\addcontentsline{toc}{chapter}{Abbreviations/Acronyms}\PUListPrelimHeading{Abbreviations/Acronyms}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\begin{tabular}{@{}p{2.5cm}p{\dimexpr\textwidth-2.5cm-2\tabcolsep\relax}@{}}}{\end{tabular}\endgroup}
-\newenvironment{PUUnits}{\clearpage\addcontentsline{toc}{chapter}{Units and Conversions}\PUListPrelimHeading{Units and Conversions}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\begin{tabular}{@{}p{2.5cm}p{\dimexpr\textwidth-2.5cm-2\tabcolsep\relax}@{}}}{\end{tabular}\endgroup}
+\newenvironment{PUAbbreviations}{\clearpage\addcontentsline{toc}{puprelim}{Abbreviations/Acronyms}\PUListPrelimHeading{Abbreviations/Acronyms}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\begin{tabular}{@{}p{2.5cm}p{\dimexpr\textwidth-2.5cm-2\tabcolsep\relax}@{}}}{\end{tabular}\endgroup}
+\newenvironment{PUUnits}{\clearpage\addcontentsline{toc}{puprelim}{Units and Conversions}\PUListPrelimHeading{Units and Conversions}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\begin{tabular}{@{}p{2.5cm}p{\dimexpr\textwidth-2.5cm-2\tabcolsep\relax}@{}}}{\end{tabular}\endgroup}
 \newcommand{\PUTableCompact}{\fontsize{10}{12}\selectfont}
 \newcommand{\PUTableNormal}{\fontsize{12}{14.4}\selectfont}
 \newcommand{\PUCaptionSource}[1]{\ifstrempty{#1}{}{\space[Source: #1]}}
@@ -98,8 +105,56 @@
 \newcommand{\SaugatCPListTitle}[1]{\begin{center}\bfseries\fontsize{14}{18}\selectfont #1\end{center}\vspace{12pt}}
 \makeatletter
 \newcommand{\l@saugatappendix}{\@dottedtocline{0}{0em}{7em}}
-\renewcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{chapter}{Table of contents}\PUPrintContents}
-\renewcommand{\PUListOfTables}{\clearpage\addcontentsline{toc}{chapter}{List of tables}\SaugatCPListTitle{List of tables}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lot}\endgroup}
-\renewcommand{\PUListOfFigures}{\clearpage\addcontentsline{toc}{chapter}{List of figures}\SaugatCPListTitle{List of figures}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lof}\endgroup}
-\renewcommand{\PUListOfAppendices}{\clearpage\addcontentsline{toc}{chapter}{List of appendices}\SaugatCPListTitle{List of appendices}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{loa}\endgroup}
+\renewcommand{\PUTableOfContents}{\clearpage\addcontentsline{toc}{puprelim}{Table of contents}\PUPrintContents}
+\renewcommand{\PUListOfTables}{\clearpage\addcontentsline{toc}{puprelim}{List of tables}\SaugatCPListTitle{List of tables}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lot}\endgroup}
+\renewcommand{\PUListOfFigures}{\clearpage\addcontentsline{toc}{puprelim}{List of figures}\SaugatCPListTitle{List of figures}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{lof}\endgroup}
+\renewcommand{\PUListOfAppendices}{\clearpage\addcontentsline{toc}{puprelim}{List of appendices}\SaugatCPListTitle{List of appendices}\begingroup\singlespacing\fontsize{12}{14.4}\selectfont\@starttoc{loa}\endgroup}
+\makeatother
+
+% SEQ045: researcher-scoped List of Tables/List of Figures only; keep TOC unchanged.
+% A7 scoped presentation adjustment; do not modify the shared PU style.
+\AtBeginDocument{%
+  \renewcommand{\listtablename}{\makebox[\textwidth][l]{LIST OF TABLES}}%
+  \renewcommand{\listfigurename}{\makebox[\textwidth][l]{LIST OF FIGURES}}%
+  \renewcommand{\cftlottitlefont}{\bfseries\fontsize{14}{17}\selectfont\raggedright}%
+  \renewcommand{\cftloftitlefont}{\bfseries\fontsize{14}{17}\selectfont\raggedright}%
+  \renewcommand{\cftafterlottitle}{\par}%
+  \renewcommand{\cftafterloftitle}{\par}%
+  \renewcommand{\cfttabfont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftfigfont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \setlength{\cftbeforetabskip}{2pt}%
+  \setlength{\cftbeforefigskip}{2pt}%
+  \setlength{\cfttabindent}{0pt}%
+  \setlength{\cftfigindent}{0pt}%
+}
+
+% SEQ045: direct, researcher-only list headings. Avoid tocloft's centred
+% chapter-style heading while retaining its existing .lot/.lof entry rendering.
+\makeatletter
+\renewcommand{\PUPrintTables}{%
+  \begingroup\singlespacing
+  \noindent{\bfseries\fontsize{14}{17}\selectfont LIST OF TABLES\par}%
+  \vspace{12pt}%
+  \@starttoc{lot}%
+  \endgroup}
+\renewcommand{\PUPrintFigures}{%
+  \begingroup\singlespacing
+  \noindent{\bfseries\fontsize{14}{17}\selectfont LIST OF FIGURES\par}%
+  \vspace{12pt}%
+  \@starttoc{lof}%
+  \endgroup}
+\makeatother
+
+% SEQ045 actual public call sites: the project adapter's PUListOfTables and
+% PUListOfFigures (not the shared PUPrint* helpers) supply the visible headings.
+% Override precisely those two; leave the appendix list and TOC headings intact.
+\makeatletter
+\renewcommand{\PUListOfTables}{%
+  \clearpage\addcontentsline{toc}{puprelim}{List of tables}%
+  \noindent{\bfseries\fontsize{14}{18}\selectfont List of tables\par}\vspace{12pt}%
+  \begingroup\singlespacing\fontsize{12}{17}\selectfont\@starttoc{lot}\endgroup}
+\renewcommand{\PUListOfFigures}{%
+  \clearpage\addcontentsline{toc}{puprelim}{List of figures}%
+  \noindent{\bfseries\fontsize{14}{18}\selectfont List of figures\par}\vspace{12pt}%
+  \begingroup\singlespacing\fontsize{12}{17}\selectfont\@starttoc{lof}\endgroup}
 \makeatother
