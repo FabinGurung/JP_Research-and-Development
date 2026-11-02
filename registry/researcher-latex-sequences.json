@@ -160,6 +160,18 @@
           "main_sha_at_reservation": "7cb2e5072084d5359e09ee7ae18ea07e5ec182e1",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000017_PRE original four live identities archived. User-authorized only page35/36 model figures, p47 story shear panels, p49/50 CMCR, p51/52 torsion 4.5-4.9, pp56-59 capacity descriptions, p75 GII fig4.34 position/description, and appendix2 captions/crop p105. No numerical input changes; no native Docs work; original permanent Drive IDs."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 40,
+          "branch": "thesis/saugat-paneru/latex/seq040-5-scoped-figure-edits",
+          "status": "RESERVED",
+          "request_key": "saugat:seq040-20261102",
+          "created_at_utc": "2026-11-02T04:50:00Z",
+          "main_sha_at_reservation": "56e802944ab36694f5e2cbf6e034da79ea3233fa",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000018 PRE PDF, full LaTeX ZIP, checkpoint and reviewer checklist stored before edits. Five user-only modifications: remove plotting note, 12pt Times New Roman for editable graph text, Fig4.37 uses Fig4.36 model symbol/color mapping, 8 supplied storey-shear and 16 supplied capacity figures. All 20 numeric inputs untouched. Same four live Drive IDs, no candidate folders, native Doc not requested. 128 A4 pages, 419 ZIP files."
         }
       ]
     },
