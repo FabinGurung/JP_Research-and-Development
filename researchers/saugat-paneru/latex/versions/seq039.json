@@ -5,7 +5,7 @@
   "lane": "latex",
   "sequence": 39,
   "parent_sequence": 38,
-  "status": "EDITING",
+  "status": "RELEASED",
   "branch": "thesis/saugat-paneru/latex/seq039-scoped-page-layout",
   "request_key": "saugat:seq039-20261102",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
@@ -29,8 +29,9 @@
   "a7_post": {
     "pdf_id": "1f9_RUfSIcjtDxcThX3IdMD0RZPYreriW",
     "zip_id": "1b1LumkSulo8mvGHGWbmTIKFduK-oVtBy",
-    "checkpoint_id": "PENDING",
-    "checklist_id": "PENDING"
+    "checkpoint_id": "1wdF58M9VuMX6Vtzf-gX4A9I93UcJHJLv",
+    "checklist_id": "1YlT8bGtoAFn-elMpI05lBnP2wgpC-awi",
+    "archive_folder_id": "1_BGwgjyAFJHK0GKtYxdKJTguz5pjlS0V"
   },
   "source_changes": {
     "existing_tex_files_modified": 3,
@@ -59,5 +60,14 @@
     "Figure 4.3 panel a/b on printed page 50, not 49, because printed page 49 has insufficient usable area at readable size without moving other text",
     "Raster code/graph text cannot be certified 11pt Times New Roman from source scans; no graphical data invented"
   ],
-  "native_google_doc": "NOT_REQUESTED_NO_ACTION"
+  "native_google_doc": "NOT_REQUESTED_NO_ACTION",
+  "publication": {
+    "operational_current": "SEQ039_USER_DESIGNATED_CURRENT",
+    "provider_same_id_pdf_zip": "SUCCESS",
+    "provider_readback": "PDF_ZIP_RAW_SHA256_MATCH__CHECKPOINT_LIST_TEXT_PASS",
+    "source_pr": 145,
+    "source_merge_sha": "cb13a856b04087e8b765789ce36da7a06afab8d2",
+    "archive_pre_post_four_objects": "COMPLETE",
+    "native_google_doc": "NOT_REQUESTED"
+  }
 }
