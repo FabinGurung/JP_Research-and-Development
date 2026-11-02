@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 45,
+  "branch": "thesis/saugat-paneru/latex/seq045-pagination-tighten",
+  "status": "QA_CANDIDATE",
+  "source_parent_sequence": 44,
+  "shared_template": "controls/latex/template/pumlsc-shared.sty",
+  "modified_scoped_paths": [
+    "manuscript/chapters/chapter3_methodology.tex",
+    "manuscript/chapters/chapter4_results_discussion.tex",
+    "manuscript/cp112_additions/ch3_model_geometry.tex",
+    "extensions/saugat_project_adapter.sty"
+  ],
+  "unchanged_zip_members": 418,
+  "source_zip_member_count": 422,
+  "no_source_deletions": true,
+  "scientific_content_changed": false,
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "987698a757206059d09c6a0c9fc426e670ffdfd153bbfddea83aa6c4decca813",
+    "bytes": 75316709,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "8b9440dce1c6bcf8efbe63fc75febc89b9964ed8a0ee0bd8816c45e4ecc8227d",
+    "bytes": 48483451,
+    "pages": 148,
+    "format": "A4",
+    "main_text_font": "Times New Roman"
+  },
+  "archive_pre": {
+    "pdf": "1DL3edd6tEDvI1K5ACzP_GuNAdRYE3flv",
+    "zip": "14AhyXfAFwqap4RCrj8_jHfg-wqkHtb4w",
+    "checkpoint": "1BxNp732WErnm9KReHA2Mj8nrTQl7Pgms",
+    "checklist": "1wgUPLlQ7hdPezkKeXp63L-qekjLaAYqO"
+  },
+  "archive_post": {
+    "pdf": "1FED4umSX9e-uGqE8LifY1NmSaYmvhitt",
+    "zip": "16M_FiMMeA3XNoEkzU-1vgwHqzUwidi-J",
+    "checkpoint": "13Bkcwouy4JcRa6LjNz4lxLygptkjb050",
+    "checklist": "1ODJEPLgyGrheyANsiCq_cBtoRjKiQw8b"
+  },
+  "layout_qa": {
+    "list_table_figures_titles_left": true,
+    "list_titles_x_pt": 85,
+    "nonparallel_explanation_page": 33,
+    "subsection_3_4_5_page": 44,
+    "figure_4_1_start_page": 54,
+    "figure_3_21_max_display": "0.94 textwidth x 0.54 textheight",
+    "overfull_warnings": 0
+  },
+  "a7_version_event": "000026",
+  "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
+  "source_release_pr": "PENDING",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "style_regression": "RESEARCHER_ONLY_ADAPTER_CHANGE__LOCAL_XELATEX_AND_148P_VISUAL_QA__SHARED_STYLE_UNMODIFIED"
+}
