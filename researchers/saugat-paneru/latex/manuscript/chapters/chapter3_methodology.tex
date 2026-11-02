@@ -100,8 +100,8 @@ The plan drawings and three-dimensional model views document the placement and o
 % SEQ032: paired, uniformly sized model images with original source files.
 \newcommand{\saugatMethodPanel}[4]{%
 \begin{minipage}[t]{0.485\textwidth}\centering
-\begin{minipage}[c][0.19\textheight][c]{\linewidth}\centering
-\includegraphics[width=\linewidth,height=0.18\textheight,keepaspectratio]{#1}
+\begin{minipage}[c][0.245\textheight][c]{\linewidth}\centering
+\includegraphics[width=\linewidth,height=0.245\textheight,keepaspectratio]{#1}
 \end{minipage}
 \caption{#2 building model.}\label{#3}
 {\small\raggedright #4\par}
@@ -116,6 +116,9 @@ The plan drawings and three-dimensional model views document the placement and o
 \saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-003_L1_Building.png}{L1-type}{fig:method_lone_model}{L1 represents a deeper re-entrant configuration than the first L-shaped case.}
 \hfill
 \saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-004_L2_Building.png}{L2-type}{fig:method_ltwo_model}{The stepped L2 plan retains its separate re-entrant topology.}
+\par\vspace{8pt}\begin{minipage}{0.96\textwidth}\normalsize\raggedright
+Figures~\ref{fig:method_regular_model}--\ref{fig:method_ltwo_model} show the corresponding three-dimensional frame configurations for the Regular and L-type models. The Regular frame has a continuous orthogonal footprint; the L and L1 frames introduce a single re-entrant portion, and L2 uses a stepped plan. Although these frame views share the same three-full-storey and stair-cover modelling basis, the location of their frame lines and re-entrant corners differs. The structural-response comparison therefore retains each configuration as a distinct case rather than reducing the geometry to plan area alone. The screenshots describe the model arrangement, not independently calculated performance quantities.\par
+\end{minipage}
 \end{figure}
 
 \begin{figure}[p]\centering
@@ -127,6 +130,9 @@ The plan drawings and three-dimensional model views document the placement and o
 \saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-007_Non_Parallel_Building.png}{Non-Parallel}{fig:method_np_model}{The non-parallel framing arrangement is evaluated separately from the re-entrant plans.}
 \hfill
 \saugatMethodPanel{figures/ch4/final_final_original/models/SRC-FF-IMG-008_4_Storey_Regular_Building.png}{separate four-storey Regular extension}{fig:method_fourstorey_model}{The four-storey height extension is not part of the seven-model performance-point series.}
+\par\vspace{8pt}\begin{minipage}{0.96\textwidth}\normalsize\raggedright
+The T and U model views identify the different positions of their two re-entrant corners, whereas the Non-Parallel model shows the skewed orientation of the framing lines. The four-storey view illustrates a different type of comparison: an extra full storey plus the stair cover, rather than a change of plan among the seven three-storey configurations. Accordingly, the height-extension design checks are discussed separately from the common-height performance-point series. These views are intended to document model configuration and should be interpreted together with the section and loading inputs recorded in Tables~\ref{tab:seq035_geometry} and~\ref{tab:seq035_load_inputs}.\par
+\end{minipage}
 \end{figure}
 \FloatBarrier
 
@@ -139,7 +145,7 @@ The following model screenshots document the geometry restrictions and member-se
 \centering
 \includegraphics[width=0.83\textwidth,height=0.27\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC 205_2012 Building Restrictions .jpg}
 \caption{Building-configuration restrictions associated with NBC 205:2012.}
-\par\vspace{3pt}{\small\raggedright The restrictions summarize the plan and height conditions used to establish the reference building geometry; the model response is evaluated separately.\par}
+\par\vspace{3pt}{\small\raggedright The restrictions summarize the plan and height conditions used to establish the reference building geometry; the model response is evaluated separately. The reproduced restrictions establish why the 2012 representative building is used as a historical detailing reference, whereas the seven main configurations are discussed under the newer 2024 methodology. A geometric eligibility boundary and a numerical structural-demand check are different evaluations: the former concerns the permitted use of a simplified procedure, while the latter concerns the response of the model under the adopted demand cases. The illustration is consequently used to identify the relevant limits, not to certify the investigated buildings.\par}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
@@ -151,7 +157,7 @@ The following model screenshots document the geometry restrictions and member-se
 \centering
 \includegraphics[width=0.95\textwidth,height=0.32\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC205_2012_Beam Section Choose Part 1.jpg}
 \caption{Beam section selection for the 2012 reference.}
-\par\vspace{3pt}{\small\raggedright The beam arrangement records the member sizes specified for the 2012 reference frame. Its concrete design-check results are discussed separately in Chapter~4.\par}
+\par\vspace{3pt}{\small\raggedright The beam arrangement records the member sizes specified for the 2012 reference frame. Its concrete design-check results are discussed separately in Chapter~4. The screenshot serves as a traceable depiction of the reference section selection. In interpreting it, the section definition, material grade and gravity-load assignment should remain separate from the resulting member-design check. The 2012 reference uses beam sections of 230~mm by 355~mm in the study input schedule; the 2024 model group uses the separate section family shown in Table~\ref{tab:seq035_geometry}. This comparison identifies differing adopted inputs and does not constitute a direct member-capacity comparison.\par}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
@@ -163,7 +169,7 @@ The following model screenshots document the geometry restrictions and member-se
 \centering
 \includegraphics[width=0.95\textwidth,height=0.32\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/Column Section_NBC205_2012.jpg}
 \caption{Column section selection for the 2012 reference.}
-\par\vspace{3pt}{\small\raggedright The column reinforcement arrangement belongs to the 2012 reference. The analysis uses the section definitions recorded in Table~3.2.\par}
+\par\vspace{3pt}{\small\raggedright The column reinforcement arrangement belongs to the 2012 reference. The analysis uses the section definitions recorded in Table~\ref{tab:seq035_geometry}. The view documents the reference column selection and illustrates how its section geometry was represented in the recorded model inputs. The 2012 reference and the 2024 model group are not assumed to have identical column dimensions or reinforcement arrangements. Accordingly, this figure is read alongside the concrete design-check observations rather than as evidence that a column would meet a different seismic-demand case without evaluation.\par}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
@@ -178,6 +184,15 @@ The Phase I model follows Draft Final NBC 205:2012 and is evaluated using the av
 
 \section{Seismic Parameters}
 The adopted soil categories are Soil Type C and Soil Type D. The seismic zone factors considered are $Z=0.25$, $0.30$, $0.35$, and $0.40$. The matched demand cases used in the comparative results are Soil Type C at each of the four zone factors and Soil Type D at $Z=0.35$.
+
+% SEQ043: position the published spectrum before the following input tables,
+% so the code loading basis remains adjacent to the demand-case introduction.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.62\textwidth,height=0.215\textheight,keepaspectratio]{figures/ch1/nbc105_2025_mrsm_spectrum.png}
+\caption{NBC 105:2025 response spectrum (Source: NBC 105:2025 \cite{nbc105_2025}).}
+\label{fig:nbc105_mrsm_spectrum}
+\end{figure}
 
 \input{cp112_additions/ch3_properties_spectrum_modal.tex}
 
