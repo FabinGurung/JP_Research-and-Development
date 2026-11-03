@@ -36,8 +36,8 @@
     "pre_checklist_archive_id": "1FwzmFjqbEzOHb2j0oiQdlQAr2yyAKVvN",
     "post_pdf_archive_id": "18tpJ59fza4Mbdi9jtwk_JPrs4HYBfob1",
     "post_zip_archive_id": "1I_Xt9dABnt_Xera_gddGsKkcNzHr4J2D",
-    "post_checkpoint_archive_id": "PENDING",
-    "post_checklist_archive_id": "PENDING",
+    "post_checkpoint_archive_id": "1fq7Sb72GDycZNXtMoFqW3vAx7r-ERLLM",
+    "post_checklist_archive_id": "1c2c6CP8zxazedYzHfxHRGeVwfy23l9iJ",
     "source_scientific_inputs": "ALL_NON_TITLE_SOURCE_MEMBERS_AND_ALL_151_PDF_PAGE_TEXT_IDENTICAL_VS_SEQ048",
     "researcher_22_comments": "SOURCE_13_DONE_7_PARTIAL_2_SCIENCE_HOLDS_CARRIED_FORWARD",
     "full_pu_144_format_certification": "NOT_CERTIFIED",
@@ -99,7 +99,7 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "99f989921791f146c265b6e43b67bc94cd55bd87",
     "source_branch": "thesis/saugat-paneru/latex/seq049-title-page-footer-spacing",
-    "source_pr": "PENDING",
+    "source_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/199",
     "source_merged_commit": null,
     "source_main": "main",
     "promotion_branch": "thesis/saugat-paneru/latex/seq049-title-page-footer-spacing",
@@ -115,13 +115,13 @@
     "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/198"
   },
   "checkpoint_resolution": {
-    "status": "SEQ049_A7_000031_PRE_ARCHIVED_POST_PDF_ZIP_VERIFIED__GITHUB_PROTECTED_CHAIN_PENDING",
+    "status": "SEQ049_A7_000031_COMPLETE_PRE_POST_ARCHIVED__DRIVE_LIVE_VERIFIED__GIT_PROTECTED_ANCESTRY_PENDING",
     "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
     "current_checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
     "pre_checkpoint_archive_id": "17kJaq6Sfiqq49AaHhJVZSbVpmuxMQDLO",
     "pre_checklist_archive_id": "1FwzmFjqbEzOHb2j0oiQdlQAr2yyAKVvN",
-    "post_checkpoint_archive_id": "PENDING",
-    "post_checklist_archive_id": "PENDING",
+    "post_checkpoint_archive_id": "1fq7Sb72GDycZNXtMoFqW3vAx7r-ERLLM",
+    "post_checklist_archive_id": "1c2c6CP8zxazedYzHfxHRGeVwfy23l9iJ",
     "same_stable_ids_preserved": true
   },
   "previous_formatted_production": {
