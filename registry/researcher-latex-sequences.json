@@ -279,6 +279,97 @@
           "source_path": "researchers/nabin-bista/latex/releases/SEQ057_R3_DELTA_RECEIPT_20261031.md",
           "scientific_admission": "RELEASE_RECEIPT_R3__NO_SUPERVISOR_APPROVAL_INFERRED",
           "note": "SEQ057 R3 source/correction recorded in merged PR #86; preserve previous releases; ledger reconciliation for requested SEQ058"
+        },
+        {
+          "sequence": 59,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ059_VERSION_ENUMERATION_2D_LOGO_20261101.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 60,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ060_BLOCK1_BLOCK2_PROFILE_CLEANUP_20261101.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 61,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ061_CHAPTER_TOC_AND_FIGURE_PLACEMENT_20261101.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 62,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ062_CONCISE_ABSTRACT_OBJECTIVES_AND_DOI_COMPARISON_20261101.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 63,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ063_REMOVE_SCOPE_AND_APPENDIX_DOT_LEADERS_20261101.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 64,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ064_SUPERVISOR_CORRECTION_GOVERNED_20261101.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 65,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ065_REUSE_32_CLEANED_FIGURES_A7_000011_20261101.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 66,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ066_SUPERVISOR_SOURCE_REVIEW_A7_000012_20261102.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 67,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ067_FIGURE_TYPOGRAPHY_A7_000013_20261102.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 68,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ068_A7_000014_GOVERNED_20261102.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 70,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ070_A7_000016_WORKING_RELEASE.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 71,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ071_A7_000017_WORKING_RELEASE.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
+        },
+        {
+          "sequence": 75,
+          "status": "EXISTING_GIT_RELEASE_RECORD__NOT_ALLOCATOR_RESERVED",
+          "source_path": "researchers/nabin-bista/latex/releases/SEQ075_A7_000018_FIGURE_TABLE_RECOVERY_20261103.md",
+          "scientific_admission": "NOT_INFERRED_FROM_RELEASE_RECORD",
+          "note": "Existing independently recorded release on main; no retroactive allocator reservation claimed."
         }
       ]
     },
