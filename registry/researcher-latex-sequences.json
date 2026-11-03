@@ -328,6 +328,18 @@
           "main_sha_at_reservation": "PARENT_SEQ052_PROTECTED_STACK",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000035: four immutable SEQ052 PRE Drive snapshots verified before production update. SEQ053 formats table widths only: all 33 tables audited, 22 widened, 11 maintained; 152 A4 pages with exact Times New Roman; zero overfull boxes or unresolved references. Seven research-only .tex members modified, 415/422 source members byte-identical; original numerical data, captions, labels, citations, figure assets and other manuscript content unchanged. GitHub predecessor chain remains protected and unmerged."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 54,
+          "branch": "thesis/saugat-paneru/latex/seq054-table-center-figures-a7-000036",
+          "status": "RESERVED",
+          "request_key": "saugat:seq054-20261103",
+          "created_at_utc": "2026-11-03T11:45:00Z",
+          "main_sha_at_reservation": "PARENT_SEQ053_SOURCE_SYNC_PENDING",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000036: four immutable SEQ053 PRE archives verified; SEQ054 current same-ID Google Drive PDF/ZIP/checkpoint/checklist all provider-read back. 148 A4 pages, 33 numbered tables centre-aligned, 26 title-crop derivatives, Figure 4.1(a-g) and 4.2(a-d) compact captions, same-size floor plan displays, closing appendix paragraph beside A2.5. All 422 original sources retained (13 researcher .tex modifications, 409 unchanged); original figures and science untouched. SEQ053 source branch still requires synchronization; do not merge/release before protected ancestry."
         }
       ]
     },
