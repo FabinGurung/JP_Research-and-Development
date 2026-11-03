@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "release": "LATEX_SEQ079",
+  "sequence": 79,
+  "parent": "LATEX_SEQ078",
+  "status": "QA_CANDIDATE",
+  "branch": "thesis/nabin-bista/latex/seq079-f429-table49-placement",
+  "reservation_pr": 192,
+  "scope": [
+    "Figure 4.29 immediately under Figure 4.28 on printed page 53",
+    "Table 4.9 at top of printed page 54"
+  ],
+  "modified_existing_source_files": [
+    "24_resultanddiscussion.tex"
+  ],
+  "new_build_script": "build_seq079.sh",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "pre_event": "000022",
+  "pre_pdf_id": "16m5COjMTnx-Nrad1I8dJ5Afj9R8UOmox",
+  "pre_source_id": "1KxhBj-x5KmhobCJySdO-kMN36qGlLYFF",
+  "pre_audit_id": "1Y7Q32ry8e1DBO8X8NCVwfoqbL2be2A9YusQLtF6HgF8",
+  "pre_pdf_sha256": "a405a8fdcdf18fc0d5878797e27768392b69217d74dff53cf8278a04cce9f0a9",
+  "pre_source_sha256": "f6341edfda2063f75e4bdbcb1bab25c038267dd4cd87322138fb2c27c97ddaf1",
+  "candidate_pdf_sha256": "7712d388a43380648f4af449d9aab26fa0126d1df44be374b77ba36a094d0b48",
+  "candidate_pdf_bytes": 12288648,
+  "candidate_pdf_pages": 112,
+  "candidate_a4_pages": 111,
+  "candidate_a3_landscape_pages": 1,
+  "candidate_source_sha256": "851abddfe0f2232cca302efdd7c880744ce4656b3b6b42ffdfe26e9c864e1409",
+  "candidate_source_bytes": 97995437,
+  "candidate_source_entries": 574,
+  "qa": {
+    "both_figure_captions_printed_page": 53,
+    "table_4_9_printed_page": 54,
+    "table_top_of_page": true,
+    "captions_values_labels_unmodified": true,
+    "original_inherited_entries_byte_identical": 572,
+    "fresh_zip_build_pages_same": 112,
+    "fresh_zip_build_extracted_text_and_sheet_sizes_identical": "112/112",
+    "no_undefined_refs_citations_or_overfull_boxes": true
+  },
+  "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+  "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+  "scientific_data_changed": false,
+  "scientific_approval": null,
+  "promoted_to_current": false,
+  "post_archive_created": false
+}
