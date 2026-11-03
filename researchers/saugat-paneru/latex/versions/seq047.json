@@ -64,10 +64,15 @@
     "overfull_hbox_warnings": 0
   },
   "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
-  "source_release_pr": "PENDING_FINAL_SOURCE_PR",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/187",
   "drive_production_status": "CURRENT_SAME_STABLE_IDS_VERIFIED",
   "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/185",
   "reservation_branch": "reservation/latex/saugat-seq047-20261103",
   "source_review_base_branch": "reservation/latex/saugat-seq047-20261103",
-  "ci_scope_gate_note": "Final clean ancestry from corrected seq047 reservation, no registry changes in thesis branch; supersedes PRs #183 and #186."
+  "ci_scope_gate_note": "Final clean ancestry from corrected seq047 reservation, no registry changes in thesis branch; supersedes PRs #183 and #186.",
+  "source_review_ci": "LATEX_OWNERSHIP_PASS_41584336538",
+  "superseded_prs": [
+    183,
+    186
+  ]
 }
