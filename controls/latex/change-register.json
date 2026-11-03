@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 127,
+  "next_number": 128,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -646,6 +646,28 @@
       "git_commit_sha_after_merge": null,
       "global_propagation": "NONE__OWNER_ONLY",
       "scientific_boundary": "TABLE_LAYOUT_ONLY__NO_SCIENTIFIC_VALUE_OR_PROSE_CHANGE__NO_APPROVAL_INFERRED"
+    },
+    {
+      "change_id": "RD-LTX-CHG-127",
+      "researcher_id": "RSH-003",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Nabin SEQ086 three requested presentation edits only: TOC REFERENCE uppercase; standalone Fixed-to-soft response changes heading on printed57; first Appendix3 pair retained at original size on printed78 by removing forced pre-pair page break. No shared template changes.",
+      "source_paths": [
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/26_reference.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/24_resultanddiscussion.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/31_fragility_original_figures_seq064.tex"
+      ],
+      "before_after_qa_evidence": "SEQ085 107 pages to SEQ086 106 pages; both original Figures A3.1/A3.2 fit printed78 at unchanged size. TOC printedx displays REFERENCE. Printed57 heading and For Block1 paragraph begin on separate lines. Exactly three reversible source replacements; all other inherited source entries, table data, figures, equations, references and prose preserved. No overfull boxes or undefined references.",
+      "pu_rule_references": [
+        "PU-FMT-024",
+        "PU-FMT-031",
+        "PU-FMT-032"
+      ],
+      "disposition": "ACCEPTED_LOCAL",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "NONE__OWNER_ONLY",
+      "scientific_boundary": "THREE_SCOPED_PRESENTATION_EDITS_ONLY__NO_SCIENTIFIC_CHANGES"
     }
   ],
   "required_fields": [
