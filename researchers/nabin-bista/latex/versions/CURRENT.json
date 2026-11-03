@@ -12,11 +12,13 @@
   "archive_premark_sequence": 75,
   "archive_postmark_sequence": 76,
   "scholarly_approval": null,
-  "release_disposition": "DRIVE_LIVE_AND_000019_ARCHIVES_SHA256_VERIFIED__GIT_SOURCE_MERGED__GIT_RELEASE_RECORD_PENDING",
+  "release_disposition": "DRIVE_LIVE_AND_000019_ARCHIVES_SHA256_VERIFIED__GIT_SOURCE_AND_RELEASE_MERGED__PAGES_DEPLOYED",
   "numbered_archive": "000019",
   "pdf_sha256": "1363cb673fa77d4ac2ded2aac03e2b46e64dd3c4e539cda48e85df832126840f",
   "source_zip_sha256": "61917ffb649b4fb473c32bb05ccec3ed7125037b532183dad181435f9d6396fb",
   "pages": 120,
-  "git_release_merged": false,
-  "final_readback_receipt_drive_id": null
+  "git_release_merged": true,
+  "final_readback_receipt_drive_id": null,
+  "final_pages_run": 41567867404,
+  "final_pages_head_sha": "39c0d39649643a0f90d237be2ec9c41676b7a4fb"
 }
