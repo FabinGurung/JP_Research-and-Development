@@ -44,13 +44,13 @@
   "archive_post": {
     "pdf": "18tpJ59fza4Mbdi9jtwk_JPrs4HYBfob1",
     "zip": "1I_Xt9dABnt_Xera_gddGsKkcNzHr4J2D",
-    "checkpoint": "PENDING_CLOSEOUT",
-    "checklist": "PENDING_CLOSEOUT"
+    "checkpoint": "1fq7Sb72GDycZNXtMoFqW3vAx7r-ERLLM",
+    "checklist": "1c2c6CP8zxazedYzHfxHRGeVwfy23l9iJ"
   },
   "source_diff_drive_id": "1OtjmUMBhuhQX7dlKyzVO6NsRj4aqWY1N",
   "qa_report_drive_id": "10DV-iE6zwDnvgUFtpqGzA6xUHzpFDV_D",
   "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/198",
-  "source_release_pr": "PENDING_GITHUB_PR",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/199",
   "layout_qa": {
     "scope": "COVER_AND_INNER_TITLE_ONLY",
     "student_name_shift_up_pts": 20.8,
@@ -67,5 +67,6 @@
   },
   "pu_full_compliance": "NOT_CERTIFIED; preexisting user-requested top margin 1.33in remains",
   "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
-  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING_174_178_185_187_193_194_198"
+  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING_174_178_185_187_193_194_198",
+  "source_review_ci": "PASS_LaTeX_researcher_ownership_and_shared_template_inheritance"
 }
