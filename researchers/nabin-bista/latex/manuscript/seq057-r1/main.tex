@@ -8,7 +8,7 @@
     a4paper, 
     left=3cm, 
     right=2.5cm, 
-    top=2.5cm, 
+    top=1.33in, 
     bottom=2.5cm
 ]{geometry}
 
@@ -80,6 +80,23 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
 \usepackage{pumlsc-shared} % Internal thesis cross-references and appendix links
+% SEQ078 -- researcher-scoped, user-directed deviation from PU-FMT-003
+% PU guideline top=2.5cm; user explicitly requests 1.33in for Nabin ONLY.
+% No change to shared central pumlsc-shared.sty or official PU source.
+\geometry{top=1.33in}
+% Compact only float whitespace; preserve 1.5 body spacing and legible captions.
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\floatsep}{7pt plus 2pt minus 2pt}
+\captionsetup[figure]{skip=4pt}
+\captionsetup[table]{skip=4pt}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.86}
+\renewcommand{\textfraction}{0.06}
+\renewcommand{\floatpagefraction}{0.63}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{5}
 
 % ==========================================
 % 4. PU CUSTOM COMMANDS & SUB-FILE EXAMPLES
