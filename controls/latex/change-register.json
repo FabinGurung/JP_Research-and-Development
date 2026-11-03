@@ -623,6 +623,29 @@
       "git_commit_sha_after_merge": null,
       "global_propagation": "NONE__OWNER_ONLY",
       "scientific_boundary": "Formatting and exact owner title correction only; no scientific approval or university acceptance asserted."
+    },
+    {
+      "change_id": "RD-LTX-CHG-126",
+      "researcher_id": "RSH-003",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Nabin SEQ085 table-only refinement of accepted RD-LTX-CHG-125: full text-width centered table boxes and centered cells without adjustbox scaling; body 11pt and caption 12pt. Only inline table layout in existing methodology/results files; no shared-style change.",
+      "source_paths": [
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/23_methodology.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/24_resultanddiscussion.tex"
+      ],
+      "before_after_qa_evidence": "107 pages retained; all 22 tables inspected. Full-width rule bounds 85.04..524.41 PDF pt with center error <0.01pt. Unscaled body 11 TeX pt (10.96 PDF pt), captions 12 TeX pt; normal mathematical subscripts retained. All source row/header/caption bytes and source outside tables exact. Every page has identical normalized text; 88 pages render-identical, 19 table pages revised. No undefined references or overfull boxes. All 88 figures, A3 sheet and other scientific content retained.",
+      "pu_rule_references": [
+        "PU-FMT-006",
+        "PU-FMT-031",
+        "PU-FMT-032",
+        "PU-FMT-036",
+        "PU-FMT-040"
+      ],
+      "disposition": "ACCEPTED_LOCAL",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "NONE__OWNER_ONLY",
+      "scientific_boundary": "TABLE_LAYOUT_ONLY__NO_SCIENTIFIC_VALUE_OR_PROSE_CHANGE__NO_APPROVAL_INFERRED"
     }
   ],
   "required_fields": [
