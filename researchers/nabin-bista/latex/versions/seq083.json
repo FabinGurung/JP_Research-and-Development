@@ -65,8 +65,15 @@
   "source_pr": 221,
   "source_merge_commit": "30258670f6e87537c227067775edb756564ec37b",
   "reservation_pr": 219,
-  "release_record_pr_pending": true,
-  "git_release_merged": false,
-  "release_disposition": "A7_000026_PRE_POST_LIVE_SHA_VERIFIED__GIT_SOURCE_MERGED__RELEASE_METADATA_PR_PENDING",
-  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ083_A7_000026_RELEASE.json"
+  "release_record_pr_pending": false,
+  "git_release_merged": true,
+  "release_disposition": "A7_000026_VERIFIED__GIT_SOURCE_RELEASE_MERGED__PAGES_SUCCESS",
+  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ083_A7_000026_RELEASE.json",
+  "release_record_pr": 224,
+  "release_record_merge_commit": "667aa692e2094a595641fa64aee8d0279d169a32",
+  "verified_pages_run": 41636901331,
+  "verified_pages_conclusion": "success",
+  "all_checks_passed": true,
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ083_A7_000026_FINAL_READBACK_20261103.json",
+  "audit_post_snapshot_drive_id": "1pAxU2ktAdmYXys5KcpTzZ6is1VTITx7CElSYBk5lekE"
 }
