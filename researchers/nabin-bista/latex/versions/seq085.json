@@ -6,7 +6,7 @@
   "sequence": 85,
   "parent": "LATEX_SEQ084",
   "branch": "thesis/nabin-bista/latex/seq085-tables-11pt-fit-center",
-  "status": "REVIEW_ONLY",
+  "status": "EDITING",
   "a7_event": "000028",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -85,5 +85,10 @@
     "scientific_approval": null,
     "pdf_sha256": "58019be5b90d91b580aae5c381053abd0558a94d6ea58123e510c3b8e27e52d1"
   },
-  "fresh_packaged_build_all_107_pages_text_size_render_identical": true
+  "fresh_packaged_build_all_107_pages_text_size_render_identical": true,
+  "admission_state": "CANDIDATE",
+  "source_pre_sha": "09f504630f2e315fb706bc2c1380a973b0e8fa91",
+  "shared_template_path": "controls/latex/template/pumlsc-shared.sty",
+  "shared_template_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "shared_template_version": "2.6.4"
 }
