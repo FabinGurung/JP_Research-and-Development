@@ -6,7 +6,7 @@
   "sequence": 78,
   "parent": "LATEX_SEQ077",
   "branch": "thesis/nabin-bista/latex/seq078-layout-density-margin-a3",
-  "status": "RELEASED__DRIVE_VERIFIED__GIT_RECORD_PR_PENDING",
+  "status": "RELEASED",
   "reservation_pr": 184,
   "amendment_register_pr": 188,
   "change_id": "RD-LTX-CHG-124",
@@ -61,8 +61,8 @@
   "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "promoted_to_current": true,
   "post_archive_created": true,
-  "git_release_merged": false,
-  "final_pages_run": null,
+  "git_release_merged": true,
+  "final_pages_run": 41587108482,
   "build": "bash build_seq078.sh",
   "source_pr": 189,
   "source_merge_commit": "e9fe86b47d131767651144a5214208b9e9352568",
@@ -73,6 +73,11 @@
   "permanent_source_zip_sha256": "f6341edfda2063f75e4bdbcb1bab25c038267dd4cd87322138fb2c27c97ddaf1",
   "drive_live_sha256_readback": true,
   "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ078_A7_000021_LAYOUT_AND_A3_20261103.json",
-  "release_record_pr_pending": true,
-  "release_disposition": "A7_000021_DRIVE_LIVE_AND_ARCHIVES_SHA256_VERIFIED__SOURCE_PR_MERGED__RELEASE_RECORD_PENDING"
+  "release_record_pr_pending": false,
+  "release_disposition": "A7_000021_VERIFIED__GIT_SOURCE_AND_RELEASE_MERGED__PAGES_SUCCESS",
+  "release_record_pr": 190,
+  "release_record_merge_commit": "a6d7e08cfbdfd5d92af311f0c6fbf5cd3e5f4e00",
+  "verified_pages_conclusion": "success",
+  "all_checks_passed": true,
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ078_A7_000021_FINAL_PAGES_READBACK_20261103.json"
 }
