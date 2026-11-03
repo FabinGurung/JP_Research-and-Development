@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "researcher_slug": "nabin-bista",
+  "release": "LATEX_SEQ079",
+  "parent": "LATEX_SEQ078",
+  "a7_event": "000022",
+  "recorded_utc": "2026-11-03T06:37:08.691Z",
+  "scope": [
+    "Figure 4.29 below Figure 4.28 on thesis page 53",
+    "Table 4.9 at top of thesis page 54"
+  ],
+  "scientific_data_changed": false,
+  "figure_and_table_caption_text_unchanged": true,
+  "original_plot_and_table_data_unchanged": true,
+  "other_researcher_changed": false,
+  "shared_style_changed": false,
+  "live": {
+    "pdf_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_zip_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "7712d388a43380648f4af449d9aab26fa0126d1df44be374b77ba36a094d0b48",
+    "source_zip_sha256": "851abddfe0f2232cca302efdd7c880744ce4656b3b6b42ffdfe26e9c864e1409",
+    "pdf_bytes": 12288648,
+    "source_zip_bytes": 97995437,
+    "permanent_ids_preserved": true,
+    "downloaded_after_publish_sha256_verified": true
+  },
+  "pre": {
+    "pdf_id": "16m5COjMTnx-Nrad1I8dJ5Afj9R8UOmox",
+    "source_zip_id": "1KxhBj-x5KmhobCJySdO-kMN36qGlLYFF",
+    "audit_id": "1Y7Q32ry8e1DBO8X8NCVwfoqbL2be2A9YusQLtF6HgF8",
+    "pdf_sha256": "a405a8fdcdf18fc0d5878797e27768392b69217d74dff53cf8278a04cce9f0a9",
+    "source_zip_sha256": "f6341edfda2063f75e4bdbcb1bab25c038267dd4cd87322138fb2c27c97ddaf1",
+    "both_archive_hashes_verified": true
+  },
+  "post": {
+    "pdf_id": "1f-KyoVpSaYXwmDJxx-fhoT-5FNfaOMFS",
+    "source_zip_id": "1glGqaAdeBhEIHDBAFdN911RCZBbKrAYb",
+    "pdf_sha256": "7712d388a43380648f4af449d9aab26fa0126d1df44be374b77ba36a094d0b48",
+    "source_zip_sha256": "851abddfe0f2232cca302efdd7c880744ce4656b3b6b42ffdfe26e9c864e1409",
+    "both_archive_hashes_verified": true
+  },
+  "qa": {
+    "pages": 112,
+    "a4_pages": 111,
+    "a3_landscape_pages": 1,
+    "original_entries_unchanged": 572,
+    "source_zip_entries": 574,
+    "only_existing_tex_edited": "24_resultanddiscussion.tex",
+    "build_xelatex_passes": 3,
+    "build_bibtex8": true,
+    "figure4_28_and_4_29_printed_page": 53,
+    "table4_9_printed_page": 54,
+    "table4_9_top_of_page": true,
+    "no_undefined_refs_citations_overfull": true,
+    "independent_source_zip_build_page_text_parity": "112/112"
+  },
+  "git": {
+    "reservation_pr": 192,
+    "source_pr": 195,
+    "source_merge_sha": "a7ed4b660af9fc883cf58c1bb2899c060cc4482c",
+    "release_record_pr_pending": true,
+    "shared_style_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece"
+  },
+  "audit_live_doc_id": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "scientific_approval": null,
+  "restore": "Preserve all 000022 immutable PRE/POST snapshots. Any future revision begins with fresh numbered PRE, and restores archived bytes into the same two permanent Drive IDs with fresh SHA readback."
+}

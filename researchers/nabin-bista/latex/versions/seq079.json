@@ -5,7 +5,7 @@
   "release": "LATEX_SEQ079",
   "sequence": 79,
   "parent": "LATEX_SEQ078",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED__GIT_RECORD_PR_PENDING",
   "branch": "thesis/nabin-bista/latex/seq079-f429-table49-placement",
   "reservation_pr": 192,
   "scope": [
@@ -46,6 +46,16 @@
   "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "scientific_data_changed": false,
   "scientific_approval": null,
-  "promoted_to_current": false,
-  "post_archive_created": false
+  "promoted_to_current": true,
+  "post_archive_created": true,
+  "source_pr": 195,
+  "source_merge_commit": "a7ed4b660af9fc883cf58c1bb2899c060cc4482c",
+  "post_pdf_id": "1f-KyoVpSaYXwmDJxx-fhoT-5FNfaOMFS",
+  "post_source_id": "1glGqaAdeBhEIHDBAFdN911RCZBbKrAYb",
+  "permanent_pdf_sha256": "7712d388a43380648f4af449d9aab26fa0126d1df44be374b77ba36a094d0b48",
+  "permanent_source_zip_sha256": "851abddfe0f2232cca302efdd7c880744ce4656b3b6b42ffdfe26e9c864e1409",
+  "drive_live_sha256_readback": true,
+  "git_release_merged": false,
+  "release_record_pr_pending": true,
+  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ079_A7_000022_PLACEMENT_RELEASE_20261103.json"
 }
