@@ -48,10 +48,16 @@
 \end{center}}
 % The approved CP114 title-page override lives in main.tex, sourced unchanged.
 \providecommand{\PUTitlePage}{}
-\newcommand{\PUDeclarationPage}{\clearpage\addcontentsline{toc}{puprelim}{Declaration}\PUNarrativePrelimHeading{Declaration}\input{frontmatter/declaration.tex}}
-\newcommand{\PURecommendationPage}{\clearpage\addcontentsline{toc}{puprelim}{Recommendation}\PUNarrativePrelimHeading{Recommendation}\input{frontmatter/recommendation.tex}}
-\newcommand{\PUCertificatePage}{\clearpage\addcontentsline{toc}{puprelim}{Certificate}\PUNarrativePrelimHeading{Certificate}\input{frontmatter/certificate.tex}}
-\newcommand{\PUAcknowledgementsPage}{\clearpage\addcontentsline{toc}{puprelim}{Acknowledgements}\PUNarrativePrelimHeading{Acknowledgements}\input{frontmatter/acknowledgements.tex}}
+% SEQ050 / A7 000032: two requested 14pt vertical spaces above only the
+% four named preliminary headings. At a page top, \vspace* injects an
+% additional 30.77pt via this legacy center-heading start sequence.
+% Compensate it so the MEASURED heading displacement is 28.12pt, not 58.77pt.
+% This is Saugat-only; central PU style, page geometry, body unchanged.
+\newcommand{\SaugatPrelimTopSpacing}{\vspace*{14pt}\vspace*{14pt}\vspace*{-30.77pt}}
+\newcommand{\PUDeclarationPage}{\clearpage\addcontentsline{toc}{puprelim}{Declaration}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Declaration}\input{frontmatter/declaration.tex}}
+\newcommand{\PURecommendationPage}{\clearpage\addcontentsline{toc}{puprelim}{Recommendation}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Recommendation}\input{frontmatter/recommendation.tex}}
+\newcommand{\PUCertificatePage}{\clearpage\addcontentsline{toc}{puprelim}{Certificate}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Certificate}\input{frontmatter/certificate.tex}}
+\newcommand{\PUAcknowledgementsPage}{\clearpage\addcontentsline{toc}{puprelim}{Acknowledgements}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Acknowledgements}\input{frontmatter/acknowledgements.tex}}
 \newlength{\PUAbstractIndent}
 \settowidth{\PUAbstractIndent}{\space\space\space\space}
 \newcommand{\PUAbstractParagraph}[1]{\noindent\hspace*{\PUAbstractIndent}#1\par}

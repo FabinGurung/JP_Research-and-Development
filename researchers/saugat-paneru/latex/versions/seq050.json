@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 50,
+  "parent_sequence": 49,
+  "source_parent_sequence": 49,
+  "branch": "thesis/saugat-paneru/latex/seq050-prelim-headings-affiliation",
+  "status": "QA_CANDIDATE",
+  "drive_production_status": "CURRENT_SAME_STABLE_IDS_PROVIDER_READBACK_VERIFIED",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "a7_version_event": "000032",
+  "source_zip_member_count": 422,
+  "unchanged_zip_members": 420,
+  "modified_scoped_paths": [
+    "manuscript/frontmatter/recommendation.tex",
+    "extensions/saugat_project_adapter.sty"
+  ],
+  "no_source_deletions": true,
+  "scientific_content_changed": false,
+  "pdf_pages_changed_text": [
+    5
+  ],
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "6d74f32f27b46997f80481ae6d51d2d418b66f5c7b9ab428020ea53d7d774903",
+    "bytes": 48485829,
+    "pages": 151,
+    "format": "A4",
+    "font": "Times New Roman embedded"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "d8057c30c1f3884f4d9e20b7e19f47d5b7024dffd0780decb46a25b3460348fa",
+    "bytes": 75317308,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "19QUTAsi_PSz70PDYf4As3ZyHHApgl10U",
+    "zip": "1ZeLUqYuNmtHYeQ_sjxU52Xy8HcG8yDT0",
+    "checkpoint": "1LN1hbdnjwTfL8Usveu0Dmi5R9uzsT1jt",
+    "checklist": "1Hvi6q82ONS1Abj3_g9juDgwmTNCYMIOb"
+  },
+  "archive_post": {
+    "pdf": "19t98IPzyCC55GZ3PBlMdmho4ecdnk2oG",
+    "zip": "1b467YmVCuiI9fQY3cO6CFTM3UelJj3Wx",
+    "checkpoint": "1236wpWSQVfqfa6j0DR_pyX2EjwnlhM3B",
+    "checklist": "1hQwlcdMWP4iDEm8tO6UPMKVRq6xlmhTE"
+  },
+  "source_diff_drive_id": "1XLeY2nODMi3mSKJp8KtaH7iRYnb5evkf",
+  "qa_report_drive_id": "15pKTlBZNr9yBq0meLoUU2bUoVwtPkwdB",
+  "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/202",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/205",
+  "layout_qa": {
+    "printed_pages": [
+      "iii",
+      "iv",
+      "v",
+      "vi"
+    ],
+    "heading_shift_down_pt": 28.119,
+    "each_heading_has_two_14pt_requested_spaces": true,
+    "source_spacing_calibration": "two 14pt stars with 30.77pt legacy page-top leading compensation",
+    "recommendation_co_supervisor_organization": "School of Engineering, Pokhara University",
+    "affiliation_user_supplied_not_independently_verified": true,
+    "all_151_pages_same_physical_page_count": true,
+    "changed_text_pages_physical": [
+      5
+    ],
+    "unaffected_150_pages_pdf_text_exact": true,
+    "non_target_render_sampled_identical_pages": [
+      1,
+      2,
+      3,
+      8,
+      9,
+      10,
+      15,
+      21,
+      36,
+      56,
+      76,
+      96,
+      111,
+      131,
+      151
+    ],
+    "existing_overfull_vbox_warnings": 3,
+    "overfull_hbox_warnings": 0
+  },
+  "pu_full_compliance": "NOT_CERTIFIED; prior approved user top-margin exception 1.33in remains",
+  "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
+  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING",
+  "source_review_ci": "PASS_LaTeX_researcher_ownership_and_shared_template_inheritance"
+}
