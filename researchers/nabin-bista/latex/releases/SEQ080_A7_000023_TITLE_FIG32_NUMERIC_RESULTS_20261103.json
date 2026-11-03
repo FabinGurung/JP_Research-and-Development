@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "researcher_slug": "nabin-bista",
+  "release": "LATEX_SEQ080",
+  "parent": "LATEX_SEQ079",
+  "a7_event": "000023",
+  "recorded_utc": "2026-11-03T07:27:18.858Z",
+  "scope": [
+    "Move student name and roll 14pt higher on two title pages; 28pt before/after school/faculty/university; date bottom",
+    "Position original Figure 3.2 atop page15 and add source-grounded explanation below",
+    "Recast Section4.9 into published numeric benchmark, six-block comparison, and new figure 4.36"
+  ],
+  "original_scientific_results_changed": false,
+  "other_researchers_changed": false,
+  "shared_template_changed": false,
+  "university_approval": null,
+  "independent_model_validation": false,
+  "published_benchmark_sources": [
+    {
+      "authors": "Dhakal and Chaulagain",
+      "year": 2023,
+      "doi": "10.1007/s41024-023-00280-8",
+      "numeric_response_effects": "not accessible in public preview; no fabrication"
+    },
+    {
+      "authors": "Poudel and Chaulagain",
+      "year": 2024,
+      "doi": "10.1016/j.rineng.2024.102161",
+      "displacement_nonlinear_soft_percent": [
+        85.35,
+        88.68,
+        65.38
+      ],
+      "normalized_base_shear_nonlinear_soft_percent": [
+        81.78,
+        79.91,
+        59.29
+      ]
+    }
+  ],
+  "live": {
+    "pdf_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "zip_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "5c6066c316069cbd1e6ac1a738b812d05e66f739a1ee881649afe887b5073920",
+    "zip_sha256": "8d4586e4825c6ae406367e01640d56fa2390ad28498f0b10beef377598071e73",
+    "bytes_pdf": 12309444,
+    "bytes_zip": 98010393,
+    "stable_ids_retained": true,
+    "download_and_hash_checked_after_publication": true
+  },
+  "pre": {
+    "pdf_id": "1i-Zuy4lpy99Dw1ZIyOD0AQENTDRsbYOw",
+    "zip_id": "1CuswS2qhEpbvMapxsj0O0whYSS8lYXFK",
+    "audit_doc_id": "1sOwV9h2Idoji8v4xIwcebPrmp0xs1ca-ryuZ9Dwx-tw",
+    "pdf_sha256": "7712d388a43380648f4af449d9aab26fa0126d1df44be374b77ba36a094d0b48",
+    "zip_sha256": "851abddfe0f2232cca302efdd7c880744ce4656b3b6b42ffdfe26e9c864e1409"
+  },
+  "post": {
+    "pdf_id": "1ctLre2DxAAXtB-ZdiIpJ3W13VrO7k3NR",
+    "zip_id": "1TkXK3Pn0jyPtnAvDzQgxyBDPnUhVpYIZ",
+    "audit_doc_id": "1ojejPfSgJpb_dtfpZ1aOwLe5TyZ5awLozZfcIxyOjfg",
+    "pdf_sha256": "5c6066c316069cbd1e6ac1a738b812d05e66f739a1ee881649afe887b5073920",
+    "zip_sha256": "8d4586e4825c6ae406367e01640d56fa2390ad28498f0b10beef377598071e73",
+    "provider_readback_verified": true
+  },
+  "qa": {
+    "pdf_pages": 114,
+    "a4": 113,
+    "a3_landscape": 1,
+    "zip_entries": 577,
+    "unchanged_inherited_source_entries": 570,
+    "modified_existing_tex_files": 4,
+    "new_chart_binary": 1,
+    "new_reproducible_scripts": 2,
+    "fresh_zip_rebuild_parity": "114/114",
+    "figure3_2_printed_page": 15,
+    "figure3_2_top_with_body_text": true,
+    "student_name_up_pt": 14,
+    "institution_vspace_before_after_pt": 28,
+    "title_page_dates_at_bottom": true,
+    "numeric_table_in_section_4_9": "4.14",
+    "comparison_figure": "4.36",
+    "no_undefined_citations_refs_or_overfull_boxes": true,
+    "embedded_times_new_roman": true
+  },
+  "git": {
+    "sequence_reservation_pr": 200,
+    "source_pr": 201,
+    "source_merge_sha": "824234c47a4adbd0f1a808046d81af79fbfc1818",
+    "release_pr_pending": true,
+    "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece"
+  },
+  "audit_live_doc_id": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "audit_timestamp_npt": "2026-11-03 13:10:52",
+  "restore": "Before future mutations, make next numbered PRE. Restore prior exact archived bytes into SAME permanent Drive IDs and independently hash-readback. Never mutate immutable 000023 PRE/POST."
+}
