@@ -8,7 +8,7 @@
   "source_parent_sequence": 46,
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
-  "status": "DRIVE_CURRENT__GITHUB_STACKED_PR_PENDING",
+  "status": "QA_CANDIDATE",
   "a7_version_event": "000029",
   "source_zip_member_count": 422,
   "unchanged_zip_members": 420,
@@ -64,5 +64,7 @@
     "overfull_hbox_warnings": 0
   },
   "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
-  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/183"
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/183",
+  "drive_production_status": "CURRENT_SAME_STABLE_IDS_VERIFIED",
+  "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/185"
 }
