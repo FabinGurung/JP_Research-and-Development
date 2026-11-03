@@ -42,8 +42,8 @@
   "archive_post": {
     "pdf": "1G3rFBSFWLbeBMyH2Tht-Cz7PxRnavzSj",
     "zip": "14m3LEe9r5zVXl2OIcKnxiHNu4NpjZDPc",
-    "checkpoint": "PENDING_CLOSEOUT",
-    "checklist": "PENDING_CLOSEOUT"
+    "checkpoint": "1xHLIbRR4K7fsJV9YJ7TFP7nBPgt6WI7A",
+    "checklist": "1KukjRThe025Lek0y9oGc8sgJg9BxSjqZ"
   },
   "qa_report_drive_id": "1yuZpl5ee2djqq1-Nf69ZN3Gmox_h60Bn",
   "source_diff_drive_id": "1ZPlACcsaO08H27qIFw_-KYUY46q2mXaj",
@@ -64,5 +64,5 @@
     "overfull_hbox_warnings": 0
   },
   "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
-  "source_release_pr": "STACKED_PENDING_SEQ046_PROTECTED_MERGE"
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/183"
 }
