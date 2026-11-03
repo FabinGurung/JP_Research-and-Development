@@ -256,6 +256,18 @@
           "main_sha_at_reservation": "PARENT_SEQ046_STAGED_BRANCH",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000029 PRE four copies before edits; source changes only frontmatter/acknowledgements.tex and researcher-only saugat_project_adapter.sty for approved 12/17pt TOC spacing, user 1.33in top margin (explicit deviation from PU FST 2019 2.5cm), exact provided acknowledgment. 151p compiled embedded Times New Roman, 422 members 420 unchanged. Pu guideline not fully certified; 144 audit incomplete. No scientific edits or ETABS replay.; final source branch identity thesis/saugat-paneru/latex/seq047-toc-margin-acknowledgements-v2 (replaces failed draft PRs #183/#186)."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 48,
+          "branch": "thesis/saugat-paneru/latex/seq048-cover-title-spacing",
+          "status": "RESERVED",
+          "request_key": "saugat:seq048-20261103",
+          "created_at_utc": "2026-11-03T06:17:00Z",
+          "main_sha_at_reservation": "PARENT_SEQ047_STAGED_BRANCH",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "SEQ047 exact 422-file baseline; A7 000030 immutable four-item PRE before edits. Exactly two source files changed: main.tex and researcher-only saugat_project_adapter.sty. Pages 1/2 white-space only, lowering registration-school by 14pt, lifting author block 36pt and school/date block 50pt; title-page wording and all body/science untouched. PDF 151 pages A4 embedded Times New Roman; all 151 PDF page text identical to SEQ047. No PU compliance or scientific replay claimed; GitHub main protected predecessor sequence chain pending."
         }
       ]
     },
