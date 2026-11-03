@@ -1,0 +1,60 @@
+{
+  "researcher": "RSH-003 / Nabin Bista",
+  "release": "LATEX_SEQ084",
+  "parent": "LATEX_SEQ083",
+  "a7_event": "000027",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "source_modified_files": [
+    "02_titlepage.tex",
+    "11_tableofcontent.tex",
+    "12_listoftable.tex",
+    "13_listoffigure.tex",
+    "13a_listofequations.tex",
+    "15_listofappendice.tex",
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex",
+    "28_appendices.tex",
+    "main.tex"
+  ],
+  "inherited_entries": 577,
+  "inherited_entries_unchanged": 567,
+  "pages": 107,
+  "tables": 22,
+  "figures": 88,
+  "spring_rows_preserved_exactly": 18,
+  "section_49_text_unchanged": true,
+  "assets_bibliography_and_other_science_unchanged": true,
+  "target_pages": {
+    "Comparison with Published": {
+      "pdf_page": 76,
+      "printed_page": "59"
+    },
+    "Figure A1.1:": {
+      "pdf_page": 84,
+      "printed_page": "67"
+    },
+    "Figure A1.2:": {
+      "pdf_page": 84,
+      "printed_page": "67"
+    },
+    "Figure A3.1:": {
+      "pdf_page": 96,
+      "printed_page": "79"
+    },
+    "Figure A3.2:": {
+      "pdf_page": 96,
+      "printed_page": "79"
+    }
+  },
+  "page_sizes": {
+    "(595.28, 841.89)": 106,
+    "(1190.55, 841.89)": 1
+  },
+  "title_exact": "Seismic Fragility and Soil-Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal",
+  "pdf_sha256": "e85a4c2111a0d51c9ff7b14d8b72a01198d5368699e66feacd4345763aee143e",
+  "compile_errors": 0,
+  "undefined_references": 0,
+  "overfull_boxes": 0,
+  "all_pages_rendered_reviewed": 107,
+  "scientific_approval": null
+}
