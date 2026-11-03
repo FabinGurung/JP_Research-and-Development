@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "release": "LATEX_SEQ078",
+  "parent": "LATEX_SEQ077",
+  "researcher_id": "RSH-003",
+  "researcher_slug": "nabin-bista",
+  "event": "A7_000021",
+  "scope": [
+    "Keep all original Table 3.2 records on thesis page 22 with full-size 12pt table font",
+    "Optimize figure float spacing and pair smaller plots/model views wherever legible without deleting or altering any plots or captions",
+    "Nabin-only user-directed top margin 1.33in; PU-FMT-003 official rule remains 2.5cm and the mismatch is recorded, not certified",
+    "Enlarge Figure A2.1 on one A3 landscape sheet inside margin with caption intact"
+  ],
+  "science_change": false,
+  "scientific_approval": null,
+  "shared_style_changed": false,
+  "other_researcher_changed": false,
+  "source_zip": {
+    "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "f6341edfda2063f75e4bdbcb1bab25c038267dd4cd87322138fb2c27c97ddaf1",
+    "bytes": 97987571,
+    "entries": 573,
+    "retained_from_seq077": 566
+  },
+  "pdf": {
+    "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "sha256": "a405a8fdcdf18fc0d5878797e27768392b69217d74dff53cf8278a04cce9f0a9",
+    "bytes": 12289454,
+    "pages": 113,
+    "a4_pages": 112,
+    "a3_landscape_pages": 1,
+    "a3_physical_page": 98,
+    "a3_printed_page": 77,
+    "table3_2_whole_page22": true,
+    "figure_captions": 88,
+    "figure_caption_ids_preserved": true
+  },
+  "pre": {
+    "pdf_id": "17ZydwzgA2pQUKji_E7giVWnubqhdZyYX",
+    "zip_id": "1I6MDeRVwRvhvOuBCRmhsS06UfwsntaRK",
+    "audit_id": "1WO2WyWVj8et0cWD6g11OKiC4zBWIhJhYZfKL3c6Mnro",
+    "pdf_sha256": "20650a2fe6a7c48bd7c9090bb17c22607ea1a6427f0260db4216b89281f98305",
+    "zip_sha256": "8f2e9d77a21f855acc12f2f5b7946d5fe324309d0081e8e9ed9be1f098fe96ce"
+  },
+  "post": {
+    "pdf_id": "12Ei3YVSXB_nbv4hUJi8-xjKciAwj7GHu",
+    "zip_id": "1XKfViXpI99UaOQEZArSCiWr6JTCvCp9I",
+    "audit_id": "1xol9gIH2eLcANpkkLB8-FAjO1S_w6hH9pe-MKi_AUtw",
+    "pdf_sha256": "a405a8fdcdf18fc0d5878797e27768392b69217d74dff53cf8278a04cce9f0a9",
+    "zip_sha256": "f6341edfda2063f75e4bdbcb1bab25c038267dd4cd87322138fb2c27c97ddaf1"
+  },
+  "qa": {
+    "fresh_zip_rebuild_page_text_parity": "113/113",
+    "no_undefined_or_overfull": true,
+    "all_scientific_values_preserved": true,
+    "no_content_outside_page": true
+  },
+  "git": {
+    "reservation_pr": 184,
+    "source_pr": 189,
+    "source_merge": "e9fe86b47d131767651144a5214208b9e9352568",
+    "change_register_pr": 188,
+    "release_pr_pending": true,
+    "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece"
+  },
+  "official_PU_margin_exception": "User-specified Nabin-only top 1.33in; registered PU top 2.5cm. NOT official template conformity.",
+  "restoration": "Prior preserved as A7 000021 PRE. Live PDF and source IDs kept; future changes require a fresh numbered PRE/POST with SHA readback."
+}
