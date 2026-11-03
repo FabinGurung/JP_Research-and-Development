@@ -388,6 +388,18 @@
           "main_sha_at_reservation": "6acdfa8b8bb7b33b805d78322303785a3e84c8c3",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Verified SEQ085 source/PDF base. User scope only: Reference -> REFERENCE in TOC printed x; Fixed-to-soft response changes as standalone heading above For Block 1 paragraph on printed57; move original Figures A3.1/A3.2 together to printed78. No unrelated contents, tables/data or shared style changes."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 87,
+          "branch": "thesis/nabin-bista/latex/seq087-list-table-prefix",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq087-table-prefix",
+          "created_at_utc": "2026-11-03T15:00:27.725Z",
+          "main_sha_at_reservation": "f46a16668e43fcba96d43000f0758946d8a8d9c2",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "SEQ086 verified base. User-authorized only explicit Table prefix for all 22 generated List of Tables entries on printedxi, from Table3.1 through Table4.14, with sufficient number-label width. Preserve every caption, page link, table/scientific value, body source and shared style."
         }
       ],
       "observed_out_of_band_versions": [
