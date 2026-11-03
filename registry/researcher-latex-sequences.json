@@ -352,6 +352,18 @@
           "main_sha_at_reservation": "d7bcd904deab440a8bd3c3db93d5ecad80753fc4",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000026 PRE done. SEQ082 is base. Change only table fit and centered placement, Appendix 3 fragility figure uniformity (printed 80–91), exact user-supplied title across front-matter/title variables, and wording of paragraph following Figure 3.2. No result edits."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 84,
+          "branch": "thesis/nabin-bista/latex/seq084-title-navigation-tables-appendices",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq084-layout",
+          "created_at_utc": "2026-11-03T12:59:20.695Z",
+          "main_sha_at_reservation": "b15b0ddd23cd8d4ac85e462dbef239a90e9bfff7",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "Verified SEQ083 PDF/ZIP SHA256 and completed release. A7 000027 PRE archived. Only page-2 author/institution/date spacing, corrected exact title, Section 4.9 pagination, single-spaced TOC and lists, centered fit tables in 11–12 pt, Appendix 1 and 3 first figure pair placement. No scientific content changes. Manual connector reservation PR as in SEQ083; no workflow dispatch claimed."
         }
       ],
       "observed_out_of_band_versions": [
