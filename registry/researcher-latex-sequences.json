@@ -292,6 +292,18 @@
           "main_sha_at_reservation": "8c3ae051d9f6f8cfc7481f95ccacc64b1f04d5ed",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Formatting only: keep Table 3.2 intact on numbered page 22; reduce unnecessary float whitespace and allow 2 figures where legible; user-directed Nabin-only top 1.33in override (PU 2.5cm conflict to be recorded); enlarge the existing lone A3 Figure A2.1 within safe margin. Preserve scientific values; A7 PRE 000021 created."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 79,
+          "branch": "thesis/nabin-bista/latex/seq079-f429-table49-placement",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq079",
+          "created_at_utc": "2026-11-03T06:18:38.358Z",
+          "main_sha_at_reservation": "b5eb7a4997d703945231cd8e25f3252dcf3440cc",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "Strict SEQ078 baseline, placement-only: Figure 4.29 directly below Figure 4.28 on printed page 53; Table 4.9 top of printed page 54. No scientific data, other text, figures, shared template or third-party researcher changes. A7 000022 PRE archived."
         }
       ],
       "observed_out_of_band_versions": [
