@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 125,
+  "next_number": 126,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -591,6 +591,38 @@
       "git_commit_sha_after_merge": null,
       "global_propagation": "NONE__REQUIRES_SEPARATE_GLOBAL_PROPOSAL_AND_CROSS_RESEARCHER_QA",
       "scientific_boundary": "ONLY_NABIN_FORMAT__NO_SCIENTIFIC_VALUES_OR_SHARED_TEMPLATE_CHANGE__OFFICIAL_TOP_MARGIN_PARITY_HELD"
+    },
+    {
+      "change_id": "RD-LTX-CHG-125",
+      "researcher_id": "RSH-003",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Nabin SEQ084 owner-requested table typography (11pt cells, centered bounded boxes, spring schedule in two component panels), single-spaced TOC/LOT/LOF/LOE/appendix list, page-two lower block aligned to cover, and scoped figure/section pagination. Existing top=1.33in exception retained. No shared-style modification.",
+      "source_paths": [
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/main.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/02_titlepage.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/11_tableofcontent.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/12_listoftable.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/13_listoffigure.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/13a_listofequations.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/15_listofappendice.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/23_methodology.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/24_resultanddiscussion.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/28_appendices.tex"
+      ],
+      "before_after_qa_evidence": "SEQ083 112 pages to SEQ084 107 pages (106 A4 plus inherited sole A3 landscape). All 107 pages rendered/reviewed. 22 table captions and 88 figure captions retained. All equations/captions, Section4.9 text, data values, plot assets and unrelated manuscript bytes preserved. Section4.9 begins printed59; A1.1/A1.2 printed67; A3.1/A3.2 printed79. No undefined references/overfull boxes or page-bound overflow. Times New Roman embedded. Owner-specific inline manuscript deltas follow RD-LTX-CHG-124; no copied shared template.",
+      "pu_rule_references": [
+        "PU-FMT-006",
+        "PU-FMT-031",
+        "PU-FMT-032",
+        "PU-FMT-036",
+        "PU-FMT-040",
+        "PU-FMT-121"
+      ],
+      "disposition": "ACCEPTED_LOCAL",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "NONE__OWNER_ONLY",
+      "scientific_boundary": "Formatting and exact owner title correction only; no scientific approval or university acceptance asserted."
     }
   ],
   "required_fields": [
