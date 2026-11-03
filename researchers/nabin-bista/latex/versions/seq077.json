@@ -57,5 +57,14 @@
   "source_pr": 180,
   "drive_live_sha256_readback": true,
   "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ077_A7_000020_FORMAT_AND_A3_20261103.json",
-  "release_record_pr_pending": true
+  "release_record_pr_pending": false,
+  "git_release_merged": true,
+  "release_record_pr": 181,
+  "release_record_merge_commit": "30178163ce39ee31069b1f680a8dca154ee88804",
+  "verified_pages_run": 41580121046,
+  "verified_pages_conclusion": "success",
+  "all_checks_passed": true,
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ077_A7_000020_FINAL_PAGES_READBACK_20261103.json",
+  "audit_post_snapshot_drive_id": "1nhCLe3vUnPewxjmx4S3x--9qmf2m1VNi8b_njQfA9hs",
+  "release_disposition": "A7_000020_VERIFIED__GIT_SOURCE_AND_RELEASE_MERGED__PAGES_SUCCESS"
 }
