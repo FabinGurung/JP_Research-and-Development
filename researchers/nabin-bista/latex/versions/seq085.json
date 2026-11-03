@@ -6,7 +6,7 @@
   "sequence": 85,
   "parent": "LATEX_SEQ084",
   "branch": "thesis/nabin-bista/latex/seq085-tables-11pt-fit-center",
-  "status": "EDITING",
+  "status": "RELEASED",
   "a7_event": "000028",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -29,7 +29,7 @@
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "scientific_approval": null,
-  "promoted_to_current": false,
+  "promoted_to_current": true,
   "provider_metadata_readback": true,
   "local_qa": {
     "researcher_id": "RSH-003",
@@ -90,5 +90,19 @@
   "source_pre_sha": "09f504630f2e315fb706bc2c1380a973b0e8fa91",
   "shared_template_path": "controls/latex/template/pumlsc-shared.sty",
   "shared_template_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
-  "shared_template_version": "2.6.4"
+  "shared_template_version": "2.6.4",
+  "permanent_live_hash_readback": true,
+  "post_pdf_id": "1Y8VXNPwYZ_BCdxotYL7SvFJV1aZQN09Y",
+  "post_source_id": "1F4A36AexbHb1K_irrgNb5Xi6wWZiKPuJ",
+  "audit_post_snapshot_drive_id": "1QGRH01nZUHsDYHr2Z1c63ADmE2MS_UD-aVJYyTqzZlo",
+  "source_pr": 234,
+  "source_commit": "d88db21b65c26f0b68381b3a9b6a71cf84337d53",
+  "source_merge_commit": "83b9f69d9a3b05c29c8d7468dcb71387ed7df9a5",
+  "git_release_merged": true,
+  "all_checks_passed": true,
+  "post_archive_hash_verified": true,
+  "verified_pages_run": 41653899990,
+  "verified_pages_conclusion": "success",
+  "release_disposition": "A7_000028_VERIFIED__GIT_SOURCE_RELEASE_MERGED__PAGES_SUCCESS",
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ085_A7_000028_FINAL_READBACK_20261103.json"
 }
