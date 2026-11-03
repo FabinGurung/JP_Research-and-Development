@@ -22,6 +22,7 @@ The gravity loads adopted in the model setup are summarised in Table~\ref{tab:se
 \begin{table}[!htbp]\centering
 \caption{Gravity-load definitions and nonlinear hinge assignments used in the structural modelling.}\label{tab:seq035_load_inputs}
 \normalsize
+\begin{adjustbox}{max width=\linewidth}
 \begin{tabular}{@{}p{0.49\textwidth}p{0.36\textwidth}@{}}\toprule
 Input or assignment & Adopted definition \\\midrule
 Floor live load & 2.0 kN/m$^2$ \\
@@ -36,12 +37,14 @@ Seismic mass source & $1.0D+0.30L$ \\
 Beam nonlinear hinges & Uncoupled $M_3$ at $0.05L$ and $0.95L$ \\
 Column nonlinear hinges & Axial--biaxial interaction ($P$--$M_2$--$M_3$) at $0.05L$ and $0.95L$ \\
 \bottomrule\end{tabular}
+\end{adjustbox}
 \end{table}
 \subsection{Member Sections and Diaphragm Assumptions}
 The 2012 reference and 2024 model groups use the section definitions in Table~\ref{tab:seq035_geometry}. The comparison table describes the adopted model inputs and does not imply that all building geometries are interchangeable.
 \begin{table}[!htbp]\centering
 \caption{Material, section, slab and diaphragm assignments for the analysed model groups.}\label{tab:seq035_geometry}
-\small\begin{tabular}{@{}p{0.22\textwidth}p{0.31\textwidth}p{0.34\textwidth}@{}}\toprule
+\small\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{@{}p{0.22\textwidth}p{0.31\textwidth}p{0.34\textwidth}@{}}\toprule
 Parameter & NBC 205:2012 reference & NBC 205:2024 models \\\midrule
 Beams & 230 $\times$ 355 mm (Fe415) & 250 $\times$ 355 mm / 250 $\times$ 380 mm (Fe500) \\
 Columns & 300 $\times$ 300 mm (Fe500) & 350 $\times$ 350 mm (Fe500) \\
@@ -49,6 +52,7 @@ Concrete & M20 & M20 \\
 Floor slabs & 125 mm & 125 mm \\
 Diaphragm & Rigid & Rigid \\
 \bottomrule\end{tabular}
+\end{adjustbox}
 \end{table}
 
 \subsection{Sequence of Modelling and Evaluation}
@@ -104,7 +108,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{Regular building model.}
 \label{fig:method_regular_model}
 \par\smallskip
-{\small\raggedright The regular model provides the reference configuration for the plan-comparison series.\par}
+\SaugatBodyDescription{The regular model provides the reference configuration for the plan-comparison series.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -113,7 +117,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{L-type building model.}
 \label{fig:method_l_model}
 \par\smallskip
-{\small\raggedright The L-shaped arrangement introduces one re-entrant corner.\par}
+\SaugatBodyDescription{The L-shaped arrangement introduces one re-entrant corner.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -122,7 +126,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{L1-type building model.}
 \label{fig:method_lone_model}
 \par\smallskip
-{\small\raggedright L1 represents a deeper re-entrant configuration than the first L-shaped case.\par}
+\SaugatBodyDescription{L1 represents a deeper re-entrant configuration than the first L-shaped case.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -131,7 +135,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{L2-type building model.}
 \label{fig:method_ltwo_model}
 \par\smallskip
-{\small\raggedright The stepped L2 plan retains its separate re-entrant topology.\par}
+\SaugatBodyDescription{The stepped L2 plan retains its separate re-entrant topology.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -140,7 +144,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{T-type building model.}
 \label{fig:method_t_model}
 \par\smallskip
-{\small\raggedright The T-shaped layout contains re-entrant corners on opposing sides of the plan.\par}
+\SaugatBodyDescription{The T-shaped layout contains re-entrant corners on opposing sides of the plan.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -149,7 +153,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{U-type building model.}
 \label{fig:method_u_model}
 \par\smallskip
-{\small\raggedright The U-shaped configuration includes a central notch and two re-entrant corners.\par}
+\SaugatBodyDescription{The U-shaped configuration includes a central notch and two re-entrant corners.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -158,7 +162,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{Non-Parallel building model.}
 \label{fig:method_np_model}
 \par\smallskip
-{\small\raggedright The non-parallel framing arrangement is evaluated separately from the re-entrant plans.\par}
+\SaugatBodyDescription{The non-parallel framing arrangement is evaluated separately from the re-entrant plans.}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -167,7 +171,7 @@ The plan drawings and three-dimensional model views document the placement and o
 \caption{separate four-storey Regular extension building model.}
 \label{fig:method_fourstorey_model}
 \par\smallskip
-{\small\raggedright The four-storey height extension is not part of the seven-model performance-point series.\par}
+\SaugatBodyDescription{The four-storey height extension is not part of the seven-model performance-point series.}
 \end{figure}
 
 \noindent Figures~\ref{fig:method_regular_model}--\ref{fig:method_fourstorey_model} compare the documented model geometries. The seven common-height models are used for plan-response comparisons; the four-storey extension is assessed separately. The screenshots document framing arrangements and not independently verified performance capacities.
@@ -183,37 +187,37 @@ The following model screenshots document the geometry restrictions and member-se
 \centering
 \includegraphics[width=0.94\textwidth,height=0.45\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC 205_2012 Building Restrictions .jpg}
 \caption{Building-configuration restrictions associated with NBC 205:2012.}
-\par\vspace{3pt}{\small\raggedright The restrictions summarize the plan and height conditions used to establish the reference building geometry; the model response is evaluated separately. The reproduced restrictions establish why the 2012 representative building is used as a historical detailing reference, whereas the seven main configurations are discussed under the newer 2024 methodology. A geometric eligibility boundary and a numerical structural-demand check are different evaluations: the former concerns the permitted use of a simplified procedure, while the latter concerns the response of the model under the adopted demand cases. The illustration is consequently used to identify the relevant limits, not to certify the investigated buildings.\par}
+\SaugatBodyDescription{The restrictions summarize the plan and height conditions used to establish the reference building geometry; the model response is evaluated separately. The reproduced restrictions establish why the 2012 representative building is used as a historical detailing reference, whereas the seven main configurations are discussed under the newer 2024 methodology. A geometric eligibility boundary and a numerical structural-demand check are different evaluations: the former concerns the permitted use of a simplified procedure, while the latter concerns the response of the model under the adopted demand cases. The illustration is consequently used to identify the relevant limits, not to certify the investigated buildings.}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth,height=0.58\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC 205_2024 Building Restrictions .jpg}
 \caption{Building-configuration restrictions associated with NBC 205:2024.}
-\par\vspace{3pt}{\small\raggedright The layout restrictions define the plan and height conditions against which the study configurations are compared. The irregular models are assessed through structural analysis rather than treated as eligible for prescriptive detailing.\par}
+\SaugatBodyDescription{The layout restrictions define the plan and height conditions against which the study configurations are compared. The irregular models are assessed through structural analysis rather than treated as eligible for prescriptive detailing.}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC205_2012_Beam Section Choose Part 1.jpg}
 \caption{Beam section selection for the 2012 reference.}
-\par\vspace{3pt}{\small\raggedright The beam arrangement records the member sizes specified for the 2012 reference frame. Its concrete design-check results are discussed separately in Chapter~4. The screenshot serves as a traceable depiction of the reference section selection. In interpreting it, the section definition, material grade and gravity-load assignment should remain separate from the resulting member-design check. The 2012 reference uses beam sections of 230~mm by 355~mm in the study input schedule; the 2024 model group uses the separate section family shown in Table~\ref{tab:seq035_geometry}. This comparison identifies differing adopted inputs and does not constitute a direct member-capacity comparison.\par}
+\SaugatBodyDescription{The beam arrangement records the member sizes specified for the 2012 reference frame. Its concrete design-check results are discussed separately in Chapter~4. The screenshot serves as a traceable depiction of the reference section selection. In interpreting it, the section definition, material grade and gravity-load assignment should remain separate from the resulting member-design check. The 2012 reference uses beam sections of 230~mm by 355~mm in the study input schedule; the 2024 model group uses the separate section family shown in Table~\ref{tab:seq035_geometry}. This comparison identifies differing adopted inputs and does not constitute a direct member-capacity comparison.}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth,height=0.32\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/NBC205_2024_Beam Section Choose Part 1.jpg}
 \caption{Beam section selection for the 2024 models.}
-\par\vspace{3pt}{\small\raggedright The 2024 section schedule identifies the beam dimensions used in the study models. The material grades and cross-sections are also listed in the methodology tables.\par}
+\SaugatBodyDescription{The 2024 section schedule identifies the beam dimensions used in the study models. The material grades and cross-sections are also listed in the methodology tables.}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth,height=0.32\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/Column Section_NBC205_2012.jpg}
 \caption{Column section selection for the 2012 reference.}
-\par\vspace{3pt}{\small\raggedright The column reinforcement arrangement belongs to the 2012 reference. The analysis uses the section definitions recorded in Table~\ref{tab:seq035_geometry}. The view documents the reference column selection and illustrates how its section geometry was represented in the recorded model inputs. The 2012 reference and the 2024 model group are not assumed to have identical column dimensions or reinforcement arrangements. Accordingly, this figure is read alongside the concrete design-check observations rather than as evidence that a column would meet a different seismic-demand case without evaluation.\par}
+\SaugatBodyDescription{The column reinforcement arrangement belongs to the 2012 reference. The analysis uses the section definitions recorded in Table~\ref{tab:seq035_geometry}. The view documents the reference column selection and illustrates how its section geometry was represented in the recorded model inputs. The 2012 reference and the 2024 model group are not assumed to have identical column dimensions or reinforcement arrangements. Accordingly, this figure is read alongside the concrete design-check observations rather than as evidence that a column would meet a different seismic-demand case without evaluation.}
 \end{figure}
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{figures/ch3/seq035/model_validation/Column Section_NBC205_2024 part 1.jpg}
 \caption{Column section selection for the 2024 models.}
-\par\vspace{3pt}{\small\raggedright The column section view documents the model geometry considered for the newer configurations; verification of reinforcement demands requires the corresponding design results.\par}
+\SaugatBodyDescription{The column section view documents the model geometry considered for the newer configurations; verification of reinforcement demands requires the corresponding design results.}
 \end{figure}
 \FloatBarrier
 
