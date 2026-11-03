@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "release": "LATEX_SEQ081",
+  "parent": "LATEX_SEQ080",
+  "researcher": "RSH-003/nabin-bista",
+  "a7_event": "000024",
+  "recorded_utc": "2026-11-03T08:11:56.268Z",
+  "audit_timestamp_npt": "2026-11-03 13:55:25",
+  "reservation_pr": 206,
+  "source_pr": 208,
+  "source_merge_sha": "b9d3fae5f287902a01ce4896fc4fa2f8d4e9f8ce",
+  "release_record_pr": 210,
+  "release_merge_sha": "1ced4754808fd36c3b4cd657ae575e85ed0b1532",
+  "post_merge_checks": {
+    "validate_run": 41601169140,
+    "source_gate_run": 41601169172,
+    "pages_deploy_run": 41601169192,
+    "all_conclusion": "success"
+  },
+  "live": {
+    "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "dde077e38feecd57fdccec41ae26de09d2bd17ad53bb0332d1d557552b326ccd",
+    "source_zip_sha256": "74141739432a0a2150d18f0e3566432698184705ce3fd7aa495f3c8fd37395ce",
+    "ids_preserved": true,
+    "provider_sha_readback_verified": true
+  },
+  "pre": {
+    "pdf_drive_id": "1Ci9UhVUGmfC_jai9JugjEg9oE6fhHCKA",
+    "source_drive_id": "1mDW3kfgc4NzJZrtCg2JmMUzphhB5yG3q",
+    "audit_doc_id": "1hfjxYVvZVCQ6dktxwb_nz6o87lpXpmtQ9wXWqX_McWY"
+  },
+  "post": {
+    "pdf_drive_id": "1T0QRLlCggr6Eb5nerc9mFaTBNGwNkUeP",
+    "source_drive_id": "1RnFcDKLcedA2xc3yTFxja_F88BCh6mrn",
+    "audit_doc_id": "1T6xHe010ChcjAllvpEk8GyFOipEAgXRy2_uf_XoVrrI",
+    "audit_provider_readback": true
+  },
+  "final_pdf_pages": 114,
+  "source_entries": 577,
+  "unchanged_entries": 575,
+  "source_tex_changed": [
+    "main.tex",
+    "02_titlepage.tex"
+  ],
+  "actual_rendered_diff": "November, 2026 replaces September, 2026 only on PDF pages 1 and 2",
+  "other_112_pages_unchanged": true,
+  "science_changed": false,
+  "other_researchers_changed": false,
+  "shared_style_changed": false,
+  "admission_status": "compiled working document only",
+  "university_approval": null,
+  "restore": "Use the next event number and take PRE snapshot before any future mutation; preserve these A7 000024 archives and the SAME permanent Drive live IDs.",
+  "this_receipt_commit_pages_status": "POST_MERGE_DEPLOY_TO_BE_VERIFIED"
+}
