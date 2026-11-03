@@ -2,13 +2,22 @@
 \label{app:seq050_sixblock_material}
 The following figures present the six structural block models and the architectural plan associated with the G+4 hospital study. The submitted plan identifies the block arrangement, while the three-dimensional representations illustrate the models described in the input tables.
 \clearpage
-\begin{figure}[p]
-\centering
-\rotatebox{90}{\includegraphics[width=0.76\textheight,page=1,keepaspectratio]{seq050_assets/submitted_plan.pdf}}
-\caption{Architectural plan showing the six hospital blocks}
+% A3 landscape sheet reserved exclusively for Figure A2.1; all other sheets remain A4.
+\begingroup
+\setlength{\paperwidth}{420mm}%
+\setlength{\paperheight}{297mm}%
+\special{papersize=420mm,297mm}%
+\newgeometry{layoutwidth=420mm,layoutheight=297mm,left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm}%
+\thispagestyle{plain}%
+\begin{center}
+\includegraphics[width=0.98\textwidth,height=0.90\textheight,page=1,keepaspectratio]{seq050_assets/submitted_plan.pdf}\par
+\captionof{figure}{Architectural plan showing the six hospital blocks}
 \label{fig:app_sixblock_plan}
-\end{figure}
+\end{center}
 \clearpage
+\endgroup
+\special{papersize=210mm,297mm}%
+\restoregeometry
 
 \begin{figure}[p]\centering\includegraphics[width=0.88\textwidth,height=0.71\textheight,keepaspectratio]{seq050_assets/b1_new.png}\caption{Three-dimensional structural representation of Block 1}\label{fig:app_block_1}\end{figure}
 
