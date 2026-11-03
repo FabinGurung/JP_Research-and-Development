@@ -6,7 +6,7 @@
   "sequence": 87,
   "parent": "LATEX_SEQ086",
   "branch": "thesis/nabin-bista/latex/seq087-list-table-prefix",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "admission_state": "CANDIDATE",
   "a7_event": "000030",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
@@ -29,7 +29,7 @@
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "scientific_approval": null,
-  "promoted_to_current": false,
+  "promoted_to_current": true,
   "provider_metadata_readback": true,
   "local_qa": {
     "release": "LATEX_SEQ087",
@@ -86,5 +86,22 @@
     "shared_style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
     "scientific_approval": null,
     "pdf_sha256": "3c1d0f296df08e129ae2e05ee9a789826a005b183f5ba6263957d6dfda46c1e7"
-  }
+  },
+  "permanent_live_hash_readback": true,
+  "post_pdf_id": "1yU-twwqvWtG55offmAOvMAoFEd6cLLfd",
+  "post_source_id": "1vj6ONW7lEZA_ZQKUA7kjBtqhb_bC5P3V",
+  "audit_post_snapshot_drive_id": "1U7e9zikKobxx1Bh8msMNHxpLgL6kwP0XoK5jpBD8eHI",
+  "source_pr": 242,
+  "source_commit": "8d275af8086fec01e5407dee221a13cc3b8fb65a",
+  "source_merge_commit": "6bc1945afa9ba649c4753facdbb3b319a931f1da",
+  "git_release_merged": true,
+  "all_checks_passed": true,
+  "post_archive_hash_verified": true,
+  "archive_readback_truncation_resolved": true,
+  "verified_pages_run": 41660279886,
+  "verified_pages_conclusion": "success",
+  "fresh_packaged_build_all_106_pages_text_font_geometry_identical": true,
+  "fresh_packaged_build_all_106_pages_poppler_pixel_identical": true,
+  "release_disposition": "A7_000030_VERIFIED__GIT_SOURCE_RELEASE_MERGED__PAGES_SUCCESS",
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ087_A7_000030_FINAL_READBACK_20261103.json"
 }
