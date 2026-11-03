@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "record_kind": "SEQ076_A7_000019_DRIVE_SOURCE_RELEASE_READBACK",
+  "researcher_id": "RSH-003",
+  "researcher_slug": "nabin-bista",
+  "release": "LATEX_SEQ076",
+  "base": "LATEX_SEQ075",
+  "event": "000019",
+  "recorded_utc": "2026-11-03T02:38:51.210Z",
+  "status": "SOURCE_MERGED__PERMANENT_DRIVE_LIVE_POST_HASH_VERIFIED__PAGES_POST_RELEASE_PENDING",
+  "live": {
+    "pdf": {
+      "id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+      "sha256": "1363cb673fa77d4ac2ded2aac03e2b46e64dd3c4e539cda48e85df832126840f",
+      "bytes": 12292585,
+      "pages": 120
+    },
+    "source": {
+      "id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+      "sha256": "61917ffb649b4fb473c32bb05ccec3ed7125037b532183dad181435f9d6396fb",
+      "bytes": 97991514,
+      "entries": 569
+    },
+    "permanent_ids_reused": true,
+    "provider_downloaded_byte_hash_verified": true
+  },
+  "archive": {
+    "folder_id": "1yb6ejHj-D2IhJAk2qh2WePYKNfmA8mz9",
+    "pre_pdf_id": "1X-7XpwPrxC1SXJQ6kFb5u5aco0s1oRaX",
+    "pre_source_id": "1GgFDi75ppqRE184csNxhZk-O_mi6a3iD",
+    "post_pdf_id": "1wLt674fy7HMEbn59hX1qBtYZfncQlSoE",
+    "post_source_id": "1OC1es6UuPl3RE4Sh8WjV8RbQFqnyYJOc",
+    "all_four_downloaded_rehashed": true,
+    "pre_pdf_sha256": "3438c5cdde1135d1ad65dfe6c57e44ab1660e13603ea1653cb51e13883f3e8bd",
+    "pre_source_sha256": "080793e2a56b62b6bc7164a3b38a5caa83742a698203727a667a778cf9b8bf6b",
+    "post_pdf_sha256": "1363cb673fa77d4ac2ded2aac03e2b46e64dd3c4e539cda48e85df832126840f",
+    "post_source_sha256": "61917ffb649b4fb473c32bb05ccec3ed7125037b532183dad181435f9d6396fb"
+  },
+  "git": {
+    "repository": "FabinGurung/JP_Research-and-Development",
+    "reservation_pr": 172,
+    "source_pr": 173,
+    "source_merge_commit": "da8f0e8a60e425080d454af7ac33021edef4d395",
+    "base_manifest": "versions/seq075.json",
+    "shared_style_path": "controls/latex/template/pumlsc-shared.sty",
+    "shared_style_blob": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+    "shared_style_changed": false,
+    "other_researcher_science_changed": false,
+    "release_record_pr_pending": true
+  },
+  "qa": {
+    "xelatex_passes": 3,
+    "bibliography": "bibtex8 -8",
+    "pdf_pages": 120,
+    "all_pages_a4": true,
+    "embedded_times_new_roman": true,
+    "no_undefined_references": true,
+    "no_undefined_citations": true,
+    "no_overfull_boxes": true,
+    "figure_3_1_academic_tikz": true,
+    "footer_footnote_removed": true,
+    "numbered_linked_equations": true,
+    "toc_single_spacing": true,
+    "etabs_spring_input_rows_preserved": 18,
+    "source_zip_integrity_pass": true
+  },
+  "scientific_status": {
+    "new_etabs_analysis": false,
+    "fragility_independent_validation": false,
+    "scholarly_approval": null
+  },
+  "audit_google_doc_live_id": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "restore": {
+    "same_live_pdf_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "same_live_source_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "restore_pre_pdf_id": "1X-7XpwPrxC1SXJQ6kFb5u5aco0s1oRaX",
+    "restore_pre_zip_id": "1GgFDi75ppqRE184csNxhZk-O_mi6a3iD",
+    "method": "Preserve next PRE; restore exact PRE bytes into same live IDs, rehash, append restoration evidence; never repoint live IDs or modify sealed copies."
+  }
+}
