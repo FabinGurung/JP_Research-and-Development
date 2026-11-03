@@ -33,6 +33,17 @@
       "path": "researchers/saugat-paneru/latex/extensions/saugat_compat.sty",
       "status": "TESTED_LOCAL__PARITY_PENDING",
       "shared_template_modified": false
+    },
+    {
+      "extension_id": "RD-LTX-EXT-NABIN-001",
+      "change_id": "RD-LTX-CHG-124",
+      "researcher_id": "RSH-003",
+      "researcher_slug": "nabin-bista",
+      "owner": "nabin-bista",
+      "path": "researchers/nabin-bista/latex/extensions/SEQ078_FORMAT_SCOPING.md",
+      "status": "TESTED_LOCAL__OFFICIAL_PU_TOP_MARGIN_CONFLICT_DISCLOSED",
+      "reason": "User-directed 1.33in top vs PU 2.5cm and compact figure placement are owner-scoped; implementation is in Nabin manuscript main/methodology/figures only; this file records the scoped implementation, not a duplicate shared style.",
+      "shared_template_modified": false
     }
   ],
   "allowed_root_pattern": "researchers/<slug>/latex/extensions/",
