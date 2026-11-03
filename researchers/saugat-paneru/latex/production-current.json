@@ -36,8 +36,8 @@
     "pre_checklist_archive_id": "1b3U-CAo9siP9d9ToIv78jhWa_sg-xndO",
     "post_pdf_archive_id": "1ghI-SZ2xkqYh3koyrH05Ob4KxI3H7yRi",
     "post_zip_archive_id": "1PVndpBwkp1iRto4ZT4bogKDHx0sfP7R3",
-    "post_checkpoint_archive_id": "PENDING",
-    "post_checklist_archive_id": "PENDING",
+    "post_checkpoint_archive_id": "1vc3bbx8jYuqxFnREaFRysav26zFgBTTs",
+    "post_checklist_archive_id": "1mWHv1u701-KUkY8fCOh_b_j9_f-_55QY",
     "source_scientific_inputs": "ALL_TABLE_VALUES_IMAGE_ASSETS_RAW_DATA_FIGURE_CAPTIONS_LABELS_CITATIONS_SCIENTIFIC_PROSE_UNCHANGED_VS_SEQ051",
     "researcher_22_comments": "SOURCE_13_DONE_7_PARTIAL_2_SCIENCE_HOLDS_CARRIED_FORWARD",
     "full_pu_144_format_certification": "NOT_CERTIFIED",
@@ -47,7 +47,9 @@
     "figure_3_4_layout": "FIVE_ENLARGED_PANELS_CONTINUED_PRINTED_PP30_32__FIG3_5_P33",
     "figure_4_33_moved": "REGULAR_DRIFT_RENUMBERED_FIG4_24_BEFORE_FIG4_25_T_U_NONPARALLEL",
     "maximum_four_panels_scope": "FIG3_4_MAX2_PER_PAGE__COMPARATIVE_FIG4_1_MAX2_PER_PAGE",
-    "figure_label_font_minimum": "NOT_CERTIFIED_FOR_SOURCE_RASTER_GRAPHICS"
+    "figure_label_font_minimum": "NOT_CERTIFIED_FOR_SOURCE_RASTER_GRAPHICS",
+    "final_post_checkpoint_archive_id": "14Q6cVazV4w_pSN9Bmkp1bUPQKX1CM4gc",
+    "final_post_checklist_archive_id": "1EU4pjtjAtVHNDQWII0hqvtclnT6w9tEy"
   },
   "format_changes": {
     "shared_template": "controls/latex/template/pumlsc-shared.sty",
@@ -99,7 +101,7 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "99f989921791f146c265b6e43b67bc94cd55bd87",
     "source_branch": "thesis/saugat-paneru/latex/seq052-body-prose-vertical-floorplans-table-fit",
-    "source_pr": "PENDING",
+    "source_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/217",
     "source_merged_commit": null,
     "source_main": "main",
     "promotion_branch": "thesis/saugat-paneru/latex/seq052-body-prose-vertical-floorplans-table-fit",
@@ -115,13 +117,13 @@
     "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/216"
   },
   "checkpoint_resolution": {
-    "status": "SEQ052_A7_000034_PRE_ARCHIVED_POST_PDF_ZIP_VERIFIED__GITHUB_PROTECTED_CHAIN_PENDING",
+    "status": "SEQ052_A7_000034_COMPLETE_PRE_POST_POST2_ARCHIVED__DRIVE_LIVE_VERIFIED__GITHUB_PROTECTED_ANCESTRY_PENDING",
     "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
     "current_checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
     "pre_checkpoint_archive_id": "1VC7Ct2Y_q5iGRXjFox-bkTe_c6R5-4qW",
     "pre_checklist_archive_id": "1b3U-CAo9siP9d9ToIv78jhWa_sg-xndO",
-    "post_checkpoint_archive_id": "PENDING",
-    "post_checklist_archive_id": "PENDING",
+    "post_checkpoint_archive_id": "1vc3bbx8jYuqxFnREaFRysav26zFgBTTs",
+    "post_checklist_archive_id": "1mWHv1u701-KUkY8fCOh_b_j9_f-_55QY",
     "same_stable_ids_preserved": true
   },
   "previous_formatted_production": {
