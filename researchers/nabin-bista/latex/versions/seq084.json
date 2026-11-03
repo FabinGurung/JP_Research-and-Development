@@ -43,8 +43,8 @@
   "post_source_id": "1sp3KJFv3UmziDHlSVSNWRn4Eg1hyZ5QU",
   "source_pr": 228,
   "source_commit": "cd2c1269c16fd92377a8959c48e48b434aeeb6ff",
-  "git_release_merged": false,
-  "release_disposition": "DRIVE_VERIFIED__GIT_CLOSEOUT_PENDING",
+  "git_release_merged": true,
+  "release_disposition": "A7_000027_VERIFIED__GIT_SOURCE_RELEASE_MERGED__PAGES_SUCCESS",
   "qa": {
     "all_pages_reviewed": 107,
     "fresh_packaged_zip_text_and_render_parity": true,
@@ -60,5 +60,12 @@
     "a11_a12_printed_page": 67,
     "a31_a32_printed_page": 79,
     "scientific_approval": null
-  }
+  },
+  "source_merge_commit": "a718c2477e905decf3f322ec8da7da41315ce8b5",
+  "verified_pages_run": 41645938696,
+  "verified_pages_conclusion": "success",
+  "all_checks_passed": true,
+  "post_archive_hash_verified": true,
+  "audit_post_snapshot_drive_id": "1pG5I_yffLzu0gi9sH4UKJ2Eo0hMCgfjKXJhEBVQzYEc",
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ084_A7_000027_FINAL_READBACK_20261103.json"
 }
