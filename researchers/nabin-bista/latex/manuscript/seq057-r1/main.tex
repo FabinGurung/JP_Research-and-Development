@@ -65,7 +65,7 @@
 \usepackage{graphicx}
 \usepackage{xcolor} % Explicit dependency of the existing \color{black} command.
 \usepackage{placeins}
-\usepackage{booktabs,longtable,array}          % Images
+\usepackage{booktabs,longtable,array,adjustbox}          % Images
 \graphicspath{{./}{figures/ch3/}{figures/ch4/}{figures/appendix/ground_motion_time_histories/}}
 % SEQ066 build portability: no manuscript command uses siunitx.
 % Retain its configuration when installed; no typesetting changes otherwise.
@@ -76,6 +76,11 @@
 
 % Required: Left-aligned captions for Figures and Tables
 \usepackage[justification=raggedright,singlelinecheck=false]{caption}
+% SEQ083: all table boxes are centered within the allotted PU text width.
+% Table captions keep the existing PU left-aligned convention.
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+\newcommand{\seqeightyThreetablefont}{\small\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{0.95}}
 \usepackage[hidelinks]{hyperref}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning}
@@ -223,7 +228,7 @@
 % =========================================================================
 % METADATA CONFIGURATION VARIABLES (Automates 02_titlepage.tex)
 % =========================================================================
-\newcommand{\myThesisTitle}{Seismic Performance and Fragility Assessment of a Representative Mid-size Hospital Building Considering Soil--Structure Interaction}
+\newcommand{\myThesisTitle}{Seismic Fragility and Soil--Structure Interaction Based Performance Assessment of Mid-size in General Hospital Buildings in Nepal}
 \newcommand{\myStudentName}{Nabin Bista}
 \newcommand{\myRegistrationNumber}{2024-1-71-0023} % Replace with your actual registration number
 \newcommand{\mySupervisorOneName}{Er. Prakash Bahadur Adhikari}
