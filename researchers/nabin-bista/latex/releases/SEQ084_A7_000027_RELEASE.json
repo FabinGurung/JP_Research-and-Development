@@ -19,7 +19,7 @@
   "post": {
     "pdf": "1YjijUhXwe0XauW_KCMS4yTNEKCAjbJVL",
     "source": "1sp3KJFv3UmziDHlSVSNWRn4Eg1hyZ5QU",
-    "hash_verification": "FINAL_READBACK_PENDING"
+    "hash_verification": true
   },
   "source_pr": 228,
   "source_commit": "cd2c1269c16fd92377a8959c48e48b434aeeb6ff",
@@ -41,5 +41,14 @@
     "28_appendices.tex"
   ],
   "restore": "Copy PRE bytes into the same permanent live IDs through a new numbered event, preserving all historical snapshots.",
-  "scientific_approval": null
+  "scientific_approval": null,
+  "source_merge_sha": "a718c2477e905decf3f322ec8da7da41315ce8b5",
+  "git_release_merged": true,
+  "post_merge": {
+    "validate": 41645938610,
+    "source_gate": 41645938747,
+    "pages": 41645938696,
+    "all": "success"
+  },
+  "audit_post_snapshot": "1pG5I_yffLzu0gi9sH4UKJ2Eo0hMCgfjKXJhEBVQzYEc"
 }

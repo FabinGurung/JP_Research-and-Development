@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release": "LATEX_SEQ084",
+  "a7_event": "000027",
+  "recorded_at_npt": "2026-11-03 19:23:29",
+  "source_pr": 228,
+  "source_merge_sha": "a718c2477e905decf3f322ec8da7da41315ce8b5",
+  "post_merge": {
+    "validate": 41645938610,
+    "source_gate": 41645938747,
+    "pages": 41645938696,
+    "all": "success"
+  },
+  "pdf": {
+    "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "sha256": "e85a4c2111a0d51c9ff7b14d8b72a01198d5368699e66feacd4345763aee143e",
+    "pages": 107
+  },
+  "source_zip": {
+    "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "9034510f51a9dce46b8f5c6b774ff76c8c9b11129759958d90a96f1825f64ec8",
+    "entries": 580
+  },
+  "permanent_ids_preserved": true,
+  "provider_hash_readback": true,
+  "immutable_pre_pdf": "1XwQ6y3LbGsq3RPaJZ5Ei5jaf3tjR2yGr",
+  "immutable_pre_zip": "1MxW7LqoO2d4N4bIxYqIrppWAFOPm1olA",
+  "immutable_post_pdf": "1YjijUhXwe0XauW_KCMS4yTNEKCAjbJVL",
+  "immutable_post_zip": "1sp3KJFv3UmziDHlSVSNWRn4Eg1hyZ5QU",
+  "pre_and_post_hash_verified": true,
+  "final_audit_snapshot": "1pG5I_yffLzu0gi9sH4UKJ2Eo0hMCgfjKXJhEBVQzYEc",
+  "audit_doc_live": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "scope": "Only authorized title, page-two lower block alignment, single-spaced navigation, 11pt centered fitted tables and requested section/appendix figure pagination. All scientific values, equations, captions, original assets/bibliography and Section4.9 prose preserved.",
+  "qa": {
+    "all_pages_reviewed": 107,
+    "fresh_packaged_zip_text_and_render_parity": true,
+    "exact_times_new_roman_embedded": true,
+    "tables": 22,
+    "figures": 88,
+    "equations_captions_and_section49_unchanged": true,
+    "spring_rows_unchanged": 18,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "page_boundary_overflows": 0,
+    "section49_printed_page": 59,
+    "a11_a12_printed_page": 67,
+    "a31_a32_printed_page": 79,
+    "scientific_approval": null
+  },
+  "disposition": "Completed working LaTeX release; no scientific or university signoff implied."
+}
