@@ -6,7 +6,7 @@
   "sequence": 82,
   "parent": "LATEX_SEQ081",
   "branch": "thesis/nabin-bista/latex/seq082-restore-section49-seq079",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED__GIT_RECORD_PR_PENDING",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
   "scope": "Restore subsection 4.9 from SEQ079 verbatim within SEQ081 source. This removes SEQ080 benchmark Table 4.14 and Figure 4.36 from the compiled document; downstream table renumbers naturally. Preserve SEQ081 November title dates, Fig 3.2 move, other chapters, figures, numbers, analysis, bibliography and annexes.",
@@ -46,5 +46,17 @@
   "unmodified_assets_retained": true,
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
-  "promoted_to_current": false
+  "promoted_to_current": true,
+  "post_archive_created": true,
+  "post_pdf_id": "12Iw0LovNv2mUGUuriNovY_q2WS39_prP",
+  "post_source_id": "10wxx_GoEDpWW9ZB5dYv8j5OKUXDujD-0",
+  "post_audit_id": "1opDh4j_wzlESy0NHpEdlBLCk537UN6EMBM6Bz0V5fO0",
+  "permanent_pdf_sha256": "e6945a1016cb4af765fade90f7c6053d5f15992a45eaa66530cad85c05085e0d",
+  "permanent_source_zip_sha256": "d9608089e05003fe3708533da732cc11edb243b98cf3fb8b997819c2ed4e0265",
+  "drive_live_sha256_readback": true,
+  "source_pr": 213,
+  "source_merge_commit": "0ef54be6f902082f48ab1a435efe7076fe0606fe",
+  "git_release_merged": false,
+  "release_record_pr_pending": true,
+  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ082_A7_000025_RESTORE_SEC49_20261103.json"
 }
