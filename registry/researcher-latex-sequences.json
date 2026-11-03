@@ -364,6 +364,18 @@
           "main_sha_at_reservation": "b15b0ddd23cd8d4ac85e462dbef239a90e9bfff7",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Verified SEQ083 PDF/ZIP SHA256 and completed release. A7 000027 PRE archived. Only page-2 author/institution/date spacing, corrected exact title, Section 4.9 pagination, single-spaced TOC and lists, centered fit tables in 11–12 pt, Appendix 1 and 3 first figure pair placement. No scientific content changes. Manual connector reservation PR as in SEQ083; no workflow dispatch claimed."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 85,
+          "branch": "thesis/nabin-bista/latex/seq085-tables-11pt-fit-center",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq085-tables",
+          "created_at_utc": "2026-11-03T14:18:39.809Z",
+          "main_sha_at_reservation": "21dbaacd470d190c2230b9c1ba3a1fb5f3e1fb47",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "SEQ084 exact baseline. User-authorized tables-only layout QA and correction: fit within page, centered table and cell alignment, actual 11–12pt table text. Preserve every cell value, caption and unrelated source. Protected-main ledger-only PR; source edits and promotion separate."
         }
       ],
       "observed_out_of_band_versions": [
