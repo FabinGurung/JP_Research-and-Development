@@ -714,11 +714,48 @@ Soft & 0.0880 & 0.1747 & 0.2614 & 0.3481 & 0.4348 \\
 
 \section{Comparison with Published Soil--Structure Interaction Studies}
 
-Dhakal and Chaulagain \cite{dhakal2023} examined regular and plan-irregular reinforced-concrete buildings supported on hard, medium and soft soils using response-spectrum analysis and a linear Winkler foundation representation. They reported longer fundamental periods and greater storey displacement and drift when soil flexibility was included, together with a reduction in base shear in their studied configurations. The present six-block hospital assessment shows the same overall period-lengthening and displacement trends. However, the base-shear results do not show a consistent reduction in every block. This difference is important: the force response depends on the structural configuration, support idealization and particular response measure, not on period lengthening alone.
+The three investigations address foundation flexibility, but they employ different structural systems and analysis methods. Dhakal and Chaulagain~\cite{dhakal2023} studied five building-plan configurations (regular, T-, L-, H- and plus-shaped) under hard, medium and soft support with linear Winkler springs and response-spectrum analysis. Poudel and Chaulagain~\cite{poudel2024} considered six regular and irregular configurations under fixed, linear-soil and nonlinear-soil conditions, using three earthquake records in nonlinear time-history analysis. The present study evaluates six blocks of a G+4 hospital using fixed-base and three elastic-spring support conditions. These differences govern which numerical comparisons are meaningful.
 
-Poudel and Chaulagain \cite{poudel2024} examined irregular reinforced-concrete buildings with fully nonlinear soil--structure interaction and dynamic analysis. Their results emphasize that fixed-base and linearized soil assumptions can underestimate some structural demands, especially under softer ground conditions. Increased displacement and drift in the present flexible-support cases are consistent with that broader concern. The two analyses are nevertheless not directly equivalent. The hospital models use discrete foundation springs for the soil--structure interaction comparison, whereas the published study explicitly evaluates nonlinear soil effects. The two studies therefore provide a useful check on the direction of response trends, but do not provide numerical calibration of the hospital model.
+\subsection*{Published benchmarks}
 
-In the present work, the response-spectrum displacement, drift and shear results are interpreted separately from the gravity-combination foundation settlements and member-force envelopes. Likewise, the twelve-ground-motion threshold-intensity data and the X-direction block-specific fragility curves are discussed according to their respective definitions; published studies of irregular buildings do not by themselves validate these hospital-specific threshold values. Taken together, the comparison supports evaluating SSI through several response parameters rather than assuming a uniform beneficial or detrimental change for all six blocks.
+For Dhakal and Chaulagain~\cite{dhakal2023}, the accessible published results establish increases in fundamental period, storey displacement and drift, together with reduced base shear when soil flexibility is introduced. Their publicly accessible abstract identifies the five plan types and three soil categories, but does not give numerical percentages for those response changes. Consequently, a numerical difference relative to that study cannot be calculated from the accessible figures and text without an authenticated copy of the full results. No unreported percentage is assigned to it here.
+
+Poudel and Chaulagain~\cite{poudel2024} give explicit percentage changes relative to fixed-base response. For nonlinear soft soil, the mean X-direction top-storey displacement increased by 85.35\% under the Gorkha record, 88.68\% under Northridge and 65.38\% under San Fernando. Under the same three records, the average normalized base-shear increases for nonlinear soft soil were 81.78\%, 79.91\% and 59.29\%, respectively. Their percentages were averaged across the six investigated building configurations, and describe dynamic response with nonlinear soil, not the elastic response-spectrum demands of this hospital. Table~\ref{tab:seq080_published_benchmarks} records these numerical reference values alongside the scope of the Dhakal and Chaulagain study.
+
+\begin{table}[!htbp]
+\centering
+\caption{Numerical benchmarks reported in the two published SSI studies}
+\label{tab:seq080_published_benchmarks}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}p{4.2cm}p{4.6cm}rr@{}}
+\toprule
+Study and excitation & Analysis case & $\Delta u_X$ (\%) & $\Delta V_b$ (\%) \\
+\midrule
+Dhakal--Chaulagain (2023) & Five plans; three soil categories & -- & -- \\
+Poudel--Chaulagain (2024) & Gorkha; nonlinear soft & +85.35 & +81.78 \\
+ & Northridge; nonlinear soft & +88.68 & +79.91 \\
+ & San Fernando; nonlinear soft & +65.38 & +59.29 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\noindent A dash indicates that a numerical change was not available in the accessible published text; it is not a zero result. Here $\Delta u_X$ denotes the change in X-direction top-storey displacement and $\Delta V_b$ the change in base shear relative to the respective fixed-base case. The Poudel--Chaulagain base-shear percentages are normalized to seismic weight as reported by those authors.
+
+\subsection*{Hospital results against the benchmarks}
+
+The six hospital blocks show fixed-to-soft increases in fundamental period of 8.53\%, 19.73\%, 5.22\%, 8.99\%, 9.00\% and 7.85\%, in block order (Table~\ref{tab:seq54_modal}). The corresponding X-direction uppermost-storey displacement increases are 86.8\%, 30.8\%, 7.5\%, 17.0\%, 22.4\% and 16.8\%. These are within-block differences, not averages over different earthquake records. The largest increase, 86.8\% for Block~1, corresponds to 59.39~mm under fixed support and 110.92~mm under soft support in Table~\ref{tab:seq54_disp}. The six-block X-direction increase spans 7.5--86.8\%, and the Y-direction increase spans 8.6--63.5\%. Direct arithmetic using Block~1 values gives $(110.92-59.39)/59.39\times100=86.77\%$, which rounds to the 86.8\% displayed in the hospital results; the corresponding Block~2 period change is $(0.698-0.583)/0.583\times100=19.73\%$. These checks establish consistency of the reported percentage calculations, not independent verification of the underlying ETABS models.
+
+The hospital's maximum X-direction drift changes by +6.5\% to +45.8\% across the six blocks, while its Y-direction drift changes range from $-4.1$\% to +47.4\% (Table~\ref{tab:seq066_fixed_soft}). Its response-spectrum X-direction base-shear changes range from +1.4\% to +10.1\%; the Y-direction changes range from +1.5\% to +11.2\%. The positive X-direction base-shear changes do not reproduce the reduction reported by Dhakal and Chaulagain, but are in the same direction as the increase observed in Poudel and Chaulagain's nonlinear dynamic cases. They are far smaller than that latter study's +59.29--+81.78\% nonlinear-soft values. Different buildings, excitation procedures, definitions of base shear and soil idealizations preclude treating these differences as errors or as numerical validation of the hospital model.
+
+Figure~\ref{fig:seq080_roof_compare} places the displacement percentages on a common axis. It contrasts Poudel and Chaulagain's three nonlinear-soft, earthquake-specific averages with the six separate fixed-to-soft response-spectrum changes from the present hospital. The first three values are study-wide averages; the remaining six are block-specific results. Their numerical proximity in selected cases, including 85.35\% versus 86.8\%, does not establish equivalent models or independent confirmation of structural safety. The comparison supports the conclusion that flexible foundation restraint can increase deformation demand, while the magnitude remains strongly dependent on the response model and the individual structure.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/seq080/comparative_roof_displacement.pdf}
+\caption{Fixed-to-soft X-direction top-storey displacement changes: published nonlinear dynamic averages (Poudel and Chaulagain, 2024) and six hospital-block response-spectrum results (present study). The two datasets have different structural models and analysis methods and are compared as contextual numerical benchmarks, not for model calibration.}
+\label{fig:seq080_roof_compare}
+\end{figure}
+\FloatBarrier
 
 \section{Overall Discussion}
 
