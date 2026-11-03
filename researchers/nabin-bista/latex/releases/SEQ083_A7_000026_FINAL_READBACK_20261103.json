@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release": "LATEX_SEQ083",
+  "a7_event": "000026",
+  "recorded_at_npt": "2026-11-03 18:21:07",
+  "source_pr": 221,
+  "source_merge_sha": "30258670f6e87537c227067775edb756564ec37b",
+  "release_record_pr": 224,
+  "release_merge_sha": "667aa692e2094a595641fa64aee8d0279d169a32",
+  "post_merge": {
+    "source_gate_run": 41636901257,
+    "validate_run": 41636901243,
+    "pages_run": 41636901331,
+    "all": "success"
+  },
+  "pdf": {
+    "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "sha256": "e3c86c73c6b1d5ababa3d9d51312111a4b8de9771475f3a1597a5deec9b379f2",
+    "pages": 112
+  },
+  "source_zip": {
+    "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "b5163fb8812f5cc0a09dd65e2eabbb59e29872bcbb222b485c5bdf30d60c18c9",
+    "entries": 577
+  },
+  "permanent_ids_preserved": true,
+  "provider_hash_readback": true,
+  "immutable_pre_pdf": "1K1ieZfMlVRI46OEGzuk41iRFl0oGHDH7",
+  "immutable_pre_zip": "1FMvSwcfqZzi1hqil-gyCjUPY9cgppMPX",
+  "immutable_post_pdf": "1yBf0mbBx9k-M-xtRhMYSPEioErfEtMSh",
+  "immutable_post_zip": "1AQVdxXvu1El7ZiZVKvpbNECj1zgecRYo",
+  "final_audit_snapshot": "1pAxU2ktAdmYXys5KcpTzZ6is1VTITx7CElSYBk5lekE",
+  "audit_doc_live": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "scope": "Only table fit/centering, uniform Appendix 3 fragility figures, author-supplied thesis title, first Figure 3.2 explanatory paragraph. No other science changes.",
+  "disposition": "Completed working LaTeX release. No scientific or university signoff implied."
+}
