@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 52,
+  "parent_sequence": 51,
+  "source_parent_sequence": 51,
+  "branch": "thesis/saugat-paneru/latex/seq052-body-prose-vertical-floorplans-table-fit",
+  "status": "QA_CANDIDATE",
+  "drive_production_status": "CURRENT_SAME_STABLE_IDS_PROVIDER_READBACK_VERIFIED",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "a7_version_event": "000034",
+  "source_zip_member_count": 422,
+  "unchanged_zip_members": 413,
+  "modified_scoped_paths": [
+    "manuscript/chapters/chapter3_methodology.tex",
+    "manuscript/chapters/chapter4_results_discussion.tex",
+    "manuscript/cp112_additions/ch3_model_geometry.tex",
+    "manuscript/cp112_additions/ch3_properties_spectrum_modal.tex",
+    "manuscript/cp112_additions/ch4_gii_summary_traceability.tex",
+    "manuscript/cp112_additions/ch4_pp_hinge.tex",
+    "manuscript/cp112_additions/ch4_pushover_summary.tex",
+    "manuscript/cp112_additions/ch4_storey_shear_summary.tex",
+    "extensions/saugat_project_adapter.sty"
+  ],
+  "no_source_deletions": true,
+  "scientific_content_changed": false,
+  "table_cell_data_changed": false,
+  "figures_changed": false,
+  "figure_captions_changed": false,
+  "labels_changed": false,
+  "bibliography_changed": false,
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "acc447f50904382e5069e8e8d9c705fc057a96c3a1efc2dd5384f0be491a7e8d",
+    "bytes": 57611653,
+    "pages": 152,
+    "format": "A4",
+    "font": "Times New Roman embedded"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "c08c711d7ac3c9ca33614c26bfb563f26e8e82cd0678792cb0f11ab3a1ba430c",
+    "bytes": 75317977,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "108I5cQgY_aDKL2pG5X_J71-7_0W12WML",
+    "zip": "1S-ty4o1HrlnG-CnlK__CBgoAijFRL1UE",
+    "checkpoint": "1VC7Ct2Y_q5iGRXjFox-bkTe_c6R5-4qW",
+    "checklist": "1b3U-CAo9siP9d9ToIv78jhWa_sg-xndO"
+  },
+  "archive_post": {
+    "pdf": "1ghI-SZ2xkqYh3koyrH05Ob4KxI3H7yRi",
+    "zip": "1PVndpBwkp1iRto4ZT4bogKDHx0sfP7R3",
+    "checkpoint": "PENDING",
+    "checklist": "PENDING"
+  },
+  "qa_report_drive_id": "1SWNjGduh9pCHg6E1bPyqqWoGRkg3PtSp",
+  "source_diff_drive_id": "1ooTUOLDkc6lLdAfTJql2fVLksWBkZ-6u",
+  "review_pdf_drive_id": "1ZrqdYg1VrH35kXk4DxHfR1-Ou2ICLQf7",
+  "metrics_drive_id": "1tHSTzdOq83hOBkO-OQh0-f4iatVa5rXK",
+  "source_transfer_drive_ids": [
+    "1KBPB06PSDNG3hbK6BEIsdrWltkhtuwUE",
+    "1qwndHUUaVvgCaTosO95Pu1ZooyjKljhu",
+    "1z2oOEiFTj_ay6lCRkKbZBBGG9O-LcA8f"
+  ],
+  "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/216",
+  "source_release_pr": "PENDING",
+  "layout_qa": {
+    "requested_body_type": "12pt Times New Roman justified, one-and-a-half spacing",
+    "checked_printed_pages": [
+      36,
+      42,
+      43,
+      44,
+      45,
+      46,
+      60,
+      63,
+      64,
+      67,
+      68,
+      69,
+      70,
+      71,
+      78,
+      96
+    ],
+    "two_vertical_figure_pages_printed": [
+      31,
+      32,
+      33
+    ],
+    "two_images_and_captions_per_page": true,
+    "figure_3_4_original_panel_count": 5,
+    "figure_3_5_original_count": 1,
+    "table_max_width_protection": true,
+    "table_4_5_explanation_normal_body": true,
+    "table_4_23_source_present": false,
+    "actual_final_summary_table": "4.22",
+    "scientific_assets_unchanged": true,
+    "table_cells_exact_match_vs_seq051": true,
+    "figure_paths_caption_labels_exact_match_vs_seq051": true,
+    "overfull_hbox": 0,
+    "overfull_vbox": 0,
+    "unresolved_crossrefs": 0
+  },
+  "baseline_reconciliation": {
+    "file": "manuscript/cp112_additions/ch4_pp_hinge.tex",
+    "reason": "SEQ051 GitHub parent file out of sync with already-approved SEQ051 Drive ZIP: older figure file paths and explanation",
+    "baseline_restoration_commit": "76647f10cc6bce753ba0410aa200c205fd241d07",
+    "restored_verbatim_before_seq052_edits": true,
+    "scientific_content_changed_relative_drive_seq051": false
+  },
+  "pu_full_compliance": "NOT_CERTIFIED; pre-existing user-requested top margin 1.33in remains",
+  "etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
+  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING"
+}
