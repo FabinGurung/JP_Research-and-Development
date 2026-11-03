@@ -292,6 +292,18 @@
           "main_sha_at_reservation": "PARENT_SEQ049_PROTECTED_STACK",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000032: 4 immutable SEQ049 PRE files preserved. Four local frontmatter macros add exactly two 14pt starred vertical spaces before Declaration (iii), Recommendation (iv), Certificate (v), Acknowledgements (vi) headings. Recommendation adds user-supplied Er. Devendra Man Palikhey organization School of Engineering, Pokhara University. Exactly 2 source files expected changed. Preserve all other scientific content, typography, PU shared style. Full PDF build/QA required before release."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 51,
+          "branch": "thesis/saugat-paneru/latex/seq051-prelim-after-spacing-navlists",
+          "status": "RESERVED",
+          "request_key": "saugat:seq051-20261103",
+          "created_at_utc": "2026-11-03T07:20:00Z",
+          "main_sha_at_reservation": "SEQ050_PROTECTED_STACK_PENDING",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000033: immutable SEQ050 PRE PDF/ZIP/checkpoint/checklist before edits. Four Roman iii-vi headings retain approved before spacing and gain two exact 14pt after-title gaps; no changes to preliminary content. Printed xix List of Equations and List of Appendices formatted in line with approved Saugat List of Tables/Figures; missing List of Equations TOC entry added. No scientific contents, numbers, figures, tables, equation values or shared style changes."
         }
       ]
     },
