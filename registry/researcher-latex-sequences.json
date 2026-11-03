@@ -316,6 +316,18 @@
           "main_sha_at_reservation": "PARENT_SEQ051_PROTECTED_STACK",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 event 000034: immutable SEQ051 PRE PDF/ZIP/checkpoint/checklist saved. Saugat scoped SEQ052 formatting only: explanatory figure/table text 12pt justified, two vertical floor plans per page (3 paired pages with existing Fig 3.4/3.5), adaptive table widths, Table 4.5 note becomes normal body. Existing Table 4.22 on printed page 98; no 4.23. 152 A4 pages with original science preserved and zero LaTeX overfull boxes; exactly 9 modified source files of 422; parent GitHub main remains protected predecessor stack."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 53,
+          "branch": "thesis/saugat-paneru/latex/seq053-table-full-width-a7-000035",
+          "status": "RESERVED",
+          "request_key": "saugat:seq053-20261103",
+          "created_at_utc": "2026-11-03T10:53:47.829Z",
+          "main_sha_at_reservation": "PARENT_SEQ052_PROTECTED_STACK",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000035: four immutable SEQ052 PRE Drive snapshots verified before production update. SEQ053 formats table widths only: all 33 tables audited, 22 widened, 11 maintained; 152 A4 pages with exact Times New Roman; zero overfull boxes or unresolved references. Seven research-only .tex members modified, 415/422 source members byte-identical; original numerical data, captions, labels, citations, figure assets and other manuscript content unchanged. GitHub predecessor chain remains protected and unmerged."
         }
       ]
     },
