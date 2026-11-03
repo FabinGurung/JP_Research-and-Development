@@ -280,6 +280,18 @@
           "main_sha_at_reservation": "c2697926fe1499d523f80193564bdcbe4ea188f7",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "SEQ076-based three-scoped formatting corrections only: remove note under Table 3.2; simplify rules for Tables 3.7/3.8; render only Figure A2.1 page A3 landscape, preserve all content and original live IDs; numbered PRE 000020 archived."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 78,
+          "branch": "thesis/nabin-bista/latex/seq078-layout-density-margin-a3",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq078",
+          "created_at_utc": "2026-11-03T05:21:34.334Z",
+          "main_sha_at_reservation": "8c3ae051d9f6f8cfc7481f95ccacc64b1f04d5ed",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "Formatting only: keep Table 3.2 intact on numbered page 22; reduce unnecessary float whitespace and allow 2 figures where legible; user-directed Nabin-only top 1.33in override (PU 2.5cm conflict to be recorded); enlarge the existing lone A3 Figure A2.1 within safe margin. Preserve scientific values; A7 PRE 000021 created."
         }
       ],
       "observed_out_of_band_versions": [
