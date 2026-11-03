@@ -262,12 +262,15 @@
           "slug": "nabin-bista",
           "sequence": 76,
           "branch": "thesis/nabin-bista/latex/seq076-methodology-foundation-format",
-          "status": "RESERVED",
+          "status": "RELEASED",
           "request_key": "manual:20261103-nabin-seq076",
           "created_at_utc": "2026-11-03T02:25:10.785Z",
           "main_sha_at_reservation": "8e03f253616596dfc9b9a3893fc210f6c502da84",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
-          "note": "User-authorized SEQ075-based flowchart, footer, foundation/SSI equations and inputs, conclusion typography and TOC revision. Source/PDF staged and PRE preserved. Reservation effective only after PR merge; no retroactive allocation."
+          "note": "Reservation PR #172 merged, source PR #173 and release-record PR #175 merged, A7 event 000019 PRE/POST provider-downloaded SHA256 verified, complete PDF/ZIP published in unchanged permanent Drive IDs. No independent scholarly approval claimed.",
+          "release_merge_sha": "39c0d39649643a0f90d237be2ec9c41676b7a4fb",
+          "drive_pdf_sha256": "1363cb673fa77d4ac2ded2aac03e2b46e64dd3c4e539cda48e85df832126840f",
+          "drive_zip_sha256": "61917ffb649b4fb473c32bb05ccec3ed7125037b532183dad181435f9d6396fb"
         }
       ],
       "observed_out_of_band_versions": [
