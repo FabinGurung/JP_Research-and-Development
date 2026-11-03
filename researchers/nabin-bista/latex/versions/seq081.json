@@ -6,7 +6,7 @@
   "release": "LATEX_SEQ081",
   "parent": "LATEX_SEQ080",
   "branch": "thesis/nabin-bista/latex/seq081-november-2026-submission-date",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED__GIT_RECORD_PR_PENDING",
   "scope": [
     "Change central date macro September, 2026 to November, 2026, displayed only on first two title pages",
     "Correct non-rendered date comment in 02_titlepage.tex"
@@ -43,7 +43,18 @@
   },
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
-  "promoted_to_current": false,
+  "promoted_to_current": true,
   "git_release_merged": false,
-  "style_path": "controls/latex/template/pumlsc-shared.sty"
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "post_archive_created": true,
+  "post_pdf_id": "1T0QRLlCggr6Eb5nerc9mFaTBNGwNkUeP",
+  "post_source_id": "1RnFcDKLcedA2xc3yTFxja_F88BCh6mrn",
+  "post_audit_id": "19iCh9xAaKDFUAOHHBtqHVD-L-o-U-RQ8RF_p263QmHY",
+  "permanent_pdf_sha256": "dde077e38feecd57fdccec41ae26de09d2bd17ad53bb0332d1d557552b326ccd",
+  "permanent_source_zip_sha256": "74141739432a0a2150d18f0e3566432698184705ce3fd7aa495f3c8fd37395ce",
+  "drive_live_sha256_readback": true,
+  "source_pr": 208,
+  "source_merge_commit": "b9d3fae5f287902a01ce4896fc4fa2f8d4e9f8ce",
+  "release_record_pr_pending": true,
+  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ081_A7_000024_NOVEMBER_DATE_20261103.json"
 }
