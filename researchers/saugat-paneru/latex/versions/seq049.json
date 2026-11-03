@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 49,
+  "parent_sequence": 48,
+  "source_parent_sequence": 48,
+  "branch": "thesis/saugat-paneru/latex/seq049-title-page-footer-spacing",
+  "status": "QA_CANDIDATE",
+  "drive_production_status": "CURRENT_SAME_STABLE_IDS_VERIFIED",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "a7_version_event": "000031",
+  "source_zip_member_count": 422,
+  "unchanged_zip_members": 420,
+  "modified_scoped_paths": [
+    "manuscript/main.tex",
+    "extensions/saugat_project_adapter.sty"
+  ],
+  "no_source_deletions": true,
+  "scientific_content_changed": false,
+  "pdf_pages_text_all_equal_to_seq048": true,
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "8828f098728b5caf6561eedad2d37873ae89313ff843a89fa88b8dc796d00e5b",
+    "bytes": 48485822,
+    "pages": 151,
+    "format": "A4",
+    "font": "Times New Roman embedded"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "05fae054c960781c5f170b5d928fe862356a5afa7786092093b99118e0ce43d8",
+    "bytes": 75317162,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "17dWI2Sh5P_O7fK41wmvZjiWhO_MS4gps",
+    "zip": "1sf8CQM-BlGXyCC1SeZ7IIvg1idBQv2Jw",
+    "checkpoint": "17kJaq6Sfiqq49AaHhJVZSbVpmuxMQDLO",
+    "checklist": "1FwzmFjqbEzOHb2j0oiQdlQAr2yyAKVvN"
+  },
+  "archive_post": {
+    "pdf": "18tpJ59fza4Mbdi9jtwk_JPrs4HYBfob1",
+    "zip": "1I_Xt9dABnt_Xera_gddGsKkcNzHr4J2D",
+    "checkpoint": "1fq7Sb72GDycZNXtMoFqW3vAx7r-ERLLM",
+    "checklist": "1c2c6CP8zxazedYzHfxHRGeVwfy23l9iJ"
+  },
+  "source_diff_drive_id": "1OtjmUMBhuhQX7dlKyzVO6NsRj4aqWY1N",
+  "qa_report_drive_id": "10DV-iE6zwDnvgUFtpqGzA6xUHzpFDV_D",
+  "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/198",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/199",
+  "layout_qa": {
+    "scope": "COVER_AND_INNER_TITLE_ONLY",
+    "student_name_shift_up_pts": 20.8,
+    "university_block_before_spacing_pt": 28,
+    "university_block_after_spacing_pt": 28,
+    "date_footer_top_y_pts": 745.99,
+    "student_page1_top_y_pts": 544.57,
+    "student_page2_top_y_pts": 544.43,
+    "all_151_pdf_page_text_equal_to_seq048": true,
+    "body_sampled_pixels_exact_match": true,
+    "overfull_vbox_warnings": 3,
+    "overfull_hbox_warnings": 0,
+    "unresolved_references": 0
+  },
+  "pu_full_compliance": "NOT_CERTIFIED; preexisting user-requested top margin 1.33in remains",
+  "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
+  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING_174_178_185_187_193_194_198",
+  "source_review_ci": "PASS_LaTeX_researcher_ownership_and_shared_template_inheritance"
+}

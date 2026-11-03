@@ -36,13 +36,15 @@
 \thispagestyle{empty}\begin{center}
 {\fontsize{16}{20}\selectfont Thesis for the Degree of \PUDegreeName\par}\vspace{14pt}
 {\bfseries\fontsize{20}{24}\selectfont \PUThesisTitle\par}\vspace{30pt}
-\PULogo\par\vfill
+\PULogo\par\vfill\vspace*{60pt}
 {\bfseries\fontsize{16}{20}\selectfont \PUStudentName\par}
 \PURegistrationLine
-{\bfseries\fontsize{16}{20}\selectfont \PUSchool\par\PUFaculty\par\PUUniversity, \PUUniversityLocation\par}\vspace{14pt}
+% SEQ049 A7 000031: fixed 28pt above and below university block; date at foot.
+\vspace*{28pt}
+{\bfseries\fontsize{16}{20}\selectfont \PUSchool\par\PUFaculty\par\PUUniversity, \PUUniversityLocation\par}
+\vspace*{28pt}
+\vfill
 {\bfseries\fontsize{16}{20}\selectfont \PUSubmissionDate\par}
-% SEQ048 A7 000030: move the lower block upward by two blank lines.
-\vspace*{50pt}
 \end{center}}
 % The approved CP114 title-page override lives in main.tex, sourced unchanged.
 \providecommand{\PUTitlePage}{}
