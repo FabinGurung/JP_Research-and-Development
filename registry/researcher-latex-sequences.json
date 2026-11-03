@@ -304,6 +304,18 @@
           "main_sha_at_reservation": "b5eb7a4997d703945231cd8e25f3252dcf3440cc",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Strict SEQ078 baseline, placement-only: Figure 4.29 directly below Figure 4.28 on printed page 53; Table 4.9 top of printed page 54. No scientific data, other text, figures, shared template or third-party researcher changes. A7 000022 PRE archived."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 80,
+          "branch": "thesis/nabin-bista/latex/seq080-title-figure32-comparative-results",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq080",
+          "created_at_utc": "2026-11-03T07:02:43.860Z",
+          "main_sha_at_reservation": "1ada9c4fe72adc1630c1545720c284dfcc9f4e74",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "Based on verified SEQ079: reposition and describe Fig3.2 on printed p15; replace Section4.9 with source-grounded numerical benchmark comparison of Dhakal/Chaulagain and Poudel/Chaulagain versus Nabin six-block results with limitations and chart if supportable; adjust only first two title-page spacing: name up 14pt, institutional 28pt before/after, date bottom. Preserve all unrelated scientific results; PRE A7 000023."
         }
       ],
       "observed_out_of_band_versions": [
