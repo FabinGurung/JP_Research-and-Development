@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 124,
+  "next_number": 125,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -564,6 +564,33 @@
       "global_propagation": "SHARED_ON_NEXT_RESEARCHER_BUILD__RENDER_PARITY_REQUIRED",
       "regression_scope": "Repository inherited style/source gates and next full-font owner PDF QA",
       "scientific_boundary": "NO_SCIENTIFIC_DATA_CHANGE__ONLY_GENERIC_TOC_SPACING"
+    },
+    {
+      "change_id": "RD-LTX-CHG-124",
+      "researcher_id": "RSH-003",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Document Nabin LATEX_SEQ078 user-requested 1.33in top margin (official PU-FMT-003 registered source specifies 2.5cm), compact floats/2-up figure placement, and Table 3.2 unchanged-values single-page fit. No global shared-style mutation or claim of PU approval. The local delta lives in those four manuscript files, not a .sty extension.",
+      "source_paths": [
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/main.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/23_methodology.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/24_resultanddiscussion.tex",
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/29_additional_researcher_data_seq050.tex"
+      ],
+      "before_after_qa_evidence": "Local full XeLaTeX/BibTeX8 complete source rebuild: 113 pages (112 A4 + sole A3 landscape), 88/88 exact Figure caption IDs retained, Table 3.2 all 24 rows and 6 slab thickness entries within page22 with 12pt text, 35 vs 27 pages with >=2 figures, A3 Figure A2.1 reflowed to printed page77. 113/113 extracted page texts reproduced on fresh source ZIP build. Four inherited text sources changed; 566/570 prior source entries byte-identical. Verified no overfull/undefined errors; no scientific data changes.",
+      "pu_rule_references": [
+        "PU-FMT-003",
+        "PU-FMT-006",
+        "PU-FMT-031",
+        "PU-FMT-032",
+        "PU-FMT-036",
+        "PU-FMT-040",
+        "PU-FMT-121"
+      ],
+      "disposition": "ACCEPTED_LOCAL",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "NONE__REQUIRES_SEPARATE_GLOBAL_PROPOSAL_AND_CROSS_RESEARCHER_QA",
+      "scientific_boundary": "ONLY_NABIN_FORMAT__NO_SCIENTIFIC_VALUES_OR_SHARED_TEMPLATE_CHANGE__OFFICIAL_TOP_MARGIN_PARITY_HELD"
     }
   ],
   "required_fields": [
