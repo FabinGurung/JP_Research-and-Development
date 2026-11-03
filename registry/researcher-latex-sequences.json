@@ -249,13 +249,13 @@
           "researcher_id": "RSH-002",
           "slug": "saugat-paneru",
           "sequence": 47,
-          "branch": "thesis/saugat-paneru/latex/seq047-toc-margin-acknowledgements",
+          "branch": "thesis/saugat-paneru/latex/seq047-toc-margin-acknowledgements-v2",
           "status": "RESERVED",
           "request_key": "saugat:seq047-20261103",
           "created_at_utc": "2026-11-03T05:15:00Z",
           "main_sha_at_reservation": "PARENT_SEQ046_STAGED_BRANCH",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
-          "note": "A7 000029 PRE four copies before edits; source changes only frontmatter/acknowledgements.tex and researcher-only saugat_project_adapter.sty for approved 12/17pt TOC spacing, user 1.33in top margin (explicit deviation from PU FST 2019 2.5cm), exact provided acknowledgment. 151p compiled embedded Times New Roman, 422 members 420 unchanged. Pu guideline not fully certified; 144 audit incomplete. No scientific edits or ETABS replay."
+          "note": "A7 000029 PRE four copies before edits; source changes only frontmatter/acknowledgements.tex and researcher-only saugat_project_adapter.sty for approved 12/17pt TOC spacing, user 1.33in top margin (explicit deviation from PU FST 2019 2.5cm), exact provided acknowledgment. 151p compiled embedded Times New Roman, 422 members 420 unchanged. Pu guideline not fully certified; 144 audit incomplete. No scientific edits or ETABS replay.; final source branch identity thesis/saugat-paneru/latex/seq047-toc-margin-acknowledgements-v2 (replaces failed draft PRs #183/#186)."
         }
       ]
     },
