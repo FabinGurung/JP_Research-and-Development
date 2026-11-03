@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 54,
+  "parent_sequence": 53,
+  "a7_version_event": "000036",
+  "branch": "thesis/saugat-paneru/latex/seq054-table-center-figures-a7-000036",
+  "status": "STAGED_NOT_RELEASED__SEQ053_GIT_SOURCE_SYNC_PENDING",
+  "drive_production_status": "CURRENT_SAME_ID_PROVIDER_HASH_READBACK_PASS",
+  "scientific_content_changed": false,
+  "table_cells_changed": false,
+  "model_data_changed": false,
+  "original_figure_assets_changed": false,
+  "shared_template_changed": false,
+  "source_zip_member_count": 448,
+  "parent_source_members": 422,
+  "original_members_unchanged": 409,
+  "modified_scoped_tex_count": 13,
+  "additive_title_cropped_assets": 26,
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "name": "Saugat_SEQ054_148p_TimesNewRoman_CURRENT.pdf",
+    "pages": 148,
+    "sha256": "c6aadb4ed42e7a03cfe02a4f6980debda3ae9925c1421581801d650333da9663",
+    "bytes": 48193993,
+    "format": "A4"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "name": "Saugat_SEQ054_COMPLETE_LATEX_CURRENT.zip",
+    "members": 448,
+    "sha256": "614d7460366e0cc99cbdc36df7d5556548f367b99f456f67ac11802df8c49308",
+    "bytes": 79245323,
+    "crc": "PASS"
+  },
+  "checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+  "checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
+  "qa_pdf_drive_id": "1Z5YFnOd7GWSkaUuMMKVuvKcPAdR9EHn6",
+  "archive_pre": {
+    "pdf": "1Yumb_FthCN893wiu-fkxWPGUyyFzFlpl",
+    "zip": "1Kd3oWx4MnSNT14P7hPbo1tbmCQ7sq5FQ",
+    "checkpoint": "1oNvcPC6zBhpZA_AlIubETtJWLGaEfGEs",
+    "checklist": "1jU_38FHoQfTBLv2BnryCYUYqcaITz3Jy"
+  },
+  "archive_post": {
+    "pdf": "1OFwZjRFxIFOcS2Zdc5ZdBeAboCIXVSSG",
+    "zip": "1bhQUY8xuOtAK6UoKizMkq2JqpighWaQZ",
+    "checkpoint": "1_JnZWFGOVW-UtVj-K-njMTMNksyN18LR",
+    "checklist": "1p9mK4z3G0CmhWKeMKWjgeLZKDsyoURHS"
+  },
+  "format_scope": "33 table column alignments; chart heading crop (4.1a-g, 4.2a-d, 4.3, 4.9-4.22); compact multi-panel captions; equalized Fig3.4/3.5 widths; final appendix paragraph on last image page",
+  "QA": {
+    "table_cells_exact_vs_parent": true,
+    "all_422_parent_files_present": true,
+    "title_crops_preserve_pixels_below_band": true,
+    "zero_overfull_boxes": true,
+    "zero_unresolved_refs": true,
+    "no_font_files_in_zip": true
+  },
+  "git_source_status": "NOT_SYNCHRONIZED__EXACT_13_FILE_PATCH_AND_26_CROPS_IN_VERIFIED_DRIVE_ZIP",
+  "git_parent_source_status": "SEQ053_NOT_SYNCHRONIZED",
+  "protected_predecessor_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/217",
+  "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/218",
+  "do_not_merge_or_tag_before_source_reconciliation": true,
+  "full_pu_compliance": "NOT_CERTIFIED",
+  "etabs_replay": "NOT_PERFORMED"
+}
