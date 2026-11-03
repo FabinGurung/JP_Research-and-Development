@@ -99,7 +99,7 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "99f989921791f146c265b6e43b67bc94cd55bd87",
     "source_branch": "thesis/saugat-paneru/latex/seq047-toc-margin-acknowledgements-v2",
-    "source_pr": "PENDING_FINAL_SOURCE_PR",
+    "source_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/187",
     "source_merged_commit": null,
     "source_main": "main",
     "promotion_branch": "thesis/saugat-paneru/latex/seq047-toc-margin-acknowledgements-v2",
@@ -110,10 +110,11 @@
     "promotion_pr": null,
     "promotion_merge_sha": "bbd9386cb31f010b98d94fbc0bb2d11546e085da",
     "live_pointer_readback": "PASS_VERIFIED_DRIVE_SAME_ID_AND_GIT_PR167_MERGED",
-    "source_merged_sha": null
+    "source_merged_sha": null,
+    "source_review_ci": "LATEX_OWNERSHIP_PASS_41584336538"
   },
   "checkpoint_resolution": {
-    "status": "SEQ047_A7_000029_PRE_POST_PDF_SOURCE_COMPLETE__GITHUB_STACKED_PR_WAIT_SEQ046_PROTECTED_MERGE",
+    "status": "A7_000029_PRE_POST_ARCHIVED__DRIVE_CURRENT__GIT_STACKED_PRS_174_178_185_187_PENDING_MAIN",
     "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
     "current_checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
     "pre_checkpoint_archive_id": "1E2Axvd9Ri5a0hQed8eyO3_W0kfwgEJP0",
