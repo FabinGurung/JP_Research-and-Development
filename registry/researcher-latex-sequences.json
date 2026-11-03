@@ -280,6 +280,18 @@
           "main_sha_at_reservation": "PARENT_SEQ048_PROTECTED_STACK",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "A7 000031 four immutable SEQ048 PRE backups before edits. SEQ049 strictly first/second-page placement: student and registration one 20pt line up, fixed 28pt before/after school+faculty+university group, November 2026 anchored at bottom text area. Entire research content unchanged; exact two researcher-scoped LaTeX sources modified among 422; full 151p Times New Roman PDF compiled and text parity verified. Same persistent four Drive IDs; GitHub main merge protection pending predecessor chain."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 50,
+          "branch": "thesis/saugat-paneru/latex/seq050-prelim-headings-affiliation",
+          "status": "RESERVED",
+          "request_key": "saugat:seq050-20261103",
+          "created_at_utc": "2026-11-03T07:14:00Z",
+          "main_sha_at_reservation": "PARENT_SEQ049_PROTECTED_STACK",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000032: 4 immutable SEQ049 PRE files preserved. Four local frontmatter macros add exactly two 14pt starred vertical spaces before Declaration (iii), Recommendation (iv), Certificate (v), Acknowledgements (vi) headings. Recommendation adds user-supplied Er. Devendra Man Palikhey organization School of Engineering, Pokhara University. Exactly 2 source files expected changed. Preserve all other scientific content, typography, PU shared style. Full PDF build/QA required before release."
         }
       ]
     },
