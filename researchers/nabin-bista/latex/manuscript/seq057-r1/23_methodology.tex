@@ -54,8 +54,7 @@ The case study is the existing Infectious and Communicable Disease Hospital in M
 \fontsize{11}{13}\selectfont
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.16}
-\begin{adjustbox}{max width=\linewidth,center}
-\begin{tabular}{@{}>{\centering\arraybackslash}p{3.0cm}>{\centering\arraybackslash}p{5.5cm}>{\centering\arraybackslash}p{6.0cm}@{}}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{2.8cm}>{\centering\arraybackslash}p{5.0cm}>{\centering\arraybackslash}p{\dimexpr\linewidth-7.8cm-16pt\relax}@{}}
 \toprule
 Requirement & NBC 206:2024 Provision & Proposed Model \\
 \midrule
@@ -69,7 +68,6 @@ Natural ventilation & Opening $\geq 1/6$ of room area & Considered \\
 Hospital services & MoHP requirements & Functional spaces provided \\
 \bottomrule
 \end{tabular}
-\end{adjustbox}
 \end{table}
 \FloatBarrier
 
@@ -136,7 +134,7 @@ Each block was evaluated as a separate structural model, consistent with the bui
 \begingroup
 \setstretch{1.0}\fontsize{11}{13}\selectfont\setlength{\LTpre}{2pt}\setlength{\LTpost}{2pt}
 \renewcommand{\arraystretch}{0.92}
-\begin{longtable}{@{}>{\centering\arraybackslash}p{1.0cm}>{\centering\arraybackslash}p{3.0cm}>{\centering\arraybackslash}p{10.0cm}@{}}
+\begin{longtable}{@{}>{\centering\arraybackslash}p{1.0cm}>{\centering\arraybackslash}p{3.0cm}>{\centering\arraybackslash}p{\dimexpr\linewidth-4cm-4\tabcolsep\relax}@{}}
 \caption{Principal structural member dimensions of the six hospital blocks}\label{tab:member_dimensions_methodology}\\
 \toprule
 Block & Member type & Dimensions (mm) \\
@@ -228,8 +226,7 @@ The structural models adopt an importance factor of 1.5, a damping ratio of 5 pe
 \caption{General seismic details for the representative hospital assessment}
 \label{tab:seq068_general_seismic}
 \renewcommand{\arraystretch}{1.0}
-\begin{adjustbox}{max width=\linewidth,center}
-\begin{tabular}{@{}>{\centering\arraybackslash}p{6.4cm}>{\centering\arraybackslash}p{6.3cm}@{}}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{7.0cm}>{\centering\arraybackslash}p{\dimexpr\linewidth-7cm-8pt\relax}@{}}
 \toprule
 Parameter & Details \\
 \midrule
@@ -238,7 +235,6 @@ Seismic zone factor, $Z$ & 0.35 (reference design criterion) \\
 Damping ratio & 5\% \\
 \bottomrule
 \end{tabular}
-\end{adjustbox}
 \end{table}
 \noindent The seismic design basis is NBC 105:2025 \cite{nbc1052025}. The table presents the reported importance factor, damping and a reference seismic zone factor. The response calculations continue to use the seismic definitions assigned in the original ETABS analysis cases; the listed $Z$ value is not substituted for those case inputs.\par\FloatBarrier
  The gravity-load assignments for the model are summarized in Table~\ref{tab:gravity_load_inputs}. The imposed floor loading differs according to the functional use of the spaces and the relevant structural element.
@@ -249,8 +245,7 @@ Damping ratio & 5\% \\
 \caption{Gravity load inputs assigned in the structural analysis}
 \label{tab:gravity_load_inputs}
 \renewcommand{\arraystretch}{1.0}
-\begin{adjustbox}{max width=\linewidth,center}
-\begin{tabular}{@{}>{\centering\arraybackslash}p{5.5cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3.3cm}@{}}
+\begin{tabular}{@{}>{\centering\arraybackslash}p{5.5cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{\dimexpr\linewidth-9.5cm-16pt\relax}@{}}
 \toprule
 Load item & Assigned load & Application \\
 \midrule
@@ -265,7 +260,6 @@ Staircase and ramp floor live load & $5\ \mathrm{kN/m^{2}}$ & Stair/ramp slab \\
 Roof live load & $0.75\ \mathrm{kN/m^{2}}$ & Roof slab \\
 \bottomrule
 \end{tabular}
-\end{adjustbox}
 \end{table}
 \FloatBarrier
 
@@ -281,8 +275,7 @@ The study considers three flexible-base soil conditions, designated hard, medium
 \label{tab:soil_property_inputs}
 \fontsize{11}{13}\selectfont
 \setlength{\tabcolsep}{2pt}
-\begin{adjustbox}{max width=\linewidth,center}
-\begin{tabular}{@{}cccccccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccccccc@{}}
 \toprule
 \shortstack{Soil\\case} & \shortstack{NBC\\class} & \shortstack{NBC $V_{s,30}$\\(m/s)} & \shortstack{Project $V_{s,30}$\\(m/s)} & \shortstack{$E$\\(MPa)} & $\nu$ & \shortstack{$G$\\(MPa)} & \shortstack{SBC\\(kPa)} \\
 \midrule
@@ -290,8 +283,7 @@ Hard & B & $350<V_{s,30}\leq800$ & 575 & 1550 & 0.30 & 595 & 400 \\
 Medium & C & $150<V_{s,30}\leq350$ & 250 & 300 & 0.35 & 113 & 200 \\
 Soft & D & $V_{s,30}\leq150$ & 125 & 80 & 0.40 & 28 & 100 \\
 \bottomrule
-\end{tabular}
-\end{adjustbox}
+\end{tabular*}
 \end{table}
 \FloatBarrier
 
@@ -337,8 +329,7 @@ The square footing dimensions adopted in the foundation-spring geometry are list
 \centering
 \caption{Foundation dimensions adopted for the six structural blocks}
 \label{tab:footing_dimensions}
-\begin{adjustbox}{max width=\linewidth,center}
-\begin{tabular}{@{}cccc@{}}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cccc@{}}
 \toprule
 Structural block & $L$ (m) & $B$ (m) & Foundation size (m $\times$ m) \\
 \midrule
@@ -349,8 +340,7 @@ Block 4 & 1.25 & 1.25 & $2.5\times2.5$ \\
 Block 5 & 1.50 & 1.50 & $3.0\times3.0$ \\
 Block 6 & 1.50 & 1.50 & $3.0\times3.0$ \\
 \bottomrule
-\end{tabular}
-\end{adjustbox}
+\end{tabular*}
 \end{table}
 \FloatBarrier
 
@@ -396,7 +386,7 @@ The foundation response was evaluated using the stated support conditions and th
 \setstretch{1.0}\fontsize{11}{13}\selectfont\setlength{\tabcolsep}{4pt}
 \captionof{table}{Foundation spring inputs by structural block and support condition}
 \label{tab:spring_stiffness_methodology}\centering\renewcommand{\arraystretch}{0.82}
-\begin{tabular}{ccccc}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc@{}}
 \toprule
 Block & Soil & $K_x$ & $K_y$ & $K_z$ \\ \midrule
 1 & Hard & 3392594.941 & 3392594.941 & 6753250.000 \\
@@ -418,9 +408,9 @@ Block & Soil & $K_x$ & $K_y$ & $K_z$ \\ \midrule
 6 & Medium & 568999.226 & 568999.226 & 1183892.308 \\
 6 & Soft & 145396.926 & 145396.926 & 317800.000 \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \par\smallskip
-\begin{tabular}{ccccc}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccccc@{}}
 \toprule
 Block & Soil & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \\ \midrule
 1 & Hard & 16392119.903 & 16957365.417 & 38025034.110 \\
@@ -442,7 +432,7 @@ Block & Soil & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \\ \midrule
 6 & Medium & 2111256.085 & 2184058.019 & 4897510.824 \\
 6 & Soft & 566738.359 & 586281.061 & 1314671.047 \\
 \bottomrule
-\end{tabular}
+\end{tabular*}
 \par\smallskip\fontsize{11}{13}\selectfont Translational coefficients $K_x$, $K_y$ and $K_z$ are in kN/m; rocking and torsional coefficients $K_{\theta x}$, $K_{\theta y}$ and $K_t$ are in kN\,m/rad. These are the translational, rocking and torsional spring inputs assigned in ETABS.
 \end{minipage}\par
 \FloatBarrier
@@ -467,16 +457,14 @@ The adopted inter-storey drift ratio (ISDR) performance classification is shown 
 \setstretch{1.0}\fontsize{11}{13}\selectfont\setlength{\tabcolsep}{4pt}
 \caption{Inter-storey drift screening intervals for seismic performance levels}
 \label{tab:legacy_isdr_performance_bands}\centering\renewcommand{\arraystretch}{0.90}
-\begin{adjustbox}{max width=\linewidth,center}
-\begin{tabular}{cc}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}cc@{}}
 \toprule
 Performance level & Maximum ISDR \\ \midrule
 Immediate Occupancy (IO) & $\leq 1.0\%$ \\
 Life Safety (LS) & $>1.0\%$ to $\leq 2.0\%$ \\
 Collapse Prevention (CP) & $>2.0\%$ to $\leq 4.0\%$ \\
 Collapse / Failure (beyond CP) & $>4.0\%$ \\ \bottomrule
-\end{tabular}
-\end{adjustbox}
+\end{tabular*}
 \end{table}
 
 The ISDR bands are descriptive demand categories. They do not replace NBC design-drift checks or component deformation limits. The response-spectrum values must first be established as elastic or code-amplified quantities before comparison with a performance objective. The fragility analysis data tables use different thresholds of 0.5\%, 1\%, 2\% and 4\%; their labels and numerical assumptions are documented separately and are not silently replaced by this screening table.
