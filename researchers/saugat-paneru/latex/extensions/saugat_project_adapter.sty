@@ -29,7 +29,9 @@
 % Local, source-verified student and supervisor metadata is in project_config.tex.
 % University logo size comes from the shared PU template; image stays local.
 \newcommand{\PULogo}{\PUScaledCoverLogo{\PULogoFile}}
-\newcommand{\PURegistrationLine}{\par{\bfseries\fontsize{12}{18}\selectfont \PURegistrationNumber}\par\vspace{14pt}}
+% SEQ048 A7 000030: remove only the 14pt registration-to-school blank gap on
+% the two title pages; the existing type treatment and text are unchanged.
+\newcommand{\PURegistrationLine}{\par{\bfseries\fontsize{12}{18}\selectfont \PURegistrationNumber}\par}
 \newcommand{\PUCoverPage}{%
 \thispagestyle{empty}\begin{center}
 {\fontsize{16}{20}\selectfont Thesis for the Degree of \PUDegreeName\par}\vspace{14pt}
@@ -39,6 +41,8 @@
 \PURegistrationLine
 {\bfseries\fontsize{16}{20}\selectfont \PUSchool\par\PUFaculty\par\PUUniversity, \PUUniversityLocation\par}\vspace{14pt}
 {\bfseries\fontsize{16}{20}\selectfont \PUSubmissionDate\par}
+% SEQ048 A7 000030: move the lower block upward by two blank lines.
+\vspace*{50pt}
 \end{center}}
 % The approved CP114 title-page override lives in main.tex, sourced unchanged.
 \providecommand{\PUTitlePage}{}

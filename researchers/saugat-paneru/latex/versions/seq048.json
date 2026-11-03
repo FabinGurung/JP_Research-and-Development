@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 48,
+  "parent_sequence": 47,
+  "source_parent_sequence": 47,
+  "branch": "thesis/saugat-paneru/latex/seq048-cover-title-spacing",
+  "status": "QA_CANDIDATE",
+  "drive_production_status": "CURRENT_SAME_STABLE_IDS_PROVIDER_READBACK_VERIFIED",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "a7_version_event": "000030",
+  "source_zip_member_count": 422,
+  "unchanged_zip_members": 420,
+  "modified_scoped_paths": [
+    "manuscript/main.tex",
+    "extensions/saugat_project_adapter.sty"
+  ],
+  "no_source_deletions": true,
+  "scientific_content_changed": false,
+  "page_text_changed": false,
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "5d2350a0a6afb301cc5bf56e63d30b53faab32464dda17c0b64f75293f4d529c",
+    "bytes": 48485826,
+    "pages": 151,
+    "format": "A4",
+    "font": "Times New Roman embedded"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "ecf78c253ca2948747c2019ac30e727a2bb42ff3f36d6482dbaa4058ad6c4852",
+    "bytes": 75317199,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "1EOHbbM6UjLLlpgxstkohI1fZfbrBl_iW",
+    "zip": "1mUTLs3lqMer1_eXJguXMc6ErSz1EXG_1",
+    "checkpoint": "16P_9THA9Hhm_sp74XAqJqp5DrMCsa9lj",
+    "checklist": "1QVQUKyZotUSb2mBDZ3CzT66p197qoxFN"
+  },
+  "archive_post": {
+    "pdf": "1liSfqRnHnWQHTZ9UCUIcVUpJFjMWLX_O",
+    "zip": "1U2t6pFvQb9eAM4_TaksMl0Cgbso75oz8",
+    "checkpoint": "1LoLFjVopt6J-d2ooalo_IqqlTQ64qjSA",
+    "checklist": "1bT60KKlk2PfZ6NZH3zjLKNndDofwaR9N"
+  },
+  "source_diff_drive_id": "1TSTgf89Lytd-w3ngt2tOjca6WfPioEDu",
+  "qa_report_drive_id": "1AmJfTE_OWWuQfgCb537QcGed0pcSQBpv",
+  "registered_branch": "thesis/saugat-paneru/latex/seq048-cover-title-spacing",
+  "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/193",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/194",
+  "layout_qa": {
+    "requested_page_scope": [
+      1,
+      2
+    ],
+    "bottom_block_author_shift_pts": -35.9,
+    "school_date_shift_pts": -49.9,
+    "registration_gap_reduction_pts": 14,
+    "title_page_text_unchanged": true,
+    "all_151_pages_extracted_text_equal_to_seq047": true,
+    "body_page_sampled_pixels_equal": true,
+    "overfull_vbox_warnings": 3,
+    "overfull_hbox_warnings": 0,
+    "undefined_references": 0,
+    "persistent_1_33in_top_margin": true
+  },
+  "pu_full_compliance": "NOT_ASSERTED; SEQ047 PU exceptions carried forward unchanged",
+  "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
+  "git_main_status": "STACKED_PROTECTED_PR_CHAIN_174_178_185_187_193_PENDING",
+  "source_review_ci": "PASS_LaTeX_researcher_ownership_and_shared_template_inheritance"
+}

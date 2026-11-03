@@ -4,6 +4,12 @@
 \usepackage{saugat_project_adapter}
 \usepackage{saugat_compat}
 \usepackage{subcaption}
+% SEQ042: top-align figure-only float pages rather than vertically centring their illustrations.
+\makeatletter
+\setlength{\@fptop}{12pt}
+\setlength{\@fpsep}{12pt plus 2pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
 
 % Preserve the validated CP66 visible reference content: the CP66 list did not print DOI/URL fields.
 \AtEveryBibitem{\clearfield{doi}\clearfield{url}\clearfield{urldate}}
@@ -21,6 +27,10 @@
   \PURegistrationLine
   {\bfseries\fontsize{16}{20}\selectfont \PUSchool\par\PUFaculty\par\PUUniversity, \PUUniversityLocation\par}\vspace{14pt}
   {\bfseries\fontsize{16}{20}\selectfont \PUSubmissionDate\par}
+  % SEQ048 A7 000030: move the lower author/school/date block upward;
+  % approximately two title-page blank lines are removed above the author.
+  % The registration-to-school gap is independently removed in the adapter.
+  \vspace*{50pt}
   \end{center}
 }
 
@@ -39,6 +49,8 @@
 \ifPUIncludeDedication
   \clearpage\thispagestyle{plain}\input{frontmatter/dedication.tex}
 \fi
+% SEQ042: restore the Roman page-number fill for all preliminary TOC entries.
+\addtocontents{toc}{\protect\cftpagenumberson{chapter}}
 \PUDeclarationPage
 \PURecommendationPage
 \PUCertificatePage
@@ -46,7 +58,7 @@
 \input{frontmatter/abbreviations.tex}
 \input{frontmatter/units.tex}
 \PUAbstractPage
-\PUTableOfContents
+\begingroup\cftpagenumberson{chapter}\PUTableOfContents\endgroup
 \PUListOfTables
 \PUListOfFigures
 \ifdefined\listofpuequations
