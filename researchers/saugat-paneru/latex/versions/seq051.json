@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 51,
+  "parent_sequence": 50,
+  "source_parent_sequence": 50,
+  "branch": "thesis/saugat-paneru/latex/seq051-prelim-after-spacing-navlists",
+  "status": "QA_CANDIDATE",
+  "drive_production_status": "CURRENT_SAME_STABLE_IDS_PROVIDER_READBACK_VERIFIED",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "a7_version_event": "000033",
+  "source_zip_member_count": 422,
+  "unchanged_zip_members": 420,
+  "modified_scoped_paths": [
+    "manuscript/main.tex",
+    "extensions/saugat_project_adapter.sty"
+  ],
+  "no_source_deletions": true,
+  "scientific_content_changed": false,
+  "source_page_count_preserved": true,
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "b23d0cf4adb81de5f18922136a765e6cc2cdbc68cdd78a29323fef5632ee9c1d",
+    "bytes": 48485935,
+    "pages": 151,
+    "format": "A4",
+    "font": "Times New Roman embedded"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "9e9d853118b3004e4a526851f5ad65c2481615d759c9b9d6a7c24d9b435c9dac",
+    "bytes": 75317626,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "1LzbKfrOl_bR9F1ybaiK0F2wvE9AeQdfX",
+    "zip": "1a0WM-c6KaPyEycZLbUNoDwHlXYGBoK6h",
+    "checkpoint": "1A_tBSWL0CcF9OveY4jYMfveKzays3k6r",
+    "checklist": "1rJrAjtt-rjArIQRtNCIhdeKvrltRiEB9"
+  },
+  "archive_post": {
+    "pdf": "1eRxOeK5I6OB5cfMNEu1EjGe3DCNXwI91",
+    "zip": "1-9v5BDLxFLlUMnQnQ4P35rlce6p9oXkz",
+    "checkpoint": "1Qhng4k89n-Lkq4fXXw4DsS3CwYmxpgRs",
+    "checklist": "1eBvGiTpPuXwv4GeqvQc6CRjtmbR29Det"
+  },
+  "source_diff_drive_id": "1WcO5Wj05Zj1zLEu7zWcYucx7dBs1E52M",
+  "qa_report_drive_id": "1y2pU_kvX4cvi0xrp20b3us9r0EvUgdu8",
+  "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/207",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/209",
+  "layout_qa": {
+    "roman_pages": [
+      "iii",
+      "iv",
+      "v",
+      "vi"
+    ],
+    "each_page_title_y_unchanged_pt": 123.749,
+    "body_shift_after_heading_pt": 27.895,
+    "requested_spacers": [
+      "14pt",
+      "14pt"
+    ],
+    "list_equations_printed": "xix",
+    "list_appendices_printed": "xx",
+    "list_heading_aligned_to_list_tables_figures": true,
+    "toc_added": "List of equations xix",
+    "pdf_text_changed_physical_pages": [
+      11,
+      12,
+      13,
+      20
+    ],
+    "body_science_text_changed": false,
+    "unaffected_samples_pixels_identical": [
+      1,
+      2,
+      3,
+      8,
+      9,
+      10,
+      22,
+      37,
+      57,
+      77,
+      97,
+      112,
+      132,
+      151
+    ],
+    "overfull_vbox_warnings_unchanged": 3,
+    "overfull_hbox_warnings": 0
+  },
+  "pu_full_compliance": "NOT_CERTIFIED; pre-existing user top 1.33in exception remains",
+  "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
+  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING",
+  "qa_report_archive_post_id": "1pAlreB7L1nHS0eHk7CmvEYQCe4H88ZA9"
+}
