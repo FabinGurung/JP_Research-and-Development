@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 46,
+  "branch": "thesis/saugat-paneru/latex/seq046-blankspace-and-drift-heading",
+  "style_path": "controls/latex/template/pumlsc-shared.sty",
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "status": "QA_CANDIDATE",
+  "parent_sequence": 45,
+  "source_parent_sequence": 45,
+  "source_zip_member_count": 422,
+  "modified_scoped_paths": [
+    "manuscript/chapters/chapter3_methodology.tex",
+    "manuscript/chapters/chapter4_results_discussion.tex",
+    "manuscript/cp112_additions/ch3_properties_spectrum_modal.tex"
+  ],
+  "unchanged_zip_members": 419,
+  "no_source_deletions": true,
+  "scientific_content_changed": false,
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "sha256": "d0dbe6100f5ad15c62344c275612eebe8d1515a1f735cc74c96a58cbfb265b17",
+    "bytes": 48482542,
+    "pages": 146,
+    "format": "A4",
+    "main_text_font": "Times New Roman"
+  },
+  "source_zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "sha256": "163b35b9899407084ebf516a00f2c0aea3bf9687cd72849f4b07886e33057225",
+    "bytes": 75316679,
+    "entries": 422,
+    "crc": "PASS"
+  },
+  "archive_pre": {
+    "pdf": "12nTJZloZYGgK1P_xZM4BwBkQEd7nOaSJ",
+    "zip": "1zX6WIhHC4MlUyn5PwF_-FmyAVjCFyjzr",
+    "checkpoint": "11jbqiHw9bBYyD7hS_-DeslTGagwWx4YT",
+    "checklist": "1DCJlEK92qWlbQAfO5L1SuGMXsAEsHo3p"
+  },
+  "archive_post": {
+    "pdf": "1OvNDyJNiZuoi_r7bOTj1atd4iSrr0Jxn",
+    "zip": "1B-uWxTKWrtOcImKqfBP6n2J2inXVdyzI"
+  },
+  "layout_qa": {
+    "underfilled_body_pages_over_180pt_before": 21,
+    "underfilled_body_pages_over_180pt_after": 15,
+    "body_empty_pages": 0,
+    "main_text_font": "Times New Roman",
+    "pdf_pages": 146,
+    "source_zip_member_count": 422,
+    "modified_source_members": 3,
+    "unmodified_source_members": 419,
+    "toc_subsubsection": "4.3.8.1 Complete Governing Drift Profiles",
+    "toc_page": 74,
+    "overfull_hbox_warnings": 0,
+    "overfull_vbox_warnings": 0,
+    "float_too_large_warnings": 0,
+    "scope": "Strict PU existing spacing 1.5 lines, zero paragraph skip; figure float positions and image scaling within page margins, table placement only."
+  },
+  "a7_version_event": "000028",
+  "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
+  "source_release_pr": "STAGED_PENDING_PROTECTED_MERGE",
+  "source_parent_branch": "reservation/latex/saugat-seq046-20261103"
+}
