@@ -6,7 +6,7 @@
   "sequence": 86,
   "parent": "LATEX_SEQ085",
   "branch": "thesis/nabin-bista/latex/seq086-reference-heading-appendix-pair",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "admission_state": "CANDIDATE",
   "a7_event": "000029",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
@@ -31,7 +31,7 @@
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "scientific_approval": null,
-  "promoted_to_current": false,
+  "promoted_to_current": true,
   "provider_metadata_readback": true,
   "local_qa": {
     "release": "LATEX_SEQ086",
@@ -180,5 +180,21 @@
     "exact_times_new_roman_embedded": true,
     "all_22_table_and_88_figure_caption_numbers_preserved": true,
     "pdf_sha256": "89c7477994ea518e457a19e838f9edc1018d2a2f0384eb86ea41f0e133f1db31"
-  }
+  },
+  "permanent_live_hash_readback": true,
+  "post_pdf_id": "19XWffwQE8sITrBOv3zwSQDijtH8vn04J",
+  "post_source_id": "1Alk_3iRlDQbd2s_wGdLUWWKkHdc3sISO",
+  "audit_post_snapshot_drive_id": "1TEdy8UNGEWT2o2weMavhpDFdKSPKxCGGVSj4CuKamdc",
+  "source_pr": 238,
+  "source_commit": "8d64773c4100e7ca1f300390e9d62ed031c3c363",
+  "source_merge_commit": "75f9ec1703e2eeedd8b01aaa03a058539a32b6d9",
+  "git_release_merged": true,
+  "all_checks_passed": true,
+  "post_archive_hash_verified": true,
+  "verified_pages_run": 41656574948,
+  "verified_pages_conclusion": "success",
+  "fresh_packaged_build_all_106_pages_text_size_font_geometry_identical": true,
+  "fresh_packaged_build_all_106_pages_pixel_identical_using_poppler": true,
+  "release_disposition": "A7_000029_VERIFIED__GIT_SOURCE_RELEASE_MERGED__PAGES_SUCCESS",
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ086_A7_000029_FINAL_READBACK_20261103.json"
 }
