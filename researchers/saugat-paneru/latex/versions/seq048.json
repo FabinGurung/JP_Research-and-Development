@@ -44,14 +44,14 @@
   "archive_post": {
     "pdf": "1liSfqRnHnWQHTZ9UCUIcVUpJFjMWLX_O",
     "zip": "1U2t6pFvQb9eAM4_TaksMl0Cgbso75oz8",
-    "checkpoint": "PENDING",
-    "checklist": "PENDING"
+    "checkpoint": "1LoLFjVopt6J-d2ooalo_IqqlTQ64qjSA",
+    "checklist": "1bT60KKlk2PfZ6NZH3zjLKNndDofwaR9N"
   },
   "source_diff_drive_id": "1TSTgf89Lytd-w3ngt2tOjca6WfPioEDu",
   "qa_report_drive_id": "1AmJfTE_OWWuQfgCb537QcGed0pcSQBpv",
   "registered_branch": "thesis/saugat-paneru/latex/seq048-cover-title-spacing",
   "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/193",
-  "source_release_pr": "PENDING",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/194",
   "layout_qa": {
     "requested_page_scope": [
       1,
@@ -70,5 +70,6 @@
   },
   "pu_full_compliance": "NOT_ASSERTED; SEQ047 PU exceptions carried forward unchanged",
   "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
-  "git_main_status": "STACKED_PROTECTED_PR_CHAIN_174_178_185_187_193_PENDING"
+  "git_main_status": "STACKED_PROTECTED_PR_CHAIN_174_178_185_187_193_PENDING",
+  "source_review_ci": "PASS_LaTeX_researcher_ownership_and_shared_template_inheritance"
 }
