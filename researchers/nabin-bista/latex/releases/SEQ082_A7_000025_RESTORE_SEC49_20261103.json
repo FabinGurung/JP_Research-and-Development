@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "release": "LATEX_SEQ082",
+  "parent": "LATEX_SEQ081",
+  "a7_event": "000025",
+  "recorded_utc": "2026-11-03T09:05:53.180Z",
+  "request_scope": "Use SEQ081 as base and restore Section 4.9 exactly as SEQ079; retain every other SEQ080/081 edit including Figure 3.2 placement and November 2026 cover dates.",
+  "source_diff": {
+    "reference_seq": "LATEX_SEQ079",
+    "reference_section_sha256": "79901bd40cfdd4ec19859d27a270d7e7c5582cdbe4c8f9daf3d33c3e8d901a96",
+    "changed_tex_only": [
+      "24_resultanddiscussion.tex"
+    ],
+    "changed_section": "4.9",
+    "outside_section_byte_identical_to_seq081": true,
+    "source_entries": 577,
+    "unchanged_source_entries": 576,
+    "unused_old_figure_generator_files_preserved_in_zip": true
+  },
+  "pdf_qa": {
+    "pages_before": 114,
+    "pages_after": 112,
+    "fig_32_caption_pdf_page": 36,
+    "fig_32_y_coordinate_pt": 371.4,
+    "fig_32_same_as_seq081": true,
+    "submission_date": "November, 2026",
+    "title_pages": [
+      1,
+      2
+    ],
+    "sec49_matches_seq079": true,
+    "seq080_benchmark_table_removed": true,
+    "seq080_figure_436_removed": true,
+    "unchanged_table_values": true,
+    "final_xelatex_errors": 0,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "source_shape_changed_elsewhere": false
+  },
+  "pre": {
+    "pdf_id": "1KIBaRdv5eNi_Pwmau94F-GtEfzqQzKv7",
+    "source_id": "1To0XkZo6ueoSnF9LOcY9_ceC4gmdmKxW",
+    "audit_id": "1-Lmz3Xo7g2cdeVKScmKrM5-H7wSdwcsevWhi20iQYog",
+    "pdf_sha256": "dde077e38feecd57fdccec41ae26de09d2bd17ad53bb0332d1d557552b326ccd",
+    "zip_sha256": "74141739432a0a2150d18f0e3566432698184705ce3fd7aa495f3c8fd37395ce"
+  },
+  "post": {
+    "pdf_id": "12Iw0LovNv2mUGUuriNovY_q2WS39_prP",
+    "source_id": "10wxx_GoEDpWW9ZB5dYv8j5OKUXDujD-0",
+    "audit_id": "1opDh4j_wzlESy0NHpEdlBLCk537UN6EMBM6Bz0V5fO0",
+    "pdf_sha256": "e6945a1016cb4af765fade90f7c6053d5f15992a45eaa66530cad85c05085e0d",
+    "zip_sha256": "d9608089e05003fe3708533da732cc11edb243b98cf3fb8b997819c2ed4e0265"
+  },
+  "live": {
+    "pdf_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "e6945a1016cb4af765fade90f7c6053d5f15992a45eaa66530cad85c05085e0d",
+    "zip_sha256": "d9608089e05003fe3708533da732cc11edb243b98cf3fb8b997819c2ed4e0265",
+    "same_ids_preserved": true,
+    "provider_hash_readback": true
+  },
+  "audit_live_doc": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "source_pr": 213,
+  "source_merge": "0ef54be6f902082f48ab1a435efe7076fe0606fe",
+  "reservation_pr": 212,
+  "release_record_merged": false,
+  "pages_deployed": false,
+  "disposition": "compiled working thesis; no independent scientific verification or university approval",
+  "restore": "Next event must first take numbered PRE copies of current PDF/source/audit same IDs. Keep A7 000025 PRE/POST immutable."
+}
