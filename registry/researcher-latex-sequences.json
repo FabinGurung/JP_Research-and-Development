@@ -232,6 +232,18 @@
           "main_sha_at_reservation": "22950c617859454a0ae4f275b8769b5cb6fcce14",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "SEQ044 exact source, A7 000026 PRE complete four-file archive. Scoped LOF/LOT left alignment, Fig3.21 size, requested page float/paragraph placement, no scientific/prose edits and no shared-template modifications. QA then same-ID Drive, independent ETABS replay not requested."
+        },
+        {
+          "researcher_id": "RSH-002",
+          "slug": "saugat-paneru",
+          "sequence": 46,
+          "branch": "thesis/saugat-paneru/latex/seq046-blankspace-and-drift-heading",
+          "status": "RESERVED",
+          "request_key": "saugat:seq046-20261103",
+          "created_at_utc": "2026-11-03T02:26:00Z",
+          "main_sha_at_reservation": "30e9ba2865f19353f490550d08eba51d962f4e58",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "User-directed SEQ046 from verified SEQ045 148p source. 000028 A7 PRE four immutable copies preserved before editing; remove avoidable page gaps by researcher-local float layout per PU style, convert Complete Governing Drift Profiles bold lead-in to TOC-visible subsection; preserve all science numbers, imagery, conclusions, references and shared template. Candidate requires Times New Roman full PDF QA before same permanent Drive IDs promoted."
         }
       ]
     },
