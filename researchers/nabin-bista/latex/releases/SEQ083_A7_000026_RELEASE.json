@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release": "LATEX_SEQ083",
+  "parent": "LATEX_SEQ082",
+  "a7_event": "000026",
+  "timestamp_utc": "2026-11-03T12:32:51.938Z",
+  "source_pr": 221,
+  "source_merge": "30258670f6e87537c227067775edb756564ec37b",
+  "reservation_pr": 219,
+  "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+  "changed_tex": [
+    "main.tex",
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex",
+    "31_fragility_original_figures_seq064.tex"
+  ],
+  "source_entries": 577,
+  "unchanged_entries": 573,
+  "qa": {
+    "pages": 112,
+    "tables": 22,
+    "appendix_figures": 24,
+    "uniform_pairs": 12,
+    "table32_page": 22,
+    "november_2026_retained": true,
+    "section49_unmodified": true,
+    "no_undefined_references": true,
+    "no_overfull_boxes": true
+  },
+  "pre": {
+    "pdf": "1K1ieZfMlVRI46OEGzuk41iRFl0oGHDH7",
+    "zip": "1FMvSwcfqZzi1hqil-gyCjUPY9cgppMPX",
+    "audit": "1V9hmJC_iytRP7XYIsvA2d3HhaBpeozBwOCCPBn3HkrI"
+  },
+  "post": {
+    "pdf": "1yBf0mbBx9k-M-xtRhMYSPEioErfEtMSh",
+    "zip": "1AQVdxXvu1El7ZiZVKvpbNECj1zgecRYo",
+    "audit": "1W4_FaA2S9Acf7R5PeT7gBxverRC6ASpeC2ppNFq7quQ"
+  },
+  "live": {
+    "pdf": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "zip": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "e3c86c73c6b1d5ababa3d9d51312111a4b8de9771475f3a1597a5deec9b379f2",
+    "zip_sha256": "b5163fb8812f5cc0a09dd65e2eabbb59e29872bcbb222b485c5bdf30d60c18c9",
+    "readback_verified": true
+  },
+  "audit_live_doc": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "release_metadata_merged": false,
+  "pages_verified": false,
+  "restore": "Next change requires next numbered PRE; preserve live Drive IDs, immutable A7 000026 PRE and POST."
+}
