@@ -44,13 +44,13 @@
   "archive_post": {
     "pdf": "1eRxOeK5I6OB5cfMNEu1EjGe3DCNXwI91",
     "zip": "1-9v5BDLxFLlUMnQnQ4P35rlce6p9oXkz",
-    "checkpoint": "PENDING",
-    "checklist": "PENDING"
+    "checkpoint": "1Qhng4k89n-Lkq4fXXw4DsS3CwYmxpgRs",
+    "checklist": "1eBvGiTpPuXwv4GeqvQc6CRjtmbR29Det"
   },
   "source_diff_drive_id": "1WcO5Wj05Zj1zLEu7zWcYucx7dBs1E52M",
   "qa_report_drive_id": "1y2pU_kvX4cvi0xrp20b3us9r0EvUgdu8",
   "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/207",
-  "source_release_pr": "PENDING_GITHUB_PR",
+  "source_release_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/209",
   "layout_qa": {
     "roman_pages": [
       "iii",
@@ -96,5 +96,6 @@
   },
   "pu_full_compliance": "NOT_CERTIFIED; pre-existing user top 1.33in exception remains",
   "original_etabs_replay": "NOT_PERFORMED_OR_REQUESTED",
-  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING"
+  "git_main_status": "PROTECTED_PREDECESSOR_PR_CHAIN_PENDING",
+  "qa_report_archive_post_id": "1pAlreB7L1nHS0eHk7CmvEYQCe4H88ZA9"
 }
