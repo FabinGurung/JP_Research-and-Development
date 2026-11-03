@@ -569,13 +569,12 @@
       "change_id": "RD-LTX-CHG-124",
       "researcher_id": "RSH-003",
       "classification": "RESEARCHER_ONLY",
-      "summary": "Document Nabin LATEX_SEQ078 user-requested 1.33in top margin (official PU-FMT-003 registered source specifies 2.5cm), compact floats/2-up figure placement, and Table 3.2 unchanged-values single-page fit. No global shared-style mutation or claim of PU approval.",
+      "summary": "Document Nabin LATEX_SEQ078 user-requested 1.33in top margin (official PU-FMT-003 registered source specifies 2.5cm), compact floats/2-up figure placement, and Table 3.2 unchanged-values single-page fit. No global shared-style mutation or claim of PU approval. The local delta lives in those four manuscript files, not a .sty extension.",
       "source_paths": [
         "researchers/nabin-bista/latex/manuscript/seq057-r1/main.tex",
         "researchers/nabin-bista/latex/manuscript/seq057-r1/23_methodology.tex",
         "researchers/nabin-bista/latex/manuscript/seq057-r1/24_resultanddiscussion.tex",
-        "researchers/nabin-bista/latex/manuscript/seq057-r1/29_additional_researcher_data_seq050.tex",
-        "researchers/nabin-bista/latex/extensions/SEQ078_FORMAT_SCOPING.md"
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/29_additional_researcher_data_seq050.tex"
       ],
       "before_after_qa_evidence": "Local full XeLaTeX/BibTeX8 complete source rebuild: 113 pages (112 A4 + sole A3 landscape), 88/88 exact Figure caption IDs retained, Table 3.2 all 24 rows and 6 slab thickness entries within page22 with 12pt text, 35 vs 27 pages with >=2 figures, A3 Figure A2.1 reflowed to printed page77. 113/113 extracted page texts reproduced on fresh source ZIP build. Four inherited text sources changed; 566/570 prior source entries byte-identical. Verified no overfull/undefined errors; no scientific data changes.",
       "pu_rule_references": [
