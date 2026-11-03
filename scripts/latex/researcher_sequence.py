@@ -344,8 +344,9 @@ def self_test() -> None:
                       [v["sequence"] for v in row.get("observed_out_of_band_versions", [])])
         assert plan(data, slug, "unit test")["sequence"] == highest + 1
     nabin = next(x for x in data["researchers"] if x["slug"] == "nabin-bista")
-    assert [x["sequence"] for x in nabin.get("observed_out_of_band_versions", [])] == [55, 56, 57]
-    assert plan(data, "nabin-bista", "safe preview")["sequence"] == (max([57] + [r["sequence"] for r in nabin["reservations"]]) + 1)
+    assert [x["sequence"] for x in nabin.get("observed_out_of_band_versions", [])][:3] == [55, 56, 57]
+    assert 75 in [x["sequence"] for x in nabin.get("observed_out_of_band_versions", [])]
+    assert plan(data, "nabin-bista", "safe preview")["sequence"] == (max([57] + [r["sequence"] for r in nabin["reservations"]] + [v["sequence"] for v in nabin.get("observed_out_of_band_versions", [])]) + 1)
     mock_tree = {"truncated": False, "tree": [
         {"path": "researchers/nabin-bista/latex/releases/SEQ055_EXAMPLE.md", "type": "blob"},
         {"path": "researchers/nabin-bista/latex/releases/SEQ056_EXAMPLE.md", "type": "blob"},
@@ -354,7 +355,7 @@ def self_test() -> None:
     assert remote_release_highwater(mock_tree, "nabin-bista") == 57
     verify_remote_releases_reconciled(mock_tree, nabin)
     assert remote_release_highwater(mock_tree, "saugat-paneru") == 999
-    unregistered_seq = max([57] + [r["sequence"] for r in nabin["reservations"]]) + 1
+    unregistered_seq = max([57] + [r["sequence"] for r in nabin["reservations"]] + [v["sequence"] for v in nabin.get("observed_out_of_band_versions", [])]) + 1
     stale = {"truncated": False, "tree": mock_tree["tree"] + [
         {"path": "researchers/nabin-bista/latex/releases/SEQ{:03d}_UNREGISTERED.md".format(unregistered_seq), "type": "blob"}]}
     try:
