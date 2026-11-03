@@ -328,6 +328,18 @@
           "main_sha_at_reservation": "f516329c5a9ddea9deb9a4bc77cdb8ee0b0bb468",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "SEQ080 parent unchanged except issue date September, 2026 -> November, 2026 in main.tex macro (cover and inner title page), plus corresponding nonrendered date comment. Global date-occurrence QA; preserve other document text, science, historical dates, signatures, layout and 114 sheets. A7 000024 PRE archived."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 82,
+          "branch": "thesis/nabin-bista/latex/seq082-restore-section49-seq079",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq082-sec49",
+          "created_at_utc": "2026-11-03T08:50:33.071Z",
+          "main_sha_at_reservation": "2996557c32f232a416fa6c293e06096d702a9eaa",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "Using verified LATEX_SEQ081, restore only section 4.9 textual/float contents byte-for-byte from LATEX_SEQ079 in 24_resultanddiscussion.tex, removing SEQ080-only Table 4.14 and Figure 4.36 reference from compiled section. Retain all other SEQ081 source, including 23_methodology.tex Figure 3.2 placement and November 2026 issue date. A7 000025 PRE archived."
         }
       ],
       "observed_out_of_band_versions": [
