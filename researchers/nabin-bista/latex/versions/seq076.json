@@ -6,7 +6,7 @@
   "sequence": 76,
   "parent": "LATEX_SEQ075",
   "branch": "thesis/nabin-bista/latex/seq076-methodology-foundation-format",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
   "style_version": "2.6.4",
@@ -33,7 +33,15 @@
   ],
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
-  "promoted_to_current": false,
-  "post_archive_created": false,
-  "scientific_approval": null
+  "promoted_to_current": true,
+  "post_archive_created": true,
+  "scientific_approval": null,
+  "post_pdf_id": "1wLt674fy7HMEbn59hX1qBtYZfncQlSoE",
+  "post_source_id": "1OC1es6UuPl3RE4Sh8WjV8RbQFqnyYJOc",
+  "permanent_pdf_sha256": "1363cb673fa77d4ac2ded2aac03e2b46e64dd3c4e539cda48e85df832126840f",
+  "permanent_source_zip_sha256": "61917ffb649b4fb473c32bb05ccec3ed7125037b532183dad181435f9d6396fb",
+  "source_merge_commit": "da8f0e8a60e425080d454af7ac33021edef4d395",
+  "source_pr": 173,
+  "drive_live_sha256_readback": true,
+  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ076_A7_000019_DRIVE_SOURCE_READBACK_20261103.json"
 }
