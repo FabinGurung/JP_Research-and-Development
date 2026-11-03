@@ -6,7 +6,7 @@
   "sequence": 82,
   "parent": "LATEX_SEQ081",
   "branch": "thesis/nabin-bista/latex/seq082-restore-section49-seq079",
-  "status": "RELEASED__GIT_RECORD_PR_PENDING",
+  "status": "RELEASED",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
   "scope": "Restore subsection 4.9 from SEQ079 verbatim within SEQ081 source. This removes SEQ080 benchmark Table 4.14 and Figure 4.36 from the compiled document; downstream table renumbers naturally. Preserve SEQ081 November title dates, Fig 3.2 move, other chapters, figures, numbers, analysis, bibliography and annexes.",
@@ -56,7 +56,15 @@
   "drive_live_sha256_readback": true,
   "source_pr": 213,
   "source_merge_commit": "0ef54be6f902082f48ab1a435efe7076fe0606fe",
-  "git_release_merged": false,
-  "release_record_pr_pending": true,
-  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ082_A7_000025_RESTORE_SEC49_20261103.json"
+  "git_release_merged": true,
+  "release_record_pr_pending": false,
+  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ082_A7_000025_RESTORE_SEC49_20261103.json",
+  "release_record_pr": 214,
+  "release_record_merge_commit": "dc8fddf5586abf049bbcadb42a763bbbd46d60a5",
+  "verified_pages_run": 41608516508,
+  "verified_pages_conclusion": "success",
+  "all_checks_passed": true,
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ082_A7_000025_FINAL_PAGES_READBACK_20261103.json",
+  "audit_post_snapshot_drive_id": "1vSEQXTIle2yiO01pNZrTLtI0lb8eoY9YHRHihbnccZc",
+  "release_disposition": "A7_000025_VERIFIED__GIT_SOURCE_AND_RELEASE_MERGED__PAGES_SUCCESS"
 }
