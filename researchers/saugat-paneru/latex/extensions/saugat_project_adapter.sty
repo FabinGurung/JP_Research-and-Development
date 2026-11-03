@@ -54,10 +54,13 @@
 % Compensate it so the MEASURED heading displacement is 28.12pt, not 58.77pt.
 % This is Saugat-only; central PU style, page geometry, body unchanged.
 \newcommand{\SaugatPrelimTopSpacing}{\vspace*{14pt}\vspace*{14pt}\vspace*{-30.77pt}}
-\newcommand{\PUDeclarationPage}{\clearpage\addcontentsline{toc}{puprelim}{Declaration}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Declaration}\input{frontmatter/declaration.tex}}
-\newcommand{\PURecommendationPage}{\clearpage\addcontentsline{toc}{puprelim}{Recommendation}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Recommendation}\input{frontmatter/recommendation.tex}}
-\newcommand{\PUCertificatePage}{\clearpage\addcontentsline{toc}{puprelim}{Certificate}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Certificate}\input{frontmatter/certificate.tex}}
-\newcommand{\PUAcknowledgementsPage}{\clearpage\addcontentsline{toc}{puprelim}{Acknowledgements}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Acknowledgements}\input{frontmatter/acknowledgements.tex}}
+% SEQ051 / A7 000033: two distinct 14pt spaces AFTER each of the four
+% approved narrative preliminary headings. Existing top spacing unchanged.
+\newcommand{\SaugatPrelimAfterSpacing}{\vspace{14pt}\vspace{14pt}}
+\newcommand{\PUDeclarationPage}{\clearpage\addcontentsline{toc}{puprelim}{Declaration}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Declaration}\SaugatPrelimAfterSpacing\input{frontmatter/declaration.tex}}
+\newcommand{\PURecommendationPage}{\clearpage\addcontentsline{toc}{puprelim}{Recommendation}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Recommendation}\SaugatPrelimAfterSpacing\input{frontmatter/recommendation.tex}}
+\newcommand{\PUCertificatePage}{\clearpage\addcontentsline{toc}{puprelim}{Certificate}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Certificate}\SaugatPrelimAfterSpacing\input{frontmatter/certificate.tex}}
+\newcommand{\PUAcknowledgementsPage}{\clearpage\addcontentsline{toc}{puprelim}{Acknowledgements}\SaugatPrelimTopSpacing\PUNarrativePrelimHeading{Acknowledgements}\SaugatPrelimAfterSpacing\input{frontmatter/acknowledgements.tex}}
 \newlength{\PUAbstractIndent}
 \settowidth{\PUAbstractIndent}{\space\space\space\space}
 \newcommand{\PUAbstractParagraph}[1]{\noindent\hspace*{\PUAbstractIndent}#1\par}
@@ -199,4 +202,33 @@
     \noindent\parbox{\linewidth}{\normalfont\fontsize{12}{17}\selectfont ##1\hfill\normalfont\fontsize{12}{17}\selectfont ##2}\par}%
   \tableofcontents
   \endgroup}
+\makeatother
+
+
+% SEQ051 / A7 000033: PU-format navigation parity: the shared engine
+% defines the registered equation list, but its generic tocloft heading
+% differs from the researcher-approved left aligned List of Tables/Figures.
+% Restrict both changes to these two local list presentation commands.
+\makeatletter
+\renewcommand{\listofpuequations}{%
+  \noindent{\bfseries\fontsize{14}{18}\selectfont List of equations\par}%
+  \vspace{12pt}%
+  \begingroup\singlespacing\fontsize{12}{17}\selectfont
+  \@starttoc{loe}%
+  \endgroup}
+\renewcommand{\PUListOfAppendices}{%
+  \clearpage\addcontentsline{toc}{puprelim}{List of appendices}%
+  \noindent{\bfseries\fontsize{14}{18}\selectfont List of appendices\par}%
+  \vspace{12pt}%
+  \begingroup\singlespacing\fontsize{12}{17}\selectfont
+  \@starttoc{loa}%
+  \endgroup}
+\renewcommand{\l@saugatappendix}[2]{%
+  \addpenalty{-\@highpenalty}\vskip2pt
+  \@dottedtocline{0}{0em}{7em}{#1}{#2}}
+\AtBeginDocument{%
+  \@ifundefined{cftpuequationfont}{}{%
+    \renewcommand{\cftpuequationfont}{\normalfont\fontsize{12}{17}\selectfont}%
+    \renewcommand{\cftpuequationpagefont}{\normalfont\fontsize{12}{17}\selectfont}%
+    \setlength{\cftbeforepuequationskip}{2pt}}}
 \makeatother
