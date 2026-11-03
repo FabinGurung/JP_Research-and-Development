@@ -1,0 +1,121 @@
+[
+  {
+    "name": "B2_fragility_all_supports",
+    "block": 2,
+    "support_conditions": [
+      "Soft",
+      "Medium",
+      "Hard",
+      "Fixed"
+    ],
+    "damage_states": [
+      "IO",
+      "LS",
+      "CP",
+      "C"
+    ],
+    "curves": 16,
+    "source": "original 67-workbook chart caches + SEQ066 admitted theta/beta values",
+    "max_cached_probability_difference": 4.440892098500626e-16,
+    "font": "Times New Roman",
+    "font_size_pt": 12,
+    "embedded_font_min_point_size": 12
+  },
+  {
+    "name": "B3_fragility_all_supports",
+    "block": 3,
+    "support_conditions": [
+      "Soft",
+      "Medium",
+      "Hard",
+      "Fixed"
+    ],
+    "damage_states": [
+      "IO",
+      "LS",
+      "CP",
+      "C"
+    ],
+    "curves": 16,
+    "source": "original 67-workbook chart caches + SEQ066 admitted theta/beta values",
+    "max_cached_probability_difference": 3.885780586188048e-16,
+    "font": "Times New Roman",
+    "font_size_pt": 12,
+    "embedded_font_min_point_size": 12
+  },
+  {
+    "name": "B4_fragility_all_supports",
+    "block": 4,
+    "support_conditions": [
+      "Soft",
+      "Medium",
+      "Hard",
+      "Fixed"
+    ],
+    "damage_states": [
+      "IO",
+      "LS",
+      "CP",
+      "C"
+    ],
+    "curves": 16,
+    "source": "original 67-workbook chart caches + SEQ066 admitted theta/beta values",
+    "max_cached_probability_difference": 3.3306690738754696e-16,
+    "font": "Times New Roman",
+    "font_size_pt": 12,
+    "embedded_font_min_point_size": 12
+  },
+  {
+    "name": "B5_fragility_all_supports",
+    "block": 5,
+    "support_conditions": [
+      "Soft",
+      "Medium",
+      "Hard",
+      "Fixed"
+    ],
+    "damage_states": [
+      "IO",
+      "LS",
+      "CP",
+      "C"
+    ],
+    "curves": 16,
+    "source": "original 67-workbook chart caches + SEQ066 admitted theta/beta values",
+    "max_cached_probability_difference": 4.440892098500626e-16,
+    "font": "Times New Roman",
+    "font_size_pt": 12,
+    "embedded_font_min_point_size": 12
+  },
+  {
+    "name": "B6_fragility_all_supports",
+    "block": 6,
+    "support_conditions": [
+      "Soft",
+      "Medium",
+      "Hard",
+      "Fixed"
+    ],
+    "damage_states": [
+      "IO",
+      "LS",
+      "CP",
+      "C"
+    ],
+    "curves": 16,
+    "source": "original 67-workbook chart caches + SEQ066 admitted theta/beta values",
+    "max_cached_probability_difference": 2.220446049250313e-16,
+    "font": "Times New Roman",
+    "font_size_pt": 12,
+    "embedded_font_min_point_size": 12
+  },
+  {
+    "name": "SEQ049_prototype_pushover_XY_recovered",
+    "source": "source_inputs_seq30/Pushover Capacity Curve (chapter4.8).xlsx",
+    "status": "original legacy prototype, separate from current six-block nonlinear analyses",
+    "curves": 8,
+    "font": "Times New Roman",
+    "font_size_pt": 12,
+    "embedded_font_min_point_size": 12
+  }
+]

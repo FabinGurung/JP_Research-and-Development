@@ -445,13 +445,156 @@
     "caution": "Private full scientific binaries and source remain in Drive, not public Git."
   },
   "latest_latex_working_release": {
-    "release": "LATEX_SEQ063",
-    "release_register": "researchers/nabin-bista/latex/versions/seq063.json",
-    "previous": "LATEX_SEQ062",
-    "status": "COMPILED_PDF_SOURCE_PUBLISHED__NATIVE_DOC_HISTORICAL",
+    "release": "LATEX_SEQ075",
+    "release_register": "researchers/nabin-bista/latex/versions/seq075.json",
+    "previous": "LATEX_SEQ071",
+    "status": "DRIVE_SAME_ID_SOURCE_PDF_SHA256_VERIFIED__GIT_RECONCILIATION",
     "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
     "source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
-    "native_doc_drive_id": "1AYv3p4rkL1XjvSfa1iiTmu0AqjdxZXEeQKXhiVvM6Qg",
-    "note": "Two surgical corrections only: Chapter 5.3 removed; dot leaders from List of Appendices removed. PRE 000009 from SEQ062, POST 000009 SEQ063. Native Doc not edited."
+    "pre_archive_ordinal": "000018",
+    "post_archive_ordinal": "000018",
+    "note": "121 A4 pages; exact 18 RAR plots and two original schematics; 24 user-requested reaction rows. Native Google Doc not requested."
+  },
+  "seq067_figure_typography_release": {
+    "schema_version": "1.0.0",
+    "researcher_id": "RSH-003",
+    "sequence": 67,
+    "release_id": "LATEX_SEQ067",
+    "parent_release": "LATEX_SEQ066",
+    "status": "DRIVE_WORKING_SAME_ID_PUBLISHED__CHART_TNR12_QA_PASS__SEVEN_CAD_FONT_EXCEPTIONS__GIT_INHERITANCE_FAIL__SCIENTIFIC_HOLDS_OPEN",
+    "date_local": "2026-11-02",
+    "timezone": "Asia/Kathmandu",
+    "pdf": {
+      "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+      "sha256": "10e34ebc2d224ac38f678d6e95a5b043f75b9f7fe2e1f77ecbdf46adc4be0202",
+      "size": 9752739,
+      "pages": 120
+    },
+    "source": {
+      "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+      "sha256": "d531eaa641767c955f91514031d5d4242685cc6369f44a8fd50493c466f686e7",
+      "size": 94006787,
+      "entries": 555,
+      "compiled_pdf_delivered_separately": true
+    },
+    "numbered_archive": "000013",
+    "pre": {
+      "pdf": "1dgflS_W2ycIMhgXzXFGflhMQbZSWjghq",
+      "source": "1ik62d9d28EtiK93LLzK7UPzlv6Ref2Hy"
+    },
+    "post": {
+      "pdf": "1oZ9-qVF45JAkTuj2FXoablCLFCE4m_Yu",
+      "source": "1uEdVbyJH-dmEFY7cyOnCXCuVhvIMFeFo",
+      "qa": "1puIEitExwcyLTCm61O2O5tnJlOH6EzTZ",
+      "response": "1a9EzvT5OZ0XOe31Kp1PBYbcF70XTbjgb"
+    },
+    "figure_folder_id": "1QUkWgGXmIARsJ5LQywObfgYANUFUtfZc",
+    "standalone_pngs": 68,
+    "figures": 88,
+    "redrawn_existing_charts": 65,
+    "redrawn_explanatory_diagrams": 2,
+    "new_overlay_curves": 16,
+    "new_numbered_figures": 0,
+    "figure_font": "Exact TimesNewRomanPSMT 12.0 pt for all 93 generated vector chart/diagram assets; physical inclusion scale retained",
+    "cad_font_exceptions": {
+      "count": 7,
+      "figures": [
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8",
+        "A2.1"
+      ],
+      "status": "Original outlined/dense CAD annotations retained; no universal 12 pt Times New Roman claim"
+    },
+    "scope": {
+      "tex_files": 5,
+      "original_binary_assets_byte_unchanged": 222,
+      "original_workbook_docx_zip_unchanged": 15,
+      "abstract_conclusions_tables_equations_bibliography_unchanged": true
+    },
+    "supervisor_review": {
+      "complete": 7,
+      "partial": 12,
+      "pending": 2
+    },
+    "ETABS_rerun": false,
+    "nonlinear_fit": false,
+    "submission_certified": false,
+    "native_doc_requested": false,
+    "readback": "FULL_SOURCE_AND_PDF_BYTE_PARITY_PASS; SOURCE_ZIP_CRC_PASS; ALL_68_PNG_FOLDER_READBACK_PASS",
+    "git": {
+      "source_commit": "9b2193102d190ba7e1ce6ed130607225b13bf48d",
+      "pr": 152,
+      "merged": false,
+      "central_allocator_reserved": false,
+      "base_branch": "researcher/nabin-bista/latex-seq066-source-review-20261102",
+      "checks": "Source commit checks failed: admitted legacy main.tex lacks central shared-style import. No global-formatting migration or protected-main bypass.",
+      "main_current": "LATEX_SEQ063"
+    },
+    "restore": "Restore 000013 PRE bytes into the SAME permanent source/PDF IDs, restore SEQ066 names and append a restoration entry. Preserve sealed PRE/POST records."
+  },
+  "seq075_recovery_release": {
+    "version": "LATEX_SEQ075",
+    "base_version": "LATEX_SEQ071",
+    "a7_archive_ordinal": "000018",
+    "build": "bash build_seq075.sh",
+    "shared_style_path": "controls/latex/template/pumlsc-shared.sty",
+    "shared_style_version": "2.6.4",
+    "shared_style_git_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+    "git_main_start": "30e9ba2865f19353f490550d08eba51d962f4e58",
+    "content_source": "Permanent Drive SEQ071 source ZIP, SHA256=53f42e85971727b5f1fb8bea68b7330f71311e5e4269bfcffeaa745d8d45ec77",
+    "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "permanent_source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pre_pdf_id": "10wCd4ZZ3-OpQQDNTOaR2h8ReObIVugua",
+    "pre_source_id": "1DLf5VpuKq6-lRHS2xLYDGOZ44HDxbKb6",
+    "earlier_attempts": {
+      "SEQ072": "Previously reported local build; not recovered or independently verified",
+      "SEQ073": "Previously reported patched PDF; not reused",
+      "SEQ074": "Previously reported local source; not recovered or independently verified"
+    },
+    "scientific_approval": null,
+    "scope": [
+      "18 original RAR plot assets replace six displacement, six drift and six combined fragility illustrations",
+      "Four individual main-text fragility panels removed per block; original appendix unchanged",
+      "Two original uploaded schematic images with requested a/b labels in Figures 2.1 and 3.9",
+      "Figures 3.3-3.8 one per page",
+      "Exact 24-row Table 4.7 including B3 Fixed 52026.4 kN and B2 Fixed 0.00 mm",
+      "Remove continuation notices; repeat useful table column headings",
+      "Minimal central-style compatibility adoption in main.tex; no shared-style code edits"
+    ],
+    "changed_tex": [
+      "main.tex",
+      "24_resultanddiscussion.tex",
+      "22_literaturereview.tex",
+      "23_methodology.tex"
+    ],
+    "all_original_scientific_binary_assets_preserved": true,
+    "independent_analysis_performed": false,
+    "pdf_sha256": "3438c5cdde1135d1ad65dfe6c57e44ab1660e13603ea1653cb51e13883f3e8bd",
+    "restore": "Preserve current bytes with next PRE; replace the same live PDF/source IDs with 000018 PRE bytes; validate SHA256, append restore event; do not repoint live links or alter sealed snapshots.",
+    "known_data_discrepancy": "User explicitly requested B3 Fixed FZ=52026.4 kN; prior reaction calculation record states 39534.4 kN. Reproduced requested table without claiming independent reconciliation.",
+    "post_pdf_id": "1koybkgA2SD48Kx8NkJiECRbqhe7zK4dj",
+    "post_source_id": "1g2DgspA0FyKwvIIeVtzRc8CkS_PqRX0F",
+    "source_sha256": "080793e2a56b62b6bc7164a3b38a5caa83742a698203727a667a778cf9b8bf6b",
+    "provider_byte_readback": "LIVE_PDF_AND_SOURCE_SHA256_MATCH",
+    "central_allocator_reserved": false,
+    "sequence_note": "Reconcile existing issued SEQ075 recovery on the already-created legacy branch; no retroactive allocator reservation is claimed.",
+    "git_branch": "nabin/seq075-figure-table-recovery-20261103",
+    "status": "QA_CANDIDATE",
+    "source_zip_entries": 598,
+    "pdf_pages": 121,
+    "schema_version": "1.0.0",
+    "researcher_id": "RSH-003",
+    "slug": "nabin-bista",
+    "release": "LATEX_SEQ075",
+    "sequence": 75,
+    "parent": "LATEX_SEQ071",
+    "style_path": "controls/latex/template/pumlsc-shared.sty",
+    "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+    "style_version": "2.6.4",
+    "branch": "nabin/seq075-figure-table-recovery-20261103"
   }
 }

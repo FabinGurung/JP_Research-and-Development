@@ -42,3 +42,18 @@ The latest working **compiled PDF and complete source ZIP** are registered as [L
 ## Latest working LaTeX thesis: LATEX_SEQ062 (2026-11-01)
 
 [SEQ062 release register](versions/seq062.json) preserves the same live Drive PDF/ZIP IDs, archived SEQ061 PRE 000008 and SEQ062 POST 000008. The scoped revision enlarges Appendix 2 Figure 2.1, removes the empty plates list, consolidates the specific objectives to three, makes the abstract one page, and compares the six-block findings carefully against two DOI studies. No original image/data source was modified. Native Google Doc still requires synchronization and visual parity. [Release/QA notes](releases/SEQ062_CONCISE_ABSTRACT_OBJECTIVES_AND_DOI_COMPARISON_20261101.md).
+
+
+## Current working thesis: LATEX_SEQ064 (supervisor-feedback revision)
+
+The complete [SEQ064 version record](versions/seq064.json) and [PRE/POST restoration note](releases/SEQ064_SUPERVISOR_CORRECTION_GOVERNED_20261101.md) describe the same-live-ID PDF and source ZIP updates, six-block fragility layout and source-backed editorial corrections. Scientific engineering verification and updated native Google Doc parity remain open; this working revision must not be treated as final scientific approval.
+
+
+## Working thesis LATEX_SEQ065 — reused corrected charts (2026-11-01)
+
+[SEQ065 version](versions/seq065.json) and [A7 000011 release/restoration record](releases/SEQ065_REUSE_32_CLEANED_FIGURES_A7_000011_20261101.md) document copying 32 previously prepared chart PNGs into the existing source paths, preserving all TeX image references and scientific content, and rebuilding the complete 107-page PDF. Permanent Drive PDF/ZIP IDs are unchanged, PRE/POST snapshots archived, and native Google Docs are optional. This is a working revision only; inherited scientific review holds remain. This branch builds upon the as-yet unmerged SEQ064 PR #129; no main-branch synchronization is claimed.
+
+
+## Current working release — LATEX_SEQ075 (2026-11-03)
+
+The [SEQ075 record](versions/seq075.json) supersedes the historical status paragraphs above. The same permanent Drive PDF and ZIP IDs now hold the validated 121-page SEQ075 recovery. All 18 RAR figures, two schematic uploads and the exact 24-row reaction table are incorporated; Figures 3.3–3.8 occupy separate pages. A7 event 000018 PRE preserves SEQ071 and POST preserves SEQ075. The actual central v2.6.4 style is imported with a source-compatible equation-list alias. Scientific originals and font files remain private in Drive; native Google Doc synchronization was not requested. See the release record for scientific limitations and restoration.

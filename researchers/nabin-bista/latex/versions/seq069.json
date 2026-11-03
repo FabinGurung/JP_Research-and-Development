@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release_id": "LATEX_SEQ069",
+  "sequence": 69,
+  "parent_release": "LATEX_SEQ068",
+  "date_local": "2026-11-02",
+  "timezone": "Asia/Kathmandu",
+  "disposition": "DRIVE_WORKING_PUBLISHED__NOT_SCHOLARLY_CERTIFIED__GITHUB_STACKED",
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "pages": 123,
+    "size_bytes": 10670493,
+    "sha256": "91f2c4820c8dbc9b21b1cd5b10ba6e1492a3ff8ed645ef4e195456d8b1d02519",
+    "page_size": "A4",
+    "times_new_roman_embedded": true
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "zip_entries": 572,
+    "size_bytes": 104836913,
+    "sha256": "b111e44f3eeeef6e390e483117d8d255adcabbca6f87953f156c6af9c602a318"
+  },
+  "a7": {
+    "ordinal": "000015",
+    "pre_source_drive_id": "12PmO9769D3SapREzh4PQxIELoHhPVRjn",
+    "pre_pdf_drive_id": "1vbkYeYidXXVWwOlPb5PLjtLXdH-pDOdr",
+    "post_source_drive_id": "1zLtJiIXKlGS1bap3Dsb2L-cb7x9NpMVn",
+    "post_pdf_drive_id": "1e9oXMU9JmzS2C8ulqljaw7ThsL3OPhLQ",
+    "qa_drive_id": "1E3TZxyB1C_I9YoNtRF6cc-Nz4Lv_25vs",
+    "archive_folder_id": "1yb6ejHj-D2IhJAk2qh2WePYKNfmA8mz9",
+    "restoration": "Restore both PRE SEQ068 bytes to the same permanent Drive IDs if rollback is authorized; append a rollback event rather than editing immutable PRE/POST."
+  },
+  "manuscript_scope": {
+    "modified_tex": [
+      "23_methodology.tex",
+      "24_resultanddiscussion.tex"
+    ],
+    "removed": "Historical prototype pushover discussion and Figure 4.36, previously on pp. 66-67",
+    "retained": [
+      "SEQ049 original Table 4.8 values already present as current Table 4.10 (12 PGA and sampling records)",
+      "editable functional/architectural code Table 3.1",
+      "editable seismic parameters Table 3.3"
+    ],
+    "new_text": "NBC 206:2024 Group D occupancy D1/D2 narrative; bed count and other compliance values remain unverified",
+    "binary_scientific_assets_reconstructed": false,
+    "retained_legacy_pushover_asset": true
+  },
+  "qa": {
+    "xelatex_passes": 3,
+    "compilation_passed": true,
+    "physical_pages_before": 125,
+    "physical_pages_after": 123,
+    "figure_4_36_removed": true,
+    "remaining_figure_count": 87,
+    "original_figure_assets_preserved": true
+  },
+  "holds": {
+    "git_base_pr": 156,
+    "github_main_not_promoted": true,
+    "shared_style_ci_blocker": true,
+    "scientific_analysis_not_revalidated": true,
+    "etabs_seismic_Z_035_unverified": true,
+    "bed_count_unverified": true,
+    "native_google_doc_not_created": true
+  }
+}

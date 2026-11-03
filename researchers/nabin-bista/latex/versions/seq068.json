@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release_id": "LATEX_SEQ068",
+  "sequence": 68,
+  "parent_release": "LATEX_SEQ067",
+  "date_local": "2026-11-02",
+  "timezone": "Asia/Kathmandu",
+  "release_disposition": "DRIVE_WORKING_PUBLISHED__SCOPED_FIGURES_TABLES__GIT_PR_UNMERGED__SCIENTIFIC_HOLDS",
+  "scholarly_approval": null,
+  "submission_certified": false,
+  "pdf": {
+    "permanent_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "size_bytes": 10711604,
+    "sha256": "39f8ac6d9f4aab1ba3079e8c5f597b613e8b9f672c20e744c8f32a7c9c9459da",
+    "pages": 125,
+    "A4": true
+  },
+  "source_zip": {
+    "permanent_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "size_bytes": 95752369,
+    "sha256": "bb29bf8d48230be617e92ec6b3090becd5e8c5fe3a100f8c47d16116b55310bb",
+    "entries": 570,
+    "zip_crc": "PASS"
+  },
+  "numbered_archive": "000014",
+  "pre": {
+    "pdf_id": "1irg0EARhDERZ8jkaJCqpCqYrcpOzd3_k",
+    "source_id": "11dZFvoK6sw9gAH9qvY2tTyqtNUajYnzp"
+  },
+  "post": {
+    "pdf_id": "1zoP1aAkwlE6RIXonGJQy9tBHwBGy1MDI",
+    "source_id": "16sc02fIypbFtqxZVAmEMqmJynM5u5ULI"
+  },
+  "plot_folder": "1Z27aAUF4EzRR8JJKmrVuAc2h3rKOksHP",
+  "plot_assets": {
+    "blocks": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "curves_per_overlay": 16,
+    "standalone_png": 5,
+    "standalone_vector_pdf": 5,
+    "figure_numbers": [
+      "4.31",
+      "4.32",
+      "4.33",
+      "4.34",
+      "4.35"
+    ]
+  },
+  "scope": {
+    "modified_tex": [
+      "23_methodology.tex",
+      "24_resultanddiscussion.tex"
+    ],
+    "added_graphic": "SEQ049 historical pushover comparison",
+    "added_editable_tables": [
+      "architectural compliance with verification limitations",
+      "general seismic inputs",
+      "historical ground motion records",
+      "legacy damage state PGA thresholds"
+    ],
+    "preserved": "existing abstract, conclusions, source workbooks, 4-panel charts, bibliography and other files"
+  },
+  "scientific_holds": [
+    "Hospital G+4/G+5 and 100 beds/height identity not independently established",
+    "Z=0.35 not established as actual ETABS assignment",
+    "Historical SEQ049 single prototype is not identified as one of the six blocks",
+    "Original nonlinear fragility calibration not rerun",
+    "NBC 206 building-wide compliance not independently certified",
+    "Seven CAD annotation font exceptions"
+  ],
+  "git": {
+    "branch": "thesis/nabin-bista/latex/seq068-a7-reconciliation-20261102",
+    "base": "researcher/nabin-bista/latex-seq067-figure-fonts-20261102",
+    "merge": false,
+    "required_checks": "MUST PASS; known source inheritance failure at main.tex",
+    "main_current_reported": "LATEX_SEQ063"
+  },
+  "restore": "Use 000014 PRE SEQ067 PDF/source to restore identical original permanent Drive IDs; append restoration event and do not overwrite sealed PRE/POST.",
+  "source_qa": "SEQ068_SCOPED_EDIT_MANIFEST.json and SEQ068_PLOTS_LINEAGE.json from complete authoritative ZIP. GitHub stores code and metadata, not private 95-MB source assets."
+}

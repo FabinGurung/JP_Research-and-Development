@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release": "LATEX_SEQ071",
+  "sequence": 71,
+  "parent": "LATEX_SEQ070",
+  "archive_ordinal": "000017",
+  "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+  "permanent_source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+  "pre_pdf_drive_id": "1Ap5AKDqJ6NOLuS64cH0ycca1EQLK6ubv",
+  "pre_source_drive_id": "1GdUqnsqspVt_3-qGvGJr82h_k1k20Ykc",
+  "post_pdf_drive_id": "1plWIMZN3gu5iwkiq7-XTXztN_a3L3FFU",
+  "post_source_drive_id": "1nj8_Wm3VwJSDkx4Pp1isaPFu_pi4rcmx",
+  "pdf_sha256": "63c08de2829aa03b72ab233a08b1e912f49577887d83a41a010ef142edbb98f6",
+  "zip_sha256": "53f42e85971727b5f1fb8bea68b7330f71311e5e4269bfcffeaa745d8d45ec77",
+  "pages": 121,
+  "source_zip_entries": 574,
+  "changed_tex": [
+    "10_abstract.tex",
+    "21_significanceofthestudy.tex",
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex",
+    "25_conclusionandrecommendation.tex"
+  ],
+  "validation": "XELATEX_3_PASS__A4__EMBEDDED_TNR__PDF_AND_ZIP_HASH_MATCH_PERMANENT_DRIVE_READBACK__SOURCE_BINARY_ASSET_PARITY",
+  "scientific_holds": [
+    "Screenshot reference 100-bed, 18.75m, patient lift dimensions and claimed Provided criteria are not verified against approved hospital drawing schedules; technical prose distinguishes reference configuration",
+    "Z=0.35 not established as ETABS analysis input; table labels reference criterion",
+    "Scientific model and nonlinear fragility analysis holds from prior versions remain"
+  ],
+  "git_status": "STACKED_PR_PENDING__PARENT_SEQ070_PR164_UNMERGED__NO_BRANCH_PROTECTION_BYPASS",
+  "git_main_current": "LATEX_SEQ063",
+  "scholarly_approval": null
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "LATEX_SEQ067",
+  "target": "LATEX_SEQ068",
+  "changed_tex": [
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex"
+  ],
+  "new_figure_names": [
+    "B2_fragility_all_supports",
+    "B3_fragility_all_supports",
+    "B4_fragility_all_supports",
+    "B5_fragility_all_supports",
+    "B6_fragility_all_supports",
+    "SEQ049_prototype_pushover_XY_recovered"
+  ],
+  "preserved_science": [
+    "all existing figures",
+    "unmodified submitted source workbooks",
+    "untouched original 4-panel fragility plots",
+    "original bibliography/abstract/conclusions"
+  ],
+  "source": "permanent Drive SEQ067 source and SEQ049 original workbook contained therein",
+  "scientific_holds": [
+    "100-bed count",
+    "height 18.75m",
+    "G+5 mismatch",
+    "Z=0.35 ETABS assignment",
+    "old prototype to six-block identity",
+    "nonlinear fragility calibration",
+    "code compliance verification"
+  ]
+}
