@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "id": "RD-LATEX-SINGLE-AMENDMENT-REGISTER",
   "authority": "controls/latex/tower.json",
-  "next_number": 128,
+  "next_number": 129,
   "namespace": "RD-LTX-CHG-101+",
   "entries": [
     {
@@ -668,6 +668,25 @@
       "git_commit_sha_after_merge": null,
       "global_propagation": "NONE__OWNER_ONLY",
       "scientific_boundary": "THREE_SCOPED_PRESENTATION_EDITS_ONLY__NO_SCIENTIFIC_CHANGES"
+    },
+    {
+      "change_id": "RD-LTX-CHG-128",
+      "researcher_id": "RSH-003",
+      "classification": "RESEARCHER_ONLY",
+      "summary": "Nabin SEQ087 List of Tables only: explicit Table prefix before all 22 numbers on printedxi and a 6em number-label column. Existing 12pt typography, captions, page numbers and hyperlink targets retained. No shared-style or body changes.",
+      "source_paths": [
+        "researchers/nabin-bista/latex/manuscript/seq057-r1/12_listoftable.tex"
+      ],
+      "before_after_qa_evidence": "106 pages retained; all entries Table3.1..3.8 and Table4.1..4.14 appear on the same printedxi page. Only two formatting lines added to one source file. All other 585 inherited entries, tables/data/captions/equations/assets/bibliography/body source unchanged. All other PDF page texts unchanged; full-page visual and exact-raster comparison performed.",
+      "pu_rule_references": [
+        "PU-FMT-024",
+        "PU-FMT-031"
+      ],
+      "disposition": "ACCEPTED_LOCAL",
+      "target_shared_rule": null,
+      "git_commit_sha_after_merge": null,
+      "global_propagation": "NONE__OWNER_ONLY",
+      "scientific_boundary": "LIST_OF_TABLES_PRESENTATION_ONLY__NO_SCIENTIFIC_CHANGES"
     }
   ],
   "required_fields": [
