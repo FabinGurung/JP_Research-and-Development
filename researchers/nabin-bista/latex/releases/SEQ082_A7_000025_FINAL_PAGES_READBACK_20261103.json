@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "researcher": "RSH-003/nabin-bista",
+  "release": "LATEX_SEQ082",
+  "parent": "LATEX_SEQ081",
+  "a7_event": "000025",
+  "recorded_utc": "2026-11-03T09:10:15.552Z",
+  "audit_timestamp_npt": "2026-11-03 14:53:59",
+  "reservation_pr": 212,
+  "source_pr": 213,
+  "source_merge_sha": "0ef54be6f902082f48ab1a435efe7076fe0606fe",
+  "release_record_pr": 214,
+  "release_merge_sha": "dc8fddf5586abf049bbcadb42a763bbbd46d60a5",
+  "post_merge_checks": {
+    "validator_run": 41608516619,
+    "source_gate_run": 41608516425,
+    "pages_run": 41608516508,
+    "all_conclusion": "success"
+  },
+  "live": {
+    "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "e6945a1016cb4af765fade90f7c6053d5f15992a45eaa66530cad85c05085e0d",
+    "zip_sha256": "d9608089e05003fe3708533da732cc11edb243b98cf3fb8b997819c2ed4e0265",
+    "same_ids_preserved": true,
+    "provider_hash_readback": true
+  },
+  "pre": {
+    "pdf_drive_id": "1KIBaRdv5eNi_Pwmau94F-GtEfzqQzKv7",
+    "source_drive_id": "1To0XkZo6ueoSnF9LOcY9_ceC4gmdmKxW",
+    "audit_doc_id": "1-Lmz3Xo7g2cdeVKScmKrM5-H7wSdwcsevWhi20iQYog"
+  },
+  "post": {
+    "pdf_drive_id": "12Iw0LovNv2mUGUuriNovY_q2WS39_prP",
+    "source_drive_id": "10wxx_GoEDpWW9ZB5dYv8j5OKUXDujD-0",
+    "audit_doc_id": "1vSEQXTIle2yiO01pNZrTLtI0lb8eoY9YHRHihbnccZc",
+    "audit_provider_readback": true
+  },
+  "comparison": {
+    "restore_section49_byte_exact_from_seq079": true,
+    "source_entries": 577,
+    "unmodified_entries": 576,
+    "changed_tex": "24_resultanddiscussion.tex Section 4.9 only",
+    "page_count": 112,
+    "november_2026_title_date_retained": true,
+    "fig32_caption_pdf_page": 36,
+    "fig32_position_unchanged": true
+  },
+  "other_scientific_content_changed": false,
+  "shared_template_changed": false,
+  "other_researchers_changed": false,
+  "scientific_approval": null,
+  "university_approval": null,
+  "restore": "For next revision take numbered PRE of same permanent IDs; retain A7 000025 immutable PRE/POST."
+}
