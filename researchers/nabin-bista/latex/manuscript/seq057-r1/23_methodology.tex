@@ -169,7 +169,6 @@ Block & Member type & Dimensions (mm) \\
  & Slab thickness & 150 \\
 \addlinespace[0.35em]
 \end{longtable}
-\noindent\textit{Note:} ``--'' = wall not specified. The staircase slabs in Blocks 1 and 6 and the ramp slab in Block 2 are 175~mm thick.
 \endgroup
 
 
@@ -374,8 +373,8 @@ Each flexible-base model has three translational stiffnesses ($K_x$, $K_y$, $K_z
 \label{tab:spring_stiffness_methodology}\centering\tiny
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{clrrrrrr}
-\hline\hline
-Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \\ \hline
+\toprule
+Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \\ \midrule
 1 & Hard & 3392594.941 & 3392594.941 & 6753250.000 & 16392119.903 & 16957365.417 & 38025034.110 \\
 1 & Medium & 663832.430 & 663832.430 & 1381207.692 & 3352596.469 & 3468203.244 & 7777065.800 \\
 1 & Soft & 169629.747 & 169629.747 & 370766.667 & 899959.524 & 930992.611 & 2087648.932 \\
@@ -394,7 +393,7 @@ Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \
 6 & Hard & 2907938.521 & 2907938.521 & 5788500.000 & 10322734.400 & 10678690.758 & 23945794.075 \\
 6 & Medium & 568999.226 & 568999.226 & 1183892.308 & 2111256.085 & 2184058.019 & 4897510.824 \\
 6 & Soft & 145396.926 & 145396.926 & 317800.000 & 566738.359 & 586281.061 & 1314671.047 \\
-\hline\hline
+\bottomrule
 \end{tabular}}
 \par\smallskip\footnotesize Translational coefficients $K_x$, $K_y$ and $K_z$ are in kN/m; rocking and torsional coefficients $K_{\theta x}$, $K_{\theta y}$ and $K_t$ are in kN\,m/rad. These are the translational, rocking and torsional spring inputs assigned in ETABS.
 \end{table}
@@ -422,12 +421,12 @@ The adopted inter-storey drift ratio (ISDR) performance classification is shown 
 \caption{Inter-storey drift screening intervals for seismic performance levels}
 \label{tab:legacy_isdr_performance_bands}\centering
 \begin{tabular}{lc}
-\hline\hline
-Performance level & Maximum ISDR \\ \hline
+\toprule
+Performance level & Maximum ISDR \\ \midrule
 Immediate Occupancy (IO) & $\leq 1.0\%$ \\
 Life Safety (LS) & $>1.0\%$ to $\leq 2.0\%$ \\
 Collapse Prevention (CP) & $>2.0\%$ to $\leq 4.0\%$ \\
-Collapse / Failure (beyond CP) & $>4.0\%$ \\ \hline\hline
+Collapse / Failure (beyond CP) & $>4.0\%$ \\ \bottomrule
 \end{tabular}
 \end{table}
 
