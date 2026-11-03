@@ -232,3 +232,13 @@
     \renewcommand{\cftpuequationpagefont}{\normalfont\fontsize{12}{17}\selectfont}%
     \setlength{\cftbeforepuequationskip}{2pt}}}
 \makeatother
+
+% SEQ052 / A7 000034: explanatory prose (not figure/table captions or
+% numeric table cells) follows the 12pt, justified PU body paragraph style.
+% The minipage is confined to the existing float; it carries no scientific edit.
+\RequirePackage{adjustbox}
+\newcommand{\SaugatBodyDescription}[1]{%
+  \par\smallskip\noindent
+  \begin{minipage}{\linewidth}%
+    \normalfont\normalsize\onehalfspacing\justifying #1\par
+  \end{minipage}\par}
