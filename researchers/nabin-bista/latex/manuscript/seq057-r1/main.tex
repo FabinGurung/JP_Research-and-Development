@@ -77,6 +77,8 @@
 % Required: Left-aligned captions for Figures and Tables
 \usepackage[justification=raggedright,singlelinecheck=false]{caption}
 \usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
 \usepackage{pumlsc-shared} % Internal thesis cross-references and appendix links
 
 % ==========================================
@@ -155,7 +157,7 @@
     \vspace{14pt}
 }
 \newcommand{\abstractkeywords}[1]{%
-    \noindent\textbf{Keywords:} #1
+    \noindent Keywords: #1
 }
 
 % --- PLATES/PICTURES: Custom configuration for List of Plates ---

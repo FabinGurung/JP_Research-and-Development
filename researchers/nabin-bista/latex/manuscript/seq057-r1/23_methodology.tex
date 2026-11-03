@@ -6,14 +6,43 @@ The six structural blocks of the Infectious and Communicable Disease Hospital we
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{figures/seq067/analysis_flowchart.pdf}
+\begin{tikzpicture}[
+    >={Latex[length=2mm]},
+    line width=0.45pt,
+    node distance=0.42cm,
+    every node/.style={font=\fontsize{9.5}{11.5}\selectfont,align=center},
+    flowbox/.style={draw=black,rounded corners=0pt,minimum height=0.72cm,inner sep=3pt,text width=8.0cm},
+    branch/.style={draw=black,rounded corners=0pt,minimum height=1.10cm,inner sep=3pt,text width=3.25cm}
+]
+\node[flowbox] (scope) {Define objectives and scope};
+\node[flowbox,below=of scope] (blocks) {Identify six G+4 hospital structural blocks};
+\node[flowbox,below=of blocks] (inputs) {Define structural geometry, material properties and loads};
+\node[flowbox,below=of inputs] (supports) {Define fixed, hard-, medium- and soft-soil support cases};
+\node[flowbox,below=of supports] (models) {Develop structural models and foundation spring restraints};
+\node[branch,below=1.0cm of models,xshift=-4.15cm] (modal) {Modal and response-spectrum analyses\\(RS-X and RS-Y)};
+\node[branch,below=1.0cm of models] (gravity) {Foundation settlement, reactions and member forces\\(gravity load)};
+\node[branch,below=1.0cm of models,xshift=4.15cm] (fragility) {Ground-motion data and fragility assessment};
+\node[flowbox,below=1.35cm of gravity] (compare) {Compare results within each block and support condition};
+\node[flowbox,below=of compare] (interpret) {Interpret results and present conclusions};
+\draw[->] (scope) -- (blocks);
+\draw[->] (blocks) -- (inputs);
+\draw[->] (inputs) -- (supports);
+\draw[->] (supports) -- (models);
+\draw[->] (models.south) -- ++(0,-0.33) -| (modal.north);
+\draw[->] (models.south) -- (gravity.north);
+\draw[->] (models.south) -- ++(0,-0.33) -| (fragility.north);
+\draw[->] (modal.south) -- ++(0,-0.45) -| (compare.north);
+\draw[->] (gravity.south) -- (compare.north);
+\draw[->] (fragility.south) -- ++(0,-0.45) -| (compare.north);
+\draw[->] (compare) -- (interpret);
+\end{tikzpicture}
 \caption{Research methodology for evaluating soil--structure interaction and seismic fragility across the six hospital blocks}
 \label{fig:research_method_flowchart}
 \end{figure}
 \FloatBarrier
 
 \section{Hospital and Structural Configuration}
-The case study is the existing \textbf{Infectious and Communicable Disease Hospital} in Mohoriya, Lekhnath, Pokhara Metropolitan City--30, Kaski, Gandaki Province. The hospital is also known under its later institutional name, Provincial General and Communicable Disease Hospital. The architectural plan identifies six structural blocks modelled as G+4 (ground plus four upper floors).
+The case study is the existing Infectious and Communicable Disease Hospital in Mohoriya, Lekhnath, Pokhara Metropolitan City--30, Kaski, Gandaki Province. The hospital is also known under its later institutional name, Provincial General and Communicable Disease Hospital. The architectural plan identifies six structural blocks modelled as G+4 (ground plus four upper floors).
 
 \noindent Under NBC~206:2024, Group~D covers hospitals and related medical-care institutions \cite{nbc2062024}. The D2 category applies to hospital facilities with more than 25 beds. This study uses one existing G+4 hospital, divided into six structural blocks, as a representative mid-size hospital building for comparing foundation-support conditions. Table~\ref{tab:seq068_arch_compliance} presents the architectural provisions and the separate 100-bed reference configuration. The proposed dimensions describe that reference configuration rather than the measured geometry or bed capacity of the six-block case study.
 
@@ -40,7 +69,6 @@ Hospital services & MoHP requirements & Functional spaces provided \\
 \end{tabular}
 \end{table}
 \FloatBarrier
-\footnote{Provincial hospital institutional website and contact details: \url{https://icdh.gandaki.gov.np/} and \url{https://icdh.gandaki.gov.np/contact}.}
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=0.74\textwidth]{seq050_assets/b1_new.png}
@@ -229,7 +257,7 @@ Roof live load & $0.75\ \mathrm{kN/m^{2}}$ & Roof slab \\
 Response-spectrum analysis provides the linear seismic demand comparison for the fixed- and flexible-support models. Modal participating mass is examined in the two principal horizontal directions, with the NBC 105:2025 cumulative participating-mass criterion of at least 90 percent used for assessment \cite{nbc1052025}. Gravity-load combinations and spectral-response cases are interpreted independently when comparing foundation and superstructure demand.
 
 \section{Soil Parameters and SSI Idealization}
-The study considers three flexible-base soil conditions, designated hard, medium, and soft. Their site-class categories and material parameters used for the analytical comparison are summarized in Table~\ref{tab:soil_property_inputs}. The hard-soil support corresponds to the greatest subgrade stiffness and the soft-soil case to the smallest; these properties establish the comparative foundation spring idealizations.
+The study considers three flexible-base soil conditions, designated hard, medium and soft. Their site classes and adopted material parameters are presented in Table~\ref{tab:soil_property_inputs}. Hard soil has the greatest adopted stiffness, followed by medium and soft soil. These parameters define the three flexible-base alternatives used in the comparison.
 
 \begin{table}[htbp]
 \centering
@@ -249,41 +277,97 @@ Soft & D & $V_{s,30}\leq150$ & 125 & 80 & 0.40 & 28 & 100 \\
 \end{table}
 \FloatBarrier
 
-Within the Winkler idealization, the contact pressure at a foundation point is related to local vertical soil deformation through a modulus of subgrade reaction. Its one-parameter vertical form is
+Within the Winkler idealization, contact pressure is proportional to local vertical soil displacement. The one-parameter relationship is
 \begin{equation}
 p(x,y)=k_s\,w(x,y),
 \label{eq:winkler_soil_reaction}
 \end{equation}
 \RegisterThesisEquation{Local vertical soil reaction in the Winkler idealization}
-where $p(x,y)$ is the foundation reaction per unit area, $w(x,y)$ denotes the local foundation displacement, and $k_s$ is the modulus of subgrade reaction. The six-component foundation-spring representation extends beyond this scalar vertical relationship to independent horizontal, vertical, rocking, and torsional restraints. The equivalent static stiffness components are formulated using elastic half-space foundation relations as discussed by Gazetas \cite{gazetas1991}. For an illustrative square footing of $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$, $L=B=1.5\,\mathrm{m}$ in the $2L\times2B$ notation, the foundation area is $9\,\mathrm{m^2}$. The footing geometry used to generate every block-specific spring input must be checked separately.
+where $p(x,y)$ is contact pressure, $w(x,y)$ is local foundation settlement, and $k_s$ is the modulus of subgrade reaction. The six-component foundation representation additionally accounts for horizontal translation, rocking and torsion. Equivalent directional stiffness relations for rigid foundations on an elastic half-space are discussed by Gazetas~\cite{gazetas1991}.
 
 \section{Foundation-Support Representation}
-Soil--structure interaction is represented by springs describing translational, rocking and torsional foundation restraint. The fixed-base case provides the comparison reference; the flexible-base cases are categorized as hard, medium and soft soil. The discrete-spring concept is compatible with substructure SSI modelling \cite{wolf1985,gazetas1991}. The model incorporates the translational and rotational spring stiffnesses assigned to the foundation for each soil condition.
+In the fixed-base model, foundation translation and rotation are restrained. In the three flexible-base cases, foundation supports are represented by translational, rocking and torsional springs. Each soil condition is assigned its own stiffness components, as described by the six-degree-of-freedom representation in Equation~\ref{eq:foundation_six_dof}. The discrete-spring representation follows the substructure approach to soil--structure interaction~\cite{wolf1985,gazetas1991}.
 
-The equivalent static foundation-stiffness expressions used for comparison follow the elastic-half-space formulation of Gazetas (1991) \cite{gazetas1991}. For the illustrative square footing with plan dimensions $2L\times2B$ and $L=B$, $\chi=A_b/(4L^2)=B/L=1$. The vertical, horizontal, rocking and torsional expressions are
+For a rectangular footing with plan dimensions $2L\times2B$, let $A_b$ denote the contact area and $\chi=A_b/(4L^2)=B/L$. The static elastic-half-space expressions adopted for the directional foundation stiffnesses are~\cite{gazetas1991}
 \begin{equation}
-K_z = \frac{2GL}{1-\nu}\left(0.73+1.54\chi^{0.75}\right)\label{eq:gazetas_kz}
+K_z = \frac{2GL}{1-\nu}\left(0.73+1.54\chi^{0.75}\right),\label{eq:gazetas_kz}
 \end{equation}
-\RegisterThesisEquation{Gazetas vertical foundation stiffness}
+\RegisterThesisEquation{Vertical foundation stiffness}
 \begin{equation}
-K_x=K_y = \frac{2GL}{2-\nu}\left(2+2.50\chi^{0.85}\right)\label{eq:gazetas_kxy}
+K_x=K_y = \frac{2GL}{2-\nu}\left(2+2.50\chi^{0.85}\right),\label{eq:gazetas_kxy}
 \end{equation}
-\RegisterThesisEquation{Gazetas horizontal foundation stiffness}
+\RegisterThesisEquation{Horizontal foundation stiffness}
 \begin{equation}
-K_{\theta x} = \frac{G}{1-\nu}I_{bx}^{0.75}\left(\frac{L}{B}\right)^{0.25}\left(2.4+0.5\frac{B}{L}\right)\label{eq:gazetas_krx}
+K_{\theta x} = \frac{G}{1-\nu}I_{bx}^{0.75}\left(\frac{L}{B}\right)^{0.25}\left(2.4+0.5\frac{B}{L}\right),\label{eq:gazetas_krx}
 \end{equation}
-\RegisterThesisEquation{Gazetas rocking stiffness about the x-axis}
+\RegisterThesisEquation{Rocking stiffness about the x-axis}
 \begin{equation}
-K_{\theta y} = \frac{G}{1-\nu}I_{by}^{0.75}\left[3\left(\frac{L}{B}\right)^{0.15}\right]\label{eq:gazetas_kry}
+K_{\theta y} = \frac{G}{1-\nu}I_{by}^{0.75}\left[3\left(\frac{L}{B}\right)^{0.15}\right],\label{eq:gazetas_kry}
 \end{equation}
-\RegisterThesisEquation{Gazetas rocking stiffness about the y-axis}
+\RegisterThesisEquation{Rocking stiffness about the y-axis}
 \begin{equation}
-K_t = GJ_b^{0.75}\left[4+11\left(1-\frac{B}{L}\right)^{0.75}\right]\label{eq:gazetas_kt}
+K_t = GJ_b^{0.75}\left[4+11\left(1-\frac{B}{L}\right)^{0.75}\right].\label{eq:gazetas_kt}
 \end{equation}
-\RegisterThesisEquation{Gazetas torsional foundation stiffness}
-Here, $G$ denotes the soil shear modulus, $\nu$ is Poisson's ratio, $I_{bx}$ and $I_{by}$ are the second moments of the foundation contact area, and $J_b=I_{bx}+I_{by}$ is its polar area moment. For this illustrative $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$ footing, $L=B=1.5\,\mathrm{m}$, $A_b=9\,\mathrm{m^2}$, $I_{bx}=I_{by}=6.75\,\mathrm{m^4}$ and $J_b=13.5\,\mathrm{m^4}$. The tabulated values remain the original foundation-spring inputs assigned in ETABS; the equations describe the analytical stiffness relationships without replacing the recorded model inputs.
+\RegisterThesisEquation{Torsional foundation stiffness}
+Here $G$ is the soil shear modulus, $\nu$ is Poisson's ratio, $I_{bx}$ and $I_{by}$ are the centroidal second moments of contact area, and $J_b$ is the polar area moment. The directional stiffness expressions provide the elastic foundation formulation; the ETABS assignments used for the response comparisons are tabulated separately below.
 
-The spring-stiffness matrix includes six components ($K_x$, $K_y$, $K_z$, $K_{\theta x}$, $K_{\theta y}$ and $K_t$) for each of three flexible-support conditions in every block. Table~\ref{tab:spring_stiffness_methodology} presents all 18 block/soil rows, for the six structural blocks.
+\subsection{Foundation Dimensions}
+The square footing dimensions adopted in the foundation-spring geometry are listed in Table~\ref{tab:footing_dimensions}. For a square footing, $L=B$ in the $2L\times2B$ notation.
+
+\begin{table}[htbp]
+\centering
+\caption{Foundation dimensions adopted for the six structural blocks}
+\label{tab:footing_dimensions}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Structural block & $L$ (m) & $B$ (m) & Foundation size (m $\times$ m) \\
+\midrule
+Block 1 & 1.75 & 1.75 & $3.5\times3.5$ \\
+Block 2 & 1.75 & 1.75 & $3.5\times3.5$ \\
+Block 3 & 2.00 & 2.00 & $4.0\times4.0$ \\
+Block 4 & 1.25 & 1.25 & $2.5\times2.5$ \\
+Block 5 & 1.50 & 1.50 & $3.0\times3.0$ \\
+Block 6 & 1.50 & 1.50 & $3.0\times3.0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+\FloatBarrier
+
+For the $2L\times2B$ footing, the contact area and centroidal second moments are
+\begin{equation}
+A_b=4LB,\label{eq:footing_area}
+\end{equation}
+\RegisterThesisEquation{Foundation contact area}
+\begin{equation}
+I_{bx}=\frac{(2L)(2B)^3}{12},\label{eq:footing_ix}
+\end{equation}
+\RegisterThesisEquation{Foundation second moment about the x-axis}
+\begin{equation}
+I_{by}=\frac{(2B)(2L)^3}{12},\label{eq:footing_iy}
+\end{equation}
+\RegisterThesisEquation{Foundation second moment about the y-axis}
+\begin{equation}
+J_b=I_{bx}+I_{by}.\label{eq:footing_polar}
+\end{equation}
+\RegisterThesisEquation{Foundation polar area moment}
+
+For square footings ($L=B$), Equations~\ref{eq:footing_area}--\ref{eq:footing_polar} reduce to
+\begin{equation}
+A_b=4L^2,\label{eq:square_footing_area}
+\end{equation}
+\RegisterThesisEquation{Square footing contact area}
+\begin{equation}
+I_{bx}=I_{by}=\frac{4L^4}{3},\label{eq:square_footing_moments}
+\end{equation}
+\RegisterThesisEquation{Square footing second moments}
+\begin{equation}
+J_b=\frac{8L^4}{3}.\label{eq:square_footing_polar}
+\end{equation}
+\RegisterThesisEquation{Square footing polar area moment}
+For the $3.0\,\mathrm{m}\times3.0\,\mathrm{m}$ footing with $L=B=1.5\,\mathrm{m}$, the resulting properties are $A_b=9\,\mathrm{m^2}$, $I_{bx}=I_{by}=6.75\,\mathrm{m^4}$, and $J_b=13.5\,\mathrm{m^4}$.
+
+\subsection{Assignment of Foundation Springs}
+Each flexible-base model has three translational stiffnesses ($K_x$, $K_y$, $K_z$) and three rotational stiffnesses ($K_{\theta x}$, $K_{\theta y}$, $K_t$). Table~\ref{tab:spring_stiffness_methodology} presents the six components assigned in ETABS for all six blocks and the three soil conditions. Translational stiffnesses are in kN/m and rotational stiffnesses are in kN\,m/rad. The corresponding fixed-base models use restrained foundation degrees of freedom.
 
 \begin{table}[!htbp]
 \caption{Foundation spring inputs by structural block and support condition}
@@ -312,53 +396,11 @@ Block & Soil & $K_x$ & $K_y$ & $K_z$ & $K_{\theta x}$ & $K_{\theta y}$ & $K_t$ \
 6 & Soft & 145396.926 & 145396.926 & 317800.000 & 566738.359 & 586281.061 & 1314671.047 \\
 \hline\hline
 \end{tabular}}
-\par\smallskip\footnotesize Translational coefficients $K_x$, $K_y$ and $K_z$ are in kN/m; rocking and torsional coefficients $K_{\theta x}$, $K_{\theta y}$ and $K_t$ are in kN\,m/rad. The values are the assigned model inputs, not independently validated footing designs.
+\par\smallskip\footnotesize Translational coefficients $K_x$, $K_y$ and $K_z$ are in kN/m; rocking and torsional coefficients $K_{\theta x}$, $K_{\theta y}$ and $K_t$ are in kN\,m/rad. These are the translational, rocking and torsional spring inputs assigned in ETABS.
 \end{table}
 \FloatBarrier
 
-
-\subsection{Assessment assumptions and analysis scope}
-The four support cases represent a parametric comparison of foundation restraint rather than four independently designed foundations at the hospital site. The flexible-base idealizations use linear translational and rotational springs; soil material nonlinearity, kinematic interaction, foundation embedment and radiation damping are not explicitly included in these spring coefficients. The shear moduli in Table~\ref{tab:soil_property_inputs} represent the material parameters adopted in the analyses and are not independently calibrated strain-compatible moduli. The separate gravity-load and earthquake-response analyses are therefore interpreted according to their respective load cases.
-
-For a soil with an allowable bearing pressure of 100~kPa, a 3.0~m by 3.0~m footing has an indicative pressure capacity of $9\times100=900$~kN under the same pressure basis. This calculation is illustrative only: allowable bearing pressure must be compared with compatible service-load actions and an actual footing design, not directly with the factored maximum column forces of Table~\ref{tab:seq54_force}. The analysis consequently does not demonstrate bearing-capacity compliance for the hard-, medium- or soft-support assumptions.
-
-\subsection{Spring-stiffness calculation check}
-For the hard-soil parameters $G=595$~MPa and $\nu=0.30$, and a square footing with $L=B=1.50$~m, Equation~\ref{eq:gazetas_kz} gives
-\[
-K_z=\frac{2(595000)(1.50)}{1-0.30}(0.73+1.54)=5{,}788{,}500\ \mathrm{kN/m}.
-\]
-This agrees with the listed hard-soil vertical coefficient for Blocks~5 and~6. Inverting the same square-footing relation for the hard-soil $K_z$ values of Blocks~1--2 and~3--4 gives equivalent square sides of approximately 3.50~m and 4.67~m, respectively. These are back-calculated \textit{equivalent} dimensions, not confirmed construction footing sizes. The horizontal and torsional coefficients do not all reproduce the stated $\chi=1$ equation assumptions, so the full six-component spring matrix requires reconciliation with the original foundation sizes and ETABS assignments before quantitative validation.
-
-
-For the same Blocks~5--6 hard-soil example, the stated equations give $K_x=K_y=4{,}725{,}000$~kN/m, $K_{\theta x}=10{,}322{,}734$~kN\,m/rad, $K_{\theta y}=10{,}678{,}691$~kN\,m/rad and $K_t=16{,}762{,}056$~kN\,m/rad. The assigned horizontal coefficients are about 0.615 times these square-footing values and are reproduced by inserting $\chi=0.25$ into the horizontal expression. The assigned torsional coefficient is about 1.429 times the stated equation result, corresponding to an extra $1/(1-\nu)$ factor. Matching individual coefficients by different geometry assumptions would not establish a consistent six-component footing model.
-
-Table~\ref{tab:seq066_spring_check} checks every distinct block-pair/soil input row. The square side is obtained from $K_z$ alone; all other coefficients are then evaluated with that same side. Each block pair has identical assigned coefficients, so the nine rows cover all eighteen block/soil combinations. Ratios of one indicate arithmetic agreement under this diagnostic geometry, not confirmation of actual footing dimensions.
-\begin{longtable}{llrrrrr}
-\caption{Arithmetic check of assigned springs using a square side inferred from the vertical coefficient}\label{tab:seq066_spring_check}\\
-\toprule
-Blocks & Soil & Side (m) & $K_x/K_x^*$ & $K_{\theta x}/K_{\theta x}^*$ & $K_{\theta y}/K_{\theta y}^*$ & $K_t/K_t^*$ \\
-\midrule
-\endfirsthead
-\toprule
-Blocks & Soil & Side (m) & $K_x/K_x^*$ & $K_{\theta x}/K_{\theta x}^*$ & $K_{\theta y}/K_{\theta y}^*$ & $K_t/K_t^*$ \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-1--2 & Hard & 3.500 & 0.615 & 1.000 & 1.000 & 1.429 \\
-1--2 & Medium & 3.500 & 0.615 & 1.000 & 1.000 & 1.538 \\
-1--2 & Soft & 3.500 & 0.615 & 1.000 & 1.000 & 1.667 \\
-3--4 & Hard & 4.667 & 0.560 & 0.735 & 0.735 & 1.050 \\
-3--4 & Medium & 4.000 & 0.615 & 1.000 & 1.000 & 1.538 \\
-3--4 & Soft & 4.000 & 0.615 & 1.000 & 1.000 & 1.667 \\
-5--6 & Hard & 3.000 & 0.615 & 1.000 & 1.000 & 1.429 \\
-5--6 & Medium & 3.000 & 0.615 & 1.000 & 1.000 & 1.538 \\
-5--6 & Soft & 3.000 & 0.615 & 1.000 & 1.000 & 1.667 \\
-\end{longtable}
-
-Here the starred quantities are calculated from the printed equations at the inferred square geometry. The inferred sides vary between soil rows within some blocks. A single actual footing size per block therefore cannot be recovered consistently from these coefficients. Footing drawings and the spring-assignment calculation are required before the matrix can be treated as a validated physical foundation representation.
-
-The isotropic relation $G=E/[2(1+\nu)]$ gives 596.2, 111.1 and 28.6~MPa for the hard, medium and soft parameters, respectively. The assigned values of 595, 113 and 28~MPa are retained as model inputs to avoid implying that the analyses were rerun with corrected stiffnesses. In particular, the medium-soil value is 1.7\% above the modulus implied by its listed $E$ and $\nu$.
+The foundation response was evaluated using the stated support conditions and the assigned stiffness inputs. The idealization represents elastic foundation restraint without explicit soil yielding, uplift, embedment or radiation damping.
 
 \section{Modal Response Extraction and Comparison}
 Modal analysis results were evaluated separately for each block and foundation-support condition. The first-mode period $T_{1,b,s}$ is extracted from the tabulated modal results. For every case, the smallest modal number with both horizontal cumulative participating-mass ratios at or above 0.90 is recorded. 
