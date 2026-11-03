@@ -6,7 +6,7 @@
   "sequence": 77,
   "parent": "LATEX_SEQ076",
   "branch": "thesis/nabin-bista/latex/seq077-pu-tables-a3-plan",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
   "style_version": "2.6.4",
@@ -44,7 +44,18 @@
     "all_pages_source_raster_comparison": 120,
     "original_tables_data_preserved": true
   },
-  "promoted_to_current": false,
-  "post_archive_created": false,
-  "scientific_approval": null
+  "promoted_to_current": true,
+  "post_archive_created": true,
+  "scientific_approval": null,
+  "post_pdf_id": "1JMtogM6uLP3FlJIJQ6M81EGmq_ksaHgo",
+  "post_source_id": "1h08EdsRfGUinuh5-VjE1cdnHxXzktfPH",
+  "candidate_pdf_drive_id": "19uhF5odCzSIeKcdzwKE8SyhzwRq1vud1",
+  "candidate_source_zip_drive_id": "1ETpHIOTRi92BUvW3uenIR8PaZuyBwexB",
+  "permanent_pdf_sha256": "20650a2fe6a7c48bd7c9090bb17c22607ea1a6427f0260db4216b89281f98305",
+  "permanent_source_zip_sha256": "8f2e9d77a21f855acc12f2f5b7946d5fe324309d0081e8e9ed9be1f098fe96ce",
+  "source_merge_commit": "789ff41052555207d11892a3160a0b0765d349ef",
+  "source_pr": 180,
+  "drive_live_sha256_readback": true,
+  "release_receipt_path": "researchers/nabin-bista/latex/releases/SEQ077_A7_000020_FORMAT_AND_A3_20261103.json",
+  "release_record_pr_pending": true
 }

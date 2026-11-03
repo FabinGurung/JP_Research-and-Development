@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "release": "LATEX_SEQ077",
+  "parent": "LATEX_SEQ076",
+  "researcher_id": "RSH-003",
+  "researcher_slug": "nabin-bista",
+  "event": "A7_000020",
+  "timestamp_utc": "2026-11-03T04:45:26.978Z",
+  "scope": [
+    "Delete the complete note immediately beneath Table 3.2 without changing table entries or caption",
+    "Replace double top/bottom rules in Tables 3.7 and 3.8 with single booktabs top/mid/bottom rules, preserving numbers and text",
+    "Set the PDF sheet containing only Figure A2.1 (printed thesis page 82, actual physical PDF page 103) to A3 landscape, retain the original vector architectural plan and caption; all other sheets A4"
+  ],
+  "source_zip": {
+    "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "8f2e9d77a21f855acc12f2f5b7946d5fe324309d0081e8e9ed9be1f098fe96ce",
+    "bytes": 97992064,
+    "entries": 570,
+    "original_entries_byte_identical": 567,
+    "modified_source_files": [
+      "23_methodology.tex",
+      "29_additional_researcher_data_seq050.tex"
+    ],
+    "new_build_recipe": "build_seq077.sh"
+  },
+  "pdf": {
+    "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "sha256": "20650a2fe6a7c48bd7c9090bb17c22607ea1a6427f0260db4216b89281f98305",
+    "bytes": 12292391,
+    "pages": 120,
+    "a4_pages": 119,
+    "a3_landscape_pages": 1,
+    "a3_physical_page": 103,
+    "printed_number_of_a3_page": "82",
+    "all_119_other_pages_a4_verified": true,
+    "times_new_roman_embedded": true,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "overfull_boxes": 0
+  },
+  "quality": {
+    "xelatex_passes": 3,
+    "bibtex8": true,
+    "source_zip_integrity_pass": true,
+    "all_pages_compared_to_SEQ076_pdf": true,
+    "unchanged_page_renders_identical": 114,
+    "affected_a4_pages_rendered_and_reviewed": [
+      44,
+      45,
+      49,
+      50,
+      51
+    ],
+    "a3_page_rendered_reviewed": true,
+    "caption_and_figure_cross_reference_preserved": true,
+    "data_and_scientific_text_unchanged_outside_requested_note": true
+  },
+  "artifacts": {
+    "candidate_pdf_id": "19uhF5odCzSIeKcdzwKE8SyhzwRq1vud1",
+    "candidate_source_zip_id": "1ETpHIOTRi92BUvW3uenIR8PaZuyBwexB",
+    "original_permanent_pdf_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "original_permanent_zip_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx"
+  },
+  "pre": {
+    "pdf_id": "1SS6aquJZ93AvWHMAZuBAp9yN4xFbCOR_",
+    "zip_id": "18MKMESHwSCWaQ42v0dBuVrStaAvJ-Dgo",
+    "audit_doc_id": "15sfixWhJQb3PRZ7xFOET_BhLSC8mSuh0tiUlIlnEXi0",
+    "pdf_sha256": "1363cb673fa77d4ac2ded2aac03e2b46e64dd3c4e539cda48e85df832126840f",
+    "zip_sha256": "61917ffb649b4fb473c32bb05ccec3ed7125037b532183dad181435f9d6396fb"
+  },
+  "post": {
+    "pdf_id": "1JMtogM6uLP3FlJIJQ6M81EGmq_ksaHgo",
+    "zip_id": "1h08EdsRfGUinuh5-VjE1cdnHxXzktfPH",
+    "pdf_sha256": "20650a2fe6a7c48bd7c9090bb17c22607ea1a6427f0260db4216b89281f98305",
+    "zip_sha256": "8f2e9d77a21f855acc12f2f5b7946d5fe324309d0081e8e9ed9be1f098fe96ce",
+    "provider_download_verified": true
+  },
+  "provider_readback_success": true,
+  "git": {
+    "repository": "FabinGurung/JP_Research-and-Development",
+    "reservation_pr": 179,
+    "source_pr": 180,
+    "source_merge": "789ff41052555207d11892a3160a0b0765d349ef",
+    "release_pr_pending": true,
+    "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+    "style_changed": false,
+    "other_researcher_changed": false
+  },
+  "audit_doc_live_id": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "scientific_approval": null,
+  "independent_scientific_validation": false,
+  "restore": {
+    "policy": "PRE-PRESERVE then restore bytes into same permanent live IDs with new numbered PRE/POST; never alter immutable PRE or POST copies",
+    "pdf_live_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "zip_live_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx"
+  }
+}
