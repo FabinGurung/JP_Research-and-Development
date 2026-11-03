@@ -6,7 +6,7 @@
   "sequence": 84,
   "parent": "LATEX_SEQ083",
   "branch": "thesis/nabin-bista/latex/seq084-title-navigation-tables-appendices",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "a7_event": "000027",
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
@@ -37,5 +37,28 @@
   "permanent_pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
   "permanent_source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
   "scientific_approval": null,
-  "promoted_to_current": false
+  "promoted_to_current": true,
+  "permanent_live_hash_readback": true,
+  "post_pdf_id": "1YjijUhXwe0XauW_KCMS4yTNEKCAjbJVL",
+  "post_source_id": "1sp3KJFv3UmziDHlSVSNWRn4Eg1hyZ5QU",
+  "source_pr": 228,
+  "source_commit": "cd2c1269c16fd92377a8959c48e48b434aeeb6ff",
+  "git_release_merged": false,
+  "release_disposition": "DRIVE_VERIFIED__GIT_CLOSEOUT_PENDING",
+  "qa": {
+    "all_pages_reviewed": 107,
+    "fresh_packaged_zip_text_and_render_parity": true,
+    "exact_times_new_roman_embedded": true,
+    "tables": 22,
+    "figures": 88,
+    "equations_captions_and_section49_unchanged": true,
+    "spring_rows_unchanged": 18,
+    "undefined_references": 0,
+    "overfull_boxes": 0,
+    "page_boundary_overflows": 0,
+    "section49_printed_page": 59,
+    "a11_a12_printed_page": 67,
+    "a31_a32_printed_page": 79,
+    "scientific_approval": null
+  }
 }
