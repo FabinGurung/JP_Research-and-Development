@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "release": "LATEX_SEQ084",
+  "a7_event": "000027",
+  "pre": {
+    "pdf": "1XwQ6y3LbGsq3RPaJZ5Ei5jaf3tjR2yGr",
+    "source": "1MxW7LqoO2d4N4bIxYqIrppWAFOPm1olA",
+    "audit": "11zCF8WzNgApLd_90psliSEWPe6jhF2qZQCenKIDrh3w",
+    "hash_verification": true
+  },
+  "live": {
+    "pdf": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "e85a4c2111a0d51c9ff7b14d8b72a01198d5368699e66feacd4345763aee143e",
+    "source_zip_sha256": "9034510f51a9dce46b8f5c6b774ff76c8c9b11129759958d90a96f1825f64ec8",
+    "hash_verification": true
+  },
+  "post": {
+    "pdf": "1YjijUhXwe0XauW_KCMS4yTNEKCAjbJVL",
+    "source": "1sp3KJFv3UmziDHlSVSNWRn4Eg1hyZ5QU",
+    "hash_verification": "FINAL_READBACK_PENDING"
+  },
+  "source_pr": 228,
+  "source_commit": "cd2c1269c16fd92377a8959c48e48b434aeeb6ff",
+  "format_registration_pr": 227,
+  "format_change_id": "RD-LTX-CHG-125",
+  "pages": 107,
+  "source_entries": 580,
+  "inherited_entries_byte_identical": 567,
+  "modified_manuscript_files": [
+    "main.tex",
+    "02_titlepage.tex",
+    "11_tableofcontent.tex",
+    "12_listoftable.tex",
+    "13_listoffigure.tex",
+    "13a_listofequations.tex",
+    "15_listofappendice.tex",
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex",
+    "28_appendices.tex"
+  ],
+  "restore": "Copy PRE bytes into the same permanent live IDs through a new numbered event, preserving all historical snapshots.",
+  "scientific_approval": null
+}
