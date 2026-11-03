@@ -340,6 +340,18 @@
           "main_sha_at_reservation": "2996557c32f232a416fa6c293e06096d702a9eaa",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Using verified LATEX_SEQ081, restore only section 4.9 textual/float contents byte-for-byte from LATEX_SEQ079 in 24_resultanddiscussion.tex, removing SEQ080-only Table 4.14 and Figure 4.36 reference from compiled section. Retain all other SEQ081 source, including 23_methodology.tex Figure 3.2 placement and November 2026 issue date. A7 000025 PRE archived."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 83,
+          "branch": "thesis/nabin-bista/latex/seq083-tables-figures-title-layout",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq083-layout",
+          "created_at_utc": "2026-11-03T11:48:26.821Z",
+          "main_sha_at_reservation": "d7bcd904deab440a8bd3c3db93d5ecad80753fc4",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "A7 000026 PRE done. SEQ082 is base. Change only table fit and centered placement, Appendix 3 fragility figure uniformity (printed 80–91), exact user-supplied title across front-matter/title variables, and wording of paragraph following Figure 3.2. No result edits."
         }
       ],
       "observed_out_of_band_versions": [
