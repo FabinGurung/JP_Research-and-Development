@@ -1,0 +1,49 @@
+{
+  "release": "LATEX_SEQ078",
+  "parent": "LATEX_SEQ077",
+  "identity": "RSH-003/nabin-bista",
+  "scope": "format-only",
+  "source_files_modified": [
+    "23_methodology.tex",
+    "24_resultanddiscussion.tex",
+    "29_additional_researcher_data_seq050.tex",
+    "main.tex"
+  ],
+  "pdf_pages_before": 120,
+  "pdf_pages_after": 113,
+  "figure_density_before": {
+    "one_figure_pages": 34,
+    "two_or_more_figure_pages": 27,
+    "figure_captions": 88
+  },
+  "figure_density_after": {
+    "one_figure_pages": 18,
+    "two_or_more_figure_pages": 35,
+    "figure_captions": 88
+  },
+  "figure_caption_ids_preserved": true,
+  "table_3_2_on_printed_page_22": true,
+  "table_3_2_all_six_blocks": true,
+  "table_3_2_no_continuation_page_23": true,
+  "table_3_2_all_row_cells_identical": true,
+  "official_PU_top_cm": 2.5,
+  "user_requested_top_in": 1.33,
+  "user_top_mm": 33.782,
+  "margin_override_researcher_only": true,
+  "margin_official_PU_parity": "CONFLICT_USER_OVERRIDE",
+  "a3_physical_pdfpage": 98,
+  "a3_printed_thesis_page": 77,
+  "a3_paper_mm": [
+    420,
+    297
+  ],
+  "a4_pages": 112,
+  "no_text_outside_physical_sheets": true,
+  "times_new_roman_font_observed": true,
+  "no_overfull_or_undefined_errors": true,
+  "source_modified_original_entries": 4,
+  "original_source_entries": 570,
+  "scientific_values_preserved": true,
+  "scientific_approval": "NOT_ASSESSED",
+  "warnings": "Page indices changed due compact figures. Source scientific outputs not independently validated. Registered PU top margin 2.5cm; requested 1.33in is not claimed official parity."
+}
