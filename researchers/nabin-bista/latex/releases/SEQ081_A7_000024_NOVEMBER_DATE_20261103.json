@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "slug": "nabin-bista",
+  "release": "LATEX_SEQ081",
+  "parent": "LATEX_SEQ080",
+  "a7_event": "000024",
+  "recorded_utc": "2026-11-03T08:07:14.331Z",
+  "request_scope": "Change thesis issue date September, 2026 to November, 2026 only; check all document occurrences",
+  "source_differences": [
+    {
+      "file": "main.tex",
+      "old": "\\newcommand{\\mySubmissionDate}{September, 2026}",
+      "new": "\\newcommand{\\mySubmissionDate}{November, 2026}",
+      "rendered_pages": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "02_titlepage.tex",
+      "old": "Keep September, 2026 at the bottom of this page (source comment)",
+      "new": "Keep November, 2026 at the bottom of this page (source comment)",
+      "rendered_pages": []
+    }
+  ],
+  "science_modified": false,
+  "other_researcher_modified": false,
+  "shared_template_modified": false,
+  "geometry_modified": false,
+  "qa": {
+    "pages": 114,
+    "a4_pages": 113,
+    "a3_landscape_pages": 1,
+    "source_entries": 577,
+    "source_entries_byte_identical": 575,
+    "modified_tex_files": 2,
+    "pdf_date_old_occurrences": 0,
+    "pdf_date_new_occurrences": 2,
+    "unchanged_other_pages_text": 112,
+    "all_114_pages_same_dimensions_as_parent": true,
+    "date_bottom_both_title_pages": true,
+    "final_xelatex_refs_undefined": 0,
+    "final_xelatex_citations_undefined": 0,
+    "overfull_boxes": 0
+  },
+  "pre": {
+    "pdf_drive_id": "1Ci9UhVUGmfC_jai9JugjEg9oE6fhHCKA",
+    "source_drive_id": "1mDW3kfgc4NzJZrtCg2JmMUzphhB5yG3q",
+    "audit_drive_id": "1hfjxYVvZVCQ6dktxwb_nz6o87lpXpmtQ9wXWqX_McWY",
+    "pdf_sha256": "5c6066c316069cbd1e6ac1a738b812d05e66f739a1ee881649afe887b5073920",
+    "source_sha256": "8d4586e4825c6ae406367e01640d56fa2390ad28498f0b10beef377598071e73"
+  },
+  "post": {
+    "pdf_drive_id": "1T0QRLlCggr6Eb5nerc9mFaTBNGwNkUeP",
+    "source_drive_id": "1RnFcDKLcedA2xc3yTFxja_F88BCh6mrn",
+    "audit_drive_id": "19iCh9xAaKDFUAOHHBtqHVD-L-o-U-RQ8RF_p263QmHY",
+    "pdf_sha256": "dde077e38feecd57fdccec41ae26de09d2bd17ad53bb0332d1d557552b326ccd",
+    "source_sha256": "74141739432a0a2150d18f0e3566432698184705ce3fd7aa495f3c8fd37395ce"
+  },
+  "live": {
+    "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "source_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "pdf_sha256": "dde077e38feecd57fdccec41ae26de09d2bd17ad53bb0332d1d557552b326ccd",
+    "source_sha256": "74141739432a0a2150d18f0e3566432698184705ce3fd7aa495f3c8fd37395ce",
+    "stable_ids_retained": true,
+    "provider_readback_sha_verified": true
+  },
+  "audit_live_doc_id": "1Eg8Hgnh9dxZi9K7vCb7FX7fuJNbKZGCzTnu7GFqCIfM",
+  "audit_timestamp_npt": "2026-11-03 13:50:37",
+  "registry_sequence_reserved_pr": 206,
+  "source_pr": 208,
+  "source_merge_commit": "b9d3fae5f287902a01ce4896fc4fa2f8d4e9f8ce",
+  "release_record_merged": false,
+  "pages_verified": false,
+  "scientific_admission": null,
+  "university_approval": null,
+  "restore": "For next change take numbered PRE of current same permanent IDs; never mutate immutable 000024 PRE/POST or create parallel live files."
+}
