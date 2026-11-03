@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-003",
+  "sequence": 67,
+  "release_id": "LATEX_SEQ067",
+  "parent_release": "LATEX_SEQ066",
+  "status": "DRIVE_WORKING_SAME_ID_PUBLISHED__CHART_TNR12_QA_PASS__SEVEN_CAD_FONT_EXCEPTIONS__GIT_INHERITANCE_FAIL__SCIENTIFIC_HOLDS_OPEN",
+  "date_local": "2026-11-02",
+  "timezone": "Asia/Kathmandu",
+  "pdf": {
+    "drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
+    "sha256": "10e34ebc2d224ac38f678d6e95a5b043f75b9f7fe2e1f77ecbdf46adc4be0202",
+    "size": 9752739,
+    "pages": 120
+  },
+  "source": {
+    "drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
+    "sha256": "d531eaa641767c955f91514031d5d4242685cc6369f44a8fd50493c466f686e7",
+    "size": 94006787,
+    "entries": 555,
+    "compiled_pdf_delivered_separately": true
+  },
+  "numbered_archive": "000013",
+  "pre": {
+    "pdf": "1dgflS_W2ycIMhgXzXFGflhMQbZSWjghq",
+    "source": "1ik62d9d28EtiK93LLzK7UPzlv6Ref2Hy"
+  },
+  "post": {
+    "pdf": "1oZ9-qVF45JAkTuj2FXoablCLFCE4m_Yu",
+    "source": "1uEdVbyJH-dmEFY7cyOnCXCuVhvIMFeFo",
+    "qa": "1puIEitExwcyLTCm61O2O5tnJlOH6EzTZ",
+    "response": "1a9EzvT5OZ0XOe31Kp1PBYbcF70XTbjgb"
+  },
+  "figure_folder_id": "1QUkWgGXmIARsJ5LQywObfgYANUFUtfZc",
+  "standalone_pngs": 68,
+  "figures": 88,
+  "redrawn_existing_charts": 65,
+  "redrawn_explanatory_diagrams": 2,
+  "new_overlay_curves": 16,
+  "new_numbered_figures": 0,
+  "figure_font": "Exact TimesNewRomanPSMT 12.0 pt for all 93 generated vector chart/diagram assets; physical inclusion scale retained",
+  "cad_font_exceptions": {
+    "count": 7,
+    "figures": [
+      "3.3",
+      "3.4",
+      "3.5",
+      "3.6",
+      "3.7",
+      "3.8",
+      "A2.1"
+    ],
+    "status": "Original outlined/dense CAD annotations retained; no universal 12 pt Times New Roman claim"
+  },
+  "scope": {
+    "tex_files": 5,
+    "original_binary_assets_byte_unchanged": 222,
+    "original_workbook_docx_zip_unchanged": 15,
+    "abstract_conclusions_tables_equations_bibliography_unchanged": true
+  },
+  "supervisor_review": {
+    "complete": 7,
+    "partial": 12,
+    "pending": 2
+  },
+  "ETABS_rerun": false,
+  "nonlinear_fit": false,
+  "submission_certified": false,
+  "native_doc_requested": false,
+  "readback": "FULL_SOURCE_AND_PDF_BYTE_PARITY_PASS; SOURCE_ZIP_CRC_PASS; ALL_68_PNG_FOLDER_READBACK_PASS",
+  "git": {
+    "source_commit": "9b2193102d190ba7e1ce6ed130607225b13bf48d",
+    "pr": 152,
+    "merged": false,
+    "central_allocator_reserved": false,
+    "base_branch": "researcher/nabin-bista/latex-seq066-source-review-20261102",
+    "checks": "Source commit checks failed: admitted legacy main.tex lacks central shared-style import. No global-formatting migration or protected-main bypass.",
+    "main_current": "LATEX_SEQ063"
+  },
+  "restore": "Restore 000013 PRE bytes into the SAME permanent source/PDF IDs, restore SEQ066 names and append a restoration entry. Preserve sealed PRE/POST records."
+}

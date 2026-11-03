@@ -1,14 +1,29 @@
 \documentclass[12pt,a4paper]{report}
 
-% Canonical R&D XeLaTeX style: PU margins, exact Times New Roman and layout.
-% Central master style RD-LTX-CHG-122 / v2.6.3: CHAPTER n and title on separate TOC lines, no chapter page number.
-% See controls/latex/template/pumlsc-shared.sty pinned in this release manifest.
-% Build with the exact global pumlsc-shared.sty on TEXINPUTS (no local fork).
-\usepackage{pumlsc-shared}
+% ==========================================
+% 1. PAGE SPECIFICATIONS & MARGINS
+% ==========================================
+% PU Guidelines: Left: 3cm (1.2"), Right/Top/Bottom: 2.5cm (1")
+\usepackage[
+    a4paper, 
+    left=3cm, 
+    right=2.5cm, 
+    top=2.5cm, 
+    bottom=2.5cm
+]{geometry}
 
+% ==========================================
+% 2. FONT, LANGUAGE, SPACING & TOC CONFIGURATION
+% ==========================================
+% RD-LTX exact production typography (shared tower v2.4).
+% XeLaTeX must resolve the owner's licensed Times New Roman installation.
+% Licensed font files are NOT part of the public repository/source package.
+\usepackage{fontspec}
+\IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\PackageError{nabin-thesis}{Exact Times New Roman required}{Install the governed owner-only font cache before compilation.}}
 % fontspec supplies Unicode font encoding for XeLaTeX
 \usepackage[american]{babel}   % Required: Language consistency
-% Shared canonical style owns setspace and 1.5 line spacing.                 % Required: 1.5 line spacing
+\usepackage{setspace}          
+\onehalfspacing                 % Required: 1.5 line spacing
 \usepackage[none]{hyphenat}    % Required: No breaking words across lines
 \sloppy
 \hbadness=10000
@@ -16,6 +31,12 @@
 
 % --- Table of Contents & Lists Customization (PU Guidelines) ---
 \usepackage{tocloft}           % Called exactly ONCE here to prevent package clashes
+
+% RD-LTX-CHG-122 shared template v2.6.3, merged main e931bf19d1c646bd6b125f1adfed24995ac57a1d.
+% Source-compatible application in this populated legacy manuscript; do not fork global style.
+% Chapters are represented as CHAPTER n / title on distinct lines without page number.
+% Other hierarchy levels retain their page numbers.
+
 
 % Researcher-approved TOC: no dotted leaders at any outline level.
 \renewcommand{\cftchapleader}{\hfill}
@@ -42,15 +63,21 @@
 % ==========================================
 \usepackage{amsmath, amssymb}  % Advanced math
 \usepackage{graphicx}
+\usepackage{xcolor} % Explicit dependency of the existing \color{black} command.
 \usepackage{placeins}
 \usepackage{booktabs,longtable,array}          % Images
 \graphicspath{{./}{figures/ch3/}{figures/ch4/}{figures/appendix/ground_motion_time_histories/}}
-\usepackage{siunitx}           % Required: SI Units
-\sisetup{inter-unit-product = \cdot}
+% SEQ066 build portability: no manuscript command uses siunitx.
+% Retain its configuration when installed; no typesetting changes otherwise.
+\IfFileExists{siunitx.sty}{%
+  \usepackage{siunitx}%
+  \sisetup{inter-unit-product = \cdot}%
+}{}
 
 % Required: Left-aligned captions for Figures and Tables
-\captionsetup{justification=raggedright,singlelinecheck=false}
-\hypersetup{hidelinks} % Internal thesis cross-references and appendix links
+\usepackage[justification=raggedright,singlelinecheck=false]{caption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pumlsc-shared} % Internal thesis cross-references and appendix links
 
 % ==========================================
 % 4. PU CUSTOM COMMANDS & SUB-FILE EXAMPLES
@@ -64,6 +91,8 @@
 \renewcommand{\tagform@}[1]{\maketag@@@{(Equation~#1)}}
 \makeatother
 \newlistof{eqindex}{loe}{List of Equations}
+% Reuse the existing equation list; avoid duplicate loe counter allocation.
+\let\listofpuequation\listofeqindex
 \cftsetindents{eqindex}{0pt}{7em}
 \renewcommand{\cfteqindexpresnum}{Equation~}
 \renewcommand{\cfteqindexleader}{\hfill}
@@ -153,7 +182,7 @@
 \newenvironment{myappendix}[1]{%
     \refstepcounter{appx}%
     \setcounter{figure}{0}%
-    \renewcommand{\thefigure}{\theappx.\arabic{figure}}%
+    \renewcommand{\thefigure}{A\theappx.\arabic{figure}}%
     \addcontentsline{app}{appx}{\protect\numberline{Appendix~\theappx}#1}%
     \clearpage
     \begin{center}
@@ -175,7 +204,7 @@
 % =========================================================================
 % METADATA CONFIGURATION VARIABLES (Automates 02_titlepage.tex)
 % =========================================================================
-\newcommand{\myThesisTitle}{Seismic Fragility and Soil--Structure Interaction Based Performance Assessment of Mid-size General Hospital Buildings in Nepal}
+\newcommand{\myThesisTitle}{Seismic Performance and Fragility Assessment of a Representative Mid-size Hospital Building Considering Soil--Structure Interaction}
 \newcommand{\myStudentName}{Nabin Bista}
 \newcommand{\myRegistrationNumber}{2024-1-71-0023} % Replace with your actual registration number
 \newcommand{\mySupervisorOneName}{Er. Prakash Bahadur Adhikari}
@@ -249,6 +278,7 @@
     \input{26_reference}
     \input{28_appendices}
     \input{29_additional_researcher_data_seq050}
-    % Original appendix plot source preserved for historical recovery; 36 figures now in 24_resultanddiscussion.tex.
+    \input{31_fragility_original_figures_seq064}
+    % 36 original figure records now compiled in Chapter 4 from 24_resultanddiscussion.tex; original preserved for rollback.
 
 \end{document}
