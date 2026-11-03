@@ -158,3 +158,33 @@
   \noindent{\bfseries\fontsize{14}{18}\selectfont List of figures\par}\vspace{12pt}%
   \begingroup\singlespacing\fontsize{12}{17}\selectfont\@starttoc{lof}\endgroup}
 \makeatother
+
+% SEQ047 A7 / Saugat-specific override: user requests 1.33-inch TOP margin.
+% PU FST 2019 published default remains 2.5cm top; this difference is
+% intentional, researcher-only, recorded in the QA receipt; other margins untouched.
+\geometry{top=1.33in}
+
+% SEQ047: Match TOC ENTRY font size, leading, and inter-entry spacing to the
+% approved List of Tables (12pt/17pt with 2pt item separation).  No changes to
+% approved List of Tables/Figures or main body.  Restrict changes to the TOC group.
+\makeatletter
+\renewcommand{\PUPrintContents}{%
+  \begingroup\singlespacing\fontsize{12}{17}\selectfont
+  \renewcommand{\cftchapfont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftchappagefont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftsecfont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftsecpagefont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftsubsecfont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftsubsecpagefont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftsubsubsecfont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \renewcommand{\cftsubsubsecpagefont}{\normalfont\fontsize{12}{17}\selectfont}%
+  \setlength{\cftbeforechapskip}{2pt}%
+  \setlength{\cftbeforesecskip}{2pt}%
+  \setlength{\cftbeforesubsecskip}{2pt}%
+  \setlength{\cftbeforesubsubsecskip}{2pt}%
+  \renewcommand*{\l@puprelim}[2]{%
+    \addpenalty{-\@highpenalty}\vskip2pt
+    \noindent\parbox{\linewidth}{\normalfont\fontsize{12}{17}\selectfont ##1\hfill\normalfont\fontsize{12}{17}\selectfont ##2}\par}%
+  \tableofcontents
+  \endgroup}
+\makeatother
