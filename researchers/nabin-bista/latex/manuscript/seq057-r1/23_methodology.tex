@@ -53,6 +53,7 @@ The case study is the existing Infectious and Communicable Disease Hospital in M
 \fontsize{10}{12}\selectfont
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.16}
+\begin{adjustbox}{max width=\linewidth,center}
 \begin{tabular}{@{}p{3.15cm}p{5.05cm}p{5.0cm}@{}}
 \toprule
 Requirement & NBC 206:2024 Provision & Proposed Model \\
@@ -67,6 +68,7 @@ Natural ventilation & Opening $\geq 1/6$ of room area & Considered \\
 Hospital services & MoHP requirements & Functional spaces provided \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 \FloatBarrier
 
@@ -78,7 +80,7 @@ Hospital services & MoHP requirements & Functional spaces provided \\
 \end{figure}
 \FloatBarrier
 
-Figure~\ref{fig:hospital_3d_methodology} presents the three-dimensional framing of Block~1. The view shows the arrangement of the columns, beams and floor framing through the height of the building. The structural grid visible beneath the model establishes the plan reference, while the perspective view makes it possible to follow the continuity of the frame members from one level to the next. The image describes the structural configuration used in the numerical model; it does not represent the observed deformation of the building during an earthquake.
+Block~1 is represented by a three-dimensional structural frame with columns, beams and floor members extending through the building height. The grid beneath the frame identifies the plan layout, and the perspective view shows how the structural members connect between levels. This arrangement forms part of the numerical model shown in Figure~\ref{fig:hospital_3d_methodology}; it is not a record of the building\textquotesingle s deformation during an earthquake.
 
 The six hospital blocks were treated as separate structural models rather than as one continuous frame. Their plan arrangements and member dimensions are not identical. For this reason, the response of each block is compared with its own fixed-base condition when the hard-, medium- and soft-soil supports are introduced. Differences between blocks are considered separately from changes caused by the foundation-support assumption. The plan and grid layouts for Blocks~1--6 are presented in Figures~\ref{fig:ch3_block_1_2d}--\ref{fig:ch3_block_6_2d}, and the corresponding member dimensions are given in Table~\ref{tab:member_dimensions_methodology}.
 
@@ -224,6 +226,7 @@ The structural models adopt an importance factor of 1.5, a damping ratio of 5 pe
 \caption{General seismic details for the representative hospital assessment}
 \label{tab:seq068_general_seismic}
 \renewcommand{\arraystretch}{1.15}
+\begin{adjustbox}{max width=\linewidth,center}
 \begin{tabular}{@{}p{6.4cm}p{6.3cm}@{}}
 \toprule
 Parameter & Details \\
@@ -233,6 +236,7 @@ Seismic zone factor, $Z$ & 0.35 (reference design criterion) \\
 Damping ratio & 5\% \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 \noindent The seismic design basis is NBC 105:2025 \cite{nbc1052025}. The table presents the reported importance factor, damping and a reference seismic zone factor. The response calculations continue to use the seismic definitions assigned in the original ETABS analysis cases; the listed $Z$ value is not substituted for those case inputs.\par\FloatBarrier
  The gravity-load assignments for the model are summarized in Table~\ref{tab:gravity_load_inputs}. The imposed floor loading differs according to the functional use of the spaces and the relevant structural element.
@@ -242,6 +246,7 @@ Damping ratio & 5\% \\
 \caption{Gravity load inputs assigned in the structural analysis}
 \label{tab:gravity_load_inputs}
 \renewcommand{\arraystretch}{1.12}
+\begin{adjustbox}{max width=\linewidth,center}
 \begin{tabular}{@{}p{5.5cm}p{3cm}p{3.3cm}@{}}
 \toprule
 Load item & Assigned load & Application \\
@@ -257,6 +262,7 @@ Staircase and ramp floor live load & $5\ \mathrm{kN/m^{2}}$ & Stair/ramp slab \\
 Roof live load & $0.75\ \mathrm{kN/m^{2}}$ & Roof slab \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 \FloatBarrier
 
@@ -271,6 +277,7 @@ The study considers three flexible-base soil conditions, designated hard, medium
 \label{tab:soil_property_inputs}
 \fontsize{9}{11}\selectfont
 \setlength{\tabcolsep}{3.5pt}
+\begin{adjustbox}{max width=\linewidth,center}
 \begin{tabular}{@{}lccrrrrr@{}}
 \toprule
 Soil case & NBC class & NBC $V_{s,30}$ (m/s) & Project $V_{s,30}$ (m/s) & $E$ (MPa) & $\nu$ & $G$ (MPa) & SBC (kPa) \\
@@ -280,6 +287,7 @@ Medium & C & $150<V_{s,30}\leq350$ & 250 & 300 & 0.35 & 113 & 200 \\
 Soft & D & $V_{s,30}\leq150$ & 125 & 80 & 0.40 & 28 & 100 \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 \FloatBarrier
 
@@ -324,6 +332,7 @@ The square footing dimensions adopted in the foundation-spring geometry are list
 \centering
 \caption{Foundation dimensions adopted for the six structural blocks}
 \label{tab:footing_dimensions}
+\begin{adjustbox}{max width=\linewidth,center}
 \begin{tabular}{@{}cccc@{}}
 \toprule
 Structural block & $L$ (m) & $B$ (m) & Foundation size (m $\times$ m) \\
@@ -336,6 +345,7 @@ Block 5 & 1.50 & 1.50 & $3.0\times3.0$ \\
 Block 6 & 1.50 & 1.50 & $3.0\times3.0$ \\
 \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 \FloatBarrier
 
@@ -427,6 +437,7 @@ The adopted inter-storey drift ratio (ISDR) performance classification is shown 
 \begin{table}[htbp]
 \caption{Inter-storey drift screening intervals for seismic performance levels}
 \label{tab:legacy_isdr_performance_bands}\centering
+\begin{adjustbox}{max width=\linewidth,center}
 \begin{tabular}{lc}
 \toprule
 Performance level & Maximum ISDR \\ \midrule
@@ -435,6 +446,7 @@ Life Safety (LS) & $>1.0\%$ to $\leq 2.0\%$ \\
 Collapse Prevention (CP) & $>2.0\%$ to $\leq 4.0\%$ \\
 Collapse / Failure (beyond CP) & $>4.0\%$ \\ \bottomrule
 \end{tabular}
+\end{adjustbox}
 \end{table}
 
 The ISDR bands are descriptive demand categories. They do not replace NBC design-drift checks or component deformation limits. The response-spectrum values must first be established as elastic or code-amplified quantities before comparison with a performance objective. The fragility analysis data tables use different thresholds of 0.5\%, 1\%, 2\% and 4\%; their labels and numerical assumptions are documented separately and are not silently replaced by this screening table.
