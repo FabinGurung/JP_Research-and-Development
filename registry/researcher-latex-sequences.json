@@ -316,6 +316,18 @@
           "main_sha_at_reservation": "1ada9c4fe72adc1630c1545720c284dfcc9f4e74",
           "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
           "note": "Based on verified SEQ079: reposition and describe Fig3.2 on printed p15; replace Section4.9 with source-grounded numerical benchmark comparison of Dhakal/Chaulagain and Poudel/Chaulagain versus Nabin six-block results with limitations and chart if supportable; adjust only first two title-page spacing: name up 14pt, institutional 28pt before/after, date bottom. Preserve all unrelated scientific results; PRE A7 000023."
+        },
+        {
+          "researcher_id": "RSH-003",
+          "slug": "nabin-bista",
+          "sequence": 81,
+          "branch": "thesis/nabin-bista/latex/seq081-november-2026-submission-date",
+          "status": "RESERVED",
+          "request_key": "manual:20261103-nabin-seq081-november-date",
+          "created_at_utc": "2026-11-03T07:49:44.299Z",
+          "main_sha_at_reservation": "f516329c5a9ddea9deb9a4bc77cdb8ee0b0bb468",
+          "template_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
+          "note": "SEQ080 parent unchanged except issue date September, 2026 -> November, 2026 in main.tex macro (cover and inner title page), plus corresponding nonrendered date comment. Global date-occurrence QA; preserve other document text, science, historical dates, signatures, layout and 114 sheets. A7 000024 PRE archived."
         }
       ],
       "observed_out_of_band_versions": [
