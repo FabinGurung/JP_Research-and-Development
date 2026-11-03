@@ -36,8 +36,8 @@
     "pre_checklist_archive_id": "1Hvi6q82ONS1Abj3_g9juDgwmTNCYMIOb",
     "post_pdf_archive_id": "19t98IPzyCC55GZ3PBlMdmho4ecdnk2oG",
     "post_zip_archive_id": "1b467YmVCuiI9fQY3cO6CFTM3UelJj3Wx",
-    "post_checkpoint_archive_id": "PENDING",
-    "post_checklist_archive_id": "PENDING",
+    "post_checkpoint_archive_id": "1236wpWSQVfqfa6j0DR_pyX2EjwnlhM3B",
+    "post_checklist_archive_id": "1hQwlcdMWP4iDEm8tO6UPMKVRq6xlmhTE",
     "source_scientific_inputs": "ALL_SCIENTIFIC_INPUTS_UNCHANGED_VS_SEQ049; ONLY_CO_SUPERVISOR_ORGANIZATION_ADDED_ON_ROMAN_IV",
     "researcher_22_comments": "SOURCE_13_DONE_7_PARTIAL_2_SCIENCE_HOLDS_CARRIED_FORWARD",
     "full_pu_144_format_certification": "NOT_CERTIFIED",
@@ -99,7 +99,7 @@
     "governance": "controls/git-drive-authority.json",
     "source_main_pre": "99f989921791f146c265b6e43b67bc94cd55bd87",
     "source_branch": "thesis/saugat-paneru/latex/seq050-prelim-headings-affiliation",
-    "source_pr": "PENDING",
+    "source_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/205",
     "source_merged_commit": null,
     "source_main": "main",
     "promotion_branch": "thesis/saugat-paneru/latex/seq050-prelim-headings-affiliation",
@@ -115,13 +115,13 @@
     "reservation_pr": "https://github.com/FabinGurung/JP_Research-and-Development/pull/202"
   },
   "checkpoint_resolution": {
-    "status": "SEQ050_A7_000032_PRE_ARCHIVED_POST_PDF_ZIP_VERIFIED__GITHUB_PROTECTED_CHAIN_PENDING",
+    "status": "SEQ050_A7_000032_COMPLETE_PRE_POST_ARCHIVED__DRIVE_LIVE_VERIFIED__GIT_PROTECTED_ANCESTRY_PENDING",
     "current_checkpoint_drive_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
     "current_checklist_drive_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
     "pre_checkpoint_archive_id": "1LN1hbdnjwTfL8Usveu0Dmi5R9uzsT1jt",
     "pre_checklist_archive_id": "1Hvi6q82ONS1Abj3_g9juDgwmTNCYMIOb",
-    "post_checkpoint_archive_id": "PENDING",
-    "post_checklist_archive_id": "PENDING",
+    "post_checkpoint_archive_id": "1236wpWSQVfqfa6j0DR_pyX2EjwnlhM3B",
+    "post_checklist_archive_id": "1hQwlcdMWP4iDEm8tO6UPMKVRq6xlmhTE",
     "same_stable_ids_preserved": true
   },
   "previous_formatted_production": {
