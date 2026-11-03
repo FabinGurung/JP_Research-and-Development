@@ -12,14 +12,14 @@
   "archive_premark_sequence": 79,
   "archive_postmark_sequence": 80,
   "scholarly_approval": null,
-  "release_disposition": "A7_000023_DRIVE_VERIFIED__SOURCE_PR_MERGED__RELEASE_PR_PENDING",
+  "release_disposition": "A7_000023_VERIFIED__GIT_SOURCE_AND_RELEASE_MERGED__PAGES_SUCCESS",
   "numbered_archive": "000023",
   "pdf_sha256": "5c6066c316069cbd1e6ac1a738b812d05e66f739a1ee881649afe887b5073920",
   "source_zip_sha256": "8d4586e4825c6ae406367e01640d56fa2390ad28498f0b10beef377598071e73",
   "pages": 114,
-  "git_release_merged": false,
+  "git_release_merged": true,
   "final_readback_receipt_drive_id": null,
-  "final_pages_run": null,
-  "final_pages_head_sha": null,
-  "final_readback_receipt_path": null
+  "final_pages_run": 41596566136,
+  "final_pages_head_sha": "53e1e51afcbdaf1ab41aeb7ff9908f2a4d642116",
+  "final_readback_receipt_path": "researchers/nabin-bista/latex/releases/SEQ080_A7_000023_FINAL_PAGES_READBACK_20261103.json"
 }
