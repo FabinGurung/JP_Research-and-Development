@@ -448,12 +448,13 @@
     "release": "LATEX_SEQ075",
     "release_register": "researchers/nabin-bista/latex/versions/seq075.json",
     "previous": "LATEX_SEQ071",
-    "status": "DRIVE_SAME_ID_SOURCE_PDF_SHA256_VERIFIED__GIT_RECONCILIATION",
+    "status": "DRIVE_LIVE_AND_000018_ARCHIVES_SHA256_VERIFIED__GIT_SOURCE_MERGED__PAGES_DEPLOYED",
     "pdf_drive_id": "13beLy7N55TkgmMY1dzRpuK9hutmKFtjO",
     "source_zip_drive_id": "1XrUsz38STZ_2dliEOnxyNjlioYckuuKx",
     "pre_archive_ordinal": "000018",
     "post_archive_ordinal": "000018",
-    "note": "121 A4 pages; exact 18 RAR plots and two original schematics; 24 user-requested reaction rows. Native Google Doc not requested."
+    "note": "121 A4 pages; exact 18 RAR plots and two original schematics; 24 user-requested reaction rows. Native Google Doc not requested.",
+    "final_readback_receipt_drive_id": "1tgaBCPD7dgE4QDcjDikTFrGJpidANdnu"
   },
   "seq067_figure_typography_release": {
     "schema_version": "1.0.0",
@@ -583,7 +584,7 @@
     "central_allocator_reserved": false,
     "sequence_note": "Reconcile existing issued SEQ075 recovery on the already-created legacy branch; no retroactive allocator reservation is claimed.",
     "git_branch": "nabin/seq075-figure-table-recovery-20261103",
-    "status": "QA_CANDIDATE",
+    "status": "RELEASED",
     "source_zip_entries": 598,
     "pdf_pages": 121,
     "schema_version": "1.0.0",
@@ -595,6 +596,13 @@
     "style_path": "controls/latex/template/pumlsc-shared.sty",
     "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
     "style_version": "2.6.4",
-    "branch": "nabin/seq075-figure-table-recovery-20261103"
+    "branch": "nabin/seq075-figure-table-recovery-20261103",
+    "git_merged": true,
+    "source_commit": "e936034884a40cd99402f6ed02b6774c42cbbd58",
+    "merge_commit": "ad61f0dfa3cbcf0f15551e884967f1c91b2f618a",
+    "final_readback_receipt_drive_id": "1tgaBCPD7dgE4QDcjDikTFrGJpidANdnu",
+    "git_checks": "ALL_FOUR_PASSED",
+    "pages_run": 41558289066,
+    "pages_conclusion": "success"
   }
 }

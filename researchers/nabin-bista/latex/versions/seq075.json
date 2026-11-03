@@ -45,7 +45,7 @@
   "central_allocator_reserved": false,
   "sequence_note": "Reconcile existing issued SEQ075 recovery on the already-created legacy branch; no retroactive allocator reservation is claimed.",
   "git_branch": "nabin/seq075-figure-table-recovery-20261103",
-  "status": "QA_CANDIDATE",
+  "status": "RELEASED",
   "source_zip_entries": 598,
   "pdf_pages": 121,
   "schema_version": "1.0.0",
@@ -57,5 +57,12 @@
   "style_path": "controls/latex/template/pumlsc-shared.sty",
   "style_blob_sha": "6deb30ec415fd386de104c0b7248eb9ea8b98ece",
   "style_version": "2.6.4",
-  "branch": "nabin/seq075-figure-table-recovery-20261103"
+  "branch": "nabin/seq075-figure-table-recovery-20261103",
+  "git_merged": true,
+  "source_commit": "e936034884a40cd99402f6ed02b6774c42cbbd58",
+  "merge_commit": "ad61f0dfa3cbcf0f15551e884967f1c91b2f618a",
+  "final_readback_receipt_drive_id": "1tgaBCPD7dgE4QDcjDikTFrGJpidANdnu",
+  "git_checks": "ALL_FOUR_PASSED",
+  "pages_run": 41558289066,
+  "pages_conclusion": "success"
 }
