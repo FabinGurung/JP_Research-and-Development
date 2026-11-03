@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "researcher_id": "RSH-002",
+  "slug": "saugat-paneru",
+  "sequence": 55,
+  "parent_sequence": 54,
+  "a7_version_event": "000037",
+  "branch": "thesis/saugat-paneru/latex/seq055-nav-figures-a7-000037",
+  "status": "STAGED_NOT_RELEASED__SEQ053_AND_SEQ054_SOURCE_SYNC_PENDING",
+  "drive_production_status": "CURRENT_SAME_ID_PROVIDER_READBACK_PASS",
+  "scientific_content_changed": false,
+  "raw_model_data_changed": false,
+  "table_cells_changed": false,
+  "original_figures_changed": false,
+  "original_figure_caption_numeration_changed": false,
+  "shared_template_changed": false,
+  "parent_member_count": 448,
+  "new_member_count": 453,
+  "unchanged_parent_members": 444,
+  "modified_original_source_files": [
+    "saugat_project_adapter.sty",
+    "chapters/chapter2_literature_review.tex",
+    "chapters/chapter4_results_discussion.tex",
+    "cp112_additions/ch4_pp_hinge.tex"
+  ],
+  "new_assets": "Three title-cropped PNG and one cropbox PDF + split unmodified Figure 4.23 .tex",
+  "scope": "Only requested TOC fourth-level hide, LOF chapter spacing, Table 2.1–2.3 first and continuation header top rules, relocated Fig 4.23 printed p74, Sec 4.3.10 p84, Fig4.36 p91, embedded title crops Fig4.30-4.32,4.34. Unchanged Table4.21 shifted to p92 to fit Fig4.36 on p91.",
+  "pdf": {
+    "drive_id": "1FfNQpm8kslr5OcV0JxD76T4Ho6wMSMJm",
+    "name": "Saugat_SEQ055_147p_TimesNewRoman_CURRENT.pdf",
+    "pages": 147,
+    "sha256": "de8d9587b701c83a5319e0646978aed2b2160148cee8fce9f0fcc5402df08f02",
+    "bytes": 48161780,
+    "format": "A4"
+  },
+  "zip": {
+    "drive_id": "1putkQYpDff50kxycZJ33iPq98lb8I5mh",
+    "name": "Saugat_SEQ055_COMPLETE_LATEX_CURRENT.zip",
+    "members": 453,
+    "sha256": "9604c8558ee4067a38a946e41883f6b0b9134d6be8ffc21affddba37e311f404",
+    "bytes": 79730282,
+    "crc": "PASS"
+  },
+  "permanent_checkpoint_id": "1vXh7XUbkZcqzI1q8GFxZ1EcFHUKZhKQN",
+  "permanent_checklist_id": "1EBUKdLVqCplr-InQEj9disYv7eAd3BYU",
+  "a7_PRE": {
+    "pdf": "1ahO9bxvmvPyQs7FIzPdjvJ1XCH7J6gFe",
+    "zip": "1apFjNJAtyrVXt5z4RBunwpYE6dJtw7sQ",
+    "checkpoint": "1T6bmWA12OvIxTvGCoeWtporgiexYCAYR",
+    "checklist": "1KXtuT8vu8hnu36wEINaRwSfFU15k9TIx"
+  },
+  "a7_POST_pdf": "133M_kDiRqqiDILqTw01XJKH3kPlbTbJe",
+  "a7_POST_zip": "1gH3INrg5hSXGcerME1o54yE5PaCbXHyD",
+  "qa": {
+    "a4_pages": 147,
+    "exact_times_new_roman_embedded": true,
+    "overfull_boxes": 0,
+    "unresolved_references": 0,
+    "figure_4_23_printed_page": 74,
+    "section_4_3_10_printed_page": 84,
+    "figure_4_36_printed_page": 91,
+    "all_original_members_preserved": true
+  },
+  "git_reservation_pr": 222,
+  "git_source_status": "METADATA_ONLY__SCOPED_SOURCE_IN_VERIFIED_DRIVE_ZIP",
+  "parent_git_source_status": "SEQ053_AND_SEQ054_SOURCE_SYNC_PENDING",
+  "do_not_merge_or_tag_out_of_sequence": true,
+  "full_pu_compliance": "NOT_CERTIFIED",
+  "original_etabs_replay": "NOT_PERFORMED"
+}
